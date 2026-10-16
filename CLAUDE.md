@@ -14,6 +14,10 @@ README are fixed; do not re-decide languages, tasks, metrics or scoring modes in
 - Reference row is BF16 on vLLM, RTX 5090. All deltas are against it.
 - One results schema: `schema/results.schema.json`. Rows are JSONL, append-only, CC-BY-4.0.
 - No UI. CLI, JSON, figures only.
+- Every delta table also prints the gap vs English. Never report a non-English delta without it.
+- Format names for diagnostics start with `diag-` (e.g. `diag-ffn_down-q8`, base `diag-flat-q4k`);
+  they are compared against `diag-flat-q4k`, not against Q4_K_M.
+- Repaired candidates are compared against Q4_K_M at the same budget (5.0 bpw, 2.2 GB).
 
 ## Layout
 - `configs/` languages, runtimes (OpenAI-compatible endpoints), tasks.

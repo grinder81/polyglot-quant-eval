@@ -23,3 +23,4 @@ def test_end_to_end(tmp_path):
             assert k in r, k
     out = run("scripts/report.py", str(rows))
     assert "delta vs bf16" in out and "bn" in out
+    assert "gap vs English" in out

@@ -31,6 +31,10 @@ def main():
                 print((delta * 100).round(1).to_string())
                 print("\n-- mean delta by format (points) --")
                 print((delta.mean() * 100).round(2).to_string())
+                if "en" in delta.index:
+                    gap = delta.sub(delta.loc["en"], axis=1).drop(index=["en"])
+                    print("\n-- gap vs English (points; negative = this language loses more than English) --")
+                    print((gap * 100).round(1).to_string())
 
 if __name__ == "__main__":
     main()

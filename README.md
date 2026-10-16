@@ -3,9 +3,16 @@
 One eval harness, many runtimes, per-language scoring.
 
 **Question.** For a 3B multilingual model shipped for edge use (Cohere Labs' Tiny Aya), how
-much language capability does each real deployment quantization format lose per language,
-does judge-based evaluation reveal damage that multilingual MMLU hides, and can multilingual
-calibration or QAT buy the capability back?
+much language capability does each real deployment quantization format lose per language, at what
+bit-width does each language break, which tensors carry the loss, does judge-based and human
+evaluation reveal damage that multilingual MMLU hides, and can a targeted repair under a fixed size
+budget buy the capability back?
+
+**Method.** Baseline, inspect, intervene, measure, explain. This repo is the measure step: the same
+harness scores the BF16 reference, every quantized build, every mixed-precision diagnostic
+(`diag-*` formats from the builds repo) and every repaired candidate, per language, and reports the
+English delta beside every other language's delta. Bangla is the deep dive with native-speaker
+human evaluation; the 14-language matrix is the breadth.
 
 **How it works.** Every runtime is driven through an OpenAI-compatible HTTP endpoint
 (vLLM, SGLang, llama-server, mlx_lm.server, an ExecuTorch shim). The harness wraps
@@ -27,6 +34,10 @@ model x format x quantizer x calibration x runtime x device x task x language.
   language, LLM judge plus multilingual reward model. Human eval for Bangla (native speaker)
   and community-annotated languages.
 - Reference row: BF16 served by vLLM on the RTX 5090.
+- Every delta table carries a "gap vs English" view (a language's delta minus English's delta), so
+  a repair that helps Bangla by hurting English is visible, not hidden.
+- Interventions are compared in a fixed order at the same size budget: selective precision, then
+  multilingual calibration, then QAT.
 
 **Status.** Plumbing stage: reference runtime, smoke test and results schema are in place. See `LOG.md`.
 
