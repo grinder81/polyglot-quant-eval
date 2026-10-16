@@ -1,0 +1,38 @@
+# Task families. `lm_eval_pattern` builds the upstream task name from the language code field.
+# `mode` is the default scoring mode; generation fallbacks are used on runtimes without logprobs.
+tasks:
+  belebele:
+    lm_eval_pattern: "belebele_{belebele}"
+    fewshot: 0
+    mode: loglikelihood_mcq
+    metric: acc
+  global_mmlu:
+    lm_eval_pattern: "global_mmlu_{global_mmlu}"
+    fewshot: 5
+    mode: loglikelihood_mcq
+    metric: acc
+    limit_per_language: 500
+  mgsm_direct:
+    lm_eval_pattern: "mgsm_direct_{mgsm}"
+    fewshot: 0
+    mode: generation
+    metric: exact_match
+  mgsm_native_cot:
+    lm_eval_pattern: "mgsm_native_cot_{mgsm}"
+    fewshot: 0
+    mode: generation
+    metric: exact_match
+  flores_xx_en:
+    custom: tasks_custom/flores.py
+    direction: xx-en
+    mode: generation
+    metric: chrf++
+  flores_en_xx:
+    custom: tasks_custom/flores.py
+    direction: en-xx
+    mode: generation
+    metric: chrf++
+  language_confusion:
+    custom: tasks_custom/language_confusion.py
+    mode: generation
+    metric: line_pass_rate

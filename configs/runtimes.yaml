@@ -1,0 +1,39 @@
+# Each runtime is an OpenAI-compatible endpoint. `logprobs: true` means loglikelihood MCQ is possible.
+# `api: completions` is required for loglikelihood tasks in lm-eval (chat endpoints cannot do it).
+runtimes:
+  vllm:
+    base_url: http://127.0.0.1:8000/v1
+    api: completions
+    logprobs: true
+    device: rtx5090
+    serve_hint: scripts/serve_vllm.sh
+  sglang:
+    base_url: http://127.0.0.1:30000/v1
+    api: completions
+    logprobs: true
+    device: rtx5090
+    serve_hint: "python -m sglang.launch_server --model-path <path> --port 30000"
+  llama_server_cuda:
+    base_url: http://127.0.0.1:8080/v1
+    api: completions
+    logprobs: true          # verify: llama-server returns logprobs on /v1/completions; echo support varies
+    device: rtx5090
+    serve_hint: "llama-server -m <gguf> -ngl 999 -c 8192 --port 8080"
+  llama_server_metal:
+    base_url: http://127.0.0.1:8080/v1
+    api: completions
+    logprobs: true
+    device: mac
+    serve_hint: "llama-server -m <gguf> -ngl 999 -c 8192 --port 8080"
+  mlx_server:
+    base_url: http://127.0.0.1:8081/v1
+    api: chat
+    logprobs: false         # generation-mode scoring only
+    device: mac
+    serve_hint: "mlx_lm.server --model <mlx-path> --port 8081"
+  executorch_shim:
+    base_url: http://127.0.0.1:8082/v1
+    api: chat
+    logprobs: false
+    device: desktop-or-phone
+    serve_hint: "tasks_custom/executorch_shim.py"

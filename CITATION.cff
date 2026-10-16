@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "polyglot-quant-eval: per-language evaluation of quantized multilingual LLMs across runtimes"
+message: "If you use this harness, please cite it."
+type: software
+authors:
+  - family-names: "Al Mamun"
+    given-names: "Mo"
+repository-code: "https://github.com/grinder81/polyglot-quant-eval"
+license: Apache-2.0
+year: 2026

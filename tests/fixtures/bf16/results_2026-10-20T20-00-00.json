@@ -1,0 +1,5 @@
+{"results": {"belebele_eng_Latn": {"acc,none": 0.90, "acc_stderr,none": 0.04, "alias": "belebele_eng_Latn"},
+             "belebele_ben_Beng": {"acc,none": 0.62, "acc_stderr,none": 0.069, "alias": "belebele_ben_Beng"},
+             "mgsm_direct_bn": {"exact_match,flexible-extract": 0.30, "exact_match_stderr,flexible-extract": 0.06, "alias": "mgsm_direct_bn"}},
+ "n-samples": {"belebele_eng_Latn": {"original": 900, "effective": 50}, "belebele_ben_Beng": {"original": 900, "effective": 50}, "mgsm_direct_bn": {"original": 250, "effective": 50}},
+ "configs": {"belebele_eng_Latn": {"num_fewshot": 0}, "belebele_ben_Beng": {"num_fewshot": 0}, "mgsm_direct_bn": {"num_fewshot": 0}}}

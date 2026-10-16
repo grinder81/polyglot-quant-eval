@@ -1,0 +1,17 @@
+[project]
+name = "polyglot-quant-eval"
+version = "0.0.1"
+description = "Per-language evaluation of quantized multilingual models across on-device and server runtimes"
+requires-python = ">=3.11"
+dependencies = [
+  "lm_eval[api]>=0.4.8",
+  "sacrebleu>=2.4",
+  "pyyaml>=6",
+  "pandas>=2.2",
+  "requests>=2.32",
+  "huggingface_hub>=0.30",
+  "datasets>=3",
+]
+
+[project.optional-dependencies]
+judge = ["openai>=1.50"]

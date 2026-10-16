@@ -1,0 +1,22 @@
+# 14 languages. Ten from Marchisio et al. (EMNLP 2024) plus four Tiny Aya focus languages.
+# Codes per task family. null = the task does not exist for that language in the upstream harness.
+# Verify task names with: lm_eval --tasks list | grep -E "belebele_|global_mmlu|mgsm_"
+languages:
+  en: {name: English,    script: Latn, belebele: eng_Latn, global_mmlu: en, mgsm: en,  flores: eng_Latn}
+  es: {name: Spanish,    script: Latn, belebele: spa_Latn, global_mmlu: es, mgsm: es,  flores: spa_Latn}
+  fr: {name: French,     script: Latn, belebele: fra_Latn, global_mmlu: fr, mgsm: fr,  flores: fra_Latn}
+  de: {name: German,     script: Latn, belebele: deu_Latn, global_mmlu: de, mgsm: de,  flores: deu_Latn}
+  it: {name: Italian,    script: Latn, belebele: ita_Latn, global_mmlu: it, mgsm: null, flores: ita_Latn}
+  pt: {name: Portuguese, script: Latn, belebele: por_Latn, global_mmlu: pt, mgsm: null, flores: por_Latn}
+  ar: {name: Arabic,     script: Arab, belebele: arb_Arab, global_mmlu: ar, mgsm: null, flores: arb_Arab}
+  ja: {name: Japanese,   script: Jpan, belebele: jpn_Jpan, global_mmlu: ja, mgsm: ja,  flores: jpn_Jpan}
+  ko: {name: Korean,     script: Hang, belebele: kor_Hang, global_mmlu: ko, mgsm: null, flores: kor_Hang}
+  zh: {name: Chinese,    script: Hans, belebele: zho_Hans, global_mmlu: zh, mgsm: zh,  flores: zho_Hans}
+  hi: {name: Hindi,      script: Deva, belebele: hin_Deva, global_mmlu: hi, mgsm: null, flores: hin_Deva}
+  bn: {name: Bangla,     script: Beng, belebele: ben_Beng, global_mmlu: bn, mgsm: bn,  flores: ben_Beng}
+  sw: {name: Swahili,    script: Latn, belebele: swh_Latn, global_mmlu: sw, mgsm: sw,  flores: swh_Latn}
+  yo: {name: Yoruba,     script: Latn, belebele: yor_Latn, global_mmlu: yo, mgsm: null, flores: yor_Latn}
+
+# Human-eval languages. bn is annotated by the author (native speaker).
+human_eval: [bn, hi, sw, yo]
+judge_eval: [en, es, fr, ja, ko, hi, bn]
