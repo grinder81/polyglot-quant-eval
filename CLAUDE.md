@@ -17,7 +17,11 @@ README are fixed; do not re-decide languages, tasks, metrics or scoring modes in
 - Every delta table also prints the gap vs English. Never report a non-English delta without it.
 - Format names for diagnostics start with `diag-` (e.g. `diag-ffn_down-q8`, base `diag-flat-q4k`);
   they are compared against `diag-flat-q4k`, not against Q4_K_M.
-- Repaired candidates are compared against Q4_K_M at the same budget (5.0 bpw, 2.2 GB).
+- Repaired candidates are compared against Q4_K_M, a uniform allocation and random allocations
+  (3 seeds) at the same total shipped bytes (budget 2.2 GB including tokenizer and adapters).
+- Four disjoint data pools split by source document: calibration, train, development, test. All
+  selection on development; test is touched once by frozen finalists.
+- Report absolute task success beside pairwise preference; BF16's answer is not assumed correct.
 
 ## Layout
 - `configs/` languages, runtimes (OpenAI-compatible endpoints), tasks.
