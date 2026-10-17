@@ -11,7 +11,10 @@ README are fixed; do not re-decide languages, tasks, metrics or scoring modes in
 - Scoring modes: `loglikelihood_mcq` on runtimes with logprobs (vLLM, SGLang, llama-server);
   `generation` on runtimes without (mlx_lm.server, ExecuTorch shim). Every row records `mode`.
   Never silently compare across modes.
-- Reference row is BF16 on vLLM, RTX 5090. All deltas are against it.
+- Canonical reference is BF16 on vLLM, RTX 5090. Stage 1 also reports explicitly labeled
+  comparisons against llama.cpp BF16; never merge the two references.
+- Follow `docs/stage1-protocol.md` for Stage 1. The broader research direction is targeted
+  model adaptation for Bangla under a compression budget; Stage 1 makes no weight changes.
 - One results schema: `schema/results.schema.json`. Rows are JSONL, append-only, CC-BY-4.0.
 - No UI. CLI, JSON, figures only.
 - Every delta table also prints the gap vs English. Never report a non-English delta without it.
