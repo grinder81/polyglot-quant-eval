@@ -1,0 +1,51 @@
+# Planning only: not consumed by the runner and not a completed data lock.
+version: 1
+status: proposed_sources_unlocked
+stage1_languages: [en, bn, hi]
+split_unit: source_document
+split_seed: 42
+rules:
+  - Keep calibration, train, development and final test source-document-disjoint.
+  - Group translations and near-duplicates with their source document before splitting.
+  - Exclude benchmark source documents from training and calibration wherever identifiable.
+  - Record unresolved provenance; do not claim disjointness without checking it.
+  - Freeze revisions, item IDs and hashes before use; null values are unresolved.
+  - Repeatedly inspected Stage 1 samples belong to development, not final test.
+pools:
+  calibration:
+    sources:
+      - hub_id: CohereForAI/aya_dataset
+        purpose: candidate multilingual calibration text; audit license and language coverage
+        revision: null
+        split: null
+        sha256: null
+  train:
+    sources:
+      - hub_id: CohereForAI/aya_dataset
+        purpose: candidate adaptation data; separate source documents from calibration
+        revision: null
+        split: null
+        sha256: null
+  development:
+    sources:
+      - hub_id: facebook/belebele
+        purpose: Stage 1 smoke and baseline subset; reserve by passage across translations
+        revision: null
+        split: null
+        sha256: null
+      - hub_id: CohereForAI/Global-MMLU
+        purpose: conditional on task audit; group by original question/source
+        revision: null
+        split: null
+        sha256: null
+  test:
+    access: frozen_finalists_only
+    sources:
+      - hub_id: facebook/belebele
+        purpose: candidate untouched document groups excluded from Stage 1; verify feasibility
+        revision: null
+        split: null
+        sha256: null
+    native_bangla_suite:
+      status: planned_not_authored
+      rule: independently author and reserve documents before adaptation selection

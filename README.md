@@ -36,12 +36,18 @@ model x format x quantizer x calibration x runtime x device x task x language.
 - Reference row: BF16 served by vLLM on the RTX 5090.
 - Every delta table carries a "gap vs English" view (a language's delta minus English's delta), so
   a repair that helps Bangla by hurting English is visible, not hidden.
-- Interventions are compared in a fixed order at the same size budget: selective precision, then
-  multilingual calibration, then QAT.
+- Broader direction: identify where to adapt Tiny Aya for Bangla and measure which gains survive
+  compression. Compare interventions at the same deployment budget: at most 2.2 GB total
+  shipped bytes, including tokenizer and adapters; bits per weight is descriptive.
+- Stage 1 is baseline-only. Follow [the Stage 1 protocol](docs/stage1-protocol.md) for the
+  three-language subset, explicit same-runtime BF16 control, sample locks and review gates.
 
 **Status.** Plumbing stage: reference runtime, smoke test and results schema are in place. See `LOG.md`.
 
-**Quick start (smoke test).**
+**Quick start (existing smoke plumbing).**
+The script below is not yet compliant with the Stage 1 protocol: it applies a chat template.
+Complete the scoring-audit task before using it for canonical baseline measurements.
+
 ```bash
 # terminal 1, on the 5090 box
 bash scripts/serve_vllm.sh                 # serves CohereLabs/tiny-aya-global at :8000
