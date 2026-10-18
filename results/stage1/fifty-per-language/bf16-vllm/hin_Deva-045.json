@@ -1,0 +1,578 @@
+{
+  "results": {
+    "belebele_hin_Deva": {
+      "name": "belebele_hin_Deva",
+      "alias": "belebele_hin_Deva",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_hin_Deva": {
+      "task": "belebele_hin_Deva",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "hin_Deva",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_hin_Deva": 0.0
+  },
+  "n-shot": {
+    "belebele_hin_Deva": 0
+  },
+  "higher_is_better": {
+    "belebele_hin_Deva": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_hin_Deva": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_hin_Deva": [
+      {
+        "doc_id": 49,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Costume_History/Gothic",
+          "question_number": 1,
+          "flores_passage": "10वीं से लेकर 11वीं सदी के बीच और 14वीं सदी में गोथिक स्टाइल चरम पर थी. शुरुआत में पोशाक, पूर्व में बीजान्टिन संस्कृति से काफी प्रभावित थी। हालाँकि धीमे कम्युनिकेशन चैनल की वजह से पश्चिम का रहन-सहन 25-30 साल पीछे जा सकता है. मध्य युग के अंत में पश्चिमी यूरोप ने अपनी शैली विकसित करना शुरू कर दिया. धर्मयुद्ध के परिणामस्वरूप उस समय के सबसे बड़े विकास में से एक लोगों ने कपड़ों को बाँधने के लिए बटन का उपयोग करना शुरू किया",
+          "question": "पश्चिमी यूरोप ने कब प्रभावों पर बहुत अधिक भरोसा करना बंद कर दिया और अपनी शैली विकसित करना शुरू कर दिया?",
+          "mc_answer1": "मध्य युग के अंत में",
+          "mc_answer2": "बीजान्टिन युग के दौरान",
+          "mc_answer3": "जब मध्य युग के अंत के 25 साल थे",
+          "mc_answer4": "11 वीं शताब्दी के दौरान",
+          "correct_answer_num": "1",
+          "dialect": "hin_Deva",
+          "ds": "2023-07-21 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: 10वीं से लेकर 11वीं सदी के बीच और 14वीं सदी में गोथिक स्टाइल चरम पर थी. शुरुआत में पोशाक, पूर्व में बीजान्टिन संस्कृति से काफी प्रभावित थी। हालाँकि धीमे कम्युनिकेशन चैनल की वजह से पश्चिम का रहन-सहन 25-30 साल पीछे जा सकता है. मध्य युग के अंत में पश्चिमी यूरोप ने अपनी शैली विकसित करना शुरू कर दिया. धर्मयुद्ध के परिणामस्वरूप उस समय के सबसे बड़े विकास में से एक लोगों ने कपड़ों को बाँधने के लिए बटन का उपयोग करना शुरू किया\nQ: पश्चिमी यूरोप ने कब प्रभावों पर बहुत अधिक भरोसा करना बंद कर दिया और अपनी शैली विकसित करना शुरू कर दिया?\nA: मध्य युग के अंत में\nB: बीजान्टिन युग के दौरान\nC: जब मध्य युग के अंत के 25 साल थे\nD: 11 वीं शताब्दी के दौरान\nAnswer:",
+            " A"
+          ],
+          [
+            "P: 10वीं से लेकर 11वीं सदी के बीच और 14वीं सदी में गोथिक स्टाइल चरम पर थी. शुरुआत में पोशाक, पूर्व में बीजान्टिन संस्कृति से काफी प्रभावित थी। हालाँकि धीमे कम्युनिकेशन चैनल की वजह से पश्चिम का रहन-सहन 25-30 साल पीछे जा सकता है. मध्य युग के अंत में पश्चिमी यूरोप ने अपनी शैली विकसित करना शुरू कर दिया. धर्मयुद्ध के परिणामस्वरूप उस समय के सबसे बड़े विकास में से एक लोगों ने कपड़ों को बाँधने के लिए बटन का उपयोग करना शुरू किया\nQ: पश्चिमी यूरोप ने कब प्रभावों पर बहुत अधिक भरोसा करना बंद कर दिया और अपनी शैली विकसित करना शुरू कर दिया?\nA: मध्य युग के अंत में\nB: बीजान्टिन युग के दौरान\nC: जब मध्य युग के अंत के 25 साल थे\nD: 11 वीं शताब्दी के दौरान\nAnswer:",
+            " B"
+          ],
+          [
+            "P: 10वीं से लेकर 11वीं सदी के बीच और 14वीं सदी में गोथिक स्टाइल चरम पर थी. शुरुआत में पोशाक, पूर्व में बीजान्टिन संस्कृति से काफी प्रभावित थी। हालाँकि धीमे कम्युनिकेशन चैनल की वजह से पश्चिम का रहन-सहन 25-30 साल पीछे जा सकता है. मध्य युग के अंत में पश्चिमी यूरोप ने अपनी शैली विकसित करना शुरू कर दिया. धर्मयुद्ध के परिणामस्वरूप उस समय के सबसे बड़े विकास में से एक लोगों ने कपड़ों को बाँधने के लिए बटन का उपयोग करना शुरू किया\nQ: पश्चिमी यूरोप ने कब प्रभावों पर बहुत अधिक भरोसा करना बंद कर दिया और अपनी शैली विकसित करना शुरू कर दिया?\nA: मध्य युग के अंत में\nB: बीजान्टिन युग के दौरान\nC: जब मध्य युग के अंत के 25 साल थे\nD: 11 वीं शताब्दी के दौरान\nAnswer:",
+            " C"
+          ],
+          [
+            "P: 10वीं से लेकर 11वीं सदी के बीच और 14वीं सदी में गोथिक स्टाइल चरम पर थी. शुरुआत में पोशाक, पूर्व में बीजान्टिन संस्कृति से काफी प्रभावित थी। हालाँकि धीमे कम्युनिकेशन चैनल की वजह से पश्चिम का रहन-सहन 25-30 साल पीछे जा सकता है. मध्य युग के अंत में पश्चिमी यूरोप ने अपनी शैली विकसित करना शुरू कर दिया. धर्मयुद्ध के परिणामस्वरूप उस समय के सबसे बड़े विकास में से एक लोगों ने कपड़ों को बाँधने के लिए बटन का उपयोग करना शुरू किया\nQ: पश्चिमी यूरोप ने कब प्रभावों पर बहुत अधिक भरोसा करना बंद कर दिया और अपनी शैली विकसित करना शुरू कर दिया?\nA: मध्य युग के अंत में\nB: बीजान्टिन युग के दौरान\nC: जब मध्य युग के अंत के 25 साल थे\nD: 11 वीं शताब्दी के दौरान\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.011728380806744099,
+              true
+            ]
+          ],
+          [
+            [
+              -7.324228286743164,
+              false
+            ]
+          ],
+          [
+            [
+              -7.449228286743164,
+              false
+            ]
+          ],
+          [
+            [
+              -7.136728286743164,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.011728380806744099,
+            true
+          ],
+          [
+            -7.324228286743164,
+            false
+          ],
+          [
+            -7.449228286743164,
+            false
+          ],
+          [
+            -7.136728286743164,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "52a75ce5819f87af5b6b7bcccbcaca4d6907d11e6d5fc1c94fe6fd9857901be6",
+        "prompt_hash": "4f56f4daafe0ca20ee3b9618225023c90865bf6d2268aa98517963d44eab1cb0",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 777,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/California_lawmaker_denies_affairs_after_sexual_discussion_becomes_public",
+          "question_number": 1,
+          "flores_passage": "डुवैल, जो विवाहित है और उसके दो वयस्क बच्चे हैं, उसने मिलर पर बड़ा असर नहीं किया, जिस से कहानी संबंधित है. जब टिप्पणी के लिए कहा गया, तो मिलर ने कहा, “माइक सुनते समय बहुत सारी बातें करता है ... मैं तैयार हो रहा था इसलिए वह जो कह रहा था मैं वास्तव में उसे सुन नहीं रहा था”.",
+          "question": "परिच्छेद के अनुसार, जो बातें कही जा रही थीं, उनमें से कौन चूक गया?",
+          "mc_answer1": "डुवैल के बच्चे",
+          "mc_answer2": "माइक",
+          "mc_answer3": "मिलर",
+          "mc_answer4": "डुवाल",
+          "correct_answer_num": "3",
+          "dialect": "hin_Deva",
+          "ds": "2023-07-21 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: डुवैल, जो विवाहित है और उसके दो वयस्क बच्चे हैं, उसने मिलर पर बड़ा असर नहीं किया, जिस से कहानी संबंधित है. जब टिप्पणी के लिए कहा गया, तो मिलर ने कहा, “माइक सुनते समय बहुत सारी बातें करता है ... मैं तैयार हो रहा था इसलिए वह जो कह रहा था मैं वास्तव में उसे सुन नहीं रहा था”.\nQ: परिच्छेद के अनुसार, जो बातें कही जा रही थीं, उनमें से कौन चूक गया?\nA: डुवैल के बच्चे\nB: माइक\nC: मिलर\nD: डुवाल\nAnswer:",
+            " A"
+          ],
+          [
+            "P: डुवैल, जो विवाहित है और उसके दो वयस्क बच्चे हैं, उसने मिलर पर बड़ा असर नहीं किया, जिस से कहानी संबंधित है. जब टिप्पणी के लिए कहा गया, तो मिलर ने कहा, “माइक सुनते समय बहुत सारी बातें करता है ... मैं तैयार हो रहा था इसलिए वह जो कह रहा था मैं वास्तव में उसे सुन नहीं रहा था”.\nQ: परिच्छेद के अनुसार, जो बातें कही जा रही थीं, उनमें से कौन चूक गया?\nA: डुवैल के बच्चे\nB: माइक\nC: मिलर\nD: डुवाल\nAnswer:",
+            " B"
+          ],
+          [
+            "P: डुवैल, जो विवाहित है और उसके दो वयस्क बच्चे हैं, उसने मिलर पर बड़ा असर नहीं किया, जिस से कहानी संबंधित है. जब टिप्पणी के लिए कहा गया, तो मिलर ने कहा, “माइक सुनते समय बहुत सारी बातें करता है ... मैं तैयार हो रहा था इसलिए वह जो कह रहा था मैं वास्तव में उसे सुन नहीं रहा था”.\nQ: परिच्छेद के अनुसार, जो बातें कही जा रही थीं, उनमें से कौन चूक गया?\nA: डुवैल के बच्चे\nB: माइक\nC: मिलर\nD: डुवाल\nAnswer:",
+            " C"
+          ],
+          [
+            "P: डुवैल, जो विवाहित है और उसके दो वयस्क बच्चे हैं, उसने मिलर पर बड़ा असर नहीं किया, जिस से कहानी संबंधित है. जब टिप्पणी के लिए कहा गया, तो मिलर ने कहा, “माइक सुनते समय बहुत सारी बातें करता है ... मैं तैयार हो रहा था इसलिए वह जो कह रहा था मैं वास्तव में उसे सुन नहीं रहा था”.\nQ: परिच्छेद के अनुसार, जो बातें कही जा रही थीं, उनमें से कौन चूक गया?\nA: डुवैल के बच्चे\nB: माइक\nC: मिलर\nD: डुवाल\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.3603477478027344,
+              false
+            ]
+          ],
+          [
+            [
+              -2.4853477478027344,
+              false
+            ]
+          ],
+          [
+            [
+              -0.48534780740737915,
+              true
+            ]
+          ],
+          [
+            [
+              -4.110347747802734,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.3603477478027344,
+            false
+          ],
+          [
+            -2.4853477478027344,
+            false
+          ],
+          [
+            -0.48534780740737915,
+            true
+          ],
+          [
+            -4.110347747802734,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "161e44696ed977baf831d798f8db47960f022c817a220c243bfc36a9ee1a47fb",
+        "prompt_hash": "d544a88683078adbe8067eb7e3fd6b07275ddaa407f419e879b4b35cd9124dd3",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 334,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Space_station_crew_perform_successful_spacewalk",
+          "question_number": 2,
+          "flores_passage": "स्पेसवॉक के अंत तक स्पेस स्टेशन मिशन में पहले एक जाइरोस्कोप के नुकसान के बावजूद स्टेशन ने अपना रुख़ बनाए रखा. चियाओ और शारिपोव ने रवैया सुधार थ्रस्टर से एक सुरक्षित दूरी बनाने की घोषणा की है. रूसी ग्राउंड कंट्रोल ने जेट्स को एक्टिवेट किया और स्टेशन का नॉर्मल एटिट्यूड फिर से हासिल हो गया था.",
+          "question": "गद्यांश के अनुसार, अंतरिक्ष स्टेशन के मिशन का लक्ष्य क्या था?",
+          "mc_answer1": "खोया जाइरोस्कोप ढूँढना",
+          "mc_answer2": "समायोजन थ्रस्टर्स के करीब आना",
+          "mc_answer3": "स्पेसवॉक पूरा करना",
+          "mc_answer4": "जेट हवाई जहाजों का सक्रियण",
+          "correct_answer_num": "3",
+          "dialect": "hin_Deva",
+          "ds": "2023-07-21 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: स्पेसवॉक के अंत तक स्पेस स्टेशन मिशन में पहले एक जाइरोस्कोप के नुकसान के बावजूद स्टेशन ने अपना रुख़ बनाए रखा. चियाओ और शारिपोव ने रवैया सुधार थ्रस्टर से एक सुरक्षित दूरी बनाने की घोषणा की है. रूसी ग्राउंड कंट्रोल ने जेट्स को एक्टिवेट किया और स्टेशन का नॉर्मल एटिट्यूड फिर से हासिल हो गया था.\nQ: गद्यांश के अनुसार, अंतरिक्ष स्टेशन के मिशन का लक्ष्य क्या था?\nA: खोया जाइरोस्कोप ढूँढना\nB: समायोजन थ्रस्टर्स के करीब आना\nC: स्पेसवॉक पूरा करना\nD: जेट हवाई जहाजों का सक्रियण\nAnswer:",
+            " A"
+          ],
+          [
+            "P: स्पेसवॉक के अंत तक स्पेस स्टेशन मिशन में पहले एक जाइरोस्कोप के नुकसान के बावजूद स्टेशन ने अपना रुख़ बनाए रखा. चियाओ और शारिपोव ने रवैया सुधार थ्रस्टर से एक सुरक्षित दूरी बनाने की घोषणा की है. रूसी ग्राउंड कंट्रोल ने जेट्स को एक्टिवेट किया और स्टेशन का नॉर्मल एटिट्यूड फिर से हासिल हो गया था.\nQ: गद्यांश के अनुसार, अंतरिक्ष स्टेशन के मिशन का लक्ष्य क्या था?\nA: खोया जाइरोस्कोप ढूँढना\nB: समायोजन थ्रस्टर्स के करीब आना\nC: स्पेसवॉक पूरा करना\nD: जेट हवाई जहाजों का सक्रियण\nAnswer:",
+            " B"
+          ],
+          [
+            "P: स्पेसवॉक के अंत तक स्पेस स्टेशन मिशन में पहले एक जाइरोस्कोप के नुकसान के बावजूद स्टेशन ने अपना रुख़ बनाए रखा. चियाओ और शारिपोव ने रवैया सुधार थ्रस्टर से एक सुरक्षित दूरी बनाने की घोषणा की है. रूसी ग्राउंड कंट्रोल ने जेट्स को एक्टिवेट किया और स्टेशन का नॉर्मल एटिट्यूड फिर से हासिल हो गया था.\nQ: गद्यांश के अनुसार, अंतरिक्ष स्टेशन के मिशन का लक्ष्य क्या था?\nA: खोया जाइरोस्कोप ढूँढना\nB: समायोजन थ्रस्टर्स के करीब आना\nC: स्पेसवॉक पूरा करना\nD: जेट हवाई जहाजों का सक्रियण\nAnswer:",
+            " C"
+          ],
+          [
+            "P: स्पेसवॉक के अंत तक स्पेस स्टेशन मिशन में पहले एक जाइरोस्कोप के नुकसान के बावजूद स्टेशन ने अपना रुख़ बनाए रखा. चियाओ और शारिपोव ने रवैया सुधार थ्रस्टर से एक सुरक्षित दूरी बनाने की घोषणा की है. रूसी ग्राउंड कंट्रोल ने जेट्स को एक्टिवेट किया और स्टेशन का नॉर्मल एटिट्यूड फिर से हासिल हो गया था.\nQ: गद्यांश के अनुसार, अंतरिक्ष स्टेशन के मिशन का लक्ष्य क्या था?\nA: खोया जाइरोस्कोप ढूँढना\nB: समायोजन थ्रस्टर्स के करीब आना\nC: स्पेसवॉक पूरा करना\nD: जेट हवाई जहाजों का सक्रियण\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.47383737564086914,
+              true
+            ]
+          ],
+          [
+            [
+              -2.348837375640869,
+              false
+            ]
+          ],
+          [
+            [
+              -2.098837375640869,
+              false
+            ]
+          ],
+          [
+            [
+              -4.536337375640869,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.47383737564086914,
+            true
+          ],
+          [
+            -2.348837375640869,
+            false
+          ],
+          [
+            -2.098837375640869,
+            false
+          ],
+          [
+            -4.536337375640869,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a21b00483cda8a68ad1cb673f042675e430a4b0788cf785da75ad6d1ba60a332",
+        "prompt_hash": "4e9a7e00c3e20105aac3a82e30bfd7de6251612fa4db510626c4c22de5d82f3d",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 699,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/United_States_warns_of_suicide_attacks_in_Kenya_and_Ethiopia",
+          "question_number": 1,
+          "flores_passage": "केन्या के नैरोबी स्थित यूनाइटेड स्टेट्स के दूतावास ने चेतावनी जारी की है कि “सोमालिया के अतिवादी” केन्या और इथियोपिया में आत्मघाती बम हमलों की योजना बना रहे हैं. अमेरिका का कहना है कि उसे एक अज्ञात स्रोत से जानकारी मिली है जो विशेष रूप से कहता है कि आत्मघाती हमलावरों के उपयोग से इथियोपिया और केन्या में “प्रमुख स्थलों” को उड़ा दिया जायेगा।",
+          "question": "गद्यांश के अनुसार, संयुक्त राज्य अमेरिका को संभावित हमलों के बारे में किसने जानकारी दी?",
+          "mc_answer1": "सोमाली चरमपंथी",
+          "mc_answer2": "इथियोपिया का दूतावास",
+          "mc_answer3": "अज्ञात स्रोत",
+          "mc_answer4": "केन्या में एक स्रोत",
+          "correct_answer_num": "3",
+          "dialect": "hin_Deva",
+          "ds": "2023-07-21 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: केन्या के नैरोबी स्थित यूनाइटेड स्टेट्स के दूतावास ने चेतावनी जारी की है कि “सोमालिया के अतिवादी” केन्या और इथियोपिया में आत्मघाती बम हमलों की योजना बना रहे हैं. अमेरिका का कहना है कि उसे एक अज्ञात स्रोत से जानकारी मिली है जो विशेष रूप से कहता है कि आत्मघाती हमलावरों के उपयोग से इथियोपिया और केन्या में “प्रमुख स्थलों” को उड़ा दिया जायेगा।\nQ: गद्यांश के अनुसार, संयुक्त राज्य अमेरिका को संभावित हमलों के बारे में किसने जानकारी दी?\nA: सोमाली चरमपंथी\nB: इथियोपिया का दूतावास\nC: अज्ञात स्रोत\nD: केन्या में एक स्रोत\nAnswer:",
+            " A"
+          ],
+          [
+            "P: केन्या के नैरोबी स्थित यूनाइटेड स्टेट्स के दूतावास ने चेतावनी जारी की है कि “सोमालिया के अतिवादी” केन्या और इथियोपिया में आत्मघाती बम हमलों की योजना बना रहे हैं. अमेरिका का कहना है कि उसे एक अज्ञात स्रोत से जानकारी मिली है जो विशेष रूप से कहता है कि आत्मघाती हमलावरों के उपयोग से इथियोपिया और केन्या में “प्रमुख स्थलों” को उड़ा दिया जायेगा।\nQ: गद्यांश के अनुसार, संयुक्त राज्य अमेरिका को संभावित हमलों के बारे में किसने जानकारी दी?\nA: सोमाली चरमपंथी\nB: इथियोपिया का दूतावास\nC: अज्ञात स्रोत\nD: केन्या में एक स्रोत\nAnswer:",
+            " B"
+          ],
+          [
+            "P: केन्या के नैरोबी स्थित यूनाइटेड स्टेट्स के दूतावास ने चेतावनी जारी की है कि “सोमालिया के अतिवादी” केन्या और इथियोपिया में आत्मघाती बम हमलों की योजना बना रहे हैं. अमेरिका का कहना है कि उसे एक अज्ञात स्रोत से जानकारी मिली है जो विशेष रूप से कहता है कि आत्मघाती हमलावरों के उपयोग से इथियोपिया और केन्या में “प्रमुख स्थलों” को उड़ा दिया जायेगा।\nQ: गद्यांश के अनुसार, संयुक्त राज्य अमेरिका को संभावित हमलों के बारे में किसने जानकारी दी?\nA: सोमाली चरमपंथी\nB: इथियोपिया का दूतावास\nC: अज्ञात स्रोत\nD: केन्या में एक स्रोत\nAnswer:",
+            " C"
+          ],
+          [
+            "P: केन्या के नैरोबी स्थित यूनाइटेड स्टेट्स के दूतावास ने चेतावनी जारी की है कि “सोमालिया के अतिवादी” केन्या और इथियोपिया में आत्मघाती बम हमलों की योजना बना रहे हैं. अमेरिका का कहना है कि उसे एक अज्ञात स्रोत से जानकारी मिली है जो विशेष रूप से कहता है कि आत्मघाती हमलावरों के उपयोग से इथियोपिया और केन्या में “प्रमुख स्थलों” को उड़ा दिया जायेगा।\nQ: गद्यांश के अनुसार, संयुक्त राज्य अमेरिका को संभावित हमलों के बारे में किसने जानकारी दी?\nA: सोमाली चरमपंथी\nB: इथियोपिया का दूतावास\nC: अज्ञात स्रोत\nD: केन्या में एक स्रोत\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.534040451049805,
+              false
+            ]
+          ],
+          [
+            [
+              -8.659040451049805,
+              false
+            ]
+          ],
+          [
+            [
+              -0.03404047712683678,
+              true
+            ]
+          ],
+          [
+            [
+              -9.096540451049805,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.534040451049805,
+            false
+          ],
+          [
+            -8.659040451049805,
+            false
+          ],
+          [
+            -0.03404047712683678,
+            true
+          ],
+          [
+            -9.096540451049805,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f1b2d1d12db3cfc1a814a4ab582939282348e868848c6b01cbb73145c46954dd",
+        "prompt_hash": "f7b78f1fabf23d82283d1d6b3bf6ee3ed9fe4b45330fa1d4733fee8f9a993380",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 645,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Dangerous_animals",
+          "question_number": 1,
+          "flores_passage": "मूस (जिसे एल्क भी कहा जाता है) सहज रूप से आक्रामक नहीं होते, लेकिन यदि उन्हें कोई ख़तरा महसूस होता है, तो वे अपनी रक्षा करेंगे. जब लोग मूस को बहुत ख़तरनाक नहीं मानते हैं, तो वे बहुत पास आ सकते हैं और खुद को जोख़िम में डाल सकते हैं.",
+          "question": "लोग मूस के साथ क्या करने से बचना चाहिए?",
+          "mc_answer1": "अनजान होना चाहिए",
+          "mc_answer2": "धीरे आ रहा है",
+          "mc_answer3": "उनके खतरे के स्तर को कम करने के लिए",
+          "mc_answer4": "दूर से उन्हें देखना होगा",
+          "correct_answer_num": "3",
+          "dialect": "hin_Deva",
+          "ds": "2023-07-21 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: मूस (जिसे एल्क भी कहा जाता है) सहज रूप से आक्रामक नहीं होते, लेकिन यदि उन्हें कोई ख़तरा महसूस होता है, तो वे अपनी रक्षा करेंगे. जब लोग मूस को बहुत ख़तरनाक नहीं मानते हैं, तो वे बहुत पास आ सकते हैं और खुद को जोख़िम में डाल सकते हैं.\nQ: लोग मूस के साथ क्या करने से बचना चाहिए?\nA: अनजान होना चाहिए\nB: धीरे आ रहा है\nC: उनके खतरे के स्तर को कम करने के लिए\nD: दूर से उन्हें देखना होगा\nAnswer:",
+            " A"
+          ],
+          [
+            "P: मूस (जिसे एल्क भी कहा जाता है) सहज रूप से आक्रामक नहीं होते, लेकिन यदि उन्हें कोई ख़तरा महसूस होता है, तो वे अपनी रक्षा करेंगे. जब लोग मूस को बहुत ख़तरनाक नहीं मानते हैं, तो वे बहुत पास आ सकते हैं और खुद को जोख़िम में डाल सकते हैं.\nQ: लोग मूस के साथ क्या करने से बचना चाहिए?\nA: अनजान होना चाहिए\nB: धीरे आ रहा है\nC: उनके खतरे के स्तर को कम करने के लिए\nD: दूर से उन्हें देखना होगा\nAnswer:",
+            " B"
+          ],
+          [
+            "P: मूस (जिसे एल्क भी कहा जाता है) सहज रूप से आक्रामक नहीं होते, लेकिन यदि उन्हें कोई ख़तरा महसूस होता है, तो वे अपनी रक्षा करेंगे. जब लोग मूस को बहुत ख़तरनाक नहीं मानते हैं, तो वे बहुत पास आ सकते हैं और खुद को जोख़िम में डाल सकते हैं.\nQ: लोग मूस के साथ क्या करने से बचना चाहिए?\nA: अनजान होना चाहिए\nB: धीरे आ रहा है\nC: उनके खतरे के स्तर को कम करने के लिए\nD: दूर से उन्हें देखना होगा\nAnswer:",
+            " C"
+          ],
+          [
+            "P: मूस (जिसे एल्क भी कहा जाता है) सहज रूप से आक्रामक नहीं होते, लेकिन यदि उन्हें कोई ख़तरा महसूस होता है, तो वे अपनी रक्षा करेंगे. जब लोग मूस को बहुत ख़तरनाक नहीं मानते हैं, तो वे बहुत पास आ सकते हैं और खुद को जोख़िम में डाल सकते हैं.\nQ: लोग मूस के साथ क्या करने से बचना चाहिए?\nA: अनजान होना चाहिए\nB: धीरे आ रहा है\nC: उनके खतरे के स्तर को कम करने के लिए\nD: दूर से उन्हें देखना होगा\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.2126457691192627,
+              false
+            ]
+          ],
+          [
+            [
+              -4.150146007537842,
+              false
+            ]
+          ],
+          [
+            [
+              -0.5876458287239075,
+              true
+            ]
+          ],
+          [
+            [
+              -2.3376457691192627,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.2126457691192627,
+            false
+          ],
+          [
+            -4.150146007537842,
+            false
+          ],
+          [
+            -0.5876458287239075,
+            true
+          ],
+          [
+            -2.3376457691192627,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "762cc0dc5d0f303a6afa4dccdab15e85265738c26b12aea32e315f35c3bccbdc",
+        "prompt_hash": "1c940bdcc037c29806a6340c2142d5bcbe9e6372ed81c3b2a339ab6f4a21e31c",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "LocalCompletionsAPI",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792367310.55763,
+  "pretty_env_info": "PyTorch version: 2.13.0+cu130\nIs debug build: False\nCUDA used to build PyTorch: 13.0\nROCM used to build PyTorch: N/A\n\nOS: Ubuntu 26.04 LTS (x86_64)\nGCC version: (Ubuntu 15.2.0-16ubuntu1) 15.2.0\nClang version: Could not collect\nCMake version: Could not collect\nLibc version: glibc-2.43\n\nPython version: 3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ] (64-bit runtime)\nPython platform: Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43\nIs CUDA available: True\nCUDA runtime version: 13.2.86\nCUDA_MODULE_LOADING set to: \nGPU models and configuration: Could not collect\nNvidia driver version: Could not collect\ncuDNN version: Could not collect\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: False\nCaching allocator config: N/A\n\nCPU:\nArchitecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           48 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  32\nOn-line CPU(s) list:                     0-31\nVendor ID:                               AuthenticAMD\nModel name:                              AMD Ryzen 9 9950X3D 16-Core Processor\nCPU family:                              26\nModel:                                   68\nThread(s) per core:                      2\nCore(s) per socket:                      16\nSocket(s):                               1\nStepping:                                0\nBogoMIPS:                                8599.55\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero xsaveerptr arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload avx512vbmi umip avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm avx512_vp2intersect\nVirtualization:                          AMD-V\nHypervisor vendor:                       Microsoft\nVirtualization type:                     full\nL1d cache:                               768 KiB (16 instances)\nL1i cache:                               512 KiB (16 instances)\nL2 cache:                                16 MiB (16 instances)\nL3 cache:                                96 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-31\nVulnerability Gather data sampling:      Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected\n\nVersions of relevant libraries:\n[pip3] Could not collect\n[conda] Could not collect",
+  "transformers_version": "5.20.1",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<PAD>",
+    "0"
+  ],
+  "tokenizer_eos_token": [
+    "<|END_OF_TURN_TOKEN|>",
+    "6"
+  ],
+  "tokenizer_bos_token": [
+    "<BOS_TOKEN>",
+    "2"
+  ],
+  "eot_token_id": 6,
+  "max_length": 8191
+}

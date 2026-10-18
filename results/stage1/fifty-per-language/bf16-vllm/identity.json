@@ -1,0 +1,10 @@
+{
+  "lock": "7de16ffcfb75033d1c88ccc6299a00a4df956821f82dec580907539633f1321c",
+  "runtime": "2608c0088212b7903dd9c20ca5a35726a8d2dd273c2a7d905b0013273d3385e3",
+  "runner": "d94e6a01c8334365b211f3d65197d22b24873cf93e1025d2a3694f0f6b757dd6",
+  "arm": "bf16-vllm",
+  "backend": "local-completions",
+  "tokenizer": "/home/shohag/tiny-aya-stage1/models/tiny-aya-global",
+  "count_per_language": 50,
+  "shard_size": 5
+}

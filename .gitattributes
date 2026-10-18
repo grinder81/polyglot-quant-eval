@@ -1,0 +1,3 @@
+# Preserve byte-level evidence hashes on Windows and Linux.
+results/stage1/fifty-per-language/**/*.json -text
+results/stage1/fifty-per-language/*.json -text

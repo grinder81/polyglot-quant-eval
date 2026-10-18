@@ -1,0 +1,100 @@
+{
+  "n_per_language": 50,
+  "correct": {
+    "bf16-vllm": {
+      "eng_Latn": 35.0,
+      "ben_Beng": 31.0,
+      "hin_Deva": 27.0
+    },
+    "bf16-gguf": {
+      "eng_Latn": 35.0,
+      "ben_Beng": 31.0,
+      "hin_Deva": 27.0
+    },
+    "q4": {
+      "eng_Latn": 33.0,
+      "ben_Beng": 30.0,
+      "hin_Deva": 23.0
+    }
+  },
+  "pairs": {
+    "bf16-gguf_to_q4": {
+      "eng_Latn": {
+        "changed_answers": 2,
+        "right_to_wrong": 2,
+        "wrong_to_right": 0,
+        "delta_pp": -4.0,
+        "mean_margin_delta": -0.5430160911288112,
+        "delta_gap_vs_english_pp": 0.0
+      },
+      "ben_Beng": {
+        "changed_answers": 7,
+        "right_to_wrong": 3,
+        "wrong_to_right": 2,
+        "delta_pp": -2.0,
+        "mean_margin_delta": -0.3348920297808945,
+        "delta_gap_vs_english_pp": 2.0
+      },
+      "hin_Deva": {
+        "changed_answers": 6,
+        "right_to_wrong": 4,
+        "wrong_to_right": 0,
+        "delta_pp": -8.0,
+        "mean_margin_delta": -0.23052997210994364,
+        "delta_gap_vs_english_pp": -4.0
+      }
+    },
+    "bf16-vllm_to_bf16-gguf": {
+      "eng_Latn": {
+        "changed_answers": 0,
+        "right_to_wrong": 0,
+        "wrong_to_right": 0,
+        "delta_pp": 0.0,
+        "mean_margin_delta": -0.004872590564191342,
+        "delta_gap_vs_english_pp": 0.0
+      },
+      "ben_Beng": {
+        "changed_answers": 0,
+        "right_to_wrong": 0,
+        "wrong_to_right": 0,
+        "delta_pp": 0.0,
+        "mean_margin_delta": 0.007898720763623714,
+        "delta_gap_vs_english_pp": 0.0
+      },
+      "hin_Deva": {
+        "changed_answers": 0,
+        "right_to_wrong": 0,
+        "wrong_to_right": 0,
+        "delta_pp": 0.0,
+        "mean_margin_delta": -0.029610670637339354,
+        "delta_gap_vs_english_pp": 0.0
+      }
+    },
+    "bf16-vllm_to_q4": {
+      "eng_Latn": {
+        "changed_answers": 2,
+        "right_to_wrong": 2,
+        "wrong_to_right": 0,
+        "delta_pp": -4.0,
+        "mean_margin_delta": -0.5478886816930025,
+        "delta_gap_vs_english_pp": 0.0
+      },
+      "ben_Beng": {
+        "changed_answers": 7,
+        "right_to_wrong": 3,
+        "wrong_to_right": 2,
+        "delta_pp": -2.0,
+        "mean_margin_delta": -0.3269933090172708,
+        "delta_gap_vs_english_pp": 2.0
+      },
+      "hin_Deva": {
+        "changed_answers": 6,
+        "right_to_wrong": 4,
+        "wrong_to_right": 0,
+        "delta_pp": -8.0,
+        "mean_margin_delta": -0.260140642747283,
+        "delta_gap_vs_english_pp": -4.0
+      }
+    }
+  }
+}
