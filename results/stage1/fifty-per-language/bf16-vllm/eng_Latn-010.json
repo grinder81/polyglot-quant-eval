@@ -1,0 +1,578 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 172,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Castles_of_England/Tudor_Castles",
+          "question_number": 2,
+          "flores_passage": "Typical for the period, Kirby Muxloe Castle is more of a fortified house than a true castle. Its large glazed windows and thin walls would not have been able to resist a determined attack for long. In the 1480s, when its construction was begun by Lord Hastings, the country was relatively peaceful and defense was only required against small bands of roving marauders.",
+          "question": "Which of the following construction features would be considered atypical for Kirby Muxloe Castle during the time period described in the passage?",
+          "mc_answer1": "Huge windows",
+          "mc_answer2": "A foundation built to sustain attacks",
+          "mc_answer3": "Less fortification than some castles",
+          "mc_answer4": "Thin walls",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Typical for the period, Kirby Muxloe Castle is more of a fortified house than a true castle. Its large glazed windows and thin walls would not have been able to resist a determined attack for long. In the 1480s, when its construction was begun by Lord Hastings, the country was relatively peaceful and defense was only required against small bands of roving marauders.\nQ: Which of the following construction features would be considered atypical for Kirby Muxloe Castle during the time period described in the passage?\nA: Huge windows\nB: A foundation built to sustain attacks\nC: Less fortification than some castles\nD: Thin walls\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Typical for the period, Kirby Muxloe Castle is more of a fortified house than a true castle. Its large glazed windows and thin walls would not have been able to resist a determined attack for long. In the 1480s, when its construction was begun by Lord Hastings, the country was relatively peaceful and defense was only required against small bands of roving marauders.\nQ: Which of the following construction features would be considered atypical for Kirby Muxloe Castle during the time period described in the passage?\nA: Huge windows\nB: A foundation built to sustain attacks\nC: Less fortification than some castles\nD: Thin walls\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Typical for the period, Kirby Muxloe Castle is more of a fortified house than a true castle. Its large glazed windows and thin walls would not have been able to resist a determined attack for long. In the 1480s, when its construction was begun by Lord Hastings, the country was relatively peaceful and defense was only required against small bands of roving marauders.\nQ: Which of the following construction features would be considered atypical for Kirby Muxloe Castle during the time period described in the passage?\nA: Huge windows\nB: A foundation built to sustain attacks\nC: Less fortification than some castles\nD: Thin walls\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Typical for the period, Kirby Muxloe Castle is more of a fortified house than a true castle. Its large glazed windows and thin walls would not have been able to resist a determined attack for long. In the 1480s, when its construction was begun by Lord Hastings, the country was relatively peaceful and defense was only required against small bands of roving marauders.\nQ: Which of the following construction features would be considered atypical for Kirby Muxloe Castle during the time period described in the passage?\nA: Huge windows\nB: A foundation built to sustain attacks\nC: Less fortification than some castles\nD: Thin walls\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.014845728874206543,
+              true
+            ]
+          ],
+          [
+            [
+              -4.889845848083496,
+              false
+            ]
+          ],
+          [
+            [
+              -6.139845848083496,
+              false
+            ]
+          ],
+          [
+            [
+              -7.327345848083496,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.014845728874206543,
+            true
+          ],
+          [
+            -4.889845848083496,
+            false
+          ],
+          [
+            -6.139845848083496,
+            false
+          ],
+          [
+            -7.327345848083496,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "bcd5871b0384e56bd5adfb948b02d2b5684e6142a061a8a1a9b667e0b83c207d",
+        "prompt_hash": "17f466086035e5f0f38c47c0f467abc6c99653bc783bad10268ea8cb4b9c090c",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 299,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/What_is_a_Civilization%3F",
+          "question_number": 2,
+          "flores_passage": "A civilization is a singular culture shared by a significant large group of people who live and work co-operatively, a society. The word civilization comes from the Latin civilis, meaning civil, related to the Latin civis, meaning citizen, and civitas, meaning city or city-state, and that also somehow defines the size of the society. City-states are the precursors of nations. A civilizational culture implies the passing on of knowledge across several generations, a lingering cultural footprint and fair dissemination. Minor cultures often vanish without leaving relevant historic evidence and fail to be recognized as proper civilizations.",
+          "question": "According to the passage, what precedes a nation?",
+          "mc_answer1": "A civilizational culture",
+          "mc_answer2": "A singular culture",
+          "mc_answer3": "A city-state",
+          "mc_answer4": "A minor cultures",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: A civilization is a singular culture shared by a significant large group of people who live and work co-operatively, a society. The word civilization comes from the Latin civilis, meaning civil, related to the Latin civis, meaning citizen, and civitas, meaning city or city-state, and that also somehow defines the size of the society. City-states are the precursors of nations. A civilizational culture implies the passing on of knowledge across several generations, a lingering cultural footprint and fair dissemination. Minor cultures often vanish without leaving relevant historic evidence and fail to be recognized as proper civilizations.\nQ: According to the passage, what precedes a nation?\nA: A civilizational culture\nB: A singular culture\nC: A city-state\nD: A minor cultures\nAnswer:",
+            " A"
+          ],
+          [
+            "P: A civilization is a singular culture shared by a significant large group of people who live and work co-operatively, a society. The word civilization comes from the Latin civilis, meaning civil, related to the Latin civis, meaning citizen, and civitas, meaning city or city-state, and that also somehow defines the size of the society. City-states are the precursors of nations. A civilizational culture implies the passing on of knowledge across several generations, a lingering cultural footprint and fair dissemination. Minor cultures often vanish without leaving relevant historic evidence and fail to be recognized as proper civilizations.\nQ: According to the passage, what precedes a nation?\nA: A civilizational culture\nB: A singular culture\nC: A city-state\nD: A minor cultures\nAnswer:",
+            " B"
+          ],
+          [
+            "P: A civilization is a singular culture shared by a significant large group of people who live and work co-operatively, a society. The word civilization comes from the Latin civilis, meaning civil, related to the Latin civis, meaning citizen, and civitas, meaning city or city-state, and that also somehow defines the size of the society. City-states are the precursors of nations. A civilizational culture implies the passing on of knowledge across several generations, a lingering cultural footprint and fair dissemination. Minor cultures often vanish without leaving relevant historic evidence and fail to be recognized as proper civilizations.\nQ: According to the passage, what precedes a nation?\nA: A civilizational culture\nB: A singular culture\nC: A city-state\nD: A minor cultures\nAnswer:",
+            " C"
+          ],
+          [
+            "P: A civilization is a singular culture shared by a significant large group of people who live and work co-operatively, a society. The word civilization comes from the Latin civilis, meaning civil, related to the Latin civis, meaning citizen, and civitas, meaning city or city-state, and that also somehow defines the size of the society. City-states are the precursors of nations. A civilizational culture implies the passing on of knowledge across several generations, a lingering cultural footprint and fair dissemination. Minor cultures often vanish without leaving relevant historic evidence and fail to be recognized as proper civilizations.\nQ: According to the passage, what precedes a nation?\nA: A civilizational culture\nB: A singular culture\nC: A city-state\nD: A minor cultures\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.476073980331421,
+              false
+            ]
+          ],
+          [
+            [
+              -5.47607421875,
+              false
+            ]
+          ],
+          [
+            [
+              -0.10107401758432388,
+              true
+            ]
+          ],
+          [
+            [
+              -7.22607421875,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.476073980331421,
+            false
+          ],
+          [
+            -5.47607421875,
+            false
+          ],
+          [
+            -0.10107401758432388,
+            true
+          ],
+          [
+            -7.22607421875,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f8aab26bce262a0296f811cc01e375ffe0eac42cf90a0e833570be9bdd9e002e",
+        "prompt_hash": "0b4059b710d794655e76202d4301e040b85b66828556332ecfaf1e337cb234c3",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 28,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Anonymous_people_reveal_animal_cruelty_at_Australian_Inghams_poultry_producer_factory_using_CCTV_footage",
+          "question_number": 2,
+          "flores_passage": "\"Animal Liberation and the Royal Society for the Prevention of Cruelty to Animals (RSPCA) are again calling for the mandatory installation of CCTV cameras in all Australian abattoirs. RSPCA New South Wales chief inspector David O'Shannessy told the ABC that surveillance and inspections of abattoirs should be commonplace in Australia. \"\"The CCTV would certainly send a strong signal to those people working with animals that their welfare is of the highest priority.\"\"\"",
+          "question": "According to the passage, what could help solidify the importance of animal welfare to Australian abattoir workers?",
+          "mc_answer1": "The installation of CCTV cameras ",
+          "mc_answer2": "Mandatory meetings with RSPCA",
+          "mc_answer3": "Regular abattoir inspections",
+          "mc_answer4": "Oversight from the ABC",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"Animal Liberation and the Royal Society for the Prevention of Cruelty to Animals (RSPCA) are again calling for the mandatory installation of CCTV cameras in all Australian abattoirs. RSPCA New South Wales chief inspector David O'Shannessy told the ABC that surveillance and inspections of abattoirs should be commonplace in Australia. \"\"The CCTV would certainly send a strong signal to those people working with animals that their welfare is of the highest priority.\"\"\"\nQ: According to the passage, what could help solidify the importance of animal welfare to Australian abattoir workers?\nA: The installation of CCTV cameras \nB: Mandatory meetings with RSPCA\nC: Regular abattoir inspections\nD: Oversight from the ABC\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Animal Liberation and the Royal Society for the Prevention of Cruelty to Animals (RSPCA) are again calling for the mandatory installation of CCTV cameras in all Australian abattoirs. RSPCA New South Wales chief inspector David O'Shannessy told the ABC that surveillance and inspections of abattoirs should be commonplace in Australia. \"\"The CCTV would certainly send a strong signal to those people working with animals that their welfare is of the highest priority.\"\"\"\nQ: According to the passage, what could help solidify the importance of animal welfare to Australian abattoir workers?\nA: The installation of CCTV cameras \nB: Mandatory meetings with RSPCA\nC: Regular abattoir inspections\nD: Oversight from the ABC\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Animal Liberation and the Royal Society for the Prevention of Cruelty to Animals (RSPCA) are again calling for the mandatory installation of CCTV cameras in all Australian abattoirs. RSPCA New South Wales chief inspector David O'Shannessy told the ABC that surveillance and inspections of abattoirs should be commonplace in Australia. \"\"The CCTV would certainly send a strong signal to those people working with animals that their welfare is of the highest priority.\"\"\"\nQ: According to the passage, what could help solidify the importance of animal welfare to Australian abattoir workers?\nA: The installation of CCTV cameras \nB: Mandatory meetings with RSPCA\nC: Regular abattoir inspections\nD: Oversight from the ABC\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Animal Liberation and the Royal Society for the Prevention of Cruelty to Animals (RSPCA) are again calling for the mandatory installation of CCTV cameras in all Australian abattoirs. RSPCA New South Wales chief inspector David O'Shannessy told the ABC that surveillance and inspections of abattoirs should be commonplace in Australia. \"\"The CCTV would certainly send a strong signal to those people working with animals that their welfare is of the highest priority.\"\"\"\nQ: According to the passage, what could help solidify the importance of animal welfare to Australian abattoir workers?\nA: The installation of CCTV cameras \nB: Mandatory meetings with RSPCA\nC: Regular abattoir inspections\nD: Oversight from the ABC\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.020757462829351425,
+              true
+            ]
+          ],
+          [
+            [
+              -7.645757675170898,
+              false
+            ]
+          ],
+          [
+            [
+              -7.020757675170898,
+              false
+            ]
+          ],
+          [
+            [
+              -9.145757675170898,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.020757462829351425,
+            true
+          ],
+          [
+            -7.645757675170898,
+            false
+          ],
+          [
+            -7.020757675170898,
+            false
+          ],
+          [
+            -9.145757675170898,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "7e9a623b390c510358858ba6f186e0fe2b99121d124f27baeaa78b9ab83005fd",
+        "prompt_hash": "e58ee1d1cd35489174d90f284e12bcd99ccc137430a8bee17aaf3fabde58088a",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 374,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Explorers_find_shipwreck_thought_to_be_massive_WWII_battleship_Musashi",
+          "question_number": 1,
+          "flores_passage": "If confirmed, the find completes Allen's eight-year search for the Musashi. Following seabed mapping the wreck was found using an ROV. One of the world's richest people, Allen has reportedly invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in the war.",
+          "question": "What led Allen to begin an eight-year search for the Musashi?",
+          "mc_answer1": "His wealth",
+          "mc_answer2": "His interest in seabed mapping",
+          "mc_answer3": "His investment in marine exploration",
+          "mc_answer4": "His interest in the war",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: If confirmed, the find completes Allen's eight-year search for the Musashi. Following seabed mapping the wreck was found using an ROV. One of the world's richest people, Allen has reportedly invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in the war.\nQ: What led Allen to begin an eight-year search for the Musashi?\nA: His wealth\nB: His interest in seabed mapping\nC: His investment in marine exploration\nD: His interest in the war\nAnswer:",
+            " A"
+          ],
+          [
+            "P: If confirmed, the find completes Allen's eight-year search for the Musashi. Following seabed mapping the wreck was found using an ROV. One of the world's richest people, Allen has reportedly invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in the war.\nQ: What led Allen to begin an eight-year search for the Musashi?\nA: His wealth\nB: His interest in seabed mapping\nC: His investment in marine exploration\nD: His interest in the war\nAnswer:",
+            " B"
+          ],
+          [
+            "P: If confirmed, the find completes Allen's eight-year search for the Musashi. Following seabed mapping the wreck was found using an ROV. One of the world's richest people, Allen has reportedly invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in the war.\nQ: What led Allen to begin an eight-year search for the Musashi?\nA: His wealth\nB: His interest in seabed mapping\nC: His investment in marine exploration\nD: His interest in the war\nAnswer:",
+            " C"
+          ],
+          [
+            "P: If confirmed, the find completes Allen's eight-year search for the Musashi. Following seabed mapping the wreck was found using an ROV. One of the world's richest people, Allen has reportedly invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in the war.\nQ: What led Allen to begin an eight-year search for the Musashi?\nA: His wealth\nB: His interest in seabed mapping\nC: His investment in marine exploration\nD: His interest in the war\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.652624130249023,
+              false
+            ]
+          ],
+          [
+            [
+              -7.027624130249023,
+              false
+            ]
+          ],
+          [
+            [
+              -4.902624130249023,
+              false
+            ]
+          ],
+          [
+            [
+              -0.0276239775121212,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.652624130249023,
+            false
+          ],
+          [
+            -7.027624130249023,
+            false
+          ],
+          [
+            -4.902624130249023,
+            false
+          ],
+          [
+            -0.0276239775121212,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "d570371fd0215fe971711bbb45e3211ff74cc9e3de7f37ef59db659b5b2429e3",
+        "prompt_hash": "44ea3ec05f40177f5be1db340cb2bb7feca25eaa41beebc1db82122e7cd1d00a",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 533,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Russian_military_cargo_jet_crash_kills_eleven_in_Siberia",
+          "question_number": 2,
+          "flores_passage": "The aircraft had been headed to Irkutsk and was being operated by interior troops. An inquiry was established to investigate. The Il-76 has been a major component of both the Russian and Soviet military since the 1970s, and had already seen a serious accident in Russia last month. On October 7 an engine separated on takeoff, without injuries. Russia briefly grounded Il-76s after that accident.",
+          "question": "What is the II-76?",
+          "mc_answer1": "A submarine",
+          "mc_answer2": "A tank",
+          "mc_answer3": "An aircraft",
+          "mc_answer4": "A train",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The aircraft had been headed to Irkutsk and was being operated by interior troops. An inquiry was established to investigate. The Il-76 has been a major component of both the Russian and Soviet military since the 1970s, and had already seen a serious accident in Russia last month. On October 7 an engine separated on takeoff, without injuries. Russia briefly grounded Il-76s after that accident.\nQ: What is the II-76?\nA: A submarine\nB: A tank\nC: An aircraft\nD: A train\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The aircraft had been headed to Irkutsk and was being operated by interior troops. An inquiry was established to investigate. The Il-76 has been a major component of both the Russian and Soviet military since the 1970s, and had already seen a serious accident in Russia last month. On October 7 an engine separated on takeoff, without injuries. Russia briefly grounded Il-76s after that accident.\nQ: What is the II-76?\nA: A submarine\nB: A tank\nC: An aircraft\nD: A train\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The aircraft had been headed to Irkutsk and was being operated by interior troops. An inquiry was established to investigate. The Il-76 has been a major component of both the Russian and Soviet military since the 1970s, and had already seen a serious accident in Russia last month. On October 7 an engine separated on takeoff, without injuries. Russia briefly grounded Il-76s after that accident.\nQ: What is the II-76?\nA: A submarine\nB: A tank\nC: An aircraft\nD: A train\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The aircraft had been headed to Irkutsk and was being operated by interior troops. An inquiry was established to investigate. The Il-76 has been a major component of both the Russian and Soviet military since the 1970s, and had already seen a serious accident in Russia last month. On October 7 an engine separated on takeoff, without injuries. Russia briefly grounded Il-76s after that accident.\nQ: What is the II-76?\nA: A submarine\nB: A tank\nC: An aircraft\nD: A train\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.013540744781494,
+              false
+            ]
+          ],
+          [
+            [
+              -7.826040744781494,
+              false
+            ]
+          ],
+          [
+            [
+              -0.01354068424552679,
+              true
+            ]
+          ],
+          [
+            [
+              -9.638540267944336,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.013540744781494,
+            false
+          ],
+          [
+            -7.826040744781494,
+            false
+          ],
+          [
+            -0.01354068424552679,
+            true
+          ],
+          [
+            -9.638540267944336,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "13486ee22d34cb71c174fee3aaf43f2cc175a6389f030095cf4c2dc99d936c22",
+        "prompt_hash": "5e89a6154bb820bde3c72698bc85eff58252744896c930d6e0aca3faf1a3866b",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "LocalCompletionsAPI",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792367026.6644092,
+  "pretty_env_info": "PyTorch version: 2.13.0+cu130\nIs debug build: False\nCUDA used to build PyTorch: 13.0\nROCM used to build PyTorch: N/A\n\nOS: Ubuntu 26.04 LTS (x86_64)\nGCC version: (Ubuntu 15.2.0-16ubuntu1) 15.2.0\nClang version: Could not collect\nCMake version: Could not collect\nLibc version: glibc-2.43\n\nPython version: 3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ] (64-bit runtime)\nPython platform: Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43\nIs CUDA available: True\nCUDA runtime version: 13.2.86\nCUDA_MODULE_LOADING set to: \nGPU models and configuration: Could not collect\nNvidia driver version: Could not collect\ncuDNN version: Could not collect\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: False\nCaching allocator config: N/A\n\nCPU:\nArchitecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           48 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  32\nOn-line CPU(s) list:                     0-31\nVendor ID:                               AuthenticAMD\nModel name:                              AMD Ryzen 9 9950X3D 16-Core Processor\nCPU family:                              26\nModel:                                   68\nThread(s) per core:                      2\nCore(s) per socket:                      16\nSocket(s):                               1\nStepping:                                0\nBogoMIPS:                                8599.55\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero xsaveerptr arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload avx512vbmi umip avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm avx512_vp2intersect\nVirtualization:                          AMD-V\nHypervisor vendor:                       Microsoft\nVirtualization type:                     full\nL1d cache:                               768 KiB (16 instances)\nL1i cache:                               512 KiB (16 instances)\nL2 cache:                                16 MiB (16 instances)\nL3 cache:                                96 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-31\nVulnerability Gather data sampling:      Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected\n\nVersions of relevant libraries:\n[pip3] Could not collect\n[conda] Could not collect",
+  "transformers_version": "5.20.1",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<PAD>",
+    "0"
+  ],
+  "tokenizer_eos_token": [
+    "<|END_OF_TURN_TOKEN|>",
+    "6"
+  ],
+  "tokenizer_bos_token": [
+    "<BOS_TOKEN>",
+    "2"
+  ],
+  "eot_token_id": 6,
+  "max_length": 8191
+}
