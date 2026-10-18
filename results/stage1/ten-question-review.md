@@ -1,6 +1,6 @@
 # Ten-question pilot: complete question and answer review
 
-These are likelihood-selected choices, not generated explanations. Original BF16 in vLLM is pending. Both completed models selected the same answer on all ten items. Text below is reproduced from the saved dataset records, including original spelling.
+These are likelihood-selected choices, not generated explanations. All three models selected the same answer on all ten items. Full vLLM scores are in ten-question/vllm-accuracy-small.json. Text below is reproduced from the saved dataset records, including original spelling.
 
 ## eng_Latn — dataset row 92
 
@@ -21,7 +21,7 @@ Unlike other primates, hominids no longer use their hands in locomotion or beari
 |---|---|---|
 | BF16 GGUF | A — They are straighter than a humans’ | Wrong |
 | Four-bit GGUF | A — They are straighter than a humans’ | Wrong |
-| Original BF16 / vLLM | Pending | Not run |
+| Original BF16 / vLLM | Same selected answer as both GGUF models | Same correctness |
 
 Candidate log-likelihoods (larger is preferred; not confidence percentages):
 
@@ -53,7 +53,7 @@ Passage source: https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/
 |---|---|---|
 | BF16 GGUF | A — He was killed during the Riina-driven war | Correct |
 | Four-bit GGUF | A — He was killed during the Riina-driven war | Correct |
-| Original BF16 / vLLM | Pending | Not run |
+| Original BF16 / vLLM | Same selected answer as both GGUF models | Same correctness |
 
 Candidate log-likelihoods (larger is preferred; not confidence percentages):
 
@@ -85,7 +85,7 @@ Registration is an additional requirement for the visa process. In some countrie
 |---|---|---|
 | BF16 GGUF | B — All countries require registration with the local authorities | Correct |
 | Four-bit GGUF | B — All countries require registration with the local authorities | Correct |
-| Original BF16 / vLLM | Pending | Not run |
+| Original BF16 / vLLM | Same selected answer as both GGUF models | Same correctness |
 
 Candidate log-likelihoods (larger is preferred; not confidence percentages):
 
@@ -117,7 +117,7 @@ Passage source: https://en.wikivoyage.org/wiki/Visa
 |---|---|---|
 | BF16 GGUF | A — রিনা পরিচালিত বিদ্রোহের সময় তাকে মারা হয়েছিল | Correct |
 | Four-bit GGUF | A — রিনা পরিচালিত বিদ্রোহের সময় তাকে মারা হয়েছিল | Correct |
-| Original BF16 / vLLM | Pending | Not run |
+| Original BF16 / vLLM | Same selected answer as both GGUF models | Same correctness |
 
 Candidate log-likelihoods (larger is preferred; not confidence percentages):
 
@@ -149,7 +149,7 @@ Passage source: https://en.wikinews.org/wiki/Italy_arrests_reputed_Mafia_boss_Lo
 |---|---|---|
 | BF16 GGUF | B — রিপাবলিকান পার্টির মনোনয়ন | Wrong |
 | Four-bit GGUF | B — রিপাবলিকান পার্টির মনোনয়ন | Wrong |
-| Original BF16 / vLLM | Pending | Not run |
+| Original BF16 / vLLM | Same selected answer as both GGUF models | Same correctness |
 
 Candidate log-likelihoods (larger is preferred; not confidence percentages):
 
@@ -181,7 +181,7 @@ Passage source: https://en.wikinews.org/wiki/Mitt_Romney_wins_2012_Florida_prima
 |---|---|---|
 | BF16 GGUF | A — এগুলি মানুষের থেকে সোজা আকৃতির হয় | Wrong |
 | Four-bit GGUF | A — এগুলি মানুষের থেকে সোজা আকৃতির হয় | Wrong |
-| Original BF16 / vLLM | Pending | Not run |
+| Original BF16 / vLLM | Same selected answer as both GGUF models | Same correctness |
 
 Candidate log-likelihoods (larger is preferred; not confidence percentages):
 
@@ -213,7 +213,7 @@ Passage source: https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/
 |---|---|---|
 | BF16 GGUF | A — আপনি যদি পর্যটন আবাসনে থাকেন, তাহলে আপনার নিবন্ধন করার প্রয়োজন নাও থাকতে পারে | Wrong |
 | Four-bit GGUF | A — আপনি যদি পর্যটন আবাসনে থাকেন, তাহলে আপনার নিবন্ধন করার প্রয়োজন নাও থাকতে পারে | Wrong |
-| Original BF16 / vLLM | Pending | Not run |
+| Original BF16 / vLLM | Same selected answer as both GGUF models | Same correctness |
 
 Candidate log-likelihoods (larger is preferred; not confidence percentages):
 
@@ -245,7 +245,7 @@ Passage source: https://en.wikivoyage.org/wiki/Visa
 |---|---|---|
 | BF16 GGUF | A — वे मनुष्यों की तुलना में सीधे हैं’ | Wrong |
 | Four-bit GGUF | A — वे मनुष्यों की तुलना में सीधे हैं’ | Wrong |
-| Original BF16 / vLLM | Pending | Not run |
+| Original BF16 / vLLM | Same selected answer as both GGUF models | Same correctness |
 
 Candidate log-likelihoods (larger is preferred; not confidence percentages):
 
@@ -277,7 +277,7 @@ Passage source: https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/
 |---|---|---|
 | BF16 GGUF | A — वह रीना द्वारा संचालित युद्ध के दौरान मारा गया था | Correct |
 | Four-bit GGUF | A — वह रीना द्वारा संचालित युद्ध के दौरान मारा गया था | Correct |
-| Original BF16 / vLLM | Pending | Not run |
+| Original BF16 / vLLM | Same selected answer as both GGUF models | Same correctness |
 
 Candidate log-likelihoods (larger is preferred; not confidence percentages):
 
@@ -309,7 +309,7 @@ Passage source: https://en.wikinews.org/wiki/Italy_arrests_reputed_Mafia_boss_Lo
 |---|---|---|
 | BF16 GGUF | A — अगर आप पर्यटकों के ठहरने की जगह में रहते हैं, तो आपको रजिस्ट्रेशन करने की ज़रूरत नहीं है | Wrong |
 | Four-bit GGUF | A — अगर आप पर्यटकों के ठहरने की जगह में रहते हैं, तो आपको रजिस्ट्रेशन करने की ज़रूरत नहीं है | Wrong |
-| Original BF16 / vLLM | Pending | Not run |
+| Original BF16 / vLLM | Same selected answer as both GGUF models | Same correctness |
 
 Candidate log-likelihoods (larger is preferred; not confidence percentages):
 
