@@ -14,6 +14,8 @@ def main():
     parser.add_argument('--base-url', required=True)
     parser.add_argument('--arm', required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--small-pilot', action='store_true',
+                        help='Ten total: first four Bangla, three English and three Hindi locked items')
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
@@ -21,7 +23,8 @@ def main():
     loaded = tasks()
     samples = {}
     for language, task in loaded.items():
-        selected = [group[language] for group in lock['items'][:50]]
+        count = (4 if language == 'ben_Beng' else 3) if args.small_pilot else 50
+        selected = [group[language] for group in lock['items'][:count]]
         docs = task.test_docs()
         for row in selected:
             doc = docs[row['index']]
@@ -36,7 +39,9 @@ def main():
         apply_chat_template=False, log_samples=True, bootstrap_iters=1000,
         random_seed=42, numpy_random_seed=42, torch_random_seed=42,
         fewshot_random_seed=42,
-        metadata={'arm': args.arm, 'scope': '50 aligned development items per language; no speed claim'})
+        metadata={'arm': args.arm, 'scope': (
+            '10 total development items: 4 Bangla, 3 English, 3 Hindi; no speed claim'
+            if args.small_pilot else '50 aligned development items per language; no speed claim')})
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2, default=str))
 
 
