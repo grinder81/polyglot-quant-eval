@@ -1,0 +1,80 @@
+{
+  "dataset": "facebook/belebele",
+  "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+  "lm_eval_version": "0.4.13",
+  "datasets_version": "5.1.0",
+  "split": "test",
+  "use": "development/baseline; not reserved final test",
+  "task_definitions": {
+    "_default_template_yaml": {
+      "sha256": "af87baf2916fe45b4ccbdd394b8ed1bda04e0df52b4a412bc8c3a1be562b658d",
+      "text": "dataset_path: facebook/belebele\nfewshot_config:\n  sampler: first_n\noutput_type: multiple_choice\nshould_decontaminate: true\ndoc_to_decontamination_query: \"{{question}}\"\ndoc_to_text: \"P: {{flores_passage}}\\nQ: {{question.strip()}}\\nA: {{mc_answer1}}\\nB: {{mc_answer2}}\\nC: {{mc_answer3}}\\nD: {{mc_answer4}}\\nAnswer:\"\ndoc_to_choice: [\"A\", \"B\", \"C\", \"D\"]\ndoc_to_target: \"{{['1', '2', '3', '4'].index(correct_answer_num)}}\"\nmetric_list:\n  - metric: acc\n    aggregation: mean\n    higher_is_better: true\n  - metric: acc_norm\n    aggregation: mean\n    higher_is_better: true\nmetadata:\n  version: 0.0\n"
+    },
+    "belebele_eng_Latn.yaml": {
+      "sha256": "ce981f1f8f08489b2809db5ea88c2231e033ed9f7f76ce302c85f08ac4543fd6",
+      "text": "dataset_name: eng_Latn\nfewshot_split: test\ninclude: _default_template_yaml\ntask: belebele_eng_Latn\ntest_split: test\n"
+    },
+    "belebele_ben_Beng.yaml": {
+      "sha256": "d2b3270ed90d8c2269e2744decce69148ad18d3d35a22ece485dd7a37bfe84ae",
+      "text": "dataset_name: ben_Beng\nfewshot_split: test\ninclude: _default_template_yaml\ntask: belebele_ben_Beng\ntest_split: test\n"
+    },
+    "belebele_hin_Deva.yaml": {
+      "sha256": "22f162d7fe48beba1937ee301b8f126370777f65b124bdf09f8629e44d8b3bfe",
+      "text": "dataset_name: hin_Deva\nfewshot_split: test\ninclude: _default_template_yaml\ntask: belebele_hin_Deva\ntest_split: test\n"
+    }
+  },
+  "subsets": {
+    "eng_Latn": {
+      "rows": 900,
+      "columns": [
+        "link",
+        "question_number",
+        "flores_passage",
+        "question",
+        "mc_answer1",
+        "mc_answer2",
+        "mc_answer3",
+        "mc_answer4",
+        "correct_answer_num",
+        "dialect",
+        "ds"
+      ],
+      "ordered_rows_sha256": "32eb722bde32157903dafd7b50e4049b9db05ae7a3c6a8afbdf9e9bcee254e4f"
+    },
+    "ben_Beng": {
+      "rows": 900,
+      "columns": [
+        "link",
+        "question_number",
+        "flores_passage",
+        "question",
+        "mc_answer1",
+        "mc_answer2",
+        "mc_answer3",
+        "mc_answer4",
+        "correct_answer_num",
+        "dialect",
+        "ds"
+      ],
+      "ordered_rows_sha256": "c2e07a4380121a8feefb3cf84f174d004aa150e77fd0e8afb9fc4c996b771cb6"
+    },
+    "hin_Deva": {
+      "rows": 900,
+      "columns": [
+        "link",
+        "question_number",
+        "flores_passage",
+        "question",
+        "mc_answer1",
+        "mc_answer2",
+        "mc_answer3",
+        "mc_answer4",
+        "correct_answer_num",
+        "dialect",
+        "ds"
+      ],
+      "ordered_rows_sha256": "59cef1d3606b223896701ad1cc56660c8c981937bab60704bcba8f4c036e3653"
+    }
+  },
+  "status": "dataset and task audit only; sample lock and runtime scoring unverified"
+}

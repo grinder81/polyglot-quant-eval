@@ -1,5 +1,9 @@
 # LOG
 
+## Belebele task/data audit
+- Downloaded pinned English, Bangla and Hindi subsets and recorded 900 rows each, label checks, content hashes and installed task definitions in results/stage1/belebele-task-audit.json.
+- Confirmed upstream candidates are A/B/C/D; canonical Stage 1 uses zero-shot acc without a chat template. No model scoring or sample lock yet.
+
 Dated entries: what changed, the numbers, open problems.
 
 ## 2026-10-16
