@@ -1,0 +1,88 @@
+{
+  "n_per_language": 50,
+  "correct": {
+    "eng_Latn": 33.0,
+    "ben_Beng": 30.0,
+    "hin_Deva": 23.0
+  },
+  "comparisons": {
+    "q4": {
+      "eng_Latn": {
+        "changed_choices": 0,
+        "right_to_wrong": 0,
+        "wrong_to_right": 0,
+        "delta_pp": 0.0,
+        "max_absolute_likelihood_difference": 0.0,
+        "delta_gap_vs_english_pp": 0.0
+      },
+      "ben_Beng": {
+        "changed_choices": 0,
+        "right_to_wrong": 0,
+        "wrong_to_right": 0,
+        "delta_pp": 0.0,
+        "max_absolute_likelihood_difference": 0.0,
+        "delta_gap_vs_english_pp": 0.0
+      },
+      "hin_Deva": {
+        "changed_choices": 0,
+        "right_to_wrong": 0,
+        "wrong_to_right": 0,
+        "delta_pp": 0.0,
+        "max_absolute_likelihood_difference": 0.0,
+        "delta_gap_vs_english_pp": 0.0
+      }
+    },
+    "bf16-gguf": {
+      "eng_Latn": {
+        "changed_choices": 2,
+        "right_to_wrong": 2,
+        "wrong_to_right": 0,
+        "delta_pp": -4.0,
+        "max_absolute_likelihood_difference": 2.4315099716186523,
+        "delta_gap_vs_english_pp": 0.0
+      },
+      "ben_Beng": {
+        "changed_choices": 7,
+        "right_to_wrong": 3,
+        "wrong_to_right": 2,
+        "delta_pp": -2.0,
+        "max_absolute_likelihood_difference": 2.8628411293029785,
+        "delta_gap_vs_english_pp": 2.0
+      },
+      "hin_Deva": {
+        "changed_choices": 6,
+        "right_to_wrong": 4,
+        "wrong_to_right": 0,
+        "delta_pp": -8.0,
+        "max_absolute_likelihood_difference": 3.4982802867889404,
+        "delta_gap_vs_english_pp": -4.0
+      }
+    },
+    "bf16-vllm": {
+      "eng_Latn": {
+        "changed_choices": 2,
+        "right_to_wrong": 2,
+        "wrong_to_right": 0,
+        "delta_pp": -4.0,
+        "max_absolute_likelihood_difference": 2.517237663269043,
+        "delta_gap_vs_english_pp": 0.0
+      },
+      "ben_Beng": {
+        "changed_choices": 7,
+        "right_to_wrong": 3,
+        "wrong_to_right": 2,
+        "delta_pp": -2.0,
+        "max_absolute_likelihood_difference": 2.946134090423584,
+        "delta_gap_vs_english_pp": 2.0
+      },
+      "hin_Deva": {
+        "changed_choices": 6,
+        "right_to_wrong": 4,
+        "wrong_to_right": 0,
+        "delta_pp": -8.0,
+        "max_absolute_likelihood_difference": 3.5373218059539795,
+        "delta_gap_vs_english_pp": -4.0
+      }
+    }
+  }
+}
