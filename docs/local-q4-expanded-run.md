@@ -9,3 +9,7 @@ The local tokenizer patch explicitly treats the non-joiner as a word continuatio
 If the runtime changes, do not simply reuse old results under a new manifest. Prefer rerunning all 300 per language under the corrected runtime, or prove unchanged behavior on the old subset and retain separate provenance. No adapter or scoring change is authorized.
 
 The runner now accepts aligned start/count ranges without changing run_pilot.py or upstream scoring. The intended reuse of the first 50 remains conditional on validation and runtime identity.
+
+## Blocker resolved and execution started
+
+The validated local correction in tiny-aya-edge PR 23 removes the incorrect join-control exceptions. Original-tokenizer checks and standalone C++ regressions pass, followed by zero mismatches across all 900 contexts and 3600 candidates. The local-only run now starts at zero for all 300 per language under a new runtime manifest. Earlier 50-question results are preserved, not reused or relabeled. No scoring, model or question changes.
