@@ -21,6 +21,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--local-q4-only', action='store_true',
+                   help='Evaluate the approved local control without rerunning the existing arms')
     args = p.parse_args()
     root, output = args.root, args.output
     output.mkdir(parents=True, exist_ok=True)
@@ -30,6 +32,8 @@ def main():
     models = [('q4', root / 'models/tiny-aya-global-GGUF/tiny-aya-global-q4_k_m.gguf'),
               ('bf16-gguf', root / 'models/tiny-aya-global-control-bf16.gguf'),
               ('bf16-vllm', original)]
+    if args.local_q4_only:
+        models = [('local-q4', root / 'models/tiny-aya-global-local-q4_k_m.gguf')]
     for arm, model in models:
         is_vllm = arm == 'bf16-vllm'
         env = os.environ.copy()
