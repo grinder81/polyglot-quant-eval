@@ -21,11 +21,17 @@ def main():
     p.add_argument('--base-url', required=True)
     p.add_argument('--backend', default='gguf', choices=['gguf', 'local-completions'])
     p.add_argument('--tokenizer')
+    p.add_argument('--start', type=int, default=0)
+    p.add_argument('--count', type=int, default=50)
     args = p.parse_args()
+    if args.start < 0 or args.start % 5 or args.count < 5 or args.count % 5:
+        p.error('start and count must align with five-question groups')
     runner = Path(__file__).with_name('run_pilot.py')
     identity = dict(lock=sha(args.lock), runtime=sha(args.runtime_manifest),
                     runner=sha(runner), arm=args.arm, backend=args.backend,
-                    tokenizer=args.tokenizer, count_per_language=50, shard_size=5)
+                    tokenizer=args.tokenizer, count_per_language=args.count, shard_size=5)
+    if args.start:
+        identity['start'] = args.start
     args.directory.mkdir(parents=True, exist_ok=True)
     marker = args.directory / 'identity.json'
     if marker.exists():
@@ -34,7 +40,7 @@ def main():
         assert not list(args.directory.glob('*.json')), 'Unidentified existing results'
         marker.write_text(json.dumps(identity, indent=2))
     for language in ['eng_Latn', 'ben_Beng', 'hin_Deva']:
-        for start in range(0, 50, 5):
+        for start in range(args.start, args.start + args.count, 5):
             output = args.directory / f'{language}-{start:03d}.json'
             if output.exists():
                 saved = json.loads(output.read_text(encoding='utf-8'))
