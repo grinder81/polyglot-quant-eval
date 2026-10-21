@@ -1,0 +1,32 @@
+{
+  "scope": "Offline diagnostic requests only; no endpoint or accuracy validation",
+  "provenance": {
+    "rotation_lock_sha256": "69c046fe63add6190ee868fb8eda65a98f876ebf9da477bffd9024b0724087cc",
+    "original_lock_sha256": "7de16ffcfb75033d1c88ccc6299a00a4df956821f82dec580907539633f1321c",
+    "a2_spec_sha256": "f52d701b18a8cf4cdd39d9e9037c1e24a0e7d415bbfa1e549440fa58d2fc4339",
+    "transformers_version": "4.57.6",
+    "tokenizer_files": {
+      "tokenizer.json": "2227ea9c52e8afb3f98bfed2679008b275f2664de69dfde174b374389eb0225d",
+      "tokenizer_config.json": "fb56a3ef7659346aae196a2ab877355f1e7fd871c36843f709bb2e23c606d972",
+      "special_tokens_map.json": "2b7ce39630f8a18705331a9b32c3b2236e96e7410791f98a9f8b6494e3ab2ea6"
+    },
+    "preparer_sha256": "983ff0ba3e6281c1605da053f9d3052e5905106a0e1be30455ec0e9385cad306",
+    "context": 8192
+  },
+  "variants": [
+    "plain-letter",
+    "chat-letter",
+    "plain-option-text"
+  ],
+  "contexts": 3600,
+  "candidates": 14400,
+  "counts": {
+    "plain-letter": 1200,
+    "chat-letter": 1200,
+    "plain-option-text": 1200
+  },
+  "max_model_tokens": 717,
+  "upstream_acc_norm": "sum continuation log probability / Unicode characters in choice; excludes delimiter",
+  "endpoint_validation_required": true,
+  "request_lock_sha256": "75486c22c0c25f7c6c9d3da6abfaaa0165babf4a5de24970147ab9d1488d9844"
+}
