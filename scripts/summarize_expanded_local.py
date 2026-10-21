@@ -14,22 +14,23 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def summarize(root):
-    identity = json.loads((root / 'local-q4/identity.json').read_text())
+def summarize(root, arm='local-q4'):
+    identity = json.loads((root / arm / 'identity.json').read_text())
+    assert identity['arm'] == arm and identity['backend'] == 'gguf'
     assert identity['count_per_language'] == 300 and identity.get('start', 0) == 0
-    assert sha((root / 'local-q4-runtime.json').read_bytes()) == identity['runtime']
+    assert sha((root / (arm + '-runtime.json')).read_bytes()) == identity['runtime']
     lock = json.loads((root / 'sample-identities.json').read_text(encoding='utf-8'))
     assert lock['original_lock_sha256'] == identity['lock']
     assert len(lock['items']) == 300
     expected_files = {f'{l}-{i:03}.json' for l in LANGS for i in range(0, 300, 5)}
-    assert {p.name for p in (root / 'local-q4').glob('*-*.json')} == expected_files
+    assert {p.name for p in (root / arm).glob('*-*.json')} == expected_files
     rows = []
     for lang in LANGS:
         seen = set()
         for start in range(0, 300, 5):
             expected = {(g[lang]['source'], g[lang]['question']): g[lang]
                         for g in lock['items'][start:start + 5]}
-            data = json.loads((root / 'local-q4' / f'{lang}-{start:03}.json').read_text(encoding='utf-8'))
+            data = json.loads((root / arm / f'{lang}-{start:03}.json').read_text(encoding='utf-8'))
             samples = data['samples']['belebele_' + lang]
             assert len(samples) == 5
             shard_correct = 0
@@ -88,8 +89,9 @@ def summarize(root):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('root', type=Path)
+    parser.add_argument('--arm', choices=['local-q4', 'bf16-gguf'], default='local-q4')
     args = parser.parse_args()
-    summary, _ = summarize(args.root)
+    summary, _ = summarize(args.root, args.arm)
     (args.root / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')
     print(json.dumps(summary, indent=2))
 
