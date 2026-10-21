@@ -1,6 +1,9 @@
 # Planning only: not consumed by the runner and not a completed data lock.
 version: 1
 status: proposed_sources_unlocked
+# Final Belebele membership is reserved separately; other pools remain unlocked.
+final_belebele_reservation: configs/belebele-final-holdout.json
+final_belebele_access_policy: docs/final-holdout.md
 stage1_languages: [en, bn, hi]
 split_unit: source_document
 split_seed: 42

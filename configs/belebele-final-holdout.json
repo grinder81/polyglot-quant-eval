@@ -1,0 +1,1726 @@
+{
+  "version": 1,
+  "dataset": "facebook/belebele",
+  "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+  "split": "test",
+  "languages": [
+    "eng_Latn",
+    "ben_Beng",
+    "hin_Deva"
+  ],
+  "development_lock_sha256": "7de16ffcfb75033d1c88ccc6299a00a4df956821f82dec580907539633f1321c",
+  "membership_sha256": "6081033157b4b05d3c82dca198ff19ff318bc38f051549f305a0a8f6a75e5fdc",
+  "members": [
+    {
+      "source": "https://en.wikibooks.org/wiki/Accordion/Right_hand",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Accordion/Right_hand",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/All_About_Converting_From_Several_Video_Formats_To_DVD",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/All_About_Converting_From_Several_Video_Formats_To_DVD",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/American_Revolution/The_Battles_of_Trenton_and_Princeton",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/American_Revolution/Ticonderoga_and_Bunker_Hill",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/American_Revolution/Ticonderoga_and_Bunker_Hill",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Ancient_China/Government",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Animal_Behavior/Biological_Rhythms",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Applied_Ecology/Nature_Tourism",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Basic_Physics_of_Digital_Radiography/The_Computer",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Basic_Physics_of_Digital_Radiography/The_Computer",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Blended_Learning_in_K-12/Blended_Learning_in_Grades_9-12",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Blended_Learning_in_K-12/Blended_Learning_in_Grades_9-12",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Cognitive_Psychology_and_Cognitive_Neuroscience/Evolutionary_Perspective_on_Social_Cognitions",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Cognitive_Psychology_and_Cognitive_Neuroscience/Evolutionary_Perspective_on_Social_Cognitions",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Communication_Theory/Nonverbal_Communication",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Communication_Theory/Nonverbal_Communication",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Communication_Theory/Uses_and_Gratifications",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Communication_Theory/Uses_and_Gratifications",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Environmental_theory_and_collection_of_ideas/Environmentalism_and_survival",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Environmental_theory_and_collection_of_ideas/Environmentalism_and_survival",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/European_History/Challenges_to_Spiritual_Authority",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/European_History/World_War_I",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/European_History/World_War_I",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Exercise_as_it_relates_to_Disease/Can_Exercise_Really_Help_Multiple_Sclerosis%3F",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Fencing",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/First_Aid/Poisoning",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/French_Revolution/Effects",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/French_Revolution/Effects",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Fundamentals_of_Transportation/Traffic_Flow",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Fundamentals_of_Transportation/Traffic_Flow",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/General_Biology/Genetics/DNA,_The_Genetic_Material",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/General_Biology/Genetics/Mutation",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/General_Biology/Genetics/Mutation",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Goats/Introduction",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Golf",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Golf",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/High_School_Earth_Science/Storms",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/High_School_Earth_Science/Storms",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/High_School_Earth_Science/Telescopes",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/High_School_Earth_Science/Telescopes",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/History_of_Technology/Cultural_Determinism",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/How_to_Play_Violin/Bowing",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/How_to_Play_Violin/Bowing",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/Genetics/Introduction",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/Genetics/Introduction",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/Oldowan",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/Oldowan",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Culture",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Race_and_Ethnicity",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Race_and_Ethnicity",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Socialization",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Socialization",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Society",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Society",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Learning_Theories/Organizational_Learning:_Influencing_Factors",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Learning_Theories/Organizational_Learning:_Influencing_Factors",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Learning_Theories/Post-Modern_Theories",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Learning_Theories/Post-Modern_Theories",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Lucid_Dreaming/Introduction",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Lucid_Dreaming/Introduction",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Managing_Groups_and_Teams/How_Do_You_Build_High-performing_Virtual_Teams%3F",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Managing_Groups_and_Teams/How_Do_You_Build_High-performing_Virtual_Teams%3F",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Managing_Groups_and_Teams/Motivation",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Modern_Photography/Composition",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Modern_Photography/Format",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Mysticism/What_is_mysticism%3F",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Mysticism/What_is_mysticism%3F",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/New_Zealand_History/Polynesian_Settlement",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/New_Zealand_History/Polynesian_Settlement",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Pakistani_History/Prehistory/Bronze_Age/Indus_Valley_Civilization",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Pakistani_History/Prehistory/Bronze_Age/Indus_Valley_Civilization",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Philippine_History/The_Philippine-American_War",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Roman_Culture/Medicine",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Roman_Culture/Medicine",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Sensory_Systems/Visual_System",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Sensory_Systems/Visual_System",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Social_and_Cultural_Foundations_of_American_Education/Technology/Role",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Social_and_Cultural_Foundations_of_American_Education/Technology/Role",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/The_Cold_War/Hungarian_Revolution",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/The_Cold_War/Hungarian_Revolution",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Transport/History",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Transport/History",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Warfare",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Warfare",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Assyrians",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Assyrians",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Babylonians",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Babylonians",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Greeks",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Greeks",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Hebrews",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Hebrews",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Norse",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Norse",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Romans",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Romans",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Asia/Cambodia",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Asia/Cambodia",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Big_Cats/Lion",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Big_Cats/Lion",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Biology/Cells",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Biology/Cells",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Biology/Origin_of_Life",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Biology/Origin_of_Life",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Dinosaurs/Triceratops",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Dinosaurs/Triceratops",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Europe/Italy",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Europe/Italy",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Europe/Luxembourg",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Europe/Luxembourg",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Europe/Turkey",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Europe/Turkey",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Europe/Vatican_City",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Europe/Vatican_City",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Flush_Toilet",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Flush_Toilet",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Ice_Skates",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Ice_Skates",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Laser",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Laser",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Nuclear_Bomb",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Rocket",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Rocket",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Time",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Time",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Languages/Korean",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Languages/Korean",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/Jupiter/Io",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/The_Sun",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/The_Sun",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/Venus",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/Venus",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:The_Elements/Matter_Is_The_Stuff_Around_You",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:The_Elements/Matter_Is_The_Stuff_Around_You",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:United_States_Charters_of_Freedom/Constitution",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:United_States_Charters_of_Freedom/Constitution",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Pyramids_of_Giza",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Serengeti",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Serengeti",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Liberation_of_Western_Europe",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Liberation_of_Western_Europe",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/World_War_II/Battle_of_Poland",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/World_War_II/Battle_of_Poland",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Yoga/Yoga_Tales",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Yoga/Yoga_Tales",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/2010_FIBA_World_Championship_starts",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/2010_FIBA_World_Championship_starts",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/24_people_rescued_from_roller_coaster_at_California%27s_Great_America_theme_park",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/24_people_rescued_from_roller_coaster_at_California%27s_Great_America_theme_park",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/8.0_magnitude_earthquake_occurs_near_Tonga",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/8.0_magnitude_earthquake_occurs_near_Tonga",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/A1GP_New_Zealand_speeds_its_way_into_record_books",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/A1GP_New_Zealand_speeds_its_way_into_record_books",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/A_5.6_Richter_quake_hits_Western_Montana",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Abu_Ghraib_prison_burns_after_riot",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Abu_Ghraib_prison_burns_after_riot",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Akayev_flees_Kyrgyzstan_as_protesters_seize_control_of_Bishkek",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Akayev_flees_Kyrgyzstan_as_protesters_seize_control_of_Bishkek",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/American_children%27s_show_Reading_Rainbow_ends_26_year_run",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/American_children%27s_show_Reading_Rainbow_ends_26_year_run",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Anne_Frank_tree_saved_from_being_chopped_down",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Apple_introduces_iPhone_and_Apple_TV",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Apple_introduces_iPhone_and_Apple_TV",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Austria_leads_medal_count_after_second_day_of_2013_IPC_Alpine_World_Championships",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Austria_leads_medal_count_after_second_day_of_2013_IPC_Alpine_World_Championships",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Beverly_Hall,_indicted_public_school_superintendent,_dies_aged_68",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Beverly_Hall,_indicted_public_school_superintendent,_dies_aged_68",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Bomb_blasts_kill_several_in_Iran",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Businessman_and_founder_of_The_Weather_Channel_Frank_Batten_dies_at_82",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Businessman_and_founder_of_The_Weather_Channel_Frank_Batten_dies_at_82",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Canadian_inspectors_to_test_food_ingredients_from_China",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Canadian_inspectors_to_test_food_ingredients_from_China",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Canadian_professional_wrestler_Luna_Vachon_dies_aged_48",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Canadian_professional_wrestler_Luna_Vachon_dies_aged_48",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Car_crashes_into_house_in_Suffolk,_UK,_seriously_injuring_man",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Car_women%27s_rugby_7%27s_tournament",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Car_women%27s_rugby_7%27s_tournament",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/China_promises_cut_in_carbon_dioxide_emissions",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/China_promises_cut_in_carbon_dioxide_emissions",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Cholera_outbreak_hits_Angola",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Controversial_Berlin_opera_features_interactive_drug_usage",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Controversial_Berlin_opera_features_interactive_drug_usage",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Dark_matter_lacks_extra_gravitational_force",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Dark_matter_lacks_extra_gravitational_force",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Distributed_computing_to_get_%22interstellar_project%22",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Distributed_computing_to_get_%22interstellar_project%22",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/EBay_to_acquire_Skype",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/EBay_to_acquire_Skype",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Effect_of_sanctions_%27like_war%27_says_Iran%27s_Ahmadinejad",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Effect_of_sanctions_%27like_war%27_says_Iran%27s_Ahmadinejad",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Electronic_voting_disputed_in_France",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Electronic_voting_disputed_in_France",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Explosion_at_earthquake-damaged_Fukushima_nuclear_power_plant",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Explosion_at_earthquake-damaged_Fukushima_nuclear_power_plant",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Extremely_drug-resistant_tuberculosis_strain_emerges_in_South_Africa",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Extremely_drug-resistant_tuberculosis_strain_emerges_in_South_Africa",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/FBI_recruits_for_%22War_on_Porn%22",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/FBI_recruits_for_%22War_on_Porn%22",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Former_U.S._National_Security_Advisor_Zbigniew_Brzezinski_dies_aged_89",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Former_U.S._National_Security_Advisor_Zbigniew_Brzezinski_dies_aged_89",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Former_Yugoslavian_footballer_Stjepan_Bobek_dies_aged_86",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Former_Yugoslavian_footballer_Stjepan_Bobek_dies_aged_86",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/France_issues_pollution_alert_as_ship_splits_off_Basque_coast",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/France_issues_pollution_alert_as_ship_splits_off_Basque_coast",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Gas_explosion_reported_in_Hammersmith,_London",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Gas_explosion_reported_in_Hammersmith,_London",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Golf_and_rugby_set_to_return_to_the_Olympic_Games",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Golf_and_rugby_set_to_return_to_the_Olympic_Games",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/H5N1_confirmed_in_France",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/H5N1_confirmed_in_France",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Haitian_cholera_victims_threaten_United_Nations_with_lawsuit",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Haitian_cholera_victims_threaten_United_Nations_with_lawsuit",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Hard_drugs_temporarily_legal_in_Ireland_due_to_constitutional_loophole",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Hard_drugs_temporarily_legal_in_Ireland_due_to_constitutional_loophole",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Hollywood_sign_modified_to_read_%27Hollyweed%27",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Hollywood_sign_modified_to_read_%27Hollyweed%27",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Hong_Kong_%27tutor_king%27_applies_for_bankruptcy",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Icelandic_Hekla_volcano_shows_signs_of_activity",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Icelandic_Hekla_volcano_shows_signs_of_activity",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/India_struggles_with_encephalitis_outbreak",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/India_struggles_with_encephalitis_outbreak",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Iranian_passenger_jet%27s_wheel_catches_fire",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Iranian_passenger_jet%27s_wheel_catches_fire",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Iraq_Study_Group_Report:_Iraq_could_be_on_a_slide_towards_chaos",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Iraq_Study_Group_Report:_Iraq_could_be_on_a_slide_towards_chaos",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Japanese_Olympic_judoka_Hitoshi_Saito_dies_aged_54",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Jenson_Button_wins_2006_Hungarian_Grand_Prix",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Jenson_Button_wins_2006_Hungarian_Grand_Prix",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Leak_suggests_John_Kerry_will_recognise_Israel_as_Jewish_state",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Leak_suggests_John_Kerry_will_recognise_Israel_as_Jewish_state",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Mass_evictions_from_Oakland%27s_public_housing",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Matt_Kenseth_wins_third_NASCAR_Sprint_Cup_race_of_2012",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Matt_Kenseth_wins_third_NASCAR_Sprint_Cup_race_of_2012",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Michael_Schumacher_calls_off_Formula_1_comeback_due_to_injury",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Michael_Schumacher_calls_off_Formula_1_comeback_due_to_injury",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Microsoft_and_Yahoo_team_up_to_make_IM_clients_compatible",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Microsoft_and_Yahoo_team_up_to_make_IM_clients_compatible",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Militants_bomb_Gaziantep,_Turkey_police_headquarters",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Militants_bomb_Gaziantep,_Turkey_police_headquarters",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Mitt_Romney_wins_Iowa_Caucus_by_eight_votes_over_surging_Rick_Santorum",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Mitt_Romney_wins_Iowa_Caucus_by_eight_votes_over_surging_Rick_Santorum",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Modern_radio_drama_Paranoria,_TX_releases_100th_episode",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Modern_radio_drama_Paranoria,_TX_releases_100th_episode",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/New_South_Wales_government_starts_trial_of_hunting_in_national_parks",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/New_South_Wales_government_starts_trial_of_hunting_in_national_parks",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Nobel_Prize_in_Literature_Committee_abandons_efforts_to_contact_Bob_Dylan",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Nobel_Prize_in_Literature_Committee_abandons_efforts_to_contact_Bob_Dylan",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/North_Korea_agrees_to_disable_its_main_nuclear_reactor",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Patient_under_evaluation_with_Ebola-like_symptoms_in_Washington_D.C.",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Photojournalist_photographing_Justin_Bieber%27s_car_run_over_by_another_vehicle",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Photojournalist_photographing_Justin_Bieber%27s_car_run_over_by_another_vehicle",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/President_of_Costa_Rica_contracts_H1N1_swine_flu",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/President_of_Costa_Rica_contracts_H1N1_swine_flu",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Rare_Middle_East_cyclone_batters_Oman",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Rare_Middle_East_cyclone_batters_Oman",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Scientists_find_dinosaur_feathers_preserved_in_amber",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Scientists_find_dinosaur_feathers_preserved_in_amber",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Scientists_report_two_life-saving_treatments_for_Ebola",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Scientists_report_two_life-saving_treatments_for_Ebola",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Scientists_say_the_moon_is_slowly_shrinking",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Scientists_say_the_moon_is_slowly_shrinking",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Scottish_Justice_Secretary_%27acutely_aware_of_unusual_publicity%27_in_Kular_case",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/September_11_attacks_remembered_in_US",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/September_11_attacks_remembered_in_US",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Seven_caves_found_on_Mars:_NASA",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Seven_caves_found_on_Mars:_NASA",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/South_Africa_end_All_Blacks%27_15-game_winning_streak",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/South_Africa_end_All_Blacks%27_15-game_winning_streak",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Spam_mailer_gets_9_year_jail_sentence",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Spam_mailer_gets_9_year_jail_sentence",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Spanish_football:_Sevilla_signs_Aleix_Vidal_from_FC_Barcelona",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Spanish_football:_Sevilla_signs_Aleix_Vidal_from_FC_Barcelona",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Spanish_football_captain_dies_at_26",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Spanish_football_captain_dies_at_26",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Strong_6.3_earthquake_reported_in_Sumatra,_Indonesia",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Strong_6.3_earthquake_reported_in_Sumatra,_Indonesia",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Sun%27s_mood_swings_not_so_strange_after_all,_say_scientists",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Sun%27s_mood_swings_not_so_strange_after_all,_say_scientists",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Swiss_woman_gang-raped_in_Madhya_Pradesh,_India",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Texas_governor_and_health_officials_address_public_regarding_Ebola_case",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Texas_governor_and_health_officials_address_public_regarding_Ebola_case",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Trade_hall_roof_collapses_in_Poland",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Two-day_bird_flu_conference_draws_$1.9_billion_in_pledges",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Typhoon_prompts_massive_evacuations_in_China",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/U.S._President_arrives_in_Singapore",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/U.S._President_arrives_in_Singapore",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/UK_government_outlines_plans_for_rail_transport",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/UK_government_outlines_plans_for_rail_transport",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/UK_threat_level_reduced_to_%27severe%27",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/UN_Security_Council_heads_to_Haiti_amid_political_instability",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/UN_Security_Council_heads_to_Haiti_amid_political_instability",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/US_Navy_ship_damages_Tubbataha_Reef_National_Park",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/US_Navy_ship_damages_Tubbataha_Reef_National_Park",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/West_Indies_wins_the_third_match_of_the_cricket_series_against_India",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/West_Indies_wins_the_third_match_of_the_cricket_series_against_India",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Young_motorcycle_racer_Peter_Lenz_dies_in_race_crash_aged_13",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Young_motorcycle_racer_Peter_Lenz_dies_in_race_crash_aged_13",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Advice_for_nervous_flyers",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Aggregators",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Aggregators",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Air_courier",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Amsterdam/Canal_District",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Amsterdam/Canal_District",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Antarctica",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Antarctica",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Astronomy",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Astronomy",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Auschwitz-Birkenau",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Auxiliary_languages",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Auxiliary_languages",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Beijing_2022",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Beijing_2022",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Boating_on_the_Baltic_Sea",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Border_crossing",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Border_crossing",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Bread_and_confectionery",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Bread_and_confectionery",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Budget_travel",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Budget_travel",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Charlotte_with_children",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Charlotte_with_children",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Cinque_Terre",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Cinque_Terre",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Culture_shock",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Culture_shock",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Downhill_snowsports",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Downhill_snowsports",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/East_African_Islands",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/East_African_Islands",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Ecuador",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Ecuador",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Eye_care",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Eye_care",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Flying_to_Africa",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Food_and_drink",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Food_and_drink",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Galapagos_Islands",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Gambling",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Gambling",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Goma",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Goma",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Grand_Canyon",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Grand_Canyon",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Grand_old_hotels",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Grand_old_hotels",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Hiking",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Hiking",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Hiking_destinations_in_Norway",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Hiking_destinations_in_Norway",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Hill_stations_in_India",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Hill_stations_in_India",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Hitchhiking_boats",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Hitchhiking_boats",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Hospitality_exchange",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Hospitality_exchange",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Indigenous_Australian_culture",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Indonesian_cuisine",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Internet_access",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Internet_access",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Internet_telephony",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Internet_telephony",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Italian_phrasebook",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Izmir",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Izmir",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Japan%27s_Top_100_Cherry_Blossom_Spots",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Japan%27s_Top_100_Cherry_Blossom_Spots",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Mallorca",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Maori_culture",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Maori_culture",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Midnight_sun",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Mobile_phones",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Mobile_phones",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Moldova",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Moldova",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Murals_and_graffiti",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Music_festival_circuit",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Music_festival_circuit",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Paraguay",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Paris",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Paris",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Returning_home",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Returning_home",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Safaris",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Safaris",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Sleep",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Sleep",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Snow_safety",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Snow_safety",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/South_Pole",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/South_Pole",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Southern_Africa",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Southern_Africa",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Streymoy",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Studying_abroad",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Studying_abroad",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Talk",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Talk",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Timbuktu",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Timbuktu",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Tokyo_2020",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travel_advisories",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travel_advisories",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travel_agencies",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travel_agencies",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travel_basics",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travel_basics",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travel_in_developing_countries",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travel_in_developing_countries",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travellers%27_diarrhea",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travellers%27_diarrhea",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travelling_around_the_Schengen_Area",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Vancouver",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Vancouver",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Volunteer_travel",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Volunteer_travel",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/War_zone_safety",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/War_zone_safety",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Water_safety",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Water_safety",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Waterways",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Yellowstone_National_Park",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Yellowstone_National_Park",
+      "question": 2
+    }
+  ],
+  "counts_per_language": {
+    "dataset": 900,
+    "development": 300,
+    "development_sources": 250,
+    "held_out": 424,
+    "held_out_sources": 238,
+    "excluded_shared_development_source": 176
+  },
+  "metadata_sha256": {
+    "eng_Latn": "f5a6e0c89fd68bd265244579a0839e7951b076ef69dd3bf1b38942efbf8890e7",
+    "ben_Beng": "f5a6e0c89fd68bd265244579a0839e7951b076ef69dd3bf1b38942efbf8890e7",
+    "hin_Deva": "f5a6e0c89fd68bd265244579a0839e7951b076ef69dd3bf1b38942efbf8890e7"
+  },
+  "access": "Frozen finalists only; no tuning, calibration, probing or scoring before selection.",
+  "provenance_limit": "Source-disjoint from recorded development only. Future calibration/train sources and near-duplicates must be audited before use."
+}
