@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/Bones",
+          "question_number": 2,
+          "flores_passage": "Unlike other primates, hominids no longer use their hands in locomotion or bearing weight or swinging through the trees. The chimpanzee's hand and foot are similar in size and length, reflecting the hand's use for bearing weight in knuckle walking. The human hand is shorter than the foot, with straighter phalanges. Fossil hand bones two million to three million years old reveal this shift in specialization of the hand from locomotion to manipulation.",
+          "question": "Which of the following accurately describes the phalanges of a chimpanzee? ",
+          "mc_answer1": "They are used for bearing weight",
+          "mc_answer2": "They are used primarily for manipulation",
+          "mc_answer3": "They are straighter than a humans’",
+          "mc_answer4": "Their hands and feet differ in size",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Unlike other primates, hominids no longer use their hands in locomotion or bearing weight or swinging through the trees. The chimpanzee's hand and foot are similar in size and length, reflecting the hand's use for bearing weight in knuckle walking. The human hand is shorter than the foot, with straighter phalanges. Fossil hand bones two million to three million years old reveal this shift in specialization of the hand from locomotion to manipulation.\nQ: Which of the following accurately describes the phalanges of a chimpanzee?\nA: They are used for bearing weight\nB: They are used primarily for manipulation\nC: They are straighter than a humans’\nD: Their hands and feet differ in size\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Unlike other primates, hominids no longer use their hands in locomotion or bearing weight or swinging through the trees. The chimpanzee's hand and foot are similar in size and length, reflecting the hand's use for bearing weight in knuckle walking. The human hand is shorter than the foot, with straighter phalanges. Fossil hand bones two million to three million years old reveal this shift in specialization of the hand from locomotion to manipulation.\nQ: Which of the following accurately describes the phalanges of a chimpanzee?\nA: They are used for bearing weight\nB: They are used primarily for manipulation\nC: They are straighter than a humans’\nD: Their hands and feet differ in size\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Unlike other primates, hominids no longer use their hands in locomotion or bearing weight or swinging through the trees. The chimpanzee's hand and foot are similar in size and length, reflecting the hand's use for bearing weight in knuckle walking. The human hand is shorter than the foot, with straighter phalanges. Fossil hand bones two million to three million years old reveal this shift in specialization of the hand from locomotion to manipulation.\nQ: Which of the following accurately describes the phalanges of a chimpanzee?\nA: They are used for bearing weight\nB: They are used primarily for manipulation\nC: They are straighter than a humans’\nD: Their hands and feet differ in size\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Unlike other primates, hominids no longer use their hands in locomotion or bearing weight or swinging through the trees. The chimpanzee's hand and foot are similar in size and length, reflecting the hand's use for bearing weight in knuckle walking. The human hand is shorter than the foot, with straighter phalanges. Fossil hand bones two million to three million years old reveal this shift in specialization of the hand from locomotion to manipulation.\nQ: Which of the following accurately describes the phalanges of a chimpanzee?\nA: They are used for bearing weight\nB: They are used primarily for manipulation\nC: They are straighter than a humans’\nD: Their hands and feet differ in size\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.12049859762191772,
+              true
+            ]
+          ],
+          [
+            [
+              -4.351362228393555,
+              false
+            ]
+          ],
+          [
+            [
+              -2.8530311584472656,
+              false
+            ]
+          ],
+          [
+            [
+              -3.595285415649414,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.12049859762191772,
+            true
+          ],
+          [
+            -4.351362228393555,
+            false
+          ],
+          [
+            -2.8530311584472656,
+            false
+          ],
+          [
+            -3.595285415649414,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "2b4f443b54a03d35ef601c542ec485a62aa2f5306753a918630625a3844df016",
+        "prompt_hash": "95c390e0caabb02dcd10addbf20c9f20a42e08a37682c49ce1a7798be27e2472",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Visa",
+          "question_number": 1,
+          "flores_passage": "Registration is an additional requirement for the visa process. In some countries, you must register your presence and address where you are staying with the local authorities. This might require filling out a form with the local police or a visit to the immigration offices. In many countries with such a law, local hotels will handle the registration (make sure to ask). In other cases, only those staying outside of tourist accommodations need to register.  However, this makes the law much more obscure, so find out beforehand.",
+          "question": "Based on the passage, which statement regarding the registration requirement for the visa process is not true?",
+          "mc_answer1": "A visit to immigration offices might be required",
+          "mc_answer2": "In some places, local hotels can handle the registration",
+          "mc_answer3": "If you’re staying in tourist accommodations, you might not need to register",
+          "mc_answer4": "All countries require registration with the local authorities",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Registration is an additional requirement for the visa process. In some countries, you must register your presence and address where you are staying with the local authorities. This might require filling out a form with the local police or a visit to the immigration offices. In many countries with such a law, local hotels will handle the registration (make sure to ask). In other cases, only those staying outside of tourist accommodations need to register.  However, this makes the law much more obscure, so find out beforehand.\nQ: Based on the passage, which statement regarding the registration requirement for the visa process is not true?\nA: A visit to immigration offices might be required\nB: In some places, local hotels can handle the registration\nC: If you’re staying in tourist accommodations, you might not need to register\nD: All countries require registration with the local authorities\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Registration is an additional requirement for the visa process. In some countries, you must register your presence and address where you are staying with the local authorities. This might require filling out a form with the local police or a visit to the immigration offices. In many countries with such a law, local hotels will handle the registration (make sure to ask). In other cases, only those staying outside of tourist accommodations need to register.  However, this makes the law much more obscure, so find out beforehand.\nQ: Based on the passage, which statement regarding the registration requirement for the visa process is not true?\nA: A visit to immigration offices might be required\nB: In some places, local hotels can handle the registration\nC: If you’re staying in tourist accommodations, you might not need to register\nD: All countries require registration with the local authorities\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Registration is an additional requirement for the visa process. In some countries, you must register your presence and address where you are staying with the local authorities. This might require filling out a form with the local police or a visit to the immigration offices. In many countries with such a law, local hotels will handle the registration (make sure to ask). In other cases, only those staying outside of tourist accommodations need to register.  However, this makes the law much more obscure, so find out beforehand.\nQ: Based on the passage, which statement regarding the registration requirement for the visa process is not true?\nA: A visit to immigration offices might be required\nB: In some places, local hotels can handle the registration\nC: If you’re staying in tourist accommodations, you might not need to register\nD: All countries require registration with the local authorities\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Registration is an additional requirement for the visa process. In some countries, you must register your presence and address where you are staying with the local authorities. This might require filling out a form with the local police or a visit to the immigration offices. In many countries with such a law, local hotels will handle the registration (make sure to ask). In other cases, only those staying outside of tourist accommodations need to register.  However, this makes the law much more obscure, so find out beforehand.\nQ: Based on the passage, which statement regarding the registration requirement for the visa process is not true?\nA: A visit to immigration offices might be required\nB: In some places, local hotels can handle the registration\nC: If you’re staying in tourist accommodations, you might not need to register\nD: All countries require registration with the local authorities\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.6830776929855347,
+              false
+            ]
+          ],
+          [
+            [
+              -4.574324607849121,
+              false
+            ]
+          ],
+          [
+            [
+              -3.246767997741699,
+              false
+            ]
+          ],
+          [
+            [
+              -0.3104904890060425,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.6830776929855347,
+            false
+          ],
+          [
+            -4.574324607849121,
+            false
+          ],
+          [
+            -3.246767997741699,
+            false
+          ],
+          [
+            -0.3104904890060425,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "792d4b1a3adc0a9f7a5d172356e4fd0dfc4b61805cccd567205b8342737126f2",
+        "prompt_hash": "d68cf6831cb1d6c9778328ab6bb51a796c2af66cc814d63800574455d40345a1",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Italy_arrests_reputed_Mafia_boss_Lo_Piccolo",
+          "question_number": 2,
+          "flores_passage": "\"According to Ansa, \"\"police were concerned by a couple of top-level hits they feared might spark a full-blown war of succession. Police said Lo Piccolo had the upper hand because he had been Provenzano's right-hand man in Palermo and his greater experience won him the respect of the older generation of bosses as they pursued Provenzano's policy of keeping as low as possible while strengthening their power network. These bosses had been reined in by Provenzano when he put an end to the Riina-driven war against the state that claimed the lives of Mafia crusaders Giovanni Falcone and Paolo Borsellino in 1992.\"\"\"",
+          "question": "Based on the information given in the passage, what was the cause of Falcone’s death?",
+          "mc_answer1": "Lo Piccolo was ordered to kill him",
+          "mc_answer2": "He was killed by fellow Mafia crusader Paolo Borsellino",
+          "mc_answer3": "He was killed during the Riina-driven war",
+          "mc_answer4": "He was killed by the police",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"According to Ansa, \"\"police were concerned by a couple of top-level hits they feared might spark a full-blown war of succession. Police said Lo Piccolo had the upper hand because he had been Provenzano's right-hand man in Palermo and his greater experience won him the respect of the older generation of bosses as they pursued Provenzano's policy of keeping as low as possible while strengthening their power network. These bosses had been reined in by Provenzano when he put an end to the Riina-driven war against the state that claimed the lives of Mafia crusaders Giovanni Falcone and Paolo Borsellino in 1992.\"\"\"\nQ: Based on the information given in the passage, what was the cause of Falcone’s death?\nA: Lo Piccolo was ordered to kill him\nB: He was killed by fellow Mafia crusader Paolo Borsellino\nC: He was killed during the Riina-driven war\nD: He was killed by the police\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"According to Ansa, \"\"police were concerned by a couple of top-level hits they feared might spark a full-blown war of succession. Police said Lo Piccolo had the upper hand because he had been Provenzano's right-hand man in Palermo and his greater experience won him the respect of the older generation of bosses as they pursued Provenzano's policy of keeping as low as possible while strengthening their power network. These bosses had been reined in by Provenzano when he put an end to the Riina-driven war against the state that claimed the lives of Mafia crusaders Giovanni Falcone and Paolo Borsellino in 1992.\"\"\"\nQ: Based on the information given in the passage, what was the cause of Falcone’s death?\nA: Lo Piccolo was ordered to kill him\nB: He was killed by fellow Mafia crusader Paolo Borsellino\nC: He was killed during the Riina-driven war\nD: He was killed by the police\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"According to Ansa, \"\"police were concerned by a couple of top-level hits they feared might spark a full-blown war of succession. Police said Lo Piccolo had the upper hand because he had been Provenzano's right-hand man in Palermo and his greater experience won him the respect of the older generation of bosses as they pursued Provenzano's policy of keeping as low as possible while strengthening their power network. These bosses had been reined in by Provenzano when he put an end to the Riina-driven war against the state that claimed the lives of Mafia crusaders Giovanni Falcone and Paolo Borsellino in 1992.\"\"\"\nQ: Based on the information given in the passage, what was the cause of Falcone’s death?\nA: Lo Piccolo was ordered to kill him\nB: He was killed by fellow Mafia crusader Paolo Borsellino\nC: He was killed during the Riina-driven war\nD: He was killed by the police\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"According to Ansa, \"\"police were concerned by a couple of top-level hits they feared might spark a full-blown war of succession. Police said Lo Piccolo had the upper hand because he had been Provenzano's right-hand man in Palermo and his greater experience won him the respect of the older generation of bosses as they pursued Provenzano's policy of keeping as low as possible while strengthening their power network. These bosses had been reined in by Provenzano when he put an end to the Riina-driven war against the state that claimed the lives of Mafia crusaders Giovanni Falcone and Paolo Borsellino in 1992.\"\"\"\nQ: Based on the information given in the passage, what was the cause of Falcone’s death?\nA: Lo Piccolo was ordered to kill him\nB: He was killed by fellow Mafia crusader Paolo Borsellino\nC: He was killed during the Riina-driven war\nD: He was killed by the police\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.802852630615234,
+              false
+            ]
+          ],
+          [
+            [
+              -5.708492279052734,
+              false
+            ]
+          ],
+          [
+            [
+              -0.14633576571941376,
+              true
+            ]
+          ],
+          [
+            [
+              -4.989229202270508,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.802852630615234,
+            false
+          ],
+          [
+            -5.708492279052734,
+            false
+          ],
+          [
+            -0.14633576571941376,
+            true
+          ],
+          [
+            -4.989229202270508,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "ec46e6dabe2ebc78c40f759659eda3448653ce690942fcc549d7530deaa53850",
+        "prompt_hash": "e1c416cd5b913dc13010f586fb4285a5e863f53fd20db62192ab473ec3d456d5",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Mitt_Romney_wins_2012_Florida_primary",
+          "question_number": 1,
+          "flores_passage": "Former Massachusetts governor Mitt Romney won the Florida Republican Party presidential primary election on Tuesday with over 46 percent of the vote. Former U.S. Speaker of the House Newt Gingrich came in second with 32 percent. As a winner-takes-all state, Florida awarded all fifty of its delegates to Romney, pushing him ahead as the front-runner for the Republican Party nomination.",
+          "question": "Due to Florida’s status as a winner-takes-all state, what was awarded to Mitt Romney?",
+          "mc_answer1": "All of the state’s delegates",
+          "mc_answer2": "46 percent of the vote",
+          "mc_answer3": "32 of the state’s delegates",
+          "mc_answer4": "The Republican Party nomination",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Former Massachusetts governor Mitt Romney won the Florida Republican Party presidential primary election on Tuesday with over 46 percent of the vote. Former U.S. Speaker of the House Newt Gingrich came in second with 32 percent. As a winner-takes-all state, Florida awarded all fifty of its delegates to Romney, pushing him ahead as the front-runner for the Republican Party nomination.\nQ: Due to Florida’s status as a winner-takes-all state, what was awarded to Mitt Romney?\nA: All of the state’s delegates\nB: 46 percent of the vote\nC: 32 of the state’s delegates\nD: The Republican Party nomination\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Former Massachusetts governor Mitt Romney won the Florida Republican Party presidential primary election on Tuesday with over 46 percent of the vote. Former U.S. Speaker of the House Newt Gingrich came in second with 32 percent. As a winner-takes-all state, Florida awarded all fifty of its delegates to Romney, pushing him ahead as the front-runner for the Republican Party nomination.\nQ: Due to Florida’s status as a winner-takes-all state, what was awarded to Mitt Romney?\nA: All of the state’s delegates\nB: 46 percent of the vote\nC: 32 of the state’s delegates\nD: The Republican Party nomination\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Former Massachusetts governor Mitt Romney won the Florida Republican Party presidential primary election on Tuesday with over 46 percent of the vote. Former U.S. Speaker of the House Newt Gingrich came in second with 32 percent. As a winner-takes-all state, Florida awarded all fifty of its delegates to Romney, pushing him ahead as the front-runner for the Republican Party nomination.\nQ: Due to Florida’s status as a winner-takes-all state, what was awarded to Mitt Romney?\nA: All of the state’s delegates\nB: 46 percent of the vote\nC: 32 of the state’s delegates\nD: The Republican Party nomination\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Former Massachusetts governor Mitt Romney won the Florida Republican Party presidential primary election on Tuesday with over 46 percent of the vote. Former U.S. Speaker of the House Newt Gingrich came in second with 32 percent. As a winner-takes-all state, Florida awarded all fifty of its delegates to Romney, pushing him ahead as the front-runner for the Republican Party nomination.\nQ: Due to Florida’s status as a winner-takes-all state, what was awarded to Mitt Romney?\nA: All of the state’s delegates\nB: 46 percent of the vote\nC: 32 of the state’s delegates\nD: The Republican Party nomination\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.033466290682554245,
+              true
+            ]
+          ],
+          [
+            [
+              -7.748578071594238,
+              false
+            ]
+          ],
+          [
+            [
+              -6.025463104248047,
+              false
+            ]
+          ],
+          [
+            [
+              -8.346476554870605,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.033466290682554245,
+            true
+          ],
+          [
+            -7.748578071594238,
+            false
+          ],
+          [
+            -6.025463104248047,
+            false
+          ],
+          [
+            -8.346476554870605,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "75381b592fa9f3d2db281bd00c80957e6d7a2b16039f19522a5ef26f848c5abd",
+        "prompt_hash": "bc4fd047fdb16083e6853b7434bf25cf5e745de043ff47f2bd9b2959f7256dbd",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Toronto_team-led_research_on_Type_1_Diabetes_%27groundbreaking%27",
+          "question_number": 1,
+          "flores_passage": "\"\"\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\"\" he added. Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days. Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.\"",
+          "question": "What is true about the the research done by Dr. Ehud Ur?",
+          "mc_answer1": "He is optimistic that the findings could lead to a cure",
+          "mc_answer2": "Some non-diabetic mice are now diabetic",
+          "mc_answer3": "The results might be beneficial to patients with pre-existing Type 1 diabetes",
+          "mc_answer4": "Some previously diabetic mice are no longer diabetic",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: \"\"\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\"\" he added. Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days. Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.\"\nQ: What is true about the the research done by Dr. Ehud Ur?\nA: He is optimistic that the findings could lead to a cure\nB: Some non-diabetic mice are now diabetic\nC: The results might be beneficial to patients with pre-existing Type 1 diabetes\nD: Some previously diabetic mice are no longer diabetic\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"\"\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\"\" he added. Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days. Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.\"\nQ: What is true about the the research done by Dr. Ehud Ur?\nA: He is optimistic that the findings could lead to a cure\nB: Some non-diabetic mice are now diabetic\nC: The results might be beneficial to patients with pre-existing Type 1 diabetes\nD: Some previously diabetic mice are no longer diabetic\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"\"\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\"\" he added. Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days. Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.\"\nQ: What is true about the the research done by Dr. Ehud Ur?\nA: He is optimistic that the findings could lead to a cure\nB: Some non-diabetic mice are now diabetic\nC: The results might be beneficial to patients with pre-existing Type 1 diabetes\nD: Some previously diabetic mice are no longer diabetic\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"\"\"We now have 4-month-old mice that are non-diabetic that used to be diabetic,\"\" he added. Dr. Ehud Ur, professor of medicine at Dalhousie University in Halifax, Nova Scotia and chair of the clinical and scientific division of the Canadian Diabetes Association cautioned that the research is still in its early days. Like some other experts, he is skeptical about whether diabetes can be cured, noting that these findings have no relevance to people who already have Type 1 diabetes.\"\nQ: What is true about the the research done by Dr. Ehud Ur?\nA: He is optimistic that the findings could lead to a cure\nB: Some non-diabetic mice are now diabetic\nC: The results might be beneficial to patients with pre-existing Type 1 diabetes\nD: Some previously diabetic mice are no longer diabetic\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.150109052658081,
+              false
+            ]
+          ],
+          [
+            [
+              -4.217267036437988,
+              false
+            ]
+          ],
+          [
+            [
+              -4.225142478942871,
+              false
+            ]
+          ],
+          [
+            [
+              -0.12661436200141907,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.150109052658081,
+            false
+          ],
+          [
+            -4.217267036437988,
+            false
+          ],
+          [
+            -4.225142478942871,
+            false
+          ],
+          [
+            -0.12661436200141907,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "e5c1e7b0fc5febbb706fa166de52081beb6bdc3ec6f997b34b8088c2836ffcab",
+        "prompt_hash": "073b34838f4b7643c10345bf5fc9110365f9ed0bd2c3a90a138ffa0f8783d0a4",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792568195.0549057,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

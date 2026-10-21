@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Kings_and_Queens_of_England/The_Anglo-Saxons",
+          "question_number": 1,
+          "flores_passage": "England had experienced a long period of peace after the reconquest of the Danelaw. However in 991 Ethelred was faced with a Viking fleet larger than any since Guthrum's a century earlier. This fleet was led by Olaf Trygvasson, a Norwegian with ambitions to reclaim his country from Danish domination. After initial military setbacks, Ethelred was able to agree to terms with Olaf, who returned to Norway to try to gain his kingdom with mixed success.",
+          "question": "Which country was Trygvasson’s fleet from?",
+          "mc_answer1": "Denmark",
+          "mc_answer2": "Germany",
+          "mc_answer3": "Norway",
+          "mc_answer4": "England",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: England had experienced a long period of peace after the reconquest of the Danelaw. However in 991 Ethelred was faced with a Viking fleet larger than any since Guthrum's a century earlier. This fleet was led by Olaf Trygvasson, a Norwegian with ambitions to reclaim his country from Danish domination. After initial military setbacks, Ethelred was able to agree to terms with Olaf, who returned to Norway to try to gain his kingdom with mixed success.\nQ: Which country was Trygvasson’s fleet from?\nA: Denmark\nB: Germany\nC: Norway\nD: England\nAnswer:",
+            " A"
+          ],
+          [
+            "P: England had experienced a long period of peace after the reconquest of the Danelaw. However in 991 Ethelred was faced with a Viking fleet larger than any since Guthrum's a century earlier. This fleet was led by Olaf Trygvasson, a Norwegian with ambitions to reclaim his country from Danish domination. After initial military setbacks, Ethelred was able to agree to terms with Olaf, who returned to Norway to try to gain his kingdom with mixed success.\nQ: Which country was Trygvasson’s fleet from?\nA: Denmark\nB: Germany\nC: Norway\nD: England\nAnswer:",
+            " B"
+          ],
+          [
+            "P: England had experienced a long period of peace after the reconquest of the Danelaw. However in 991 Ethelred was faced with a Viking fleet larger than any since Guthrum's a century earlier. This fleet was led by Olaf Trygvasson, a Norwegian with ambitions to reclaim his country from Danish domination. After initial military setbacks, Ethelred was able to agree to terms with Olaf, who returned to Norway to try to gain his kingdom with mixed success.\nQ: Which country was Trygvasson’s fleet from?\nA: Denmark\nB: Germany\nC: Norway\nD: England\nAnswer:",
+            " C"
+          ],
+          [
+            "P: England had experienced a long period of peace after the reconquest of the Danelaw. However in 991 Ethelred was faced with a Viking fleet larger than any since Guthrum's a century earlier. This fleet was led by Olaf Trygvasson, a Norwegian with ambitions to reclaim his country from Danish domination. After initial military setbacks, Ethelred was able to agree to terms with Olaf, who returned to Norway to try to gain his kingdom with mixed success.\nQ: Which country was Trygvasson’s fleet from?\nA: Denmark\nB: Germany\nC: Norway\nD: England\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.677005767822266,
+              false
+            ]
+          ],
+          [
+            [
+              -5.070417404174805,
+              false
+            ]
+          ],
+          [
+            [
+              -0.04217362031340599,
+              true
+            ]
+          ],
+          [
+            [
+              -7.237269401550293,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.677005767822266,
+            false
+          ],
+          [
+            -5.070417404174805,
+            false
+          ],
+          [
+            -0.04217362031340599,
+            true
+          ],
+          [
+            -7.237269401550293,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "380c679e0bb7b2fa15df9457c080f4c477f2af686576f6003e1b48e10c7e6b50",
+        "prompt_hash": "8b90f8b2e8af20aed9556fc65777569dc0e3ee30b4d3314b17c90b35971c121d",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Corcovado_National_Park",
+          "question_number": 1,
+          "flores_passage": "Permits must be reserved in advance. You must have a permit to stay overnight at Sirena. Sirena is the only ranger station that offers dormitory lodging and hot meals in addition to camping. La Leona, San Pedrillo, and Los Patos offer only camping with no food service. It is possible to secure park permits directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards The Park Service (MINAE) does not issue park permits more than one month in advance of anticipated arrival. CafeNet El Sol offers a reservation service for a fee of US$30, or $10 for one-day passes; details on their Corcovado page.",
+          "question": "Which of the following ranger stations offers two types of lodging options?",
+          "mc_answer1": "Los Patos",
+          "mc_answer2": "La Leona",
+          "mc_answer3": "San Pedrillo",
+          "mc_answer4": "Sirena",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Permits must be reserved in advance. You must have a permit to stay overnight at Sirena. Sirena is the only ranger station that offers dormitory lodging and hot meals in addition to camping. La Leona, San Pedrillo, and Los Patos offer only camping with no food service. It is possible to secure park permits directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards The Park Service (MINAE) does not issue park permits more than one month in advance of anticipated arrival. CafeNet El Sol offers a reservation service for a fee of US$30, or $10 for one-day passes; details on their Corcovado page.\nQ: Which of the following ranger stations offers two types of lodging options?\nA: Los Patos\nB: La Leona\nC: San Pedrillo\nD: Sirena\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Permits must be reserved in advance. You must have a permit to stay overnight at Sirena. Sirena is the only ranger station that offers dormitory lodging and hot meals in addition to camping. La Leona, San Pedrillo, and Los Patos offer only camping with no food service. It is possible to secure park permits directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards The Park Service (MINAE) does not issue park permits more than one month in advance of anticipated arrival. CafeNet El Sol offers a reservation service for a fee of US$30, or $10 for one-day passes; details on their Corcovado page.\nQ: Which of the following ranger stations offers two types of lodging options?\nA: Los Patos\nB: La Leona\nC: San Pedrillo\nD: Sirena\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Permits must be reserved in advance. You must have a permit to stay overnight at Sirena. Sirena is the only ranger station that offers dormitory lodging and hot meals in addition to camping. La Leona, San Pedrillo, and Los Patos offer only camping with no food service. It is possible to secure park permits directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards The Park Service (MINAE) does not issue park permits more than one month in advance of anticipated arrival. CafeNet El Sol offers a reservation service for a fee of US$30, or $10 for one-day passes; details on their Corcovado page.\nQ: Which of the following ranger stations offers two types of lodging options?\nA: Los Patos\nB: La Leona\nC: San Pedrillo\nD: Sirena\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Permits must be reserved in advance. You must have a permit to stay overnight at Sirena. Sirena is the only ranger station that offers dormitory lodging and hot meals in addition to camping. La Leona, San Pedrillo, and Los Patos offer only camping with no food service. It is possible to secure park permits directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards The Park Service (MINAE) does not issue park permits more than one month in advance of anticipated arrival. CafeNet El Sol offers a reservation service for a fee of US$30, or $10 for one-day passes; details on their Corcovado page.\nQ: Which of the following ranger stations offers two types of lodging options?\nA: Los Patos\nB: La Leona\nC: San Pedrillo\nD: Sirena\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.148706436157227,
+              false
+            ]
+          ],
+          [
+            [
+              -7.628669738769531,
+              false
+            ]
+          ],
+          [
+            [
+              -6.323993682861328,
+              false
+            ]
+          ],
+          [
+            [
+              -0.05266394466161728,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.148706436157227,
+            false
+          ],
+          [
+            -7.628669738769531,
+            false
+          ],
+          [
+            -6.323993682861328,
+            false
+          ],
+          [
+            -0.05266394466161728,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a5eafd9b3ee4cd6d95a8ed613cbeb96ce266f8e63f75c03a880dba0720cf24b9",
+        "prompt_hash": "a6d35a24a0be0deefce9234255b1af8370aed58732953cbef8a3eba1bc7fb8ea",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Huge_Gay_Pride_parade_held_in_Brazil",
+          "question_number": 2,
+          "flores_passage": "Brazil is the largest Roman Catholic country on Earth, and the Roman Catholic Church has consistently opposed the legalization of same-sex marriage in the country. The National Congress of Brazil has debated legalization for 10 years, and such civil marriages are currently only legal in Rio Grande do Sul. The original bill was drafted by former mayor of São Paulo, Marta Suplicy. The proposed legislation, after being amended, is now in the hands of Roberto Jefferson. Protesters hope to collect a petition of 1.2 million signatures to present to the National Congress in November.",
+          "question": "Who will the protestors give their petition to?",
+          "mc_answer1": "Roberto Jefferson",
+          "mc_answer2": "The National Congress of Brazil",
+          "mc_answer3": "The mayor of São Paulo",
+          "mc_answer4": "The Roman Catholic Church",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Brazil is the largest Roman Catholic country on Earth, and the Roman Catholic Church has consistently opposed the legalization of same-sex marriage in the country. The National Congress of Brazil has debated legalization for 10 years, and such civil marriages are currently only legal in Rio Grande do Sul. The original bill was drafted by former mayor of São Paulo, Marta Suplicy. The proposed legislation, after being amended, is now in the hands of Roberto Jefferson. Protesters hope to collect a petition of 1.2 million signatures to present to the National Congress in November.\nQ: Who will the protestors give their petition to?\nA: Roberto Jefferson\nB: The National Congress of Brazil\nC: The mayor of São Paulo\nD: The Roman Catholic Church\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Brazil is the largest Roman Catholic country on Earth, and the Roman Catholic Church has consistently opposed the legalization of same-sex marriage in the country. The National Congress of Brazil has debated legalization for 10 years, and such civil marriages are currently only legal in Rio Grande do Sul. The original bill was drafted by former mayor of São Paulo, Marta Suplicy. The proposed legislation, after being amended, is now in the hands of Roberto Jefferson. Protesters hope to collect a petition of 1.2 million signatures to present to the National Congress in November.\nQ: Who will the protestors give their petition to?\nA: Roberto Jefferson\nB: The National Congress of Brazil\nC: The mayor of São Paulo\nD: The Roman Catholic Church\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Brazil is the largest Roman Catholic country on Earth, and the Roman Catholic Church has consistently opposed the legalization of same-sex marriage in the country. The National Congress of Brazil has debated legalization for 10 years, and such civil marriages are currently only legal in Rio Grande do Sul. The original bill was drafted by former mayor of São Paulo, Marta Suplicy. The proposed legislation, after being amended, is now in the hands of Roberto Jefferson. Protesters hope to collect a petition of 1.2 million signatures to present to the National Congress in November.\nQ: Who will the protestors give their petition to?\nA: Roberto Jefferson\nB: The National Congress of Brazil\nC: The mayor of São Paulo\nD: The Roman Catholic Church\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Brazil is the largest Roman Catholic country on Earth, and the Roman Catholic Church has consistently opposed the legalization of same-sex marriage in the country. The National Congress of Brazil has debated legalization for 10 years, and such civil marriages are currently only legal in Rio Grande do Sul. The original bill was drafted by former mayor of São Paulo, Marta Suplicy. The proposed legislation, after being amended, is now in the hands of Roberto Jefferson. Protesters hope to collect a petition of 1.2 million signatures to present to the National Congress in November.\nQ: Who will the protestors give their petition to?\nA: Roberto Jefferson\nB: The National Congress of Brazil\nC: The mayor of São Paulo\nD: The Roman Catholic Church\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.5341150760650635,
+              false
+            ]
+          ],
+          [
+            [
+              -0.32432955503463745,
+              true
+            ]
+          ],
+          [
+            [
+              -3.3114874362945557,
+              false
+            ]
+          ],
+          [
+            [
+              -6.141450881958008,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.5341150760650635,
+            false
+          ],
+          [
+            -0.32432955503463745,
+            true
+          ],
+          [
+            -3.3114874362945557,
+            false
+          ],
+          [
+            -6.141450881958008,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "b3890809ee64979071ff5c91cdb2eabdb762264b553b735ffeddbbffd569cc77",
+        "prompt_hash": "6653f8b4dae1411893407613b12def0a54d91bc0dbb86fc889dba7fdf134007e",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Coaching_Youth_Middle_Distance_Runners/Training",
+          "question_number": 1,
+          "flores_passage": "Middle distance running is a relatively inexpensive sport; however, there are many misconceptions regarding the few pieces of equipment required to participate. Products can be purchased as needed, but most will have little or no real impact on performance. Athletes may feel that they prefer a product even when it provides no real benefits.",
+          "question": "According to the passage, why might a middle distance runner purchase a more expensive piece of equipment?",
+          "mc_answer1": "It has proven benefits",
+          "mc_answer2": "It will greatly impact their performance",
+          "mc_answer3": "There are misconceptions surrounding less expensive equipment",
+          "mc_answer4": "It’s their personal preference",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Middle distance running is a relatively inexpensive sport; however, there are many misconceptions regarding the few pieces of equipment required to participate. Products can be purchased as needed, but most will have little or no real impact on performance. Athletes may feel that they prefer a product even when it provides no real benefits.\nQ: According to the passage, why might a middle distance runner purchase a more expensive piece of equipment?\nA: It has proven benefits\nB: It will greatly impact their performance\nC: There are misconceptions surrounding less expensive equipment\nD: It’s their personal preference\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Middle distance running is a relatively inexpensive sport; however, there are many misconceptions regarding the few pieces of equipment required to participate. Products can be purchased as needed, but most will have little or no real impact on performance. Athletes may feel that they prefer a product even when it provides no real benefits.\nQ: According to the passage, why might a middle distance runner purchase a more expensive piece of equipment?\nA: It has proven benefits\nB: It will greatly impact their performance\nC: There are misconceptions surrounding less expensive equipment\nD: It’s their personal preference\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Middle distance running is a relatively inexpensive sport; however, there are many misconceptions regarding the few pieces of equipment required to participate. Products can be purchased as needed, but most will have little or no real impact on performance. Athletes may feel that they prefer a product even when it provides no real benefits.\nQ: According to the passage, why might a middle distance runner purchase a more expensive piece of equipment?\nA: It has proven benefits\nB: It will greatly impact their performance\nC: There are misconceptions surrounding less expensive equipment\nD: It’s their personal preference\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Middle distance running is a relatively inexpensive sport; however, there are many misconceptions regarding the few pieces of equipment required to participate. Products can be purchased as needed, but most will have little or no real impact on performance. Athletes may feel that they prefer a product even when it provides no real benefits.\nQ: According to the passage, why might a middle distance runner purchase a more expensive piece of equipment?\nA: It has proven benefits\nB: It will greatly impact their performance\nC: There are misconceptions surrounding less expensive equipment\nD: It’s their personal preference\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.247319459915161,
+              false
+            ]
+          ],
+          [
+            [
+              -0.3682834506034851,
+              true
+            ]
+          ],
+          [
+            [
+              -3.9677574634552,
+              false
+            ]
+          ],
+          [
+            [
+              -3.026261568069458,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.247319459915161,
+            false
+          ],
+          [
+            -0.3682834506034851,
+            true
+          ],
+          [
+            -3.9677574634552,
+            false
+          ],
+          [
+            -3.026261568069458,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "07511b7e5271b63fe21accd8187140ae70c6d8110bf3eab448cb128859de3892",
+        "prompt_hash": "c740093de129f9e55b3ea6f714e329aea59a7e69b4243235fc2336665ceed086",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Communication_Theory/Orality_and_Literacy",
+          "question_number": 1,
+          "flores_passage": "As the ability to obtain knowledge and to learn changed in such a way as mentioned above the base rate at which knowledge was obtained changed. The approach to obtaining information was different. No longer did pressure reside within individual recall, but the ability to recall text became more of a focus. In essence, the Renaissance made a significant change in the approach to learning and the dissemination of knowledge.",
+          "question": "Which of the following became more important as a result of the Renaissance? ",
+          "mc_answer1": "Circulating knowledge",
+          "mc_answer2": "Text recall",
+          "mc_answer3": "Obtaining information",
+          "mc_answer4": "Individual recall",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: As the ability to obtain knowledge and to learn changed in such a way as mentioned above the base rate at which knowledge was obtained changed. The approach to obtaining information was different. No longer did pressure reside within individual recall, but the ability to recall text became more of a focus. In essence, the Renaissance made a significant change in the approach to learning and the dissemination of knowledge.\nQ: Which of the following became more important as a result of the Renaissance?\nA: Circulating knowledge\nB: Text recall\nC: Obtaining information\nD: Individual recall\nAnswer:",
+            " A"
+          ],
+          [
+            "P: As the ability to obtain knowledge and to learn changed in such a way as mentioned above the base rate at which knowledge was obtained changed. The approach to obtaining information was different. No longer did pressure reside within individual recall, but the ability to recall text became more of a focus. In essence, the Renaissance made a significant change in the approach to learning and the dissemination of knowledge.\nQ: Which of the following became more important as a result of the Renaissance?\nA: Circulating knowledge\nB: Text recall\nC: Obtaining information\nD: Individual recall\nAnswer:",
+            " B"
+          ],
+          [
+            "P: As the ability to obtain knowledge and to learn changed in such a way as mentioned above the base rate at which knowledge was obtained changed. The approach to obtaining information was different. No longer did pressure reside within individual recall, but the ability to recall text became more of a focus. In essence, the Renaissance made a significant change in the approach to learning and the dissemination of knowledge.\nQ: Which of the following became more important as a result of the Renaissance?\nA: Circulating knowledge\nB: Text recall\nC: Obtaining information\nD: Individual recall\nAnswer:",
+            " C"
+          ],
+          [
+            "P: As the ability to obtain knowledge and to learn changed in such a way as mentioned above the base rate at which knowledge was obtained changed. The approach to obtaining information was different. No longer did pressure reside within individual recall, but the ability to recall text became more of a focus. In essence, the Renaissance made a significant change in the approach to learning and the dissemination of knowledge.\nQ: Which of the following became more important as a result of the Renaissance?\nA: Circulating knowledge\nB: Text recall\nC: Obtaining information\nD: Individual recall\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -7.336423873901367,
+              false
+            ]
+          ],
+          [
+            [
+              -0.03732471168041229,
+              true
+            ]
+          ],
+          [
+            [
+              -8.178844451904297,
+              false
+            ]
+          ],
+          [
+            [
+              -5.727945327758789,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -7.336423873901367,
+            false
+          ],
+          [
+            -0.03732471168041229,
+            true
+          ],
+          [
+            -8.178844451904297,
+            false
+          ],
+          [
+            -5.727945327758789,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "b24ff0ae1f82d9b705107e60859fe9be93e1dfa093ae62ff1c0326cbb4e7e21d",
+        "prompt_hash": "8ba19b40b03bba86df1fe18f6d19b917b3794a84975f9e590b0a0b135a5de103",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792585711.4246135,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

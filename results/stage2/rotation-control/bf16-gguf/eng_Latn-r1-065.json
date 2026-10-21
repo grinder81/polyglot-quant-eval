@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Tropical_Storm_Danielle_forms_in_Atlantic_Ocean",
+          "question_number": 2,
+          "flores_passage": "Tropical Storm Danielle, fourth named storm of the 2010 Atlantic hurricane season, has formed in the eastern Atlantic Ocean. The storm, located approximately 3,000 miles from Miami, Florida, has maximum sustained winds of 40 mph (64 kph). Scientists at the National Hurricane Center predict that Danielle will strengthen to a hurricane by Wednesday. As the storm is far from landfall, it remains difficult to assess potential impact to the United States or Caribbean.",
+          "question": "According to the passage, which of the following statements about Tropical Storm Danielle is not true?",
+          "mc_answer1": "It was formed in the Atlantic Ocean",
+          "mc_answer2": "It could turn into a hurricane",
+          "mc_answer3": "It’s close to landfall",
+          "mc_answer4": "It’s impact on the Caribbean is unknown",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Tropical Storm Danielle, fourth named storm of the 2010 Atlantic hurricane season, has formed in the eastern Atlantic Ocean. The storm, located approximately 3,000 miles from Miami, Florida, has maximum sustained winds of 40 mph (64 kph). Scientists at the National Hurricane Center predict that Danielle will strengthen to a hurricane by Wednesday. As the storm is far from landfall, it remains difficult to assess potential impact to the United States or Caribbean.\nQ: According to the passage, which of the following statements about Tropical Storm Danielle is not true?\nA: It was formed in the Atlantic Ocean\nB: It could turn into a hurricane\nC: It’s close to landfall\nD: It’s impact on the Caribbean is unknown\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Tropical Storm Danielle, fourth named storm of the 2010 Atlantic hurricane season, has formed in the eastern Atlantic Ocean. The storm, located approximately 3,000 miles from Miami, Florida, has maximum sustained winds of 40 mph (64 kph). Scientists at the National Hurricane Center predict that Danielle will strengthen to a hurricane by Wednesday. As the storm is far from landfall, it remains difficult to assess potential impact to the United States or Caribbean.\nQ: According to the passage, which of the following statements about Tropical Storm Danielle is not true?\nA: It was formed in the Atlantic Ocean\nB: It could turn into a hurricane\nC: It’s close to landfall\nD: It’s impact on the Caribbean is unknown\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Tropical Storm Danielle, fourth named storm of the 2010 Atlantic hurricane season, has formed in the eastern Atlantic Ocean. The storm, located approximately 3,000 miles from Miami, Florida, has maximum sustained winds of 40 mph (64 kph). Scientists at the National Hurricane Center predict that Danielle will strengthen to a hurricane by Wednesday. As the storm is far from landfall, it remains difficult to assess potential impact to the United States or Caribbean.\nQ: According to the passage, which of the following statements about Tropical Storm Danielle is not true?\nA: It was formed in the Atlantic Ocean\nB: It could turn into a hurricane\nC: It’s close to landfall\nD: It’s impact on the Caribbean is unknown\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Tropical Storm Danielle, fourth named storm of the 2010 Atlantic hurricane season, has formed in the eastern Atlantic Ocean. The storm, located approximately 3,000 miles from Miami, Florida, has maximum sustained winds of 40 mph (64 kph). Scientists at the National Hurricane Center predict that Danielle will strengthen to a hurricane by Wednesday. As the storm is far from landfall, it remains difficult to assess potential impact to the United States or Caribbean.\nQ: According to the passage, which of the following statements about Tropical Storm Danielle is not true?\nA: It was formed in the Atlantic Ocean\nB: It could turn into a hurricane\nC: It’s close to landfall\nD: It’s impact on the Caribbean is unknown\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -8.17186164855957,
+              false
+            ]
+          ],
+          [
+            [
+              -7.444370269775391,
+              false
+            ]
+          ],
+          [
+            [
+              -0.01816178485751152,
+              true
+            ]
+          ],
+          [
+            [
+              -8.632859230041504,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -8.17186164855957,
+            false
+          ],
+          [
+            -7.444370269775391,
+            false
+          ],
+          [
+            -0.01816178485751152,
+            true
+          ],
+          [
+            -8.632859230041504,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "b3ae9d17d22b68428510f45dfb70a5df891d37e2e4113693bbbc45fad466d7de",
+        "prompt_hash": "287be2f41df0517b004b2e045db37c5e32c5f0bc8ff76f2cf37c4a8cdef8af30",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Rock_climbing",
+          "question_number": 1,
+          "flores_passage": "Cochamó Valley - Chile's premier climbing destination, known as the Yosemite of South America, with a variety of granite big walls and crags. Summits include breath-taking views from peaks. Climbers from all parts of the world are continually establishing new routes amongst its endless potential of walls.",
+          "question": "According to the passage, an abundance of what allows climbers to consistently discover new routes within Cochamó Valley?",
+          "mc_answer1": "Summits",
+          "mc_answer2": "Peaks",
+          "mc_answer3": "Walls",
+          "mc_answer4": "Views",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Cochamó Valley - Chile's premier climbing destination, known as the Yosemite of South America, with a variety of granite big walls and crags. Summits include breath-taking views from peaks. Climbers from all parts of the world are continually establishing new routes amongst its endless potential of walls.\nQ: According to the passage, an abundance of what allows climbers to consistently discover new routes within Cochamó Valley?\nA: Summits\nB: Peaks\nC: Walls\nD: Views\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Cochamó Valley - Chile's premier climbing destination, known as the Yosemite of South America, with a variety of granite big walls and crags. Summits include breath-taking views from peaks. Climbers from all parts of the world are continually establishing new routes amongst its endless potential of walls.\nQ: According to the passage, an abundance of what allows climbers to consistently discover new routes within Cochamó Valley?\nA: Summits\nB: Peaks\nC: Walls\nD: Views\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Cochamó Valley - Chile's premier climbing destination, known as the Yosemite of South America, with a variety of granite big walls and crags. Summits include breath-taking views from peaks. Climbers from all parts of the world are continually establishing new routes amongst its endless potential of walls.\nQ: According to the passage, an abundance of what allows climbers to consistently discover new routes within Cochamó Valley?\nA: Summits\nB: Peaks\nC: Walls\nD: Views\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Cochamó Valley - Chile's premier climbing destination, known as the Yosemite of South America, with a variety of granite big walls and crags. Summits include breath-taking views from peaks. Climbers from all parts of the world are continually establishing new routes amongst its endless potential of walls.\nQ: According to the passage, an abundance of what allows climbers to consistently discover new routes within Cochamó Valley?\nA: Summits\nB: Peaks\nC: Walls\nD: Views\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.5601660013198853,
+              true
+            ]
+          ],
+          [
+            [
+              -4.509762287139893,
+              false
+            ]
+          ],
+          [
+            [
+              -0.8909269571304321,
+              false
+            ]
+          ],
+          [
+            [
+              -6.322594165802002,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.5601660013198853,
+            true
+          ],
+          [
+            -4.509762287139893,
+            false
+          ],
+          [
+            -0.8909269571304321,
+            false
+          ],
+          [
+            -6.322594165802002,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "0ed71236b2c4d49c9f6f561e4ae08fe55809659dbb8b8b3f21d77941d8e9c465",
+        "prompt_hash": "8aec059a046a0bc514292763b7f3ca861360ddb4dc916a87267a52b28d114d96",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/The_Seven_Wonders_of_the_World/The_Temple_of_Artemis",
+          "question_number": 2,
+          "flores_passage": "The temple of Artemis at Ephesus was destroyed on July 21, 356 BCE in an act of arson committed by Herostratus. According to the story, his motivation was fame at any cost. The Ephesians, outraged, announced that Herostratus' name never be recorded. The Greek historian Strabo later noted the name, which is how we know today. The temple was destroyed on the same night that Alexander the Great was born. Alexander, as king, offered to pay to rebuild the temple, but his offer was denied. Later, after Alexander died, the temple was rebuilt in 323 BCE.",
+          "question": "Which is an accurate statement regarding the rebuilding of the temple of Artemis?",
+          "mc_answer1": "It was rebuilt after Alexander the Great’s reign",
+          "mc_answer2": "Herostratus was ordered to cover the costs of the rebuilding",
+          "mc_answer3": "It was rebuilt in 320 BCE",
+          "mc_answer4": "The rebuilding was paid for by Alexander the Great",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The temple of Artemis at Ephesus was destroyed on July 21, 356 BCE in an act of arson committed by Herostratus. According to the story, his motivation was fame at any cost. The Ephesians, outraged, announced that Herostratus' name never be recorded. The Greek historian Strabo later noted the name, which is how we know today. The temple was destroyed on the same night that Alexander the Great was born. Alexander, as king, offered to pay to rebuild the temple, but his offer was denied. Later, after Alexander died, the temple was rebuilt in 323 BCE.\nQ: Which is an accurate statement regarding the rebuilding of the temple of Artemis?\nA: It was rebuilt after Alexander the Great’s reign\nB: Herostratus was ordered to cover the costs of the rebuilding\nC: It was rebuilt in 320 BCE\nD: The rebuilding was paid for by Alexander the Great\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The temple of Artemis at Ephesus was destroyed on July 21, 356 BCE in an act of arson committed by Herostratus. According to the story, his motivation was fame at any cost. The Ephesians, outraged, announced that Herostratus' name never be recorded. The Greek historian Strabo later noted the name, which is how we know today. The temple was destroyed on the same night that Alexander the Great was born. Alexander, as king, offered to pay to rebuild the temple, but his offer was denied. Later, after Alexander died, the temple was rebuilt in 323 BCE.\nQ: Which is an accurate statement regarding the rebuilding of the temple of Artemis?\nA: It was rebuilt after Alexander the Great’s reign\nB: Herostratus was ordered to cover the costs of the rebuilding\nC: It was rebuilt in 320 BCE\nD: The rebuilding was paid for by Alexander the Great\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The temple of Artemis at Ephesus was destroyed on July 21, 356 BCE in an act of arson committed by Herostratus. According to the story, his motivation was fame at any cost. The Ephesians, outraged, announced that Herostratus' name never be recorded. The Greek historian Strabo later noted the name, which is how we know today. The temple was destroyed on the same night that Alexander the Great was born. Alexander, as king, offered to pay to rebuild the temple, but his offer was denied. Later, after Alexander died, the temple was rebuilt in 323 BCE.\nQ: Which is an accurate statement regarding the rebuilding of the temple of Artemis?\nA: It was rebuilt after Alexander the Great’s reign\nB: Herostratus was ordered to cover the costs of the rebuilding\nC: It was rebuilt in 320 BCE\nD: The rebuilding was paid for by Alexander the Great\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The temple of Artemis at Ephesus was destroyed on July 21, 356 BCE in an act of arson committed by Herostratus. According to the story, his motivation was fame at any cost. The Ephesians, outraged, announced that Herostratus' name never be recorded. The Greek historian Strabo later noted the name, which is how we know today. The temple was destroyed on the same night that Alexander the Great was born. Alexander, as king, offered to pay to rebuild the temple, but his offer was denied. Later, after Alexander died, the temple was rebuilt in 323 BCE.\nQ: Which is an accurate statement regarding the rebuilding of the temple of Artemis?\nA: It was rebuilt after Alexander the Great’s reign\nB: Herostratus was ordered to cover the costs of the rebuilding\nC: It was rebuilt in 320 BCE\nD: The rebuilding was paid for by Alexander the Great\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.021098347380757332,
+              true
+            ]
+          ],
+          [
+            [
+              -6.677756309509277,
+              false
+            ]
+          ],
+          [
+            [
+              -6.9313764572143555,
+              false
+            ]
+          ],
+          [
+            [
+              -4.025237083435059,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.021098347380757332,
+            true
+          ],
+          [
+            -6.677756309509277,
+            false
+          ],
+          [
+            -6.9313764572143555,
+            false
+          ],
+          [
+            -4.025237083435059,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "93ab616c466f128491684a9e7b5bf88c5c1695e0515c316acd1775261932dacd",
+        "prompt_hash": "84dbfe6a4fa95a4c4861f14b9c3d17221b63094ac0f7524ba5a7e9b39e52e7bb",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Deserts",
+          "question_number": 1,
+          "flores_passage": "In the heat of the day, travelers can experience mirages that give the illusion of water (or other things). These can be dangerous if the traveler pursue the mirage, wasting precious energy and remaining water. Even the hottest of deserts can become extremely cold at night. Hypothermia is a real risk without warm clothing.",
+          "question": "According to the passage, which of the following would be the least dangerous for a desert traveler?",
+          "mc_answer1": "Seeing a mirage that gives the illusion of water",
+          "mc_answer2": "Wasting energy while pursuing a mirage",
+          "mc_answer3": "Wasting water while pursuing a mirage",
+          "mc_answer4": "A lack of warm clothing on a cold night",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: In the heat of the day, travelers can experience mirages that give the illusion of water (or other things). These can be dangerous if the traveler pursue the mirage, wasting precious energy and remaining water. Even the hottest of deserts can become extremely cold at night. Hypothermia is a real risk without warm clothing.\nQ: According to the passage, which of the following would be the least dangerous for a desert traveler?\nA: Seeing a mirage that gives the illusion of water\nB: Wasting energy while pursuing a mirage\nC: Wasting water while pursuing a mirage\nD: A lack of warm clothing on a cold night\nAnswer:",
+            " A"
+          ],
+          [
+            "P: In the heat of the day, travelers can experience mirages that give the illusion of water (or other things). These can be dangerous if the traveler pursue the mirage, wasting precious energy and remaining water. Even the hottest of deserts can become extremely cold at night. Hypothermia is a real risk without warm clothing.\nQ: According to the passage, which of the following would be the least dangerous for a desert traveler?\nA: Seeing a mirage that gives the illusion of water\nB: Wasting energy while pursuing a mirage\nC: Wasting water while pursuing a mirage\nD: A lack of warm clothing on a cold night\nAnswer:",
+            " B"
+          ],
+          [
+            "P: In the heat of the day, travelers can experience mirages that give the illusion of water (or other things). These can be dangerous if the traveler pursue the mirage, wasting precious energy and remaining water. Even the hottest of deserts can become extremely cold at night. Hypothermia is a real risk without warm clothing.\nQ: According to the passage, which of the following would be the least dangerous for a desert traveler?\nA: Seeing a mirage that gives the illusion of water\nB: Wasting energy while pursuing a mirage\nC: Wasting water while pursuing a mirage\nD: A lack of warm clothing on a cold night\nAnswer:",
+            " C"
+          ],
+          [
+            "P: In the heat of the day, travelers can experience mirages that give the illusion of water (or other things). These can be dangerous if the traveler pursue the mirage, wasting precious energy and remaining water. Even the hottest of deserts can become extremely cold at night. Hypothermia is a real risk without warm clothing.\nQ: According to the passage, which of the following would be the least dangerous for a desert traveler?\nA: Seeing a mirage that gives the illusion of water\nB: Wasting energy while pursuing a mirage\nC: Wasting water while pursuing a mirage\nD: A lack of warm clothing on a cold night\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.036898788064718246,
+              true
+            ]
+          ],
+          [
+            [
+              -4.137831687927246,
+              false
+            ]
+          ],
+          [
+            [
+              -5.262629508972168,
+              false
+            ]
+          ],
+          [
+            [
+              -4.666457176208496,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.036898788064718246,
+            true
+          ],
+          [
+            -4.137831687927246,
+            false
+          ],
+          [
+            -5.262629508972168,
+            false
+          ],
+          [
+            -4.666457176208496,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "abf6fc542af090b01826801c1f14c12505e51dbc201085138782b190b1c01c50",
+        "prompt_hash": "f07be9c14030a9c4d432ad3e7be6dd900730c015a62ba257017503019a96f467",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Judge_orders_Baltimore_City_prison_to_produce_plan_for_improvement",
+          "question_number": 1,
+          "flores_passage": "In the last 3 months, over 80 arrestees were released from the Central Booking facility without being formally charged. In April this year, a temporary restaining order was issued by Judge Glynn against the facility to enforce the release of those held more than 24 hours after their intake who did not receive a hearing by a court commissioner. The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system where the case is tracked. The hearing also marks the date for the suspect’s right to a speedy trial.",
+          "question": "According to the passage, whose job is it to set bail for arrestees?",
+          "mc_answer1": "Judge Glynn",
+          "mc_answer2": "The Central Booking facility",
+          "mc_answer3": "The court commissioner",
+          "mc_answer4": "The arresting officer",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: In the last 3 months, over 80 arrestees were released from the Central Booking facility without being formally charged. In April this year, a temporary restaining order was issued by Judge Glynn against the facility to enforce the release of those held more than 24 hours after their intake who did not receive a hearing by a court commissioner. The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system where the case is tracked. The hearing also marks the date for the suspect’s right to a speedy trial.\nQ: According to the passage, whose job is it to set bail for arrestees?\nA: Judge Glynn\nB: The Central Booking facility\nC: The court commissioner\nD: The arresting officer\nAnswer:",
+            " A"
+          ],
+          [
+            "P: In the last 3 months, over 80 arrestees were released from the Central Booking facility without being formally charged. In April this year, a temporary restaining order was issued by Judge Glynn against the facility to enforce the release of those held more than 24 hours after their intake who did not receive a hearing by a court commissioner. The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system where the case is tracked. The hearing also marks the date for the suspect’s right to a speedy trial.\nQ: According to the passage, whose job is it to set bail for arrestees?\nA: Judge Glynn\nB: The Central Booking facility\nC: The court commissioner\nD: The arresting officer\nAnswer:",
+            " B"
+          ],
+          [
+            "P: In the last 3 months, over 80 arrestees were released from the Central Booking facility without being formally charged. In April this year, a temporary restaining order was issued by Judge Glynn against the facility to enforce the release of those held more than 24 hours after their intake who did not receive a hearing by a court commissioner. The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system where the case is tracked. The hearing also marks the date for the suspect’s right to a speedy trial.\nQ: According to the passage, whose job is it to set bail for arrestees?\nA: Judge Glynn\nB: The Central Booking facility\nC: The court commissioner\nD: The arresting officer\nAnswer:",
+            " C"
+          ],
+          [
+            "P: In the last 3 months, over 80 arrestees were released from the Central Booking facility without being formally charged. In April this year, a temporary restaining order was issued by Judge Glynn against the facility to enforce the release of those held more than 24 hours after their intake who did not receive a hearing by a court commissioner. The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system where the case is tracked. The hearing also marks the date for the suspect’s right to a speedy trial.\nQ: According to the passage, whose job is it to set bail for arrestees?\nA: Judge Glynn\nB: The Central Booking facility\nC: The court commissioner\nD: The arresting officer\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.331868648529053,
+              false
+            ]
+          ],
+          [
+            [
+              -6.911902904510498,
+              false
+            ]
+          ],
+          [
+            [
+              -0.023118721321225166,
+              true
+            ]
+          ],
+          [
+            [
+              -9.271586418151855,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.331868648529053,
+            false
+          ],
+          [
+            -6.911902904510498,
+            false
+          ],
+          [
+            -0.023118721321225166,
+            true
+          ],
+          [
+            -9.271586418151855,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "ff7541c58f2243135890590010dee7f9a54320d49377bf3156a07ad7fa421a40",
+        "prompt_hash": "3dcf5396f38a8a53faa28a2cff5c356e42b0572dd0339f289d24246fe26b6030",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792567782.1403112,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

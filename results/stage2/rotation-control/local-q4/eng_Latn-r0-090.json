@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Baltic_Sea_ferries",
+          "question_number": 2,
+          "flores_passage": "If crossing the Northern Baltic in winter, check the cabin location, as going through ice causes quite horrible noise for those most affected. Saint Petersburg cruises include time in town. Cruise passengers are exempted from visa requirements (check the terms).",
+          "question": "According to the passage, if a passenger’s cruise is in the summer, what might they be able to avoid?",
+          "mc_answer1": "Time in town",
+          "mc_answer2": "Going through ice",
+          "mc_answer3": "Visa requirements",
+          "mc_answer4": "Saint Petersburg",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: If crossing the Northern Baltic in winter, check the cabin location, as going through ice causes quite horrible noise for those most affected. Saint Petersburg cruises include time in town. Cruise passengers are exempted from visa requirements (check the terms).\nQ: According to the passage, if a passenger’s cruise is in the summer, what might they be able to avoid?\nA: Time in town\nB: Going through ice\nC: Visa requirements\nD: Saint Petersburg\nAnswer:",
+            " A"
+          ],
+          [
+            "P: If crossing the Northern Baltic in winter, check the cabin location, as going through ice causes quite horrible noise for those most affected. Saint Petersburg cruises include time in town. Cruise passengers are exempted from visa requirements (check the terms).\nQ: According to the passage, if a passenger’s cruise is in the summer, what might they be able to avoid?\nA: Time in town\nB: Going through ice\nC: Visa requirements\nD: Saint Petersburg\nAnswer:",
+            " B"
+          ],
+          [
+            "P: If crossing the Northern Baltic in winter, check the cabin location, as going through ice causes quite horrible noise for those most affected. Saint Petersburg cruises include time in town. Cruise passengers are exempted from visa requirements (check the terms).\nQ: According to the passage, if a passenger’s cruise is in the summer, what might they be able to avoid?\nA: Time in town\nB: Going through ice\nC: Visa requirements\nD: Saint Petersburg\nAnswer:",
+            " C"
+          ],
+          [
+            "P: If crossing the Northern Baltic in winter, check the cabin location, as going through ice causes quite horrible noise for those most affected. Saint Petersburg cruises include time in town. Cruise passengers are exempted from visa requirements (check the terms).\nQ: According to the passage, if a passenger’s cruise is in the summer, what might they be able to avoid?\nA: Time in town\nB: Going through ice\nC: Visa requirements\nD: Saint Petersburg\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.770719289779663,
+              false
+            ]
+          ],
+          [
+            [
+              -0.1024339571595192,
+              true
+            ]
+          ],
+          [
+            [
+              -4.617258071899414,
+              false
+            ]
+          ],
+          [
+            [
+              -5.420909881591797,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.770719289779663,
+            false
+          ],
+          [
+            -0.1024339571595192,
+            true
+          ],
+          [
+            -4.617258071899414,
+            false
+          ],
+          [
+            -5.420909881591797,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "583befd449f609d5d34a4612fc1c75321486aa20bec5b2100e17e8ba8e26453c",
+        "prompt_hash": "b2d01f7acb0e2f114dcf228646bba2352667995b8ac46cfb20b52bb0e60161d3",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/IEEE_approves_802.11n_standard_after_six_years",
+          "question_number": 2,
+          "flores_passage": "The 802.11n standard operates on both the 2.4Ghz and 5.0Ghz frequencies. This will allow it to be backwards compatible with 802.11a, 802.11b and 802.11g, provided that the base station has dual radios. The speeds of 802.11n are substantially faster than that of its predecessors with a maximum theoretical throughput of 600Mbit/s.",
+          "question": "What is necessary for the 802.11n to be backwards compatible with 802.11b?",
+          "mc_answer1": "Significantly faster speeds",
+          "mc_answer2": "The ability for 802.11b to operate on 5.0Ghz ",
+          "mc_answer3": "A throughput of 600Mbit/s",
+          "mc_answer4": "Dual radios",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: The 802.11n standard operates on both the 2.4Ghz and 5.0Ghz frequencies. This will allow it to be backwards compatible with 802.11a, 802.11b and 802.11g, provided that the base station has dual radios. The speeds of 802.11n are substantially faster than that of its predecessors with a maximum theoretical throughput of 600Mbit/s.\nQ: What is necessary for the 802.11n to be backwards compatible with 802.11b?\nA: Significantly faster speeds\nB: The ability for 802.11b to operate on 5.0Ghz \nC: A throughput of 600Mbit/s\nD: Dual radios\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The 802.11n standard operates on both the 2.4Ghz and 5.0Ghz frequencies. This will allow it to be backwards compatible with 802.11a, 802.11b and 802.11g, provided that the base station has dual radios. The speeds of 802.11n are substantially faster than that of its predecessors with a maximum theoretical throughput of 600Mbit/s.\nQ: What is necessary for the 802.11n to be backwards compatible with 802.11b?\nA: Significantly faster speeds\nB: The ability for 802.11b to operate on 5.0Ghz \nC: A throughput of 600Mbit/s\nD: Dual radios\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The 802.11n standard operates on both the 2.4Ghz and 5.0Ghz frequencies. This will allow it to be backwards compatible with 802.11a, 802.11b and 802.11g, provided that the base station has dual radios. The speeds of 802.11n are substantially faster than that of its predecessors with a maximum theoretical throughput of 600Mbit/s.\nQ: What is necessary for the 802.11n to be backwards compatible with 802.11b?\nA: Significantly faster speeds\nB: The ability for 802.11b to operate on 5.0Ghz \nC: A throughput of 600Mbit/s\nD: Dual radios\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The 802.11n standard operates on both the 2.4Ghz and 5.0Ghz frequencies. This will allow it to be backwards compatible with 802.11a, 802.11b and 802.11g, provided that the base station has dual radios. The speeds of 802.11n are substantially faster than that of its predecessors with a maximum theoretical throughput of 600Mbit/s.\nQ: What is necessary for the 802.11n to be backwards compatible with 802.11b?\nA: Significantly faster speeds\nB: The ability for 802.11b to operate on 5.0Ghz \nC: A throughput of 600Mbit/s\nD: Dual radios\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.3908514976501465,
+              false
+            ]
+          ],
+          [
+            [
+              -6.34700345993042,
+              false
+            ]
+          ],
+          [
+            [
+              -5.84955358505249,
+              false
+            ]
+          ],
+          [
+            [
+              -0.021991325542330742,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.3908514976501465,
+            false
+          ],
+          [
+            -6.34700345993042,
+            false
+          ],
+          [
+            -5.84955358505249,
+            false
+          ],
+          [
+            -0.021991325542330742,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "be8ff310c346b2fe2a3b0112a3b9e078a6b5f645a48a3fd1b950f58885a3dd65",
+        "prompt_hash": "226f2f9dcf2eefb811b6e0f7a981301e675fe3ee55052f79c12a71be3dbb1ff7",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Cascais",
+          "question_number": 1,
+          "flores_passage": "To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous to foreigners after a glowing account of its splendours recorded by Lord Byron. Scotturb Bus 403 travels regularly to Sintra, stopping at Cabo da Roca. Also to the north visit the great Sanctuary of Our Lady of Fatima (Shrine), a place of worldwide famous Marian apparitions.",
+          "question": "According to the passage, how did Sintra gain recognition amongst foreigners?",
+          "mc_answer1": "Cabo da Roca",
+          "mc_answer2": "Marian apparitions",
+          "mc_answer3": "Lord Byron’s positive reviews",
+          "mc_answer4": "It’s romantic history",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous to foreigners after a glowing account of its splendours recorded by Lord Byron. Scotturb Bus 403 travels regularly to Sintra, stopping at Cabo da Roca. Also to the north visit the great Sanctuary of Our Lady of Fatima (Shrine), a place of worldwide famous Marian apparitions.\nQ: According to the passage, how did Sintra gain recognition amongst foreigners?\nA: Cabo da Roca\nB: Marian apparitions\nC: Lord Byron’s positive reviews\nD: It’s romantic history\nAnswer:",
+            " A"
+          ],
+          [
+            "P: To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous to foreigners after a glowing account of its splendours recorded by Lord Byron. Scotturb Bus 403 travels regularly to Sintra, stopping at Cabo da Roca. Also to the north visit the great Sanctuary of Our Lady of Fatima (Shrine), a place of worldwide famous Marian apparitions.\nQ: According to the passage, how did Sintra gain recognition amongst foreigners?\nA: Cabo da Roca\nB: Marian apparitions\nC: Lord Byron’s positive reviews\nD: It’s romantic history\nAnswer:",
+            " B"
+          ],
+          [
+            "P: To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous to foreigners after a glowing account of its splendours recorded by Lord Byron. Scotturb Bus 403 travels regularly to Sintra, stopping at Cabo da Roca. Also to the north visit the great Sanctuary of Our Lady of Fatima (Shrine), a place of worldwide famous Marian apparitions.\nQ: According to the passage, how did Sintra gain recognition amongst foreigners?\nA: Cabo da Roca\nB: Marian apparitions\nC: Lord Byron’s positive reviews\nD: It’s romantic history\nAnswer:",
+            " C"
+          ],
+          [
+            "P: To the north and within easy reach is the romantic and fascinating town of Sintra and which was made famous to foreigners after a glowing account of its splendours recorded by Lord Byron. Scotturb Bus 403 travels regularly to Sintra, stopping at Cabo da Roca. Also to the north visit the great Sanctuary of Our Lady of Fatima (Shrine), a place of worldwide famous Marian apparitions.\nQ: According to the passage, how did Sintra gain recognition amongst foreigners?\nA: Cabo da Roca\nB: Marian apparitions\nC: Lord Byron’s positive reviews\nD: It’s romantic history\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.199671268463135,
+              false
+            ]
+          ],
+          [
+            [
+              -6.613872051239014,
+              false
+            ]
+          ],
+          [
+            [
+              -0.11270669102668762,
+              true
+            ]
+          ],
+          [
+            [
+              -6.36968469619751,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.199671268463135,
+            false
+          ],
+          [
+            -6.613872051239014,
+            false
+          ],
+          [
+            -0.11270669102668762,
+            true
+          ],
+          [
+            -6.36968469619751,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "920c58cf625bb8658189ceeeccca14d3af871970d011f60e63eb7605a385de3b",
+        "prompt_hash": "8c2f513c081456a9ef2f0a3b339239f86fce14dc63b162f27fffe64fda02bf91",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Women%E2%80%99s_boxing_to_be_included_in_the_2012_Olympics_for_the_first_time",
+          "question_number": 2,
+          "flores_passage": "\"Not all were supportive of the inclusion of the women’s ranks. 2004 Olympic silver medallist Amir Khan said, \"\"Deep down I think women shouldn’t fight. That’s my opinion.\"\" Despite his comments he said he will be supporting the British competitors at the 2012 Olympics being held in London.\"",
+          "question": "According to the passage, which of the following will Amir Khan be supporting despite his personal opinion?",
+          "mc_answer1": "Female fighters",
+          "mc_answer2": "His fellow competitors from the 2004 Olympics",
+          "mc_answer3": "The 2012 Olympics",
+          "mc_answer4": "Other silver medalists",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"Not all were supportive of the inclusion of the women’s ranks. 2004 Olympic silver medallist Amir Khan said, \"\"Deep down I think women shouldn’t fight. That’s my opinion.\"\" Despite his comments he said he will be supporting the British competitors at the 2012 Olympics being held in London.\"\nQ: According to the passage, which of the following will Amir Khan be supporting despite his personal opinion?\nA: Female fighters\nB: His fellow competitors from the 2004 Olympics\nC: The 2012 Olympics\nD: Other silver medalists\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Not all were supportive of the inclusion of the women’s ranks. 2004 Olympic silver medallist Amir Khan said, \"\"Deep down I think women shouldn’t fight. That’s my opinion.\"\" Despite his comments he said he will be supporting the British competitors at the 2012 Olympics being held in London.\"\nQ: According to the passage, which of the following will Amir Khan be supporting despite his personal opinion?\nA: Female fighters\nB: His fellow competitors from the 2004 Olympics\nC: The 2012 Olympics\nD: Other silver medalists\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Not all were supportive of the inclusion of the women’s ranks. 2004 Olympic silver medallist Amir Khan said, \"\"Deep down I think women shouldn’t fight. That’s my opinion.\"\" Despite his comments he said he will be supporting the British competitors at the 2012 Olympics being held in London.\"\nQ: According to the passage, which of the following will Amir Khan be supporting despite his personal opinion?\nA: Female fighters\nB: His fellow competitors from the 2004 Olympics\nC: The 2012 Olympics\nD: Other silver medalists\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Not all were supportive of the inclusion of the women’s ranks. 2004 Olympic silver medallist Amir Khan said, \"\"Deep down I think women shouldn’t fight. That’s my opinion.\"\" Despite his comments he said he will be supporting the British competitors at the 2012 Olympics being held in London.\"\nQ: According to the passage, which of the following will Amir Khan be supporting despite his personal opinion?\nA: Female fighters\nB: His fellow competitors from the 2004 Olympics\nC: The 2012 Olympics\nD: Other silver medalists\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.6086599826812744,
+              false
+            ]
+          ],
+          [
+            [
+              -2.0743868350982666,
+              false
+            ]
+          ],
+          [
+            [
+              -0.2711431384086609,
+              true
+            ]
+          ],
+          [
+            [
+              -5.503152847290039,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.6086599826812744,
+            false
+          ],
+          [
+            -2.0743868350982666,
+            false
+          ],
+          [
+            -0.2711431384086609,
+            true
+          ],
+          [
+            -5.503152847290039,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f07237b73547278961942c634e57c387d4dc918f0e25815e046430e7ec663339",
+        "prompt_hash": "137f28e4482b3e426c1cf36b4a238c747241c765bebe0b9e05ca88a1c2ef7c4d",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Thimphu",
+          "question_number": 2,
+          "flores_passage": "Buses depart the inter-district bus station (across the river) throughout the day, though most, especially those heading to the east and Jakar/Bumthang leave between 06:30 and 07:30. As the inter-district buses are often full, it is advisable to purchase a ticket a few days in advance. Most districts are served by small Japanese Coaster Buses, which are comfortable and sturdy. Shared taxis are a quick and comfortable means to travel to nearby places, such as Paro (Nu 150) and Punakha (Nu 200).",
+          "question": "What would be a good tip for a tourist looking to travel east from the inter-district bus station?",
+          "mc_answer1": "Buses only depart after 8:30",
+          "mc_answer2": "Purchase an advance ticket",
+          "mc_answer3": "Many buses depart throughout the day",
+          "mc_answer4": "A shared taxi may be the smartest means of travel",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Buses depart the inter-district bus station (across the river) throughout the day, though most, especially those heading to the east and Jakar/Bumthang leave between 06:30 and 07:30. As the inter-district buses are often full, it is advisable to purchase a ticket a few days in advance. Most districts are served by small Japanese Coaster Buses, which are comfortable and sturdy. Shared taxis are a quick and comfortable means to travel to nearby places, such as Paro (Nu 150) and Punakha (Nu 200).\nQ: What would be a good tip for a tourist looking to travel east from the inter-district bus station?\nA: Buses only depart after 8:30\nB: Purchase an advance ticket\nC: Many buses depart throughout the day\nD: A shared taxi may be the smartest means of travel\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Buses depart the inter-district bus station (across the river) throughout the day, though most, especially those heading to the east and Jakar/Bumthang leave between 06:30 and 07:30. As the inter-district buses are often full, it is advisable to purchase a ticket a few days in advance. Most districts are served by small Japanese Coaster Buses, which are comfortable and sturdy. Shared taxis are a quick and comfortable means to travel to nearby places, such as Paro (Nu 150) and Punakha (Nu 200).\nQ: What would be a good tip for a tourist looking to travel east from the inter-district bus station?\nA: Buses only depart after 8:30\nB: Purchase an advance ticket\nC: Many buses depart throughout the day\nD: A shared taxi may be the smartest means of travel\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Buses depart the inter-district bus station (across the river) throughout the day, though most, especially those heading to the east and Jakar/Bumthang leave between 06:30 and 07:30. As the inter-district buses are often full, it is advisable to purchase a ticket a few days in advance. Most districts are served by small Japanese Coaster Buses, which are comfortable and sturdy. Shared taxis are a quick and comfortable means to travel to nearby places, such as Paro (Nu 150) and Punakha (Nu 200).\nQ: What would be a good tip for a tourist looking to travel east from the inter-district bus station?\nA: Buses only depart after 8:30\nB: Purchase an advance ticket\nC: Many buses depart throughout the day\nD: A shared taxi may be the smartest means of travel\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Buses depart the inter-district bus station (across the river) throughout the day, though most, especially those heading to the east and Jakar/Bumthang leave between 06:30 and 07:30. As the inter-district buses are often full, it is advisable to purchase a ticket a few days in advance. Most districts are served by small Japanese Coaster Buses, which are comfortable and sturdy. Shared taxis are a quick and comfortable means to travel to nearby places, such as Paro (Nu 150) and Punakha (Nu 200).\nQ: What would be a good tip for a tourist looking to travel east from the inter-district bus station?\nA: Buses only depart after 8:30\nB: Purchase an advance ticket\nC: Many buses depart throughout the day\nD: A shared taxi may be the smartest means of travel\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.2936394214630127,
+              false
+            ]
+          ],
+          [
+            [
+              -0.36401480436325073,
+              true
+            ]
+          ],
+          [
+            [
+              -2.5314648151397705,
+              false
+            ]
+          ],
+          [
+            [
+              -2.5788300037384033,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.2936394214630127,
+            false
+          ],
+          [
+            -0.36401480436325073,
+            true
+          ],
+          [
+            -2.5314648151397705,
+            false
+          ],
+          [
+            -2.5788300037384033,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "62733da29a00c99f587bfb29bd2ce9758a5c9602aaedf8955a23f4afa6d7cbaa",
+        "prompt_hash": "d9de6f7e8b6e2a1b3a421d3fe8c8fed941ddb22124eef62745b03857b9ea9aaf",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792584727.8202722,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

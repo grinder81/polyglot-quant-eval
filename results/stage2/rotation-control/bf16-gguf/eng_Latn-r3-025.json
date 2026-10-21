@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Cross_country_skiing",
+          "question_number": 1,
+          "flores_passage": "Backpacking by ski: This activity is also called backcountry ski, ski touring or ski hiking. It is related to but usually not involving alpine style ski touring or mountaineering, the latter ones done in steep terrain and requiring much stiffer skis and boots. Think of the skiing route as of a similar hiking route. In good conditions you will be able to cover somewhat greater distances than walking – but only very seldom you will get the speeds of cross country skiing without a heavy backpack in groomed tracks.",
+          "question": "According to the passage, what kind of skiing is done in steeper terrain?",
+          "mc_answer1": "Backpacking by ski",
+          "mc_answer2": "Ski hiking",
+          "mc_answer3": "Backcountry skiing",
+          "mc_answer4": "Alpine style",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Backpacking by ski: This activity is also called backcountry ski, ski touring or ski hiking. It is related to but usually not involving alpine style ski touring or mountaineering, the latter ones done in steep terrain and requiring much stiffer skis and boots. Think of the skiing route as of a similar hiking route. In good conditions you will be able to cover somewhat greater distances than walking – but only very seldom you will get the speeds of cross country skiing without a heavy backpack in groomed tracks.\nQ: According to the passage, what kind of skiing is done in steeper terrain?\nA: Backpacking by ski\nB: Ski hiking\nC: Backcountry skiing\nD: Alpine style\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Backpacking by ski: This activity is also called backcountry ski, ski touring or ski hiking. It is related to but usually not involving alpine style ski touring or mountaineering, the latter ones done in steep terrain and requiring much stiffer skis and boots. Think of the skiing route as of a similar hiking route. In good conditions you will be able to cover somewhat greater distances than walking – but only very seldom you will get the speeds of cross country skiing without a heavy backpack in groomed tracks.\nQ: According to the passage, what kind of skiing is done in steeper terrain?\nA: Backpacking by ski\nB: Ski hiking\nC: Backcountry skiing\nD: Alpine style\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Backpacking by ski: This activity is also called backcountry ski, ski touring or ski hiking. It is related to but usually not involving alpine style ski touring or mountaineering, the latter ones done in steep terrain and requiring much stiffer skis and boots. Think of the skiing route as of a similar hiking route. In good conditions you will be able to cover somewhat greater distances than walking – but only very seldom you will get the speeds of cross country skiing without a heavy backpack in groomed tracks.\nQ: According to the passage, what kind of skiing is done in steeper terrain?\nA: Backpacking by ski\nB: Ski hiking\nC: Backcountry skiing\nD: Alpine style\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Backpacking by ski: This activity is also called backcountry ski, ski touring or ski hiking. It is related to but usually not involving alpine style ski touring or mountaineering, the latter ones done in steep terrain and requiring much stiffer skis and boots. Think of the skiing route as of a similar hiking route. In good conditions you will be able to cover somewhat greater distances than walking – but only very seldom you will get the speeds of cross country skiing without a heavy backpack in groomed tracks.\nQ: According to the passage, what kind of skiing is done in steeper terrain?\nA: Backpacking by ski\nB: Ski hiking\nC: Backcountry skiing\nD: Alpine style\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.0328647755086422,
+              true
+            ]
+          ],
+          [
+            [
+              -5.551877021789551,
+              false
+            ]
+          ],
+          [
+            [
+              -4.89670467376709,
+              false
+            ]
+          ],
+          [
+            [
+              -4.346137046813965,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.0328647755086422,
+            true
+          ],
+          [
+            -5.551877021789551,
+            false
+          ],
+          [
+            -4.89670467376709,
+            false
+          ],
+          [
+            -4.346137046813965,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9b9a5e7db9ba901fbe56b503063c6be5f71ce37a1102f4519b26be78cd73930e",
+        "prompt_hash": "0fca9157f12f832a36ae955d6dce713981a402f161ccbb9d582caf64ee17393d",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Funeral_of_Pope_John_Paul_II_takes_place",
+          "question_number": 1,
+          "flores_passage": "Over four million people went to Rome to attend the funeral. The number of people present was so large that it was not possible for everybody to gain access to the funeral in St. Peter's Square. Several large television screens were installed in various places in Rome to let the people watch the ceremony. In many other cities of Italy and in the rest of the world, particularly in Poland, similar setups were made, which were viewed by a great number of people.",
+          "question": "Where were televisions screens not set up for the funeral ceremony?",
+          "mc_answer1": "In St. Peter’s Square",
+          "mc_answer2": "Throughout Rome",
+          "mc_answer3": "In various Italian cities",
+          "mc_answer4": "In certain locations in Poland",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Over four million people went to Rome to attend the funeral. The number of people present was so large that it was not possible for everybody to gain access to the funeral in St. Peter's Square. Several large television screens were installed in various places in Rome to let the people watch the ceremony. In many other cities of Italy and in the rest of the world, particularly in Poland, similar setups were made, which were viewed by a great number of people.\nQ: Where were televisions screens not set up for the funeral ceremony?\nA: In St. Peter’s Square\nB: Throughout Rome\nC: In various Italian cities\nD: In certain locations in Poland\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Over four million people went to Rome to attend the funeral. The number of people present was so large that it was not possible for everybody to gain access to the funeral in St. Peter's Square. Several large television screens were installed in various places in Rome to let the people watch the ceremony. In many other cities of Italy and in the rest of the world, particularly in Poland, similar setups were made, which were viewed by a great number of people.\nQ: Where were televisions screens not set up for the funeral ceremony?\nA: In St. Peter’s Square\nB: Throughout Rome\nC: In various Italian cities\nD: In certain locations in Poland\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Over four million people went to Rome to attend the funeral. The number of people present was so large that it was not possible for everybody to gain access to the funeral in St. Peter's Square. Several large television screens were installed in various places in Rome to let the people watch the ceremony. In many other cities of Italy and in the rest of the world, particularly in Poland, similar setups were made, which were viewed by a great number of people.\nQ: Where were televisions screens not set up for the funeral ceremony?\nA: In St. Peter’s Square\nB: Throughout Rome\nC: In various Italian cities\nD: In certain locations in Poland\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Over four million people went to Rome to attend the funeral. The number of people present was so large that it was not possible for everybody to gain access to the funeral in St. Peter's Square. Several large television screens were installed in various places in Rome to let the people watch the ceremony. In many other cities of Italy and in the rest of the world, particularly in Poland, similar setups were made, which were viewed by a great number of people.\nQ: Where were televisions screens not set up for the funeral ceremony?\nA: In St. Peter’s Square\nB: Throughout Rome\nC: In various Italian cities\nD: In certain locations in Poland\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.09488443285226822,
+              true
+            ]
+          ],
+          [
+            [
+              -4.194278240203857,
+              false
+            ]
+          ],
+          [
+            [
+              -5.064479351043701,
+              false
+            ]
+          ],
+          [
+            [
+              -5.7417731285095215,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.09488443285226822,
+            true
+          ],
+          [
+            -4.194278240203857,
+            false
+          ],
+          [
+            -5.064479351043701,
+            false
+          ],
+          [
+            -5.7417731285095215,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "acc750a6f062971ee34b0a5eb3312484f44bd14c941ba400079cf905b0b2e48b",
+        "prompt_hash": "c1ffc9b3553a081e563edb086116d6ed327f557b7a354d122e56fb6e64ff628e",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Pests",
+          "question_number": 1,
+          "flores_passage": "Travellers may encounter animal pests that they are not familiar with in their home regions. Pests can spoil food, cause irritation, or in a worse case cause allergic reactions, spread venom, or transmit infections. Infectious diseases themselves, or dangerous animals that can injure or kill people by force, do not usually qualify as pests.",
+          "question": "Which of the following is an animal pest not likely to do?",
+          "mc_answer1": "Cause forceful injuries",
+          "mc_answer2": "Cause a rash",
+          "mc_answer3": "Irritate allergies",
+          "mc_answer4": "Spread an infection",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Travellers may encounter animal pests that they are not familiar with in their home regions. Pests can spoil food, cause irritation, or in a worse case cause allergic reactions, spread venom, or transmit infections. Infectious diseases themselves, or dangerous animals that can injure or kill people by force, do not usually qualify as pests.\nQ: Which of the following is an animal pest not likely to do?\nA: Cause forceful injuries\nB: Cause a rash\nC: Irritate allergies\nD: Spread an infection\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Travellers may encounter animal pests that they are not familiar with in their home regions. Pests can spoil food, cause irritation, or in a worse case cause allergic reactions, spread venom, or transmit infections. Infectious diseases themselves, or dangerous animals that can injure or kill people by force, do not usually qualify as pests.\nQ: Which of the following is an animal pest not likely to do?\nA: Cause forceful injuries\nB: Cause a rash\nC: Irritate allergies\nD: Spread an infection\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Travellers may encounter animal pests that they are not familiar with in their home regions. Pests can spoil food, cause irritation, or in a worse case cause allergic reactions, spread venom, or transmit infections. Infectious diseases themselves, or dangerous animals that can injure or kill people by force, do not usually qualify as pests.\nQ: Which of the following is an animal pest not likely to do?\nA: Cause forceful injuries\nB: Cause a rash\nC: Irritate allergies\nD: Spread an infection\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Travellers may encounter animal pests that they are not familiar with in their home regions. Pests can spoil food, cause irritation, or in a worse case cause allergic reactions, spread venom, or transmit infections. Infectious diseases themselves, or dangerous animals that can injure or kill people by force, do not usually qualify as pests.\nQ: Which of the following is an animal pest not likely to do?\nA: Cause forceful injuries\nB: Cause a rash\nC: Irritate allergies\nD: Spread an infection\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.01043801661580801,
+              true
+            ]
+          ],
+          [
+            [
+              -6.058239936828613,
+              false
+            ]
+          ],
+          [
+            [
+              -5.6703901290893555,
+              false
+            ]
+          ],
+          [
+            [
+              -7.351561546325684,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.01043801661580801,
+            true
+          ],
+          [
+            -6.058239936828613,
+            false
+          ],
+          [
+            -5.6703901290893555,
+            false
+          ],
+          [
+            -7.351561546325684,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "0edbe5175b93cf267c6ea30701d49e7bedf63d87693a50c01022592623ce57bc",
+        "prompt_hash": "a4b46a98d3045ca59a6fa841fd16a0772ee7115c778d18ef753bc546d8a25f42",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Researchers_report_rapid_formation_of_new_bird_species_in_Gal%C3%A1pagos_islands",
+          "question_number": 1,
+          "flores_passage": "A study published on Thursday in the journal Science reported on formation of a new bird species on the Ecuadorean Galápagos Islands. Researchers from Princeton University in the United States and Uppsala University in Sweden reported the new species evolved in just two generations, though this process had been believed to take much longer, due to breeding between an endemic Darwin finch, Geospiza fortes, and the immigrant cactus finch, Geospiza conirostris.",
+          "question": "According to the passage, which of the following took less time than researchers had originally believed?",
+          "mc_answer1": "The evolution of the species",
+          "mc_answer2": "The formation of the species",
+          "mc_answer3": "Reporting about the species",
+          "mc_answer4": "Breeding between the different species",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: A study published on Thursday in the journal Science reported on formation of a new bird species on the Ecuadorean Galápagos Islands. Researchers from Princeton University in the United States and Uppsala University in Sweden reported the new species evolved in just two generations, though this process had been believed to take much longer, due to breeding between an endemic Darwin finch, Geospiza fortes, and the immigrant cactus finch, Geospiza conirostris.\nQ: According to the passage, which of the following took less time than researchers had originally believed?\nA: The evolution of the species\nB: The formation of the species\nC: Reporting about the species\nD: Breeding between the different species\nAnswer:",
+            " A"
+          ],
+          [
+            "P: A study published on Thursday in the journal Science reported on formation of a new bird species on the Ecuadorean Galápagos Islands. Researchers from Princeton University in the United States and Uppsala University in Sweden reported the new species evolved in just two generations, though this process had been believed to take much longer, due to breeding between an endemic Darwin finch, Geospiza fortes, and the immigrant cactus finch, Geospiza conirostris.\nQ: According to the passage, which of the following took less time than researchers had originally believed?\nA: The evolution of the species\nB: The formation of the species\nC: Reporting about the species\nD: Breeding between the different species\nAnswer:",
+            " B"
+          ],
+          [
+            "P: A study published on Thursday in the journal Science reported on formation of a new bird species on the Ecuadorean Galápagos Islands. Researchers from Princeton University in the United States and Uppsala University in Sweden reported the new species evolved in just two generations, though this process had been believed to take much longer, due to breeding between an endemic Darwin finch, Geospiza fortes, and the immigrant cactus finch, Geospiza conirostris.\nQ: According to the passage, which of the following took less time than researchers had originally believed?\nA: The evolution of the species\nB: The formation of the species\nC: Reporting about the species\nD: Breeding between the different species\nAnswer:",
+            " C"
+          ],
+          [
+            "P: A study published on Thursday in the journal Science reported on formation of a new bird species on the Ecuadorean Galápagos Islands. Researchers from Princeton University in the United States and Uppsala University in Sweden reported the new species evolved in just two generations, though this process had been believed to take much longer, due to breeding between an endemic Darwin finch, Geospiza fortes, and the immigrant cactus finch, Geospiza conirostris.\nQ: According to the passage, which of the following took less time than researchers had originally believed?\nA: The evolution of the species\nB: The formation of the species\nC: Reporting about the species\nD: Breeding between the different species\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.7784124612808228,
+              true
+            ]
+          ],
+          [
+            [
+              -1.2465711832046509,
+              false
+            ]
+          ],
+          [
+            [
+              -3.9279046058654785,
+              false
+            ]
+          ],
+          [
+            [
+              -4.383133411407471,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.7784124612808228,
+            true
+          ],
+          [
+            -1.2465711832046509,
+            false
+          ],
+          [
+            -3.9279046058654785,
+            false
+          ],
+          [
+            -4.383133411407471,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "b04528c1815451854e1f2c90b4f0b5b7d57697aeb72a0c5a16a551a4d4a41fb3",
+        "prompt_hash": "37aae5833df4dbb495ad3c469c94374e7cc4e0844e5c8e7be3bb27250a090cb5",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Glaciers",
+          "question_number": 1,
+          "flores_passage": "The glaciers are not stable, but flow down the mountain. This will cause cracks, crevasses, which may be obscured by snow bridges. The walls and roofs of ice caves can collapse and cracks can get closed. At the edge of glaciers huge blocks break loose, fall down and perhaps jump or roll farther from the edge.",
+          "question": "According to the passage, what causes crevasses?",
+          "mc_answer1": "Loose blocks",
+          "mc_answer2": "Snow bridges",
+          "mc_answer3": "Unstable glaciers",
+          "mc_answer4": "Collapsing ice caves",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The glaciers are not stable, but flow down the mountain. This will cause cracks, crevasses, which may be obscured by snow bridges. The walls and roofs of ice caves can collapse and cracks can get closed. At the edge of glaciers huge blocks break loose, fall down and perhaps jump or roll farther from the edge.\nQ: According to the passage, what causes crevasses?\nA: Loose blocks\nB: Snow bridges\nC: Unstable glaciers\nD: Collapsing ice caves\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The glaciers are not stable, but flow down the mountain. This will cause cracks, crevasses, which may be obscured by snow bridges. The walls and roofs of ice caves can collapse and cracks can get closed. At the edge of glaciers huge blocks break loose, fall down and perhaps jump or roll farther from the edge.\nQ: According to the passage, what causes crevasses?\nA: Loose blocks\nB: Snow bridges\nC: Unstable glaciers\nD: Collapsing ice caves\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The glaciers are not stable, but flow down the mountain. This will cause cracks, crevasses, which may be obscured by snow bridges. The walls and roofs of ice caves can collapse and cracks can get closed. At the edge of glaciers huge blocks break loose, fall down and perhaps jump or roll farther from the edge.\nQ: According to the passage, what causes crevasses?\nA: Loose blocks\nB: Snow bridges\nC: Unstable glaciers\nD: Collapsing ice caves\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The glaciers are not stable, but flow down the mountain. This will cause cracks, crevasses, which may be obscured by snow bridges. The walls and roofs of ice caves can collapse and cracks can get closed. At the edge of glaciers huge blocks break loose, fall down and perhaps jump or roll farther from the edge.\nQ: According to the passage, what causes crevasses?\nA: Loose blocks\nB: Snow bridges\nC: Unstable glaciers\nD: Collapsing ice caves\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.4573557376861572,
+              false
+            ]
+          ],
+          [
+            [
+              -5.745643615722656,
+              false
+            ]
+          ],
+          [
+            [
+              -0.05451798066496849,
+              true
+            ]
+          ],
+          [
+            [
+              -8.425536155700684,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.4573557376861572,
+            false
+          ],
+          [
+            -5.745643615722656,
+            false
+          ],
+          [
+            -0.05451798066496849,
+            true
+          ],
+          [
+            -8.425536155700684,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "fe8904cda0d8c2d79fb0f3d6a865c6531651e6618063b0a51f7cf5a231854f5b",
+        "prompt_hash": "59bbb5bd1531ba8915a97640be813cb0244049a5aa6ab2f921c56b07f154c9bf",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792569635.0310369,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

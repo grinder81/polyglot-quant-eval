@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Travel_insurance",
+          "question_number": 2,
+          "flores_passage": "\"Make and carry copies of your policy and your insurer's contact details with you. They need to show the insurer's e-mail address and international phone numbers for advice/authorizations and making claims. Have another copy in your luggage and online (e-mail to yourself with attachment, or stored in the \"\"cloud\"\"). If traveling with a laptop or tablet, store a copy in its memory or disc (accessible without the internet). Also give policy/contact copies to traveling companions and relatives or friends back home willing to help.\"",
+          "question": "According to the passage, which of the following does not need to be shown on the policy?",
+          "mc_answer1": "The insurer’s email address",
+          "mc_answer2": "International phone numbers for authorizations",
+          "mc_answer3": "The policy holder’s email address",
+          "mc_answer4": "International phone numbers for making claims",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"Make and carry copies of your policy and your insurer's contact details with you. They need to show the insurer's e-mail address and international phone numbers for advice/authorizations and making claims. Have another copy in your luggage and online (e-mail to yourself with attachment, or stored in the \"\"cloud\"\"). If traveling with a laptop or tablet, store a copy in its memory or disc (accessible without the internet). Also give policy/contact copies to traveling companions and relatives or friends back home willing to help.\"\nQ: According to the passage, which of the following does not need to be shown on the policy?\nA: The insurer’s email address\nB: International phone numbers for authorizations\nC: The policy holder’s email address\nD: International phone numbers for making claims\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Make and carry copies of your policy and your insurer's contact details with you. They need to show the insurer's e-mail address and international phone numbers for advice/authorizations and making claims. Have another copy in your luggage and online (e-mail to yourself with attachment, or stored in the \"\"cloud\"\"). If traveling with a laptop or tablet, store a copy in its memory or disc (accessible without the internet). Also give policy/contact copies to traveling companions and relatives or friends back home willing to help.\"\nQ: According to the passage, which of the following does not need to be shown on the policy?\nA: The insurer’s email address\nB: International phone numbers for authorizations\nC: The policy holder’s email address\nD: International phone numbers for making claims\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Make and carry copies of your policy and your insurer's contact details with you. They need to show the insurer's e-mail address and international phone numbers for advice/authorizations and making claims. Have another copy in your luggage and online (e-mail to yourself with attachment, or stored in the \"\"cloud\"\"). If traveling with a laptop or tablet, store a copy in its memory or disc (accessible without the internet). Also give policy/contact copies to traveling companions and relatives or friends back home willing to help.\"\nQ: According to the passage, which of the following does not need to be shown on the policy?\nA: The insurer’s email address\nB: International phone numbers for authorizations\nC: The policy holder’s email address\nD: International phone numbers for making claims\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Make and carry copies of your policy and your insurer's contact details with you. They need to show the insurer's e-mail address and international phone numbers for advice/authorizations and making claims. Have another copy in your luggage and online (e-mail to yourself with attachment, or stored in the \"\"cloud\"\"). If traveling with a laptop or tablet, store a copy in its memory or disc (accessible without the internet). Also give policy/contact copies to traveling companions and relatives or friends back home willing to help.\"\nQ: According to the passage, which of the following does not need to be shown on the policy?\nA: The insurer’s email address\nB: International phone numbers for authorizations\nC: The policy holder’s email address\nD: International phone numbers for making claims\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -9.202467918395996,
+              false
+            ]
+          ],
+          [
+            [
+              -9.373866081237793,
+              false
+            ]
+          ],
+          [
+            [
+              -0.10751421004533768,
+              true
+            ]
+          ],
+          [
+            [
+              -8.70236873626709,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -9.202467918395996,
+            false
+          ],
+          [
+            -9.373866081237793,
+            false
+          ],
+          [
+            -0.10751421004533768,
+            true
+          ],
+          [
+            -8.70236873626709,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "4ddee0b3e862bb034464e9a528a9129bf747eb1c2148fe4cea509115f1da6ea8",
+        "prompt_hash": "2d0b251252a8a64abc03feb3e8b8d15791135278ab1c391a7321871afe7f39aa",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Coaching_Youth_Middle_Distance_Runners/Nutrition",
+          "question_number": 1,
+          "flores_passage": "Proper nutritional practices alone cannot generate elite performances, but they can significantly affect young athletes' overall wellness. Maintaining a healthy energy balance, practicing effective hydration habits, and understanding the various aspects of supplementation practices can help athletes improve their performance and increase their enjoyment of the sport.",
+          "question": "For an athlete, which of the following can not be achieved solely through nutritional practices?",
+          "mc_answer1": "Increased enjoyment ",
+          "mc_answer2": "Elite performance",
+          "mc_answer3": "General wellness",
+          "mc_answer4": "Improved performance",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Proper nutritional practices alone cannot generate elite performances, but they can significantly affect young athletes' overall wellness. Maintaining a healthy energy balance, practicing effective hydration habits, and understanding the various aspects of supplementation practices can help athletes improve their performance and increase their enjoyment of the sport.\nQ: For an athlete, which of the following can not be achieved solely through nutritional practices?\nA: Increased enjoyment \nB: Elite performance\nC: General wellness\nD: Improved performance\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Proper nutritional practices alone cannot generate elite performances, but they can significantly affect young athletes' overall wellness. Maintaining a healthy energy balance, practicing effective hydration habits, and understanding the various aspects of supplementation practices can help athletes improve their performance and increase their enjoyment of the sport.\nQ: For an athlete, which of the following can not be achieved solely through nutritional practices?\nA: Increased enjoyment \nB: Elite performance\nC: General wellness\nD: Improved performance\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Proper nutritional practices alone cannot generate elite performances, but they can significantly affect young athletes' overall wellness. Maintaining a healthy energy balance, practicing effective hydration habits, and understanding the various aspects of supplementation practices can help athletes improve their performance and increase their enjoyment of the sport.\nQ: For an athlete, which of the following can not be achieved solely through nutritional practices?\nA: Increased enjoyment \nB: Elite performance\nC: General wellness\nD: Improved performance\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Proper nutritional practices alone cannot generate elite performances, but they can significantly affect young athletes' overall wellness. Maintaining a healthy energy balance, practicing effective hydration habits, and understanding the various aspects of supplementation practices can help athletes improve their performance and increase their enjoyment of the sport.\nQ: For an athlete, which of the following can not be achieved solely through nutritional practices?\nA: Increased enjoyment \nB: Elite performance\nC: General wellness\nD: Improved performance\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.940218448638916,
+              false
+            ]
+          ],
+          [
+            [
+              -0.059852972626686096,
+              true
+            ]
+          ],
+          [
+            [
+              -8.381412506103516,
+              false
+            ]
+          ],
+          [
+            [
+              -7.572799205780029,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.940218448638916,
+            false
+          ],
+          [
+            -0.059852972626686096,
+            true
+          ],
+          [
+            -8.381412506103516,
+            false
+          ],
+          [
+            -7.572799205780029,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c15706eec4f6ce58e827db05e76d7875a188b361e3e6ca3f8d33a8062c78f153",
+        "prompt_hash": "10b5a0a7d14dc34e3d22b1ef0b25428eca96dbb9c6343b8e697f2e8037115b0e",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Bed_and_breakfasts",
+          "question_number": 2,
+          "flores_passage": "In developed countries today, providing deluxe bed and breakfasts has been raised to a sort of art-form. At the top end, B&Bs obviously compete mainly on two main things: bedding and breakfast. Accordingly, at the finest such establishments one is apt to find the most luxurious bedding, maybe a handmade quilt or an antique bed. Breakfast may include seasonal delights of the region or the host's speciality dish. The setting might be an historic old building with antique furnishings, manicured grounds and a swimming pool.",
+          "question": "Based on the passage, which of the following is not one of the main points of competition between luxury B&Bs?",
+          "mc_answer1": "A range of seasonal breakfast offerings",
+          "mc_answer2": "High end bedding",
+          "mc_answer3": "Locally sourced food and drink",
+          "mc_answer4": "Contemporary decor",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: In developed countries today, providing deluxe bed and breakfasts has been raised to a sort of art-form. At the top end, B&Bs obviously compete mainly on two main things: bedding and breakfast. Accordingly, at the finest such establishments one is apt to find the most luxurious bedding, maybe a handmade quilt or an antique bed. Breakfast may include seasonal delights of the region or the host's speciality dish. The setting might be an historic old building with antique furnishings, manicured grounds and a swimming pool.\nQ: Based on the passage, which of the following is not one of the main points of competition between luxury B&Bs?\nA: A range of seasonal breakfast offerings\nB: High end bedding\nC: Locally sourced food and drink\nD: Contemporary decor\nAnswer:",
+            " A"
+          ],
+          [
+            "P: In developed countries today, providing deluxe bed and breakfasts has been raised to a sort of art-form. At the top end, B&Bs obviously compete mainly on two main things: bedding and breakfast. Accordingly, at the finest such establishments one is apt to find the most luxurious bedding, maybe a handmade quilt or an antique bed. Breakfast may include seasonal delights of the region or the host's speciality dish. The setting might be an historic old building with antique furnishings, manicured grounds and a swimming pool.\nQ: Based on the passage, which of the following is not one of the main points of competition between luxury B&Bs?\nA: A range of seasonal breakfast offerings\nB: High end bedding\nC: Locally sourced food and drink\nD: Contemporary decor\nAnswer:",
+            " B"
+          ],
+          [
+            "P: In developed countries today, providing deluxe bed and breakfasts has been raised to a sort of art-form. At the top end, B&Bs obviously compete mainly on two main things: bedding and breakfast. Accordingly, at the finest such establishments one is apt to find the most luxurious bedding, maybe a handmade quilt or an antique bed. Breakfast may include seasonal delights of the region or the host's speciality dish. The setting might be an historic old building with antique furnishings, manicured grounds and a swimming pool.\nQ: Based on the passage, which of the following is not one of the main points of competition between luxury B&Bs?\nA: A range of seasonal breakfast offerings\nB: High end bedding\nC: Locally sourced food and drink\nD: Contemporary decor\nAnswer:",
+            " C"
+          ],
+          [
+            "P: In developed countries today, providing deluxe bed and breakfasts has been raised to a sort of art-form. At the top end, B&Bs obviously compete mainly on two main things: bedding and breakfast. Accordingly, at the finest such establishments one is apt to find the most luxurious bedding, maybe a handmade quilt or an antique bed. Breakfast may include seasonal delights of the region or the host's speciality dish. The setting might be an historic old building with antique furnishings, manicured grounds and a swimming pool.\nQ: Based on the passage, which of the following is not one of the main points of competition between luxury B&Bs?\nA: A range of seasonal breakfast offerings\nB: High end bedding\nC: Locally sourced food and drink\nD: Contemporary decor\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.650458574295044,
+              false
+            ]
+          ],
+          [
+            [
+              -6.311498165130615,
+              false
+            ]
+          ],
+          [
+            [
+              -1.3010095357894897,
+              false
+            ]
+          ],
+          [
+            [
+              -0.3682931363582611,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.650458574295044,
+            false
+          ],
+          [
+            -6.311498165130615,
+            false
+          ],
+          [
+            -1.3010095357894897,
+            false
+          ],
+          [
+            -0.3682931363582611,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "987cc38b0982e0181d0cf6a237e65684b22eb4f13498f8a8e1271cd5f3306944",
+        "prompt_hash": "434e97136db97a26a81341e8ee670d34739280816000fc2b2da37f59fef66eaa",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/German_judge_orders_life_sentence_for_nation%27s_%27first_Islamic-motivated_terror_attack%27",
+          "question_number": 2,
+          "flores_passage": "The fatalities were Nicholas Alden, 25, and Zachary Cuddeback, 21. Cuddeback had been the driver. Edgar Veguilla received arm and jaw wounds while Kristoffer Schneider was left requiring reconstructive surgery for his face. Uka's weapon failed whilst pointed at a fifth man's head. Schneider has ongoing pain, blindness in one eye, a missing section of skull and a face rebuilt from titanium. Schneider testified via videolink from a USAF base in his homeland.",
+          "question": "Who’s weapon failed to fire at some point during the attack?",
+          "mc_answer1": "Uka",
+          "mc_answer2": "Schneider",
+          "mc_answer3": "Alden",
+          "mc_answer4": "Cuddeback ",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The fatalities were Nicholas Alden, 25, and Zachary Cuddeback, 21. Cuddeback had been the driver. Edgar Veguilla received arm and jaw wounds while Kristoffer Schneider was left requiring reconstructive surgery for his face. Uka's weapon failed whilst pointed at a fifth man's head. Schneider has ongoing pain, blindness in one eye, a missing section of skull and a face rebuilt from titanium. Schneider testified via videolink from a USAF base in his homeland.\nQ: Who’s weapon failed to fire at some point during the attack?\nA: Uka\nB: Schneider\nC: Alden\nD: Cuddeback \nAnswer:",
+            " A"
+          ],
+          [
+            "P: The fatalities were Nicholas Alden, 25, and Zachary Cuddeback, 21. Cuddeback had been the driver. Edgar Veguilla received arm and jaw wounds while Kristoffer Schneider was left requiring reconstructive surgery for his face. Uka's weapon failed whilst pointed at a fifth man's head. Schneider has ongoing pain, blindness in one eye, a missing section of skull and a face rebuilt from titanium. Schneider testified via videolink from a USAF base in his homeland.\nQ: Who’s weapon failed to fire at some point during the attack?\nA: Uka\nB: Schneider\nC: Alden\nD: Cuddeback \nAnswer:",
+            " B"
+          ],
+          [
+            "P: The fatalities were Nicholas Alden, 25, and Zachary Cuddeback, 21. Cuddeback had been the driver. Edgar Veguilla received arm and jaw wounds while Kristoffer Schneider was left requiring reconstructive surgery for his face. Uka's weapon failed whilst pointed at a fifth man's head. Schneider has ongoing pain, blindness in one eye, a missing section of skull and a face rebuilt from titanium. Schneider testified via videolink from a USAF base in his homeland.\nQ: Who’s weapon failed to fire at some point during the attack?\nA: Uka\nB: Schneider\nC: Alden\nD: Cuddeback \nAnswer:",
+            " C"
+          ],
+          [
+            "P: The fatalities were Nicholas Alden, 25, and Zachary Cuddeback, 21. Cuddeback had been the driver. Edgar Veguilla received arm and jaw wounds while Kristoffer Schneider was left requiring reconstructive surgery for his face. Uka's weapon failed whilst pointed at a fifth man's head. Schneider has ongoing pain, blindness in one eye, a missing section of skull and a face rebuilt from titanium. Schneider testified via videolink from a USAF base in his homeland.\nQ: Who’s weapon failed to fire at some point during the attack?\nA: Uka\nB: Schneider\nC: Alden\nD: Cuddeback \nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.18227796256542206,
+              true
+            ]
+          ],
+          [
+            [
+              -3.4434149265289307,
+              false
+            ]
+          ],
+          [
+            [
+              -2.287090539932251,
+              false
+            ]
+          ],
+          [
+            [
+              -3.645761728286743,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.18227796256542206,
+            true
+          ],
+          [
+            -3.4434149265289307,
+            false
+          ],
+          [
+            -2.287090539932251,
+            false
+          ],
+          [
+            -3.645761728286743,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "ddffe686f3eb570bb145109d15edc73bcd9856a1d39667da411c95461611b8f3",
+        "prompt_hash": "70c645f6a66cee2bf3230143b03015a896fb597710f0426b7b872ee85f58a6fc",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/German_phrasebook",
+          "question_number": 1,
+          "flores_passage": "All nouns, alongside the word Sie for you, always begin with a capital letter, even in the middle of a sentence. This is an important way to distinguish between some verbs and objects. It also arguably makes reading easier, though writing is somewhat complicated by the need to find out whether a verb or adjective is used in a substantivized form.",
+          "question": "According to the passage, which part of speech is capitalized in the middle of a sentence?",
+          "mc_answer1": "Nouns",
+          "mc_answer2": "Adjectives",
+          "mc_answer3": "Adverbs",
+          "mc_answer4": "Verbs",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: All nouns, alongside the word Sie for you, always begin with a capital letter, even in the middle of a sentence. This is an important way to distinguish between some verbs and objects. It also arguably makes reading easier, though writing is somewhat complicated by the need to find out whether a verb or adjective is used in a substantivized form.\nQ: According to the passage, which part of speech is capitalized in the middle of a sentence?\nA: Nouns\nB: Adjectives\nC: Adverbs\nD: Verbs\nAnswer:",
+            " A"
+          ],
+          [
+            "P: All nouns, alongside the word Sie for you, always begin with a capital letter, even in the middle of a sentence. This is an important way to distinguish between some verbs and objects. It also arguably makes reading easier, though writing is somewhat complicated by the need to find out whether a verb or adjective is used in a substantivized form.\nQ: According to the passage, which part of speech is capitalized in the middle of a sentence?\nA: Nouns\nB: Adjectives\nC: Adverbs\nD: Verbs\nAnswer:",
+            " B"
+          ],
+          [
+            "P: All nouns, alongside the word Sie for you, always begin with a capital letter, even in the middle of a sentence. This is an important way to distinguish between some verbs and objects. It also arguably makes reading easier, though writing is somewhat complicated by the need to find out whether a verb or adjective is used in a substantivized form.\nQ: According to the passage, which part of speech is capitalized in the middle of a sentence?\nA: Nouns\nB: Adjectives\nC: Adverbs\nD: Verbs\nAnswer:",
+            " C"
+          ],
+          [
+            "P: All nouns, alongside the word Sie for you, always begin with a capital letter, even in the middle of a sentence. This is an important way to distinguish between some verbs and objects. It also arguably makes reading easier, though writing is somewhat complicated by the need to find out whether a verb or adjective is used in a substantivized form.\nQ: According to the passage, which part of speech is capitalized in the middle of a sentence?\nA: Nouns\nB: Adjectives\nC: Adverbs\nD: Verbs\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.02051854319870472,
+              true
+            ]
+          ],
+          [
+            [
+              -6.195163249969482,
+              false
+            ]
+          ],
+          [
+            [
+              -6.840494632720947,
+              false
+            ]
+          ],
+          [
+            [
+              -8.33013916015625,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.02051854319870472,
+            true
+          ],
+          [
+            -6.195163249969482,
+            false
+          ],
+          [
+            -6.840494632720947,
+            false
+          ],
+          [
+            -8.33013916015625,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "fa464a4dc33a3071310a12d4c7b216b95c800168b447a1e94e3f2bac6e46fd2c",
+        "prompt_hash": "9e14a3d02028685e4a38c3c8f7225b35f633a5ba59c971bf8121f4222ac56fe0",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792585938.0696754,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

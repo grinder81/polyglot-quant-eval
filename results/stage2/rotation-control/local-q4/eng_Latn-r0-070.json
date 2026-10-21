@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Support_for_an_Australian_republic_slips",
+          "question_number": 2,
+          "flores_passage": "Out of 1,400 people polled prior to the 2010 federal election, those who oppose Australia becoming a republic grew by 8 per cent since 2008. Caretaker Prime Minister Julia Gillard claimed during the campaign of the 2010 federal election that she believed Australia should become a republic at the end of Queen Elizabeth II's reign. 34 per cent of those in the poll share this view, wanting Queen Elizabeth II to be Australia's last monarch. At the extremes of the poll, 29 per cent of those surveyed believe Australia should become a republic as soon as possible, while 31 per cent believe Australia should never become a republic.",
+          "question": "According to Julie Gillard, when should Australia become a republic?",
+          "mc_answer1": "As soon as possible",
+          "mc_answer2": "After Queen Elizabeth II’s reign",
+          "mc_answer3": "Never",
+          "mc_answer4": "After the federal election",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Out of 1,400 people polled prior to the 2010 federal election, those who oppose Australia becoming a republic grew by 8 per cent since 2008. Caretaker Prime Minister Julia Gillard claimed during the campaign of the 2010 federal election that she believed Australia should become a republic at the end of Queen Elizabeth II's reign. 34 per cent of those in the poll share this view, wanting Queen Elizabeth II to be Australia's last monarch. At the extremes of the poll, 29 per cent of those surveyed believe Australia should become a republic as soon as possible, while 31 per cent believe Australia should never become a republic.\nQ: According to Julie Gillard, when should Australia become a republic?\nA: As soon as possible\nB: After Queen Elizabeth II’s reign\nC: Never\nD: After the federal election\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Out of 1,400 people polled prior to the 2010 federal election, those who oppose Australia becoming a republic grew by 8 per cent since 2008. Caretaker Prime Minister Julia Gillard claimed during the campaign of the 2010 federal election that she believed Australia should become a republic at the end of Queen Elizabeth II's reign. 34 per cent of those in the poll share this view, wanting Queen Elizabeth II to be Australia's last monarch. At the extremes of the poll, 29 per cent of those surveyed believe Australia should become a republic as soon as possible, while 31 per cent believe Australia should never become a republic.\nQ: According to Julie Gillard, when should Australia become a republic?\nA: As soon as possible\nB: After Queen Elizabeth II’s reign\nC: Never\nD: After the federal election\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Out of 1,400 people polled prior to the 2010 federal election, those who oppose Australia becoming a republic grew by 8 per cent since 2008. Caretaker Prime Minister Julia Gillard claimed during the campaign of the 2010 federal election that she believed Australia should become a republic at the end of Queen Elizabeth II's reign. 34 per cent of those in the poll share this view, wanting Queen Elizabeth II to be Australia's last monarch. At the extremes of the poll, 29 per cent of those surveyed believe Australia should become a republic as soon as possible, while 31 per cent believe Australia should never become a republic.\nQ: According to Julie Gillard, when should Australia become a republic?\nA: As soon as possible\nB: After Queen Elizabeth II’s reign\nC: Never\nD: After the federal election\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Out of 1,400 people polled prior to the 2010 federal election, those who oppose Australia becoming a republic grew by 8 per cent since 2008. Caretaker Prime Minister Julia Gillard claimed during the campaign of the 2010 federal election that she believed Australia should become a republic at the end of Queen Elizabeth II's reign. 34 per cent of those in the poll share this view, wanting Queen Elizabeth II to be Australia's last monarch. At the extremes of the poll, 29 per cent of those surveyed believe Australia should become a republic as soon as possible, while 31 per cent believe Australia should never become a republic.\nQ: According to Julie Gillard, when should Australia become a republic?\nA: As soon as possible\nB: After Queen Elizabeth II’s reign\nC: Never\nD: After the federal election\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.2847648859024048,
+              true
+            ]
+          ],
+          [
+            [
+              -1.4263263940811157,
+              false
+            ]
+          ],
+          [
+            [
+              -5.690061092376709,
+              false
+            ]
+          ],
+          [
+            [
+              -6.862184047698975,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.2847648859024048,
+            true
+          ],
+          [
+            -1.4263263940811157,
+            false
+          ],
+          [
+            -5.690061092376709,
+            false
+          ],
+          [
+            -6.862184047698975,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "739520fb12a8b63a1f65facf8d539394dbba78c8be2cb8271e55cc94a4c5c292",
+        "prompt_hash": "5b9da967e34f52ee3ef04b90922b273545ea201dad1c6d03b3b21645ba14b2a1",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Blended_Learning_in_K-12/Synchronous_and_asynchronous_communication_methods",
+          "question_number": 2,
+          "flores_passage": "Asynchronous communication encourages time for reflection and reaction to others. It allows students the ability to work at their own pace and control the pace of instructional information. In addition, there are fewer time restrictions with the possibility of flexible working hours. (Bremer, 1998) The use of the Internet and the World Wide Web allows learners to have access to information at all times. Students can also submit questions to instructors at any time of day and expect reasonably quick responses, rather than waiting until the next face-to-face meeting.",
+          "question": "According to the passage, which of the following aspects of asynchronous communication is not flexible for students?",
+          "mc_answer1": "Learning pace",
+          "mc_answer2": "Working hours",
+          "mc_answer3": "Instructional material",
+          "mc_answer4": "Internet usage",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Asynchronous communication encourages time for reflection and reaction to others. It allows students the ability to work at their own pace and control the pace of instructional information. In addition, there are fewer time restrictions with the possibility of flexible working hours. (Bremer, 1998) The use of the Internet and the World Wide Web allows learners to have access to information at all times. Students can also submit questions to instructors at any time of day and expect reasonably quick responses, rather than waiting until the next face-to-face meeting.\nQ: According to the passage, which of the following aspects of asynchronous communication is not flexible for students?\nA: Learning pace\nB: Working hours\nC: Instructional material\nD: Internet usage\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Asynchronous communication encourages time for reflection and reaction to others. It allows students the ability to work at their own pace and control the pace of instructional information. In addition, there are fewer time restrictions with the possibility of flexible working hours. (Bremer, 1998) The use of the Internet and the World Wide Web allows learners to have access to information at all times. Students can also submit questions to instructors at any time of day and expect reasonably quick responses, rather than waiting until the next face-to-face meeting.\nQ: According to the passage, which of the following aspects of asynchronous communication is not flexible for students?\nA: Learning pace\nB: Working hours\nC: Instructional material\nD: Internet usage\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Asynchronous communication encourages time for reflection and reaction to others. It allows students the ability to work at their own pace and control the pace of instructional information. In addition, there are fewer time restrictions with the possibility of flexible working hours. (Bremer, 1998) The use of the Internet and the World Wide Web allows learners to have access to information at all times. Students can also submit questions to instructors at any time of day and expect reasonably quick responses, rather than waiting until the next face-to-face meeting.\nQ: According to the passage, which of the following aspects of asynchronous communication is not flexible for students?\nA: Learning pace\nB: Working hours\nC: Instructional material\nD: Internet usage\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Asynchronous communication encourages time for reflection and reaction to others. It allows students the ability to work at their own pace and control the pace of instructional information. In addition, there are fewer time restrictions with the possibility of flexible working hours. (Bremer, 1998) The use of the Internet and the World Wide Web allows learners to have access to information at all times. Students can also submit questions to instructors at any time of day and expect reasonably quick responses, rather than waiting until the next face-to-face meeting.\nQ: According to the passage, which of the following aspects of asynchronous communication is not flexible for students?\nA: Learning pace\nB: Working hours\nC: Instructional material\nD: Internet usage\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.3427635431289673,
+              false
+            ]
+          ],
+          [
+            [
+              -4.945714473724365,
+              false
+            ]
+          ],
+          [
+            [
+              -0.3610549867153168,
+              true
+            ]
+          ],
+          [
+            [
+              -6.1090521812438965,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.3427635431289673,
+            false
+          ],
+          [
+            -4.945714473724365,
+            false
+          ],
+          [
+            -0.3610549867153168,
+            true
+          ],
+          [
+            -6.1090521812438965,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "fab74f1866818eabab3bc9ed9929d8b1741891453490dc10fe1984e342389712",
+        "prompt_hash": "4c4ad18f4fccc5f9ed4017056e9e3c5bc076b966ab6668b8663184d6123e0da5",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Lucid_Dreaming/Induction_Techniques",
+          "question_number": 1,
+          "flores_passage": "Sleep interruption is the process of purposefully awakening during your normal sleep period and falling asleep a short time later (10–60 minutes). This can be easily done by using a relatively quiet alarm clock to bring you to consciousness without fully waking you. If you find yourself resetting the clock in your sleep, it can be placed on the other side of the room, forcing you to get out of bed to turn it off. Other biorhythm-based options involve drinking lots of fluid (particularly water or tea, a known diuretic) prior to sleep, forcing one to get up to urinate.",
+          "question": "After purposefully awakening during the normal sleep period, which of these would interfere with the sleep interruption process?",
+          "mc_answer1": "Reading for an hour and half before falling back to sleep",
+          "mc_answer2": "Using the bathroom and going right back to bed",
+          "mc_answer3": "Shutting off the alarm on your nightstand and falling back to sleep twenty minutes later",
+          "mc_answer4": "Waking up to drink water from a bottle on your nightstand",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Sleep interruption is the process of purposefully awakening during your normal sleep period and falling asleep a short time later (10–60 minutes). This can be easily done by using a relatively quiet alarm clock to bring you to consciousness without fully waking you. If you find yourself resetting the clock in your sleep, it can be placed on the other side of the room, forcing you to get out of bed to turn it off. Other biorhythm-based options involve drinking lots of fluid (particularly water or tea, a known diuretic) prior to sleep, forcing one to get up to urinate.\nQ: After purposefully awakening during the normal sleep period, which of these would interfere with the sleep interruption process?\nA: Reading for an hour and half before falling back to sleep\nB: Using the bathroom and going right back to bed\nC: Shutting off the alarm on your nightstand and falling back to sleep twenty minutes later\nD: Waking up to drink water from a bottle on your nightstand\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Sleep interruption is the process of purposefully awakening during your normal sleep period and falling asleep a short time later (10–60 minutes). This can be easily done by using a relatively quiet alarm clock to bring you to consciousness without fully waking you. If you find yourself resetting the clock in your sleep, it can be placed on the other side of the room, forcing you to get out of bed to turn it off. Other biorhythm-based options involve drinking lots of fluid (particularly water or tea, a known diuretic) prior to sleep, forcing one to get up to urinate.\nQ: After purposefully awakening during the normal sleep period, which of these would interfere with the sleep interruption process?\nA: Reading for an hour and half before falling back to sleep\nB: Using the bathroom and going right back to bed\nC: Shutting off the alarm on your nightstand and falling back to sleep twenty minutes later\nD: Waking up to drink water from a bottle on your nightstand\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Sleep interruption is the process of purposefully awakening during your normal sleep period and falling asleep a short time later (10–60 minutes). This can be easily done by using a relatively quiet alarm clock to bring you to consciousness without fully waking you. If you find yourself resetting the clock in your sleep, it can be placed on the other side of the room, forcing you to get out of bed to turn it off. Other biorhythm-based options involve drinking lots of fluid (particularly water or tea, a known diuretic) prior to sleep, forcing one to get up to urinate.\nQ: After purposefully awakening during the normal sleep period, which of these would interfere with the sleep interruption process?\nA: Reading for an hour and half before falling back to sleep\nB: Using the bathroom and going right back to bed\nC: Shutting off the alarm on your nightstand and falling back to sleep twenty minutes later\nD: Waking up to drink water from a bottle on your nightstand\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Sleep interruption is the process of purposefully awakening during your normal sleep period and falling asleep a short time later (10–60 minutes). This can be easily done by using a relatively quiet alarm clock to bring you to consciousness without fully waking you. If you find yourself resetting the clock in your sleep, it can be placed on the other side of the room, forcing you to get out of bed to turn it off. Other biorhythm-based options involve drinking lots of fluid (particularly water or tea, a known diuretic) prior to sleep, forcing one to get up to urinate.\nQ: After purposefully awakening during the normal sleep period, which of these would interfere with the sleep interruption process?\nA: Reading for an hour and half before falling back to sleep\nB: Using the bathroom and going right back to bed\nC: Shutting off the alarm on your nightstand and falling back to sleep twenty minutes later\nD: Waking up to drink water from a bottle on your nightstand\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.0548954010009766,
+              false
+            ]
+          ],
+          [
+            [
+              -0.9557589292526245,
+              true
+            ]
+          ],
+          [
+            [
+              -1.208856463432312,
+              false
+            ]
+          ],
+          [
+            [
+              -2.2364044189453125,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.0548954010009766,
+            false
+          ],
+          [
+            -0.9557589292526245,
+            true
+          ],
+          [
+            -1.208856463432312,
+            false
+          ],
+          [
+            -2.2364044189453125,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "5ca7a8ce8888f7ad5cfc6302b6d640cd2e0109c1f0f936e0973c6191f44122da",
+        "prompt_hash": "a1cab3d13545466023af3f313f472cefe0fa4066240193ea03f689b80197c81c",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Nintendo_unveils_controller_for_Revolution_console",
+          "question_number": 2,
+          "flores_passage": "At Thursday's keynote presentation of the Tokyo Game Show, Nintendo president Satoru Iwata unveiled the controller design for the company's new Nintendo Revolution console. Resembling a television remote, the controller uses two sensors placed near the user's television to triangulate its position in three-dimensional space. This will allow players to control actions and movements in video games by moving the device through the air.",
+          "question": "What was designed to look like a television remote?",
+          "mc_answer1": "The controller’s two sensors",
+          "mc_answer2": "The Nintendo Revolution controller",
+          "mc_answer3": "The keynote presentation",
+          "mc_answer4": "The Nintendo Revolution console",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: At Thursday's keynote presentation of the Tokyo Game Show, Nintendo president Satoru Iwata unveiled the controller design for the company's new Nintendo Revolution console. Resembling a television remote, the controller uses two sensors placed near the user's television to triangulate its position in three-dimensional space. This will allow players to control actions and movements in video games by moving the device through the air.\nQ: What was designed to look like a television remote?\nA: The controller’s two sensors\nB: The Nintendo Revolution controller\nC: The keynote presentation\nD: The Nintendo Revolution console\nAnswer:",
+            " A"
+          ],
+          [
+            "P: At Thursday's keynote presentation of the Tokyo Game Show, Nintendo president Satoru Iwata unveiled the controller design for the company's new Nintendo Revolution console. Resembling a television remote, the controller uses two sensors placed near the user's television to triangulate its position in three-dimensional space. This will allow players to control actions and movements in video games by moving the device through the air.\nQ: What was designed to look like a television remote?\nA: The controller’s two sensors\nB: The Nintendo Revolution controller\nC: The keynote presentation\nD: The Nintendo Revolution console\nAnswer:",
+            " B"
+          ],
+          [
+            "P: At Thursday's keynote presentation of the Tokyo Game Show, Nintendo president Satoru Iwata unveiled the controller design for the company's new Nintendo Revolution console. Resembling a television remote, the controller uses two sensors placed near the user's television to triangulate its position in three-dimensional space. This will allow players to control actions and movements in video games by moving the device through the air.\nQ: What was designed to look like a television remote?\nA: The controller’s two sensors\nB: The Nintendo Revolution controller\nC: The keynote presentation\nD: The Nintendo Revolution console\nAnswer:",
+            " C"
+          ],
+          [
+            "P: At Thursday's keynote presentation of the Tokyo Game Show, Nintendo president Satoru Iwata unveiled the controller design for the company's new Nintendo Revolution console. Resembling a television remote, the controller uses two sensors placed near the user's television to triangulate its position in three-dimensional space. This will allow players to control actions and movements in video games by moving the device through the air.\nQ: What was designed to look like a television remote?\nA: The controller’s two sensors\nB: The Nintendo Revolution controller\nC: The keynote presentation\nD: The Nintendo Revolution console\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.181403160095215,
+              false
+            ]
+          ],
+          [
+            [
+              -0.5495425462722778,
+              true
+            ]
+          ],
+          [
+            [
+              -5.338408470153809,
+              false
+            ]
+          ],
+          [
+            [
+              -1.446370244026184,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.181403160095215,
+            false
+          ],
+          [
+            -0.5495425462722778,
+            true
+          ],
+          [
+            -5.338408470153809,
+            false
+          ],
+          [
+            -1.446370244026184,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "e4312d1195dfb9fa46c34dce33d40e5eab92599e42b67a95f5ea1b358e39db6b",
+        "prompt_hash": "d37118d28923480066c5b5aa0d20c8b8fa0c15418050149abf132999262c09e4",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Asia/Taiwan",
+          "question_number": 1,
+          "flores_passage": "Taiwan beginning start way back in 15th century where European sailors passing by record the island’s name as Ilha Formosa, or beautiful island. In 1624,Dutch East India Company establishes a base in southwestern Taiwan, initiating a transformation in aboriginal grain production practices and employing Chinese laborers to work on its rice and sugar plantations. In 1683, Qing dynasty (1644-1912) forces take control of Taiwan’s western and northern coastal areas and declared Taiwan as a province of the Qing Empire in 1885. In 1895, after defeat in the First Sino-Japanese War (1894-1895), the Qing government signs the Treaty of Shimonoseki, by which it cedes sovereignty over Taiwan to Japan, which rules the island until 1945.",
+          "question": "Which of the following did the Dutch East India Company not do during their time in Taiwan?",
+          "mc_answer1": "Have a base on the southwestern part of the island",
+          "mc_answer2": "Practice aboriginal grain production",
+          "mc_answer3": "Employ Chinese workers on its plantations",
+          "mc_answer4": "Willing cede control of Taiwan to the Qing dynasty",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Taiwan beginning start way back in 15th century where European sailors passing by record the island’s name as Ilha Formosa, or beautiful island. In 1624,Dutch East India Company establishes a base in southwestern Taiwan, initiating a transformation in aboriginal grain production practices and employing Chinese laborers to work on its rice and sugar plantations. In 1683, Qing dynasty (1644-1912) forces take control of Taiwan’s western and northern coastal areas and declared Taiwan as a province of the Qing Empire in 1885. In 1895, after defeat in the First Sino-Japanese War (1894-1895), the Qing government signs the Treaty of Shimonoseki, by which it cedes sovereignty over Taiwan to Japan, which rules the island until 1945.\nQ: Which of the following did the Dutch East India Company not do during their time in Taiwan?\nA: Have a base on the southwestern part of the island\nB: Practice aboriginal grain production\nC: Employ Chinese workers on its plantations\nD: Willing cede control of Taiwan to the Qing dynasty\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Taiwan beginning start way back in 15th century where European sailors passing by record the island’s name as Ilha Formosa, or beautiful island. In 1624,Dutch East India Company establishes a base in southwestern Taiwan, initiating a transformation in aboriginal grain production practices and employing Chinese laborers to work on its rice and sugar plantations. In 1683, Qing dynasty (1644-1912) forces take control of Taiwan’s western and northern coastal areas and declared Taiwan as a province of the Qing Empire in 1885. In 1895, after defeat in the First Sino-Japanese War (1894-1895), the Qing government signs the Treaty of Shimonoseki, by which it cedes sovereignty over Taiwan to Japan, which rules the island until 1945.\nQ: Which of the following did the Dutch East India Company not do during their time in Taiwan?\nA: Have a base on the southwestern part of the island\nB: Practice aboriginal grain production\nC: Employ Chinese workers on its plantations\nD: Willing cede control of Taiwan to the Qing dynasty\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Taiwan beginning start way back in 15th century where European sailors passing by record the island’s name as Ilha Formosa, or beautiful island. In 1624,Dutch East India Company establishes a base in southwestern Taiwan, initiating a transformation in aboriginal grain production practices and employing Chinese laborers to work on its rice and sugar plantations. In 1683, Qing dynasty (1644-1912) forces take control of Taiwan’s western and northern coastal areas and declared Taiwan as a province of the Qing Empire in 1885. In 1895, after defeat in the First Sino-Japanese War (1894-1895), the Qing government signs the Treaty of Shimonoseki, by which it cedes sovereignty over Taiwan to Japan, which rules the island until 1945.\nQ: Which of the following did the Dutch East India Company not do during their time in Taiwan?\nA: Have a base on the southwestern part of the island\nB: Practice aboriginal grain production\nC: Employ Chinese workers on its plantations\nD: Willing cede control of Taiwan to the Qing dynasty\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Taiwan beginning start way back in 15th century where European sailors passing by record the island’s name as Ilha Formosa, or beautiful island. In 1624,Dutch East India Company establishes a base in southwestern Taiwan, initiating a transformation in aboriginal grain production practices and employing Chinese laborers to work on its rice and sugar plantations. In 1683, Qing dynasty (1644-1912) forces take control of Taiwan’s western and northern coastal areas and declared Taiwan as a province of the Qing Empire in 1885. In 1895, after defeat in the First Sino-Japanese War (1894-1895), the Qing government signs the Treaty of Shimonoseki, by which it cedes sovereignty over Taiwan to Japan, which rules the island until 1945.\nQ: Which of the following did the Dutch East India Company not do during their time in Taiwan?\nA: Have a base on the southwestern part of the island\nB: Practice aboriginal grain production\nC: Employ Chinese workers on its plantations\nD: Willing cede control of Taiwan to the Qing dynasty\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -7.085144519805908,
+              false
+            ]
+          ],
+          [
+            [
+              -5.521308422088623,
+              false
+            ]
+          ],
+          [
+            [
+              -7.9427409172058105,
+              false
+            ]
+          ],
+          [
+            [
+              -0.016257571056485176,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -7.085144519805908,
+            false
+          ],
+          [
+            -5.521308422088623,
+            false
+          ],
+          [
+            -7.9427409172058105,
+            false
+          ],
+          [
+            -0.016257571056485176,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "384fb72bd1040cb74442a2f47991db84dff00f039eed6e5136d07b6011a81123",
+        "prompt_hash": "465737ab7a533b2a285969629b9b9853d498f54fa5bdcc401afe7b18a2c5c6cc",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792584486.838638,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

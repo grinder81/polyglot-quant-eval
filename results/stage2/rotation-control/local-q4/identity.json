@@ -1,0 +1,12 @@
+{
+  "arm": "local-q4",
+  "lock": "69c046fe63add6190ee868fb8eda65a98f876ebf9da477bffd9024b0724087cc",
+  "preflight": "91c0040ab1838821a6f0cc0ab0913a0e0416c8e23c26efbd1000e4f316b5abaf",
+  "runtime": "ca2894e3a833bdaf584c084a1178a17e9b1cae7124730d6d187a26c3d165ba26",
+  "code": {
+    "run_rotation_shards.py": "03d933a335893e3e23e1da1924cd897003aed22a83aa1bf04ff4e83ba7b7f77b",
+    "run_rotation_shard.py": "43980f0fde626b60be8b77952095557aae87918197bfbfe9e18e53f09f52cc7d",
+    "option_rotation.py": "6a5ac9572f76b9314094c4bf3d0010f846295eb0e99ba55ab47f12d6a1e572f4",
+    "prepare_pilot.py": "4e1dd97d5b044059d20009650ba5466e84bb7e252b0f742a751357b2603e0cab"
+  }
+}

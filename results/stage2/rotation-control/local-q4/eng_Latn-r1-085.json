@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Aerosmith_sued_over_late_cancellation_of_gig_in_Maui,_Hawaii",
+          "question_number": 2,
+          "flores_passage": "The band canceled the show at Maui's War Memorial Stadium, which was set to be attended by 9,000 people, and apologized to fans. The band's management company, HK Management Inc., gave no initial reason when they canceled on September 20, but blamed logistical reasons by the next day.",
+          "question": "Who eventually provided an explanation regarding the cancellation of the event?",
+          "mc_answer1": "The management company",
+          "mc_answer2": "The owner of the War Memorial Stadium",
+          "mc_answer3": "The fans",
+          "mc_answer4": "The band",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The band canceled the show at Maui's War Memorial Stadium, which was set to be attended by 9,000 people, and apologized to fans. The band's management company, HK Management Inc., gave no initial reason when they canceled on September 20, but blamed logistical reasons by the next day.\nQ: Who eventually provided an explanation regarding the cancellation of the event?\nA: The management company\nB: The owner of the War Memorial Stadium\nC: The fans\nD: The band\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The band canceled the show at Maui's War Memorial Stadium, which was set to be attended by 9,000 people, and apologized to fans. The band's management company, HK Management Inc., gave no initial reason when they canceled on September 20, but blamed logistical reasons by the next day.\nQ: Who eventually provided an explanation regarding the cancellation of the event?\nA: The management company\nB: The owner of the War Memorial Stadium\nC: The fans\nD: The band\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The band canceled the show at Maui's War Memorial Stadium, which was set to be attended by 9,000 people, and apologized to fans. The band's management company, HK Management Inc., gave no initial reason when they canceled on September 20, but blamed logistical reasons by the next day.\nQ: Who eventually provided an explanation regarding the cancellation of the event?\nA: The management company\nB: The owner of the War Memorial Stadium\nC: The fans\nD: The band\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The band canceled the show at Maui's War Memorial Stadium, which was set to be attended by 9,000 people, and apologized to fans. The band's management company, HK Management Inc., gave no initial reason when they canceled on September 20, but blamed logistical reasons by the next day.\nQ: Who eventually provided an explanation regarding the cancellation of the event?\nA: The management company\nB: The owner of the War Memorial Stadium\nC: The fans\nD: The band\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.28607407212257385,
+              true
+            ]
+          ],
+          [
+            [
+              -3.7437405586242676,
+              false
+            ]
+          ],
+          [
+            [
+              -6.076112270355225,
+              false
+            ]
+          ],
+          [
+            [
+              -1.8694461584091187,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.28607407212257385,
+            true
+          ],
+          [
+            -3.7437405586242676,
+            false
+          ],
+          [
+            -6.076112270355225,
+            false
+          ],
+          [
+            -1.8694461584091187,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "cd642280e3f72a9b42918855691af0f53f477dc840ed115ab61d759c6bd95102",
+        "prompt_hash": "281dc1b06b96fed0a3e120ab330abd198e52449b822c27dc3465ccdd95c9643a",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Parts_of_New_Orleans_flood_again",
+          "question_number": 1,
+          "flores_passage": "The U.S. Corps of Engineers estimated that 6 inches of rainfall could breach the previously damaged levees. The Ninth Ward, which saw flooding as high as 20 feet during Hurricane Katrina, is currently in waist-high water as the nearby levee was overtopped. Water is spilling over the levee in a section 100 feet wide.",
+          "question": "Currently, how high is the water in The Ninth Ward?",
+          "mc_answer1": "6 inches",
+          "mc_answer2": "Waist-high",
+          "mc_answer3": "100 feet",
+          "mc_answer4": "20 feet ",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: The U.S. Corps of Engineers estimated that 6 inches of rainfall could breach the previously damaged levees. The Ninth Ward, which saw flooding as high as 20 feet during Hurricane Katrina, is currently in waist-high water as the nearby levee was overtopped. Water is spilling over the levee in a section 100 feet wide.\nQ: Currently, how high is the water in The Ninth Ward?\nA: 6 inches\nB: Waist-high\nC: 100 feet\nD: 20 feet \nAnswer:",
+            " A"
+          ],
+          [
+            "P: The U.S. Corps of Engineers estimated that 6 inches of rainfall could breach the previously damaged levees. The Ninth Ward, which saw flooding as high as 20 feet during Hurricane Katrina, is currently in waist-high water as the nearby levee was overtopped. Water is spilling over the levee in a section 100 feet wide.\nQ: Currently, how high is the water in The Ninth Ward?\nA: 6 inches\nB: Waist-high\nC: 100 feet\nD: 20 feet \nAnswer:",
+            " B"
+          ],
+          [
+            "P: The U.S. Corps of Engineers estimated that 6 inches of rainfall could breach the previously damaged levees. The Ninth Ward, which saw flooding as high as 20 feet during Hurricane Katrina, is currently in waist-high water as the nearby levee was overtopped. Water is spilling over the levee in a section 100 feet wide.\nQ: Currently, how high is the water in The Ninth Ward?\nA: 6 inches\nB: Waist-high\nC: 100 feet\nD: 20 feet \nAnswer:",
+            " C"
+          ],
+          [
+            "P: The U.S. Corps of Engineers estimated that 6 inches of rainfall could breach the previously damaged levees. The Ninth Ward, which saw flooding as high as 20 feet during Hurricane Katrina, is currently in waist-high water as the nearby levee was overtopped. Water is spilling over the levee in a section 100 feet wide.\nQ: Currently, how high is the water in The Ninth Ward?\nA: 6 inches\nB: Waist-high\nC: 100 feet\nD: 20 feet \nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.6918253898620605,
+              false
+            ]
+          ],
+          [
+            [
+              -0.021445762366056442,
+              true
+            ]
+          ],
+          [
+            [
+              -5.0988688468933105,
+              false
+            ]
+          ],
+          [
+            [
+              -6.260365962982178,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.6918253898620605,
+            false
+          ],
+          [
+            -0.021445762366056442,
+            true
+          ],
+          [
+            -5.0988688468933105,
+            false
+          ],
+          [
+            -6.260365962982178,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "abb02979ddbdc44e81532cf1050f5d35b9601c126143470f6679b6adc71d2173",
+        "prompt_hash": "fd366ed0a2a2f2a7e65718142cd0e0236c87e417d16c5f0f0a5b24c35240b9c6",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Hong_Kong",
+          "question_number": 2,
+          "flores_passage": "Hong Kong Island gives the territory of Hong Kong its name and is the place that many tourists regard as the main focus. The parade of buildings that make the Hong Kong skyline has been likened to a glittering bar chart that is made apparent by the presence of the waters of Victoria Harbour. To get the best views of Hong Kong, leave the island and head for the Kowloon waterfront opposite. The great majority of Hong Kong Island's urban development is densely packed on reclaimed land along the northern shore. This is the place the British colonisers took as their own and so if you are looking for evidence of the territory's colonial past, this is a good place to start.",
+          "question": "Which location would appeal to a tourist that prioritizes stunning views?",
+          "mc_answer1": "Hong Kong proper",
+          "mc_answer2": "Hong Kong Island",
+          "mc_answer3": "The Kowloon waterfront",
+          "mc_answer4": "Victoria Harbor",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Hong Kong Island gives the territory of Hong Kong its name and is the place that many tourists regard as the main focus. The parade of buildings that make the Hong Kong skyline has been likened to a glittering bar chart that is made apparent by the presence of the waters of Victoria Harbour. To get the best views of Hong Kong, leave the island and head for the Kowloon waterfront opposite. The great majority of Hong Kong Island's urban development is densely packed on reclaimed land along the northern shore. This is the place the British colonisers took as their own and so if you are looking for evidence of the territory's colonial past, this is a good place to start.\nQ: Which location would appeal to a tourist that prioritizes stunning views?\nA: Hong Kong proper\nB: Hong Kong Island\nC: The Kowloon waterfront\nD: Victoria Harbor\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Hong Kong Island gives the territory of Hong Kong its name and is the place that many tourists regard as the main focus. The parade of buildings that make the Hong Kong skyline has been likened to a glittering bar chart that is made apparent by the presence of the waters of Victoria Harbour. To get the best views of Hong Kong, leave the island and head for the Kowloon waterfront opposite. The great majority of Hong Kong Island's urban development is densely packed on reclaimed land along the northern shore. This is the place the British colonisers took as their own and so if you are looking for evidence of the territory's colonial past, this is a good place to start.\nQ: Which location would appeal to a tourist that prioritizes stunning views?\nA: Hong Kong proper\nB: Hong Kong Island\nC: The Kowloon waterfront\nD: Victoria Harbor\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Hong Kong Island gives the territory of Hong Kong its name and is the place that many tourists regard as the main focus. The parade of buildings that make the Hong Kong skyline has been likened to a glittering bar chart that is made apparent by the presence of the waters of Victoria Harbour. To get the best views of Hong Kong, leave the island and head for the Kowloon waterfront opposite. The great majority of Hong Kong Island's urban development is densely packed on reclaimed land along the northern shore. This is the place the British colonisers took as their own and so if you are looking for evidence of the territory's colonial past, this is a good place to start.\nQ: Which location would appeal to a tourist that prioritizes stunning views?\nA: Hong Kong proper\nB: Hong Kong Island\nC: The Kowloon waterfront\nD: Victoria Harbor\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Hong Kong Island gives the territory of Hong Kong its name and is the place that many tourists regard as the main focus. The parade of buildings that make the Hong Kong skyline has been likened to a glittering bar chart that is made apparent by the presence of the waters of Victoria Harbour. To get the best views of Hong Kong, leave the island and head for the Kowloon waterfront opposite. The great majority of Hong Kong Island's urban development is densely packed on reclaimed land along the northern shore. This is the place the British colonisers took as their own and so if you are looking for evidence of the territory's colonial past, this is a good place to start.\nQ: Which location would appeal to a tourist that prioritizes stunning views?\nA: Hong Kong proper\nB: Hong Kong Island\nC: The Kowloon waterfront\nD: Victoria Harbor\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.4977405071258545,
+              false
+            ]
+          ],
+          [
+            [
+              -0.3037784695625305,
+              true
+            ]
+          ],
+          [
+            [
+              -3.91340708732605,
+              false
+            ]
+          ],
+          [
+            [
+              -5.369036674499512,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.4977405071258545,
+            false
+          ],
+          [
+            -0.3037784695625305,
+            true
+          ],
+          [
+            -3.91340708732605,
+            false
+          ],
+          [
+            -5.369036674499512,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "17286d23959f23e524ea7d944d56398880a1280e6613a9a3d9fef354560dd411",
+        "prompt_hash": "12bc68c9c6ac255ccda3cd2943fee535b84c842ee374b1e3ac9a263bc4a62707",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/History_of_Rail_Transport/Early_Rail_Transportation",
+          "question_number": 1,
+          "flores_passage": "Wagonways were built in England as early as the 16th Century. Although wagonways merely consisted of parallel planks of wood, they allowed horses pulling them to achieve greater speeds and pull larger loads than on the slightly more rough roads of the day. Crossties were introduced fairly early to hold the tracks in place. Gradually, however, it was realised that tracks would be more efficient if they had a stip of iron on the top. This became common practice, but the iron caused more wear on the wooden wheels of the wagons. Eventually, wooden wheels were replaced by iron wheels. In 1767, the first full-iron rails were introduced.",
+          "question": "According to the passage, what was iron used for first?",
+          "mc_answer1": "Wagonways",
+          "mc_answer2": "Wheels",
+          "mc_answer3": "Rails",
+          "mc_answer4": "Crossties",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Wagonways were built in England as early as the 16th Century. Although wagonways merely consisted of parallel planks of wood, they allowed horses pulling them to achieve greater speeds and pull larger loads than on the slightly more rough roads of the day. Crossties were introduced fairly early to hold the tracks in place. Gradually, however, it was realised that tracks would be more efficient if they had a stip of iron on the top. This became common practice, but the iron caused more wear on the wooden wheels of the wagons. Eventually, wooden wheels were replaced by iron wheels. In 1767, the first full-iron rails were introduced.\nQ: According to the passage, what was iron used for first?\nA: Wagonways\nB: Wheels\nC: Rails\nD: Crossties\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Wagonways were built in England as early as the 16th Century. Although wagonways merely consisted of parallel planks of wood, they allowed horses pulling them to achieve greater speeds and pull larger loads than on the slightly more rough roads of the day. Crossties were introduced fairly early to hold the tracks in place. Gradually, however, it was realised that tracks would be more efficient if they had a stip of iron on the top. This became common practice, but the iron caused more wear on the wooden wheels of the wagons. Eventually, wooden wheels were replaced by iron wheels. In 1767, the first full-iron rails were introduced.\nQ: According to the passage, what was iron used for first?\nA: Wagonways\nB: Wheels\nC: Rails\nD: Crossties\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Wagonways were built in England as early as the 16th Century. Although wagonways merely consisted of parallel planks of wood, they allowed horses pulling them to achieve greater speeds and pull larger loads than on the slightly more rough roads of the day. Crossties were introduced fairly early to hold the tracks in place. Gradually, however, it was realised that tracks would be more efficient if they had a stip of iron on the top. This became common practice, but the iron caused more wear on the wooden wheels of the wagons. Eventually, wooden wheels were replaced by iron wheels. In 1767, the first full-iron rails were introduced.\nQ: According to the passage, what was iron used for first?\nA: Wagonways\nB: Wheels\nC: Rails\nD: Crossties\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Wagonways were built in England as early as the 16th Century. Although wagonways merely consisted of parallel planks of wood, they allowed horses pulling them to achieve greater speeds and pull larger loads than on the slightly more rough roads of the day. Crossties were introduced fairly early to hold the tracks in place. Gradually, however, it was realised that tracks would be more efficient if they had a stip of iron on the top. This became common practice, but the iron caused more wear on the wooden wheels of the wagons. Eventually, wooden wheels were replaced by iron wheels. In 1767, the first full-iron rails were introduced.\nQ: According to the passage, what was iron used for first?\nA: Wagonways\nB: Wheels\nC: Rails\nD: Crossties\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.2005140781402588,
+              false
+            ]
+          ],
+          [
+            [
+              -2.654480218887329,
+              false
+            ]
+          ],
+          [
+            [
+              -0.4879419207572937,
+              true
+            ]
+          ],
+          [
+            [
+              -4.731149673461914,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.2005140781402588,
+            false
+          ],
+          [
+            -2.654480218887329,
+            false
+          ],
+          [
+            -0.4879419207572937,
+            true
+          ],
+          [
+            -4.731149673461914,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "48f05a74116d0aa6c22b301bab539ea1d957e3deac46d8dbed711cf81a463b49",
+        "prompt_hash": "5a17301d21e7a6a0aae6385abc06e6ccd2688a5941fd9e7b97caa97740c8ecaf",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Guanajuato",
+          "question_number": 2,
+          "flores_passage": "Jardín de la Unión. This space was built as the atrium for a 17th-century convent, of which the Templo de San Diego is the sole surviving building. It now functions as the central plaza, and always has a lot of things going on, day and night. There are a number of restaurants surrounding the garden, and in the afternoons and evening there free concerts are often given from the central gazebo. Callejon del Beso (Alley of the Kiss). Two balconies separated by only 69 centimeters is home of an old love legend. For a few pennies some children will tell you the story.",
+          "question": "According to the passage, which of the following is not found in Jardín de la Unión?",
+          "mc_answer1": "The home of an old love story",
+          "mc_answer2": "Garden-facing restaurants ",
+          "mc_answer3": "An old convent building",
+          "mc_answer4": "A central gazebo with concerts",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Jardín de la Unión. This space was built as the atrium for a 17th-century convent, of which the Templo de San Diego is the sole surviving building. It now functions as the central plaza, and always has a lot of things going on, day and night. There are a number of restaurants surrounding the garden, and in the afternoons and evening there free concerts are often given from the central gazebo. Callejon del Beso (Alley of the Kiss). Two balconies separated by only 69 centimeters is home of an old love legend. For a few pennies some children will tell you the story.\nQ: According to the passage, which of the following is not found in Jardín de la Unión?\nA: The home of an old love story\nB: Garden-facing restaurants \nC: An old convent building\nD: A central gazebo with concerts\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Jardín de la Unión. This space was built as the atrium for a 17th-century convent, of which the Templo de San Diego is the sole surviving building. It now functions as the central plaza, and always has a lot of things going on, day and night. There are a number of restaurants surrounding the garden, and in the afternoons and evening there free concerts are often given from the central gazebo. Callejon del Beso (Alley of the Kiss). Two balconies separated by only 69 centimeters is home of an old love legend. For a few pennies some children will tell you the story.\nQ: According to the passage, which of the following is not found in Jardín de la Unión?\nA: The home of an old love story\nB: Garden-facing restaurants \nC: An old convent building\nD: A central gazebo with concerts\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Jardín de la Unión. This space was built as the atrium for a 17th-century convent, of which the Templo de San Diego is the sole surviving building. It now functions as the central plaza, and always has a lot of things going on, day and night. There are a number of restaurants surrounding the garden, and in the afternoons and evening there free concerts are often given from the central gazebo. Callejon del Beso (Alley of the Kiss). Two balconies separated by only 69 centimeters is home of an old love legend. For a few pennies some children will tell you the story.\nQ: According to the passage, which of the following is not found in Jardín de la Unión?\nA: The home of an old love story\nB: Garden-facing restaurants \nC: An old convent building\nD: A central gazebo with concerts\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Jardín de la Unión. This space was built as the atrium for a 17th-century convent, of which the Templo de San Diego is the sole surviving building. It now functions as the central plaza, and always has a lot of things going on, day and night. There are a number of restaurants surrounding the garden, and in the afternoons and evening there free concerts are often given from the central gazebo. Callejon del Beso (Alley of the Kiss). Two balconies separated by only 69 centimeters is home of an old love legend. For a few pennies some children will tell you the story.\nQ: According to the passage, which of the following is not found in Jardín de la Unión?\nA: The home of an old love story\nB: Garden-facing restaurants \nC: An old convent building\nD: A central gazebo with concerts\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.27565717697143555,
+              true
+            ]
+          ],
+          [
+            [
+              -4.876218318939209,
+              false
+            ]
+          ],
+          [
+            [
+              -1.6904921531677246,
+              false
+            ]
+          ],
+          [
+            [
+              -6.208602428436279,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.27565717697143555,
+            true
+          ],
+          [
+            -4.876218318939209,
+            false
+          ],
+          [
+            -1.6904921531677246,
+            false
+          ],
+          [
+            -6.208602428436279,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "1f1fe9a08e4f9b4312dbe719e6c57d9f07be122db0e3695e5a3efc5271ce6a8a",
+        "prompt_hash": "65eaf53e203ea29e60097eabdcb93819b0fd6601fd682c2458415b4135d0ba6d",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792585821.3088388,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}
