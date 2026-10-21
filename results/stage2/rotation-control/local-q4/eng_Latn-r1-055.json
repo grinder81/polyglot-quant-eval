@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:South_America/The_Amazon",
+          "question_number": 2,
+          "flores_passage": "The Amazon River is the second longest and the biggest river on Earth. It carries more than 8 times as much water as the second biggest river. The Amazon is also the widest river on Earth, at times six miles wide. A full 20 percent of the water that pours out of the planet's rivers into the oceans comes from the Amazon. The main Amazon River is 6,387 km (3,980 miles). It collects water from thousands of smaller rivers.",
+          "question": "Which accolade is not attributed to the Amazon River?",
+          "mc_answer1": "It’s the biggest river",
+          "mc_answer2": "It’s the longest river",
+          "mc_answer3": "It’s the widest river",
+          "mc_answer4": "It’s the second longest river",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: The Amazon River is the second longest and the biggest river on Earth. It carries more than 8 times as much water as the second biggest river. The Amazon is also the widest river on Earth, at times six miles wide. A full 20 percent of the water that pours out of the planet's rivers into the oceans comes from the Amazon. The main Amazon River is 6,387 km (3,980 miles). It collects water from thousands of smaller rivers.\nQ: Which accolade is not attributed to the Amazon River?\nA: It’s the biggest river\nB: It’s the longest river\nC: It’s the widest river\nD: It’s the second longest river\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Amazon River is the second longest and the biggest river on Earth. It carries more than 8 times as much water as the second biggest river. The Amazon is also the widest river on Earth, at times six miles wide. A full 20 percent of the water that pours out of the planet's rivers into the oceans comes from the Amazon. The main Amazon River is 6,387 km (3,980 miles). It collects water from thousands of smaller rivers.\nQ: Which accolade is not attributed to the Amazon River?\nA: It’s the biggest river\nB: It’s the longest river\nC: It’s the widest river\nD: It’s the second longest river\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Amazon River is the second longest and the biggest river on Earth. It carries more than 8 times as much water as the second biggest river. The Amazon is also the widest river on Earth, at times six miles wide. A full 20 percent of the water that pours out of the planet's rivers into the oceans comes from the Amazon. The main Amazon River is 6,387 km (3,980 miles). It collects water from thousands of smaller rivers.\nQ: Which accolade is not attributed to the Amazon River?\nA: It’s the biggest river\nB: It’s the longest river\nC: It’s the widest river\nD: It’s the second longest river\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Amazon River is the second longest and the biggest river on Earth. It carries more than 8 times as much water as the second biggest river. The Amazon is also the widest river on Earth, at times six miles wide. A full 20 percent of the water that pours out of the planet's rivers into the oceans comes from the Amazon. The main Amazon River is 6,387 km (3,980 miles). It collects water from thousands of smaller rivers.\nQ: Which accolade is not attributed to the Amazon River?\nA: It’s the biggest river\nB: It’s the longest river\nC: It’s the widest river\nD: It’s the second longest river\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.9741166234016418,
+              false
+            ]
+          ],
+          [
+            [
+              -0.5548775792121887,
+              true
+            ]
+          ],
+          [
+            [
+              -4.3015055656433105,
+              false
+            ]
+          ],
+          [
+            [
+              -3.771235704421997,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.9741166234016418,
+            false
+          ],
+          [
+            -0.5548775792121887,
+            true
+          ],
+          [
+            -4.3015055656433105,
+            false
+          ],
+          [
+            -3.771235704421997,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "54e3dde531284b9190bd8797ddc9129ec8634d8b49c58a4de55f1fd74b9306c8",
+        "prompt_hash": "2447c2347941eb198cf7b1f4f94fdc8dc1add5e40736de94e65cac73d11c9830",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Sundarbans_National_Park",
+          "question_number": 1,
+          "flores_passage": "The Sundarbans are the largest littoral mangrove belt in the world, stretching 80 km (50 mi) into the Bangladeshi and Indian hinterland from the coast. The Sundarbans has been declared a UNESCO World Heritage Site. The part of the forest within Indian territory is called Sundarbans National Park. The forests aren't just mangrove swamps though — they include some of the last remaining stands of the mighty jungles which once covered the Gangetic plain. The Sundarbans cover an area of 3,850 km², of which about one-third is covered in water/marsh areas. Since 1966 the Sundarbans have been a wildlife sanctuary, and it is estimated that there are now 400 Royal Bengal tigers and about 30,000 spotted deer in the area.",
+          "question": "According to the passage, which of the following statements about the Sundarbans is not true?",
+          "mc_answer1": "Half of its total area is covered in marsh",
+          "mc_answer2": "It's the world’s largest mangrove belt",
+          "mc_answer3": "It’s home to more spotted deer than Bengal tigers",
+          "mc_answer4": "It features some of the few mighty jungles that remain",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The Sundarbans are the largest littoral mangrove belt in the world, stretching 80 km (50 mi) into the Bangladeshi and Indian hinterland from the coast. The Sundarbans has been declared a UNESCO World Heritage Site. The part of the forest within Indian territory is called Sundarbans National Park. The forests aren't just mangrove swamps though — they include some of the last remaining stands of the mighty jungles which once covered the Gangetic plain. The Sundarbans cover an area of 3,850 km², of which about one-third is covered in water/marsh areas. Since 1966 the Sundarbans have been a wildlife sanctuary, and it is estimated that there are now 400 Royal Bengal tigers and about 30,000 spotted deer in the area.\nQ: According to the passage, which of the following statements about the Sundarbans is not true?\nA: Half of its total area is covered in marsh\nB: It's the world’s largest mangrove belt\nC: It’s home to more spotted deer than Bengal tigers\nD: It features some of the few mighty jungles that remain\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Sundarbans are the largest littoral mangrove belt in the world, stretching 80 km (50 mi) into the Bangladeshi and Indian hinterland from the coast. The Sundarbans has been declared a UNESCO World Heritage Site. The part of the forest within Indian territory is called Sundarbans National Park. The forests aren't just mangrove swamps though — they include some of the last remaining stands of the mighty jungles which once covered the Gangetic plain. The Sundarbans cover an area of 3,850 km², of which about one-third is covered in water/marsh areas. Since 1966 the Sundarbans have been a wildlife sanctuary, and it is estimated that there are now 400 Royal Bengal tigers and about 30,000 spotted deer in the area.\nQ: According to the passage, which of the following statements about the Sundarbans is not true?\nA: Half of its total area is covered in marsh\nB: It's the world’s largest mangrove belt\nC: It’s home to more spotted deer than Bengal tigers\nD: It features some of the few mighty jungles that remain\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Sundarbans are the largest littoral mangrove belt in the world, stretching 80 km (50 mi) into the Bangladeshi and Indian hinterland from the coast. The Sundarbans has been declared a UNESCO World Heritage Site. The part of the forest within Indian territory is called Sundarbans National Park. The forests aren't just mangrove swamps though — they include some of the last remaining stands of the mighty jungles which once covered the Gangetic plain. The Sundarbans cover an area of 3,850 km², of which about one-third is covered in water/marsh areas. Since 1966 the Sundarbans have been a wildlife sanctuary, and it is estimated that there are now 400 Royal Bengal tigers and about 30,000 spotted deer in the area.\nQ: According to the passage, which of the following statements about the Sundarbans is not true?\nA: Half of its total area is covered in marsh\nB: It's the world’s largest mangrove belt\nC: It’s home to more spotted deer than Bengal tigers\nD: It features some of the few mighty jungles that remain\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Sundarbans are the largest littoral mangrove belt in the world, stretching 80 km (50 mi) into the Bangladeshi and Indian hinterland from the coast. The Sundarbans has been declared a UNESCO World Heritage Site. The part of the forest within Indian territory is called Sundarbans National Park. The forests aren't just mangrove swamps though — they include some of the last remaining stands of the mighty jungles which once covered the Gangetic plain. The Sundarbans cover an area of 3,850 km², of which about one-third is covered in water/marsh areas. Since 1966 the Sundarbans have been a wildlife sanctuary, and it is estimated that there are now 400 Royal Bengal tigers and about 30,000 spotted deer in the area.\nQ: According to the passage, which of the following statements about the Sundarbans is not true?\nA: Half of its total area is covered in marsh\nB: It's the world’s largest mangrove belt\nC: It’s home to more spotted deer than Bengal tigers\nD: It features some of the few mighty jungles that remain\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.15357019007205963,
+              true
+            ]
+          ],
+          [
+            [
+              -3.5705337524414062,
+              false
+            ]
+          ],
+          [
+            [
+              -2.4096450805664062,
+              false
+            ]
+          ],
+          [
+            [
+              -5.483579635620117,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.15357019007205963,
+            true
+          ],
+          [
+            -3.5705337524414062,
+            false
+          ],
+          [
+            -2.4096450805664062,
+            false
+          ],
+          [
+            -5.483579635620117,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "7dec0ae3d9d1eb869eb67f4ff1a949c7ce617d9dc8e7c355eb5e92dd906a4c9b",
+        "prompt_hash": "13f14297bb794a5e376ee93e69bfde677435a3ca63cd4299ba60ed4a1d6fc061",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Thousands_march_in_London_calling_for_David_Cameron%27s_resignation_over_tax_affairs",
+          "question_number": 2,
+          "flores_passage": "The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence. Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall. At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up. Around 11:29, the protest moved up Whitehall, past Trafalgar Square, along the Strand, passing by Aldwych and up Kingsway towards Holborn where the Conservative Party were holding their Spring Forum in the Grand Connaught Rooms hotel.",
+          "question": "At what time did the police ask protestors to move in order to avoid further traffic buildup?",
+          "mc_answer1": "At 11:29",
+          "mc_answer2": "Before 11:00",
+          "mc_answer3": "At 11:20",
+          "mc_answer4": "Around 11:00",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence. Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall. At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up. Around 11:29, the protest moved up Whitehall, past Trafalgar Square, along the Strand, passing by Aldwych and up Kingsway towards Holborn where the Conservative Party were holding their Spring Forum in the Grand Connaught Rooms hotel.\nQ: At what time did the police ask protestors to move in order to avoid further traffic buildup?\nA: At 11:29\nB: Before 11:00\nC: At 11:20\nD: Around 11:00\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence. Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall. At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up. Around 11:29, the protest moved up Whitehall, past Trafalgar Square, along the Strand, passing by Aldwych and up Kingsway towards Holborn where the Conservative Party were holding their Spring Forum in the Grand Connaught Rooms hotel.\nQ: At what time did the police ask protestors to move in order to avoid further traffic buildup?\nA: At 11:29\nB: Before 11:00\nC: At 11:20\nD: Around 11:00\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence. Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall. At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up. Around 11:29, the protest moved up Whitehall, past Trafalgar Square, along the Strand, passing by Aldwych and up Kingsway towards Holborn where the Conservative Party were holding their Spring Forum in the Grand Connaught Rooms hotel.\nQ: At what time did the police ask protestors to move in order to avoid further traffic buildup?\nA: At 11:29\nB: Before 11:00\nC: At 11:20\nD: Around 11:00\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence. Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall. At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up. Around 11:29, the protest moved up Whitehall, past Trafalgar Square, along the Strand, passing by Aldwych and up Kingsway towards Holborn where the Conservative Party were holding their Spring Forum in the Grand Connaught Rooms hotel.\nQ: At what time did the police ask protestors to move in order to avoid further traffic buildup?\nA: At 11:29\nB: Before 11:00\nC: At 11:20\nD: Around 11:00\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.7049286365509033,
+              false
+            ]
+          ],
+          [
+            [
+              -4.433263301849365,
+              false
+            ]
+          ],
+          [
+            [
+              -0.04727865010499954,
+              true
+            ]
+          ],
+          [
+            [
+              -7.089280605316162,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.7049286365509033,
+            false
+          ],
+          [
+            -4.433263301849365,
+            false
+          ],
+          [
+            -0.04727865010499954,
+            true
+          ],
+          [
+            -7.089280605316162,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9f57c793d9eb495061b90cbce2bcedd65c6ece5b781f82ca40a9c1dd9eeaf19f",
+        "prompt_hash": "c2dbce25677df6737ddd74a874529d83f3552d7ae985718afb2178141ede5373",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Airline_alliances",
+          "question_number": 2,
+          "flores_passage": "You should choose your Frequent Flyer airline in an alliance carefully. Although you may think it is intuitive to join the airline you fly most, you should be aware that privileges offered are often different and frequent flyer points may be more generous under a different airline in the same alliance.",
+          "question": "According to the passage, who might offer a more frequent flyer points?",
+          "mc_answer1": "Your most frequently traveled airline under the same alliance",
+          "mc_answer2": "Your most frequently traveled airline in a different alliance",
+          "mc_answer3": "A different airline within the same alliance",
+          "mc_answer4": "A different airline in a different alliance",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: You should choose your Frequent Flyer airline in an alliance carefully. Although you may think it is intuitive to join the airline you fly most, you should be aware that privileges offered are often different and frequent flyer points may be more generous under a different airline in the same alliance.\nQ: According to the passage, who might offer a more frequent flyer points?\nA: Your most frequently traveled airline under the same alliance\nB: Your most frequently traveled airline in a different alliance\nC: A different airline within the same alliance\nD: A different airline in a different alliance\nAnswer:",
+            " A"
+          ],
+          [
+            "P: You should choose your Frequent Flyer airline in an alliance carefully. Although you may think it is intuitive to join the airline you fly most, you should be aware that privileges offered are often different and frequent flyer points may be more generous under a different airline in the same alliance.\nQ: According to the passage, who might offer a more frequent flyer points?\nA: Your most frequently traveled airline under the same alliance\nB: Your most frequently traveled airline in a different alliance\nC: A different airline within the same alliance\nD: A different airline in a different alliance\nAnswer:",
+            " B"
+          ],
+          [
+            "P: You should choose your Frequent Flyer airline in an alliance carefully. Although you may think it is intuitive to join the airline you fly most, you should be aware that privileges offered are often different and frequent flyer points may be more generous under a different airline in the same alliance.\nQ: According to the passage, who might offer a more frequent flyer points?\nA: Your most frequently traveled airline under the same alliance\nB: Your most frequently traveled airline in a different alliance\nC: A different airline within the same alliance\nD: A different airline in a different alliance\nAnswer:",
+            " C"
+          ],
+          [
+            "P: You should choose your Frequent Flyer airline in an alliance carefully. Although you may think it is intuitive to join the airline you fly most, you should be aware that privileges offered are often different and frequent flyer points may be more generous under a different airline in the same alliance.\nQ: According to the passage, who might offer a more frequent flyer points?\nA: Your most frequently traveled airline under the same alliance\nB: Your most frequently traveled airline in a different alliance\nC: A different airline within the same alliance\nD: A different airline in a different alliance\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.572057723999023,
+              false
+            ]
+          ],
+          [
+            [
+              -4.483865737915039,
+              false
+            ]
+          ],
+          [
+            [
+              -0.04642698913812637,
+              true
+            ]
+          ],
+          [
+            [
+              -6.387014389038086,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.572057723999023,
+            false
+          ],
+          [
+            -4.483865737915039,
+            false
+          ],
+          [
+            -0.04642698913812637,
+            true
+          ],
+          [
+            -6.387014389038086,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9b415fba8482ad5287f3365f2719e6f342801772500875e4c19785839c62e66a",
+        "prompt_hash": "6bde5a6221b7b57abb116817939606415c03b5d3b605a35fda2240fde4157200",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/National_Basketball_Association_suspends_season_due_to_COVID-19_concerns",
+          "question_number": 2,
+          "flores_passage": "On Wednesday, the United States' National Basketball Association (NBA) suspended its professional basketball season due to concerns regarding COVID-19. The NBA's decision followed a Utah Jazz player testing positive for the COVID-19 virus.",
+          "question": "According to the passage, what led to the NBA’s concerns regarding the virus?",
+          "mc_answer1": "Several players tested positive at the Utah Jazz game",
+          "mc_answer2": "A player for the Utah Jazz underperformed after testing positive",
+          "mc_answer3": "A player for the Utah Jazz tested positive",
+          "mc_answer4": "Members of the NBA had tested positive",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: On Wednesday, the United States' National Basketball Association (NBA) suspended its professional basketball season due to concerns regarding COVID-19. The NBA's decision followed a Utah Jazz player testing positive for the COVID-19 virus.\nQ: According to the passage, what led to the NBA’s concerns regarding the virus?\nA: Several players tested positive at the Utah Jazz game\nB: A player for the Utah Jazz underperformed after testing positive\nC: A player for the Utah Jazz tested positive\nD: Members of the NBA had tested positive\nAnswer:",
+            " A"
+          ],
+          [
+            "P: On Wednesday, the United States' National Basketball Association (NBA) suspended its professional basketball season due to concerns regarding COVID-19. The NBA's decision followed a Utah Jazz player testing positive for the COVID-19 virus.\nQ: According to the passage, what led to the NBA’s concerns regarding the virus?\nA: Several players tested positive at the Utah Jazz game\nB: A player for the Utah Jazz underperformed after testing positive\nC: A player for the Utah Jazz tested positive\nD: Members of the NBA had tested positive\nAnswer:",
+            " B"
+          ],
+          [
+            "P: On Wednesday, the United States' National Basketball Association (NBA) suspended its professional basketball season due to concerns regarding COVID-19. The NBA's decision followed a Utah Jazz player testing positive for the COVID-19 virus.\nQ: According to the passage, what led to the NBA’s concerns regarding the virus?\nA: Several players tested positive at the Utah Jazz game\nB: A player for the Utah Jazz underperformed after testing positive\nC: A player for the Utah Jazz tested positive\nD: Members of the NBA had tested positive\nAnswer:",
+            " C"
+          ],
+          [
+            "P: On Wednesday, the United States' National Basketball Association (NBA) suspended its professional basketball season due to concerns regarding COVID-19. The NBA's decision followed a Utah Jazz player testing positive for the COVID-19 virus.\nQ: According to the passage, what led to the NBA’s concerns regarding the virus?\nA: Several players tested positive at the Utah Jazz game\nB: A player for the Utah Jazz underperformed after testing positive\nC: A player for the Utah Jazz tested positive\nD: Members of the NBA had tested positive\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.163652420043945,
+              false
+            ]
+          ],
+          [
+            [
+              -6.54693603515625,
+              false
+            ]
+          ],
+          [
+            [
+              -0.08060663938522339,
+              true
+            ]
+          ],
+          [
+            [
+              -8.204985618591309,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.163652420043945,
+            false
+          ],
+          [
+            -6.54693603515625,
+            false
+          ],
+          [
+            -0.08060663938522339,
+            true
+          ],
+          [
+            -8.204985618591309,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "29a5c59e12b5c5047d474f2942b0b707480181c0b8b96bbd18c1f4648a672cc6",
+        "prompt_hash": "8296085c8bfa013f54d2aaf8caf722afb90495086298355599dfedfcf75a422a",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792585455.4015465,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Funeral_travel",
+          "question_number": 1,
+          "flores_passage": "Only a few airlines still offer bereavement fares, which slightly discount the cost of last-minute funeral travel. Airlines that offer these include Air Canada, Delta Air Lines, Lufthansa for flights originating from the U.S. or Canada, and WestJet. In all cases, you must book by phone directly with the airline.",
+          "question": "In which scenario are you not likely be offered a bereavement fare?",
+          "mc_answer1": "If you’re flying Lufthansa from Paris to the United States",
+          "mc_answer2": "If you’re flying Delta",
+          "mc_answer3": "If you are flying WestJet",
+          "mc_answer4": "If you try to book directly with airline instead of a third-party service",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Only a few airlines still offer bereavement fares, which slightly discount the cost of last-minute funeral travel. Airlines that offer these include Air Canada, Delta Air Lines, Lufthansa for flights originating from the U.S. or Canada, and WestJet. In all cases, you must book by phone directly with the airline.\nQ: In which scenario are you not likely be offered a bereavement fare?\nA: If you’re flying Lufthansa from Paris to the United States\nB: If you’re flying Delta\nC: If you are flying WestJet\nD: If you try to book directly with airline instead of a third-party service\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Only a few airlines still offer bereavement fares, which slightly discount the cost of last-minute funeral travel. Airlines that offer these include Air Canada, Delta Air Lines, Lufthansa for flights originating from the U.S. or Canada, and WestJet. In all cases, you must book by phone directly with the airline.\nQ: In which scenario are you not likely be offered a bereavement fare?\nA: If you’re flying Lufthansa from Paris to the United States\nB: If you’re flying Delta\nC: If you are flying WestJet\nD: If you try to book directly with airline instead of a third-party service\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Only a few airlines still offer bereavement fares, which slightly discount the cost of last-minute funeral travel. Airlines that offer these include Air Canada, Delta Air Lines, Lufthansa for flights originating from the U.S. or Canada, and WestJet. In all cases, you must book by phone directly with the airline.\nQ: In which scenario are you not likely be offered a bereavement fare?\nA: If you’re flying Lufthansa from Paris to the United States\nB: If you’re flying Delta\nC: If you are flying WestJet\nD: If you try to book directly with airline instead of a third-party service\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Only a few airlines still offer bereavement fares, which slightly discount the cost of last-minute funeral travel. Airlines that offer these include Air Canada, Delta Air Lines, Lufthansa for flights originating from the U.S. or Canada, and WestJet. In all cases, you must book by phone directly with the airline.\nQ: In which scenario are you not likely be offered a bereavement fare?\nA: If you’re flying Lufthansa from Paris to the United States\nB: If you’re flying Delta\nC: If you are flying WestJet\nD: If you try to book directly with airline instead of a third-party service\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.2384139895439148,
+              true
+            ]
+          ],
+          [
+            [
+              -5.678677558898926,
+              false
+            ]
+          ],
+          [
+            [
+              -5.1510820388793945,
+              false
+            ]
+          ],
+          [
+            [
+              -1.6573154926300049,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.2384139895439148,
+            true
+          ],
+          [
+            -5.678677558898926,
+            false
+          ],
+          [
+            -5.1510820388793945,
+            false
+          ],
+          [
+            -1.6573154926300049,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a719d94f506f93d36a14a40f61444955642d67fd7afcbb867427723a19787136",
+        "prompt_hash": "c7f88ee270c748af25173ba2398f68b996b291fae5e8aeb8cf08ee945d13a4cb",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/FAA:_Metroplex_NextGen_project_in_place_in_north_Texas",
+          "question_number": 1,
+          "flores_passage": "NextGen is a system the FAA claims would allow aircraft to fly shorter routes and save millions of gallons of fuel each year and cut carbon emissions. It uses satellite-based technology as opposed to older ground-radar-based technology to allow air traffic controllers to pinpoint aircraft with greater precision and give pilots more accurate information.",
+          "question": "What kind of technology does the NextGen system use?",
+          "mc_answer1": "Ground-radar-based technology",
+          "mc_answer2": "Carbon emissions technology",
+          "mc_answer3": "Satellite-based technology",
+          "mc_answer4": "Precision technology",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: NextGen is a system the FAA claims would allow aircraft to fly shorter routes and save millions of gallons of fuel each year and cut carbon emissions. It uses satellite-based technology as opposed to older ground-radar-based technology to allow air traffic controllers to pinpoint aircraft with greater precision and give pilots more accurate information.\nQ: What kind of technology does the NextGen system use?\nA: Ground-radar-based technology\nB: Carbon emissions technology\nC: Satellite-based technology\nD: Precision technology\nAnswer:",
+            " A"
+          ],
+          [
+            "P: NextGen is a system the FAA claims would allow aircraft to fly shorter routes and save millions of gallons of fuel each year and cut carbon emissions. It uses satellite-based technology as opposed to older ground-radar-based technology to allow air traffic controllers to pinpoint aircraft with greater precision and give pilots more accurate information.\nQ: What kind of technology does the NextGen system use?\nA: Ground-radar-based technology\nB: Carbon emissions technology\nC: Satellite-based technology\nD: Precision technology\nAnswer:",
+            " B"
+          ],
+          [
+            "P: NextGen is a system the FAA claims would allow aircraft to fly shorter routes and save millions of gallons of fuel each year and cut carbon emissions. It uses satellite-based technology as opposed to older ground-radar-based technology to allow air traffic controllers to pinpoint aircraft with greater precision and give pilots more accurate information.\nQ: What kind of technology does the NextGen system use?\nA: Ground-radar-based technology\nB: Carbon emissions technology\nC: Satellite-based technology\nD: Precision technology\nAnswer:",
+            " C"
+          ],
+          [
+            "P: NextGen is a system the FAA claims would allow aircraft to fly shorter routes and save millions of gallons of fuel each year and cut carbon emissions. It uses satellite-based technology as opposed to older ground-radar-based technology to allow air traffic controllers to pinpoint aircraft with greater precision and give pilots more accurate information.\nQ: What kind of technology does the NextGen system use?\nA: Ground-radar-based technology\nB: Carbon emissions technology\nC: Satellite-based technology\nD: Precision technology\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.563699245452881,
+              false
+            ]
+          ],
+          [
+            [
+              -7.995344638824463,
+              false
+            ]
+          ],
+          [
+            [
+              -0.02453359216451645,
+              true
+            ]
+          ],
+          [
+            [
+              -9.500374794006348,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.563699245452881,
+            false
+          ],
+          [
+            -7.995344638824463,
+            false
+          ],
+          [
+            -0.02453359216451645,
+            true
+          ],
+          [
+            -9.500374794006348,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "d596008894908bc106ccecf530c8e0af6a60c40110d86adfec67bfe586980d3e",
+        "prompt_hash": "9821bc96d5e033c22cb197fb1a51daf756ccb99081aaa27c9eef594cd78a78bf",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/The_Organ_Systems/nervous",
+          "question_number": 1,
+          "flores_passage": "The Nervous System maintains homeostasis by sending nerve impulses through out the body to keep the flow of blood going as well as undisturbed. These nerve impulses can be sent so quickly throughout the body which helps keep the body safe from any potential threat.",
+          "question": "Which of the following does not accurately describe the purpose of sending nerve impulses throughout the body?",
+          "mc_answer1": "Maintaining homeostasis",
+          "mc_answer2": "Avoiding potential bodily threats",
+          "mc_answer3": "Slowing blood flow",
+          "mc_answer4": "Managing blood flow",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The Nervous System maintains homeostasis by sending nerve impulses through out the body to keep the flow of blood going as well as undisturbed. These nerve impulses can be sent so quickly throughout the body which helps keep the body safe from any potential threat.\nQ: Which of the following does not accurately describe the purpose of sending nerve impulses throughout the body?\nA: Maintaining homeostasis\nB: Avoiding potential bodily threats\nC: Slowing blood flow\nD: Managing blood flow\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Nervous System maintains homeostasis by sending nerve impulses through out the body to keep the flow of blood going as well as undisturbed. These nerve impulses can be sent so quickly throughout the body which helps keep the body safe from any potential threat.\nQ: Which of the following does not accurately describe the purpose of sending nerve impulses throughout the body?\nA: Maintaining homeostasis\nB: Avoiding potential bodily threats\nC: Slowing blood flow\nD: Managing blood flow\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Nervous System maintains homeostasis by sending nerve impulses through out the body to keep the flow of blood going as well as undisturbed. These nerve impulses can be sent so quickly throughout the body which helps keep the body safe from any potential threat.\nQ: Which of the following does not accurately describe the purpose of sending nerve impulses throughout the body?\nA: Maintaining homeostasis\nB: Avoiding potential bodily threats\nC: Slowing blood flow\nD: Managing blood flow\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Nervous System maintains homeostasis by sending nerve impulses through out the body to keep the flow of blood going as well as undisturbed. These nerve impulses can be sent so quickly throughout the body which helps keep the body safe from any potential threat.\nQ: Which of the following does not accurately describe the purpose of sending nerve impulses throughout the body?\nA: Maintaining homeostasis\nB: Avoiding potential bodily threats\nC: Slowing blood flow\nD: Managing blood flow\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.585621356964111,
+              false
+            ]
+          ],
+          [
+            [
+              -5.902821063995361,
+              false
+            ]
+          ],
+          [
+            [
+              -0.023331165313720703,
+              true
+            ]
+          ],
+          [
+            [
+              -8.790327072143555,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.585621356964111,
+            false
+          ],
+          [
+            -5.902821063995361,
+            false
+          ],
+          [
+            -0.023331165313720703,
+            true
+          ],
+          [
+            -8.790327072143555,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f2564c98f089ddd994ff9aebb02654092c429f2b87083518621e1b7f73aae968",
+        "prompt_hash": "dc56f7ec8f589d7dd8f179a865d9841affc354a6f30537bea54b5757e717154d",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Doctor_to_be_charged_after_mother%27s_death_in_Ohio",
+          "question_number": 1,
+          "flores_passage": "A doctor who worked at Children's Hospital of Pittsburgh, Pennsylvania will be charged with aggravated murder after her mother was found dead in the trunk of her car Wednesday, authorities in Ohio say. Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state. She directed officers to her black Oldsmobile Intrigue which was 500 feet away. There, they found the body of Saroja Balasubramanian, 53, covered with blood-stained blankets. Police said that the body appeared to have been there for about a day.",
+          "question": "How was Dr. Malar Balasubramanian related to Saroja Balasubramanian?",
+          "mc_answer1": "Mother",
+          "mc_answer2": "Aunt",
+          "mc_answer3": "Sister",
+          "mc_answer4": "Daughter",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: A doctor who worked at Children's Hospital of Pittsburgh, Pennsylvania will be charged with aggravated murder after her mother was found dead in the trunk of her car Wednesday, authorities in Ohio say. Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state. She directed officers to her black Oldsmobile Intrigue which was 500 feet away. There, they found the body of Saroja Balasubramanian, 53, covered with blood-stained blankets. Police said that the body appeared to have been there for about a day.\nQ: How was Dr. Malar Balasubramanian related to Saroja Balasubramanian?\nA: Mother\nB: Aunt\nC: Sister\nD: Daughter\nAnswer:",
+            " A"
+          ],
+          [
+            "P: A doctor who worked at Children's Hospital of Pittsburgh, Pennsylvania will be charged with aggravated murder after her mother was found dead in the trunk of her car Wednesday, authorities in Ohio say. Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state. She directed officers to her black Oldsmobile Intrigue which was 500 feet away. There, they found the body of Saroja Balasubramanian, 53, covered with blood-stained blankets. Police said that the body appeared to have been there for about a day.\nQ: How was Dr. Malar Balasubramanian related to Saroja Balasubramanian?\nA: Mother\nB: Aunt\nC: Sister\nD: Daughter\nAnswer:",
+            " B"
+          ],
+          [
+            "P: A doctor who worked at Children's Hospital of Pittsburgh, Pennsylvania will be charged with aggravated murder after her mother was found dead in the trunk of her car Wednesday, authorities in Ohio say. Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state. She directed officers to her black Oldsmobile Intrigue which was 500 feet away. There, they found the body of Saroja Balasubramanian, 53, covered with blood-stained blankets. Police said that the body appeared to have been there for about a day.\nQ: How was Dr. Malar Balasubramanian related to Saroja Balasubramanian?\nA: Mother\nB: Aunt\nC: Sister\nD: Daughter\nAnswer:",
+            " C"
+          ],
+          [
+            "P: A doctor who worked at Children's Hospital of Pittsburgh, Pennsylvania will be charged with aggravated murder after her mother was found dead in the trunk of her car Wednesday, authorities in Ohio say. Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state. She directed officers to her black Oldsmobile Intrigue which was 500 feet away. There, they found the body of Saroja Balasubramanian, 53, covered with blood-stained blankets. Police said that the body appeared to have been there for about a day.\nQ: How was Dr. Malar Balasubramanian related to Saroja Balasubramanian?\nA: Mother\nB: Aunt\nC: Sister\nD: Daughter\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.7185975313186646,
+              true
+            ]
+          ],
+          [
+            [
+              -7.076035499572754,
+              false
+            ]
+          ],
+          [
+            [
+              -4.722148895263672,
+              false
+            ]
+          ],
+          [
+            [
+              -0.7372933626174927,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.7185975313186646,
+            true
+          ],
+          [
+            -7.076035499572754,
+            false
+          ],
+          [
+            -4.722148895263672,
+            false
+          ],
+          [
+            -0.7372933626174927,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "e4a676c9b63c83b971bf3b546beef91bc629aa7350e58d8a5965a6f32390b2cf",
+        "prompt_hash": "f981b3793757bacffef0a92ba083bd99e4bbf86ec7ee07579aee5f55dae4723e",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Angkor_Archaeological_Park",
+          "question_number": 1,
+          "flores_passage": "Phnom Krom, 12 km southwest of Siem Reap. This hilltop temple was built at the end of the 9th century, during the reign of King Yasovarman. The gloomy atmosphere of the temple and the view over the Tonle Sap lake make the climb to the hill worthwhile. A visit to the site can be conveniently combined with a boat trip to the lake. The Angkor Pass is needed to enter the temple so do not forget to bring your passport along when heading to Tonle Sap.",
+          "question": "According to the passage, which of the following makes a visit to Phnom Krom worthwhile?",
+          "mc_answer1": "Seeing Siem Reap",
+          "mc_answer2": "The boat trip to the lake",
+          "mc_answer3": "The view over Tonle Sap",
+          "mc_answer4": "Traveling through the Angkor Pass",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Phnom Krom, 12 km southwest of Siem Reap. This hilltop temple was built at the end of the 9th century, during the reign of King Yasovarman. The gloomy atmosphere of the temple and the view over the Tonle Sap lake make the climb to the hill worthwhile. A visit to the site can be conveniently combined with a boat trip to the lake. The Angkor Pass is needed to enter the temple so do not forget to bring your passport along when heading to Tonle Sap.\nQ: According to the passage, which of the following makes a visit to Phnom Krom worthwhile?\nA: Seeing Siem Reap\nB: The boat trip to the lake\nC: The view over Tonle Sap\nD: Traveling through the Angkor Pass\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Phnom Krom, 12 km southwest of Siem Reap. This hilltop temple was built at the end of the 9th century, during the reign of King Yasovarman. The gloomy atmosphere of the temple and the view over the Tonle Sap lake make the climb to the hill worthwhile. A visit to the site can be conveniently combined with a boat trip to the lake. The Angkor Pass is needed to enter the temple so do not forget to bring your passport along when heading to Tonle Sap.\nQ: According to the passage, which of the following makes a visit to Phnom Krom worthwhile?\nA: Seeing Siem Reap\nB: The boat trip to the lake\nC: The view over Tonle Sap\nD: Traveling through the Angkor Pass\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Phnom Krom, 12 km southwest of Siem Reap. This hilltop temple was built at the end of the 9th century, during the reign of King Yasovarman. The gloomy atmosphere of the temple and the view over the Tonle Sap lake make the climb to the hill worthwhile. A visit to the site can be conveniently combined with a boat trip to the lake. The Angkor Pass is needed to enter the temple so do not forget to bring your passport along when heading to Tonle Sap.\nQ: According to the passage, which of the following makes a visit to Phnom Krom worthwhile?\nA: Seeing Siem Reap\nB: The boat trip to the lake\nC: The view over Tonle Sap\nD: Traveling through the Angkor Pass\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Phnom Krom, 12 km southwest of Siem Reap. This hilltop temple was built at the end of the 9th century, during the reign of King Yasovarman. The gloomy atmosphere of the temple and the view over the Tonle Sap lake make the climb to the hill worthwhile. A visit to the site can be conveniently combined with a boat trip to the lake. The Angkor Pass is needed to enter the temple so do not forget to bring your passport along when heading to Tonle Sap.\nQ: According to the passage, which of the following makes a visit to Phnom Krom worthwhile?\nA: Seeing Siem Reap\nB: The boat trip to the lake\nC: The view over Tonle Sap\nD: Traveling through the Angkor Pass\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.344645023345947,
+              false
+            ]
+          ],
+          [
+            [
+              -5.954739093780518,
+              false
+            ]
+          ],
+          [
+            [
+              -0.04734857380390167,
+              true
+            ]
+          ],
+          [
+            [
+              -7.483358860015869,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.344645023345947,
+            false
+          ],
+          [
+            -5.954739093780518,
+            false
+          ],
+          [
+            -0.04734857380390167,
+            true
+          ],
+          [
+            -7.483358860015869,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "83d8ad0e96a7217e30b5dec159498aa5bfe703098031969c77f6890e5c90cab0",
+        "prompt_hash": "4311526ad4f89ddfe78014f69e6fe5c74f53c6044fb994f4b88fffb6b64eaec8",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792568651.4302428,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

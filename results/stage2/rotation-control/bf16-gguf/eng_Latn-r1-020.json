@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Thimphu",
+          "question_number": 1,
+          "flores_passage": "Buses depart the inter-district bus station (across the river) throughout the day, though most, especially those heading to the east and Jakar/Bumthang leave between 06:30 and 07:30. As the inter-district buses are often full, it is advisable to purchase a ticket a few days in advance. Most districts are served by small Japanese Coaster Buses, which are comfortable and sturdy. Shared taxis are a quick and comfortable means to travel to nearby places, such as Paro (Nu 150) and Punakha (Nu 200).",
+          "question": "According to the passage, which scenario would be ideal for a traveler planning to take a bus from the inter-district station?",
+          "mc_answer1": "The traveler is heading to Bumthang and needs to leave by 7",
+          "mc_answer2": "The traveler is heading to Paro and needs to leave after  11",
+          "mc_answer3": "The traveler is heading east and arrives at the station before 6:20",
+          "mc_answer4": "The traveler is heading to Jakar and has already purchased a ticket prior",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Buses depart the inter-district bus station (across the river) throughout the day, though most, especially those heading to the east and Jakar/Bumthang leave between 06:30 and 07:30. As the inter-district buses are often full, it is advisable to purchase a ticket a few days in advance. Most districts are served by small Japanese Coaster Buses, which are comfortable and sturdy. Shared taxis are a quick and comfortable means to travel to nearby places, such as Paro (Nu 150) and Punakha (Nu 200).\nQ: According to the passage, which scenario would be ideal for a traveler planning to take a bus from the inter-district station?\nA: The traveler is heading to Bumthang and needs to leave by 7\nB: The traveler is heading to Paro and needs to leave after  11\nC: The traveler is heading east and arrives at the station before 6:20\nD: The traveler is heading to Jakar and has already purchased a ticket prior\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Buses depart the inter-district bus station (across the river) throughout the day, though most, especially those heading to the east and Jakar/Bumthang leave between 06:30 and 07:30. As the inter-district buses are often full, it is advisable to purchase a ticket a few days in advance. Most districts are served by small Japanese Coaster Buses, which are comfortable and sturdy. Shared taxis are a quick and comfortable means to travel to nearby places, such as Paro (Nu 150) and Punakha (Nu 200).\nQ: According to the passage, which scenario would be ideal for a traveler planning to take a bus from the inter-district station?\nA: The traveler is heading to Bumthang and needs to leave by 7\nB: The traveler is heading to Paro and needs to leave after  11\nC: The traveler is heading east and arrives at the station before 6:20\nD: The traveler is heading to Jakar and has already purchased a ticket prior\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Buses depart the inter-district bus station (across the river) throughout the day, though most, especially those heading to the east and Jakar/Bumthang leave between 06:30 and 07:30. As the inter-district buses are often full, it is advisable to purchase a ticket a few days in advance. Most districts are served by small Japanese Coaster Buses, which are comfortable and sturdy. Shared taxis are a quick and comfortable means to travel to nearby places, such as Paro (Nu 150) and Punakha (Nu 200).\nQ: According to the passage, which scenario would be ideal for a traveler planning to take a bus from the inter-district station?\nA: The traveler is heading to Bumthang and needs to leave by 7\nB: The traveler is heading to Paro and needs to leave after  11\nC: The traveler is heading east and arrives at the station before 6:20\nD: The traveler is heading to Jakar and has already purchased a ticket prior\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Buses depart the inter-district bus station (across the river) throughout the day, though most, especially those heading to the east and Jakar/Bumthang leave between 06:30 and 07:30. As the inter-district buses are often full, it is advisable to purchase a ticket a few days in advance. Most districts are served by small Japanese Coaster Buses, which are comfortable and sturdy. Shared taxis are a quick and comfortable means to travel to nearby places, such as Paro (Nu 150) and Punakha (Nu 200).\nQ: According to the passage, which scenario would be ideal for a traveler planning to take a bus from the inter-district station?\nA: The traveler is heading to Bumthang and needs to leave by 7\nB: The traveler is heading to Paro and needs to leave after  11\nC: The traveler is heading east and arrives at the station before 6:20\nD: The traveler is heading to Jakar and has already purchased a ticket prior\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.6938722133636475,
+              false
+            ]
+          ],
+          [
+            [
+              -4.231843948364258,
+              false
+            ]
+          ],
+          [
+            [
+              -2.75400710105896,
+              false
+            ]
+          ],
+          [
+            [
+              -0.427448034286499,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.6938722133636475,
+            false
+          ],
+          [
+            -4.231843948364258,
+            false
+          ],
+          [
+            -2.75400710105896,
+            false
+          ],
+          [
+            -0.427448034286499,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "7374a7c207bea75d979ca990cdfc8dfb28ee3d0d78e3d76ec77238a2e2800f13",
+        "prompt_hash": "5959086f32e888051643bba2110da85c1ebc861734b680c249e94bc09d04ee62",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Funeral_of_Pope_John_Paul_II_takes_place",
+          "question_number": 2,
+          "flores_passage": "Over four million people went to Rome to attend the funeral. The number of people present was so large that it was not possible for everybody to gain access to the funeral in St. Peter's Square. Several large television screens were installed in various places in Rome to let the people watch the ceremony. In many other cities of Italy and in the rest of the world, particularly in Poland, similar setups were made, which were viewed by a great number of people.",
+          "question": "Where was the funeral ceremony held?",
+          "mc_answer1": "In Poland",
+          "mc_answer2": "In St. Peter’s Square",
+          "mc_answer3": "First in Rome, then in another Italian city",
+          "mc_answer4": "In various locations throughout Rome",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Over four million people went to Rome to attend the funeral. The number of people present was so large that it was not possible for everybody to gain access to the funeral in St. Peter's Square. Several large television screens were installed in various places in Rome to let the people watch the ceremony. In many other cities of Italy and in the rest of the world, particularly in Poland, similar setups were made, which were viewed by a great number of people.\nQ: Where was the funeral ceremony held?\nA: In Poland\nB: In St. Peter’s Square\nC: First in Rome, then in another Italian city\nD: In various locations throughout Rome\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Over four million people went to Rome to attend the funeral. The number of people present was so large that it was not possible for everybody to gain access to the funeral in St. Peter's Square. Several large television screens were installed in various places in Rome to let the people watch the ceremony. In many other cities of Italy and in the rest of the world, particularly in Poland, similar setups were made, which were viewed by a great number of people.\nQ: Where was the funeral ceremony held?\nA: In Poland\nB: In St. Peter’s Square\nC: First in Rome, then in another Italian city\nD: In various locations throughout Rome\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Over four million people went to Rome to attend the funeral. The number of people present was so large that it was not possible for everybody to gain access to the funeral in St. Peter's Square. Several large television screens were installed in various places in Rome to let the people watch the ceremony. In many other cities of Italy and in the rest of the world, particularly in Poland, similar setups were made, which were viewed by a great number of people.\nQ: Where was the funeral ceremony held?\nA: In Poland\nB: In St. Peter’s Square\nC: First in Rome, then in another Italian city\nD: In various locations throughout Rome\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Over four million people went to Rome to attend the funeral. The number of people present was so large that it was not possible for everybody to gain access to the funeral in St. Peter's Square. Several large television screens were installed in various places in Rome to let the people watch the ceremony. In many other cities of Italy and in the rest of the world, particularly in Poland, similar setups were made, which were viewed by a great number of people.\nQ: Where was the funeral ceremony held?\nA: In Poland\nB: In St. Peter’s Square\nC: First in Rome, then in another Italian city\nD: In various locations throughout Rome\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.4081902503967285,
+              false
+            ]
+          ],
+          [
+            [
+              -0.18056169152259827,
+              true
+            ]
+          ],
+          [
+            [
+              -2.5097320079803467,
+              false
+            ]
+          ],
+          [
+            [
+              -4.4247002601623535,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.4081902503967285,
+            false
+          ],
+          [
+            -0.18056169152259827,
+            true
+          ],
+          [
+            -2.5097320079803467,
+            false
+          ],
+          [
+            -4.4247002601623535,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "badfdb20ecb01cdcf8ce26dcaf354b1ec4e0dbd4ab18262adf0024c8b4522183",
+        "prompt_hash": "9a6b6caafc95bc572ff122dad3d65e69d7b448cc7bcc84d0da8bec36ca0d18aa",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Scientists_say_new_medical_diagnostic_chip_can_sort_cells_anywhere_with_an_inkjet",
+          "question_number": 2,
+          "flores_passage": "On Monday, scientists from the Stanford University School of Medicine announced the invention of a new diagnostic tool that can sort cells by type: a tiny printable chip that can be manufactured using standard inkjet printers for possibly about one U.S. cent each. Lead researchers say this may bring early detection of cancer, tuberculosis, HIV and malaria to patients in low-income countries, where the survival rates for illnesses such as breast cancer can be half those of richer countries.",
+          "question": "What method will be used to construct the diagnostic tool?",
+          "mc_answer1": "Standard inkjet printers",
+          "mc_answer2": "Printable chips",
+          "mc_answer3": "Other diagnostic tools",
+          "mc_answer4": "One U.S. cent each",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: On Monday, scientists from the Stanford University School of Medicine announced the invention of a new diagnostic tool that can sort cells by type: a tiny printable chip that can be manufactured using standard inkjet printers for possibly about one U.S. cent each. Lead researchers say this may bring early detection of cancer, tuberculosis, HIV and malaria to patients in low-income countries, where the survival rates for illnesses such as breast cancer can be half those of richer countries.\nQ: What method will be used to construct the diagnostic tool?\nA: Standard inkjet printers\nB: Printable chips\nC: Other diagnostic tools\nD: One U.S. cent each\nAnswer:",
+            " A"
+          ],
+          [
+            "P: On Monday, scientists from the Stanford University School of Medicine announced the invention of a new diagnostic tool that can sort cells by type: a tiny printable chip that can be manufactured using standard inkjet printers for possibly about one U.S. cent each. Lead researchers say this may bring early detection of cancer, tuberculosis, HIV and malaria to patients in low-income countries, where the survival rates for illnesses such as breast cancer can be half those of richer countries.\nQ: What method will be used to construct the diagnostic tool?\nA: Standard inkjet printers\nB: Printable chips\nC: Other diagnostic tools\nD: One U.S. cent each\nAnswer:",
+            " B"
+          ],
+          [
+            "P: On Monday, scientists from the Stanford University School of Medicine announced the invention of a new diagnostic tool that can sort cells by type: a tiny printable chip that can be manufactured using standard inkjet printers for possibly about one U.S. cent each. Lead researchers say this may bring early detection of cancer, tuberculosis, HIV and malaria to patients in low-income countries, where the survival rates for illnesses such as breast cancer can be half those of richer countries.\nQ: What method will be used to construct the diagnostic tool?\nA: Standard inkjet printers\nB: Printable chips\nC: Other diagnostic tools\nD: One U.S. cent each\nAnswer:",
+            " C"
+          ],
+          [
+            "P: On Monday, scientists from the Stanford University School of Medicine announced the invention of a new diagnostic tool that can sort cells by type: a tiny printable chip that can be manufactured using standard inkjet printers for possibly about one U.S. cent each. Lead researchers say this may bring early detection of cancer, tuberculosis, HIV and malaria to patients in low-income countries, where the survival rates for illnesses such as breast cancer can be half those of richer countries.\nQ: What method will be used to construct the diagnostic tool?\nA: Standard inkjet printers\nB: Printable chips\nC: Other diagnostic tools\nD: One U.S. cent each\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.014061778783798218,
+              true
+            ]
+          ],
+          [
+            [
+              -4.498105049133301,
+              false
+            ]
+          ],
+          [
+            [
+              -8.525912284851074,
+              false
+            ]
+          ],
+          [
+            [
+              -7.718972206115723,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.014061778783798218,
+            true
+          ],
+          [
+            -4.498105049133301,
+            false
+          ],
+          [
+            -8.525912284851074,
+            false
+          ],
+          [
+            -7.718972206115723,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "6523138736d4b447417208dd5368d9f3f1452565a58901d5711d4662a4fd4c41",
+        "prompt_hash": "67a9501549971f3244e751ea7ea3de6f9dce82dacfec62dbc01c21af74f05337",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Space_station_crew_perform_successful_spacewalk",
+          "question_number": 1,
+          "flores_passage": "The station maintained its attitude, despite the loss of a gyroscope earlier in the space station mission, until the end of the spacewalk. Chiao and Sharipov reported being a safe distance from the attitude adjustment thrusters. Russian ground control activated the jets and normal attitude of the station was regained.",
+          "question": "Which of the following did the space station have trouble with during the mission?",
+          "mc_answer1": "Keeping a gyroscope",
+          "mc_answer2": "Jet activation",
+          "mc_answer3": "Regaining normal attitude",
+          "mc_answer4": "Maintaining the right distance from the thrusters",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The station maintained its attitude, despite the loss of a gyroscope earlier in the space station mission, until the end of the spacewalk. Chiao and Sharipov reported being a safe distance from the attitude adjustment thrusters. Russian ground control activated the jets and normal attitude of the station was regained.\nQ: Which of the following did the space station have trouble with during the mission?\nA: Keeping a gyroscope\nB: Jet activation\nC: Regaining normal attitude\nD: Maintaining the right distance from the thrusters\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The station maintained its attitude, despite the loss of a gyroscope earlier in the space station mission, until the end of the spacewalk. Chiao and Sharipov reported being a safe distance from the attitude adjustment thrusters. Russian ground control activated the jets and normal attitude of the station was regained.\nQ: Which of the following did the space station have trouble with during the mission?\nA: Keeping a gyroscope\nB: Jet activation\nC: Regaining normal attitude\nD: Maintaining the right distance from the thrusters\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The station maintained its attitude, despite the loss of a gyroscope earlier in the space station mission, until the end of the spacewalk. Chiao and Sharipov reported being a safe distance from the attitude adjustment thrusters. Russian ground control activated the jets and normal attitude of the station was regained.\nQ: Which of the following did the space station have trouble with during the mission?\nA: Keeping a gyroscope\nB: Jet activation\nC: Regaining normal attitude\nD: Maintaining the right distance from the thrusters\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The station maintained its attitude, despite the loss of a gyroscope earlier in the space station mission, until the end of the spacewalk. Chiao and Sharipov reported being a safe distance from the attitude adjustment thrusters. Russian ground control activated the jets and normal attitude of the station was regained.\nQ: Which of the following did the space station have trouble with during the mission?\nA: Keeping a gyroscope\nB: Jet activation\nC: Regaining normal attitude\nD: Maintaining the right distance from the thrusters\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.005592415574938059,
+              true
+            ]
+          ],
+          [
+            [
+              -6.394155502319336,
+              false
+            ]
+          ],
+          [
+            [
+              -7.345449447631836,
+              false
+            ]
+          ],
+          [
+            [
+              -7.267313003540039,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.005592415574938059,
+            true
+          ],
+          [
+            -6.394155502319336,
+            false
+          ],
+          [
+            -7.345449447631836,
+            false
+          ],
+          [
+            -7.267313003540039,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f70d40df54b5a1b4f69e5c05936dafe7dadedf3769368fa95a27f3ab65e5301b",
+        "prompt_hash": "6a01a53b19af79fac94ea4dedda42651a503b09b5dcd19be06e8b09d1e07e2c3",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Round_the_world_flights",
+          "question_number": 1,
+          "flores_passage": "If you want to fly around the world completely in the Southern Hemisphere, the choice of flights and destinations is limited due to the lack of transoceanic routes. No airline alliance covers all three ocean crossings in the Southern Hemisphere (and SkyTeam covers none of the crossings). However, Star Alliance covers everything except the eastern South Pacific from Santiago de Chile to Tahiti, which is a LATAM Oneworld flight. This flight is not the only option if you want to skip the South Pacific and the west coast of South America. (see below)",
+          "question": "Based on the information given in the passage, who covers the most crossings in the Southern Hemisphere?",
+          "mc_answer1": "Star Alliance",
+          "mc_answer2": "South Pacific",
+          "mc_answer3": "LATAM Oneworld",
+          "mc_answer4": "SkyTeam",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: If you want to fly around the world completely in the Southern Hemisphere, the choice of flights and destinations is limited due to the lack of transoceanic routes. No airline alliance covers all three ocean crossings in the Southern Hemisphere (and SkyTeam covers none of the crossings). However, Star Alliance covers everything except the eastern South Pacific from Santiago de Chile to Tahiti, which is a LATAM Oneworld flight. This flight is not the only option if you want to skip the South Pacific and the west coast of South America. (see below)\nQ: Based on the information given in the passage, who covers the most crossings in the Southern Hemisphere?\nA: Star Alliance\nB: South Pacific\nC: LATAM Oneworld\nD: SkyTeam\nAnswer:",
+            " A"
+          ],
+          [
+            "P: If you want to fly around the world completely in the Southern Hemisphere, the choice of flights and destinations is limited due to the lack of transoceanic routes. No airline alliance covers all three ocean crossings in the Southern Hemisphere (and SkyTeam covers none of the crossings). However, Star Alliance covers everything except the eastern South Pacific from Santiago de Chile to Tahiti, which is a LATAM Oneworld flight. This flight is not the only option if you want to skip the South Pacific and the west coast of South America. (see below)\nQ: Based on the information given in the passage, who covers the most crossings in the Southern Hemisphere?\nA: Star Alliance\nB: South Pacific\nC: LATAM Oneworld\nD: SkyTeam\nAnswer:",
+            " B"
+          ],
+          [
+            "P: If you want to fly around the world completely in the Southern Hemisphere, the choice of flights and destinations is limited due to the lack of transoceanic routes. No airline alliance covers all three ocean crossings in the Southern Hemisphere (and SkyTeam covers none of the crossings). However, Star Alliance covers everything except the eastern South Pacific from Santiago de Chile to Tahiti, which is a LATAM Oneworld flight. This flight is not the only option if you want to skip the South Pacific and the west coast of South America. (see below)\nQ: Based on the information given in the passage, who covers the most crossings in the Southern Hemisphere?\nA: Star Alliance\nB: South Pacific\nC: LATAM Oneworld\nD: SkyTeam\nAnswer:",
+            " C"
+          ],
+          [
+            "P: If you want to fly around the world completely in the Southern Hemisphere, the choice of flights and destinations is limited due to the lack of transoceanic routes. No airline alliance covers all three ocean crossings in the Southern Hemisphere (and SkyTeam covers none of the crossings). However, Star Alliance covers everything except the eastern South Pacific from Santiago de Chile to Tahiti, which is a LATAM Oneworld flight. This flight is not the only option if you want to skip the South Pacific and the west coast of South America. (see below)\nQ: Based on the information given in the passage, who covers the most crossings in the Southern Hemisphere?\nA: Star Alliance\nB: South Pacific\nC: LATAM Oneworld\nD: SkyTeam\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.03659830242395401,
+              true
+            ]
+          ],
+          [
+            [
+              -7.482256889343262,
+              false
+            ]
+          ],
+          [
+            [
+              -6.109979629516602,
+              false
+            ]
+          ],
+          [
+            [
+              -3.6297760009765625,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.03659830242395401,
+            true
+          ],
+          [
+            -7.482256889343262,
+            false
+          ],
+          [
+            -6.109979629516602,
+            false
+          ],
+          [
+            -3.6297760009765625,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "170e6a421d8bf0bd7eed3f58821f79d7df91a36b85436eb43aea9808b8e4cdbb",
+        "prompt_hash": "a5c4d031880aafda397707a597fcc1b0bc4f26e4de91a634816577e85bd816f5",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792567265.0493338,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

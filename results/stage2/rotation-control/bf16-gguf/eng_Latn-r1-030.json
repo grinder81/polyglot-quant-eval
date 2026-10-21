@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.4,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.4,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Salar_de_Uyuni",
+          "question_number": 1,
+          "flores_passage": "Tours are cheaper for larger groups, so if you're by yourself or with just one friend, try to meet other people and form a group of four to six for a better per-person rate. However, this shouldn't really be off your concern, because often tourists are shuffled around to fill the cars. It seems actually to be more a way of tricking people into believing they have to pay more.",
+          "question": "According to the passage, what would lower the cost of a tour?",
+          "mc_answer1": "Finding a group of four",
+          "mc_answer2": "Going with one other person",
+          "mc_answer3": "Finding a group of six or more",
+          "mc_answer4": "Going by yourself ",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Tours are cheaper for larger groups, so if you're by yourself or with just one friend, try to meet other people and form a group of four to six for a better per-person rate. However, this shouldn't really be off your concern, because often tourists are shuffled around to fill the cars. It seems actually to be more a way of tricking people into believing they have to pay more.\nQ: According to the passage, what would lower the cost of a tour?\nA: Finding a group of four\nB: Going with one other person\nC: Finding a group of six or more\nD: Going by yourself \nAnswer:",
+            " A"
+          ],
+          [
+            "P: Tours are cheaper for larger groups, so if you're by yourself or with just one friend, try to meet other people and form a group of four to six for a better per-person rate. However, this shouldn't really be off your concern, because often tourists are shuffled around to fill the cars. It seems actually to be more a way of tricking people into believing they have to pay more.\nQ: According to the passage, what would lower the cost of a tour?\nA: Finding a group of four\nB: Going with one other person\nC: Finding a group of six or more\nD: Going by yourself \nAnswer:",
+            " B"
+          ],
+          [
+            "P: Tours are cheaper for larger groups, so if you're by yourself or with just one friend, try to meet other people and form a group of four to six for a better per-person rate. However, this shouldn't really be off your concern, because often tourists are shuffled around to fill the cars. It seems actually to be more a way of tricking people into believing they have to pay more.\nQ: According to the passage, what would lower the cost of a tour?\nA: Finding a group of four\nB: Going with one other person\nC: Finding a group of six or more\nD: Going by yourself \nAnswer:",
+            " C"
+          ],
+          [
+            "P: Tours are cheaper for larger groups, so if you're by yourself or with just one friend, try to meet other people and form a group of four to six for a better per-person rate. However, this shouldn't really be off your concern, because often tourists are shuffled around to fill the cars. It seems actually to be more a way of tricking people into believing they have to pay more.\nQ: According to the passage, what would lower the cost of a tour?\nA: Finding a group of four\nB: Going with one other person\nC: Finding a group of six or more\nD: Going by yourself \nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.031733274459839,
+              false
+            ]
+          ],
+          [
+            [
+              -4.651825428009033,
+              false
+            ]
+          ],
+          [
+            [
+              -0.18355247378349304,
+              true
+            ]
+          ],
+          [
+            [
+              -5.637646198272705,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.031733274459839,
+            false
+          ],
+          [
+            -4.651825428009033,
+            false
+          ],
+          [
+            -0.18355247378349304,
+            true
+          ],
+          [
+            -5.637646198272705,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "35546f36e8ab009847abb2ef0bec1b789feed391ee2d659dcfe7ab341e0ce9e0",
+        "prompt_hash": "bf9a6e632765bca65a5e08f79618c552eb62dfb8db19c1e9cb1fab2317cd8077",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Languages/Hindi",
+          "question_number": 1,
+          "flores_passage": "There are varying estimates for how many people speak Hindi. It is estimated to be between the second and fourth most commonly spoken language in the world. The number of native speakers varies depending on whether or not very closely related dialects are counted. Estimates range from 340 million to 500 million speakers, and as many as 800 million people can understand the language. Hindi and Urdu are similar in vocabulary but different in script; in everyday conversations, speakers of both languages can usually understand each other.",
+          "question": "According to the passage, the number of native Hindi speakers fluctuates based on which factor?",
+          "mc_answer1": "If Urdu speakers are being counted",
+          "mc_answer2": "If people who can understand the language are being counted",
+          "mc_answer3": "If people who can read the language are being counted",
+          "mc_answer4": "If dialects very similar to Hindi are being counted",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: There are varying estimates for how many people speak Hindi. It is estimated to be between the second and fourth most commonly spoken language in the world. The number of native speakers varies depending on whether or not very closely related dialects are counted. Estimates range from 340 million to 500 million speakers, and as many as 800 million people can understand the language. Hindi and Urdu are similar in vocabulary but different in script; in everyday conversations, speakers of both languages can usually understand each other.\nQ: According to the passage, the number of native Hindi speakers fluctuates based on which factor?\nA: If Urdu speakers are being counted\nB: If people who can understand the language are being counted\nC: If people who can read the language are being counted\nD: If dialects very similar to Hindi are being counted\nAnswer:",
+            " A"
+          ],
+          [
+            "P: There are varying estimates for how many people speak Hindi. It is estimated to be between the second and fourth most commonly spoken language in the world. The number of native speakers varies depending on whether or not very closely related dialects are counted. Estimates range from 340 million to 500 million speakers, and as many as 800 million people can understand the language. Hindi and Urdu are similar in vocabulary but different in script; in everyday conversations, speakers of both languages can usually understand each other.\nQ: According to the passage, the number of native Hindi speakers fluctuates based on which factor?\nA: If Urdu speakers are being counted\nB: If people who can understand the language are being counted\nC: If people who can read the language are being counted\nD: If dialects very similar to Hindi are being counted\nAnswer:",
+            " B"
+          ],
+          [
+            "P: There are varying estimates for how many people speak Hindi. It is estimated to be between the second and fourth most commonly spoken language in the world. The number of native speakers varies depending on whether or not very closely related dialects are counted. Estimates range from 340 million to 500 million speakers, and as many as 800 million people can understand the language. Hindi and Urdu are similar in vocabulary but different in script; in everyday conversations, speakers of both languages can usually understand each other.\nQ: According to the passage, the number of native Hindi speakers fluctuates based on which factor?\nA: If Urdu speakers are being counted\nB: If people who can understand the language are being counted\nC: If people who can read the language are being counted\nD: If dialects very similar to Hindi are being counted\nAnswer:",
+            " C"
+          ],
+          [
+            "P: There are varying estimates for how many people speak Hindi. It is estimated to be between the second and fourth most commonly spoken language in the world. The number of native speakers varies depending on whether or not very closely related dialects are counted. Estimates range from 340 million to 500 million speakers, and as many as 800 million people can understand the language. Hindi and Urdu are similar in vocabulary but different in script; in everyday conversations, speakers of both languages can usually understand each other.\nQ: According to the passage, the number of native Hindi speakers fluctuates based on which factor?\nA: If Urdu speakers are being counted\nB: If people who can understand the language are being counted\nC: If people who can read the language are being counted\nD: If dialects very similar to Hindi are being counted\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.4635603427886963,
+              false
+            ]
+          ],
+          [
+            [
+              -4.427703857421875,
+              false
+            ]
+          ],
+          [
+            [
+              -5.120145797729492,
+              false
+            ]
+          ],
+          [
+            [
+              -0.1267777979373932,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.4635603427886963,
+            false
+          ],
+          [
+            -4.427703857421875,
+            false
+          ],
+          [
+            -5.120145797729492,
+            false
+          ],
+          [
+            -0.1267777979373932,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "229345a4a56ec2f14fb4b47dedcd1d5b512cdbae17e1bfb7c451d2ec6023e7cd",
+        "prompt_hash": "c77b49d025fa2d5ee94ffa246e8a6e3eb51965dccee1e92ce0b61086db9b73b0",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Cognitive_Psychology_and_Cognitive_Neuroscience/Behavioural_and_Neuroscience_Methods",
+          "question_number": 2,
+          "flores_passage": "MRI is based on a physics phenomenon called nuclear magnetic resonance (NMR), which was discovered in the 1930s by Felix Bloch (working at Stanford University) and Edward Purcell (from Harvard University). In this resonance, magnetic field and radio waves cause atoms to give off tiny radio signals. In the year 1970, Raymond Damadian, a medical doctor and research scientist, discovered the basis for using magnetic resonance imaging as a tool for medical diagnosis. Four years later a patent was granted, which was the world's first patent issued in the field of MRI. In 1977, Dr. Damadian completed the construction of the first “whole-body” MRI scanner, which he called the ”Indomitable”.",
+          "question": "In what year was the first patent granted for medical imaging resonance? ",
+          "mc_answer1": "1974",
+          "mc_answer2": "1930",
+          "mc_answer3": "1970",
+          "mc_answer4": "1977",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: MRI is based on a physics phenomenon called nuclear magnetic resonance (NMR), which was discovered in the 1930s by Felix Bloch (working at Stanford University) and Edward Purcell (from Harvard University). In this resonance, magnetic field and radio waves cause atoms to give off tiny radio signals. In the year 1970, Raymond Damadian, a medical doctor and research scientist, discovered the basis for using magnetic resonance imaging as a tool for medical diagnosis. Four years later a patent was granted, which was the world's first patent issued in the field of MRI. In 1977, Dr. Damadian completed the construction of the first “whole-body” MRI scanner, which he called the ”Indomitable”.\nQ: In what year was the first patent granted for medical imaging resonance?\nA: 1974\nB: 1930\nC: 1970\nD: 1977\nAnswer:",
+            " A"
+          ],
+          [
+            "P: MRI is based on a physics phenomenon called nuclear magnetic resonance (NMR), which was discovered in the 1930s by Felix Bloch (working at Stanford University) and Edward Purcell (from Harvard University). In this resonance, magnetic field and radio waves cause atoms to give off tiny radio signals. In the year 1970, Raymond Damadian, a medical doctor and research scientist, discovered the basis for using magnetic resonance imaging as a tool for medical diagnosis. Four years later a patent was granted, which was the world's first patent issued in the field of MRI. In 1977, Dr. Damadian completed the construction of the first “whole-body” MRI scanner, which he called the ”Indomitable”.\nQ: In what year was the first patent granted for medical imaging resonance?\nA: 1974\nB: 1930\nC: 1970\nD: 1977\nAnswer:",
+            " B"
+          ],
+          [
+            "P: MRI is based on a physics phenomenon called nuclear magnetic resonance (NMR), which was discovered in the 1930s by Felix Bloch (working at Stanford University) and Edward Purcell (from Harvard University). In this resonance, magnetic field and radio waves cause atoms to give off tiny radio signals. In the year 1970, Raymond Damadian, a medical doctor and research scientist, discovered the basis for using magnetic resonance imaging as a tool for medical diagnosis. Four years later a patent was granted, which was the world's first patent issued in the field of MRI. In 1977, Dr. Damadian completed the construction of the first “whole-body” MRI scanner, which he called the ”Indomitable”.\nQ: In what year was the first patent granted for medical imaging resonance?\nA: 1974\nB: 1930\nC: 1970\nD: 1977\nAnswer:",
+            " C"
+          ],
+          [
+            "P: MRI is based on a physics phenomenon called nuclear magnetic resonance (NMR), which was discovered in the 1930s by Felix Bloch (working at Stanford University) and Edward Purcell (from Harvard University). In this resonance, magnetic field and radio waves cause atoms to give off tiny radio signals. In the year 1970, Raymond Damadian, a medical doctor and research scientist, discovered the basis for using magnetic resonance imaging as a tool for medical diagnosis. Four years later a patent was granted, which was the world's first patent issued in the field of MRI. In 1977, Dr. Damadian completed the construction of the first “whole-body” MRI scanner, which he called the ”Indomitable”.\nQ: In what year was the first patent granted for medical imaging resonance?\nA: 1974\nB: 1930\nC: 1970\nD: 1977\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.2217603474855423,
+              true
+            ]
+          ],
+          [
+            [
+              -2.453768253326416,
+              false
+            ]
+          ],
+          [
+            [
+              -2.45518159866333,
+              false
+            ]
+          ],
+          [
+            [
+              -4.035055637359619,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.2217603474855423,
+            true
+          ],
+          [
+            -2.453768253326416,
+            false
+          ],
+          [
+            -2.45518159866333,
+            false
+          ],
+          [
+            -4.035055637359619,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9dccad242e860aaf99b9dc027d20e5c1668d5126dece4262e6bd32c899d9f9b6",
+        "prompt_hash": "b80e747424a816fc3609e01f0630099b2f141fbe3c50920d96da5be51999d6cc",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Travel_writing",
+          "question_number": 2,
+          "flores_passage": "The easiest way to get started in the business of travel writing is to hone your skills on an established travel blog website. After you become comfortable with formatting and editing on the web, then later, you might create your own website.",
+          "question": "When starting a travel writing business, which of the following abilities should likely be refined first?",
+          "mc_answer1": "Web formatting",
+          "mc_answer2": "Editing",
+          "mc_answer3": "Website creation",
+          "mc_answer4": "Blogging",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: The easiest way to get started in the business of travel writing is to hone your skills on an established travel blog website. After you become comfortable with formatting and editing on the web, then later, you might create your own website.\nQ: When starting a travel writing business, which of the following abilities should likely be refined first?\nA: Web formatting\nB: Editing\nC: Website creation\nD: Blogging\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The easiest way to get started in the business of travel writing is to hone your skills on an established travel blog website. After you become comfortable with formatting and editing on the web, then later, you might create your own website.\nQ: When starting a travel writing business, which of the following abilities should likely be refined first?\nA: Web formatting\nB: Editing\nC: Website creation\nD: Blogging\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The easiest way to get started in the business of travel writing is to hone your skills on an established travel blog website. After you become comfortable with formatting and editing on the web, then later, you might create your own website.\nQ: When starting a travel writing business, which of the following abilities should likely be refined first?\nA: Web formatting\nB: Editing\nC: Website creation\nD: Blogging\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The easiest way to get started in the business of travel writing is to hone your skills on an established travel blog website. After you become comfortable with formatting and editing on the web, then later, you might create your own website.\nQ: When starting a travel writing business, which of the following abilities should likely be refined first?\nA: Web formatting\nB: Editing\nC: Website creation\nD: Blogging\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.07731445133686066,
+              true
+            ]
+          ],
+          [
+            [
+              -4.13258171081543,
+              false
+            ]
+          ],
+          [
+            [
+              -5.412021636962891,
+              false
+            ]
+          ],
+          [
+            [
+              -3.972135543823242,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.07731445133686066,
+            true
+          ],
+          [
+            -4.13258171081543,
+            false
+          ],
+          [
+            -5.412021636962891,
+            false
+          ],
+          [
+            -3.972135543823242,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "d7115e885f628fd5b0351bb0266d64c0f1fa23b8dd1818db65026a13ee576673",
+        "prompt_hash": "ed74881a4de43f2903a44e4d2659302daefc84ff39bf862f4519bfb34449f4f0",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Sealing_ships_trapped_in_ice_off_coast_of_Newfoundland",
+          "question_number": 1,
+          "flores_passage": "In addition to the crushing ice, extreme weather conditions have been hampering rescue efforts. Pittman suggested that conditions wouldn't improve until sometime next week. The amount and thickness of the pack ice, according to Pittman, is the worst it has been for sealers in the past 15 years.",
+          "question": "According to the passage, what is not a current problem for sealers?",
+          "mc_answer1": "The amount of ice",
+          "mc_answer2": "The thickness of the ice",
+          "mc_answer3": "Melting ice",
+          "mc_answer4": "Extreme weather conditions",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: In addition to the crushing ice, extreme weather conditions have been hampering rescue efforts. Pittman suggested that conditions wouldn't improve until sometime next week. The amount and thickness of the pack ice, according to Pittman, is the worst it has been for sealers in the past 15 years.\nQ: According to the passage, what is not a current problem for sealers?\nA: The amount of ice\nB: The thickness of the ice\nC: Melting ice\nD: Extreme weather conditions\nAnswer:",
+            " A"
+          ],
+          [
+            "P: In addition to the crushing ice, extreme weather conditions have been hampering rescue efforts. Pittman suggested that conditions wouldn't improve until sometime next week. The amount and thickness of the pack ice, according to Pittman, is the worst it has been for sealers in the past 15 years.\nQ: According to the passage, what is not a current problem for sealers?\nA: The amount of ice\nB: The thickness of the ice\nC: Melting ice\nD: Extreme weather conditions\nAnswer:",
+            " B"
+          ],
+          [
+            "P: In addition to the crushing ice, extreme weather conditions have been hampering rescue efforts. Pittman suggested that conditions wouldn't improve until sometime next week. The amount and thickness of the pack ice, according to Pittman, is the worst it has been for sealers in the past 15 years.\nQ: According to the passage, what is not a current problem for sealers?\nA: The amount of ice\nB: The thickness of the ice\nC: Melting ice\nD: Extreme weather conditions\nAnswer:",
+            " C"
+          ],
+          [
+            "P: In addition to the crushing ice, extreme weather conditions have been hampering rescue efforts. Pittman suggested that conditions wouldn't improve until sometime next week. The amount and thickness of the pack ice, according to Pittman, is the worst it has been for sealers in the past 15 years.\nQ: According to the passage, what is not a current problem for sealers?\nA: The amount of ice\nB: The thickness of the ice\nC: Melting ice\nD: Extreme weather conditions\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.5451294183731079,
+              true
+            ]
+          ],
+          [
+            [
+              -5.647532939910889,
+              false
+            ]
+          ],
+          [
+            [
+              -1.000146508216858,
+              false
+            ]
+          ],
+          [
+            [
+              -3.744821071624756,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.5451294183731079,
+            true
+          ],
+          [
+            -5.647532939910889,
+            false
+          ],
+          [
+            -1.000146508216858,
+            false
+          ],
+          [
+            -3.744821071624756,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "ccc5d63d35cbaeaa9bbeb0eef5ace51089aa5a852dbe8d60ce3be727e5683b5f",
+        "prompt_hash": "bb22b247cb26c9e14386ac93c4ac97fc054bc29734d58b38e7f77f071097ff1d",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792567378.716613,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

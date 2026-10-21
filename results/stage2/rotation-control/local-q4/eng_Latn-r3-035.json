@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Asia/Bhutan",
+          "question_number": 2,
+          "flores_passage": "The Drukgyal Dzong is a ruined fortress and Buddhist monastery in the upper part of the Paro District (in Phondey Village). It is said that in 1649, Zhabdrung Ngawang Namgyel created the fortress to commemorate his victory against the Tibetan-Mongol forces. In 1951, a fire caused for only some of the relics of the Drukgyal Dzong to remain, such as the image of Zhabdrung Ngawang Namgyal. After the fire, the fortress was preserved and protected, remaining to be one of Bhutan's most sensational attractions.",
+          "question": "Which statement accurately describes the outcome of the fire at the Drukgyal Dzong?",
+          "mc_answer1": "It was preserved by Zhabdrung Ngawang Namgyel",
+          "mc_answer2": "The only remaining relic was Zhabdrung Ngawang Namgyal’s image",
+          "mc_answer3": "The Tibetan-Mongol forces were victorious",
+          "mc_answer4": "The attraction’s popularity was not affected",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: The Drukgyal Dzong is a ruined fortress and Buddhist monastery in the upper part of the Paro District (in Phondey Village). It is said that in 1649, Zhabdrung Ngawang Namgyel created the fortress to commemorate his victory against the Tibetan-Mongol forces. In 1951, a fire caused for only some of the relics of the Drukgyal Dzong to remain, such as the image of Zhabdrung Ngawang Namgyal. After the fire, the fortress was preserved and protected, remaining to be one of Bhutan's most sensational attractions.\nQ: Which statement accurately describes the outcome of the fire at the Drukgyal Dzong?\nA: It was preserved by Zhabdrung Ngawang Namgyel\nB: The only remaining relic was Zhabdrung Ngawang Namgyal’s image\nC: The Tibetan-Mongol forces were victorious\nD: The attraction’s popularity was not affected\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Drukgyal Dzong is a ruined fortress and Buddhist monastery in the upper part of the Paro District (in Phondey Village). It is said that in 1649, Zhabdrung Ngawang Namgyel created the fortress to commemorate his victory against the Tibetan-Mongol forces. In 1951, a fire caused for only some of the relics of the Drukgyal Dzong to remain, such as the image of Zhabdrung Ngawang Namgyal. After the fire, the fortress was preserved and protected, remaining to be one of Bhutan's most sensational attractions.\nQ: Which statement accurately describes the outcome of the fire at the Drukgyal Dzong?\nA: It was preserved by Zhabdrung Ngawang Namgyel\nB: The only remaining relic was Zhabdrung Ngawang Namgyal’s image\nC: The Tibetan-Mongol forces were victorious\nD: The attraction’s popularity was not affected\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Drukgyal Dzong is a ruined fortress and Buddhist monastery in the upper part of the Paro District (in Phondey Village). It is said that in 1649, Zhabdrung Ngawang Namgyel created the fortress to commemorate his victory against the Tibetan-Mongol forces. In 1951, a fire caused for only some of the relics of the Drukgyal Dzong to remain, such as the image of Zhabdrung Ngawang Namgyal. After the fire, the fortress was preserved and protected, remaining to be one of Bhutan's most sensational attractions.\nQ: Which statement accurately describes the outcome of the fire at the Drukgyal Dzong?\nA: It was preserved by Zhabdrung Ngawang Namgyel\nB: The only remaining relic was Zhabdrung Ngawang Namgyal’s image\nC: The Tibetan-Mongol forces were victorious\nD: The attraction’s popularity was not affected\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Drukgyal Dzong is a ruined fortress and Buddhist monastery in the upper part of the Paro District (in Phondey Village). It is said that in 1649, Zhabdrung Ngawang Namgyel created the fortress to commemorate his victory against the Tibetan-Mongol forces. In 1951, a fire caused for only some of the relics of the Drukgyal Dzong to remain, such as the image of Zhabdrung Ngawang Namgyal. After the fire, the fortress was preserved and protected, remaining to be one of Bhutan's most sensational attractions.\nQ: Which statement accurately describes the outcome of the fire at the Drukgyal Dzong?\nA: It was preserved by Zhabdrung Ngawang Namgyel\nB: The only remaining relic was Zhabdrung Ngawang Namgyal’s image\nC: The Tibetan-Mongol forces were victorious\nD: The attraction’s popularity was not affected\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.201605319976807,
+              false
+            ]
+          ],
+          [
+            [
+              -0.07280396670103073,
+              true
+            ]
+          ],
+          [
+            [
+              -4.599615573883057,
+              false
+            ]
+          ],
+          [
+            [
+              -5.274467945098877,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.201605319976807,
+            false
+          ],
+          [
+            -0.07280396670103073,
+            true
+          ],
+          [
+            -4.599615573883057,
+            false
+          ],
+          [
+            -5.274467945098877,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "360dc88816c132c2a2eec353805f326117a37fbef2cf8ab1065d71d64cf4977c",
+        "prompt_hash": "4110e9a1f6ca0433982d01fd2245ce7af26594cfc4529325e46dbb8dda51a991",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Edmonton_prison_conflict_wounds_eight",
+          "question_number": 2,
+          "flores_passage": "When the fighting ceased after the wounded were transported to the hospital, about 40 of the other remaining inmates stayed in the yard and refused to return to their cells. Negotiators tried to rectify the situation, but the prisoners' demands are not clear. Between 10:00-11:00 pm MDT, a fire was started by the inmates in the yard. Soon, officers equipped with riot gear entered the yard and cornered the inmates with tear gas. Fire rescue crews eventually doused the fire by 11:35 pm.",
+          "question": "Which of the following eventually caused the prisoners to back down from the riot?",
+          "mc_answer1": "A fire",
+          "mc_answer2": "Successful negotiations",
+          "mc_answer3": "Tear gas",
+          "mc_answer4": "Fellow wounded inmates",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: When the fighting ceased after the wounded were transported to the hospital, about 40 of the other remaining inmates stayed in the yard and refused to return to their cells. Negotiators tried to rectify the situation, but the prisoners' demands are not clear. Between 10:00-11:00 pm MDT, a fire was started by the inmates in the yard. Soon, officers equipped with riot gear entered the yard and cornered the inmates with tear gas. Fire rescue crews eventually doused the fire by 11:35 pm.\nQ: Which of the following eventually caused the prisoners to back down from the riot?\nA: A fire\nB: Successful negotiations\nC: Tear gas\nD: Fellow wounded inmates\nAnswer:",
+            " A"
+          ],
+          [
+            "P: When the fighting ceased after the wounded were transported to the hospital, about 40 of the other remaining inmates stayed in the yard and refused to return to their cells. Negotiators tried to rectify the situation, but the prisoners' demands are not clear. Between 10:00-11:00 pm MDT, a fire was started by the inmates in the yard. Soon, officers equipped with riot gear entered the yard and cornered the inmates with tear gas. Fire rescue crews eventually doused the fire by 11:35 pm.\nQ: Which of the following eventually caused the prisoners to back down from the riot?\nA: A fire\nB: Successful negotiations\nC: Tear gas\nD: Fellow wounded inmates\nAnswer:",
+            " B"
+          ],
+          [
+            "P: When the fighting ceased after the wounded were transported to the hospital, about 40 of the other remaining inmates stayed in the yard and refused to return to their cells. Negotiators tried to rectify the situation, but the prisoners' demands are not clear. Between 10:00-11:00 pm MDT, a fire was started by the inmates in the yard. Soon, officers equipped with riot gear entered the yard and cornered the inmates with tear gas. Fire rescue crews eventually doused the fire by 11:35 pm.\nQ: Which of the following eventually caused the prisoners to back down from the riot?\nA: A fire\nB: Successful negotiations\nC: Tear gas\nD: Fellow wounded inmates\nAnswer:",
+            " C"
+          ],
+          [
+            "P: When the fighting ceased after the wounded were transported to the hospital, about 40 of the other remaining inmates stayed in the yard and refused to return to their cells. Negotiators tried to rectify the situation, but the prisoners' demands are not clear. Between 10:00-11:00 pm MDT, a fire was started by the inmates in the yard. Soon, officers equipped with riot gear entered the yard and cornered the inmates with tear gas. Fire rescue crews eventually doused the fire by 11:35 pm.\nQ: Which of the following eventually caused the prisoners to back down from the riot?\nA: A fire\nB: Successful negotiations\nC: Tear gas\nD: Fellow wounded inmates\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.03790438547730446,
+              true
+            ]
+          ],
+          [
+            [
+              -5.114451885223389,
+              false
+            ]
+          ],
+          [
+            [
+              -3.837135076522827,
+              false
+            ]
+          ],
+          [
+            [
+              -7.01743745803833,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.03790438547730446,
+            true
+          ],
+          [
+            -5.114451885223389,
+            false
+          ],
+          [
+            -3.837135076522827,
+            false
+          ],
+          [
+            -7.01743745803833,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "51966eabe89f0ae9fd1db13cbbd04b396a3df0b3b3b7c2eadeeb057515129f02",
+        "prompt_hash": "6571e387a87c50baf536d54cadb5de136a31cb75a39ad097cf22b6ad12e5fd2f",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Fossilized_remains_of_small_dinosaur_rediscovered_in_Canada",
+          "question_number": 2,
+          "flores_passage": "\"Hesperonychus elizabethae is a species of the family Dromaeosauridae and is a cousin of Velociraptor . This fully feathered, warm blooded bird of prey was believed to have walked upright on two legs with claws like the Velociraptor. Its second claw was larger, giving rise to the name Hesperonychus which means \"\"western claw.\"\"\"",
+          "question": "The meaning of “Hesperonychus” is derived from what physical characteristic of the species?",
+          "mc_answer1": "The beak",
+          "mc_answer2": "The claw(s)",
+          "mc_answer3": "The feathered bodies",
+          "mc_answer4": "The legs",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"Hesperonychus elizabethae is a species of the family Dromaeosauridae and is a cousin of Velociraptor . This fully feathered, warm blooded bird of prey was believed to have walked upright on two legs with claws like the Velociraptor. Its second claw was larger, giving rise to the name Hesperonychus which means \"\"western claw.\"\"\"\nQ: The meaning of “Hesperonychus” is derived from what physical characteristic of the species?\nA: The beak\nB: The claw(s)\nC: The feathered bodies\nD: The legs\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Hesperonychus elizabethae is a species of the family Dromaeosauridae and is a cousin of Velociraptor . This fully feathered, warm blooded bird of prey was believed to have walked upright on two legs with claws like the Velociraptor. Its second claw was larger, giving rise to the name Hesperonychus which means \"\"western claw.\"\"\"\nQ: The meaning of “Hesperonychus” is derived from what physical characteristic of the species?\nA: The beak\nB: The claw(s)\nC: The feathered bodies\nD: The legs\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Hesperonychus elizabethae is a species of the family Dromaeosauridae and is a cousin of Velociraptor . This fully feathered, warm blooded bird of prey was believed to have walked upright on two legs with claws like the Velociraptor. Its second claw was larger, giving rise to the name Hesperonychus which means \"\"western claw.\"\"\"\nQ: The meaning of “Hesperonychus” is derived from what physical characteristic of the species?\nA: The beak\nB: The claw(s)\nC: The feathered bodies\nD: The legs\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Hesperonychus elizabethae is a species of the family Dromaeosauridae and is a cousin of Velociraptor . This fully feathered, warm blooded bird of prey was believed to have walked upright on two legs with claws like the Velociraptor. Its second claw was larger, giving rise to the name Hesperonychus which means \"\"western claw.\"\"\"\nQ: The meaning of “Hesperonychus” is derived from what physical characteristic of the species?\nA: The beak\nB: The claw(s)\nC: The feathered bodies\nD: The legs\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -7.769230365753174,
+              false
+            ]
+          ],
+          [
+            [
+              -0.003269566921517253,
+              true
+            ]
+          ],
+          [
+            [
+              -8.08749771118164,
+              false
+            ]
+          ],
+          [
+            [
+              -8.362191200256348,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -7.769230365753174,
+            false
+          ],
+          [
+            -0.003269566921517253,
+            true
+          ],
+          [
+            -8.08749771118164,
+            false
+          ],
+          [
+            -8.362191200256348,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "8b5fc61836fc78ea948ba8f9c6eee9e4208eaf5a722fd92d733a70d6f038a18b",
+        "prompt_hash": "fb1b525fdbb0dcb7d2a752560d56d44f54f4209323f145a83c14ce6719efcb47",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Ma_Ying-jeou_wins_2008_Taiwan_presidential_election",
+          "question_number": 1,
+          "flores_passage": "\"Born in Hong Kong, Ma studied at New York University and Harvard Law School and once held an American permanent resident \"\"green card\"\". Hsieh implied during the election that Ma might flee the country during a time of crisis. Hsieh also argued that the photogenic Ma was more style than substance. Despite these accusations, Ma won handily on a platform advocating closer ties with the Chinese mainland.\"",
+          "question": "In what country did Ma study law?",
+          "mc_answer1": "Hong Kong",
+          "mc_answer2": "United States of America",
+          "mc_answer3": "China",
+          "mc_answer4": "Australia",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"Born in Hong Kong, Ma studied at New York University and Harvard Law School and once held an American permanent resident \"\"green card\"\". Hsieh implied during the election that Ma might flee the country during a time of crisis. Hsieh also argued that the photogenic Ma was more style than substance. Despite these accusations, Ma won handily on a platform advocating closer ties with the Chinese mainland.\"\nQ: In what country did Ma study law?\nA: Hong Kong\nB: United States of America\nC: China\nD: Australia\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Born in Hong Kong, Ma studied at New York University and Harvard Law School and once held an American permanent resident \"\"green card\"\". Hsieh implied during the election that Ma might flee the country during a time of crisis. Hsieh also argued that the photogenic Ma was more style than substance. Despite these accusations, Ma won handily on a platform advocating closer ties with the Chinese mainland.\"\nQ: In what country did Ma study law?\nA: Hong Kong\nB: United States of America\nC: China\nD: Australia\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Born in Hong Kong, Ma studied at New York University and Harvard Law School and once held an American permanent resident \"\"green card\"\". Hsieh implied during the election that Ma might flee the country during a time of crisis. Hsieh also argued that the photogenic Ma was more style than substance. Despite these accusations, Ma won handily on a platform advocating closer ties with the Chinese mainland.\"\nQ: In what country did Ma study law?\nA: Hong Kong\nB: United States of America\nC: China\nD: Australia\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Born in Hong Kong, Ma studied at New York University and Harvard Law School and once held an American permanent resident \"\"green card\"\". Hsieh implied during the election that Ma might flee the country during a time of crisis. Hsieh also argued that the photogenic Ma was more style than substance. Despite these accusations, Ma won handily on a platform advocating closer ties with the Chinese mainland.\"\nQ: In what country did Ma study law?\nA: Hong Kong\nB: United States of America\nC: China\nD: Australia\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.209072589874268,
+              false
+            ]
+          ],
+          [
+            [
+              -0.02039392478764057,
+              true
+            ]
+          ],
+          [
+            [
+              -8.13652515411377,
+              false
+            ]
+          ],
+          [
+            [
+              -9.959430694580078,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.209072589874268,
+            false
+          ],
+          [
+            -0.02039392478764057,
+            true
+          ],
+          [
+            -8.13652515411377,
+            false
+          ],
+          [
+            -9.959430694580078,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "6b79adccbe356c02a6b9702886c5f2411715ce3a96a73a8dc300592edbbb2c4c",
+        "prompt_hash": "98ee6a5e42e8f38cdf294c8f0007acb304373dfa921b10ec5c5aec18a1140142",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Chile",
+          "question_number": 2,
+          "flores_passage": "Before the Spanish arrived in the 16th century, northern Chile was under Inca rule while the indigenous Araucanians (Mapuche) inhabited central and southern Chile. The Mapuche were also one of the last independent American indigenous groups, that were not fully absorbed into Spanish-speaking rule until after Chile's independence. Although Chile declared independence in 1810 (amid the Napoleonic wars that left Spain without a functioning central government for a couple of years), decisive victory over the Spanish was not achieved until 1818.",
+          "question": "According to the passage, which of the following did not occur in 1810?",
+          "mc_answer1": "Chile declared independence",
+          "mc_answer2": "There was an absence of central government",
+          "mc_answer3": "Chile achieved victory over the Spanish",
+          "mc_answer4": "Napoleonic wars were being fought",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Before the Spanish arrived in the 16th century, northern Chile was under Inca rule while the indigenous Araucanians (Mapuche) inhabited central and southern Chile. The Mapuche were also one of the last independent American indigenous groups, that were not fully absorbed into Spanish-speaking rule until after Chile's independence. Although Chile declared independence in 1810 (amid the Napoleonic wars that left Spain without a functioning central government for a couple of years), decisive victory over the Spanish was not achieved until 1818.\nQ: According to the passage, which of the following did not occur in 1810?\nA: Chile declared independence\nB: There was an absence of central government\nC: Chile achieved victory over the Spanish\nD: Napoleonic wars were being fought\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Before the Spanish arrived in the 16th century, northern Chile was under Inca rule while the indigenous Araucanians (Mapuche) inhabited central and southern Chile. The Mapuche were also one of the last independent American indigenous groups, that were not fully absorbed into Spanish-speaking rule until after Chile's independence. Although Chile declared independence in 1810 (amid the Napoleonic wars that left Spain without a functioning central government for a couple of years), decisive victory over the Spanish was not achieved until 1818.\nQ: According to the passage, which of the following did not occur in 1810?\nA: Chile declared independence\nB: There was an absence of central government\nC: Chile achieved victory over the Spanish\nD: Napoleonic wars were being fought\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Before the Spanish arrived in the 16th century, northern Chile was under Inca rule while the indigenous Araucanians (Mapuche) inhabited central and southern Chile. The Mapuche were also one of the last independent American indigenous groups, that were not fully absorbed into Spanish-speaking rule until after Chile's independence. Although Chile declared independence in 1810 (amid the Napoleonic wars that left Spain without a functioning central government for a couple of years), decisive victory over the Spanish was not achieved until 1818.\nQ: According to the passage, which of the following did not occur in 1810?\nA: Chile declared independence\nB: There was an absence of central government\nC: Chile achieved victory over the Spanish\nD: Napoleonic wars were being fought\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Before the Spanish arrived in the 16th century, northern Chile was under Inca rule while the indigenous Araucanians (Mapuche) inhabited central and southern Chile. The Mapuche were also one of the last independent American indigenous groups, that were not fully absorbed into Spanish-speaking rule until after Chile's independence. Although Chile declared independence in 1810 (amid the Napoleonic wars that left Spain without a functioning central government for a couple of years), decisive victory over the Spanish was not achieved until 1818.\nQ: According to the passage, which of the following did not occur in 1810?\nA: Chile declared independence\nB: There was an absence of central government\nC: Chile achieved victory over the Spanish\nD: Napoleonic wars were being fought\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.137336730957031,
+              false
+            ]
+          ],
+          [
+            [
+              -4.472560882568359,
+              false
+            ]
+          ],
+          [
+            [
+              -0.3750247657299042,
+              true
+            ]
+          ],
+          [
+            [
+              -1.2546272277832031,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.137336730957031,
+            false
+          ],
+          [
+            -4.472560882568359,
+            false
+          ],
+          [
+            -0.3750247657299042,
+            true
+          ],
+          [
+            -1.2546272277832031,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "7d91ce532be1b86fed3d074c5ef51b264b4244254741fcdb33b83e7bce8ae881",
+        "prompt_hash": "ebbc78c2dcd015b1f1dd271282500b8fd8413610780cbe65c7a267915f1e0fa9",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792587549.956892,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Costume_History/Gothic",
+          "question_number": 1,
+          "flores_passage": "Gothic style peaked in the period between the 10th - 11th centuries and the 14th century. At the beginning dress was heavily influenced by the Byzantine culture in the east. However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year. towards the end of the Middle Ages western Europe began to develop their own style. one of the biggest developments of the time as a result of the crusades people began to use buttons to fasten clothing.",
+          "question": "When did western Europe stop relying heavily on influences and start developing its own style?",
+          "mc_answer1": "Around the end of the Middle Ages",
+          "mc_answer2": "During the Byzantine era",
+          "mc_answer3": "About 25 years after the Middle Ages",
+          "mc_answer4": "During the 11th century",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Gothic style peaked in the period between the 10th - 11th centuries and the 14th century. At the beginning dress was heavily influenced by the Byzantine culture in the east. However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year. towards the end of the Middle Ages western Europe began to develop their own style. one of the biggest developments of the time as a result of the crusades people began to use buttons to fasten clothing.\nQ: When did western Europe stop relying heavily on influences and start developing its own style?\nA: Around the end of the Middle Ages\nB: During the Byzantine era\nC: About 25 years after the Middle Ages\nD: During the 11th century\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Gothic style peaked in the period between the 10th - 11th centuries and the 14th century. At the beginning dress was heavily influenced by the Byzantine culture in the east. However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year. towards the end of the Middle Ages western Europe began to develop their own style. one of the biggest developments of the time as a result of the crusades people began to use buttons to fasten clothing.\nQ: When did western Europe stop relying heavily on influences and start developing its own style?\nA: Around the end of the Middle Ages\nB: During the Byzantine era\nC: About 25 years after the Middle Ages\nD: During the 11th century\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Gothic style peaked in the period between the 10th - 11th centuries and the 14th century. At the beginning dress was heavily influenced by the Byzantine culture in the east. However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year. towards the end of the Middle Ages western Europe began to develop their own style. one of the biggest developments of the time as a result of the crusades people began to use buttons to fasten clothing.\nQ: When did western Europe stop relying heavily on influences and start developing its own style?\nA: Around the end of the Middle Ages\nB: During the Byzantine era\nC: About 25 years after the Middle Ages\nD: During the 11th century\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Gothic style peaked in the period between the 10th - 11th centuries and the 14th century. At the beginning dress was heavily influenced by the Byzantine culture in the east. However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year. towards the end of the Middle Ages western Europe began to develop their own style. one of the biggest developments of the time as a result of the crusades people began to use buttons to fasten clothing.\nQ: When did western Europe stop relying heavily on influences and start developing its own style?\nA: Around the end of the Middle Ages\nB: During the Byzantine era\nC: About 25 years after the Middle Ages\nD: During the 11th century\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.00705300085246563,
+              true
+            ]
+          ],
+          [
+            [
+              -8.745988845825195,
+              false
+            ]
+          ],
+          [
+            [
+              -8.394033432006836,
+              false
+            ]
+          ],
+          [
+            [
+              -8.357199668884277,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.00705300085246563,
+            true
+          ],
+          [
+            -8.745988845825195,
+            false
+          ],
+          [
+            -8.394033432006836,
+            false
+          ],
+          [
+            -8.357199668884277,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "deb9272acccaa91e75c27cd9d71a2a8d6cfa08f5c57a1f3b7ffe0c7c9341872d",
+        "prompt_hash": "ff1376e17b6f01e662827fc6e70e981cb0b6653daf5cdfbd3d4afd5babc71d01",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Dangerous_animals",
+          "question_number": 1,
+          "flores_passage": "Moose (also known as elk) aren't inherently aggressive, but will defend themselves if they perceive a threat. When people don't see moose as potentially dangerous, they may approach too closely and put themselves at risk.",
+          "question": "Which of the following should people avoid doing with moose?",
+          "mc_answer1": "Ignoring their presence",
+          "mc_answer2": "Approaching too slowly",
+          "mc_answer3": "Minimizing their potential threat level",
+          "mc_answer4": "Observing them from a distance",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Moose (also known as elk) aren't inherently aggressive, but will defend themselves if they perceive a threat. When people don't see moose as potentially dangerous, they may approach too closely and put themselves at risk.\nQ: Which of the following should people avoid doing with moose?\nA: Ignoring their presence\nB: Approaching too slowly\nC: Minimizing their potential threat level\nD: Observing them from a distance\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Moose (also known as elk) aren't inherently aggressive, but will defend themselves if they perceive a threat. When people don't see moose as potentially dangerous, they may approach too closely and put themselves at risk.\nQ: Which of the following should people avoid doing with moose?\nA: Ignoring their presence\nB: Approaching too slowly\nC: Minimizing their potential threat level\nD: Observing them from a distance\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Moose (also known as elk) aren't inherently aggressive, but will defend themselves if they perceive a threat. When people don't see moose as potentially dangerous, they may approach too closely and put themselves at risk.\nQ: Which of the following should people avoid doing with moose?\nA: Ignoring their presence\nB: Approaching too slowly\nC: Minimizing their potential threat level\nD: Observing them from a distance\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Moose (also known as elk) aren't inherently aggressive, but will defend themselves if they perceive a threat. When people don't see moose as potentially dangerous, they may approach too closely and put themselves at risk.\nQ: Which of the following should people avoid doing with moose?\nA: Ignoring their presence\nB: Approaching too slowly\nC: Minimizing their potential threat level\nD: Observing them from a distance\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.654289722442627,
+              true
+            ]
+          ],
+          [
+            [
+              -1.147301197052002,
+              false
+            ]
+          ],
+          [
+            [
+              -2.5891823768615723,
+              false
+            ]
+          ],
+          [
+            [
+              -2.59031343460083,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.654289722442627,
+            true
+          ],
+          [
+            -1.147301197052002,
+            false
+          ],
+          [
+            -2.5891823768615723,
+            false
+          ],
+          [
+            -2.59031343460083,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "99ad33cd9afa555bb79de16926d2e768587bc9b9caf17eaaea5fde7d4b59ed61",
+        "prompt_hash": "63bba10d2025b76eab35ea62c816b65f087b5c6cc04b4849ea5357b259de5916",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/California_lawmaker_denies_affairs_after_sexual_discussion_becomes_public",
+          "question_number": 1,
+          "flores_passage": "\"Duvall, who is married with two adult children, did not leave a big impression on Miller, to whom the story was related. When asked for comment, Miller said, \"\"Mike talks a lot during the hearing...I was getting ready so I wasn't really hearing what he was saying.\"\"\"",
+          "question": "According to the passage, who missed things that were being said?",
+          "mc_answer1": "Duvall’s children",
+          "mc_answer2": "Mike",
+          "mc_answer3": "Miller",
+          "mc_answer4": "Duvall",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"Duvall, who is married with two adult children, did not leave a big impression on Miller, to whom the story was related. When asked for comment, Miller said, \"\"Mike talks a lot during the hearing...I was getting ready so I wasn't really hearing what he was saying.\"\"\"\nQ: According to the passage, who missed things that were being said?\nA: Duvall’s children\nB: Mike\nC: Miller\nD: Duvall\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Duvall, who is married with two adult children, did not leave a big impression on Miller, to whom the story was related. When asked for comment, Miller said, \"\"Mike talks a lot during the hearing...I was getting ready so I wasn't really hearing what he was saying.\"\"\"\nQ: According to the passage, who missed things that were being said?\nA: Duvall’s children\nB: Mike\nC: Miller\nD: Duvall\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Duvall, who is married with two adult children, did not leave a big impression on Miller, to whom the story was related. When asked for comment, Miller said, \"\"Mike talks a lot during the hearing...I was getting ready so I wasn't really hearing what he was saying.\"\"\"\nQ: According to the passage, who missed things that were being said?\nA: Duvall’s children\nB: Mike\nC: Miller\nD: Duvall\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Duvall, who is married with two adult children, did not leave a big impression on Miller, to whom the story was related. When asked for comment, Miller said, \"\"Mike talks a lot during the hearing...I was getting ready so I wasn't really hearing what he was saying.\"\"\"\nQ: According to the passage, who missed things that were being said?\nA: Duvall’s children\nB: Mike\nC: Miller\nD: Duvall\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.957240581512451,
+              false
+            ]
+          ],
+          [
+            [
+              -4.95044469833374,
+              false
+            ]
+          ],
+          [
+            [
+              -0.04493279755115509,
+              true
+            ]
+          ],
+          [
+            [
+              -5.07611608505249,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.957240581512451,
+            false
+          ],
+          [
+            -4.95044469833374,
+            false
+          ],
+          [
+            -0.04493279755115509,
+            true
+          ],
+          [
+            -5.07611608505249,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "6fa7fc5e0b052d35acafbe14f651c953264018ea7ccd7949c6811f37a9b11771",
+        "prompt_hash": "f7af21c6ab4435acdcaa0d1a1a92598184c74d1ca6e40638d77a6664c5db9737",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/United_States_warns_of_suicide_attacks_in_Kenya_and_Ethiopia",
+          "question_number": 1,
+          "flores_passage": "\"The United States embassy located in Nairobi, Kenya has issued a warning that \"\"extremists from Somalia\"\" are planning to launch suicide bomb attacks in Kenya and Ethiopia. The U.S. says it has received information from an undisclosed source that specifically mentions the use of suicide bombers to will blow up \"\"prominent landmarks\"\" in Ethiopia and Kenya.\"",
+          "question": "According to the passage, who gave the United States intel about possible attacks?",
+          "mc_answer1": "Somali extremists ",
+          "mc_answer2": "The embassy of Ethiopia",
+          "mc_answer3": "An undisclosed source",
+          "mc_answer4": "A source in Kenya",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"The United States embassy located in Nairobi, Kenya has issued a warning that \"\"extremists from Somalia\"\" are planning to launch suicide bomb attacks in Kenya and Ethiopia. The U.S. says it has received information from an undisclosed source that specifically mentions the use of suicide bombers to will blow up \"\"prominent landmarks\"\" in Ethiopia and Kenya.\"\nQ: According to the passage, who gave the United States intel about possible attacks?\nA: Somali extremists \nB: The embassy of Ethiopia\nC: An undisclosed source\nD: A source in Kenya\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"The United States embassy located in Nairobi, Kenya has issued a warning that \"\"extremists from Somalia\"\" are planning to launch suicide bomb attacks in Kenya and Ethiopia. The U.S. says it has received information from an undisclosed source that specifically mentions the use of suicide bombers to will blow up \"\"prominent landmarks\"\" in Ethiopia and Kenya.\"\nQ: According to the passage, who gave the United States intel about possible attacks?\nA: Somali extremists \nB: The embassy of Ethiopia\nC: An undisclosed source\nD: A source in Kenya\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"The United States embassy located in Nairobi, Kenya has issued a warning that \"\"extremists from Somalia\"\" are planning to launch suicide bomb attacks in Kenya and Ethiopia. The U.S. says it has received information from an undisclosed source that specifically mentions the use of suicide bombers to will blow up \"\"prominent landmarks\"\" in Ethiopia and Kenya.\"\nQ: According to the passage, who gave the United States intel about possible attacks?\nA: Somali extremists \nB: The embassy of Ethiopia\nC: An undisclosed source\nD: A source in Kenya\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"The United States embassy located in Nairobi, Kenya has issued a warning that \"\"extremists from Somalia\"\" are planning to launch suicide bomb attacks in Kenya and Ethiopia. The U.S. says it has received information from an undisclosed source that specifically mentions the use of suicide bombers to will blow up \"\"prominent landmarks\"\" in Ethiopia and Kenya.\"\nQ: According to the passage, who gave the United States intel about possible attacks?\nA: Somali extremists \nB: The embassy of Ethiopia\nC: An undisclosed source\nD: A source in Kenya\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -7.092842102050781,
+              false
+            ]
+          ],
+          [
+            [
+              -7.811344146728516,
+              false
+            ]
+          ],
+          [
+            [
+              -0.03516484424471855,
+              true
+            ]
+          ],
+          [
+            [
+              -9.144174575805664,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -7.092842102050781,
+            false
+          ],
+          [
+            -7.811344146728516,
+            false
+          ],
+          [
+            -0.03516484424471855,
+            true
+          ],
+          [
+            -9.144174575805664,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "1c7f0749db1b95137965a9ad04d880d323571f279e1574b4c13710dc291b064d",
+        "prompt_hash": "6ff6d8f65e5e3e72527c43bd0609341e0c308b8068da983d8ea6cebc7c0273c3",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Space_station_crew_perform_successful_spacewalk",
+          "question_number": 2,
+          "flores_passage": "The station maintained its attitude, despite the loss of a gyroscope earlier in the space station mission, until the end of the spacewalk. Chiao and Sharipov reported being a safe distance from the attitude adjustment thrusters. Russian ground control activated the jets and normal attitude of the station was regained.",
+          "question": "According to the passage, what was the goal of the space station’s mission?",
+          "mc_answer1": "Finding a lost gyroscope",
+          "mc_answer2": "Getting closer to the adjustment thrusters",
+          "mc_answer3": "Completing a spacewalk",
+          "mc_answer4": "Activating the jets",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The station maintained its attitude, despite the loss of a gyroscope earlier in the space station mission, until the end of the spacewalk. Chiao and Sharipov reported being a safe distance from the attitude adjustment thrusters. Russian ground control activated the jets and normal attitude of the station was regained.\nQ: According to the passage, what was the goal of the space station’s mission?\nA: Finding a lost gyroscope\nB: Getting closer to the adjustment thrusters\nC: Completing a spacewalk\nD: Activating the jets\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The station maintained its attitude, despite the loss of a gyroscope earlier in the space station mission, until the end of the spacewalk. Chiao and Sharipov reported being a safe distance from the attitude adjustment thrusters. Russian ground control activated the jets and normal attitude of the station was regained.\nQ: According to the passage, what was the goal of the space station’s mission?\nA: Finding a lost gyroscope\nB: Getting closer to the adjustment thrusters\nC: Completing a spacewalk\nD: Activating the jets\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The station maintained its attitude, despite the loss of a gyroscope earlier in the space station mission, until the end of the spacewalk. Chiao and Sharipov reported being a safe distance from the attitude adjustment thrusters. Russian ground control activated the jets and normal attitude of the station was regained.\nQ: According to the passage, what was the goal of the space station’s mission?\nA: Finding a lost gyroscope\nB: Getting closer to the adjustment thrusters\nC: Completing a spacewalk\nD: Activating the jets\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The station maintained its attitude, despite the loss of a gyroscope earlier in the space station mission, until the end of the spacewalk. Chiao and Sharipov reported being a safe distance from the attitude adjustment thrusters. Russian ground control activated the jets and normal attitude of the station was regained.\nQ: According to the passage, what was the goal of the space station’s mission?\nA: Finding a lost gyroscope\nB: Getting closer to the adjustment thrusters\nC: Completing a spacewalk\nD: Activating the jets\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.8165082931518555,
+              false
+            ]
+          ],
+          [
+            [
+              -4.575379371643066,
+              false
+            ]
+          ],
+          [
+            [
+              -0.7982549667358398,
+              true
+            ]
+          ],
+          [
+            [
+              -4.55379581451416,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.8165082931518555,
+            false
+          ],
+          [
+            -4.575379371643066,
+            false
+          ],
+          [
+            -0.7982549667358398,
+            true
+          ],
+          [
+            -4.55379581451416,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "0efc7cdb51bce549252316d39cb1cf355f43dc31b37a546debac05f41168eaf8",
+        "prompt_hash": "ff0d846693c83f78317bea36f4f716b8b8ada6cdd859116e80cb22c8adaa91af",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792566390.8543513,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

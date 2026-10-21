@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Sandra_Fluke_insists_she_will_not_be_silenced",
+          "question_number": 2,
+          "flores_passage": "Fluke wrote that the efforts by some to drown out women from speaking out about women’s health were unsuccessful. She came to this conclusion due to the multitude of positive comments and encouragement sent to her by both female and male individuals urging that contraception medication be considered a medical necessity.",
+          "question": "According to the passage, what did some people not want women speaking out about?",
+          "mc_answer1": "Fluke",
+          "mc_answer2": "Male individuals",
+          "mc_answer3": "Medical costs",
+          "mc_answer4": "Women’s health",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Fluke wrote that the efforts by some to drown out women from speaking out about women’s health were unsuccessful. She came to this conclusion due to the multitude of positive comments and encouragement sent to her by both female and male individuals urging that contraception medication be considered a medical necessity.\nQ: According to the passage, what did some people not want women speaking out about?\nA: Fluke\nB: Male individuals\nC: Medical costs\nD: Women’s health\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Fluke wrote that the efforts by some to drown out women from speaking out about women’s health were unsuccessful. She came to this conclusion due to the multitude of positive comments and encouragement sent to her by both female and male individuals urging that contraception medication be considered a medical necessity.\nQ: According to the passage, what did some people not want women speaking out about?\nA: Fluke\nB: Male individuals\nC: Medical costs\nD: Women’s health\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Fluke wrote that the efforts by some to drown out women from speaking out about women’s health were unsuccessful. She came to this conclusion due to the multitude of positive comments and encouragement sent to her by both female and male individuals urging that contraception medication be considered a medical necessity.\nQ: According to the passage, what did some people not want women speaking out about?\nA: Fluke\nB: Male individuals\nC: Medical costs\nD: Women’s health\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Fluke wrote that the efforts by some to drown out women from speaking out about women’s health were unsuccessful. She came to this conclusion due to the multitude of positive comments and encouragement sent to her by both female and male individuals urging that contraception medication be considered a medical necessity.\nQ: According to the passage, what did some people not want women speaking out about?\nA: Fluke\nB: Male individuals\nC: Medical costs\nD: Women’s health\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.8522623777389526,
+              false
+            ]
+          ],
+          [
+            [
+              -5.0482025146484375,
+              false
+            ]
+          ],
+          [
+            [
+              -7.020623207092285,
+              false
+            ]
+          ],
+          [
+            [
+              -0.19665512442588806,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.8522623777389526,
+            false
+          ],
+          [
+            -5.0482025146484375,
+            false
+          ],
+          [
+            -7.020623207092285,
+            false
+          ],
+          [
+            -0.19665512442588806,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f2f721784a5181fd4d00d44f4bd6f2e7f496158ec5e29fc991f9b29b6f28d1f3",
+        "prompt_hash": "f8bb72677424b97d0a436decb323cfcc1ba5c3b00fdac1e4747bcb7bb6238ed2",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Philae_space_probe_lands_on_comet",
+          "question_number": 1,
+          "flores_passage": "Comets may possibly have been a source of water delivery to the earth along with organic matter that can form proteins and support life. Scientists hope to understand how planets form, especially how the Earth formed, since comets collided with the Earth long ago.",
+          "question": "What is something that scientists want to figure out?",
+          "mc_answer1": "How Earth was formed",
+          "mc_answer2": "When comets collided with Earth",
+          "mc_answer3": "How proteins are formed",
+          "mc_answer4": "What organic matter is",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Comets may possibly have been a source of water delivery to the earth along with organic matter that can form proteins and support life. Scientists hope to understand how planets form, especially how the Earth formed, since comets collided with the Earth long ago.\nQ: What is something that scientists want to figure out?\nA: How Earth was formed\nB: When comets collided with Earth\nC: How proteins are formed\nD: What organic matter is\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Comets may possibly have been a source of water delivery to the earth along with organic matter that can form proteins and support life. Scientists hope to understand how planets form, especially how the Earth formed, since comets collided with the Earth long ago.\nQ: What is something that scientists want to figure out?\nA: How Earth was formed\nB: When comets collided with Earth\nC: How proteins are formed\nD: What organic matter is\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Comets may possibly have been a source of water delivery to the earth along with organic matter that can form proteins and support life. Scientists hope to understand how planets form, especially how the Earth formed, since comets collided with the Earth long ago.\nQ: What is something that scientists want to figure out?\nA: How Earth was formed\nB: When comets collided with Earth\nC: How proteins are formed\nD: What organic matter is\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Comets may possibly have been a source of water delivery to the earth along with organic matter that can form proteins and support life. Scientists hope to understand how planets form, especially how the Earth formed, since comets collided with the Earth long ago.\nQ: What is something that scientists want to figure out?\nA: How Earth was formed\nB: When comets collided with Earth\nC: How proteins are formed\nD: What organic matter is\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.006793971639126539,
+              true
+            ]
+          ],
+          [
+            [
+              -6.368959426879883,
+              false
+            ]
+          ],
+          [
+            [
+              -7.65472412109375,
+              false
+            ]
+          ],
+          [
+            [
+              -8.411138534545898,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.006793971639126539,
+            true
+          ],
+          [
+            -6.368959426879883,
+            false
+          ],
+          [
+            -7.65472412109375,
+            false
+          ],
+          [
+            -8.411138534545898,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "ff0ec31405648d55bab1934440333c3bb83878fedf3b1bb99a460d361a1ce0c3",
+        "prompt_hash": "2407bd487e976365c957b55069371ca1f59297e7c9a071b88535905d41399cde",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Corcovado_National_Park",
+          "question_number": 2,
+          "flores_passage": "Permits must be reserved in advance. You must have a permit to stay overnight at Sirena. Sirena is the only ranger station that offers dormitory lodging and hot meals in addition to camping. La Leona, San Pedrillo, and Los Patos offer only camping with no food service. It is possible to secure park permits directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards The Park Service (MINAE) does not issue park permits more than one month in advance of anticipated arrival. CafeNet El Sol offers a reservation service for a fee of US$30, or $10 for one-day passes; details on their Corcovado page.",
+          "question": "According to the passage, where could you reserve a park permit if you wanted to use cash instead of credit?",
+          "mc_answer1": "La Leona",
+          "mc_answer2": "Sirena",
+          "mc_answer3": "Puerto Jiménez",
+          "mc_answer4": "CafeNet El Sol",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Permits must be reserved in advance. You must have a permit to stay overnight at Sirena. Sirena is the only ranger station that offers dormitory lodging and hot meals in addition to camping. La Leona, San Pedrillo, and Los Patos offer only camping with no food service. It is possible to secure park permits directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards The Park Service (MINAE) does not issue park permits more than one month in advance of anticipated arrival. CafeNet El Sol offers a reservation service for a fee of US$30, or $10 for one-day passes; details on their Corcovado page.\nQ: According to the passage, where could you reserve a park permit if you wanted to use cash instead of credit?\nA: La Leona\nB: Sirena\nC: Puerto Jiménez\nD: CafeNet El Sol\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Permits must be reserved in advance. You must have a permit to stay overnight at Sirena. Sirena is the only ranger station that offers dormitory lodging and hot meals in addition to camping. La Leona, San Pedrillo, and Los Patos offer only camping with no food service. It is possible to secure park permits directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards The Park Service (MINAE) does not issue park permits more than one month in advance of anticipated arrival. CafeNet El Sol offers a reservation service for a fee of US$30, or $10 for one-day passes; details on their Corcovado page.\nQ: According to the passage, where could you reserve a park permit if you wanted to use cash instead of credit?\nA: La Leona\nB: Sirena\nC: Puerto Jiménez\nD: CafeNet El Sol\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Permits must be reserved in advance. You must have a permit to stay overnight at Sirena. Sirena is the only ranger station that offers dormitory lodging and hot meals in addition to camping. La Leona, San Pedrillo, and Los Patos offer only camping with no food service. It is possible to secure park permits directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards The Park Service (MINAE) does not issue park permits more than one month in advance of anticipated arrival. CafeNet El Sol offers a reservation service for a fee of US$30, or $10 for one-day passes; details on their Corcovado page.\nQ: According to the passage, where could you reserve a park permit if you wanted to use cash instead of credit?\nA: La Leona\nB: Sirena\nC: Puerto Jiménez\nD: CafeNet El Sol\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Permits must be reserved in advance. You must have a permit to stay overnight at Sirena. Sirena is the only ranger station that offers dormitory lodging and hot meals in addition to camping. La Leona, San Pedrillo, and Los Patos offer only camping with no food service. It is possible to secure park permits directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards The Park Service (MINAE) does not issue park permits more than one month in advance of anticipated arrival. CafeNet El Sol offers a reservation service for a fee of US$30, or $10 for one-day passes; details on their Corcovado page.\nQ: According to the passage, where could you reserve a park permit if you wanted to use cash instead of credit?\nA: La Leona\nB: Sirena\nC: Puerto Jiménez\nD: CafeNet El Sol\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.9489336013793945,
+              false
+            ]
+          ],
+          [
+            [
+              -3.892022132873535,
+              false
+            ]
+          ],
+          [
+            [
+              -0.05724233761429787,
+              true
+            ]
+          ],
+          [
+            [
+              -7.260865211486816,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.9489336013793945,
+            false
+          ],
+          [
+            -3.892022132873535,
+            false
+          ],
+          [
+            -0.05724233761429787,
+            true
+          ],
+          [
+            -7.260865211486816,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "09ee43b148b76ae846ae33774225f2e657c4326157540253767f460bd52dbcf5",
+        "prompt_hash": "504cd89aee16b765ed31d081bad82ac507132848dc7dc4c5c8b39301a74b7be3",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Chris_Huhne_resigns_from_UK_Cabinet_to_face_charges",
+          "question_number": 1,
+          "flores_passage": "The Director of Public Prosecutions, Kier Starmer QC, gave a statement this morning announcing the prosecution of both Huhne and Pryce. Huhne has resigned and he will be replaced in the Cabinet by Ed Davey MP. Norman Lamb MP is expected to take the Business Minister job Davey is vacating. Huhne and Pryce are scheduled to appear at the Westminster Magistrates Court on February 16.",
+          "question": "Due to the prosecution, who will take Huhne’s Cabinet position?",
+          "mc_answer1": "Pryce",
+          "mc_answer2": "Davey",
+          "mc_answer3": "Starmer",
+          "mc_answer4": "Lamb",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: The Director of Public Prosecutions, Kier Starmer QC, gave a statement this morning announcing the prosecution of both Huhne and Pryce. Huhne has resigned and he will be replaced in the Cabinet by Ed Davey MP. Norman Lamb MP is expected to take the Business Minister job Davey is vacating. Huhne and Pryce are scheduled to appear at the Westminster Magistrates Court on February 16.\nQ: Due to the prosecution, who will take Huhne’s Cabinet position?\nA: Pryce\nB: Davey\nC: Starmer\nD: Lamb\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Director of Public Prosecutions, Kier Starmer QC, gave a statement this morning announcing the prosecution of both Huhne and Pryce. Huhne has resigned and he will be replaced in the Cabinet by Ed Davey MP. Norman Lamb MP is expected to take the Business Minister job Davey is vacating. Huhne and Pryce are scheduled to appear at the Westminster Magistrates Court on February 16.\nQ: Due to the prosecution, who will take Huhne’s Cabinet position?\nA: Pryce\nB: Davey\nC: Starmer\nD: Lamb\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Director of Public Prosecutions, Kier Starmer QC, gave a statement this morning announcing the prosecution of both Huhne and Pryce. Huhne has resigned and he will be replaced in the Cabinet by Ed Davey MP. Norman Lamb MP is expected to take the Business Minister job Davey is vacating. Huhne and Pryce are scheduled to appear at the Westminster Magistrates Court on February 16.\nQ: Due to the prosecution, who will take Huhne’s Cabinet position?\nA: Pryce\nB: Davey\nC: Starmer\nD: Lamb\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Director of Public Prosecutions, Kier Starmer QC, gave a statement this morning announcing the prosecution of both Huhne and Pryce. Huhne has resigned and he will be replaced in the Cabinet by Ed Davey MP. Norman Lamb MP is expected to take the Business Minister job Davey is vacating. Huhne and Pryce are scheduled to appear at the Westminster Magistrates Court on February 16.\nQ: Due to the prosecution, who will take Huhne’s Cabinet position?\nA: Pryce\nB: Davey\nC: Starmer\nD: Lamb\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.722808599472046,
+              false
+            ]
+          ],
+          [
+            [
+              -2.180082082748413,
+              false
+            ]
+          ],
+          [
+            [
+              -6.075408458709717,
+              false
+            ]
+          ],
+          [
+            [
+              -0.17240114510059357,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.722808599472046,
+            false
+          ],
+          [
+            -2.180082082748413,
+            false
+          ],
+          [
+            -6.075408458709717,
+            false
+          ],
+          [
+            -0.17240114510059357,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "fe52f7e9934f09960f44f262c3760c48863b54d7d81d7b6b5335b6af80fa6d30",
+        "prompt_hash": "a5dd7c9903bcdaba7b812ebd3ea537b9971476f67643be5fe811db9ca885d7b6",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Bugs/Insects_Intro",
+          "question_number": 1,
+          "flores_passage": "Insects were the first animals to take to the air. Their ability to fly helped them evade enemies more easily and find food and mates more efficiently. Most insects have the advantage of being able to fold their wings back along the body. This gives them a wider range of small places to hide from predators. Today, the only insects that cannot fold back their wings are dragon flies and mayflies.",
+          "question": "An insect’s ability to fold their wings back increases which of the following?",
+          "mc_answer1": "Flight speed",
+          "mc_answer2": "Food supply",
+          "mc_answer3": "Hiding spaces",
+          "mc_answer4": "Finding mates",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Insects were the first animals to take to the air. Their ability to fly helped them evade enemies more easily and find food and mates more efficiently. Most insects have the advantage of being able to fold their wings back along the body. This gives them a wider range of small places to hide from predators. Today, the only insects that cannot fold back their wings are dragon flies and mayflies.\nQ: An insect’s ability to fold their wings back increases which of the following?\nA: Flight speed\nB: Food supply\nC: Hiding spaces\nD: Finding mates\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Insects were the first animals to take to the air. Their ability to fly helped them evade enemies more easily and find food and mates more efficiently. Most insects have the advantage of being able to fold their wings back along the body. This gives them a wider range of small places to hide from predators. Today, the only insects that cannot fold back their wings are dragon flies and mayflies.\nQ: An insect’s ability to fold their wings back increases which of the following?\nA: Flight speed\nB: Food supply\nC: Hiding spaces\nD: Finding mates\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Insects were the first animals to take to the air. Their ability to fly helped them evade enemies more easily and find food and mates more efficiently. Most insects have the advantage of being able to fold their wings back along the body. This gives them a wider range of small places to hide from predators. Today, the only insects that cannot fold back their wings are dragon flies and mayflies.\nQ: An insect’s ability to fold their wings back increases which of the following?\nA: Flight speed\nB: Food supply\nC: Hiding spaces\nD: Finding mates\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Insects were the first animals to take to the air. Their ability to fly helped them evade enemies more easily and find food and mates more efficiently. Most insects have the advantage of being able to fold their wings back along the body. This gives them a wider range of small places to hide from predators. Today, the only insects that cannot fold back their wings are dragon flies and mayflies.\nQ: An insect’s ability to fold their wings back increases which of the following?\nA: Flight speed\nB: Food supply\nC: Hiding spaces\nD: Finding mates\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.820352554321289,
+              false
+            ]
+          ],
+          [
+            [
+              -5.949071884155273,
+              false
+            ]
+          ],
+          [
+            [
+              -0.06579965353012085,
+              true
+            ]
+          ],
+          [
+            [
+              -6.773512840270996,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.820352554321289,
+            false
+          ],
+          [
+            -5.949071884155273,
+            false
+          ],
+          [
+            -0.06579965353012085,
+            true
+          ],
+          [
+            -6.773512840270996,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "584b9f42537b6066beebbd59e49c0225893243080753e22858ac2581ab28d416",
+        "prompt_hash": "e32a16ddd262f650dfb66efbc61b03bd9dc6c5f96b5e2c35b5242b8ecc3dca52",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792569523.1681461,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

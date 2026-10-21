@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Past_events/Wikimania_2018_Cape_Town_Guidebook",
+          "question_number": 2,
+          "flores_passage": "MetroRail has two classes on commuter trains in and around Cape Town: MetroPlus (also called First Class) and Metro (called Third Class). MetroPlus is more comfortable and less crowded but slightly more expensive, though still cheaper than normal metro tickets in Europe. Every train has both MetroPlus and Metro coaches; the MetroPlus coaches are always on the end of the train nearest Cape Town.",
+          "question": "According to the passage, what does every commuter train in Cape Town have?",
+          "mc_answer1": "Three different classes",
+          "mc_answer2": "Both First and Third class coaches",
+          "mc_answer3": "A less crowded Metro coach",
+          "mc_answer4": "The same ticket price for both classes",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: MetroRail has two classes on commuter trains in and around Cape Town: MetroPlus (also called First Class) and Metro (called Third Class). MetroPlus is more comfortable and less crowded but slightly more expensive, though still cheaper than normal metro tickets in Europe. Every train has both MetroPlus and Metro coaches; the MetroPlus coaches are always on the end of the train nearest Cape Town.\nQ: According to the passage, what does every commuter train in Cape Town have?\nA: Three different classes\nB: Both First and Third class coaches\nC: A less crowded Metro coach\nD: The same ticket price for both classes\nAnswer:",
+            " A"
+          ],
+          [
+            "P: MetroRail has two classes on commuter trains in and around Cape Town: MetroPlus (also called First Class) and Metro (called Third Class). MetroPlus is more comfortable and less crowded but slightly more expensive, though still cheaper than normal metro tickets in Europe. Every train has both MetroPlus and Metro coaches; the MetroPlus coaches are always on the end of the train nearest Cape Town.\nQ: According to the passage, what does every commuter train in Cape Town have?\nA: Three different classes\nB: Both First and Third class coaches\nC: A less crowded Metro coach\nD: The same ticket price for both classes\nAnswer:",
+            " B"
+          ],
+          [
+            "P: MetroRail has two classes on commuter trains in and around Cape Town: MetroPlus (also called First Class) and Metro (called Third Class). MetroPlus is more comfortable and less crowded but slightly more expensive, though still cheaper than normal metro tickets in Europe. Every train has both MetroPlus and Metro coaches; the MetroPlus coaches are always on the end of the train nearest Cape Town.\nQ: According to the passage, what does every commuter train in Cape Town have?\nA: Three different classes\nB: Both First and Third class coaches\nC: A less crowded Metro coach\nD: The same ticket price for both classes\nAnswer:",
+            " C"
+          ],
+          [
+            "P: MetroRail has two classes on commuter trains in and around Cape Town: MetroPlus (also called First Class) and Metro (called Third Class). MetroPlus is more comfortable and less crowded but slightly more expensive, though still cheaper than normal metro tickets in Europe. Every train has both MetroPlus and Metro coaches; the MetroPlus coaches are always on the end of the train nearest Cape Town.\nQ: According to the passage, what does every commuter train in Cape Town have?\nA: Three different classes\nB: Both First and Third class coaches\nC: A less crowded Metro coach\nD: The same ticket price for both classes\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.620822429656982,
+              false
+            ]
+          ],
+          [
+            [
+              -0.02798408828675747,
+              true
+            ]
+          ],
+          [
+            [
+              -7.458592891693115,
+              false
+            ]
+          ],
+          [
+            [
+              -8.432863235473633,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.620822429656982,
+            false
+          ],
+          [
+            -0.02798408828675747,
+            true
+          ],
+          [
+            -7.458592891693115,
+            false
+          ],
+          [
+            -8.432863235473633,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a2ab39e56b5c833e2da82b67987b4ce6ff28fae179a60a6b41704972ad490ed5",
+        "prompt_hash": "0c4ce79c31d784c82cd22f6f272ffd0eb59550f518ecea91b1523b35171a8a90",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Canyoning",
+          "question_number": 1,
+          "flores_passage": "Canyoning (or: canyoneering) is about going in a bottom of a canyon, which is either dry or full of water. Canyoning combines elements from swimming, climbing and jumping--but requires relatively little training or physical shape to get started (compared to rock climbing, scuba diving or alpine skiing, for example).",
+          "question": "Which of the following is not required to begin canyoneering?",
+          "mc_answer1": "Jumping capability ",
+          "mc_answer2": "A small amount of training",
+          "mc_answer3": "The ability to swim",
+          "mc_answer4": "Peak physical condition",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Canyoning (or: canyoneering) is about going in a bottom of a canyon, which is either dry or full of water. Canyoning combines elements from swimming, climbing and jumping--but requires relatively little training or physical shape to get started (compared to rock climbing, scuba diving or alpine skiing, for example).\nQ: Which of the following is not required to begin canyoneering?\nA: Jumping capability \nB: A small amount of training\nC: The ability to swim\nD: Peak physical condition\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Canyoning (or: canyoneering) is about going in a bottom of a canyon, which is either dry or full of water. Canyoning combines elements from swimming, climbing and jumping--but requires relatively little training or physical shape to get started (compared to rock climbing, scuba diving or alpine skiing, for example).\nQ: Which of the following is not required to begin canyoneering?\nA: Jumping capability \nB: A small amount of training\nC: The ability to swim\nD: Peak physical condition\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Canyoning (or: canyoneering) is about going in a bottom of a canyon, which is either dry or full of water. Canyoning combines elements from swimming, climbing and jumping--but requires relatively little training or physical shape to get started (compared to rock climbing, scuba diving or alpine skiing, for example).\nQ: Which of the following is not required to begin canyoneering?\nA: Jumping capability \nB: A small amount of training\nC: The ability to swim\nD: Peak physical condition\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Canyoning (or: canyoneering) is about going in a bottom of a canyon, which is either dry or full of water. Canyoning combines elements from swimming, climbing and jumping--but requires relatively little training or physical shape to get started (compared to rock climbing, scuba diving or alpine skiing, for example).\nQ: Which of the following is not required to begin canyoneering?\nA: Jumping capability \nB: A small amount of training\nC: The ability to swim\nD: Peak physical condition\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.3294334411621094,
+              false
+            ]
+          ],
+          [
+            [
+              -5.461244583129883,
+              false
+            ]
+          ],
+          [
+            [
+              -6.557674407958984,
+              false
+            ]
+          ],
+          [
+            [
+              -0.05630311369895935,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.3294334411621094,
+            false
+          ],
+          [
+            -5.461244583129883,
+            false
+          ],
+          [
+            -6.557674407958984,
+            false
+          ],
+          [
+            -0.05630311369895935,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "2d9d5ff093e9f14bbafc13412790c3f09f9dc652cc2dde0f25e265b1d04244f0",
+        "prompt_hash": "054fd1327cd382485de3fd35fc5228b2d4d4a701444a401d03a282450ecf5128",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Australian_treasurer_enters_nuclear_debate",
+          "question_number": 1,
+          "flores_passage": "\"Peter Costello, Australian treasurer and the man most likely to succeed Prime Minister John Howard as Liberal party leader has thrown his support behind a nuclear power industry in Australia. Mr Costello said that when nuclear power generation becomes economically viable, Australia should pursue its use. \"\"If it becomes commercial, we should have it. That is, there's no in-principle objection to nuclear energy\"\" Mr Costello said.\"",
+          "question": "Who is the leader of Australia's Liberal Party?",
+          "mc_answer1": "John Kerr",
+          "mc_answer2": "Malcolm Fraser",
+          "mc_answer3": "Peter Costello",
+          "mc_answer4": "John Howard",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: \"Peter Costello, Australian treasurer and the man most likely to succeed Prime Minister John Howard as Liberal party leader has thrown his support behind a nuclear power industry in Australia. Mr Costello said that when nuclear power generation becomes economically viable, Australia should pursue its use. \"\"If it becomes commercial, we should have it. That is, there's no in-principle objection to nuclear energy\"\" Mr Costello said.\"\nQ: Who is the leader of Australia's Liberal Party?\nA: John Kerr\nB: Malcolm Fraser\nC: Peter Costello\nD: John Howard\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Peter Costello, Australian treasurer and the man most likely to succeed Prime Minister John Howard as Liberal party leader has thrown his support behind a nuclear power industry in Australia. Mr Costello said that when nuclear power generation becomes economically viable, Australia should pursue its use. \"\"If it becomes commercial, we should have it. That is, there's no in-principle objection to nuclear energy\"\" Mr Costello said.\"\nQ: Who is the leader of Australia's Liberal Party?\nA: John Kerr\nB: Malcolm Fraser\nC: Peter Costello\nD: John Howard\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Peter Costello, Australian treasurer and the man most likely to succeed Prime Minister John Howard as Liberal party leader has thrown his support behind a nuclear power industry in Australia. Mr Costello said that when nuclear power generation becomes economically viable, Australia should pursue its use. \"\"If it becomes commercial, we should have it. That is, there's no in-principle objection to nuclear energy\"\" Mr Costello said.\"\nQ: Who is the leader of Australia's Liberal Party?\nA: John Kerr\nB: Malcolm Fraser\nC: Peter Costello\nD: John Howard\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Peter Costello, Australian treasurer and the man most likely to succeed Prime Minister John Howard as Liberal party leader has thrown his support behind a nuclear power industry in Australia. Mr Costello said that when nuclear power generation becomes economically viable, Australia should pursue its use. \"\"If it becomes commercial, we should have it. That is, there's no in-principle objection to nuclear energy\"\" Mr Costello said.\"\nQ: Who is the leader of Australia's Liberal Party?\nA: John Kerr\nB: Malcolm Fraser\nC: Peter Costello\nD: John Howard\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.194234371185303,
+              false
+            ]
+          ],
+          [
+            [
+              -8.487988471984863,
+              false
+            ]
+          ],
+          [
+            [
+              -4.105831623077393,
+              false
+            ]
+          ],
+          [
+            [
+              -0.10298570245504379,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.194234371185303,
+            false
+          ],
+          [
+            -8.487988471984863,
+            false
+          ],
+          [
+            -4.105831623077393,
+            false
+          ],
+          [
+            -0.10298570245504379,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a700fff09d4e98f6bdecc070bace42237c66e223840abf3843064b5abf2e0b9a",
+        "prompt_hash": "b5f7c31a80cd1cb1c6ee5dfa2e0ec582e4f4662545157ff2f4853a6c6759c80d",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/Moon",
+          "question_number": 1,
+          "flores_passage": "The surface of the Moon is made of rocks and dust. The outer layer of the Moon is called the crust. The crust is about 70 km thick on the near side and 100 km thick on the far side. It is thinner under the maria and thicker under the highlands. There may be more maria on the near side because the crust is thinner. It was easier for lava to rise up to the surface.",
+          "question": "According to the passage, which of the following statements accurately describes the Moon’s outer layer?",
+          "mc_answer1": "There may be less maria on the far side",
+          "mc_answer2": "There may be less maria under the highlands",
+          "mc_answer3": "The near side has a thicker crust",
+          "mc_answer4": "The crust is thinner under the highlands",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The surface of the Moon is made of rocks and dust. The outer layer of the Moon is called the crust. The crust is about 70 km thick on the near side and 100 km thick on the far side. It is thinner under the maria and thicker under the highlands. There may be more maria on the near side because the crust is thinner. It was easier for lava to rise up to the surface.\nQ: According to the passage, which of the following statements accurately describes the Moon’s outer layer?\nA: There may be less maria on the far side\nB: There may be less maria under the highlands\nC: The near side has a thicker crust\nD: The crust is thinner under the highlands\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The surface of the Moon is made of rocks and dust. The outer layer of the Moon is called the crust. The crust is about 70 km thick on the near side and 100 km thick on the far side. It is thinner under the maria and thicker under the highlands. There may be more maria on the near side because the crust is thinner. It was easier for lava to rise up to the surface.\nQ: According to the passage, which of the following statements accurately describes the Moon’s outer layer?\nA: There may be less maria on the far side\nB: There may be less maria under the highlands\nC: The near side has a thicker crust\nD: The crust is thinner under the highlands\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The surface of the Moon is made of rocks and dust. The outer layer of the Moon is called the crust. The crust is about 70 km thick on the near side and 100 km thick on the far side. It is thinner under the maria and thicker under the highlands. There may be more maria on the near side because the crust is thinner. It was easier for lava to rise up to the surface.\nQ: According to the passage, which of the following statements accurately describes the Moon’s outer layer?\nA: There may be less maria on the far side\nB: There may be less maria under the highlands\nC: The near side has a thicker crust\nD: The crust is thinner under the highlands\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The surface of the Moon is made of rocks and dust. The outer layer of the Moon is called the crust. The crust is about 70 km thick on the near side and 100 km thick on the far side. It is thinner under the maria and thicker under the highlands. There may be more maria on the near side because the crust is thinner. It was easier for lava to rise up to the surface.\nQ: According to the passage, which of the following statements accurately describes the Moon’s outer layer?\nA: There may be less maria on the far side\nB: There may be less maria under the highlands\nC: The near side has a thicker crust\nD: The crust is thinner under the highlands\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.8846238851547241,
+              false
+            ]
+          ],
+          [
+            [
+              -3.670569896697998,
+              false
+            ]
+          ],
+          [
+            [
+              -0.3038686513900757,
+              true
+            ]
+          ],
+          [
+            [
+              -3.4317679405212402,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.8846238851547241,
+            false
+          ],
+          [
+            -3.670569896697998,
+            false
+          ],
+          [
+            -0.3038686513900757,
+            true
+          ],
+          [
+            -3.4317679405212402,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "3d9f3eb634d36db5809c5580a5c47a73e142ab696ba29529426b65d7b4c42814",
+        "prompt_hash": "804ee99200e389399b27eace480c14ddd388b6d95559ecffdbdefe74f265e2a4",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Battle_of_Britain",
+          "question_number": 1,
+          "flores_passage": "With the battle for France over, Germany began to get ready to invade the island of Britain. Germany code-named the attack “Operation Sealion”. Most of the British Army's heavy weapons and supplies had been lost when it evacuated from Dunkirk, so the army was fairly weak. But the Royal Navy was still much stronger than the German Navy (“Kriegsmarine”) and could have destroyed any invasion fleet sent across the English Channel. However, very few Royal Navy ships were based near the likely invasion routes as the admirals were afraid they would be sunk by German air attack.",
+          "question": "Operation Sealion was an invasion of which country?",
+          "mc_answer1": "France",
+          "mc_answer2": "Poland",
+          "mc_answer3": "Germany",
+          "mc_answer4": "Britain",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: With the battle for France over, Germany began to get ready to invade the island of Britain. Germany code-named the attack “Operation Sealion”. Most of the British Army's heavy weapons and supplies had been lost when it evacuated from Dunkirk, so the army was fairly weak. But the Royal Navy was still much stronger than the German Navy (“Kriegsmarine”) and could have destroyed any invasion fleet sent across the English Channel. However, very few Royal Navy ships were based near the likely invasion routes as the admirals were afraid they would be sunk by German air attack.\nQ: Operation Sealion was an invasion of which country?\nA: France\nB: Poland\nC: Germany\nD: Britain\nAnswer:",
+            " A"
+          ],
+          [
+            "P: With the battle for France over, Germany began to get ready to invade the island of Britain. Germany code-named the attack “Operation Sealion”. Most of the British Army's heavy weapons and supplies had been lost when it evacuated from Dunkirk, so the army was fairly weak. But the Royal Navy was still much stronger than the German Navy (“Kriegsmarine”) and could have destroyed any invasion fleet sent across the English Channel. However, very few Royal Navy ships were based near the likely invasion routes as the admirals were afraid they would be sunk by German air attack.\nQ: Operation Sealion was an invasion of which country?\nA: France\nB: Poland\nC: Germany\nD: Britain\nAnswer:",
+            " B"
+          ],
+          [
+            "P: With the battle for France over, Germany began to get ready to invade the island of Britain. Germany code-named the attack “Operation Sealion”. Most of the British Army's heavy weapons and supplies had been lost when it evacuated from Dunkirk, so the army was fairly weak. But the Royal Navy was still much stronger than the German Navy (“Kriegsmarine”) and could have destroyed any invasion fleet sent across the English Channel. However, very few Royal Navy ships were based near the likely invasion routes as the admirals were afraid they would be sunk by German air attack.\nQ: Operation Sealion was an invasion of which country?\nA: France\nB: Poland\nC: Germany\nD: Britain\nAnswer:",
+            " C"
+          ],
+          [
+            "P: With the battle for France over, Germany began to get ready to invade the island of Britain. Germany code-named the attack “Operation Sealion”. Most of the British Army's heavy weapons and supplies had been lost when it evacuated from Dunkirk, so the army was fairly weak. But the Royal Navy was still much stronger than the German Navy (“Kriegsmarine”) and could have destroyed any invasion fleet sent across the English Channel. However, very few Royal Navy ships were based near the likely invasion routes as the admirals were afraid they would be sunk by German air attack.\nQ: Operation Sealion was an invasion of which country?\nA: France\nB: Poland\nC: Germany\nD: Britain\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.645979404449463,
+              false
+            ]
+          ],
+          [
+            [
+              -7.049636363983154,
+              false
+            ]
+          ],
+          [
+            [
+              -7.662214756011963,
+              false
+            ]
+          ],
+          [
+            [
+              -0.03683306649327278,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.645979404449463,
+            false
+          ],
+          [
+            -7.049636363983154,
+            false
+          ],
+          [
+            -7.662214756011963,
+            false
+          ],
+          [
+            -0.03683306649327278,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "3774b4c8eded878527f98242ee3f252b514a41f8a7eef9215e4eceb2186edeae",
+        "prompt_hash": "386ea938e00f384f47e62253298070cf33115e3fd3ce5c055460307bc3ebc048",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792569120.7970407,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 5,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Victoria_Falls",
+          "question_number": 1,
+          "flores_passage": "Victoria Falls is a town in the western portion of Zimbabwe, across the border from Livingstone, Zambia, and near Botswana. The town lies immediately next to the falls, and they are the major attraction, but this popular tourist destination offers both adventure seekers and sightseers plenty of opportunities for a longer stay. In the rainy season (November to March), the water volume will be higher and the Falls will be more dramatic. You are guaranteed to get wet if you cross the bridge or walk along the trails winding near the Falls. On the other hand, it is precisely because the volume of water is so high that your viewing of the actual Falls will be obscured—by all the water!",
+          "question": "According to the passage, when should travelers visit the Falls if they are seeking unobstructed views?",
+          "mc_answer1": "During tourist season",
+          "mc_answer2": "When the water volume is high",
+          "mc_answer3": "Outside of the rainy season",
+          "mc_answer4": "November through March",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Victoria Falls is a town in the western portion of Zimbabwe, across the border from Livingstone, Zambia, and near Botswana. The town lies immediately next to the falls, and they are the major attraction, but this popular tourist destination offers both adventure seekers and sightseers plenty of opportunities for a longer stay. In the rainy season (November to March), the water volume will be higher and the Falls will be more dramatic. You are guaranteed to get wet if you cross the bridge or walk along the trails winding near the Falls. On the other hand, it is precisely because the volume of water is so high that your viewing of the actual Falls will be obscured—by all the water!\nQ: According to the passage, when should travelers visit the Falls if they are seeking unobstructed views?\nA: During tourist season\nB: When the water volume is high\nC: Outside of the rainy season\nD: November through March\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Victoria Falls is a town in the western portion of Zimbabwe, across the border from Livingstone, Zambia, and near Botswana. The town lies immediately next to the falls, and they are the major attraction, but this popular tourist destination offers both adventure seekers and sightseers plenty of opportunities for a longer stay. In the rainy season (November to March), the water volume will be higher and the Falls will be more dramatic. You are guaranteed to get wet if you cross the bridge or walk along the trails winding near the Falls. On the other hand, it is precisely because the volume of water is so high that your viewing of the actual Falls will be obscured—by all the water!\nQ: According to the passage, when should travelers visit the Falls if they are seeking unobstructed views?\nA: During tourist season\nB: When the water volume is high\nC: Outside of the rainy season\nD: November through March\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Victoria Falls is a town in the western portion of Zimbabwe, across the border from Livingstone, Zambia, and near Botswana. The town lies immediately next to the falls, and they are the major attraction, but this popular tourist destination offers both adventure seekers and sightseers plenty of opportunities for a longer stay. In the rainy season (November to March), the water volume will be higher and the Falls will be more dramatic. You are guaranteed to get wet if you cross the bridge or walk along the trails winding near the Falls. On the other hand, it is precisely because the volume of water is so high that your viewing of the actual Falls will be obscured—by all the water!\nQ: According to the passage, when should travelers visit the Falls if they are seeking unobstructed views?\nA: During tourist season\nB: When the water volume is high\nC: Outside of the rainy season\nD: November through March\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Victoria Falls is a town in the western portion of Zimbabwe, across the border from Livingstone, Zambia, and near Botswana. The town lies immediately next to the falls, and they are the major attraction, but this popular tourist destination offers both adventure seekers and sightseers plenty of opportunities for a longer stay. In the rainy season (November to March), the water volume will be higher and the Falls will be more dramatic. You are guaranteed to get wet if you cross the bridge or walk along the trails winding near the Falls. On the other hand, it is precisely because the volume of water is so high that your viewing of the actual Falls will be obscured—by all the water!\nQ: According to the passage, when should travelers visit the Falls if they are seeking unobstructed views?\nA: During tourist season\nB: When the water volume is high\nC: Outside of the rainy season\nD: November through March\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.0439741611480713,
+              false
+            ]
+          ],
+          [
+            [
+              -3.3783304691314697,
+              false
+            ]
+          ],
+          [
+            [
+              -0.3125365674495697,
+              true
+            ]
+          ],
+          [
+            [
+              -3.3477747440338135,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.0439741611480713,
+            false
+          ],
+          [
+            -3.3783304691314697,
+            false
+          ],
+          [
+            -0.3125365674495697,
+            true
+          ],
+          [
+            -3.3477747440338135,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "b7db439eea5a6f0c3dd255d98efdef0f3c5a777ca46d7e7b62f73e8d29c4e480",
+        "prompt_hash": "867a77781f38e844eaffb81437ae9311ed363039f896430b2851fe55c02aea6b",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:The_Elements/Hydrogen",
+          "question_number": 2,
+          "flores_passage": "Stars give off light and heat because of the energy made when hydrogen atoms are merged (or fused) together to form heavier elements. Scientists are working to create a reactor that can make energy in the same way. This, however, is a very hard problem to solve and will take many years before we see useful fusion reactors built.",
+          "question": "Which of the following would a useful fusion reactor create?",
+          "mc_answer1": "Stars",
+          "mc_answer2": "Atoms",
+          "mc_answer3": "Energy",
+          "mc_answer4": "Hydrogen",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Stars give off light and heat because of the energy made when hydrogen atoms are merged (or fused) together to form heavier elements. Scientists are working to create a reactor that can make energy in the same way. This, however, is a very hard problem to solve and will take many years before we see useful fusion reactors built.\nQ: Which of the following would a useful fusion reactor create?\nA: Stars\nB: Atoms\nC: Energy\nD: Hydrogen\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Stars give off light and heat because of the energy made when hydrogen atoms are merged (or fused) together to form heavier elements. Scientists are working to create a reactor that can make energy in the same way. This, however, is a very hard problem to solve and will take many years before we see useful fusion reactors built.\nQ: Which of the following would a useful fusion reactor create?\nA: Stars\nB: Atoms\nC: Energy\nD: Hydrogen\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Stars give off light and heat because of the energy made when hydrogen atoms are merged (or fused) together to form heavier elements. Scientists are working to create a reactor that can make energy in the same way. This, however, is a very hard problem to solve and will take many years before we see useful fusion reactors built.\nQ: Which of the following would a useful fusion reactor create?\nA: Stars\nB: Atoms\nC: Energy\nD: Hydrogen\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Stars give off light and heat because of the energy made when hydrogen atoms are merged (or fused) together to form heavier elements. Scientists are working to create a reactor that can make energy in the same way. This, however, is a very hard problem to solve and will take many years before we see useful fusion reactors built.\nQ: Which of the following would a useful fusion reactor create?\nA: Stars\nB: Atoms\nC: Energy\nD: Hydrogen\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.749960422515869,
+              false
+            ]
+          ],
+          [
+            [
+              -5.119116306304932,
+              false
+            ]
+          ],
+          [
+            [
+              -0.11358889937400818,
+              true
+            ]
+          ],
+          [
+            [
+              -4.433454990386963,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.749960422515869,
+            false
+          ],
+          [
+            -5.119116306304932,
+            false
+          ],
+          [
+            -0.11358889937400818,
+            true
+          ],
+          [
+            -4.433454990386963,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "813564889a7f2aaf8a66ac7b3ce22ffa08f11717544cf2240e2bc2c6bdcc7399",
+        "prompt_hash": "8ffd6474f261fac2e6707fe28cbd74b2d7afb7092fa2937c9daf130a9516ced2",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Senate_questions_Roberts_in_confirmation_hearings",
+          "question_number": 1,
+          "flores_passage": "\"Roberts flatly refused to say about when he believes life begins, an important question when considering the ethics of abortion, saying that it would be unethical to comment on the specifics of likely cases. He did, however, reiterate his earlier statement that Roe v. Wade was the \"\"settled law of the land\"\", emphasizing the importance of consistent Supreme Court rulings. He also confirmed that he believed in the implied right to privacy which the Roe decision depended upon.\"",
+          "question": "Which belief did Roberts refrain from validating?",
+          "mc_answer1": "The significance of consistent Supreme Court rulings",
+          "mc_answer2": "The beginning of life",
+          "mc_answer3": "The right to privacy",
+          "mc_answer4": "The ethicality of discussing cases",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"Roberts flatly refused to say about when he believes life begins, an important question when considering the ethics of abortion, saying that it would be unethical to comment on the specifics of likely cases. He did, however, reiterate his earlier statement that Roe v. Wade was the \"\"settled law of the land\"\", emphasizing the importance of consistent Supreme Court rulings. He also confirmed that he believed in the implied right to privacy which the Roe decision depended upon.\"\nQ: Which belief did Roberts refrain from validating?\nA: The significance of consistent Supreme Court rulings\nB: The beginning of life\nC: The right to privacy\nD: The ethicality of discussing cases\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Roberts flatly refused to say about when he believes life begins, an important question when considering the ethics of abortion, saying that it would be unethical to comment on the specifics of likely cases. He did, however, reiterate his earlier statement that Roe v. Wade was the \"\"settled law of the land\"\", emphasizing the importance of consistent Supreme Court rulings. He also confirmed that he believed in the implied right to privacy which the Roe decision depended upon.\"\nQ: Which belief did Roberts refrain from validating?\nA: The significance of consistent Supreme Court rulings\nB: The beginning of life\nC: The right to privacy\nD: The ethicality of discussing cases\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Roberts flatly refused to say about when he believes life begins, an important question when considering the ethics of abortion, saying that it would be unethical to comment on the specifics of likely cases. He did, however, reiterate his earlier statement that Roe v. Wade was the \"\"settled law of the land\"\", emphasizing the importance of consistent Supreme Court rulings. He also confirmed that he believed in the implied right to privacy which the Roe decision depended upon.\"\nQ: Which belief did Roberts refrain from validating?\nA: The significance of consistent Supreme Court rulings\nB: The beginning of life\nC: The right to privacy\nD: The ethicality of discussing cases\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Roberts flatly refused to say about when he believes life begins, an important question when considering the ethics of abortion, saying that it would be unethical to comment on the specifics of likely cases. He did, however, reiterate his earlier statement that Roe v. Wade was the \"\"settled law of the land\"\", emphasizing the importance of consistent Supreme Court rulings. He also confirmed that he believed in the implied right to privacy which the Roe decision depended upon.\"\nQ: Which belief did Roberts refrain from validating?\nA: The significance of consistent Supreme Court rulings\nB: The beginning of life\nC: The right to privacy\nD: The ethicality of discussing cases\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.4470505714416504,
+              false
+            ]
+          ],
+          [
+            [
+              -0.3099255859851837,
+              true
+            ]
+          ],
+          [
+            [
+              -6.501754283905029,
+              false
+            ]
+          ],
+          [
+            [
+              -4.232950687408447,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.4470505714416504,
+            false
+          ],
+          [
+            -0.3099255859851837,
+            true
+          ],
+          [
+            -6.501754283905029,
+            false
+          ],
+          [
+            -4.232950687408447,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "97783292cb4ae875dc378a3dc3f3bd05276746f962ff7dd06e86c097c2f8e91c",
+        "prompt_hash": "2786c2c85af691f5cd543ecd20eef0968d2d0b2e8b25201d59bdc695e1c4547a",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Australian_Big_Brother_cleared_of_breaching_content_laws",
+          "question_number": 2,
+          "flores_passage": "The ACMA also found that despite the video being streamed on the Internet, Big Brother had not breached online content censorship laws as the media had not been stored on Big Brother's website. The Broadcasting Services Act provides for the regulation of Internet content, however to be considered Internet content, it must physically reside on a server.",
+          "question": "What parameters must media fall under in order to be considered internet content?",
+          "mc_answer1": "It must physically reside on a server",
+          "mc_answer2": "It cannot be stored on a website",
+          "mc_answer3": "It must be approved by the ACMA",
+          "mc_answer4": "It must be streamed on the internet",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The ACMA also found that despite the video being streamed on the Internet, Big Brother had not breached online content censorship laws as the media had not been stored on Big Brother's website. The Broadcasting Services Act provides for the regulation of Internet content, however to be considered Internet content, it must physically reside on a server.\nQ: What parameters must media fall under in order to be considered internet content?\nA: It must physically reside on a server\nB: It cannot be stored on a website\nC: It must be approved by the ACMA\nD: It must be streamed on the internet\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The ACMA also found that despite the video being streamed on the Internet, Big Brother had not breached online content censorship laws as the media had not been stored on Big Brother's website. The Broadcasting Services Act provides for the regulation of Internet content, however to be considered Internet content, it must physically reside on a server.\nQ: What parameters must media fall under in order to be considered internet content?\nA: It must physically reside on a server\nB: It cannot be stored on a website\nC: It must be approved by the ACMA\nD: It must be streamed on the internet\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The ACMA also found that despite the video being streamed on the Internet, Big Brother had not breached online content censorship laws as the media had not been stored on Big Brother's website. The Broadcasting Services Act provides for the regulation of Internet content, however to be considered Internet content, it must physically reside on a server.\nQ: What parameters must media fall under in order to be considered internet content?\nA: It must physically reside on a server\nB: It cannot be stored on a website\nC: It must be approved by the ACMA\nD: It must be streamed on the internet\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The ACMA also found that despite the video being streamed on the Internet, Big Brother had not breached online content censorship laws as the media had not been stored on Big Brother's website. The Broadcasting Services Act provides for the regulation of Internet content, however to be considered Internet content, it must physically reside on a server.\nQ: What parameters must media fall under in order to be considered internet content?\nA: It must physically reside on a server\nB: It cannot be stored on a website\nC: It must be approved by the ACMA\nD: It must be streamed on the internet\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.020996559411287308,
+              true
+            ]
+          ],
+          [
+            [
+              -5.8464131355285645,
+              false
+            ]
+          ],
+          [
+            [
+              -6.511476993560791,
+              false
+            ]
+          ],
+          [
+            [
+              -6.568756580352783,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.020996559411287308,
+            true
+          ],
+          [
+            -5.8464131355285645,
+            false
+          ],
+          [
+            -6.511476993560791,
+            false
+          ],
+          [
+            -6.568756580352783,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "93ca4ce9c85b8b2c46e080415335ec1a462dca7e3f0a5413fc2d9e7364450f3a",
+        "prompt_hash": "16c94fc1bdfd17a687fe3287693549c6a67cb2e3ac59a2aa6f34d2249a5068e2",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/National_Hockey_League_news:_March_22,_2008",
+          "question_number": 1,
+          "flores_passage": "Today's Player of the Day is Alex Ovechkin of the Washington Capitals. He had 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers. Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom; his second goal of the night was his 60th of the season, becoming the first player to score 60 or more goals in a season since 1995-96, when Jaromir Jagr and Mario Lemieux each reached that milestone.",
+          "question": "Who scored the game-winning goal for the Washington Capitals in the game against the Atlanta Thrashers?",
+          "mc_answer1": "Jaromir Jagr",
+          "mc_answer2": "Mario Lemieux",
+          "mc_answer3": "Alex Ovechkin",
+          "mc_answer4": "Nicklas Backstrom",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Today's Player of the Day is Alex Ovechkin of the Washington Capitals. He had 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers. Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom; his second goal of the night was his 60th of the season, becoming the first player to score 60 or more goals in a season since 1995-96, when Jaromir Jagr and Mario Lemieux each reached that milestone.\nQ: Who scored the game-winning goal for the Washington Capitals in the game against the Atlanta Thrashers?\nA: Jaromir Jagr\nB: Mario Lemieux\nC: Alex Ovechkin\nD: Nicklas Backstrom\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Today's Player of the Day is Alex Ovechkin of the Washington Capitals. He had 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers. Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom; his second goal of the night was his 60th of the season, becoming the first player to score 60 or more goals in a season since 1995-96, when Jaromir Jagr and Mario Lemieux each reached that milestone.\nQ: Who scored the game-winning goal for the Washington Capitals in the game against the Atlanta Thrashers?\nA: Jaromir Jagr\nB: Mario Lemieux\nC: Alex Ovechkin\nD: Nicklas Backstrom\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Today's Player of the Day is Alex Ovechkin of the Washington Capitals. He had 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers. Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom; his second goal of the night was his 60th of the season, becoming the first player to score 60 or more goals in a season since 1995-96, when Jaromir Jagr and Mario Lemieux each reached that milestone.\nQ: Who scored the game-winning goal for the Washington Capitals in the game against the Atlanta Thrashers?\nA: Jaromir Jagr\nB: Mario Lemieux\nC: Alex Ovechkin\nD: Nicklas Backstrom\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Today's Player of the Day is Alex Ovechkin of the Washington Capitals. He had 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers. Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom; his second goal of the night was his 60th of the season, becoming the first player to score 60 or more goals in a season since 1995-96, when Jaromir Jagr and Mario Lemieux each reached that milestone.\nQ: Who scored the game-winning goal for the Washington Capitals in the game against the Atlanta Thrashers?\nA: Jaromir Jagr\nB: Mario Lemieux\nC: Alex Ovechkin\nD: Nicklas Backstrom\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.411820888519287,
+              false
+            ]
+          ],
+          [
+            [
+              -4.994737148284912,
+              false
+            ]
+          ],
+          [
+            [
+              -3.1497626304626465,
+              false
+            ]
+          ],
+          [
+            [
+              -0.21463356912136078,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.411820888519287,
+            false
+          ],
+          [
+            -4.994737148284912,
+            false
+          ],
+          [
+            -3.1497626304626465,
+            false
+          ],
+          [
+            -0.21463356912136078,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "b3fcd95cc338ed2164ce2bbb451b8fc0a8e0e86e3d73fff0fc59ff8ea545fcb7",
+        "prompt_hash": "7823239ad1f343332f538abe0b1fe65ba9e49a7d3322da96a49a09757b4dd996",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": "5212caf",
+  "date": 1792567100.8731408,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}
