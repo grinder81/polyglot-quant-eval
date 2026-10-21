@@ -13,8 +13,8 @@ README are fixed; do not re-decide languages, tasks, metrics or scoring modes in
   Never silently compare across modes.
 - Canonical reference is BF16 on vLLM, RTX 5090. Stage 1 also reports explicitly labeled
   comparisons against llama.cpp BF16; never merge the two references.
-- Follow `docs/stage1-protocol.md` for Stage 1. The broader research direction is targeted
-  model adaptation for Bangla under a compression budget; Stage 1 makes no weight changes.
+- Compression is the primary experimental objective: measure per-language damage under deployment formats and test precision allocation at matched shipped bytes. Adaptation is secondary and requires an explicit user decision after compression evidence; sensitivity results guide placement rather than presuming attention or MLP targets.
+- Follow `docs/stage2-plan.md` for the approved sequence and gates. Historical Stage 1 scoring remains unchanged; canonical changes require explicit validation and new run identities.
 - One results schema: `schema/results.schema.json`. Rows are JSONL, append-only, CC-BY-4.0.
 - No UI. CLI, JSON, figures only.
 - Every delta table also prints the gap vs English. Never report a non-English delta without it.
