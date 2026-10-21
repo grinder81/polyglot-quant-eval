@@ -1,0 +1,14 @@
+{
+  "scope": "Vocabulary-only token and special-preserving roundtrip check; no endpoint validation",
+  "lock_sha256": "75486c22c0c25f7c6c9d3da6abfaaa0165babf4a5de24970147ab9d1488d9844",
+  "files": {
+    "/home/shohag/tiny-aya-stage1/models/tiny-aya-global-control-bf16.gguf": "0e2f666ac8fb50a7f53d14164147beeca35905b76b93eb90e0e3a963eb203b4b",
+    "/home/shohag/tiny-aya-stage1/llama-tokenizer-pinned-fix/build/bin/libllama.so": "82eb4435a7e680be716b44c2964fbf7da3649194dfe8563d2e8701717417535e",
+    "/home/shohag/tiny-aya-stage1/llama-python-compat/lib/python3.13/site-packages/llama_cpp/_internals.py": "1d7c702b0513bb2dcdeabdeb3475924d5ade0cf4029b2b9a65cf7df18f4e78cf",
+    "/home/shohag/tiny-aya-stage1/llama-python-compat/lib/python3.13/site-packages/llama_cpp/llama.py": "6673e5584b3c6d300a4c087690ae73505d70b93ad31cfcd5e62862c06fa85058",
+    "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/polyglot-a3-render/scripts/check_scoring_variant_tokens.py": "90d3a30d4c938b7a695389e49b85e91b41ca126b8e2c449a8b5c82806b2c55af"
+  },
+  "passed_contexts": 3600,
+  "passed_candidates": 14400,
+  "failures": []
+}
