@@ -1,0 +1,14 @@
+{
+  "scope": "Keyword screening only, not negation labels or model-error counts",
+  "matched_pairs": 300,
+  "pending_human_reviews": 300,
+  "screening_pair_counts": {
+    "en_hint_0_bn_hint_0": 227,
+    "en_hint_1_bn_hint_1": 42,
+    "en_hint_1_bn_hint_0": 25,
+    "en_hint_0_bn_hint_1": 6
+  },
+  "sample_lock_sha256": "7de16ffcfb75033d1c88ccc6299a00a4df956821f82dec580907539633f1321c",
+  "no_accuracy_analysis": true,
+  "packet_sha256": "ebb039814d72de48b4d09bc4c6aea4a921398d987ef2180eb2424883a1b522ab"
+}
