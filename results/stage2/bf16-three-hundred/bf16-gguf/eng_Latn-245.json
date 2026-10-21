@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 213,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Modern_Photography/Lenses",
+          "question_number": 1,
+          "flores_passage": "The disadvantage of zoom lenses is that the focal complexity and number of lens elements required to achieve a range of focal lengths is much greater than for prime lenses. This is becoming less of an issue as lens manufacturers achieve higher standards in lens production. This has allowed zoom lenses to produce pictures of a quality comparable to that achieved by lenses with fixed focal length. Another disadvantage of zoom lenses is that the maximum aperture (the speed) of the lens is usually lower. This makes inexpensive zoom lenses hard to use in low-light conditions without a flash.",
+          "question": "According to the passage, as manufacturers increase the quality of lens production, how have zoom lenses been improved?",
+          "mc_answer1": "They have higher lens speeds",
+          "mc_answer2": "They are easier to use in low-light conditions",
+          "mc_answer3": "Their photo quality is similar to lenses with fixed focal length",
+          "mc_answer4": "They have less focal complexity than prime lenses",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The disadvantage of zoom lenses is that the focal complexity and number of lens elements required to achieve a range of focal lengths is much greater than for prime lenses. This is becoming less of an issue as lens manufacturers achieve higher standards in lens production. This has allowed zoom lenses to produce pictures of a quality comparable to that achieved by lenses with fixed focal length. Another disadvantage of zoom lenses is that the maximum aperture (the speed) of the lens is usually lower. This makes inexpensive zoom lenses hard to use in low-light conditions without a flash.\nQ: According to the passage, as manufacturers increase the quality of lens production, how have zoom lenses been improved?\nA: They have higher lens speeds\nB: They are easier to use in low-light conditions\nC: Their photo quality is similar to lenses with fixed focal length\nD: They have less focal complexity than prime lenses\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The disadvantage of zoom lenses is that the focal complexity and number of lens elements required to achieve a range of focal lengths is much greater than for prime lenses. This is becoming less of an issue as lens manufacturers achieve higher standards in lens production. This has allowed zoom lenses to produce pictures of a quality comparable to that achieved by lenses with fixed focal length. Another disadvantage of zoom lenses is that the maximum aperture (the speed) of the lens is usually lower. This makes inexpensive zoom lenses hard to use in low-light conditions without a flash.\nQ: According to the passage, as manufacturers increase the quality of lens production, how have zoom lenses been improved?\nA: They have higher lens speeds\nB: They are easier to use in low-light conditions\nC: Their photo quality is similar to lenses with fixed focal length\nD: They have less focal complexity than prime lenses\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The disadvantage of zoom lenses is that the focal complexity and number of lens elements required to achieve a range of focal lengths is much greater than for prime lenses. This is becoming less of an issue as lens manufacturers achieve higher standards in lens production. This has allowed zoom lenses to produce pictures of a quality comparable to that achieved by lenses with fixed focal length. Another disadvantage of zoom lenses is that the maximum aperture (the speed) of the lens is usually lower. This makes inexpensive zoom lenses hard to use in low-light conditions without a flash.\nQ: According to the passage, as manufacturers increase the quality of lens production, how have zoom lenses been improved?\nA: They have higher lens speeds\nB: They are easier to use in low-light conditions\nC: Their photo quality is similar to lenses with fixed focal length\nD: They have less focal complexity than prime lenses\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The disadvantage of zoom lenses is that the focal complexity and number of lens elements required to achieve a range of focal lengths is much greater than for prime lenses. This is becoming less of an issue as lens manufacturers achieve higher standards in lens production. This has allowed zoom lenses to produce pictures of a quality comparable to that achieved by lenses with fixed focal length. Another disadvantage of zoom lenses is that the maximum aperture (the speed) of the lens is usually lower. This makes inexpensive zoom lenses hard to use in low-light conditions without a flash.\nQ: According to the passage, as manufacturers increase the quality of lens production, how have zoom lenses been improved?\nA: They have higher lens speeds\nB: They are easier to use in low-light conditions\nC: Their photo quality is similar to lenses with fixed focal length\nD: They have less focal complexity than prime lenses\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.831274032592773,
+              false
+            ]
+          ],
+          [
+            [
+              -6.939640045166016,
+              false
+            ]
+          ],
+          [
+            [
+              -0.05924982205033302,
+              true
+            ]
+          ],
+          [
+            [
+              -8.607873916625977,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.831274032592773,
+            false
+          ],
+          [
+            -6.939640045166016,
+            false
+          ],
+          [
+            -0.05924982205033302,
+            true
+          ],
+          [
+            -8.607873916625977,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "1661b5b476bc825ddc78dde2bb41db5f89c17a79e3b25c9bec740945d673a7c3",
+        "prompt_hash": "26330b98d87e505b3aabbb85d5d5d57989681256f2e91198f2852be1bf6ddd8e",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 685,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Computer",
+          "question_number": 1,
+          "flores_passage": "Computers today are used to manipulate pictures and videos. Sophisticated animations can be constructed on computers, and this kind of animation is increasingly being used in television and films. Music is often recorded using sophisticated computers to process and mix sounds together.",
+          "question": "According to the passage, which of the following benefits from sound mixing on sophisticated computers?",
+          "mc_answer1": "Music",
+          "mc_answer2": "Animations",
+          "mc_answer3": "Pictures",
+          "mc_answer4": "Construction",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Computers today are used to manipulate pictures and videos. Sophisticated animations can be constructed on computers, and this kind of animation is increasingly being used in television and films. Music is often recorded using sophisticated computers to process and mix sounds together.\nQ: According to the passage, which of the following benefits from sound mixing on sophisticated computers?\nA: Music\nB: Animations\nC: Pictures\nD: Construction\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Computers today are used to manipulate pictures and videos. Sophisticated animations can be constructed on computers, and this kind of animation is increasingly being used in television and films. Music is often recorded using sophisticated computers to process and mix sounds together.\nQ: According to the passage, which of the following benefits from sound mixing on sophisticated computers?\nA: Music\nB: Animations\nC: Pictures\nD: Construction\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Computers today are used to manipulate pictures and videos. Sophisticated animations can be constructed on computers, and this kind of animation is increasingly being used in television and films. Music is often recorded using sophisticated computers to process and mix sounds together.\nQ: According to the passage, which of the following benefits from sound mixing on sophisticated computers?\nA: Music\nB: Animations\nC: Pictures\nD: Construction\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Computers today are used to manipulate pictures and videos. Sophisticated animations can be constructed on computers, and this kind of animation is increasingly being used in television and films. Music is often recorded using sophisticated computers to process and mix sounds together.\nQ: According to the passage, which of the following benefits from sound mixing on sophisticated computers?\nA: Music\nB: Animations\nC: Pictures\nD: Construction\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.023070141673088074,
+              true
+            ]
+          ],
+          [
+            [
+              -4.970368385314941,
+              false
+            ]
+          ],
+          [
+            [
+              -7.575224876403809,
+              false
+            ]
+          ],
+          [
+            [
+              -7.1634931564331055,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.023070141673088074,
+            true
+          ],
+          [
+            -4.970368385314941,
+            false
+          ],
+          [
+            -7.575224876403809,
+            false
+          ],
+          [
+            -7.1634931564331055,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "e44bcc1333c25180f8c563b2c2e459a2655a0eb9a9c882e07b32eec720d5290a",
+        "prompt_hash": "37d64f750f520459be3f63d4bfb4b7ab3ca1c5367b6a85ec1f2278d39aa4726e",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 885,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Tennis:_Andy_Murray_wins_Montreal_Masters_2009",
+          "question_number": 2,
+          "flores_passage": "Murray lost the first set in a tie break after both men held each and every serve in the set. Del Potro had the early advantage in the second set, but this too required a tie break after reaching 6-6. Potro received treatment to his shoulder at this point but managed to return to the game.",
+          "question": "What was the result of the first tie break?",
+          "mc_answer1": "It was lost by Murray in the first set",
+          "mc_answer2": "It was lost by Del Potro following his injury",
+          "mc_answer3": "It was won by Murrary in the second set",
+          "mc_answer4": "It was won by Del Potro in the second set",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Murray lost the first set in a tie break after both men held each and every serve in the set. Del Potro had the early advantage in the second set, but this too required a tie break after reaching 6-6. Potro received treatment to his shoulder at this point but managed to return to the game.\nQ: What was the result of the first tie break?\nA: It was lost by Murray in the first set\nB: It was lost by Del Potro following his injury\nC: It was won by Murrary in the second set\nD: It was won by Del Potro in the second set\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Murray lost the first set in a tie break after both men held each and every serve in the set. Del Potro had the early advantage in the second set, but this too required a tie break after reaching 6-6. Potro received treatment to his shoulder at this point but managed to return to the game.\nQ: What was the result of the first tie break?\nA: It was lost by Murray in the first set\nB: It was lost by Del Potro following his injury\nC: It was won by Murrary in the second set\nD: It was won by Del Potro in the second set\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Murray lost the first set in a tie break after both men held each and every serve in the set. Del Potro had the early advantage in the second set, but this too required a tie break after reaching 6-6. Potro received treatment to his shoulder at this point but managed to return to the game.\nQ: What was the result of the first tie break?\nA: It was lost by Murray in the first set\nB: It was lost by Del Potro following his injury\nC: It was won by Murrary in the second set\nD: It was won by Del Potro in the second set\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Murray lost the first set in a tie break after both men held each and every serve in the set. Del Potro had the early advantage in the second set, but this too required a tie break after reaching 6-6. Potro received treatment to his shoulder at this point but managed to return to the game.\nQ: What was the result of the first tie break?\nA: It was lost by Murray in the first set\nB: It was lost by Del Potro following his injury\nC: It was won by Murrary in the second set\nD: It was won by Del Potro in the second set\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.06458551436662674,
+              true
+            ]
+          ],
+          [
+            [
+              -6.052760124206543,
+              false
+            ]
+          ],
+          [
+            [
+              -7.835995674133301,
+              false
+            ]
+          ],
+          [
+            [
+              -7.16275691986084,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.06458551436662674,
+            true
+          ],
+          [
+            -6.052760124206543,
+            false
+          ],
+          [
+            -7.835995674133301,
+            false
+          ],
+          [
+            -7.16275691986084,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "182de7b380b2534e5924518cf64699af4ab2a8b5da36c70e1dfab6bde8d9378b",
+        "prompt_hash": "a379042db369b852849c3723b871aabde3eaccbc6dd7cfa818b60e873d21f6fe",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 582,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Cook_Islands",
+          "question_number": 1,
+          "flores_passage": "\"The Cook Islands are an island country in free association with New Zealand, located in Polynesia, in the middle of the South Pacific Ocean. It is an archipelago with 15 islands spread out over 2.2 million km2 of ocean. With the same time zone as Hawaii, the islands are sometimes thought of as \"\"Hawaii down under\"\". Though smaller, it reminds some elderly visitors of Hawaii before statehood without all the large tourist hotels and other development. The Cook Islands do not have any cities but are composed of 15 different islands. The main ones are Rarotonga and Aitutaki.\"",
+          "question": "Which of the following is an accurate similarity between Hawaii and the Cook Islands?",
+          "mc_answer1": "They both have many large hotels",
+          "mc_answer2": "They both do not have statehood",
+          "mc_answer3": "They share the same time zone",
+          "mc_answer4": "They both do not have any cities",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"The Cook Islands are an island country in free association with New Zealand, located in Polynesia, in the middle of the South Pacific Ocean. It is an archipelago with 15 islands spread out over 2.2 million km2 of ocean. With the same time zone as Hawaii, the islands are sometimes thought of as \"\"Hawaii down under\"\". Though smaller, it reminds some elderly visitors of Hawaii before statehood without all the large tourist hotels and other development. The Cook Islands do not have any cities but are composed of 15 different islands. The main ones are Rarotonga and Aitutaki.\"\nQ: Which of the following is an accurate similarity between Hawaii and the Cook Islands?\nA: They both have many large hotels\nB: They both do not have statehood\nC: They share the same time zone\nD: They both do not have any cities\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"The Cook Islands are an island country in free association with New Zealand, located in Polynesia, in the middle of the South Pacific Ocean. It is an archipelago with 15 islands spread out over 2.2 million km2 of ocean. With the same time zone as Hawaii, the islands are sometimes thought of as \"\"Hawaii down under\"\". Though smaller, it reminds some elderly visitors of Hawaii before statehood without all the large tourist hotels and other development. The Cook Islands do not have any cities but are composed of 15 different islands. The main ones are Rarotonga and Aitutaki.\"\nQ: Which of the following is an accurate similarity between Hawaii and the Cook Islands?\nA: They both have many large hotels\nB: They both do not have statehood\nC: They share the same time zone\nD: They both do not have any cities\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"The Cook Islands are an island country in free association with New Zealand, located in Polynesia, in the middle of the South Pacific Ocean. It is an archipelago with 15 islands spread out over 2.2 million km2 of ocean. With the same time zone as Hawaii, the islands are sometimes thought of as \"\"Hawaii down under\"\". Though smaller, it reminds some elderly visitors of Hawaii before statehood without all the large tourist hotels and other development. The Cook Islands do not have any cities but are composed of 15 different islands. The main ones are Rarotonga and Aitutaki.\"\nQ: Which of the following is an accurate similarity between Hawaii and the Cook Islands?\nA: They both have many large hotels\nB: They both do not have statehood\nC: They share the same time zone\nD: They both do not have any cities\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"The Cook Islands are an island country in free association with New Zealand, located in Polynesia, in the middle of the South Pacific Ocean. It is an archipelago with 15 islands spread out over 2.2 million km2 of ocean. With the same time zone as Hawaii, the islands are sometimes thought of as \"\"Hawaii down under\"\". Though smaller, it reminds some elderly visitors of Hawaii before statehood without all the large tourist hotels and other development. The Cook Islands do not have any cities but are composed of 15 different islands. The main ones are Rarotonga and Aitutaki.\"\nQ: Which of the following is an accurate similarity between Hawaii and the Cook Islands?\nA: They both have many large hotels\nB: They both do not have statehood\nC: They share the same time zone\nD: They both do not have any cities\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.76734733581543,
+              false
+            ]
+          ],
+          [
+            [
+              -6.500761032104492,
+              false
+            ]
+          ],
+          [
+            [
+              -0.008236134424805641,
+              true
+            ]
+          ],
+          [
+            [
+              -9.06649112701416,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.76734733581543,
+            false
+          ],
+          [
+            -6.500761032104492,
+            false
+          ],
+          [
+            -0.008236134424805641,
+            true
+          ],
+          [
+            -9.06649112701416,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "46bd44dd564fa4e5c519efff6339224031ebeec6cdb1493e1885b035b15b9003",
+        "prompt_hash": "d7845348dbdf6b22b8a92a9deb232d13d2a6e1263c865500fadc27a0c6ac6dcd",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 119,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Water",
+          "question_number": 1,
+          "flores_passage": "There are different ways of purifying water, some more effective against specific threats. In some areas boiling water for a minute is enough, in others several minutes are needed. Filters vary in effectiveness, and should you have a concern, then you should consider buying your water in a sealed bottle from a reputable company.",
+          "question": "According to the passage, what is the best option for avoiding potentially contaminated water?",
+          "mc_answer1": "Boil water for several minutes",
+          "mc_answer2": "Purchase bottled water",
+          "mc_answer3": "Boil water for one minute",
+          "mc_answer4": "Assess the water for specific threats",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: There are different ways of purifying water, some more effective against specific threats. In some areas boiling water for a minute is enough, in others several minutes are needed. Filters vary in effectiveness, and should you have a concern, then you should consider buying your water in a sealed bottle from a reputable company.\nQ: According to the passage, what is the best option for avoiding potentially contaminated water?\nA: Boil water for several minutes\nB: Purchase bottled water\nC: Boil water for one minute\nD: Assess the water for specific threats\nAnswer:",
+            " A"
+          ],
+          [
+            "P: There are different ways of purifying water, some more effective against specific threats. In some areas boiling water for a minute is enough, in others several minutes are needed. Filters vary in effectiveness, and should you have a concern, then you should consider buying your water in a sealed bottle from a reputable company.\nQ: According to the passage, what is the best option for avoiding potentially contaminated water?\nA: Boil water for several minutes\nB: Purchase bottled water\nC: Boil water for one minute\nD: Assess the water for specific threats\nAnswer:",
+            " B"
+          ],
+          [
+            "P: There are different ways of purifying water, some more effective against specific threats. In some areas boiling water for a minute is enough, in others several minutes are needed. Filters vary in effectiveness, and should you have a concern, then you should consider buying your water in a sealed bottle from a reputable company.\nQ: According to the passage, what is the best option for avoiding potentially contaminated water?\nA: Boil water for several minutes\nB: Purchase bottled water\nC: Boil water for one minute\nD: Assess the water for specific threats\nAnswer:",
+            " C"
+          ],
+          [
+            "P: There are different ways of purifying water, some more effective against specific threats. In some areas boiling water for a minute is enough, in others several minutes are needed. Filters vary in effectiveness, and should you have a concern, then you should consider buying your water in a sealed bottle from a reputable company.\nQ: According to the passage, what is the best option for avoiding potentially contaminated water?\nA: Boil water for several minutes\nB: Purchase bottled water\nC: Boil water for one minute\nD: Assess the water for specific threats\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.5262346267700195,
+              false
+            ]
+          ],
+          [
+            [
+              -1.0783549547195435,
+              false
+            ]
+          ],
+          [
+            [
+              -0.6256343126296997,
+              true
+            ]
+          ],
+          [
+            [
+              -4.553839683532715,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.5262346267700195,
+            false
+          ],
+          [
+            -1.0783549547195435,
+            false
+          ],
+          [
+            -0.6256343126296997,
+            true
+          ],
+          [
+            -4.553839683532715,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "94d0fb99cf20cff5d69d35ef3eaa5eefe6eb96c6e855053150dd0f328adb3815",
+        "prompt_hash": "0dcdce2e74b1e6c35c5f1c1571f18ec81dca1136ca8ef98ed4d4cc354f08d583",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792555273.9115362,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

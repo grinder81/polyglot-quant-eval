@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.2,
+      "acc_stderr,none": 0.2,
+      "acc_norm,none": 0.2,
+      "acc_norm_stderr,none": 0.2
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 149,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/The_Seven_Wonders_of_the_World/The_Great_Pyramid",
+          "question_number": 1,
+          "flores_passage": "\"The Great Pyramid at Giza is the only one of the seven wonders that is still standing today. Built by the Egyptians in the third century BCE, the Great Pyramid is one of many large pyramid structures built to honor dead Pharaoh. The Giza Plateau, or \"\"Giza Necropolis\"\" in the Egyptian Valley of the Dead contains several pyramids (of which the great pyramid is the largest), several small tombs, several temples, and the great Sphinx. The great pyramid was created to honor the Pharaoh Khufu, and many of the smaller pyramids, tombs, and temples were built to honor Khufu's wives and family members.\"",
+          "question": "What can be found at The Giza Plateau?",
+          "mc_answer1": "Tombs",
+          "mc_answer2": "Temples",
+          "mc_answer3": "All seven wonders",
+          "mc_answer4": "The Great Pyramid",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"The Great Pyramid at Giza is the only one of the seven wonders that is still standing today. Built by the Egyptians in the third century BCE, the Great Pyramid is one of many large pyramid structures built to honor dead Pharaoh. The Giza Plateau, or \"\"Giza Necropolis\"\" in the Egyptian Valley of the Dead contains several pyramids (of which the great pyramid is the largest), several small tombs, several temples, and the great Sphinx. The great pyramid was created to honor the Pharaoh Khufu, and many of the smaller pyramids, tombs, and temples were built to honor Khufu's wives and family members.\"\nQ: What can be found at The Giza Plateau?\nA: Tombs\nB: Temples\nC: All seven wonders\nD: The Great Pyramid\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"The Great Pyramid at Giza is the only one of the seven wonders that is still standing today. Built by the Egyptians in the third century BCE, the Great Pyramid is one of many large pyramid structures built to honor dead Pharaoh. The Giza Plateau, or \"\"Giza Necropolis\"\" in the Egyptian Valley of the Dead contains several pyramids (of which the great pyramid is the largest), several small tombs, several temples, and the great Sphinx. The great pyramid was created to honor the Pharaoh Khufu, and many of the smaller pyramids, tombs, and temples were built to honor Khufu's wives and family members.\"\nQ: What can be found at The Giza Plateau?\nA: Tombs\nB: Temples\nC: All seven wonders\nD: The Great Pyramid\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"The Great Pyramid at Giza is the only one of the seven wonders that is still standing today. Built by the Egyptians in the third century BCE, the Great Pyramid is one of many large pyramid structures built to honor dead Pharaoh. The Giza Plateau, or \"\"Giza Necropolis\"\" in the Egyptian Valley of the Dead contains several pyramids (of which the great pyramid is the largest), several small tombs, several temples, and the great Sphinx. The great pyramid was created to honor the Pharaoh Khufu, and many of the smaller pyramids, tombs, and temples were built to honor Khufu's wives and family members.\"\nQ: What can be found at The Giza Plateau?\nA: Tombs\nB: Temples\nC: All seven wonders\nD: The Great Pyramid\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"The Great Pyramid at Giza is the only one of the seven wonders that is still standing today. Built by the Egyptians in the third century BCE, the Great Pyramid is one of many large pyramid structures built to honor dead Pharaoh. The Giza Plateau, or \"\"Giza Necropolis\"\" in the Egyptian Valley of the Dead contains several pyramids (of which the great pyramid is the largest), several small tombs, several temples, and the great Sphinx. The great pyramid was created to honor the Pharaoh Khufu, and many of the smaller pyramids, tombs, and temples were built to honor Khufu's wives and family members.\"\nQ: What can be found at The Giza Plateau?\nA: Tombs\nB: Temples\nC: All seven wonders\nD: The Great Pyramid\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.4904847145080566,
+              false
+            ]
+          ],
+          [
+            [
+              -3.694572925567627,
+              false
+            ]
+          ],
+          [
+            [
+              -1.0532383918762207,
+              false
+            ]
+          ],
+          [
+            [
+              -0.5391793847084045,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.4904847145080566,
+            false
+          ],
+          [
+            -3.694572925567627,
+            false
+          ],
+          [
+            -1.0532383918762207,
+            false
+          ],
+          [
+            -0.5391793847084045,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "86bf0f50ba88403ad94c4efa85449f756549f59b12f48744a5c80a2713178127",
+        "prompt_hash": "a5ca87cfefeff89860750409237325ad370e678385b6f3cf1cbc40dab7447e08",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 454,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Languages/Estonian",
+          "question_number": 2,
+          "flores_passage": "\"Around the 15th century, northern Estonia was under great cultural influence of Germany. Some German monks wanted to bring God closer to the native people, so they invented the Estonian literal language. It was based on the German alphabet and one character \"\"Õ/õ\"\" was added. As time passed, many words that were borrowed from German coalesced. This was the beginning of enlightenment.\"",
+          "question": "The Estonian language was influenced by what?",
+          "mc_answer1": "The character Õ/õ",
+          "mc_answer2": "The German alphabet",
+          "mc_answer3": "German monks",
+          "mc_answer4": "God",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"Around the 15th century, northern Estonia was under great cultural influence of Germany. Some German monks wanted to bring God closer to the native people, so they invented the Estonian literal language. It was based on the German alphabet and one character \"\"Õ/õ\"\" was added. As time passed, many words that were borrowed from German coalesced. This was the beginning of enlightenment.\"\nQ: The Estonian language was influenced by what?\nA: The character Õ/õ\nB: The German alphabet\nC: German monks\nD: God\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Around the 15th century, northern Estonia was under great cultural influence of Germany. Some German monks wanted to bring God closer to the native people, so they invented the Estonian literal language. It was based on the German alphabet and one character \"\"Õ/õ\"\" was added. As time passed, many words that were borrowed from German coalesced. This was the beginning of enlightenment.\"\nQ: The Estonian language was influenced by what?\nA: The character Õ/õ\nB: The German alphabet\nC: German monks\nD: God\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Around the 15th century, northern Estonia was under great cultural influence of Germany. Some German monks wanted to bring God closer to the native people, so they invented the Estonian literal language. It was based on the German alphabet and one character \"\"Õ/õ\"\" was added. As time passed, many words that were borrowed from German coalesced. This was the beginning of enlightenment.\"\nQ: The Estonian language was influenced by what?\nA: The character Õ/õ\nB: The German alphabet\nC: German monks\nD: God\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Around the 15th century, northern Estonia was under great cultural influence of Germany. Some German monks wanted to bring God closer to the native people, so they invented the Estonian literal language. It was based on the German alphabet and one character \"\"Õ/õ\"\" was added. As time passed, many words that were borrowed from German coalesced. This was the beginning of enlightenment.\"\nQ: The Estonian language was influenced by what?\nA: The character Õ/õ\nB: The German alphabet\nC: German monks\nD: God\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.565826892852783,
+              false
+            ]
+          ],
+          [
+            [
+              -0.9883161187171936,
+              false
+            ]
+          ],
+          [
+            [
+              -0.7248349785804749,
+              true
+            ]
+          ],
+          [
+            [
+              -6.068226337432861,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.565826892852783,
+            false
+          ],
+          [
+            -0.9883161187171936,
+            false
+          ],
+          [
+            -0.7248349785804749,
+            true
+          ],
+          [
+            -6.068226337432861,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "7e313b6b91fb5cfc97a8921bace5db921c1ec36d817702275ddfbeed3863c282",
+        "prompt_hash": "c853a86d02518c7c1b4a7eea15961dd3ba96b3e76223eb859a44f5238f081940",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 231,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Canadian_Prime_Minister_Harper_agrees_to_send_%27Clean_Air_Act%27_to_committee",
+          "question_number": 1,
+          "flores_passage": "\"Prime Minister Stephen Harper has agreed to send the government's 'Clean Air Act' to an all-party committee for review, before its second reading, after Tuesday's 25 minute meeting with NDP leader Jack Layton at the PMO. Layton had asked for changes to the conservatives' environmental bill during the meeting with the PM, asking for a \"\"thorough and complete rewriting\"\" of the Conservative party's environmental bill. Ever since the Federal Government stepped in to take over funding of the Mersey hospital in Devonport, Tasmania, the state government and some federal MPs have criticised this act as a stunt in the prelude to the federal election to be called by November. But Prime Minister John Howard has said the act was only to safeguard the facilities of the hospital from being downgraded by the Tasmanian government, in giving an extra AUD$45 million.\"",
+          "question": "Who suggested that revisions be made to the ‘Clean Air Act’?",
+          "mc_answer1": "John Howard",
+          "mc_answer2": "The Conservative party",
+          "mc_answer3": "Jack Layton",
+          "mc_answer4": "Stephen Harper",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"Prime Minister Stephen Harper has agreed to send the government's 'Clean Air Act' to an all-party committee for review, before its second reading, after Tuesday's 25 minute meeting with NDP leader Jack Layton at the PMO. Layton had asked for changes to the conservatives' environmental bill during the meeting with the PM, asking for a \"\"thorough and complete rewriting\"\" of the Conservative party's environmental bill. Ever since the Federal Government stepped in to take over funding of the Mersey hospital in Devonport, Tasmania, the state government and some federal MPs have criticised this act as a stunt in the prelude to the federal election to be called by November. But Prime Minister John Howard has said the act was only to safeguard the facilities of the hospital from being downgraded by the Tasmanian government, in giving an extra AUD$45 million.\"\nQ: Who suggested that revisions be made to the ‘Clean Air Act’?\nA: John Howard\nB: The Conservative party\nC: Jack Layton\nD: Stephen Harper\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Prime Minister Stephen Harper has agreed to send the government's 'Clean Air Act' to an all-party committee for review, before its second reading, after Tuesday's 25 minute meeting with NDP leader Jack Layton at the PMO. Layton had asked for changes to the conservatives' environmental bill during the meeting with the PM, asking for a \"\"thorough and complete rewriting\"\" of the Conservative party's environmental bill. Ever since the Federal Government stepped in to take over funding of the Mersey hospital in Devonport, Tasmania, the state government and some federal MPs have criticised this act as a stunt in the prelude to the federal election to be called by November. But Prime Minister John Howard has said the act was only to safeguard the facilities of the hospital from being downgraded by the Tasmanian government, in giving an extra AUD$45 million.\"\nQ: Who suggested that revisions be made to the ‘Clean Air Act’?\nA: John Howard\nB: The Conservative party\nC: Jack Layton\nD: Stephen Harper\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Prime Minister Stephen Harper has agreed to send the government's 'Clean Air Act' to an all-party committee for review, before its second reading, after Tuesday's 25 minute meeting with NDP leader Jack Layton at the PMO. Layton had asked for changes to the conservatives' environmental bill during the meeting with the PM, asking for a \"\"thorough and complete rewriting\"\" of the Conservative party's environmental bill. Ever since the Federal Government stepped in to take over funding of the Mersey hospital in Devonport, Tasmania, the state government and some federal MPs have criticised this act as a stunt in the prelude to the federal election to be called by November. But Prime Minister John Howard has said the act was only to safeguard the facilities of the hospital from being downgraded by the Tasmanian government, in giving an extra AUD$45 million.\"\nQ: Who suggested that revisions be made to the ‘Clean Air Act’?\nA: John Howard\nB: The Conservative party\nC: Jack Layton\nD: Stephen Harper\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Prime Minister Stephen Harper has agreed to send the government's 'Clean Air Act' to an all-party committee for review, before its second reading, after Tuesday's 25 minute meeting with NDP leader Jack Layton at the PMO. Layton had asked for changes to the conservatives' environmental bill during the meeting with the PM, asking for a \"\"thorough and complete rewriting\"\" of the Conservative party's environmental bill. Ever since the Federal Government stepped in to take over funding of the Mersey hospital in Devonport, Tasmania, the state government and some federal MPs have criticised this act as a stunt in the prelude to the federal election to be called by November. But Prime Minister John Howard has said the act was only to safeguard the facilities of the hospital from being downgraded by the Tasmanian government, in giving an extra AUD$45 million.\"\nQ: Who suggested that revisions be made to the ‘Clean Air Act’?\nA: John Howard\nB: The Conservative party\nC: Jack Layton\nD: Stephen Harper\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.17927885055542,
+              false
+            ]
+          ],
+          [
+            [
+              -7.633443355560303,
+              false
+            ]
+          ],
+          [
+            [
+              -0.060641564428806305,
+              true
+            ]
+          ],
+          [
+            [
+              -8.407445907592773,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.17927885055542,
+            false
+          ],
+          [
+            -7.633443355560303,
+            false
+          ],
+          [
+            -0.060641564428806305,
+            true
+          ],
+          [
+            -8.407445907592773,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "27cd89db29434a94c7be04307bcc7940c21e41acf6bdbf9fdd1a14825a1fdd07",
+        "prompt_hash": "f0471f023257484b4b666e9e957f7515a15bd462cddcee8ce5309253a83a77a1",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 392,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Four_killed,_four_others_injured_in_Buffalo,_New_York_shooting",
+          "question_number": 1,
+          "flores_passage": "At least 100 people had attended the party, in order to celebrate the first anniversary of a couple whose wedding was held last year. A formal anniversary event was scheduled for a later date, officials said. The couple had married in Texas one year ago and came to Buffalo to celebrate with friends and relatives. The 30-year-old husband, who was born in Buffalo, was one of the four killed in the shooting, but his wife was not hurt.",
+          "question": "Which of the following statements regarding the shooting is true?",
+          "mc_answer1": "The husband and wife were both from Texas",
+          "mc_answer2": "There were five victims",
+          "mc_answer3": "The couple married a year prior in Buffalo",
+          "mc_answer4": "The shooting occurred in Buffalo",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: At least 100 people had attended the party, in order to celebrate the first anniversary of a couple whose wedding was held last year. A formal anniversary event was scheduled for a later date, officials said. The couple had married in Texas one year ago and came to Buffalo to celebrate with friends and relatives. The 30-year-old husband, who was born in Buffalo, was one of the four killed in the shooting, but his wife was not hurt.\nQ: Which of the following statements regarding the shooting is true?\nA: The husband and wife were both from Texas\nB: There were five victims\nC: The couple married a year prior in Buffalo\nD: The shooting occurred in Buffalo\nAnswer:",
+            " A"
+          ],
+          [
+            "P: At least 100 people had attended the party, in order to celebrate the first anniversary of a couple whose wedding was held last year. A formal anniversary event was scheduled for a later date, officials said. The couple had married in Texas one year ago and came to Buffalo to celebrate with friends and relatives. The 30-year-old husband, who was born in Buffalo, was one of the four killed in the shooting, but his wife was not hurt.\nQ: Which of the following statements regarding the shooting is true?\nA: The husband and wife were both from Texas\nB: There were five victims\nC: The couple married a year prior in Buffalo\nD: The shooting occurred in Buffalo\nAnswer:",
+            " B"
+          ],
+          [
+            "P: At least 100 people had attended the party, in order to celebrate the first anniversary of a couple whose wedding was held last year. A formal anniversary event was scheduled for a later date, officials said. The couple had married in Texas one year ago and came to Buffalo to celebrate with friends and relatives. The 30-year-old husband, who was born in Buffalo, was one of the four killed in the shooting, but his wife was not hurt.\nQ: Which of the following statements regarding the shooting is true?\nA: The husband and wife were both from Texas\nB: There were five victims\nC: The couple married a year prior in Buffalo\nD: The shooting occurred in Buffalo\nAnswer:",
+            " C"
+          ],
+          [
+            "P: At least 100 people had attended the party, in order to celebrate the first anniversary of a couple whose wedding was held last year. A formal anniversary event was scheduled for a later date, officials said. The couple had married in Texas one year ago and came to Buffalo to celebrate with friends and relatives. The 30-year-old husband, who was born in Buffalo, was one of the four killed in the shooting, but his wife was not hurt.\nQ: Which of the following statements regarding the shooting is true?\nA: The husband and wife were both from Texas\nB: There were five victims\nC: The couple married a year prior in Buffalo\nD: The shooting occurred in Buffalo\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.8910226821899414,
+              false
+            ]
+          ],
+          [
+            [
+              -1.348576545715332,
+              false
+            ]
+          ],
+          [
+            [
+              -0.9825257658958435,
+              true
+            ]
+          ],
+          [
+            [
+              -2.5487489700317383,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.8910226821899414,
+            false
+          ],
+          [
+            -1.348576545715332,
+            false
+          ],
+          [
+            -0.9825257658958435,
+            true
+          ],
+          [
+            -2.5487489700317383,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9c0fe81c0e64bfd7f623309f0178b1b9639019d3ffbe7a7596212ffe21e9dacd",
+        "prompt_hash": "5d487ab669212a16efdd6ea8a7ae4c0c00497712996114f560e0916d55216d51",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 336,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Khyber_Pakhtunkhwa_Provincial_Assembly_votes_to_merge_with_Pakistani_Federally_Administered_Tribal_Areas",
+          "question_number": 2,
+          "flores_passage": "\"Since Pakistani independence from British rule in 1947, the Pakistani President has appointed \"\"Political Agents\"\" to govern FATA, who exercise near-complete autonomous control over the areas. These agents are responsible for providing government and judicial services under Article 247 of the Pakistani Constitution.\"",
+          "question": "Which of the following statements about FATA’s “Political Agents” is not true?",
+          "mc_answer1": "They provide judicial services",
+          "mc_answer2": "They were selected by the Pakistani president",
+          "mc_answer3": "They adhere to Pakistan’s constitution",
+          "mc_answer4": "They have complete control over certain areas",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: \"Since Pakistani independence from British rule in 1947, the Pakistani President has appointed \"\"Political Agents\"\" to govern FATA, who exercise near-complete autonomous control over the areas. These agents are responsible for providing government and judicial services under Article 247 of the Pakistani Constitution.\"\nQ: Which of the following statements about FATA’s “Political Agents” is not true?\nA: They provide judicial services\nB: They were selected by the Pakistani president\nC: They adhere to Pakistan’s constitution\nD: They have complete control over certain areas\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Since Pakistani independence from British rule in 1947, the Pakistani President has appointed \"\"Political Agents\"\" to govern FATA, who exercise near-complete autonomous control over the areas. These agents are responsible for providing government and judicial services under Article 247 of the Pakistani Constitution.\"\nQ: Which of the following statements about FATA’s “Political Agents” is not true?\nA: They provide judicial services\nB: They were selected by the Pakistani president\nC: They adhere to Pakistan’s constitution\nD: They have complete control over certain areas\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Since Pakistani independence from British rule in 1947, the Pakistani President has appointed \"\"Political Agents\"\" to govern FATA, who exercise near-complete autonomous control over the areas. These agents are responsible for providing government and judicial services under Article 247 of the Pakistani Constitution.\"\nQ: Which of the following statements about FATA’s “Political Agents” is not true?\nA: They provide judicial services\nB: They were selected by the Pakistani president\nC: They adhere to Pakistan’s constitution\nD: They have complete control over certain areas\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Since Pakistani independence from British rule in 1947, the Pakistani President has appointed \"\"Political Agents\"\" to govern FATA, who exercise near-complete autonomous control over the areas. These agents are responsible for providing government and judicial services under Article 247 of the Pakistani Constitution.\"\nQ: Which of the following statements about FATA’s “Political Agents” is not true?\nA: They provide judicial services\nB: They were selected by the Pakistani president\nC: They adhere to Pakistan’s constitution\nD: They have complete control over certain areas\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.4568014144897461,
+              true
+            ]
+          ],
+          [
+            [
+              -5.075499534606934,
+              false
+            ]
+          ],
+          [
+            [
+              -1.1521482467651367,
+              false
+            ]
+          ],
+          [
+            [
+              -3.6343164443969727,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.4568014144897461,
+            true
+          ],
+          [
+            -5.075499534606934,
+            false
+          ],
+          [
+            -1.1521482467651367,
+            false
+          ],
+          [
+            -3.6343164443969727,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "e60ad59f2b83f05cd28997b2090f50d378a6634a2871ca65551e7788ce5f0706",
+        "prompt_hash": "c9ea940b6b0d2c4e897eebf436a97df6ff6b7d2e9c7851853dea97ea739c11d1",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792555215.3984108,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

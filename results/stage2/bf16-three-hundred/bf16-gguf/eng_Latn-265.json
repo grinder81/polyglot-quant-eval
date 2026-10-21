@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 318,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Cognitive_Psychology_and_Cognitive_Neuroscience/Knowledge_Representation_and_Hemispheric_Specialisation",
+          "question_number": 1,
+          "flores_passage": "Although AI has a strong connotation of science fiction, AI forms a very important branch of computer science, dealing with behavior, learning and intelligent adaptation in a machine. Research in AI involves making machines to automate tasks that require intelligent behavior. Examples include control, planning and scheduling, the ability to answer customer diagnoses and questions, as well as handwriting recognition, voice and face. Such things have become separate disciplines, which focus on providing solutions to real life problems. The AI ​​system is now often used in the fields of economics, medicine, engineering and the military, as has been built in several home computer and video game software applications.",
+          "question": "According to the passage, which of the following is an accurate summary of AI’s main purpose?",
+          "mc_answer1": "Planning",
+          "mc_answer2": "Voice recognition ",
+          "mc_answer3": "Scheduling",
+          "mc_answer4": "Task automation",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Although AI has a strong connotation of science fiction, AI forms a very important branch of computer science, dealing with behavior, learning and intelligent adaptation in a machine. Research in AI involves making machines to automate tasks that require intelligent behavior. Examples include control, planning and scheduling, the ability to answer customer diagnoses and questions, as well as handwriting recognition, voice and face. Such things have become separate disciplines, which focus on providing solutions to real life problems. The AI ​​system is now often used in the fields of economics, medicine, engineering and the military, as has been built in several home computer and video game software applications.\nQ: According to the passage, which of the following is an accurate summary of AI’s main purpose?\nA: Planning\nB: Voice recognition \nC: Scheduling\nD: Task automation\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Although AI has a strong connotation of science fiction, AI forms a very important branch of computer science, dealing with behavior, learning and intelligent adaptation in a machine. Research in AI involves making machines to automate tasks that require intelligent behavior. Examples include control, planning and scheduling, the ability to answer customer diagnoses and questions, as well as handwriting recognition, voice and face. Such things have become separate disciplines, which focus on providing solutions to real life problems. The AI ​​system is now often used in the fields of economics, medicine, engineering and the military, as has been built in several home computer and video game software applications.\nQ: According to the passage, which of the following is an accurate summary of AI’s main purpose?\nA: Planning\nB: Voice recognition \nC: Scheduling\nD: Task automation\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Although AI has a strong connotation of science fiction, AI forms a very important branch of computer science, dealing with behavior, learning and intelligent adaptation in a machine. Research in AI involves making machines to automate tasks that require intelligent behavior. Examples include control, planning and scheduling, the ability to answer customer diagnoses and questions, as well as handwriting recognition, voice and face. Such things have become separate disciplines, which focus on providing solutions to real life problems. The AI ​​system is now often used in the fields of economics, medicine, engineering and the military, as has been built in several home computer and video game software applications.\nQ: According to the passage, which of the following is an accurate summary of AI’s main purpose?\nA: Planning\nB: Voice recognition \nC: Scheduling\nD: Task automation\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Although AI has a strong connotation of science fiction, AI forms a very important branch of computer science, dealing with behavior, learning and intelligent adaptation in a machine. Research in AI involves making machines to automate tasks that require intelligent behavior. Examples include control, planning and scheduling, the ability to answer customer diagnoses and questions, as well as handwriting recognition, voice and face. Such things have become separate disciplines, which focus on providing solutions to real life problems. The AI ​​system is now often used in the fields of economics, medicine, engineering and the military, as has been built in several home computer and video game software applications.\nQ: According to the passage, which of the following is an accurate summary of AI’s main purpose?\nA: Planning\nB: Voice recognition \nC: Scheduling\nD: Task automation\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.027009963989258,
+              false
+            ]
+          ],
+          [
+            [
+              -7.541023254394531,
+              false
+            ]
+          ],
+          [
+            [
+              -6.472495079040527,
+              false
+            ]
+          ],
+          [
+            [
+              -0.1170770600438118,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.027009963989258,
+            false
+          ],
+          [
+            -7.541023254394531,
+            false
+          ],
+          [
+            -6.472495079040527,
+            false
+          ],
+          [
+            -0.1170770600438118,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "3dbdbf33a7a99ef95601141e05b720291b5b6120946271220c04364ac5807cdf",
+        "prompt_hash": "b72929a988bbdc8ddcec8c55c2d1f8b5f4f9d2c61772ca64ce86b00d882a9b3b",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 436,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Social_and_Cultural_Foundations_of_American_Education/Special_Needs/ADD",
+          "question_number": 1,
+          "flores_passage": "\"Attention Deficit Disorder \"\"is a neurological syndrome whose classic defining triad of symptoms including impulsivity, distractibility, and hyperactivity or excess energy\"\". It is not a learning disability, it is a learning disorder; it \"\"affects 3 to 5 percent of all children, perhaps as many as 2 million American children\"\". Children with ADD have a hard time focusing on things like school work, but they can concentrate on things they enjoy doing like playing games or watching their favorite cartoons or writing sentences without punctuation. These children tend to get into a lot of trouble, because they \"\"engage in risky behaviors, get into fights, and challenge authority\"\" in order to stimulate their brain, since their brain can not be stimulated by normal methods. ADD affects relationships with other peers because other children can not understand why they act the way that they do or why they spell they way they do or that their maturity level is different.\"",
+          "question": "According to the passage, what might children with Attention Deficit Disorder have a hard time focusing on?",
+          "mc_answer1": "School work",
+          "mc_answer2": "Playing games",
+          "mc_answer3": "Watching cartoons",
+          "mc_answer4": "Things they enjoy doing",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"Attention Deficit Disorder \"\"is a neurological syndrome whose classic defining triad of symptoms including impulsivity, distractibility, and hyperactivity or excess energy\"\". It is not a learning disability, it is a learning disorder; it \"\"affects 3 to 5 percent of all children, perhaps as many as 2 million American children\"\". Children with ADD have a hard time focusing on things like school work, but they can concentrate on things they enjoy doing like playing games or watching their favorite cartoons or writing sentences without punctuation. These children tend to get into a lot of trouble, because they \"\"engage in risky behaviors, get into fights, and challenge authority\"\" in order to stimulate their brain, since their brain can not be stimulated by normal methods. ADD affects relationships with other peers because other children can not understand why they act the way that they do or why they spell they way they do or that their maturity level is different.\"\nQ: According to the passage, what might children with Attention Deficit Disorder have a hard time focusing on?\nA: School work\nB: Playing games\nC: Watching cartoons\nD: Things they enjoy doing\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Attention Deficit Disorder \"\"is a neurological syndrome whose classic defining triad of symptoms including impulsivity, distractibility, and hyperactivity or excess energy\"\". It is not a learning disability, it is a learning disorder; it \"\"affects 3 to 5 percent of all children, perhaps as many as 2 million American children\"\". Children with ADD have a hard time focusing on things like school work, but they can concentrate on things they enjoy doing like playing games or watching their favorite cartoons or writing sentences without punctuation. These children tend to get into a lot of trouble, because they \"\"engage in risky behaviors, get into fights, and challenge authority\"\" in order to stimulate their brain, since their brain can not be stimulated by normal methods. ADD affects relationships with other peers because other children can not understand why they act the way that they do or why they spell they way they do or that their maturity level is different.\"\nQ: According to the passage, what might children with Attention Deficit Disorder have a hard time focusing on?\nA: School work\nB: Playing games\nC: Watching cartoons\nD: Things they enjoy doing\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Attention Deficit Disorder \"\"is a neurological syndrome whose classic defining triad of symptoms including impulsivity, distractibility, and hyperactivity or excess energy\"\". It is not a learning disability, it is a learning disorder; it \"\"affects 3 to 5 percent of all children, perhaps as many as 2 million American children\"\". Children with ADD have a hard time focusing on things like school work, but they can concentrate on things they enjoy doing like playing games or watching their favorite cartoons or writing sentences without punctuation. These children tend to get into a lot of trouble, because they \"\"engage in risky behaviors, get into fights, and challenge authority\"\" in order to stimulate their brain, since their brain can not be stimulated by normal methods. ADD affects relationships with other peers because other children can not understand why they act the way that they do or why they spell they way they do or that their maturity level is different.\"\nQ: According to the passage, what might children with Attention Deficit Disorder have a hard time focusing on?\nA: School work\nB: Playing games\nC: Watching cartoons\nD: Things they enjoy doing\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Attention Deficit Disorder \"\"is a neurological syndrome whose classic defining triad of symptoms including impulsivity, distractibility, and hyperactivity or excess energy\"\". It is not a learning disability, it is a learning disorder; it \"\"affects 3 to 5 percent of all children, perhaps as many as 2 million American children\"\". Children with ADD have a hard time focusing on things like school work, but they can concentrate on things they enjoy doing like playing games or watching their favorite cartoons or writing sentences without punctuation. These children tend to get into a lot of trouble, because they \"\"engage in risky behaviors, get into fights, and challenge authority\"\" in order to stimulate their brain, since their brain can not be stimulated by normal methods. ADD affects relationships with other peers because other children can not understand why they act the way that they do or why they spell they way they do or that their maturity level is different.\"\nQ: According to the passage, what might children with Attention Deficit Disorder have a hard time focusing on?\nA: School work\nB: Playing games\nC: Watching cartoons\nD: Things they enjoy doing\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.017649147659540176,
+              true
+            ]
+          ],
+          [
+            [
+              -6.364353656768799,
+              false
+            ]
+          ],
+          [
+            [
+              -7.405460834503174,
+              false
+            ]
+          ],
+          [
+            [
+              -4.610422611236572,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.017649147659540176,
+            true
+          ],
+          [
+            -6.364353656768799,
+            false
+          ],
+          [
+            -7.405460834503174,
+            false
+          ],
+          [
+            -4.610422611236572,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "0dcad4c1df2691897955967fb9f0174e87e50ae573ea41ae13cdb90dc20d947a",
+        "prompt_hash": "4ff6a213d055db9f4172562876da8566bf620c8bd055ec4bbfb7c9cef3be11e9",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 39,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Bali_climate_change_conference_begins",
+          "question_number": 1,
+          "flores_passage": "Other subjects on the agenda in Bali include saving the world's remaining forests, and sharing technologies to help developing nations grow in less-polluting ways. The U.N. also hopes to finalize a fund to help countries affected by global warming to cope with the impacts. The money could go toward flood-proof houses, better water management, and crop diversification.",
+          "question": "What will the U.N.’s global warming fund not be used for?",
+          "mc_answer1": "Diversifying crops",
+          "mc_answer2": "Bringing technology to developing nations",
+          "mc_answer3": "Flood-proof houses",
+          "mc_answer4": "Alleviating the effects of global warming",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Other subjects on the agenda in Bali include saving the world's remaining forests, and sharing technologies to help developing nations grow in less-polluting ways. The U.N. also hopes to finalize a fund to help countries affected by global warming to cope with the impacts. The money could go toward flood-proof houses, better water management, and crop diversification.\nQ: What will the U.N.’s global warming fund not be used for?\nA: Diversifying crops\nB: Bringing technology to developing nations\nC: Flood-proof houses\nD: Alleviating the effects of global warming\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Other subjects on the agenda in Bali include saving the world's remaining forests, and sharing technologies to help developing nations grow in less-polluting ways. The U.N. also hopes to finalize a fund to help countries affected by global warming to cope with the impacts. The money could go toward flood-proof houses, better water management, and crop diversification.\nQ: What will the U.N.’s global warming fund not be used for?\nA: Diversifying crops\nB: Bringing technology to developing nations\nC: Flood-proof houses\nD: Alleviating the effects of global warming\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Other subjects on the agenda in Bali include saving the world's remaining forests, and sharing technologies to help developing nations grow in less-polluting ways. The U.N. also hopes to finalize a fund to help countries affected by global warming to cope with the impacts. The money could go toward flood-proof houses, better water management, and crop diversification.\nQ: What will the U.N.’s global warming fund not be used for?\nA: Diversifying crops\nB: Bringing technology to developing nations\nC: Flood-proof houses\nD: Alleviating the effects of global warming\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Other subjects on the agenda in Bali include saving the world's remaining forests, and sharing technologies to help developing nations grow in less-polluting ways. The U.N. also hopes to finalize a fund to help countries affected by global warming to cope with the impacts. The money could go toward flood-proof houses, better water management, and crop diversification.\nQ: What will the U.N.’s global warming fund not be used for?\nA: Diversifying crops\nB: Bringing technology to developing nations\nC: Flood-proof houses\nD: Alleviating the effects of global warming\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.11620313674211502,
+              true
+            ]
+          ],
+          [
+            [
+              -3.704396963119507,
+              false
+            ]
+          ],
+          [
+            [
+              -4.4991607666015625,
+              false
+            ]
+          ],
+          [
+            [
+              -2.981435537338257,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.11620313674211502,
+            true
+          ],
+          [
+            -3.704396963119507,
+            false
+          ],
+          [
+            -4.4991607666015625,
+            false
+          ],
+          [
+            -2.981435537338257,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "28c4aceea7883339f768a1afcd113959561f89df898803bb72c7f10202c412ec",
+        "prompt_hash": "2a9457594cab30ed4e41f31cb1fc5fedf4d4df64aea74bab4eb8fb2ca33e8b8e",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 771,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Investigation_of_Deutsche_Bank_headquarters_spills_into_second_day",
+          "question_number": 1,
+          "flores_passage": "\"\"\"Panama Papers\"\" is an umbrella term for roughly ten million documents from Panamanian law firm Mossack Fonseca, leaked to the press in spring 2016. The documents showed fourteen banks helped wealthy clients hide billions of US dollars of wealth to avoid taxes and other regulations. British newspaper The Guardian suggested Deutsche Bank controlled roughly a third of the 1200 shell companies used to accomplish this. There were protests worldwide, several criminal prosecutions, and the leaders of the governments of Iceland and Pakistan both resigned.\"",
+          "question": "To whom were the “Panama Papers” leaked?",
+          "mc_answer1": "The Mossack Fonseca firm",
+          "mc_answer2": "The press",
+          "mc_answer3": "Deutsche Bank",
+          "mc_answer4": "Iceland’s government leaders",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"\"\"Panama Papers\"\" is an umbrella term for roughly ten million documents from Panamanian law firm Mossack Fonseca, leaked to the press in spring 2016. The documents showed fourteen banks helped wealthy clients hide billions of US dollars of wealth to avoid taxes and other regulations. British newspaper The Guardian suggested Deutsche Bank controlled roughly a third of the 1200 shell companies used to accomplish this. There were protests worldwide, several criminal prosecutions, and the leaders of the governments of Iceland and Pakistan both resigned.\"\nQ: To whom were the “Panama Papers” leaked?\nA: The Mossack Fonseca firm\nB: The press\nC: Deutsche Bank\nD: Iceland’s government leaders\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"\"\"Panama Papers\"\" is an umbrella term for roughly ten million documents from Panamanian law firm Mossack Fonseca, leaked to the press in spring 2016. The documents showed fourteen banks helped wealthy clients hide billions of US dollars of wealth to avoid taxes and other regulations. British newspaper The Guardian suggested Deutsche Bank controlled roughly a third of the 1200 shell companies used to accomplish this. There were protests worldwide, several criminal prosecutions, and the leaders of the governments of Iceland and Pakistan both resigned.\"\nQ: To whom were the “Panama Papers” leaked?\nA: The Mossack Fonseca firm\nB: The press\nC: Deutsche Bank\nD: Iceland’s government leaders\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"\"\"Panama Papers\"\" is an umbrella term for roughly ten million documents from Panamanian law firm Mossack Fonseca, leaked to the press in spring 2016. The documents showed fourteen banks helped wealthy clients hide billions of US dollars of wealth to avoid taxes and other regulations. British newspaper The Guardian suggested Deutsche Bank controlled roughly a third of the 1200 shell companies used to accomplish this. There were protests worldwide, several criminal prosecutions, and the leaders of the governments of Iceland and Pakistan both resigned.\"\nQ: To whom were the “Panama Papers” leaked?\nA: The Mossack Fonseca firm\nB: The press\nC: Deutsche Bank\nD: Iceland’s government leaders\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"\"\"Panama Papers\"\" is an umbrella term for roughly ten million documents from Panamanian law firm Mossack Fonseca, leaked to the press in spring 2016. The documents showed fourteen banks helped wealthy clients hide billions of US dollars of wealth to avoid taxes and other regulations. British newspaper The Guardian suggested Deutsche Bank controlled roughly a third of the 1200 shell companies used to accomplish this. There were protests worldwide, several criminal prosecutions, and the leaders of the governments of Iceland and Pakistan both resigned.\"\nQ: To whom were the “Panama Papers” leaked?\nA: The Mossack Fonseca firm\nB: The press\nC: Deutsche Bank\nD: Iceland’s government leaders\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.240996360778809,
+              false
+            ]
+          ],
+          [
+            [
+              -0.03500658646225929,
+              true
+            ]
+          ],
+          [
+            [
+              -7.402831077575684,
+              false
+            ]
+          ],
+          [
+            [
+              -8.539397239685059,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.240996360778809,
+            false
+          ],
+          [
+            -0.03500658646225929,
+            true
+          ],
+          [
+            -7.402831077575684,
+            false
+          ],
+          [
+            -8.539397239685059,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a3b2474c102044a7de7295dab4f3e94fa34e568df03318c7b2a70ff1bcce6e46",
+        "prompt_hash": "38ead3c69261946277f8a9b26c52ccfff0ce3119055f7e4068486898299e87d1",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 140,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Jerusalem",
+          "question_number": 1,
+          "flores_passage": "Jerusalem is the capital and largest city of Israel, though most other countries and the United Nations do not recognize it as Israel's capital. The ancient city in the Judean Hills has a fascinating history spanning thousands of years. The city is holy to the three monotheistic religions - Judaism, Christianity and Islam, and serves as a spiritual, religious, and cultural center. Due to the religious significance of the city, and in particular the many sites of the Old City area, Jerusalem is one of the main tourist destinations in Israel. Jerusalem has many historic, archeological and cultural sites, along with vibrant and crowded shopping centers, cafés, and restaurants.",
+          "question": "According to the passage, which of the following aspects of Jerusalem is the least likely to attract tourism?",
+          "mc_answer1": "The city’s religious significance",
+          "mc_answer2": "Its status as Israel’s capital city",
+          "mc_answer3": "Its cultural offerings",
+          "mc_answer4": "The many historic sites",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Jerusalem is the capital and largest city of Israel, though most other countries and the United Nations do not recognize it as Israel's capital. The ancient city in the Judean Hills has a fascinating history spanning thousands of years. The city is holy to the three monotheistic religions - Judaism, Christianity and Islam, and serves as a spiritual, religious, and cultural center. Due to the religious significance of the city, and in particular the many sites of the Old City area, Jerusalem is one of the main tourist destinations in Israel. Jerusalem has many historic, archeological and cultural sites, along with vibrant and crowded shopping centers, cafés, and restaurants.\nQ: According to the passage, which of the following aspects of Jerusalem is the least likely to attract tourism?\nA: The city’s religious significance\nB: Its status as Israel’s capital city\nC: Its cultural offerings\nD: The many historic sites\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Jerusalem is the capital and largest city of Israel, though most other countries and the United Nations do not recognize it as Israel's capital. The ancient city in the Judean Hills has a fascinating history spanning thousands of years. The city is holy to the three monotheistic religions - Judaism, Christianity and Islam, and serves as a spiritual, religious, and cultural center. Due to the religious significance of the city, and in particular the many sites of the Old City area, Jerusalem is one of the main tourist destinations in Israel. Jerusalem has many historic, archeological and cultural sites, along with vibrant and crowded shopping centers, cafés, and restaurants.\nQ: According to the passage, which of the following aspects of Jerusalem is the least likely to attract tourism?\nA: The city’s religious significance\nB: Its status as Israel’s capital city\nC: Its cultural offerings\nD: The many historic sites\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Jerusalem is the capital and largest city of Israel, though most other countries and the United Nations do not recognize it as Israel's capital. The ancient city in the Judean Hills has a fascinating history spanning thousands of years. The city is holy to the three monotheistic religions - Judaism, Christianity and Islam, and serves as a spiritual, religious, and cultural center. Due to the religious significance of the city, and in particular the many sites of the Old City area, Jerusalem is one of the main tourist destinations in Israel. Jerusalem has many historic, archeological and cultural sites, along with vibrant and crowded shopping centers, cafés, and restaurants.\nQ: According to the passage, which of the following aspects of Jerusalem is the least likely to attract tourism?\nA: The city’s religious significance\nB: Its status as Israel’s capital city\nC: Its cultural offerings\nD: The many historic sites\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Jerusalem is the capital and largest city of Israel, though most other countries and the United Nations do not recognize it as Israel's capital. The ancient city in the Judean Hills has a fascinating history spanning thousands of years. The city is holy to the three monotheistic religions - Judaism, Christianity and Islam, and serves as a spiritual, religious, and cultural center. Due to the religious significance of the city, and in particular the many sites of the Old City area, Jerusalem is one of the main tourist destinations in Israel. Jerusalem has many historic, archeological and cultural sites, along with vibrant and crowded shopping centers, cafés, and restaurants.\nQ: According to the passage, which of the following aspects of Jerusalem is the least likely to attract tourism?\nA: The city’s religious significance\nB: Its status as Israel’s capital city\nC: Its cultural offerings\nD: The many historic sites\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.4384262561798096,
+              false
+            ]
+          ],
+          [
+            [
+              -0.10390027612447739,
+              true
+            ]
+          ],
+          [
+            [
+              -7.321008205413818,
+              false
+            ]
+          ],
+          [
+            [
+              -6.2389140129089355,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.4384262561798096,
+            false
+          ],
+          [
+            -0.10390027612447739,
+            true
+          ],
+          [
+            -7.321008205413818,
+            false
+          ],
+          [
+            -6.2389140129089355,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "ab1582bd9b755dd4e4b12cc009feae5b04e17a3d08b4af2c081c9db12385a116",
+        "prompt_hash": "ff1cbb1dba2f7adff3bf23cd3e4c7b7c45e109be634c07ea5eea1cd5c8c62749",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792555496.290926,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

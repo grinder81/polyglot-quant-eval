@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 10,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Animal_Behavior/Army_Ants_-_Social_Hierarchy,_Life_Cycles,_and_Migration",
+          "question_number": 1,
+          "flores_passage": "Army ant colonies march and nest in different phases as well. In the nomadic phase, army ants march at night and stop to camp during the day. The colony begins a nomadic phase when available food has decreased. During this phase, the colony makes temporary nests that are changed everyday. Each of these nomadic rampages or marches lasts for approximately 17 days.",
+          "question": "According to the passage, what is true of an army ant colony entering a nomadic phase?",
+          "mc_answer1": "They nest during the night",
+          "mc_answer2": "They have a low supply of food",
+          "mc_answer3": "They make nests that are changed after 17 days",
+          "mc_answer4": "They march during the day",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Army ant colonies march and nest in different phases as well. In the nomadic phase, army ants march at night and stop to camp during the day. The colony begins a nomadic phase when available food has decreased. During this phase, the colony makes temporary nests that are changed everyday. Each of these nomadic rampages or marches lasts for approximately 17 days.\nQ: According to the passage, what is true of an army ant colony entering a nomadic phase?\nA: They nest during the night\nB: They have a low supply of food\nC: They make nests that are changed after 17 days\nD: They march during the day\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Army ant colonies march and nest in different phases as well. In the nomadic phase, army ants march at night and stop to camp during the day. The colony begins a nomadic phase when available food has decreased. During this phase, the colony makes temporary nests that are changed everyday. Each of these nomadic rampages or marches lasts for approximately 17 days.\nQ: According to the passage, what is true of an army ant colony entering a nomadic phase?\nA: They nest during the night\nB: They have a low supply of food\nC: They make nests that are changed after 17 days\nD: They march during the day\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Army ant colonies march and nest in different phases as well. In the nomadic phase, army ants march at night and stop to camp during the day. The colony begins a nomadic phase when available food has decreased. During this phase, the colony makes temporary nests that are changed everyday. Each of these nomadic rampages or marches lasts for approximately 17 days.\nQ: According to the passage, what is true of an army ant colony entering a nomadic phase?\nA: They nest during the night\nB: They have a low supply of food\nC: They make nests that are changed after 17 days\nD: They march during the day\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Army ant colonies march and nest in different phases as well. In the nomadic phase, army ants march at night and stop to camp during the day. The colony begins a nomadic phase when available food has decreased. During this phase, the colony makes temporary nests that are changed everyday. Each of these nomadic rampages or marches lasts for approximately 17 days.\nQ: According to the passage, what is true of an army ant colony entering a nomadic phase?\nA: They nest during the night\nB: They have a low supply of food\nC: They make nests that are changed after 17 days\nD: They march during the day\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.2568702697753906,
+              false
+            ]
+          ],
+          [
+            [
+              -0.1658650040626526,
+              true
+            ]
+          ],
+          [
+            [
+              -2.6672229766845703,
+              false
+            ]
+          ],
+          [
+            [
+              -4.808815002441406,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.2568702697753906,
+            false
+          ],
+          [
+            -0.1658650040626526,
+            true
+          ],
+          [
+            -2.6672229766845703,
+            false
+          ],
+          [
+            -4.808815002441406,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a64ab9975a5a33b43116b0749877eb84581c098f715fe378efd82d392cfb52a3",
+        "prompt_hash": "160e40efd2edb23098be9b2d855610ba4f7d5326e86a1a84107107a557b3bc1c",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 17,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Basic_Physics_of_Digital_Radiography/The_Basics",
+          "question_number": 1,
+          "flores_passage": "The atom can be considered to be one of the fundamental building blocks of all matter. Its a very complex entity which consists, according to a simplified Bohr model, of a central nucleus orbited by electrons, somewhat similar to planets orbiting the sun - see Figure 1.1. The nucleus consists of two particles - neutrons and protons. Protons have a positive electric charge while neutrons have no charge. The electrons have a negative electric charge.",
+          "question": "The particles that orbit the nucleus have which type of charge?",
+          "mc_answer1": "Positive charge",
+          "mc_answer2": "No charge",
+          "mc_answer3": "Negative charge",
+          "mc_answer4": "Positive and negative charge",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The atom can be considered to be one of the fundamental building blocks of all matter. Its a very complex entity which consists, according to a simplified Bohr model, of a central nucleus orbited by electrons, somewhat similar to planets orbiting the sun - see Figure 1.1. The nucleus consists of two particles - neutrons and protons. Protons have a positive electric charge while neutrons have no charge. The electrons have a negative electric charge.\nQ: The particles that orbit the nucleus have which type of charge?\nA: Positive charge\nB: No charge\nC: Negative charge\nD: Positive and negative charge\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The atom can be considered to be one of the fundamental building blocks of all matter. Its a very complex entity which consists, according to a simplified Bohr model, of a central nucleus orbited by electrons, somewhat similar to planets orbiting the sun - see Figure 1.1. The nucleus consists of two particles - neutrons and protons. Protons have a positive electric charge while neutrons have no charge. The electrons have a negative electric charge.\nQ: The particles that orbit the nucleus have which type of charge?\nA: Positive charge\nB: No charge\nC: Negative charge\nD: Positive and negative charge\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The atom can be considered to be one of the fundamental building blocks of all matter. Its a very complex entity which consists, according to a simplified Bohr model, of a central nucleus orbited by electrons, somewhat similar to planets orbiting the sun - see Figure 1.1. The nucleus consists of two particles - neutrons and protons. Protons have a positive electric charge while neutrons have no charge. The electrons have a negative electric charge.\nQ: The particles that orbit the nucleus have which type of charge?\nA: Positive charge\nB: No charge\nC: Negative charge\nD: Positive and negative charge\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The atom can be considered to be one of the fundamental building blocks of all matter. Its a very complex entity which consists, according to a simplified Bohr model, of a central nucleus orbited by electrons, somewhat similar to planets orbiting the sun - see Figure 1.1. The nucleus consists of two particles - neutrons and protons. Protons have a positive electric charge while neutrons have no charge. The electrons have a negative electric charge.\nQ: The particles that orbit the nucleus have which type of charge?\nA: Positive charge\nB: No charge\nC: Negative charge\nD: Positive and negative charge\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.875040054321289,
+              false
+            ]
+          ],
+          [
+            [
+              -7.1392364501953125,
+              false
+            ]
+          ],
+          [
+            [
+              -0.02360713668167591,
+              true
+            ]
+          ],
+          [
+            [
+              -9.317464828491211,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.875040054321289,
+            false
+          ],
+          [
+            -7.1392364501953125,
+            false
+          ],
+          [
+            -0.02360713668167591,
+            true
+          ],
+          [
+            -9.317464828491211,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "6ae9d1d256fe27f9260ad3941837067bab8603e64d91d4c9c830f97a20f8e81f",
+        "prompt_hash": "317245faee1b9b9897c6c875f7a2b02a9686b1757497ea3d736356a598240a72",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 813,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/China%27s_economy_surpasses_Japan%27s_in_second_quarter",
+          "question_number": 1,
+          "flores_passage": "During the last three decades, despite officially remaining a communist state, China has developed a market economy. The first economic reforms were made under the leadership of Deng Xiaoping. Since then, China's economic size has grown by 90 times. For the first time, last year China exported more cars than Germany and surpassed the United States as the biggest market for this industry. China's GDP could be larger than the United States within two decades.",
+          "question": "According to the passage, which of the following statements does not accurately reflect China's economy?",
+          "mc_answer1": "China’s economy has grown exponentially since making reforms",
+          "mc_answer2": "China has a bigger market for car exportation than the United States",
+          "mc_answer3": "China could eventually have a larger GDP than the United States",
+          "mc_answer4": "China has never exported more cars than Germany",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: During the last three decades, despite officially remaining a communist state, China has developed a market economy. The first economic reforms were made under the leadership of Deng Xiaoping. Since then, China's economic size has grown by 90 times. For the first time, last year China exported more cars than Germany and surpassed the United States as the biggest market for this industry. China's GDP could be larger than the United States within two decades.\nQ: According to the passage, which of the following statements does not accurately reflect China's economy?\nA: China’s economy has grown exponentially since making reforms\nB: China has a bigger market for car exportation than the United States\nC: China could eventually have a larger GDP than the United States\nD: China has never exported more cars than Germany\nAnswer:",
+            " A"
+          ],
+          [
+            "P: During the last three decades, despite officially remaining a communist state, China has developed a market economy. The first economic reforms were made under the leadership of Deng Xiaoping. Since then, China's economic size has grown by 90 times. For the first time, last year China exported more cars than Germany and surpassed the United States as the biggest market for this industry. China's GDP could be larger than the United States within two decades.\nQ: According to the passage, which of the following statements does not accurately reflect China's economy?\nA: China’s economy has grown exponentially since making reforms\nB: China has a bigger market for car exportation than the United States\nC: China could eventually have a larger GDP than the United States\nD: China has never exported more cars than Germany\nAnswer:",
+            " B"
+          ],
+          [
+            "P: During the last three decades, despite officially remaining a communist state, China has developed a market economy. The first economic reforms were made under the leadership of Deng Xiaoping. Since then, China's economic size has grown by 90 times. For the first time, last year China exported more cars than Germany and surpassed the United States as the biggest market for this industry. China's GDP could be larger than the United States within two decades.\nQ: According to the passage, which of the following statements does not accurately reflect China's economy?\nA: China’s economy has grown exponentially since making reforms\nB: China has a bigger market for car exportation than the United States\nC: China could eventually have a larger GDP than the United States\nD: China has never exported more cars than Germany\nAnswer:",
+            " C"
+          ],
+          [
+            "P: During the last three decades, despite officially remaining a communist state, China has developed a market economy. The first economic reforms were made under the leadership of Deng Xiaoping. Since then, China's economic size has grown by 90 times. For the first time, last year China exported more cars than Germany and surpassed the United States as the biggest market for this industry. China's GDP could be larger than the United States within two decades.\nQ: According to the passage, which of the following statements does not accurately reflect China's economy?\nA: China’s economy has grown exponentially since making reforms\nB: China has a bigger market for car exportation than the United States\nC: China could eventually have a larger GDP than the United States\nD: China has never exported more cars than Germany\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.84113883972168,
+              false
+            ]
+          ],
+          [
+            [
+              -5.045825958251953,
+              false
+            ]
+          ],
+          [
+            [
+              -5.284503936767578,
+              false
+            ]
+          ],
+          [
+            [
+              -0.08518024533987045,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.84113883972168,
+            false
+          ],
+          [
+            -5.045825958251953,
+            false
+          ],
+          [
+            -5.284503936767578,
+            false
+          ],
+          [
+            -0.08518024533987045,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f3f28f0c1c627b62cfb33eb9e48aa1a079d013519727a5aeca8e4f1ba256e43e",
+        "prompt_hash": "b495abb57b0c3a60cd05600840aa66d2b6c9ee0817120bb37e5b9296bd377850",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 491,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/National_Hockey_League_news:_March_22,_2008",
+          "question_number": 2,
+          "flores_passage": "Today's Player of the Day is Alex Ovechkin of the Washington Capitals. He had 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers. Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom; his second goal of the night was his 60th of the season, becoming the first player to score 60 or more goals in a season since 1995-96, when Jaromir Jagr and Mario Lemieux each reached that milestone.",
+          "question": "Who scored his 60th goal of the season during the Capitals vs. Thrashers game?",
+          "mc_answer1": "Mario Lemieux",
+          "mc_answer2": "Jaromir Jagr",
+          "mc_answer3": "Alex Ovechkin",
+          "mc_answer4": "Nicklas Backstrom",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Today's Player of the Day is Alex Ovechkin of the Washington Capitals. He had 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers. Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom; his second goal of the night was his 60th of the season, becoming the first player to score 60 or more goals in a season since 1995-96, when Jaromir Jagr and Mario Lemieux each reached that milestone.\nQ: Who scored his 60th goal of the season during the Capitals vs. Thrashers game?\nA: Mario Lemieux\nB: Jaromir Jagr\nC: Alex Ovechkin\nD: Nicklas Backstrom\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Today's Player of the Day is Alex Ovechkin of the Washington Capitals. He had 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers. Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom; his second goal of the night was his 60th of the season, becoming the first player to score 60 or more goals in a season since 1995-96, when Jaromir Jagr and Mario Lemieux each reached that milestone.\nQ: Who scored his 60th goal of the season during the Capitals vs. Thrashers game?\nA: Mario Lemieux\nB: Jaromir Jagr\nC: Alex Ovechkin\nD: Nicklas Backstrom\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Today's Player of the Day is Alex Ovechkin of the Washington Capitals. He had 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers. Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom; his second goal of the night was his 60th of the season, becoming the first player to score 60 or more goals in a season since 1995-96, when Jaromir Jagr and Mario Lemieux each reached that milestone.\nQ: Who scored his 60th goal of the season during the Capitals vs. Thrashers game?\nA: Mario Lemieux\nB: Jaromir Jagr\nC: Alex Ovechkin\nD: Nicklas Backstrom\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Today's Player of the Day is Alex Ovechkin of the Washington Capitals. He had 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers. Ovechkin's first assist of the night was on the game-winning goal by rookie Nicklas Backstrom; his second goal of the night was his 60th of the season, becoming the first player to score 60 or more goals in a season since 1995-96, when Jaromir Jagr and Mario Lemieux each reached that milestone.\nQ: Who scored his 60th goal of the season during the Capitals vs. Thrashers game?\nA: Mario Lemieux\nB: Jaromir Jagr\nC: Alex Ovechkin\nD: Nicklas Backstrom\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.091734409332275,
+              false
+            ]
+          ],
+          [
+            [
+              -4.925283908843994,
+              false
+            ]
+          ],
+          [
+            [
+              -0.0497119203209877,
+              true
+            ]
+          ],
+          [
+            [
+              -6.689113140106201,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.091734409332275,
+            false
+          ],
+          [
+            -4.925283908843994,
+            false
+          ],
+          [
+            -0.0497119203209877,
+            true
+          ],
+          [
+            -6.689113140106201,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c48afee33d3ac234425f38531a68f884543e2a67ad2aa3d9500c28869ffda1db",
+        "prompt_hash": "95f0ea34ff57145e1cf27f6cd2b4deae9d880e78cb86c0d907188c4538c41fde",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 345,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Running",
+          "question_number": 1,
+          "flores_passage": "Internationally, there are nearly 200 running tour organizations. Most of them operate independently. The Global Running Tours successor, Go Running Tours networks dozens of sightrunning providers on four continents. With roots in Barcelona's Running Tours Barcelona and Copenhagen's Running Copenhagen, it was quickly joined by Running Tours Prague based in Prague and others.",
+          "question": "Which tour organization succeeded Global Running Tours?",
+          "mc_answer1": "Running Copenhagen",
+          "mc_answer2": "Go Running Tours",
+          "mc_answer3": "Running Tours Prague",
+          "mc_answer4": "Running Tours Barcelona",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Internationally, there are nearly 200 running tour organizations. Most of them operate independently. The Global Running Tours successor, Go Running Tours networks dozens of sightrunning providers on four continents. With roots in Barcelona's Running Tours Barcelona and Copenhagen's Running Copenhagen, it was quickly joined by Running Tours Prague based in Prague and others.\nQ: Which tour organization succeeded Global Running Tours?\nA: Running Copenhagen\nB: Go Running Tours\nC: Running Tours Prague\nD: Running Tours Barcelona\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Internationally, there are nearly 200 running tour organizations. Most of them operate independently. The Global Running Tours successor, Go Running Tours networks dozens of sightrunning providers on four continents. With roots in Barcelona's Running Tours Barcelona and Copenhagen's Running Copenhagen, it was quickly joined by Running Tours Prague based in Prague and others.\nQ: Which tour organization succeeded Global Running Tours?\nA: Running Copenhagen\nB: Go Running Tours\nC: Running Tours Prague\nD: Running Tours Barcelona\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Internationally, there are nearly 200 running tour organizations. Most of them operate independently. The Global Running Tours successor, Go Running Tours networks dozens of sightrunning providers on four continents. With roots in Barcelona's Running Tours Barcelona and Copenhagen's Running Copenhagen, it was quickly joined by Running Tours Prague based in Prague and others.\nQ: Which tour organization succeeded Global Running Tours?\nA: Running Copenhagen\nB: Go Running Tours\nC: Running Tours Prague\nD: Running Tours Barcelona\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Internationally, there are nearly 200 running tour organizations. Most of them operate independently. The Global Running Tours successor, Go Running Tours networks dozens of sightrunning providers on four continents. With roots in Barcelona's Running Tours Barcelona and Copenhagen's Running Copenhagen, it was quickly joined by Running Tours Prague based in Prague and others.\nQ: Which tour organization succeeded Global Running Tours?\nA: Running Copenhagen\nB: Go Running Tours\nC: Running Tours Prague\nD: Running Tours Barcelona\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.8161354064941406,
+              false
+            ]
+          ],
+          [
+            [
+              -0.2760448753833771,
+              true
+            ]
+          ],
+          [
+            [
+              -3.031801223754883,
+              false
+            ]
+          ],
+          [
+            [
+              -6.253993034362793,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.8161354064941406,
+            false
+          ],
+          [
+            -0.2760448753833771,
+            true
+          ],
+          [
+            -3.031801223754883,
+            false
+          ],
+          [
+            -6.253993034362793,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "aa6adc425462b7be8713b3bd8d1c118ed527b94452ce1737a7bc4bd7dd94c36b",
+        "prompt_hash": "f0046c6137d4a835c6bb505e0be35884400c9fa8d78d3d67699e6597abdc007a",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792554298.2803607,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 354,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/California_lawmaker_denies_affairs_after_sexual_discussion_becomes_public",
+          "question_number": 2,
+          "flores_passage": "\"Duvall, who is married with two adult children, did not leave a big impression on Miller, to whom the story was related. When asked for comment, Miller said, \"\"Mike talks a lot during the hearing...I was getting ready so I wasn't really hearing what he was saying.\"\"\"",
+          "question": "According to the passage, which of the following is true of Miller’s experience  at the hearing?",
+          "mc_answer1": "Duvall made an impression on Miller during the hearing",
+          "mc_answer2": "He wasn’t paying attention while he was getting ready",
+          "mc_answer3": "Duvall’s two children talked a lot during the hearing",
+          "mc_answer4": "He was paying close attention to Duvall’s story",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"Duvall, who is married with two adult children, did not leave a big impression on Miller, to whom the story was related. When asked for comment, Miller said, \"\"Mike talks a lot during the hearing...I was getting ready so I wasn't really hearing what he was saying.\"\"\"\nQ: According to the passage, which of the following is true of Miller’s experience  at the hearing?\nA: Duvall made an impression on Miller during the hearing\nB: He wasn’t paying attention while he was getting ready\nC: Duvall’s two children talked a lot during the hearing\nD: He was paying close attention to Duvall’s story\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Duvall, who is married with two adult children, did not leave a big impression on Miller, to whom the story was related. When asked for comment, Miller said, \"\"Mike talks a lot during the hearing...I was getting ready so I wasn't really hearing what he was saying.\"\"\"\nQ: According to the passage, which of the following is true of Miller’s experience  at the hearing?\nA: Duvall made an impression on Miller during the hearing\nB: He wasn’t paying attention while he was getting ready\nC: Duvall’s two children talked a lot during the hearing\nD: He was paying close attention to Duvall’s story\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Duvall, who is married with two adult children, did not leave a big impression on Miller, to whom the story was related. When asked for comment, Miller said, \"\"Mike talks a lot during the hearing...I was getting ready so I wasn't really hearing what he was saying.\"\"\"\nQ: According to the passage, which of the following is true of Miller’s experience  at the hearing?\nA: Duvall made an impression on Miller during the hearing\nB: He wasn’t paying attention while he was getting ready\nC: Duvall’s two children talked a lot during the hearing\nD: He was paying close attention to Duvall’s story\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Duvall, who is married with two adult children, did not leave a big impression on Miller, to whom the story was related. When asked for comment, Miller said, \"\"Mike talks a lot during the hearing...I was getting ready so I wasn't really hearing what he was saying.\"\"\"\nQ: According to the passage, which of the following is true of Miller’s experience  at the hearing?\nA: Duvall made an impression on Miller during the hearing\nB: He wasn’t paying attention while he was getting ready\nC: Duvall’s two children talked a lot during the hearing\nD: He was paying close attention to Duvall’s story\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.7211997509002686,
+              false
+            ]
+          ],
+          [
+            [
+              -0.3281390368938446,
+              true
+            ]
+          ],
+          [
+            [
+              -3.8758246898651123,
+              false
+            ]
+          ],
+          [
+            [
+              -2.2027976512908936,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.7211997509002686,
+            false
+          ],
+          [
+            -0.3281390368938446,
+            true
+          ],
+          [
+            -3.8758246898651123,
+            false
+          ],
+          [
+            -2.2027976512908936,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "bc546cac58a7f149f7c3d7d1e586d9b7cb92b44e16bb3384215e46b12b8da694",
+        "prompt_hash": "050d04bd16756e81bdb6e62c58d02963b57264c6bbfd7a6a5834a087860856b3",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 752,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Cosmonaut_Alexei_Leonov_dies_at_age_85",
+          "question_number": 1,
+          "flores_passage": "\"Leonov, also known as \"\"cosmonaut No. 11\"\", was part of the Soviet Union's original team of cosmonauts. On March 18, 1965, he performed the first manned extravehicular activity (EVA), or \"\"spacewalk\"\", remaining alone outside the spacecraft for just over twelve minutes. He received the \"\"Hero of the Soviet Union\"\", the Soviet Union's highest honor, for his work. Ten years later, he led the Soviet part of the Apollo–Soyuz mission symbolizing that the Space Race was over.\"",
+          "question": "What is another name for the “spacewalk” that Leonov performed?",
+          "mc_answer1": "Apollo-Soyuz mission",
+          "mc_answer2": "Space Race",
+          "mc_answer3": "Extravehicular activity",
+          "mc_answer4": "Cosmonaut No. 11",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"Leonov, also known as \"\"cosmonaut No. 11\"\", was part of the Soviet Union's original team of cosmonauts. On March 18, 1965, he performed the first manned extravehicular activity (EVA), or \"\"spacewalk\"\", remaining alone outside the spacecraft for just over twelve minutes. He received the \"\"Hero of the Soviet Union\"\", the Soviet Union's highest honor, for his work. Ten years later, he led the Soviet part of the Apollo–Soyuz mission symbolizing that the Space Race was over.\"\nQ: What is another name for the “spacewalk” that Leonov performed?\nA: Apollo-Soyuz mission\nB: Space Race\nC: Extravehicular activity\nD: Cosmonaut No. 11\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Leonov, also known as \"\"cosmonaut No. 11\"\", was part of the Soviet Union's original team of cosmonauts. On March 18, 1965, he performed the first manned extravehicular activity (EVA), or \"\"spacewalk\"\", remaining alone outside the spacecraft for just over twelve minutes. He received the \"\"Hero of the Soviet Union\"\", the Soviet Union's highest honor, for his work. Ten years later, he led the Soviet part of the Apollo–Soyuz mission symbolizing that the Space Race was over.\"\nQ: What is another name for the “spacewalk” that Leonov performed?\nA: Apollo-Soyuz mission\nB: Space Race\nC: Extravehicular activity\nD: Cosmonaut No. 11\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Leonov, also known as \"\"cosmonaut No. 11\"\", was part of the Soviet Union's original team of cosmonauts. On March 18, 1965, he performed the first manned extravehicular activity (EVA), or \"\"spacewalk\"\", remaining alone outside the spacecraft for just over twelve minutes. He received the \"\"Hero of the Soviet Union\"\", the Soviet Union's highest honor, for his work. Ten years later, he led the Soviet part of the Apollo–Soyuz mission symbolizing that the Space Race was over.\"\nQ: What is another name for the “spacewalk” that Leonov performed?\nA: Apollo-Soyuz mission\nB: Space Race\nC: Extravehicular activity\nD: Cosmonaut No. 11\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Leonov, also known as \"\"cosmonaut No. 11\"\", was part of the Soviet Union's original team of cosmonauts. On March 18, 1965, he performed the first manned extravehicular activity (EVA), or \"\"spacewalk\"\", remaining alone outside the spacecraft for just over twelve minutes. He received the \"\"Hero of the Soviet Union\"\", the Soviet Union's highest honor, for his work. Ten years later, he led the Soviet part of the Apollo–Soyuz mission symbolizing that the Space Race was over.\"\nQ: What is another name for the “spacewalk” that Leonov performed?\nA: Apollo-Soyuz mission\nB: Space Race\nC: Extravehicular activity\nD: Cosmonaut No. 11\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.690087795257568,
+              false
+            ]
+          ],
+          [
+            [
+              -6.282104015350342,
+              false
+            ]
+          ],
+          [
+            [
+              -0.01731247827410698,
+              true
+            ]
+          ],
+          [
+            [
+              -7.426941394805908,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.690087795257568,
+            false
+          ],
+          [
+            -6.282104015350342,
+            false
+          ],
+          [
+            -0.01731247827410698,
+            true
+          ],
+          [
+            -7.426941394805908,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "021f129bc639157d77751139fbd60db4693e30d162832b17140dc3f8e4d903b5",
+        "prompt_hash": "62ac5996ae3fe5917fb7a412d7f5cc172bcaefe3856356e9acdeac2486b39838",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 585,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Hungary%27s_St_Stephen%27s_Day_hit_by_storm:_3_left_dead",
+          "question_number": 2,
+          "flores_passage": "\"Five minutes into the display a wind starts rolling in, about a minute later, the wind is reaching 70km/h... then the rain comes, but so hard and so large that it slaps your skin like a needle, then hail fell from the sky, people panicking and screaming and running over each other. I lost my sister and her friend, and on my way there were two disabled people in wheelchairs, people just jumping over and pushing them,\"\" Armand Versace said.\"",
+          "question": "According to Versace, when did the strongest winds begin?",
+          "mc_answer1": "A few minutes after the display started",
+          "mc_answer2": "After the rain",
+          "mc_answer3": "After he lost his sister",
+          "mc_answer4": "Before the hail",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: \"Five minutes into the display a wind starts rolling in, about a minute later, the wind is reaching 70km/h... then the rain comes, but so hard and so large that it slaps your skin like a needle, then hail fell from the sky, people panicking and screaming and running over each other. I lost my sister and her friend, and on my way there were two disabled people in wheelchairs, people just jumping over and pushing them,\"\" Armand Versace said.\"\nQ: According to Versace, when did the strongest winds begin?\nA: A few minutes after the display started\nB: After the rain\nC: After he lost his sister\nD: Before the hail\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Five minutes into the display a wind starts rolling in, about a minute later, the wind is reaching 70km/h... then the rain comes, but so hard and so large that it slaps your skin like a needle, then hail fell from the sky, people panicking and screaming and running over each other. I lost my sister and her friend, and on my way there were two disabled people in wheelchairs, people just jumping over and pushing them,\"\" Armand Versace said.\"\nQ: According to Versace, when did the strongest winds begin?\nA: A few minutes after the display started\nB: After the rain\nC: After he lost his sister\nD: Before the hail\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Five minutes into the display a wind starts rolling in, about a minute later, the wind is reaching 70km/h... then the rain comes, but so hard and so large that it slaps your skin like a needle, then hail fell from the sky, people panicking and screaming and running over each other. I lost my sister and her friend, and on my way there were two disabled people in wheelchairs, people just jumping over and pushing them,\"\" Armand Versace said.\"\nQ: According to Versace, when did the strongest winds begin?\nA: A few minutes after the display started\nB: After the rain\nC: After he lost his sister\nD: Before the hail\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Five minutes into the display a wind starts rolling in, about a minute later, the wind is reaching 70km/h... then the rain comes, but so hard and so large that it slaps your skin like a needle, then hail fell from the sky, people panicking and screaming and running over each other. I lost my sister and her friend, and on my way there were two disabled people in wheelchairs, people just jumping over and pushing them,\"\" Armand Versace said.\"\nQ: According to Versace, when did the strongest winds begin?\nA: A few minutes after the display started\nB: After the rain\nC: After he lost his sister\nD: Before the hail\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.028289256617426872,
+              true
+            ]
+          ],
+          [
+            [
+              -5.531489849090576,
+              false
+            ]
+          ],
+          [
+            [
+              -5.7779364585876465,
+              false
+            ]
+          ],
+          [
+            [
+              -4.639562129974365,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.028289256617426872,
+            true
+          ],
+          [
+            -5.531489849090576,
+            false
+          ],
+          [
+            -5.7779364585876465,
+            false
+          ],
+          [
+            -4.639562129974365,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9fa22870bf9ae0376e4d5a9d1555abbb65c8fde24cc9d8bdea68307895eaafeb",
+        "prompt_hash": "7019d9db2247bf9df18bcf18cdc4d335872de149acdfb95d42f0b6d2b79fd3ba",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 421,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/The_Onion:_An_interview_with_%27America%27s_Finest_News_Source%27",
+          "question_number": 1,
+          "flores_passage": "Long before The Daily Show and The Colbert Report, Heck and Johnson envisioned a publication that would parody the news—and news reporting—when they were students at UW in 1988. Since its inception, The Onion has become a veritable news parody empire, with a print edition, a website that drew 5,000,000 unique visitors in the month of October, personal ads, a 24 hour news network, podcasts, and a recently launched world atlas called Our Dumb World. Al Gore and General Tommy Franks casually rattle off their favorite headlines (Gore's was when The Onion reported he and Tipper were having the best sex of their lives after his 2000 Electoral College defeat). Many of their writers have gone on to wield great influence on Jon Stewart and Stephen Colbert's news parody shows.",
+          "question": "Which news parody source was created by two former UW students?",
+          "mc_answer1": "The Colbert Report",
+          "mc_answer2": "The Electoral College",
+          "mc_answer3": "The Daily Show",
+          "mc_answer4": "The Onion",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Long before The Daily Show and The Colbert Report, Heck and Johnson envisioned a publication that would parody the news—and news reporting—when they were students at UW in 1988. Since its inception, The Onion has become a veritable news parody empire, with a print edition, a website that drew 5,000,000 unique visitors in the month of October, personal ads, a 24 hour news network, podcasts, and a recently launched world atlas called Our Dumb World. Al Gore and General Tommy Franks casually rattle off their favorite headlines (Gore's was when The Onion reported he and Tipper were having the best sex of their lives after his 2000 Electoral College defeat). Many of their writers have gone on to wield great influence on Jon Stewart and Stephen Colbert's news parody shows.\nQ: Which news parody source was created by two former UW students?\nA: The Colbert Report\nB: The Electoral College\nC: The Daily Show\nD: The Onion\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Long before The Daily Show and The Colbert Report, Heck and Johnson envisioned a publication that would parody the news—and news reporting—when they were students at UW in 1988. Since its inception, The Onion has become a veritable news parody empire, with a print edition, a website that drew 5,000,000 unique visitors in the month of October, personal ads, a 24 hour news network, podcasts, and a recently launched world atlas called Our Dumb World. Al Gore and General Tommy Franks casually rattle off their favorite headlines (Gore's was when The Onion reported he and Tipper were having the best sex of their lives after his 2000 Electoral College defeat). Many of their writers have gone on to wield great influence on Jon Stewart and Stephen Colbert's news parody shows.\nQ: Which news parody source was created by two former UW students?\nA: The Colbert Report\nB: The Electoral College\nC: The Daily Show\nD: The Onion\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Long before The Daily Show and The Colbert Report, Heck and Johnson envisioned a publication that would parody the news—and news reporting—when they were students at UW in 1988. Since its inception, The Onion has become a veritable news parody empire, with a print edition, a website that drew 5,000,000 unique visitors in the month of October, personal ads, a 24 hour news network, podcasts, and a recently launched world atlas called Our Dumb World. Al Gore and General Tommy Franks casually rattle off their favorite headlines (Gore's was when The Onion reported he and Tipper were having the best sex of their lives after his 2000 Electoral College defeat). Many of their writers have gone on to wield great influence on Jon Stewart and Stephen Colbert's news parody shows.\nQ: Which news parody source was created by two former UW students?\nA: The Colbert Report\nB: The Electoral College\nC: The Daily Show\nD: The Onion\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Long before The Daily Show and The Colbert Report, Heck and Johnson envisioned a publication that would parody the news—and news reporting—when they were students at UW in 1988. Since its inception, The Onion has become a veritable news parody empire, with a print edition, a website that drew 5,000,000 unique visitors in the month of October, personal ads, a 24 hour news network, podcasts, and a recently launched world atlas called Our Dumb World. Al Gore and General Tommy Franks casually rattle off their favorite headlines (Gore's was when The Onion reported he and Tipper were having the best sex of their lives after his 2000 Electoral College defeat). Many of their writers have gone on to wield great influence on Jon Stewart and Stephen Colbert's news parody shows.\nQ: Which news parody source was created by two former UW students?\nA: The Colbert Report\nB: The Electoral College\nC: The Daily Show\nD: The Onion\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -7.01469612121582,
+              false
+            ]
+          ],
+          [
+            [
+              -7.9154253005981445,
+              false
+            ]
+          ],
+          [
+            [
+              -7.301364898681641,
+              false
+            ]
+          ],
+          [
+            [
+              -0.015940610319375992,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -7.01469612121582,
+            false
+          ],
+          [
+            -7.9154253005981445,
+            false
+          ],
+          [
+            -7.301364898681641,
+            false
+          ],
+          [
+            -0.015940610319375992,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "8c22ae5574a2cbe2248f891bba1b2131123ac84272682c709c459cbbaa43ca41",
+        "prompt_hash": "4995bebdb4d0ed9b2e1ddeb721b5ca0657e9d2998e1f00eefa34c07257f229b5",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 335,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Horse_riding",
+          "question_number": 1,
+          "flores_passage": "Stirrups are supports for the rider's feet that hang down on either side of the saddle. They provide greater stability for the rider but can have safety concerns due to the potential for a rider's feet to get stuck in them. If a rider is thrown from a horse but has a foot caught in the stirrup, they could be dragged if the horse runs away. To minimize this risk, a number of safety precautions can be taken. First, most riders wear riding boots with a heel and a smooth, quite narrow, sole. Next, some saddles, particularly English saddles, have safety bars that allow a stirrup leather to fall off the saddle if pulled backwards by a falling rider.",
+          "question": "What do some saddles have that help mitigate the risk of a rider’s foot getting caught in a stirrup?",
+          "mc_answer1": "Narrow soles",
+          "mc_answer2": "Safety bars",
+          "mc_answer3": "Leather stirrups",
+          "mc_answer4": "Greater stability",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Stirrups are supports for the rider's feet that hang down on either side of the saddle. They provide greater stability for the rider but can have safety concerns due to the potential for a rider's feet to get stuck in them. If a rider is thrown from a horse but has a foot caught in the stirrup, they could be dragged if the horse runs away. To minimize this risk, a number of safety precautions can be taken. First, most riders wear riding boots with a heel and a smooth, quite narrow, sole. Next, some saddles, particularly English saddles, have safety bars that allow a stirrup leather to fall off the saddle if pulled backwards by a falling rider.\nQ: What do some saddles have that help mitigate the risk of a rider’s foot getting caught in a stirrup?\nA: Narrow soles\nB: Safety bars\nC: Leather stirrups\nD: Greater stability\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Stirrups are supports for the rider's feet that hang down on either side of the saddle. They provide greater stability for the rider but can have safety concerns due to the potential for a rider's feet to get stuck in them. If a rider is thrown from a horse but has a foot caught in the stirrup, they could be dragged if the horse runs away. To minimize this risk, a number of safety precautions can be taken. First, most riders wear riding boots with a heel and a smooth, quite narrow, sole. Next, some saddles, particularly English saddles, have safety bars that allow a stirrup leather to fall off the saddle if pulled backwards by a falling rider.\nQ: What do some saddles have that help mitigate the risk of a rider’s foot getting caught in a stirrup?\nA: Narrow soles\nB: Safety bars\nC: Leather stirrups\nD: Greater stability\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Stirrups are supports for the rider's feet that hang down on either side of the saddle. They provide greater stability for the rider but can have safety concerns due to the potential for a rider's feet to get stuck in them. If a rider is thrown from a horse but has a foot caught in the stirrup, they could be dragged if the horse runs away. To minimize this risk, a number of safety precautions can be taken. First, most riders wear riding boots with a heel and a smooth, quite narrow, sole. Next, some saddles, particularly English saddles, have safety bars that allow a stirrup leather to fall off the saddle if pulled backwards by a falling rider.\nQ: What do some saddles have that help mitigate the risk of a rider’s foot getting caught in a stirrup?\nA: Narrow soles\nB: Safety bars\nC: Leather stirrups\nD: Greater stability\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Stirrups are supports for the rider's feet that hang down on either side of the saddle. They provide greater stability for the rider but can have safety concerns due to the potential for a rider's feet to get stuck in them. If a rider is thrown from a horse but has a foot caught in the stirrup, they could be dragged if the horse runs away. To minimize this risk, a number of safety precautions can be taken. First, most riders wear riding boots with a heel and a smooth, quite narrow, sole. Next, some saddles, particularly English saddles, have safety bars that allow a stirrup leather to fall off the saddle if pulled backwards by a falling rider.\nQ: What do some saddles have that help mitigate the risk of a rider’s foot getting caught in a stirrup?\nA: Narrow soles\nB: Safety bars\nC: Leather stirrups\nD: Greater stability\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.3678717613220215,
+              false
+            ]
+          ],
+          [
+            [
+              -0.01983591727912426,
+              true
+            ]
+          ],
+          [
+            [
+              -8.28062629699707,
+              false
+            ]
+          ],
+          [
+            [
+              -8.630708694458008,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.3678717613220215,
+            false
+          ],
+          [
+            -0.01983591727912426,
+            true
+          ],
+          [
+            -8.28062629699707,
+            false
+          ],
+          [
+            -8.630708694458008,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c59f45390e98aa4c124faef11602b3e9afc84d0f2203f8ea58fd29716928ceb3",
+        "prompt_hash": "b84adc5a34de0cee4a9bc88e4e693042b95a8d2e180d30458d85aedbded57222",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792553649.3974364,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

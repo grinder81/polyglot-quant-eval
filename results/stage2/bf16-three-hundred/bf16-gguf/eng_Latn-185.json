@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 502,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Coaching_Youth_Middle_Distance_Runners/Training",
+          "question_number": 2,
+          "flores_passage": "Middle distance running is a relatively inexpensive sport; however, there are many misconceptions regarding the few pieces of equipment required to participate. Products can be purchased as needed, but most will have little or no real impact on performance. Athletes may feel that they prefer a product even when it provides no real benefits.",
+          "question": "According to the passage, what does middle distance running require?",
+          "mc_answer1": "A lot of equipment",
+          "mc_answer2": "An established athletic background",
+          "mc_answer3": "Very little equipment",
+          "mc_answer4": "A lot of money",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Middle distance running is a relatively inexpensive sport; however, there are many misconceptions regarding the few pieces of equipment required to participate. Products can be purchased as needed, but most will have little or no real impact on performance. Athletes may feel that they prefer a product even when it provides no real benefits.\nQ: According to the passage, what does middle distance running require?\nA: A lot of equipment\nB: An established athletic background\nC: Very little equipment\nD: A lot of money\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Middle distance running is a relatively inexpensive sport; however, there are many misconceptions regarding the few pieces of equipment required to participate. Products can be purchased as needed, but most will have little or no real impact on performance. Athletes may feel that they prefer a product even when it provides no real benefits.\nQ: According to the passage, what does middle distance running require?\nA: A lot of equipment\nB: An established athletic background\nC: Very little equipment\nD: A lot of money\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Middle distance running is a relatively inexpensive sport; however, there are many misconceptions regarding the few pieces of equipment required to participate. Products can be purchased as needed, but most will have little or no real impact on performance. Athletes may feel that they prefer a product even when it provides no real benefits.\nQ: According to the passage, what does middle distance running require?\nA: A lot of equipment\nB: An established athletic background\nC: Very little equipment\nD: A lot of money\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Middle distance running is a relatively inexpensive sport; however, there are many misconceptions regarding the few pieces of equipment required to participate. Products can be purchased as needed, but most will have little or no real impact on performance. Athletes may feel that they prefer a product even when it provides no real benefits.\nQ: According to the passage, what does middle distance running require?\nA: A lot of equipment\nB: An established athletic background\nC: Very little equipment\nD: A lot of money\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -7.423648357391357,
+              false
+            ]
+          ],
+          [
+            [
+              -7.35857629776001,
+              false
+            ]
+          ],
+          [
+            [
+              -0.020101170986890793,
+              true
+            ]
+          ],
+          [
+            [
+              -9.724223136901855,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -7.423648357391357,
+            false
+          ],
+          [
+            -7.35857629776001,
+            false
+          ],
+          [
+            -0.020101170986890793,
+            true
+          ],
+          [
+            -9.724223136901855,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "350e8b192676979020d75f3378ecf8e8854bb4c838681dd74d961bee83438131",
+        "prompt_hash": "69f67b2f808d55e15060b47bd346db257c5f05b0b29718c3e45ac1e2055f9f2e",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 313,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Australian_treasurer_enters_nuclear_debate",
+          "question_number": 2,
+          "flores_passage": "\"Peter Costello, Australian treasurer and the man most likely to succeed Prime Minister John Howard as Liberal party leader has thrown his support behind a nuclear power industry in Australia. Mr Costello said that when nuclear power generation becomes economically viable, Australia should pursue its use. \"\"If it becomes commercial, we should have it. That is, there's no in-principle objection to nuclear energy\"\" Mr Costello said.\"",
+          "question": "Why does Australia not already have a nuclear power industry?",
+          "mc_answer1": "Lacking public support",
+          "mc_answer2": "Too controversial",
+          "mc_answer3": "Too dangerous",
+          "mc_answer4": "Too expensive",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: \"Peter Costello, Australian treasurer and the man most likely to succeed Prime Minister John Howard as Liberal party leader has thrown his support behind a nuclear power industry in Australia. Mr Costello said that when nuclear power generation becomes economically viable, Australia should pursue its use. \"\"If it becomes commercial, we should have it. That is, there's no in-principle objection to nuclear energy\"\" Mr Costello said.\"\nQ: Why does Australia not already have a nuclear power industry?\nA: Lacking public support\nB: Too controversial\nC: Too dangerous\nD: Too expensive\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Peter Costello, Australian treasurer and the man most likely to succeed Prime Minister John Howard as Liberal party leader has thrown his support behind a nuclear power industry in Australia. Mr Costello said that when nuclear power generation becomes economically viable, Australia should pursue its use. \"\"If it becomes commercial, we should have it. That is, there's no in-principle objection to nuclear energy\"\" Mr Costello said.\"\nQ: Why does Australia not already have a nuclear power industry?\nA: Lacking public support\nB: Too controversial\nC: Too dangerous\nD: Too expensive\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Peter Costello, Australian treasurer and the man most likely to succeed Prime Minister John Howard as Liberal party leader has thrown his support behind a nuclear power industry in Australia. Mr Costello said that when nuclear power generation becomes economically viable, Australia should pursue its use. \"\"If it becomes commercial, we should have it. That is, there's no in-principle objection to nuclear energy\"\" Mr Costello said.\"\nQ: Why does Australia not already have a nuclear power industry?\nA: Lacking public support\nB: Too controversial\nC: Too dangerous\nD: Too expensive\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Peter Costello, Australian treasurer and the man most likely to succeed Prime Minister John Howard as Liberal party leader has thrown his support behind a nuclear power industry in Australia. Mr Costello said that when nuclear power generation becomes economically viable, Australia should pursue its use. \"\"If it becomes commercial, we should have it. That is, there's no in-principle objection to nuclear energy\"\" Mr Costello said.\"\nQ: Why does Australia not already have a nuclear power industry?\nA: Lacking public support\nB: Too controversial\nC: Too dangerous\nD: Too expensive\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.9490033388137817,
+              true
+            ]
+          ],
+          [
+            [
+              -1.8540116548538208,
+              false
+            ]
+          ],
+          [
+            [
+              -3.7263307571411133,
+              false
+            ]
+          ],
+          [
+            [
+              -1.4261380434036255,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.9490033388137817,
+            true
+          ],
+          [
+            -1.8540116548538208,
+            false
+          ],
+          [
+            -3.7263307571411133,
+            false
+          ],
+          [
+            -1.4261380434036255,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a14dbc438a86ca0aaf024cb60884d253bcd5f2b0e7ff868e3c19e329b7b43302",
+        "prompt_hash": "7ae904625d974b2d769b0344caca39c7352bbbc4ac0b63f4e140f0d8080d2bae",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 843,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/No_bomb_threat,_hijacking_of_plane_in_China%27s_Xinjiang_region_according_to_Afghan_officials",
+          "question_number": 1,
+          "flores_passage": "Earlier the Chinese news agency Xinhua reported a plane to be hijacked. Later reports then stated the plane received a bomb threat and was diverted back to Afghanistan, landing in Kandahar. The early reports say the plane was diverted back to Afghanistan after being denied an emergency landing in Ürümqi.",
+          "question": "What was not stated in the latest report from Xinhua news agency?",
+          "mc_answer1": "The plane received a bomb threat",
+          "mc_answer2": "The plane landed in Ürümqi",
+          "mc_answer3": "The plane was diverted to Afghanistan",
+          "mc_answer4": "The plane landed in Kandahar",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Earlier the Chinese news agency Xinhua reported a plane to be hijacked. Later reports then stated the plane received a bomb threat and was diverted back to Afghanistan, landing in Kandahar. The early reports say the plane was diverted back to Afghanistan after being denied an emergency landing in Ürümqi.\nQ: What was not stated in the latest report from Xinhua news agency?\nA: The plane received a bomb threat\nB: The plane landed in Ürümqi\nC: The plane was diverted to Afghanistan\nD: The plane landed in Kandahar\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Earlier the Chinese news agency Xinhua reported a plane to be hijacked. Later reports then stated the plane received a bomb threat and was diverted back to Afghanistan, landing in Kandahar. The early reports say the plane was diverted back to Afghanistan after being denied an emergency landing in Ürümqi.\nQ: What was not stated in the latest report from Xinhua news agency?\nA: The plane received a bomb threat\nB: The plane landed in Ürümqi\nC: The plane was diverted to Afghanistan\nD: The plane landed in Kandahar\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Earlier the Chinese news agency Xinhua reported a plane to be hijacked. Later reports then stated the plane received a bomb threat and was diverted back to Afghanistan, landing in Kandahar. The early reports say the plane was diverted back to Afghanistan after being denied an emergency landing in Ürümqi.\nQ: What was not stated in the latest report from Xinhua news agency?\nA: The plane received a bomb threat\nB: The plane landed in Ürümqi\nC: The plane was diverted to Afghanistan\nD: The plane landed in Kandahar\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Earlier the Chinese news agency Xinhua reported a plane to be hijacked. Later reports then stated the plane received a bomb threat and was diverted back to Afghanistan, landing in Kandahar. The early reports say the plane was diverted back to Afghanistan after being denied an emergency landing in Ürümqi.\nQ: What was not stated in the latest report from Xinhua news agency?\nA: The plane received a bomb threat\nB: The plane landed in Ürümqi\nC: The plane was diverted to Afghanistan\nD: The plane landed in Kandahar\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.370924234390259,
+              false
+            ]
+          ],
+          [
+            [
+              -0.1441844254732132,
+              true
+            ]
+          ],
+          [
+            [
+              -5.947386264801025,
+              false
+            ]
+          ],
+          [
+            [
+              -6.459913730621338,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.370924234390259,
+            false
+          ],
+          [
+            -0.1441844254732132,
+            true
+          ],
+          [
+            -5.947386264801025,
+            false
+          ],
+          [
+            -6.459913730621338,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "48963439fcd92d5765b89e5d00983456c853d6169f576201888fc8aa1251388d",
+        "prompt_hash": "137da1d08ede9ced308d652ac7fd4d5cbdf54db11c413492e5bd1c84b3c7a178",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 739,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Greenland",
+          "question_number": 2,
+          "flores_passage": "\"Thanks to undersea fiber optic cable links to Europe and broadband satellite, Greenland is well connected with 93% of the population having internet access. Your hotel or hosts (if staying in a guesthouse or private home) will likely have wifi or an internet connected PC, and all settlements have an internet cafe or some location with public wifi. As mentioned above, though the word \"\"Eskimo\"\" remains acceptable in the United States, it is considered pejorative by many non-U.S. Arctic peoples, especially in Canada. While you may hear the word used by Greenlandic Natives, its use should be avoided by foreigners. The native inhabitants of Greenland call themselves Inuit in Canada and Kalaalleq (plural Kalaallit), a Greenlander, in Greenland. Crime, and ill-will toward foreigners in general, is virtually unknown in Greenland. Even in the towns, there are no \"\"rough areas.\"\" Cold weather is perhaps the only real danger the unprepared will face. If you visit Greenland during cold seasons (considering that the further north you go, the colder it will be), it is essential to bring warm enough clothing. The very long days in the summer can lead to problems getting sufficient sleep and associated health issues. During the summer, also watch out for the Nordic mosquitoes. Although they do not transmit any diseases, they can be irritating.\"",
+          "question": "According to the passage, which of the following is most likely to be problematic for unprepared travelers visiting Greenland?",
+          "mc_answer1": "Nordic mosquitoes",
+          "mc_answer2": "Crime",
+          "mc_answer3": "Weather",
+          "mc_answer4": "Locals",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"Thanks to undersea fiber optic cable links to Europe and broadband satellite, Greenland is well connected with 93% of the population having internet access. Your hotel or hosts (if staying in a guesthouse or private home) will likely have wifi or an internet connected PC, and all settlements have an internet cafe or some location with public wifi. As mentioned above, though the word \"\"Eskimo\"\" remains acceptable in the United States, it is considered pejorative by many non-U.S. Arctic peoples, especially in Canada. While you may hear the word used by Greenlandic Natives, its use should be avoided by foreigners. The native inhabitants of Greenland call themselves Inuit in Canada and Kalaalleq (plural Kalaallit), a Greenlander, in Greenland. Crime, and ill-will toward foreigners in general, is virtually unknown in Greenland. Even in the towns, there are no \"\"rough areas.\"\" Cold weather is perhaps the only real danger the unprepared will face. If you visit Greenland during cold seasons (considering that the further north you go, the colder it will be), it is essential to bring warm enough clothing. The very long days in the summer can lead to problems getting sufficient sleep and associated health issues. During the summer, also watch out for the Nordic mosquitoes. Although they do not transmit any diseases, they can be irritating.\"\nQ: According to the passage, which of the following is most likely to be problematic for unprepared travelers visiting Greenland?\nA: Nordic mosquitoes\nB: Crime\nC: Weather\nD: Locals\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Thanks to undersea fiber optic cable links to Europe and broadband satellite, Greenland is well connected with 93% of the population having internet access. Your hotel or hosts (if staying in a guesthouse or private home) will likely have wifi or an internet connected PC, and all settlements have an internet cafe or some location with public wifi. As mentioned above, though the word \"\"Eskimo\"\" remains acceptable in the United States, it is considered pejorative by many non-U.S. Arctic peoples, especially in Canada. While you may hear the word used by Greenlandic Natives, its use should be avoided by foreigners. The native inhabitants of Greenland call themselves Inuit in Canada and Kalaalleq (plural Kalaallit), a Greenlander, in Greenland. Crime, and ill-will toward foreigners in general, is virtually unknown in Greenland. Even in the towns, there are no \"\"rough areas.\"\" Cold weather is perhaps the only real danger the unprepared will face. If you visit Greenland during cold seasons (considering that the further north you go, the colder it will be), it is essential to bring warm enough clothing. The very long days in the summer can lead to problems getting sufficient sleep and associated health issues. During the summer, also watch out for the Nordic mosquitoes. Although they do not transmit any diseases, they can be irritating.\"\nQ: According to the passage, which of the following is most likely to be problematic for unprepared travelers visiting Greenland?\nA: Nordic mosquitoes\nB: Crime\nC: Weather\nD: Locals\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Thanks to undersea fiber optic cable links to Europe and broadband satellite, Greenland is well connected with 93% of the population having internet access. Your hotel or hosts (if staying in a guesthouse or private home) will likely have wifi or an internet connected PC, and all settlements have an internet cafe or some location with public wifi. As mentioned above, though the word \"\"Eskimo\"\" remains acceptable in the United States, it is considered pejorative by many non-U.S. Arctic peoples, especially in Canada. While you may hear the word used by Greenlandic Natives, its use should be avoided by foreigners. The native inhabitants of Greenland call themselves Inuit in Canada and Kalaalleq (plural Kalaallit), a Greenlander, in Greenland. Crime, and ill-will toward foreigners in general, is virtually unknown in Greenland. Even in the towns, there are no \"\"rough areas.\"\" Cold weather is perhaps the only real danger the unprepared will face. If you visit Greenland during cold seasons (considering that the further north you go, the colder it will be), it is essential to bring warm enough clothing. The very long days in the summer can lead to problems getting sufficient sleep and associated health issues. During the summer, also watch out for the Nordic mosquitoes. Although they do not transmit any diseases, they can be irritating.\"\nQ: According to the passage, which of the following is most likely to be problematic for unprepared travelers visiting Greenland?\nA: Nordic mosquitoes\nB: Crime\nC: Weather\nD: Locals\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Thanks to undersea fiber optic cable links to Europe and broadband satellite, Greenland is well connected with 93% of the population having internet access. Your hotel or hosts (if staying in a guesthouse or private home) will likely have wifi or an internet connected PC, and all settlements have an internet cafe or some location with public wifi. As mentioned above, though the word \"\"Eskimo\"\" remains acceptable in the United States, it is considered pejorative by many non-U.S. Arctic peoples, especially in Canada. While you may hear the word used by Greenlandic Natives, its use should be avoided by foreigners. The native inhabitants of Greenland call themselves Inuit in Canada and Kalaalleq (plural Kalaallit), a Greenlander, in Greenland. Crime, and ill-will toward foreigners in general, is virtually unknown in Greenland. Even in the towns, there are no \"\"rough areas.\"\" Cold weather is perhaps the only real danger the unprepared will face. If you visit Greenland during cold seasons (considering that the further north you go, the colder it will be), it is essential to bring warm enough clothing. The very long days in the summer can lead to problems getting sufficient sleep and associated health issues. During the summer, also watch out for the Nordic mosquitoes. Although they do not transmit any diseases, they can be irritating.\"\nQ: According to the passage, which of the following is most likely to be problematic for unprepared travelers visiting Greenland?\nA: Nordic mosquitoes\nB: Crime\nC: Weather\nD: Locals\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.3732805252075195,
+              false
+            ]
+          ],
+          [
+            [
+              -6.440768241882324,
+              false
+            ]
+          ],
+          [
+            [
+              -0.021794456988573074,
+              true
+            ]
+          ],
+          [
+            [
+              -7.4660444259643555,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.3732805252075195,
+            false
+          ],
+          [
+            -6.440768241882324,
+            false
+          ],
+          [
+            -0.021794456988573074,
+            true
+          ],
+          [
+            -7.4660444259643555,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f4e5e303a5e69f02ee84b623775591ccbc6e97c6a679fc3ade4efcf8d82c99bd",
+        "prompt_hash": "f9d4d2491a1db6b1cede2c6fe0b7969494a7a7c5f1d78a005e597498fa3c6a8d",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 34,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Sundarbans_National_Park",
+          "question_number": 2,
+          "flores_passage": "The Sundarbans are the largest littoral mangrove belt in the world, stretching 80 km (50 mi) into the Bangladeshi and Indian hinterland from the coast. The Sundarbans has been declared a UNESCO World Heritage Site. The part of the forest within Indian territory is called Sundarbans National Park. The forests aren't just mangrove swamps though — they include some of the last remaining stands of the mighty jungles which once covered the Gangetic plain. The Sundarbans cover an area of 3,850 km², of which about one-third is covered in water/marsh areas. Since 1966 the Sundarbans have been a wildlife sanctuary, and it is estimated that there are now 400 Royal Bengal tigers and about 30,000 spotted deer in the area.",
+          "question": "Which part of the forest lies within Indian territory?",
+          "mc_answer1": "Sundarbans National Park",
+          "mc_answer2": "The wildlife sanctuary ",
+          "mc_answer3": "The World Heritage Site",
+          "mc_answer4": "The Gangetic plain",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The Sundarbans are the largest littoral mangrove belt in the world, stretching 80 km (50 mi) into the Bangladeshi and Indian hinterland from the coast. The Sundarbans has been declared a UNESCO World Heritage Site. The part of the forest within Indian territory is called Sundarbans National Park. The forests aren't just mangrove swamps though — they include some of the last remaining stands of the mighty jungles which once covered the Gangetic plain. The Sundarbans cover an area of 3,850 km², of which about one-third is covered in water/marsh areas. Since 1966 the Sundarbans have been a wildlife sanctuary, and it is estimated that there are now 400 Royal Bengal tigers and about 30,000 spotted deer in the area.\nQ: Which part of the forest lies within Indian territory?\nA: Sundarbans National Park\nB: The wildlife sanctuary \nC: The World Heritage Site\nD: The Gangetic plain\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Sundarbans are the largest littoral mangrove belt in the world, stretching 80 km (50 mi) into the Bangladeshi and Indian hinterland from the coast. The Sundarbans has been declared a UNESCO World Heritage Site. The part of the forest within Indian territory is called Sundarbans National Park. The forests aren't just mangrove swamps though — they include some of the last remaining stands of the mighty jungles which once covered the Gangetic plain. The Sundarbans cover an area of 3,850 km², of which about one-third is covered in water/marsh areas. Since 1966 the Sundarbans have been a wildlife sanctuary, and it is estimated that there are now 400 Royal Bengal tigers and about 30,000 spotted deer in the area.\nQ: Which part of the forest lies within Indian territory?\nA: Sundarbans National Park\nB: The wildlife sanctuary \nC: The World Heritage Site\nD: The Gangetic plain\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Sundarbans are the largest littoral mangrove belt in the world, stretching 80 km (50 mi) into the Bangladeshi and Indian hinterland from the coast. The Sundarbans has been declared a UNESCO World Heritage Site. The part of the forest within Indian territory is called Sundarbans National Park. The forests aren't just mangrove swamps though — they include some of the last remaining stands of the mighty jungles which once covered the Gangetic plain. The Sundarbans cover an area of 3,850 km², of which about one-third is covered in water/marsh areas. Since 1966 the Sundarbans have been a wildlife sanctuary, and it is estimated that there are now 400 Royal Bengal tigers and about 30,000 spotted deer in the area.\nQ: Which part of the forest lies within Indian territory?\nA: Sundarbans National Park\nB: The wildlife sanctuary \nC: The World Heritage Site\nD: The Gangetic plain\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Sundarbans are the largest littoral mangrove belt in the world, stretching 80 km (50 mi) into the Bangladeshi and Indian hinterland from the coast. The Sundarbans has been declared a UNESCO World Heritage Site. The part of the forest within Indian territory is called Sundarbans National Park. The forests aren't just mangrove swamps though — they include some of the last remaining stands of the mighty jungles which once covered the Gangetic plain. The Sundarbans cover an area of 3,850 km², of which about one-third is covered in water/marsh areas. Since 1966 the Sundarbans have been a wildlife sanctuary, and it is estimated that there are now 400 Royal Bengal tigers and about 30,000 spotted deer in the area.\nQ: Which part of the forest lies within Indian territory?\nA: Sundarbans National Park\nB: The wildlife sanctuary \nC: The World Heritage Site\nD: The Gangetic plain\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.008521148934960365,
+              true
+            ]
+          ],
+          [
+            [
+              -7.525209426879883,
+              false
+            ]
+          ],
+          [
+            [
+              -6.499201774597168,
+              false
+            ]
+          ],
+          [
+            [
+              -8.702216148376465,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.008521148934960365,
+            true
+          ],
+          [
+            -7.525209426879883,
+            false
+          ],
+          [
+            -6.499201774597168,
+            false
+          ],
+          [
+            -8.702216148376465,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "8f882387bdd210fa5ef0d68a11ed165cc1727e20769fe2ef80ae1291871ade11",
+        "prompt_hash": "0b5a9a2def3235ca7610674505ea3d0ff42c390732e70cb1e064bdf232f62aec",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792554524.655624,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

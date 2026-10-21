@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 531,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/Space_exploration",
+          "question_number": 1,
+          "flores_passage": "\"Many people dream of the day when humans can travel to another star and explore other worlds, some people wonder what's out there some belive that aliens or other life may live on another plant. But, if this ever does happen probably won't happen for a very long time. The stars are so spread out that there are trillions of miles between stars that are \"\"neighbors\"\". Maybe one day, your great grandchildren will be standing atop an alien world wondering about their ancient ancestors?\"",
+          "question": "Based on the passage, which of the following is believed by certain people?",
+          "mc_answer1": "Humans have traveled to other stars",
+          "mc_answer2": "Humans aren’t capable of exploring other worlds",
+          "mc_answer3": "Life exists on other planets",
+          "mc_answer4": "There are less than trillions of miles between stars",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"Many people dream of the day when humans can travel to another star and explore other worlds, some people wonder what's out there some belive that aliens or other life may live on another plant. But, if this ever does happen probably won't happen for a very long time. The stars are so spread out that there are trillions of miles between stars that are \"\"neighbors\"\". Maybe one day, your great grandchildren will be standing atop an alien world wondering about their ancient ancestors?\"\nQ: Based on the passage, which of the following is believed by certain people?\nA: Humans have traveled to other stars\nB: Humans aren’t capable of exploring other worlds\nC: Life exists on other planets\nD: There are less than trillions of miles between stars\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Many people dream of the day when humans can travel to another star and explore other worlds, some people wonder what's out there some belive that aliens or other life may live on another plant. But, if this ever does happen probably won't happen for a very long time. The stars are so spread out that there are trillions of miles between stars that are \"\"neighbors\"\". Maybe one day, your great grandchildren will be standing atop an alien world wondering about their ancient ancestors?\"\nQ: Based on the passage, which of the following is believed by certain people?\nA: Humans have traveled to other stars\nB: Humans aren’t capable of exploring other worlds\nC: Life exists on other planets\nD: There are less than trillions of miles between stars\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Many people dream of the day when humans can travel to another star and explore other worlds, some people wonder what's out there some belive that aliens or other life may live on another plant. But, if this ever does happen probably won't happen for a very long time. The stars are so spread out that there are trillions of miles between stars that are \"\"neighbors\"\". Maybe one day, your great grandchildren will be standing atop an alien world wondering about their ancient ancestors?\"\nQ: Based on the passage, which of the following is believed by certain people?\nA: Humans have traveled to other stars\nB: Humans aren’t capable of exploring other worlds\nC: Life exists on other planets\nD: There are less than trillions of miles between stars\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Many people dream of the day when humans can travel to another star and explore other worlds, some people wonder what's out there some belive that aliens or other life may live on another plant. But, if this ever does happen probably won't happen for a very long time. The stars are so spread out that there are trillions of miles between stars that are \"\"neighbors\"\". Maybe one day, your great grandchildren will be standing atop an alien world wondering about their ancient ancestors?\"\nQ: Based on the passage, which of the following is believed by certain people?\nA: Humans have traveled to other stars\nB: Humans aren’t capable of exploring other worlds\nC: Life exists on other planets\nD: There are less than trillions of miles between stars\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.803365230560303,
+              false
+            ]
+          ],
+          [
+            [
+              -5.240062236785889,
+              false
+            ]
+          ],
+          [
+            [
+              -0.016132064163684845,
+              true
+            ]
+          ],
+          [
+            [
+              -7.826879024505615,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.803365230560303,
+            false
+          ],
+          [
+            -5.240062236785889,
+            false
+          ],
+          [
+            -0.016132064163684845,
+            true
+          ],
+          [
+            -7.826879024505615,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "e857b8d4dd9b05c90e257223b029d2d6806098ef95d59c9dd5f39c6195113c37",
+        "prompt_hash": "31544e153a958037bd184f923f5c1371057bb244f1aac36e99d2d4f605e773ee",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 804,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Romanian_artists_auction_off_their_works_for_tsunami_victims",
+          "question_number": 2,
+          "flores_passage": "The artistic event is also part of a campaign by the Bucharest City Hall that seeks to relaunch the image of the Romanian capital as a creative and colourful metropolis. The city will be the first in southeastern Europe to host CowParade, the world's largest public art event, between June and August this year.",
+          "question": "Which of the following statements accurately describes CowParade?",
+          "mc_answer1": "It only takes place in cities that are considered “creative” ",
+          "mc_answer2": "It was created by Bucharest City Hall",
+          "mc_answer3": "It’s an art event held in the summer throughout southeastern Europe",
+          "mc_answer4": "It’s the largest public art event in the world",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: The artistic event is also part of a campaign by the Bucharest City Hall that seeks to relaunch the image of the Romanian capital as a creative and colourful metropolis. The city will be the first in southeastern Europe to host CowParade, the world's largest public art event, between June and August this year.\nQ: Which of the following statements accurately describes CowParade?\nA: It only takes place in cities that are considered “creative” \nB: It was created by Bucharest City Hall\nC: It’s an art event held in the summer throughout southeastern Europe\nD: It’s the largest public art event in the world\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The artistic event is also part of a campaign by the Bucharest City Hall that seeks to relaunch the image of the Romanian capital as a creative and colourful metropolis. The city will be the first in southeastern Europe to host CowParade, the world's largest public art event, between June and August this year.\nQ: Which of the following statements accurately describes CowParade?\nA: It only takes place in cities that are considered “creative” \nB: It was created by Bucharest City Hall\nC: It’s an art event held in the summer throughout southeastern Europe\nD: It’s the largest public art event in the world\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The artistic event is also part of a campaign by the Bucharest City Hall that seeks to relaunch the image of the Romanian capital as a creative and colourful metropolis. The city will be the first in southeastern Europe to host CowParade, the world's largest public art event, between June and August this year.\nQ: Which of the following statements accurately describes CowParade?\nA: It only takes place in cities that are considered “creative” \nB: It was created by Bucharest City Hall\nC: It’s an art event held in the summer throughout southeastern Europe\nD: It’s the largest public art event in the world\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The artistic event is also part of a campaign by the Bucharest City Hall that seeks to relaunch the image of the Romanian capital as a creative and colourful metropolis. The city will be the first in southeastern Europe to host CowParade, the world's largest public art event, between June and August this year.\nQ: Which of the following statements accurately describes CowParade?\nA: It only takes place in cities that are considered “creative” \nB: It was created by Bucharest City Hall\nC: It’s an art event held in the summer throughout southeastern Europe\nD: It’s the largest public art event in the world\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.649308204650879,
+              false
+            ]
+          ],
+          [
+            [
+              -4.28708553314209,
+              false
+            ]
+          ],
+          [
+            [
+              -3.0986030101776123,
+              false
+            ]
+          ],
+          [
+            [
+              -0.13490557670593262,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.649308204650879,
+            false
+          ],
+          [
+            -4.28708553314209,
+            false
+          ],
+          [
+            -3.0986030101776123,
+            false
+          ],
+          [
+            -0.13490557670593262,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "757f2199d585977cceb30e2ea7bd6ab0f3456bd0143e4df4483e34a981a4417d",
+        "prompt_hash": "066759835a992b9f754428287189c44e4f039ec363e815c846162b793e648b55",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 864,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Meteora",
+          "question_number": 1,
+          "flores_passage": "While visiting the monasteries, women are required to wear skirts covering the knees and have their shoulders covered, too. Most of the monasteries do provide wraps for women who come unprepared, but if you bring your own, especially one with bright colors, you'll get a smile from the monk or nun at the entrance. Along the same line, men are required to wear trousers covering the knees. This too can be borrowed from the stock at the entrance but that clothing isn't washed after every user so you may not feel comfortable wearing these skirts. One size fits all for men!",
+          "question": "What might result in special recognition from a monk or nun?",
+          "mc_answer1": "Wearing a brightly covered wrap",
+          "mc_answer2": "Covering your shoulders",
+          "mc_answer3": "Borrowing a wrap from the monastery ",
+          "mc_answer4": "Wearing a skirt cut above the knee",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: While visiting the monasteries, women are required to wear skirts covering the knees and have their shoulders covered, too. Most of the monasteries do provide wraps for women who come unprepared, but if you bring your own, especially one with bright colors, you'll get a smile from the monk or nun at the entrance. Along the same line, men are required to wear trousers covering the knees. This too can be borrowed from the stock at the entrance but that clothing isn't washed after every user so you may not feel comfortable wearing these skirts. One size fits all for men!\nQ: What might result in special recognition from a monk or nun?\nA: Wearing a brightly covered wrap\nB: Covering your shoulders\nC: Borrowing a wrap from the monastery \nD: Wearing a skirt cut above the knee\nAnswer:",
+            " A"
+          ],
+          [
+            "P: While visiting the monasteries, women are required to wear skirts covering the knees and have their shoulders covered, too. Most of the monasteries do provide wraps for women who come unprepared, but if you bring your own, especially one with bright colors, you'll get a smile from the monk or nun at the entrance. Along the same line, men are required to wear trousers covering the knees. This too can be borrowed from the stock at the entrance but that clothing isn't washed after every user so you may not feel comfortable wearing these skirts. One size fits all for men!\nQ: What might result in special recognition from a monk or nun?\nA: Wearing a brightly covered wrap\nB: Covering your shoulders\nC: Borrowing a wrap from the monastery \nD: Wearing a skirt cut above the knee\nAnswer:",
+            " B"
+          ],
+          [
+            "P: While visiting the monasteries, women are required to wear skirts covering the knees and have their shoulders covered, too. Most of the monasteries do provide wraps for women who come unprepared, but if you bring your own, especially one with bright colors, you'll get a smile from the monk or nun at the entrance. Along the same line, men are required to wear trousers covering the knees. This too can be borrowed from the stock at the entrance but that clothing isn't washed after every user so you may not feel comfortable wearing these skirts. One size fits all for men!\nQ: What might result in special recognition from a monk or nun?\nA: Wearing a brightly covered wrap\nB: Covering your shoulders\nC: Borrowing a wrap from the monastery \nD: Wearing a skirt cut above the knee\nAnswer:",
+            " C"
+          ],
+          [
+            "P: While visiting the monasteries, women are required to wear skirts covering the knees and have their shoulders covered, too. Most of the monasteries do provide wraps for women who come unprepared, but if you bring your own, especially one with bright colors, you'll get a smile from the monk or nun at the entrance. Along the same line, men are required to wear trousers covering the knees. This too can be borrowed from the stock at the entrance but that clothing isn't washed after every user so you may not feel comfortable wearing these skirts. One size fits all for men!\nQ: What might result in special recognition from a monk or nun?\nA: Wearing a brightly covered wrap\nB: Covering your shoulders\nC: Borrowing a wrap from the monastery \nD: Wearing a skirt cut above the knee\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.028199328109622,
+              true
+            ]
+          ],
+          [
+            [
+              -5.326504707336426,
+              false
+            ]
+          ],
+          [
+            [
+              -5.609393119812012,
+              false
+            ]
+          ],
+          [
+            [
+              -5.296494483947754,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.028199328109622,
+            true
+          ],
+          [
+            -5.326504707336426,
+            false
+          ],
+          [
+            -5.609393119812012,
+            false
+          ],
+          [
+            -5.296494483947754,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "795391a5c00b73403b9f2a94a2b77fa2d4338c9bd4de2b6cda653f119fe5a1a0",
+        "prompt_hash": "d5a02ebab6b3b2dfcdf26f843a801c8e2f9e1d82a324cac37eb6caa9df10e13d",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 241,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Plitvice_Lakes_National_Park",
+          "question_number": 1,
+          "flores_passage": "The Plitvice Lakes national park is heavily forested, mainly with beech, spruce, and fir trees, and features a mixture of Alpine and Mediterranean vegetation. It has a notably wide variety of plant communities, due to its range of microclimates, differing soils and varying levels of altitude. The area is also home to an extremely wide variety of animal and bird species. Rare fauna such as the European brown bear, wolf, eagle, owl, lynx, wild cat and capercaillie can be found there, along with many more common species",
+          "question": "According to the passage, which of the following trees is less common in the Plitvice Lakes national park?",
+          "mc_answer1": "Beech",
+          "mc_answer2": "Oak",
+          "mc_answer3": "Fir",
+          "mc_answer4": "Spruce",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: The Plitvice Lakes national park is heavily forested, mainly with beech, spruce, and fir trees, and features a mixture of Alpine and Mediterranean vegetation. It has a notably wide variety of plant communities, due to its range of microclimates, differing soils and varying levels of altitude. The area is also home to an extremely wide variety of animal and bird species. Rare fauna such as the European brown bear, wolf, eagle, owl, lynx, wild cat and capercaillie can be found there, along with many more common species\nQ: According to the passage, which of the following trees is less common in the Plitvice Lakes national park?\nA: Beech\nB: Oak\nC: Fir\nD: Spruce\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Plitvice Lakes national park is heavily forested, mainly with beech, spruce, and fir trees, and features a mixture of Alpine and Mediterranean vegetation. It has a notably wide variety of plant communities, due to its range of microclimates, differing soils and varying levels of altitude. The area is also home to an extremely wide variety of animal and bird species. Rare fauna such as the European brown bear, wolf, eagle, owl, lynx, wild cat and capercaillie can be found there, along with many more common species\nQ: According to the passage, which of the following trees is less common in the Plitvice Lakes national park?\nA: Beech\nB: Oak\nC: Fir\nD: Spruce\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Plitvice Lakes national park is heavily forested, mainly with beech, spruce, and fir trees, and features a mixture of Alpine and Mediterranean vegetation. It has a notably wide variety of plant communities, due to its range of microclimates, differing soils and varying levels of altitude. The area is also home to an extremely wide variety of animal and bird species. Rare fauna such as the European brown bear, wolf, eagle, owl, lynx, wild cat and capercaillie can be found there, along with many more common species\nQ: According to the passage, which of the following trees is less common in the Plitvice Lakes national park?\nA: Beech\nB: Oak\nC: Fir\nD: Spruce\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Plitvice Lakes national park is heavily forested, mainly with beech, spruce, and fir trees, and features a mixture of Alpine and Mediterranean vegetation. It has a notably wide variety of plant communities, due to its range of microclimates, differing soils and varying levels of altitude. The area is also home to an extremely wide variety of animal and bird species. Rare fauna such as the European brown bear, wolf, eagle, owl, lynx, wild cat and capercaillie can be found there, along with many more common species\nQ: According to the passage, which of the following trees is less common in the Plitvice Lakes national park?\nA: Beech\nB: Oak\nC: Fir\nD: Spruce\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.3276753425598145,
+              false
+            ]
+          ],
+          [
+            [
+              -0.12252847105264664,
+              true
+            ]
+          ],
+          [
+            [
+              -4.8278069496154785,
+              false
+            ]
+          ],
+          [
+            [
+              -6.1829705238342285,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.3276753425598145,
+            false
+          ],
+          [
+            -0.12252847105264664,
+            true
+          ],
+          [
+            -4.8278069496154785,
+            false
+          ],
+          [
+            -6.1829705238342285,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a75d6927f666c1e7503de97cf32a56d596996aa300d700b1e5a9bcb2835c6918",
+        "prompt_hash": "480611dc7975999b8d84a07e4bb1bcf762372d54b436697a700b24e0b361a67e",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 780,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Travel_photography/Film",
+          "question_number": 2,
+          "flores_passage": "There are many different film formats that have been used over the years. Standard 35 mm film (36 by 24 mm negative) is much the commonest. It can usually be replenished fairly easily if you run out, and gives resolution roughly comparable to a current DSLR. Some medium-format film cameras use a 6 by 6 cm format, more precisely a 56 by 56 mm negative. This gives resolution almost four times that of a 35 mm negative (3136 mm2 versus 864).",
+          "question": "Which of the following film formats offer resolution that is similar to a DSLR?",
+          "mc_answer1": "35 mm film",
+          "mc_answer2": "Medium-format film",
+          "mc_answer3": "56 x 56 mm film",
+          "mc_answer4": "6 x 6 cm film",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: There are many different film formats that have been used over the years. Standard 35 mm film (36 by 24 mm negative) is much the commonest. It can usually be replenished fairly easily if you run out, and gives resolution roughly comparable to a current DSLR. Some medium-format film cameras use a 6 by 6 cm format, more precisely a 56 by 56 mm negative. This gives resolution almost four times that of a 35 mm negative (3136 mm2 versus 864).\nQ: Which of the following film formats offer resolution that is similar to a DSLR?\nA: 35 mm film\nB: Medium-format film\nC: 56 x 56 mm film\nD: 6 x 6 cm film\nAnswer:",
+            " A"
+          ],
+          [
+            "P: There are many different film formats that have been used over the years. Standard 35 mm film (36 by 24 mm negative) is much the commonest. It can usually be replenished fairly easily if you run out, and gives resolution roughly comparable to a current DSLR. Some medium-format film cameras use a 6 by 6 cm format, more precisely a 56 by 56 mm negative. This gives resolution almost four times that of a 35 mm negative (3136 mm2 versus 864).\nQ: Which of the following film formats offer resolution that is similar to a DSLR?\nA: 35 mm film\nB: Medium-format film\nC: 56 x 56 mm film\nD: 6 x 6 cm film\nAnswer:",
+            " B"
+          ],
+          [
+            "P: There are many different film formats that have been used over the years. Standard 35 mm film (36 by 24 mm negative) is much the commonest. It can usually be replenished fairly easily if you run out, and gives resolution roughly comparable to a current DSLR. Some medium-format film cameras use a 6 by 6 cm format, more precisely a 56 by 56 mm negative. This gives resolution almost four times that of a 35 mm negative (3136 mm2 versus 864).\nQ: Which of the following film formats offer resolution that is similar to a DSLR?\nA: 35 mm film\nB: Medium-format film\nC: 56 x 56 mm film\nD: 6 x 6 cm film\nAnswer:",
+            " C"
+          ],
+          [
+            "P: There are many different film formats that have been used over the years. Standard 35 mm film (36 by 24 mm negative) is much the commonest. It can usually be replenished fairly easily if you run out, and gives resolution roughly comparable to a current DSLR. Some medium-format film cameras use a 6 by 6 cm format, more precisely a 56 by 56 mm negative. This gives resolution almost four times that of a 35 mm negative (3136 mm2 versus 864).\nQ: Which of the following film formats offer resolution that is similar to a DSLR?\nA: 35 mm film\nB: Medium-format film\nC: 56 x 56 mm film\nD: 6 x 6 cm film\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.01981791853904724,
+              true
+            ]
+          ],
+          [
+            [
+              -5.651365756988525,
+              false
+            ]
+          ],
+          [
+            [
+              -7.162243366241455,
+              false
+            ]
+          ],
+          [
+            [
+              -7.525679111480713,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.01981791853904724,
+            true
+          ],
+          [
+            -5.651365756988525,
+            false
+          ],
+          [
+            -7.162243366241455,
+            false
+          ],
+          [
+            -7.525679111480713,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9c98f8aee1022f9ed62c53776bff12f1c804f6034e34ff6d6bbae7fd988a3d61",
+        "prompt_hash": "a57b0543248d33efe839adbe52b6712909e6287a9eba6c089617a01e5b95c7e3",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792553001.5654624,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

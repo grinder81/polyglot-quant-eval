@@ -1,5 +1,8 @@
 # LOG
 
+## Matched Stage 2 BF16 reference
+- Completed and validated 900 BF16 GGUF questions on the same runtime and frozen selection as local Q4. English 230/300, Bangla 188/300, Hindi 184/300; local Q4 226, 189 and 176 respectively. Paired deltas, uncertainty, answer churn and letter counts: results/stage2/bf16-three-hundred/README.md. No rotation or generation result is claimed yet.
+
 ## Belebele task/data audit
 - Downloaded pinned English, Bangla and Hindi subsets and recorded 900 rows each, label checks, content hashes and installed task definitions in results/stage1/belebele-task-audit.json.
 - Confirmed upstream candidates are A/B/C/D; canonical Stage 1 uses zero-shot acc without a chat template. No model scoring or sample lock yet.

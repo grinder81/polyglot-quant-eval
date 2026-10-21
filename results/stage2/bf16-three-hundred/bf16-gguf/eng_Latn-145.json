@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 876,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Building_collapses_in_Mecca_at_eve_of_Hajj_pillgrimage",
+          "question_number": 1,
+          "flores_passage": "A hostel collapsed in Mecca, the holy city of Islam at about 10 o'clock this morning local time. The building housed a number of pilgrims who came to visit the holy city at the eve of hajj pilgrimage. The hostel's guests were mostly citizens of the United Arab Emirates. The death toll is at least 15, a figure which is expected to rise.",
+          "question": "Which statement about the hostel guests is not true?",
+          "mc_answer1": "The guests were in Mecca for a pilgrimage",
+          "mc_answer2": "Some guests were not local citizens",
+          "mc_answer3": "The guests were there for the eve of hajj",
+          "mc_answer4": "The majority of the guests were from the holy city",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: A hostel collapsed in Mecca, the holy city of Islam at about 10 o'clock this morning local time. The building housed a number of pilgrims who came to visit the holy city at the eve of hajj pilgrimage. The hostel's guests were mostly citizens of the United Arab Emirates. The death toll is at least 15, a figure which is expected to rise.\nQ: Which statement about the hostel guests is not true?\nA: The guests were in Mecca for a pilgrimage\nB: Some guests were not local citizens\nC: The guests were there for the eve of hajj\nD: The majority of the guests were from the holy city\nAnswer:",
+            " A"
+          ],
+          [
+            "P: A hostel collapsed in Mecca, the holy city of Islam at about 10 o'clock this morning local time. The building housed a number of pilgrims who came to visit the holy city at the eve of hajj pilgrimage. The hostel's guests were mostly citizens of the United Arab Emirates. The death toll is at least 15, a figure which is expected to rise.\nQ: Which statement about the hostel guests is not true?\nA: The guests were in Mecca for a pilgrimage\nB: Some guests were not local citizens\nC: The guests were there for the eve of hajj\nD: The majority of the guests were from the holy city\nAnswer:",
+            " B"
+          ],
+          [
+            "P: A hostel collapsed in Mecca, the holy city of Islam at about 10 o'clock this morning local time. The building housed a number of pilgrims who came to visit the holy city at the eve of hajj pilgrimage. The hostel's guests were mostly citizens of the United Arab Emirates. The death toll is at least 15, a figure which is expected to rise.\nQ: Which statement about the hostel guests is not true?\nA: The guests were in Mecca for a pilgrimage\nB: Some guests were not local citizens\nC: The guests were there for the eve of hajj\nD: The majority of the guests were from the holy city\nAnswer:",
+            " C"
+          ],
+          [
+            "P: A hostel collapsed in Mecca, the holy city of Islam at about 10 o'clock this morning local time. The building housed a number of pilgrims who came to visit the holy city at the eve of hajj pilgrimage. The hostel's guests were mostly citizens of the United Arab Emirates. The death toll is at least 15, a figure which is expected to rise.\nQ: Which statement about the hostel guests is not true?\nA: The guests were in Mecca for a pilgrimage\nB: Some guests were not local citizens\nC: The guests were there for the eve of hajj\nD: The majority of the guests were from the holy city\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.1276967525482178,
+              false
+            ]
+          ],
+          [
+            [
+              -2.311694860458374,
+              false
+            ]
+          ],
+          [
+            [
+              -4.78862190246582,
+              false
+            ]
+          ],
+          [
+            [
+              -0.21294386684894562,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.1276967525482178,
+            false
+          ],
+          [
+            -2.311694860458374,
+            false
+          ],
+          [
+            -4.78862190246582,
+            false
+          ],
+          [
+            -0.21294386684894562,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "bbed9859d1bf8d87039844aed83e43f9ee5530466f0e501b805ff4d0a44f931d",
+        "prompt_hash": "53af3d2483fcffcb5757b1fee020d2956f31c956e54f1fc719771295c2268609",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 609,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/US_President_Trump_announces_troop_withdrawal_from_Syria",
+          "question_number": 1,
+          "flores_passage": "Late on Sunday, the United States President Donald Trump, in a statement delivered via the press secretary, announced US troops would be leaving Syria. The announcement was made after Trump had a phone conversation with Turkish President Recep Tayyip Erdoğan. Turkey would also take over guarding captured ISIS fighters which, the statement said, European nations have refused to repatriate.",
+          "question": "Who delivered the statement regarding the US troops?",
+          "mc_answer1": "Donald Trump",
+          "mc_answer2": "Tayyip Erdoğan",
+          "mc_answer3": "ISIS fighters",
+          "mc_answer4": "The press secretary",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Late on Sunday, the United States President Donald Trump, in a statement delivered via the press secretary, announced US troops would be leaving Syria. The announcement was made after Trump had a phone conversation with Turkish President Recep Tayyip Erdoğan. Turkey would also take over guarding captured ISIS fighters which, the statement said, European nations have refused to repatriate.\nQ: Who delivered the statement regarding the US troops?\nA: Donald Trump\nB: Tayyip Erdoğan\nC: ISIS fighters\nD: The press secretary\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Late on Sunday, the United States President Donald Trump, in a statement delivered via the press secretary, announced US troops would be leaving Syria. The announcement was made after Trump had a phone conversation with Turkish President Recep Tayyip Erdoğan. Turkey would also take over guarding captured ISIS fighters which, the statement said, European nations have refused to repatriate.\nQ: Who delivered the statement regarding the US troops?\nA: Donald Trump\nB: Tayyip Erdoğan\nC: ISIS fighters\nD: The press secretary\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Late on Sunday, the United States President Donald Trump, in a statement delivered via the press secretary, announced US troops would be leaving Syria. The announcement was made after Trump had a phone conversation with Turkish President Recep Tayyip Erdoğan. Turkey would also take over guarding captured ISIS fighters which, the statement said, European nations have refused to repatriate.\nQ: Who delivered the statement regarding the US troops?\nA: Donald Trump\nB: Tayyip Erdoğan\nC: ISIS fighters\nD: The press secretary\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Late on Sunday, the United States President Donald Trump, in a statement delivered via the press secretary, announced US troops would be leaving Syria. The announcement was made after Trump had a phone conversation with Turkish President Recep Tayyip Erdoğan. Turkey would also take over guarding captured ISIS fighters which, the statement said, European nations have refused to repatriate.\nQ: Who delivered the statement regarding the US troops?\nA: Donald Trump\nB: Tayyip Erdoğan\nC: ISIS fighters\nD: The press secretary\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.23073337972164154,
+              true
+            ]
+          ],
+          [
+            [
+              -6.889482021331787,
+              false
+            ]
+          ],
+          [
+            [
+              -6.439393520355225,
+              false
+            ]
+          ],
+          [
+            [
+              -1.6886610984802246,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.23073337972164154,
+            true
+          ],
+          [
+            -6.889482021331787,
+            false
+          ],
+          [
+            -6.439393520355225,
+            false
+          ],
+          [
+            -1.6886610984802246,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "82511075ff4ef5240045b9bd0775bd0582ef1feb41ab4492e2d55f642f118768",
+        "prompt_hash": "ea696c270fe8a852c5d588ad5e0304bc0ba509895be2bc6df3b5f10041e1d062",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 327,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Festivals_of_Kerala",
+          "question_number": 2,
+          "flores_passage": "Most of the temples do have an Annual festival starting from November end to Mid of May, which varies according to each temple's annual calendar. Most of the temple festivals is celebrated as part of temple's anniversary or presiding deity's birthday or any other major event associated with the temple. Kerala's temple festivals are very interesting to see, with regular procession of decorated elephants, temple orchestra and other festivities.",
+          "question": "Where can decorated elephants be seen?",
+          "mc_answer1": "Everywhere from end of November to mid-May",
+          "mc_answer2": "In temples",
+          "mc_answer3": "In processions at temple festivals",
+          "mc_answer4": "On the streets of Kerala",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Most of the temples do have an Annual festival starting from November end to Mid of May, which varies according to each temple's annual calendar. Most of the temple festivals is celebrated as part of temple's anniversary or presiding deity's birthday or any other major event associated with the temple. Kerala's temple festivals are very interesting to see, with regular procession of decorated elephants, temple orchestra and other festivities.\nQ: Where can decorated elephants be seen?\nA: Everywhere from end of November to mid-May\nB: In temples\nC: In processions at temple festivals\nD: On the streets of Kerala\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Most of the temples do have an Annual festival starting from November end to Mid of May, which varies according to each temple's annual calendar. Most of the temple festivals is celebrated as part of temple's anniversary or presiding deity's birthday or any other major event associated with the temple. Kerala's temple festivals are very interesting to see, with regular procession of decorated elephants, temple orchestra and other festivities.\nQ: Where can decorated elephants be seen?\nA: Everywhere from end of November to mid-May\nB: In temples\nC: In processions at temple festivals\nD: On the streets of Kerala\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Most of the temples do have an Annual festival starting from November end to Mid of May, which varies according to each temple's annual calendar. Most of the temple festivals is celebrated as part of temple's anniversary or presiding deity's birthday or any other major event associated with the temple. Kerala's temple festivals are very interesting to see, with regular procession of decorated elephants, temple orchestra and other festivities.\nQ: Where can decorated elephants be seen?\nA: Everywhere from end of November to mid-May\nB: In temples\nC: In processions at temple festivals\nD: On the streets of Kerala\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Most of the temples do have an Annual festival starting from November end to Mid of May, which varies according to each temple's annual calendar. Most of the temple festivals is celebrated as part of temple's anniversary or presiding deity's birthday or any other major event associated with the temple. Kerala's temple festivals are very interesting to see, with regular procession of decorated elephants, temple orchestra and other festivities.\nQ: Where can decorated elephants be seen?\nA: Everywhere from end of November to mid-May\nB: In temples\nC: In processions at temple festivals\nD: On the streets of Kerala\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.1108100414276123,
+              false
+            ]
+          ],
+          [
+            [
+              -2.571070432662964,
+              false
+            ]
+          ],
+          [
+            [
+              -0.27629539370536804,
+              true
+            ]
+          ],
+          [
+            [
+              -5.149195194244385,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.1108100414276123,
+            false
+          ],
+          [
+            -2.571070432662964,
+            false
+          ],
+          [
+            -0.27629539370536804,
+            true
+          ],
+          [
+            -5.149195194244385,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "82bcdf636c74f6178a4d3fc6040fc10952f58fb252f083da35f65fca0e9d8c2b",
+        "prompt_hash": "4951b0fbeb906cdb62c402cd863920e74cd7fa8b158945209b75ddb07ebea314",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 802,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Phone_service",
+          "question_number": 1,
+          "flores_passage": "Every corner store is filled with a confusing array of pre-paid phone cards that can be used from pay phones or ordinary telephones. While most cards are good for calling anywhere, some specialise in providing favourable call rates to specific groups of countries. Access to these services is often through a toll-free telephone number that can be called from most phones without charge.",
+          "question": "Where can prepaid phone cards be purchased?",
+          "mc_answer1": "In specific countries",
+          "mc_answer2": "At train stations",
+          "mc_answer3": "In corner shops",
+          "mc_answer4": "At pay phones",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Every corner store is filled with a confusing array of pre-paid phone cards that can be used from pay phones or ordinary telephones. While most cards are good for calling anywhere, some specialise in providing favourable call rates to specific groups of countries. Access to these services is often through a toll-free telephone number that can be called from most phones without charge.\nQ: Where can prepaid phone cards be purchased?\nA: In specific countries\nB: At train stations\nC: In corner shops\nD: At pay phones\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Every corner store is filled with a confusing array of pre-paid phone cards that can be used from pay phones or ordinary telephones. While most cards are good for calling anywhere, some specialise in providing favourable call rates to specific groups of countries. Access to these services is often through a toll-free telephone number that can be called from most phones without charge.\nQ: Where can prepaid phone cards be purchased?\nA: In specific countries\nB: At train stations\nC: In corner shops\nD: At pay phones\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Every corner store is filled with a confusing array of pre-paid phone cards that can be used from pay phones or ordinary telephones. While most cards are good for calling anywhere, some specialise in providing favourable call rates to specific groups of countries. Access to these services is often through a toll-free telephone number that can be called from most phones without charge.\nQ: Where can prepaid phone cards be purchased?\nA: In specific countries\nB: At train stations\nC: In corner shops\nD: At pay phones\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Every corner store is filled with a confusing array of pre-paid phone cards that can be used from pay phones or ordinary telephones. While most cards are good for calling anywhere, some specialise in providing favourable call rates to specific groups of countries. Access to these services is often through a toll-free telephone number that can be called from most phones without charge.\nQ: Where can prepaid phone cards be purchased?\nA: In specific countries\nB: At train stations\nC: In corner shops\nD: At pay phones\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.700865745544434,
+              false
+            ]
+          ],
+          [
+            [
+              -7.405963897705078,
+              false
+            ]
+          ],
+          [
+            [
+              -0.06972701847553253,
+              true
+            ]
+          ],
+          [
+            [
+              -8.585813522338867,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.700865745544434,
+            false
+          ],
+          [
+            -7.405963897705078,
+            false
+          ],
+          [
+            -0.06972701847553253,
+            true
+          ],
+          [
+            -8.585813522338867,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "8b464ca92aad87a31ce27c9da567f195da6dcd753c4f023201fac1964e0e2d34",
+        "prompt_hash": "6215a62b7a185fde47b0ec8759505550ecefe7e1f3ea4b16e855ba22b7f5873e",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 711,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Video_recording",
+          "question_number": 2,
+          "flores_passage": "Rules regarding regular photography also apply to video recording, possibly even more so. If just taking a photo of something isn't allowed, then you shouldn't even think of recording a video of it. If using a drone, check well in advance as to what you are allowed to film and what permits or additional licensing are required. Flying a drone near an airport or over a crowd is almost always a bad idea, even if it's not illegal in your area.",
+          "question": "According to the passage, where are the best places to film using a drone?",
+          "mc_answer1": "Near crowds that won’t be bothered by the presence of the drone",
+          "mc_answer2": "In areas where regular photography is not permitted",
+          "mc_answer3": "In busy places where the drone is less visible",
+          "mc_answer4": "In areas you’ve obtained prior permits for",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Rules regarding regular photography also apply to video recording, possibly even more so. If just taking a photo of something isn't allowed, then you shouldn't even think of recording a video of it. If using a drone, check well in advance as to what you are allowed to film and what permits or additional licensing are required. Flying a drone near an airport or over a crowd is almost always a bad idea, even if it's not illegal in your area.\nQ: According to the passage, where are the best places to film using a drone?\nA: Near crowds that won’t be bothered by the presence of the drone\nB: In areas where regular photography is not permitted\nC: In busy places where the drone is less visible\nD: In areas you’ve obtained prior permits for\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Rules regarding regular photography also apply to video recording, possibly even more so. If just taking a photo of something isn't allowed, then you shouldn't even think of recording a video of it. If using a drone, check well in advance as to what you are allowed to film and what permits or additional licensing are required. Flying a drone near an airport or over a crowd is almost always a bad idea, even if it's not illegal in your area.\nQ: According to the passage, where are the best places to film using a drone?\nA: Near crowds that won’t be bothered by the presence of the drone\nB: In areas where regular photography is not permitted\nC: In busy places where the drone is less visible\nD: In areas you’ve obtained prior permits for\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Rules regarding regular photography also apply to video recording, possibly even more so. If just taking a photo of something isn't allowed, then you shouldn't even think of recording a video of it. If using a drone, check well in advance as to what you are allowed to film and what permits or additional licensing are required. Flying a drone near an airport or over a crowd is almost always a bad idea, even if it's not illegal in your area.\nQ: According to the passage, where are the best places to film using a drone?\nA: Near crowds that won’t be bothered by the presence of the drone\nB: In areas where regular photography is not permitted\nC: In busy places where the drone is less visible\nD: In areas you’ve obtained prior permits for\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Rules regarding regular photography also apply to video recording, possibly even more so. If just taking a photo of something isn't allowed, then you shouldn't even think of recording a video of it. If using a drone, check well in advance as to what you are allowed to film and what permits or additional licensing are required. Flying a drone near an airport or over a crowd is almost always a bad idea, even if it's not illegal in your area.\nQ: According to the passage, where are the best places to film using a drone?\nA: Near crowds that won’t be bothered by the presence of the drone\nB: In areas where regular photography is not permitted\nC: In busy places where the drone is less visible\nD: In areas you’ve obtained prior permits for\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.7893842458724976,
+              false
+            ]
+          ],
+          [
+            [
+              -3.5983898639678955,
+              false
+            ]
+          ],
+          [
+            [
+              -3.38224720954895,
+              false
+            ]
+          ],
+          [
+            [
+              -0.39700064063072205,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.7893842458724976,
+            false
+          ],
+          [
+            -3.5983898639678955,
+            false
+          ],
+          [
+            -3.38224720954895,
+            false
+          ],
+          [
+            -0.39700064063072205,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "18bb100f2b78f3e3863a68f9717ac77ee7d29a9d2f397267ffea7bef2a61cc43",
+        "prompt_hash": "15b2be38758d8f5136e0db2975597ce138ec566ad4563410858314b38d40c1b2",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792554081.7949297,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

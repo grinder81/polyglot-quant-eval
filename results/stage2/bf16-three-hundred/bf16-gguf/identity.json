@@ -1,0 +1,10 @@
+{
+  "lock": "7de16ffcfb75033d1c88ccc6299a00a4df956821f82dec580907539633f1321c",
+  "runtime": "1e122424d33118cf13c1acbb7d4063506e56fd9d379ea73ddeb3079592648758",
+  "runner": "d94e6a01c8334365b211f3d65197d22b24873cf93e1025d2a3694f0f6b757dd6",
+  "arm": "bf16-gguf",
+  "backend": "gguf",
+  "tokenizer": null,
+  "count_per_language": 300,
+  "shard_size": 5
+}

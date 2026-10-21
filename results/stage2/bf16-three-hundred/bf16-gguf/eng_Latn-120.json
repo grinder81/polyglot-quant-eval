@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 614,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Introductory_Tourism",
+          "question_number": 2,
+          "flores_passage": "Perhaps the most common type of tourism is what most people associate with traveling: Recreation tourism. This is when people go to a place that is very different from their regular day-to-day life to relax and have fun. Beaches, theme parks and camp grounds are often the most common places frequented by recreational tourists. If the objective of one’s visit to a particular place is to get to know its history and culture then this type of tourism is known as cultural tourism. Tourists may visit different landmarks of a particular country or they may simply opt to focus on just one area.",
+          "question": "According to the passage, what might be a priority for recreational travelers?",
+          "mc_answer1": "Immersing themselves in the local culture",
+          "mc_answer2": "Taking a break from their daily routine",
+          "mc_answer3": "Seeing important landmarks",
+          "mc_answer4": "Understanding a place’s history",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Perhaps the most common type of tourism is what most people associate with traveling: Recreation tourism. This is when people go to a place that is very different from their regular day-to-day life to relax and have fun. Beaches, theme parks and camp grounds are often the most common places frequented by recreational tourists. If the objective of one’s visit to a particular place is to get to know its history and culture then this type of tourism is known as cultural tourism. Tourists may visit different landmarks of a particular country or they may simply opt to focus on just one area.\nQ: According to the passage, what might be a priority for recreational travelers?\nA: Immersing themselves in the local culture\nB: Taking a break from their daily routine\nC: Seeing important landmarks\nD: Understanding a place’s history\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Perhaps the most common type of tourism is what most people associate with traveling: Recreation tourism. This is when people go to a place that is very different from their regular day-to-day life to relax and have fun. Beaches, theme parks and camp grounds are often the most common places frequented by recreational tourists. If the objective of one’s visit to a particular place is to get to know its history and culture then this type of tourism is known as cultural tourism. Tourists may visit different landmarks of a particular country or they may simply opt to focus on just one area.\nQ: According to the passage, what might be a priority for recreational travelers?\nA: Immersing themselves in the local culture\nB: Taking a break from their daily routine\nC: Seeing important landmarks\nD: Understanding a place’s history\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Perhaps the most common type of tourism is what most people associate with traveling: Recreation tourism. This is when people go to a place that is very different from their regular day-to-day life to relax and have fun. Beaches, theme parks and camp grounds are often the most common places frequented by recreational tourists. If the objective of one’s visit to a particular place is to get to know its history and culture then this type of tourism is known as cultural tourism. Tourists may visit different landmarks of a particular country or they may simply opt to focus on just one area.\nQ: According to the passage, what might be a priority for recreational travelers?\nA: Immersing themselves in the local culture\nB: Taking a break from their daily routine\nC: Seeing important landmarks\nD: Understanding a place’s history\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Perhaps the most common type of tourism is what most people associate with traveling: Recreation tourism. This is when people go to a place that is very different from their regular day-to-day life to relax and have fun. Beaches, theme parks and camp grounds are often the most common places frequented by recreational tourists. If the objective of one’s visit to a particular place is to get to know its history and culture then this type of tourism is known as cultural tourism. Tourists may visit different landmarks of a particular country or they may simply opt to focus on just one area.\nQ: According to the passage, what might be a priority for recreational travelers?\nA: Immersing themselves in the local culture\nB: Taking a break from their daily routine\nC: Seeing important landmarks\nD: Understanding a place’s history\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.915280818939209,
+              false
+            ]
+          ],
+          [
+            [
+              -0.11660720407962799,
+              true
+            ]
+          ],
+          [
+            [
+              -5.363784313201904,
+              false
+            ]
+          ],
+          [
+            [
+              -7.241931438446045,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.915280818939209,
+            false
+          ],
+          [
+            -0.11660720407962799,
+            true
+          ],
+          [
+            -5.363784313201904,
+            false
+          ],
+          [
+            -7.241931438446045,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "4a51fb1d6dba5c34eb49cf119f7ca3ecc102525520c81cf16094e4d74b6da926",
+        "prompt_hash": "badb2516bfeec9592917b4ff180fc462b90370dc59f597c6f317349e23f654c3",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 360,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/DeLay_declares_%27victory%27_in_war_on_U.S._budget_fat",
+          "question_number": 1,
+          "flores_passage": "\"The debate was sparked by controversy over spending on relief and reconstruction in the wake Hurricane Katrina; which some fiscal conservatives have humorously labeled \"\"Bush's New Orleans Deal.\"\" Liberal criticism of the reconstruction effort has focused on the awarding of reconstruction contracts to perceived Washington insiders.\"",
+          "question": "Based on the passage, what is not be criticized by conservatives?",
+          "mc_answer1": "Relief spending",
+          "mc_answer2": "The lack of reconstruction effort",
+          "mc_answer3": "Who’s being awarded reconstruction contracts",
+          "mc_answer4": "Reconstruction spending",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"The debate was sparked by controversy over spending on relief and reconstruction in the wake Hurricane Katrina; which some fiscal conservatives have humorously labeled \"\"Bush's New Orleans Deal.\"\" Liberal criticism of the reconstruction effort has focused on the awarding of reconstruction contracts to perceived Washington insiders.\"\nQ: Based on the passage, what is not be criticized by conservatives?\nA: Relief spending\nB: The lack of reconstruction effort\nC: Who’s being awarded reconstruction contracts\nD: Reconstruction spending\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"The debate was sparked by controversy over spending on relief and reconstruction in the wake Hurricane Katrina; which some fiscal conservatives have humorously labeled \"\"Bush's New Orleans Deal.\"\" Liberal criticism of the reconstruction effort has focused on the awarding of reconstruction contracts to perceived Washington insiders.\"\nQ: Based on the passage, what is not be criticized by conservatives?\nA: Relief spending\nB: The lack of reconstruction effort\nC: Who’s being awarded reconstruction contracts\nD: Reconstruction spending\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"The debate was sparked by controversy over spending on relief and reconstruction in the wake Hurricane Katrina; which some fiscal conservatives have humorously labeled \"\"Bush's New Orleans Deal.\"\" Liberal criticism of the reconstruction effort has focused on the awarding of reconstruction contracts to perceived Washington insiders.\"\nQ: Based on the passage, what is not be criticized by conservatives?\nA: Relief spending\nB: The lack of reconstruction effort\nC: Who’s being awarded reconstruction contracts\nD: Reconstruction spending\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"The debate was sparked by controversy over spending on relief and reconstruction in the wake Hurricane Katrina; which some fiscal conservatives have humorously labeled \"\"Bush's New Orleans Deal.\"\" Liberal criticism of the reconstruction effort has focused on the awarding of reconstruction contracts to perceived Washington insiders.\"\nQ: Based on the passage, what is not be criticized by conservatives?\nA: Relief spending\nB: The lack of reconstruction effort\nC: Who’s being awarded reconstruction contracts\nD: Reconstruction spending\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.5629686713218689,
+              true
+            ]
+          ],
+          [
+            [
+              -1.0720267295837402,
+              false
+            ]
+          ],
+          [
+            [
+              -4.43104887008667,
+              false
+            ]
+          ],
+          [
+            [
+              -2.8367819786071777,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.5629686713218689,
+            true
+          ],
+          [
+            -1.0720267295837402,
+            false
+          ],
+          [
+            -4.43104887008667,
+            false
+          ],
+          [
+            -2.8367819786071777,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "13be15ba6a16bd90f3ac1aa562bb00b610a4a87b94f0785064449ab5bb224ec1",
+        "prompt_hash": "c96a1a725344d1922f648314ec06f837c93696374d4349da5f369e525a09fd37",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 451,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Karzai_declared_winner_of_Afghan_elections,_runoff_polls_cancelled",
+          "question_number": 1,
+          "flores_passage": "Lodin also said officials decided to cancel the runoff in order to save Afghans the expense and security risk of another election. Diplomats said that they had found enough ambiguity in the Afghan constitution to determine the runoff as unnecessary. This contradicts earlier reports, which said that cancelling the runoff would have been against the constitution.",
+          "question": "According to the passage, which reason was not used to explain the canceled runoff?",
+          "mc_answer1": "Security risks",
+          "mc_answer2": "A contradiction of the constitution",
+          "mc_answer3": "High expenses",
+          "mc_answer4": "Constitutional ambiguity",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Lodin also said officials decided to cancel the runoff in order to save Afghans the expense and security risk of another election. Diplomats said that they had found enough ambiguity in the Afghan constitution to determine the runoff as unnecessary. This contradicts earlier reports, which said that cancelling the runoff would have been against the constitution.\nQ: According to the passage, which reason was not used to explain the canceled runoff?\nA: Security risks\nB: A contradiction of the constitution\nC: High expenses\nD: Constitutional ambiguity\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Lodin also said officials decided to cancel the runoff in order to save Afghans the expense and security risk of another election. Diplomats said that they had found enough ambiguity in the Afghan constitution to determine the runoff as unnecessary. This contradicts earlier reports, which said that cancelling the runoff would have been against the constitution.\nQ: According to the passage, which reason was not used to explain the canceled runoff?\nA: Security risks\nB: A contradiction of the constitution\nC: High expenses\nD: Constitutional ambiguity\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Lodin also said officials decided to cancel the runoff in order to save Afghans the expense and security risk of another election. Diplomats said that they had found enough ambiguity in the Afghan constitution to determine the runoff as unnecessary. This contradicts earlier reports, which said that cancelling the runoff would have been against the constitution.\nQ: According to the passage, which reason was not used to explain the canceled runoff?\nA: Security risks\nB: A contradiction of the constitution\nC: High expenses\nD: Constitutional ambiguity\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Lodin also said officials decided to cancel the runoff in order to save Afghans the expense and security risk of another election. Diplomats said that they had found enough ambiguity in the Afghan constitution to determine the runoff as unnecessary. This contradicts earlier reports, which said that cancelling the runoff would have been against the constitution.\nQ: According to the passage, which reason was not used to explain the canceled runoff?\nA: Security risks\nB: A contradiction of the constitution\nC: High expenses\nD: Constitutional ambiguity\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.2127842903137207,
+              false
+            ]
+          ],
+          [
+            [
+              -0.18324126303195953,
+              true
+            ]
+          ],
+          [
+            [
+              -5.7904534339904785,
+              false
+            ]
+          ],
+          [
+            [
+              -2.1733860969543457,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.2127842903137207,
+            false
+          ],
+          [
+            -0.18324126303195953,
+            true
+          ],
+          [
+            -5.7904534339904785,
+            false
+          ],
+          [
+            -2.1733860969543457,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "61628c68d16ad07d7adb00b6f71aafbc8e871b252490b515280d328ec3b88c65",
+        "prompt_hash": "532f9329246340fd0514f04c200bc1bc42c750250e5eba5d435ae0ff258bfad2",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 456,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/La_La_Land_receives_record-equalling_fourteen_Oscar_nominations;_Hacksaw_Ridge_gets_six",
+          "question_number": 2,
+          "flores_passage": "The movie, featuring Ryan Gosling and Emma Stone, received nominations in all major categories. Gosling and Stone received nominations for Best Actor and Actress respectively. The other nominations include Best Picture, Director, Cinematography, Costume Design, Film-editing, Original Score, Production Design, Sound Editing, Sound Mixing and Original Screenplay. Two songs from the movie, Audition (The Fools Who Dream) and City of Stars, received nominations for best original song. Lionsgate studio received 26 nominations — more than any other studio.",
+          "question": "Which award was the movie not nominated for?",
+          "mc_answer1": "Best Picture",
+          "mc_answer2": "Best Visual Effects",
+          "mc_answer3": "Best Sound Mixing",
+          "mc_answer4": "Best Original Song",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: The movie, featuring Ryan Gosling and Emma Stone, received nominations in all major categories. Gosling and Stone received nominations for Best Actor and Actress respectively. The other nominations include Best Picture, Director, Cinematography, Costume Design, Film-editing, Original Score, Production Design, Sound Editing, Sound Mixing and Original Screenplay. Two songs from the movie, Audition (The Fools Who Dream) and City of Stars, received nominations for best original song. Lionsgate studio received 26 nominations — more than any other studio.\nQ: Which award was the movie not nominated for?\nA: Best Picture\nB: Best Visual Effects\nC: Best Sound Mixing\nD: Best Original Song\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The movie, featuring Ryan Gosling and Emma Stone, received nominations in all major categories. Gosling and Stone received nominations for Best Actor and Actress respectively. The other nominations include Best Picture, Director, Cinematography, Costume Design, Film-editing, Original Score, Production Design, Sound Editing, Sound Mixing and Original Screenplay. Two songs from the movie, Audition (The Fools Who Dream) and City of Stars, received nominations for best original song. Lionsgate studio received 26 nominations — more than any other studio.\nQ: Which award was the movie not nominated for?\nA: Best Picture\nB: Best Visual Effects\nC: Best Sound Mixing\nD: Best Original Song\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The movie, featuring Ryan Gosling and Emma Stone, received nominations in all major categories. Gosling and Stone received nominations for Best Actor and Actress respectively. The other nominations include Best Picture, Director, Cinematography, Costume Design, Film-editing, Original Score, Production Design, Sound Editing, Sound Mixing and Original Screenplay. Two songs from the movie, Audition (The Fools Who Dream) and City of Stars, received nominations for best original song. Lionsgate studio received 26 nominations — more than any other studio.\nQ: Which award was the movie not nominated for?\nA: Best Picture\nB: Best Visual Effects\nC: Best Sound Mixing\nD: Best Original Song\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The movie, featuring Ryan Gosling and Emma Stone, received nominations in all major categories. Gosling and Stone received nominations for Best Actor and Actress respectively. The other nominations include Best Picture, Director, Cinematography, Costume Design, Film-editing, Original Score, Production Design, Sound Editing, Sound Mixing and Original Screenplay. Two songs from the movie, Audition (The Fools Who Dream) and City of Stars, received nominations for best original song. Lionsgate studio received 26 nominations — more than any other studio.\nQ: Which award was the movie not nominated for?\nA: Best Picture\nB: Best Visual Effects\nC: Best Sound Mixing\nD: Best Original Song\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.290865659713745,
+              false
+            ]
+          ],
+          [
+            [
+              -0.14386631548404694,
+              true
+            ]
+          ],
+          [
+            [
+              -5.6538591384887695,
+              false
+            ]
+          ],
+          [
+            [
+              -5.293948173522949,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.290865659713745,
+            false
+          ],
+          [
+            -0.14386631548404694,
+            true
+          ],
+          [
+            -5.6538591384887695,
+            false
+          ],
+          [
+            -5.293948173522949,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "01ff9451a330e61915d4763db605bc19ead391477d2e24d69de45cac4423ffcf",
+        "prompt_hash": "b0c4d3171ef73d6e369fc3a367b6dfcc4b1d9d6e7fbf09d8095d8172a0854878",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 105,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/US_officials_flood_Grand_Canyon_to_restore_ecosystem",
+          "question_number": 2,
+          "flores_passage": "After the dam was built in 1963, the seasonal floods that would spread sediment throughout the river were halted. This sediment was necessary for creating sandbars and beaches, which served as wildlife habitats. As a result, two fish species have become extinct, and two others have become endangered, including the humpback chub. Although the water level will only rise a few feet after the flood, officials are hoping it will be enough to restore eroded sandbars downstream.",
+          "question": "Which of the following did the building of the dam affect permanently?",
+          "mc_answer1": "Sandbars",
+          "mc_answer2": "Humpback chubs",
+          "mc_answer3": "Wildlife habitats",
+          "mc_answer4": "Sediment spread",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: After the dam was built in 1963, the seasonal floods that would spread sediment throughout the river were halted. This sediment was necessary for creating sandbars and beaches, which served as wildlife habitats. As a result, two fish species have become extinct, and two others have become endangered, including the humpback chub. Although the water level will only rise a few feet after the flood, officials are hoping it will be enough to restore eroded sandbars downstream.\nQ: Which of the following did the building of the dam affect permanently?\nA: Sandbars\nB: Humpback chubs\nC: Wildlife habitats\nD: Sediment spread\nAnswer:",
+            " A"
+          ],
+          [
+            "P: After the dam was built in 1963, the seasonal floods that would spread sediment throughout the river were halted. This sediment was necessary for creating sandbars and beaches, which served as wildlife habitats. As a result, two fish species have become extinct, and two others have become endangered, including the humpback chub. Although the water level will only rise a few feet after the flood, officials are hoping it will be enough to restore eroded sandbars downstream.\nQ: Which of the following did the building of the dam affect permanently?\nA: Sandbars\nB: Humpback chubs\nC: Wildlife habitats\nD: Sediment spread\nAnswer:",
+            " B"
+          ],
+          [
+            "P: After the dam was built in 1963, the seasonal floods that would spread sediment throughout the river were halted. This sediment was necessary for creating sandbars and beaches, which served as wildlife habitats. As a result, two fish species have become extinct, and two others have become endangered, including the humpback chub. Although the water level will only rise a few feet after the flood, officials are hoping it will be enough to restore eroded sandbars downstream.\nQ: Which of the following did the building of the dam affect permanently?\nA: Sandbars\nB: Humpback chubs\nC: Wildlife habitats\nD: Sediment spread\nAnswer:",
+            " C"
+          ],
+          [
+            "P: After the dam was built in 1963, the seasonal floods that would spread sediment throughout the river were halted. This sediment was necessary for creating sandbars and beaches, which served as wildlife habitats. As a result, two fish species have become extinct, and two others have become endangered, including the humpback chub. Although the water level will only rise a few feet after the flood, officials are hoping it will be enough to restore eroded sandbars downstream.\nQ: Which of the following did the building of the dam affect permanently?\nA: Sandbars\nB: Humpback chubs\nC: Wildlife habitats\nD: Sediment spread\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.2513502240180969,
+              true
+            ]
+          ],
+          [
+            [
+              -1.9646985530853271,
+              false
+            ]
+          ],
+          [
+            [
+              -3.051786184310913,
+              false
+            ]
+          ],
+          [
+            [
+              -3.6493585109710693,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.2513502240180969,
+            true
+          ],
+          [
+            -1.9646985530853271,
+            false
+          ],
+          [
+            -3.051786184310913,
+            false
+          ],
+          [
+            -3.6493585109710693,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "66e1110051405bd8f550937f0b033a3ccf73116925589d92823fd5933abc2fd8",
+        "prompt_hash": "247febccde4c9b002e89e2a8c99b6fd2c29396c94c0645edaa3ce376573db386",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792553783.693817,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}
