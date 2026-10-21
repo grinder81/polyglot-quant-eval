@@ -5,3 +5,4 @@ results/stage1/local-q4-fifty/**/*.json -text
 results/stage1/local-q4-fifty/*.json -text
 results/stage1/local-q4-three-hundred/**/*.json -text
 results/stage1/local-q4-three-hundred/*.json -text
+configs/option-rotation.json -text
