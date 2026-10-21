@@ -53,6 +53,19 @@ This does not yet prove that the endpoint consumes these IDs or that its output
 probabilities are indexed correctly. The special-token echo problem documented in
 `chat-template-preflight.md` remains an execution gate for the current GGUFLM path.
 
+`scripts/check_scoring_variant_tokens.py` separately compares the locked IDs with
+GGUF vocabulary tokenization using explicit special-token recognition and automatic
+BOS. It checks exact text roundtrips with special-token strings retained. Both BF16
+and local Q4 passed all 3,600 contexts and 14,400 continuations, recorded in
+`docs/scoring-variant-bf16-tokens.json` and `docs/scoring-variant-q4-tokens.json`.
+These checks load vocabulary only and do not validate the live endpoint's echo
+arrays. Reproduce in the pinned wrapper environment and native library:
+
+```text
+python scripts/check_scoring_variant_tokens.py --lock REQUEST_LOCK.json \
+  --model MODEL.gguf --output NEW_TOKEN_REPORT.json
+```
+
 ## Supported-path validation before inference
 
 The pinned upstream `LocalCompletionsAPI` offers a possible alternative without a
