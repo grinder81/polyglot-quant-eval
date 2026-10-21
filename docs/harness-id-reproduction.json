@@ -1,0 +1,37 @@
+{
+  "scope": "DummyLM logging reproduction; no model accuracy result",
+  "requested_indices": [
+    92,
+    877,
+    443,
+    474,
+    589
+  ],
+  "records": [
+    {
+      "actual_index": 92,
+      "raw_doc_id": 92
+    },
+    {
+      "actual_index": 443,
+      "raw_doc_id": 877
+    },
+    {
+      "actual_index": 474,
+      "raw_doc_id": 443
+    },
+    {
+      "actual_index": 589,
+      "raw_doc_id": 474
+    },
+    {
+      "actual_index": 877,
+      "raw_doc_id": 589
+    }
+  ],
+  "content_prompt_and_target_matches": 5,
+  "source_sha256": {
+    "evaluator.py": "628120153cf24471ead0789106e5c18b02855a7cc77a9aa5da8069fdeab57ed5",
+    "api/task.py": "4c25a4f1949488483b833ce4fcf91cfd3e066084a9ea00079c6879ae3ba95657"
+  }
+}
