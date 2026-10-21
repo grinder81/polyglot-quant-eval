@@ -11,6 +11,27 @@ spec.loader.exec_module(shards)
 
 
 class ResumeTest(unittest.TestCase):
+    def test_nonzero_range_is_resumed_and_range_changes_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            lock, runtime = root / 'lock', root / 'runtime'
+            lock.write_text('lock'); runtime.write_text('runtime')
+            argv = ['run_shards', '--lock', str(lock), '--runtime-manifest', str(runtime),
+                    '--directory', str(root / 'results'), '--arm', 'test',
+                    '--base-url', 'http://localhost', '--start', '50', '--count', '10']
+            starts = []
+            def evaluate(command, check):
+                starts.append(int(command[command.index('--start') + 1]))
+                language = command[command.index('--language') + 1]
+                Path(command[command.index('--output') + 1]).write_text(json.dumps(
+                    {'samples': {'belebele_' + language: [{'acc': 1}] * 5}}))
+            with patch('sys.argv', argv), patch.object(shards.subprocess, 'run', side_effect=evaluate):
+                shards.main(); shards.main()
+                self.assertEqual(starts, [50, 55] * 3)
+                argv[-1] = '15'
+                with self.assertRaises(AssertionError):
+                    shards.main()
+
     def test_reuses_complete_groups_and_rejects_changed_runtime(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

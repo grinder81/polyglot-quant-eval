@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 138,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Applied_Ecology/New_Societies_and_Cultures",
+          "question_number": 1,
+          "flores_passage": "Every morning, people leave small country towns in cars to go their workplace and are passed by others whose work destination is the place they have just left. In this dynamic transport shuttle everyone is somehow connected with, and supporting, a transport system based on private cars. Science now indicates that this massive carbon economy has dislodged the biosphere from one of its stable states that has supported human evolution for the past two million years.",
+          "question": "According to the passage, which of the following is the basis of the transport system?",
+          "mc_answer1": "Work destinations",
+          "mc_answer2": "Private cars",
+          "mc_answer3": "A stable biosphere",
+          "mc_answer4": "Human evolution",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Every morning, people leave small country towns in cars to go their workplace and are passed by others whose work destination is the place they have just left. In this dynamic transport shuttle everyone is somehow connected with, and supporting, a transport system based on private cars. Science now indicates that this massive carbon economy has dislodged the biosphere from one of its stable states that has supported human evolution for the past two million years.\nQ: According to the passage, which of the following is the basis of the transport system?\nA: Work destinations\nB: Private cars\nC: A stable biosphere\nD: Human evolution\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Every morning, people leave small country towns in cars to go their workplace and are passed by others whose work destination is the place they have just left. In this dynamic transport shuttle everyone is somehow connected with, and supporting, a transport system based on private cars. Science now indicates that this massive carbon economy has dislodged the biosphere from one of its stable states that has supported human evolution for the past two million years.\nQ: According to the passage, which of the following is the basis of the transport system?\nA: Work destinations\nB: Private cars\nC: A stable biosphere\nD: Human evolution\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Every morning, people leave small country towns in cars to go their workplace and are passed by others whose work destination is the place they have just left. In this dynamic transport shuttle everyone is somehow connected with, and supporting, a transport system based on private cars. Science now indicates that this massive carbon economy has dislodged the biosphere from one of its stable states that has supported human evolution for the past two million years.\nQ: According to the passage, which of the following is the basis of the transport system?\nA: Work destinations\nB: Private cars\nC: A stable biosphere\nD: Human evolution\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Every morning, people leave small country towns in cars to go their workplace and are passed by others whose work destination is the place they have just left. In this dynamic transport shuttle everyone is somehow connected with, and supporting, a transport system based on private cars. Science now indicates that this massive carbon economy has dislodged the biosphere from one of its stable states that has supported human evolution for the past two million years.\nQ: According to the passage, which of the following is the basis of the transport system?\nA: Work destinations\nB: Private cars\nC: A stable biosphere\nD: Human evolution\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.7343083620071411,
+              false
+            ]
+          ],
+          [
+            [
+              -0.21351058781147003,
+              true
+            ]
+          ],
+          [
+            [
+              -6.817621231079102,
+              false
+            ]
+          ],
+          [
+            [
+              -6.199365615844727,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.7343083620071411,
+            false
+          ],
+          [
+            -0.21351058781147003,
+            true
+          ],
+          [
+            -6.817621231079102,
+            false
+          ],
+          [
+            -6.199365615844727,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "71cc9be1d5f7c1bfe9f24fc1e31fd293668bdf4a211925ac1d49cd96c4886086",
+        "prompt_hash": "8d8b453ba9db52d71e3ba4088492da26d1c3f505df4ffceb6d5a671ea5a8659d",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 84,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/History_of_Islam/Early_Islam",
+          "question_number": 1,
+          "flores_passage": "Muhammad was deeply interested in matters beyond this mundane life. He used to frequent a cave that became known as “Hira‘” on the Mountain of “Noor” (light) for contemplation. he cave itself, which survived the times, gives a very vivid image of Muhammad’s spiritual inclinations. Resting on the top of one of the mountains north of Mecca, the cave is completely isolated from the rest of the world. In fact, it is not easy to find at all even if one knew it existed. Once inside the cave, it is a total isolation. Nothing can be seen other than the clear, beautiful sky above and the many surrounding mountains. Very little of this world can be seen or heard from inside the cave.",
+          "question": "Based on the passage, what does Muhammad’s cave say about his spiritual practices or values?",
+          "mc_answer1": "He values peace and isolation",
+          "mc_answer2": "Outside noise can help contemplation",
+          "mc_answer3": "He needed very little alone time",
+          "mc_answer4": "He was anxious to be seen and heard",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Muhammad was deeply interested in matters beyond this mundane life. He used to frequent a cave that became known as “Hira‘” on the Mountain of “Noor” (light) for contemplation. he cave itself, which survived the times, gives a very vivid image of Muhammad’s spiritual inclinations. Resting on the top of one of the mountains north of Mecca, the cave is completely isolated from the rest of the world. In fact, it is not easy to find at all even if one knew it existed. Once inside the cave, it is a total isolation. Nothing can be seen other than the clear, beautiful sky above and the many surrounding mountains. Very little of this world can be seen or heard from inside the cave.\nQ: Based on the passage, what does Muhammad’s cave say about his spiritual practices or values?\nA: He values peace and isolation\nB: Outside noise can help contemplation\nC: He needed very little alone time\nD: He was anxious to be seen and heard\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Muhammad was deeply interested in matters beyond this mundane life. He used to frequent a cave that became known as “Hira‘” on the Mountain of “Noor” (light) for contemplation. he cave itself, which survived the times, gives a very vivid image of Muhammad’s spiritual inclinations. Resting on the top of one of the mountains north of Mecca, the cave is completely isolated from the rest of the world. In fact, it is not easy to find at all even if one knew it existed. Once inside the cave, it is a total isolation. Nothing can be seen other than the clear, beautiful sky above and the many surrounding mountains. Very little of this world can be seen or heard from inside the cave.\nQ: Based on the passage, what does Muhammad’s cave say about his spiritual practices or values?\nA: He values peace and isolation\nB: Outside noise can help contemplation\nC: He needed very little alone time\nD: He was anxious to be seen and heard\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Muhammad was deeply interested in matters beyond this mundane life. He used to frequent a cave that became known as “Hira‘” on the Mountain of “Noor” (light) for contemplation. he cave itself, which survived the times, gives a very vivid image of Muhammad’s spiritual inclinations. Resting on the top of one of the mountains north of Mecca, the cave is completely isolated from the rest of the world. In fact, it is not easy to find at all even if one knew it existed. Once inside the cave, it is a total isolation. Nothing can be seen other than the clear, beautiful sky above and the many surrounding mountains. Very little of this world can be seen or heard from inside the cave.\nQ: Based on the passage, what does Muhammad’s cave say about his spiritual practices or values?\nA: He values peace and isolation\nB: Outside noise can help contemplation\nC: He needed very little alone time\nD: He was anxious to be seen and heard\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Muhammad was deeply interested in matters beyond this mundane life. He used to frequent a cave that became known as “Hira‘” on the Mountain of “Noor” (light) for contemplation. he cave itself, which survived the times, gives a very vivid image of Muhammad’s spiritual inclinations. Resting on the top of one of the mountains north of Mecca, the cave is completely isolated from the rest of the world. In fact, it is not easy to find at all even if one knew it existed. Once inside the cave, it is a total isolation. Nothing can be seen other than the clear, beautiful sky above and the many surrounding mountains. Very little of this world can be seen or heard from inside the cave.\nQ: Based on the passage, what does Muhammad’s cave say about his spiritual practices or values?\nA: He values peace and isolation\nB: Outside noise can help contemplation\nC: He needed very little alone time\nD: He was anxious to be seen and heard\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.4058975279331207,
+              true
+            ]
+          ],
+          [
+            [
+              -5.309615612030029,
+              false
+            ]
+          ],
+          [
+            [
+              -1.7691844701766968,
+              false
+            ]
+          ],
+          [
+            [
+              -4.529501438140869,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.4058975279331207,
+            true
+          ],
+          [
+            -5.309615612030029,
+            false
+          ],
+          [
+            -1.7691844701766968,
+            false
+          ],
+          [
+            -4.529501438140869,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "043cceb54660d69dbfbba2d78825427e24478824738304c322e1943510589c03",
+        "prompt_hash": "8e14430e3dbefc925b6ff52a3400ccac438dfecbb319b24d9d4a3de05b834841",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 851,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Sikhism",
+          "question_number": 1,
+          "flores_passage": "\"Sikhism is a religion from the Indian sub-continent. It originated in the Punjab region during the 15th century from a sectarian split within the Hindu tradition. Sikhs consider their faith to be a separate religion from Hinduism though they acknowledge its Hindu roots and traditions. Sikhs call their religion Gurmat, which is Punjabi for \"\"way of the guru\"\". The guru is a fundamental aspect of all Indian religions but in Sikhism has taken on an importance that forms the core of Sikh beliefs. The religion was founded in the 15th century by Guru Nanak (1469–1539). There followed in succession a further nine gurus.\"",
+          "question": "According to the passage, which statement about Sikhism does not accurately portray the religion?",
+          "mc_answer1": "Sikhism was a result of a sectarian split within the Hindu tradition",
+          "mc_answer2": "The guru is a fundamental aspect unique to Sikhism",
+          "mc_answer3": "Nine gurus followed after the founder of the religion, Guru Nanak",
+          "mc_answer4": "Certain traditions of Sikhism are rooted in Hinduism",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"Sikhism is a religion from the Indian sub-continent. It originated in the Punjab region during the 15th century from a sectarian split within the Hindu tradition. Sikhs consider their faith to be a separate religion from Hinduism though they acknowledge its Hindu roots and traditions. Sikhs call their religion Gurmat, which is Punjabi for \"\"way of the guru\"\". The guru is a fundamental aspect of all Indian religions but in Sikhism has taken on an importance that forms the core of Sikh beliefs. The religion was founded in the 15th century by Guru Nanak (1469–1539). There followed in succession a further nine gurus.\"\nQ: According to the passage, which statement about Sikhism does not accurately portray the religion?\nA: Sikhism was a result of a sectarian split within the Hindu tradition\nB: The guru is a fundamental aspect unique to Sikhism\nC: Nine gurus followed after the founder of the religion, Guru Nanak\nD: Certain traditions of Sikhism are rooted in Hinduism\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Sikhism is a religion from the Indian sub-continent. It originated in the Punjab region during the 15th century from a sectarian split within the Hindu tradition. Sikhs consider their faith to be a separate religion from Hinduism though they acknowledge its Hindu roots and traditions. Sikhs call their religion Gurmat, which is Punjabi for \"\"way of the guru\"\". The guru is a fundamental aspect of all Indian religions but in Sikhism has taken on an importance that forms the core of Sikh beliefs. The religion was founded in the 15th century by Guru Nanak (1469–1539). There followed in succession a further nine gurus.\"\nQ: According to the passage, which statement about Sikhism does not accurately portray the religion?\nA: Sikhism was a result of a sectarian split within the Hindu tradition\nB: The guru is a fundamental aspect unique to Sikhism\nC: Nine gurus followed after the founder of the religion, Guru Nanak\nD: Certain traditions of Sikhism are rooted in Hinduism\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Sikhism is a religion from the Indian sub-continent. It originated in the Punjab region during the 15th century from a sectarian split within the Hindu tradition. Sikhs consider their faith to be a separate religion from Hinduism though they acknowledge its Hindu roots and traditions. Sikhs call their religion Gurmat, which is Punjabi for \"\"way of the guru\"\". The guru is a fundamental aspect of all Indian religions but in Sikhism has taken on an importance that forms the core of Sikh beliefs. The religion was founded in the 15th century by Guru Nanak (1469–1539). There followed in succession a further nine gurus.\"\nQ: According to the passage, which statement about Sikhism does not accurately portray the religion?\nA: Sikhism was a result of a sectarian split within the Hindu tradition\nB: The guru is a fundamental aspect unique to Sikhism\nC: Nine gurus followed after the founder of the religion, Guru Nanak\nD: Certain traditions of Sikhism are rooted in Hinduism\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Sikhism is a religion from the Indian sub-continent. It originated in the Punjab region during the 15th century from a sectarian split within the Hindu tradition. Sikhs consider their faith to be a separate religion from Hinduism though they acknowledge its Hindu roots and traditions. Sikhs call their religion Gurmat, which is Punjabi for \"\"way of the guru\"\". The guru is a fundamental aspect of all Indian religions but in Sikhism has taken on an importance that forms the core of Sikh beliefs. The religion was founded in the 15th century by Guru Nanak (1469–1539). There followed in succession a further nine gurus.\"\nQ: According to the passage, which statement about Sikhism does not accurately portray the religion?\nA: Sikhism was a result of a sectarian split within the Hindu tradition\nB: The guru is a fundamental aspect unique to Sikhism\nC: Nine gurus followed after the founder of the religion, Guru Nanak\nD: Certain traditions of Sikhism are rooted in Hinduism\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.015554774552583694,
+              true
+            ]
+          ],
+          [
+            [
+              -5.142660617828369,
+              false
+            ]
+          ],
+          [
+            [
+              -7.492514133453369,
+              false
+            ]
+          ],
+          [
+            [
+              -6.903409481048584,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.015554774552583694,
+            true
+          ],
+          [
+            -5.142660617828369,
+            false
+          ],
+          [
+            -7.492514133453369,
+            false
+          ],
+          [
+            -6.903409481048584,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a03c9acfd162053bc4f36cd64b9757b9f8ab2ac435cf316a9020e8b7dad63db7",
+        "prompt_hash": "012c68b4831eec07271eace3ba72de5f38d6064ddc37db67d065aa10f30f60d1",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 648,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Baltic_Sea_ferries",
+          "question_number": 1,
+          "flores_passage": "If crossing the Northern Baltic in winter, check the cabin location, as going through ice causes quite horrible noise for those most affected. Saint Petersburg cruises include time in town. Cruise passengers are exempted from visa requirements (check the terms).",
+          "question": "According to the passage, what should a passenger check if their cruise is in the winter?",
+          "mc_answer1": "Cabin location",
+          "mc_answer2": "Visa requirements",
+          "mc_answer3": "The terms",
+          "mc_answer4": "The amount of time spent in town",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: If crossing the Northern Baltic in winter, check the cabin location, as going through ice causes quite horrible noise for those most affected. Saint Petersburg cruises include time in town. Cruise passengers are exempted from visa requirements (check the terms).\nQ: According to the passage, what should a passenger check if their cruise is in the winter?\nA: Cabin location\nB: Visa requirements\nC: The terms\nD: The amount of time spent in town\nAnswer:",
+            " A"
+          ],
+          [
+            "P: If crossing the Northern Baltic in winter, check the cabin location, as going through ice causes quite horrible noise for those most affected. Saint Petersburg cruises include time in town. Cruise passengers are exempted from visa requirements (check the terms).\nQ: According to the passage, what should a passenger check if their cruise is in the winter?\nA: Cabin location\nB: Visa requirements\nC: The terms\nD: The amount of time spent in town\nAnswer:",
+            " B"
+          ],
+          [
+            "P: If crossing the Northern Baltic in winter, check the cabin location, as going through ice causes quite horrible noise for those most affected. Saint Petersburg cruises include time in town. Cruise passengers are exempted from visa requirements (check the terms).\nQ: According to the passage, what should a passenger check if their cruise is in the winter?\nA: Cabin location\nB: Visa requirements\nC: The terms\nD: The amount of time spent in town\nAnswer:",
+            " C"
+          ],
+          [
+            "P: If crossing the Northern Baltic in winter, check the cabin location, as going through ice causes quite horrible noise for those most affected. Saint Petersburg cruises include time in town. Cruise passengers are exempted from visa requirements (check the terms).\nQ: According to the passage, what should a passenger check if their cruise is in the winter?\nA: Cabin location\nB: Visa requirements\nC: The terms\nD: The amount of time spent in town\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.0049798269756138325,
+              true
+            ]
+          ],
+          [
+            [
+              -7.534987926483154,
+              false
+            ]
+          ],
+          [
+            [
+              -7.499250888824463,
+              false
+            ]
+          ],
+          [
+            [
+              -7.521087169647217,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.0049798269756138325,
+            true
+          ],
+          [
+            -7.534987926483154,
+            false
+          ],
+          [
+            -7.499250888824463,
+            false
+          ],
+          [
+            -7.521087169647217,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "5ce6e763fc9482bd234633f0755e0ead7248852928cafabc5c6fbc23a49fedf5",
+        "prompt_hash": "fd2539cabdcc352d5de6fa3dbf72a127c996d576cc456afecfae76fed401535e",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 16,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Tornado_safety",
+          "question_number": 1,
+          "flores_passage": "\"A tornado is a spinning column of very low-pressure air, which sucks the surrounding air inward and upward. They generate high winds (often 100-200 miles/hour) and can lift heavy objects into the air, carrying them as the tornado moves. They begin as funnels descending from storm clouds, and become \"\"tornadoes\"\" when they touch the ground.\"",
+          "question": "According to the passage, at what point does a funnel become a tornado?",
+          "mc_answer1": "When winds reach around 100 miles per hour",
+          "mc_answer2": "When the columns of air begin spinning",
+          "mc_answer3": "While descending from storm clouds",
+          "mc_answer4": "After touching the ground",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: \"A tornado is a spinning column of very low-pressure air, which sucks the surrounding air inward and upward. They generate high winds (often 100-200 miles/hour) and can lift heavy objects into the air, carrying them as the tornado moves. They begin as funnels descending from storm clouds, and become \"\"tornadoes\"\" when they touch the ground.\"\nQ: According to the passage, at what point does a funnel become a tornado?\nA: When winds reach around 100 miles per hour\nB: When the columns of air begin spinning\nC: While descending from storm clouds\nD: After touching the ground\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"A tornado is a spinning column of very low-pressure air, which sucks the surrounding air inward and upward. They generate high winds (often 100-200 miles/hour) and can lift heavy objects into the air, carrying them as the tornado moves. They begin as funnels descending from storm clouds, and become \"\"tornadoes\"\" when they touch the ground.\"\nQ: According to the passage, at what point does a funnel become a tornado?\nA: When winds reach around 100 miles per hour\nB: When the columns of air begin spinning\nC: While descending from storm clouds\nD: After touching the ground\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"A tornado is a spinning column of very low-pressure air, which sucks the surrounding air inward and upward. They generate high winds (often 100-200 miles/hour) and can lift heavy objects into the air, carrying them as the tornado moves. They begin as funnels descending from storm clouds, and become \"\"tornadoes\"\" when they touch the ground.\"\nQ: According to the passage, at what point does a funnel become a tornado?\nA: When winds reach around 100 miles per hour\nB: When the columns of air begin spinning\nC: While descending from storm clouds\nD: After touching the ground\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"A tornado is a spinning column of very low-pressure air, which sucks the surrounding air inward and upward. They generate high winds (often 100-200 miles/hour) and can lift heavy objects into the air, carrying them as the tornado moves. They begin as funnels descending from storm clouds, and become \"\"tornadoes\"\" when they touch the ground.\"\nQ: According to the passage, at what point does a funnel become a tornado?\nA: When winds reach around 100 miles per hour\nB: When the columns of air begin spinning\nC: While descending from storm clouds\nD: After touching the ground\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.578340768814087,
+              false
+            ]
+          ],
+          [
+            [
+              -5.1806793212890625,
+              false
+            ]
+          ],
+          [
+            [
+              -0.13397611677646637,
+              true
+            ]
+          ],
+          [
+            [
+              -3.204866647720337,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.578340768814087,
+            false
+          ],
+          [
+            -5.1806793212890625,
+            false
+          ],
+          [
+            -0.13397611677646637,
+            true
+          ],
+          [
+            -3.204866647720337,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c2e60322ebad899a67284f7a32ef2e88f0ec77764727289d549f744b590ba6c4",
+        "prompt_hash": "a48d5e1e3fe7cb1ebfb1a4b98b08e64c195692df0c0f555605b6ee167df7e62b",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792530197.0800402,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

@@ -23,6 +23,8 @@ def main():
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--local-q4-only', action='store_true',
                    help='Evaluate the approved local control without rerunning the existing arms')
+    p.add_argument('--start', type=int, default=0)
+    p.add_argument('--count', type=int, default=50)
     args = p.parse_args()
     root, output = args.root, args.output
     output.mkdir(parents=True, exist_ok=True)
@@ -82,7 +84,8 @@ def main():
                     client_env['PYTHONPATH'] = str(root / 'eval/lib/python3.13/site-packages')
                 command = [str(client_python), str(runner), '--lock', str(root / 'pilot/sample-lock.json'),
                            '--runtime-manifest', str(manifest), '--directory', str(output / arm),
-                           '--arm', arm, '--base-url', 'http://127.0.0.1:8098' + ('/v1/completions' if is_vllm else '')]
+                           '--arm', arm, '--start', str(args.start), '--count', str(args.count),
+                           '--base-url', 'http://127.0.0.1:8098' + ('/v1/completions' if is_vllm else '')]
                 if is_vllm:
                     command += ['--backend', 'local-completions', '--tokenizer', str(original)]
                 subprocess.run(command, env=client_env, check=True)

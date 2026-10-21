@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 236,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Languages/Sanskrit",
+          "question_number": 1,
+          "flores_passage": "There are many theories to how Sanskrit came into existence. One of them is about an Aryan migration from the west into India who brought their language with them. Sanskrit is an ancient language and is comparable to the Latin language spoken in Europe. The earliest known book in the world was written in Sanskrit. After the compilation of Upanishads, Sanskrit just faded due to hierarchy. Sanskrit is a very complex and rich language, which has served to be the source for many modern Indian languages, just like Latin is the source for European languages like French and Spanish.",
+          "question": "According to the passage, which languages have been influenced by Sanskrit?",
+          "mc_answer1": "Latin languages",
+          "mc_answer2": "European languages",
+          "mc_answer3": "Ancient languages",
+          "mc_answer4": "Indian languages",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: There are many theories to how Sanskrit came into existence. One of them is about an Aryan migration from the west into India who brought their language with them. Sanskrit is an ancient language and is comparable to the Latin language spoken in Europe. The earliest known book in the world was written in Sanskrit. After the compilation of Upanishads, Sanskrit just faded due to hierarchy. Sanskrit is a very complex and rich language, which has served to be the source for many modern Indian languages, just like Latin is the source for European languages like French and Spanish.\nQ: According to the passage, which languages have been influenced by Sanskrit?\nA: Latin languages\nB: European languages\nC: Ancient languages\nD: Indian languages\nAnswer:",
+            " A"
+          ],
+          [
+            "P: There are many theories to how Sanskrit came into existence. One of them is about an Aryan migration from the west into India who brought their language with them. Sanskrit is an ancient language and is comparable to the Latin language spoken in Europe. The earliest known book in the world was written in Sanskrit. After the compilation of Upanishads, Sanskrit just faded due to hierarchy. Sanskrit is a very complex and rich language, which has served to be the source for many modern Indian languages, just like Latin is the source for European languages like French and Spanish.\nQ: According to the passage, which languages have been influenced by Sanskrit?\nA: Latin languages\nB: European languages\nC: Ancient languages\nD: Indian languages\nAnswer:",
+            " B"
+          ],
+          [
+            "P: There are many theories to how Sanskrit came into existence. One of them is about an Aryan migration from the west into India who brought their language with them. Sanskrit is an ancient language and is comparable to the Latin language spoken in Europe. The earliest known book in the world was written in Sanskrit. After the compilation of Upanishads, Sanskrit just faded due to hierarchy. Sanskrit is a very complex and rich language, which has served to be the source for many modern Indian languages, just like Latin is the source for European languages like French and Spanish.\nQ: According to the passage, which languages have been influenced by Sanskrit?\nA: Latin languages\nB: European languages\nC: Ancient languages\nD: Indian languages\nAnswer:",
+            " C"
+          ],
+          [
+            "P: There are many theories to how Sanskrit came into existence. One of them is about an Aryan migration from the west into India who brought their language with them. Sanskrit is an ancient language and is comparable to the Latin language spoken in Europe. The earliest known book in the world was written in Sanskrit. After the compilation of Upanishads, Sanskrit just faded due to hierarchy. Sanskrit is a very complex and rich language, which has served to be the source for many modern Indian languages, just like Latin is the source for European languages like French and Spanish.\nQ: According to the passage, which languages have been influenced by Sanskrit?\nA: Latin languages\nB: European languages\nC: Ancient languages\nD: Indian languages\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.666967868804932,
+              false
+            ]
+          ],
+          [
+            [
+              -4.21282434463501,
+              false
+            ]
+          ],
+          [
+            [
+              -7.330801486968994,
+              false
+            ]
+          ],
+          [
+            [
+              -0.060778092592954636,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.666967868804932,
+            false
+          ],
+          [
+            -4.21282434463501,
+            false
+          ],
+          [
+            -7.330801486968994,
+            false
+          ],
+          [
+            -0.060778092592954636,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "6b3b0e9af5156d5f45d9dfdde3f5cc8f978699dcadaa58912ba69c2b48727651",
+        "prompt_hash": "f32c971f20dcc7480799cf41031f0606217d308079ae687db1fc384f0a8072ac",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 426,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Fighter_jet_crashes_during_Children%27s_Day_airshow_in_Thailand",
+          "question_number": 1,
+          "flores_passage": "The JAS 39C Gripen crashed onto a runway at around 9:30 am local time (0230 UTC) and exploded, closing the airport to commercial flights. The pilot was identified as Squadron Leader Dilokrit Pattavee. Local media reports an airport fire vehicle rolled over while responding.",
+          "question": "What happened to the fire vehicle that responded to the crash of the JAS 39C Gripen? ",
+          "mc_answer1": "It crashed",
+          "mc_answer2": "It rolled over",
+          "mc_answer3": "It exploded",
+          "mc_answer4": "It ran out of gas",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: The JAS 39C Gripen crashed onto a runway at around 9:30 am local time (0230 UTC) and exploded, closing the airport to commercial flights. The pilot was identified as Squadron Leader Dilokrit Pattavee. Local media reports an airport fire vehicle rolled over while responding.\nQ: What happened to the fire vehicle that responded to the crash of the JAS 39C Gripen?\nA: It crashed\nB: It rolled over\nC: It exploded\nD: It ran out of gas\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The JAS 39C Gripen crashed onto a runway at around 9:30 am local time (0230 UTC) and exploded, closing the airport to commercial flights. The pilot was identified as Squadron Leader Dilokrit Pattavee. Local media reports an airport fire vehicle rolled over while responding.\nQ: What happened to the fire vehicle that responded to the crash of the JAS 39C Gripen?\nA: It crashed\nB: It rolled over\nC: It exploded\nD: It ran out of gas\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The JAS 39C Gripen crashed onto a runway at around 9:30 am local time (0230 UTC) and exploded, closing the airport to commercial flights. The pilot was identified as Squadron Leader Dilokrit Pattavee. Local media reports an airport fire vehicle rolled over while responding.\nQ: What happened to the fire vehicle that responded to the crash of the JAS 39C Gripen?\nA: It crashed\nB: It rolled over\nC: It exploded\nD: It ran out of gas\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The JAS 39C Gripen crashed onto a runway at around 9:30 am local time (0230 UTC) and exploded, closing the airport to commercial flights. The pilot was identified as Squadron Leader Dilokrit Pattavee. Local media reports an airport fire vehicle rolled over while responding.\nQ: What happened to the fire vehicle that responded to the crash of the JAS 39C Gripen?\nA: It crashed\nB: It rolled over\nC: It exploded\nD: It ran out of gas\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.778020858764648,
+              false
+            ]
+          ],
+          [
+            [
+              -0.013139685615897179,
+              true
+            ]
+          ],
+          [
+            [
+              -6.328819274902344,
+              false
+            ]
+          ],
+          [
+            [
+              -7.780139923095703,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.778020858764648,
+            false
+          ],
+          [
+            -0.013139685615897179,
+            true
+          ],
+          [
+            -6.328819274902344,
+            false
+          ],
+          [
+            -7.780139923095703,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "bd17b726327bca89734049b9c5f99eced23396b7cb0e03825becc968999341fa",
+        "prompt_hash": "93bc38001e1ddefd750110d95723a32c7f589352c00f85ff12817809c43560f2",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 384,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Ian_Thorpe_starts_to_recover_from_chest_pains",
+          "question_number": 1,
+          "flores_passage": "The Olympic gold medalist was due to swim in the 100m and 200m freestyle and in three relays at the Commonwealth Games, but due to his complaints his fitness has been in doubt. He has been unable to take the drugs needed to overcome his pain as they are banned from the Games.",
+          "question": "How many events was the Olympic gold medalist due to swim in at the Commonwealth Games?",
+          "mc_answer1": "Five",
+          "mc_answer2": "Three",
+          "mc_answer3": "Two",
+          "mc_answer4": "Four",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The Olympic gold medalist was due to swim in the 100m and 200m freestyle and in three relays at the Commonwealth Games, but due to his complaints his fitness has been in doubt. He has been unable to take the drugs needed to overcome his pain as they are banned from the Games.\nQ: How many events was the Olympic gold medalist due to swim in at the Commonwealth Games?\nA: Five\nB: Three\nC: Two\nD: Four\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Olympic gold medalist was due to swim in the 100m and 200m freestyle and in three relays at the Commonwealth Games, but due to his complaints his fitness has been in doubt. He has been unable to take the drugs needed to overcome his pain as they are banned from the Games.\nQ: How many events was the Olympic gold medalist due to swim in at the Commonwealth Games?\nA: Five\nB: Three\nC: Two\nD: Four\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Olympic gold medalist was due to swim in the 100m and 200m freestyle and in three relays at the Commonwealth Games, but due to his complaints his fitness has been in doubt. He has been unable to take the drugs needed to overcome his pain as they are banned from the Games.\nQ: How many events was the Olympic gold medalist due to swim in at the Commonwealth Games?\nA: Five\nB: Three\nC: Two\nD: Four\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Olympic gold medalist was due to swim in the 100m and 200m freestyle and in three relays at the Commonwealth Games, but due to his complaints his fitness has been in doubt. He has been unable to take the drugs needed to overcome his pain as they are banned from the Games.\nQ: How many events was the Olympic gold medalist due to swim in at the Commonwealth Games?\nA: Five\nB: Three\nC: Two\nD: Four\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.4236373901367188,
+              false
+            ]
+          ],
+          [
+            [
+              -0.232755646109581,
+              true
+            ]
+          ],
+          [
+            [
+              -1.9868755340576172,
+              false
+            ]
+          ],
+          [
+            [
+              -4.23170280456543,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.4236373901367188,
+            false
+          ],
+          [
+            -0.232755646109581,
+            true
+          ],
+          [
+            -1.9868755340576172,
+            false
+          ],
+          [
+            -4.23170280456543,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c04dffaed8efd670cd14952e682ff05318031a422939c2744254b2b42cd42c86",
+        "prompt_hash": "29f76a6a183b0e0fd02e7ece522a0382ceb408c8d48ded0e0210377546694b10",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 605,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/USA_Gymnastics_board_resigning_after_sex_abuse",
+          "question_number": 1,
+          "flores_passage": "USA Gymnastics supports the United States Olympic Committee's letter and accepts the absolute need of the Olympic family to promote a safe environment for all of our athletes. We agree with the USOC's statement that the interests of our athletes and clubs, and their sport, may be better served by moving forward with meaningful change within our organization, rather than decertification. USA Gymnastics supports an independent investigation that may shine light on how abuse of the proportion described so courageously by the survivors of Larry Nassar could have gone undetected for so long and embraces any necessary and appropriate changes. USA Gymnastics and the USOC have the same goal — making the sport of gymnastics, and others, as safe as possible for athletes to follow their dreams in a safe, positive and empowered environment.",
+          "question": "According to the statement, what is not supported by USA Gymnastics following Nassar’s abuse of athletes?",
+          "mc_answer1": "Decertification",
+          "mc_answer2": "Creating an empowered environment",
+          "mc_answer3": "Necessary changes within the organization",
+          "mc_answer4": "An independent investigation",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: USA Gymnastics supports the United States Olympic Committee's letter and accepts the absolute need of the Olympic family to promote a safe environment for all of our athletes. We agree with the USOC's statement that the interests of our athletes and clubs, and their sport, may be better served by moving forward with meaningful change within our organization, rather than decertification. USA Gymnastics supports an independent investigation that may shine light on how abuse of the proportion described so courageously by the survivors of Larry Nassar could have gone undetected for so long and embraces any necessary and appropriate changes. USA Gymnastics and the USOC have the same goal — making the sport of gymnastics, and others, as safe as possible for athletes to follow their dreams in a safe, positive and empowered environment.\nQ: According to the statement, what is not supported by USA Gymnastics following Nassar’s abuse of athletes?\nA: Decertification\nB: Creating an empowered environment\nC: Necessary changes within the organization\nD: An independent investigation\nAnswer:",
+            " A"
+          ],
+          [
+            "P: USA Gymnastics supports the United States Olympic Committee's letter and accepts the absolute need of the Olympic family to promote a safe environment for all of our athletes. We agree with the USOC's statement that the interests of our athletes and clubs, and their sport, may be better served by moving forward with meaningful change within our organization, rather than decertification. USA Gymnastics supports an independent investigation that may shine light on how abuse of the proportion described so courageously by the survivors of Larry Nassar could have gone undetected for so long and embraces any necessary and appropriate changes. USA Gymnastics and the USOC have the same goal — making the sport of gymnastics, and others, as safe as possible for athletes to follow their dreams in a safe, positive and empowered environment.\nQ: According to the statement, what is not supported by USA Gymnastics following Nassar’s abuse of athletes?\nA: Decertification\nB: Creating an empowered environment\nC: Necessary changes within the organization\nD: An independent investigation\nAnswer:",
+            " B"
+          ],
+          [
+            "P: USA Gymnastics supports the United States Olympic Committee's letter and accepts the absolute need of the Olympic family to promote a safe environment for all of our athletes. We agree with the USOC's statement that the interests of our athletes and clubs, and their sport, may be better served by moving forward with meaningful change within our organization, rather than decertification. USA Gymnastics supports an independent investigation that may shine light on how abuse of the proportion described so courageously by the survivors of Larry Nassar could have gone undetected for so long and embraces any necessary and appropriate changes. USA Gymnastics and the USOC have the same goal — making the sport of gymnastics, and others, as safe as possible for athletes to follow their dreams in a safe, positive and empowered environment.\nQ: According to the statement, what is not supported by USA Gymnastics following Nassar’s abuse of athletes?\nA: Decertification\nB: Creating an empowered environment\nC: Necessary changes within the organization\nD: An independent investigation\nAnswer:",
+            " C"
+          ],
+          [
+            "P: USA Gymnastics supports the United States Olympic Committee's letter and accepts the absolute need of the Olympic family to promote a safe environment for all of our athletes. We agree with the USOC's statement that the interests of our athletes and clubs, and their sport, may be better served by moving forward with meaningful change within our organization, rather than decertification. USA Gymnastics supports an independent investigation that may shine light on how abuse of the proportion described so courageously by the survivors of Larry Nassar could have gone undetected for so long and embraces any necessary and appropriate changes. USA Gymnastics and the USOC have the same goal — making the sport of gymnastics, and others, as safe as possible for athletes to follow their dreams in a safe, positive and empowered environment.\nQ: According to the statement, what is not supported by USA Gymnastics following Nassar’s abuse of athletes?\nA: Decertification\nB: Creating an empowered environment\nC: Necessary changes within the organization\nD: An independent investigation\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.014684218913316727,
+              true
+            ]
+          ],
+          [
+            [
+              -7.183129787445068,
+              false
+            ]
+          ],
+          [
+            [
+              -7.787628650665283,
+              false
+            ]
+          ],
+          [
+            [
+              -6.003743648529053,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.014684218913316727,
+            true
+          ],
+          [
+            -7.183129787445068,
+            false
+          ],
+          [
+            -7.787628650665283,
+            false
+          ],
+          [
+            -6.003743648529053,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "04594b64e0eac0c9cec6560189f3de09a7b4990b05a21191b8a46581952b2626",
+        "prompt_hash": "ec0c5a396da8a3d25229927b80380a9dfed90d6ab5a107152c693269f8512f28",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 840,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Subtropical_rainforests",
+          "question_number": 1,
+          "flores_passage": "In summer, especially, you'll need to watch out for mosquitoes if you decide to hike through the rainforest. Even if you're driving through the subtropical rainforest, a few seconds with the doors open while you get inside the vehicle is enough time for mosquitoes to get in the vehicle with you.",
+          "question": "When should you be especially mindful of mosquitoes?",
+          "mc_answer1": "During summer months",
+          "mc_answer2": "On hikes",
+          "mc_answer3": "In the rainforest",
+          "mc_answer4": "While driving",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: In summer, especially, you'll need to watch out for mosquitoes if you decide to hike through the rainforest. Even if you're driving through the subtropical rainforest, a few seconds with the doors open while you get inside the vehicle is enough time for mosquitoes to get in the vehicle with you.\nQ: When should you be especially mindful of mosquitoes?\nA: During summer months\nB: On hikes\nC: In the rainforest\nD: While driving\nAnswer:",
+            " A"
+          ],
+          [
+            "P: In summer, especially, you'll need to watch out for mosquitoes if you decide to hike through the rainforest. Even if you're driving through the subtropical rainforest, a few seconds with the doors open while you get inside the vehicle is enough time for mosquitoes to get in the vehicle with you.\nQ: When should you be especially mindful of mosquitoes?\nA: During summer months\nB: On hikes\nC: In the rainforest\nD: While driving\nAnswer:",
+            " B"
+          ],
+          [
+            "P: In summer, especially, you'll need to watch out for mosquitoes if you decide to hike through the rainforest. Even if you're driving through the subtropical rainforest, a few seconds with the doors open while you get inside the vehicle is enough time for mosquitoes to get in the vehicle with you.\nQ: When should you be especially mindful of mosquitoes?\nA: During summer months\nB: On hikes\nC: In the rainforest\nD: While driving\nAnswer:",
+            " C"
+          ],
+          [
+            "P: In summer, especially, you'll need to watch out for mosquitoes if you decide to hike through the rainforest. Even if you're driving through the subtropical rainforest, a few seconds with the doors open while you get inside the vehicle is enough time for mosquitoes to get in the vehicle with you.\nQ: When should you be especially mindful of mosquitoes?\nA: During summer months\nB: On hikes\nC: In the rainforest\nD: While driving\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.9469678997993469,
+              false
+            ]
+          ],
+          [
+            [
+              -3.2708775997161865,
+              false
+            ]
+          ],
+          [
+            [
+              -0.8791502118110657,
+              true
+            ]
+          ],
+          [
+            [
+              -2.015214681625366,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.9469678997993469,
+            false
+          ],
+          [
+            -3.2708775997161865,
+            false
+          ],
+          [
+            -0.8791502118110657,
+            true
+          ],
+          [
+            -2.015214681625366,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "d0e682cd5d6645f246fa302eb61ce7514ba45f94c0fb30ba872a379aa55fecc6",
+        "prompt_hash": "1948bde1bb3c3d934d4b603fbd3044d70cace5d9577a1e091da53ec68cd18b1d",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792528405.3465228,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

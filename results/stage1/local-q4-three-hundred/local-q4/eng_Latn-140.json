@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 50,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Costume_History/Gothic",
+          "question_number": 2,
+          "flores_passage": "Gothic style peaked in the period between the 10th - 11th centuries and the 14th century. At the beginning dress was heavily influenced by the Byzantine culture in the east. However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year. towards the end of the Middle Ages western Europe began to develop their own style. one of the biggest developments of the time as a result of the crusades people began to use buttons to fasten clothing.",
+          "question": "Using buttons to fasten clothing was a result of what? ",
+          "mc_answer1": "The Gothic period",
+          "mc_answer2": "The Byzantine era",
+          "mc_answer3": "The Crusades",
+          "mc_answer4": "The Middle Ages",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Gothic style peaked in the period between the 10th - 11th centuries and the 14th century. At the beginning dress was heavily influenced by the Byzantine culture in the east. However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year. towards the end of the Middle Ages western Europe began to develop their own style. one of the biggest developments of the time as a result of the crusades people began to use buttons to fasten clothing.\nQ: Using buttons to fasten clothing was a result of what?\nA: The Gothic period\nB: The Byzantine era\nC: The Crusades\nD: The Middle Ages\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Gothic style peaked in the period between the 10th - 11th centuries and the 14th century. At the beginning dress was heavily influenced by the Byzantine culture in the east. However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year. towards the end of the Middle Ages western Europe began to develop their own style. one of the biggest developments of the time as a result of the crusades people began to use buttons to fasten clothing.\nQ: Using buttons to fasten clothing was a result of what?\nA: The Gothic period\nB: The Byzantine era\nC: The Crusades\nD: The Middle Ages\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Gothic style peaked in the period between the 10th - 11th centuries and the 14th century. At the beginning dress was heavily influenced by the Byzantine culture in the east. However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year. towards the end of the Middle Ages western Europe began to develop their own style. one of the biggest developments of the time as a result of the crusades people began to use buttons to fasten clothing.\nQ: Using buttons to fasten clothing was a result of what?\nA: The Gothic period\nB: The Byzantine era\nC: The Crusades\nD: The Middle Ages\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Gothic style peaked in the period between the 10th - 11th centuries and the 14th century. At the beginning dress was heavily influenced by the Byzantine culture in the east. However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year. towards the end of the Middle Ages western Europe began to develop their own style. one of the biggest developments of the time as a result of the crusades people began to use buttons to fasten clothing.\nQ: Using buttons to fasten clothing was a result of what?\nA: The Gothic period\nB: The Byzantine era\nC: The Crusades\nD: The Middle Ages\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.3273844718933105,
+              false
+            ]
+          ],
+          [
+            [
+              -6.404696941375732,
+              false
+            ]
+          ],
+          [
+            [
+              -0.012938948348164558,
+              true
+            ]
+          ],
+          [
+            [
+              -6.970089435577393,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.3273844718933105,
+            false
+          ],
+          [
+            -6.404696941375732,
+            false
+          ],
+          [
+            -0.012938948348164558,
+            true
+          ],
+          [
+            -6.970089435577393,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "ad778e1b466e7f06b6b7411f0d265fe482987ab3541037f36a8ab5883597d34c",
+        "prompt_hash": "e50667205aeb3df92b4a8b5164531286a3eaee6e86c9612af8fcc63a92b51a0b",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 852,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Biology/Kingdoms/Plants",
+          "question_number": 1,
+          "flores_passage": "Plants make oxygen which humans breathe, and they take in carbon-dioxide which humans exhale (that is, breathe out). Plants make their food from the sun by photosynthesis. They also provide shade. We make our houses from plants and make clothes from plants. Most foods that we eat are plants. Without plants, animals could not survive.",
+          "question": "What aides plants in the process of photosynthesis?",
+          "mc_answer1": "Shade",
+          "mc_answer2": "Animals",
+          "mc_answer3": "Food",
+          "mc_answer4": "Sun",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Plants make oxygen which humans breathe, and they take in carbon-dioxide which humans exhale (that is, breathe out). Plants make their food from the sun by photosynthesis. They also provide shade. We make our houses from plants and make clothes from plants. Most foods that we eat are plants. Without plants, animals could not survive.\nQ: What aides plants in the process of photosynthesis?\nA: Shade\nB: Animals\nC: Food\nD: Sun\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Plants make oxygen which humans breathe, and they take in carbon-dioxide which humans exhale (that is, breathe out). Plants make their food from the sun by photosynthesis. They also provide shade. We make our houses from plants and make clothes from plants. Most foods that we eat are plants. Without plants, animals could not survive.\nQ: What aides plants in the process of photosynthesis?\nA: Shade\nB: Animals\nC: Food\nD: Sun\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Plants make oxygen which humans breathe, and they take in carbon-dioxide which humans exhale (that is, breathe out). Plants make their food from the sun by photosynthesis. They also provide shade. We make our houses from plants and make clothes from plants. Most foods that we eat are plants. Without plants, animals could not survive.\nQ: What aides plants in the process of photosynthesis?\nA: Shade\nB: Animals\nC: Food\nD: Sun\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Plants make oxygen which humans breathe, and they take in carbon-dioxide which humans exhale (that is, breathe out). Plants make their food from the sun by photosynthesis. They also provide shade. We make our houses from plants and make clothes from plants. Most foods that we eat are plants. Without plants, animals could not survive.\nQ: What aides plants in the process of photosynthesis?\nA: Shade\nB: Animals\nC: Food\nD: Sun\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.743126392364502,
+              false
+            ]
+          ],
+          [
+            [
+              -7.0685553550720215,
+              false
+            ]
+          ],
+          [
+            [
+              -6.358625888824463,
+              false
+            ]
+          ],
+          [
+            [
+              -0.12118756771087646,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.743126392364502,
+            false
+          ],
+          [
+            -7.0685553550720215,
+            false
+          ],
+          [
+            -6.358625888824463,
+            false
+          ],
+          [
+            -0.12118756771087646,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "cc88d5a67e9d1f2c35fcf12ea7b82b96fab6fd4f0418f1599c1480e54a5bb80c",
+        "prompt_hash": "61b29c663aa70d4cf64d55462780499cf6ff537a1fb76c4557dea87f9ada2403",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 634,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/World_War_II/Fall_of_East_Africa_and_War_in_North_Africa",
+          "question_number": 1,
+          "flores_passage": "Things did not go well for the Italians in North Africa almost from the start. Within a week of Italy's declaration of war on June 10, 1940, the British 11th Hussars had seized Fort Capuzzo in Libya. In an ambush east of Bardia, the British captured the Italian Tenth Army's Engineer-in-Chief, General Lastucci. On June 28, Marshal Italo Balbo, the Governor-General of Libya and apparent heir to Mussolini, was killed by friendly fire while landing in Tobruk.",
+          "question": "What happened to the Engineer-in-Chief of the Italian Tenth Army?",
+          "mc_answer1": "He was captured at Fort Capuzzo",
+          "mc_answer2": "He was killed in Tobruk",
+          "mc_answer3": "He was captured by the British",
+          "mc_answer4": "He was killed by friendly fire",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Things did not go well for the Italians in North Africa almost from the start. Within a week of Italy's declaration of war on June 10, 1940, the British 11th Hussars had seized Fort Capuzzo in Libya. In an ambush east of Bardia, the British captured the Italian Tenth Army's Engineer-in-Chief, General Lastucci. On June 28, Marshal Italo Balbo, the Governor-General of Libya and apparent heir to Mussolini, was killed by friendly fire while landing in Tobruk.\nQ: What happened to the Engineer-in-Chief of the Italian Tenth Army?\nA: He was captured at Fort Capuzzo\nB: He was killed in Tobruk\nC: He was captured by the British\nD: He was killed by friendly fire\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Things did not go well for the Italians in North Africa almost from the start. Within a week of Italy's declaration of war on June 10, 1940, the British 11th Hussars had seized Fort Capuzzo in Libya. In an ambush east of Bardia, the British captured the Italian Tenth Army's Engineer-in-Chief, General Lastucci. On June 28, Marshal Italo Balbo, the Governor-General of Libya and apparent heir to Mussolini, was killed by friendly fire while landing in Tobruk.\nQ: What happened to the Engineer-in-Chief of the Italian Tenth Army?\nA: He was captured at Fort Capuzzo\nB: He was killed in Tobruk\nC: He was captured by the British\nD: He was killed by friendly fire\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Things did not go well for the Italians in North Africa almost from the start. Within a week of Italy's declaration of war on June 10, 1940, the British 11th Hussars had seized Fort Capuzzo in Libya. In an ambush east of Bardia, the British captured the Italian Tenth Army's Engineer-in-Chief, General Lastucci. On June 28, Marshal Italo Balbo, the Governor-General of Libya and apparent heir to Mussolini, was killed by friendly fire while landing in Tobruk.\nQ: What happened to the Engineer-in-Chief of the Italian Tenth Army?\nA: He was captured at Fort Capuzzo\nB: He was killed in Tobruk\nC: He was captured by the British\nD: He was killed by friendly fire\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Things did not go well for the Italians in North Africa almost from the start. Within a week of Italy's declaration of war on June 10, 1940, the British 11th Hussars had seized Fort Capuzzo in Libya. In an ambush east of Bardia, the British captured the Italian Tenth Army's Engineer-in-Chief, General Lastucci. On June 28, Marshal Italo Balbo, the Governor-General of Libya and apparent heir to Mussolini, was killed by friendly fire while landing in Tobruk.\nQ: What happened to the Engineer-in-Chief of the Italian Tenth Army?\nA: He was captured at Fort Capuzzo\nB: He was killed in Tobruk\nC: He was captured by the British\nD: He was killed by friendly fire\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.16432543098926544,
+              true
+            ]
+          ],
+          [
+            [
+              -4.089980602264404,
+              false
+            ]
+          ],
+          [
+            [
+              -4.979215145111084,
+              false
+            ]
+          ],
+          [
+            [
+              -2.660844564437866,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.16432543098926544,
+            true
+          ],
+          [
+            -4.089980602264404,
+            false
+          ],
+          [
+            -4.979215145111084,
+            false
+          ],
+          [
+            -2.660844564437866,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "fbf5c243c9534a0127dbe51672e2eb794c7f6778c802a5e8ea338c67cb6266fa",
+        "prompt_hash": "1bcdb5f940eccd2437aa28a9a2983ac30b129672f2ba656a29006e3f96100502",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 272,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Alcoholic_beverages",
+          "question_number": 2,
+          "flores_passage": "Drink alcoholic drinks with moderation. Alcohol affects everyone differently, and knowing your limit is very important. Possible long term health events from excessive drinking can include liver damage and even blindness and death. The potential danger is increased when consuming illegally produced alcohol. Illegal spirits can contain various dangerous impurities including methanol, which can cause blindness or death even in small doses.",
+          "question": "As stated in the passage, what could potentially lessen the harmful affects of alcohol?",
+          "mc_answer1": "Consuming alcohol with methanol",
+          "mc_answer2": "Drinking illegally produced spirits",
+          "mc_answer3": "Consuming alcohol in moderation",
+          "mc_answer4": "Drinking with different people",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Drink alcoholic drinks with moderation. Alcohol affects everyone differently, and knowing your limit is very important. Possible long term health events from excessive drinking can include liver damage and even blindness and death. The potential danger is increased when consuming illegally produced alcohol. Illegal spirits can contain various dangerous impurities including methanol, which can cause blindness or death even in small doses.\nQ: As stated in the passage, what could potentially lessen the harmful affects of alcohol?\nA: Consuming alcohol with methanol\nB: Drinking illegally produced spirits\nC: Consuming alcohol in moderation\nD: Drinking with different people\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Drink alcoholic drinks with moderation. Alcohol affects everyone differently, and knowing your limit is very important. Possible long term health events from excessive drinking can include liver damage and even blindness and death. The potential danger is increased when consuming illegally produced alcohol. Illegal spirits can contain various dangerous impurities including methanol, which can cause blindness or death even in small doses.\nQ: As stated in the passage, what could potentially lessen the harmful affects of alcohol?\nA: Consuming alcohol with methanol\nB: Drinking illegally produced spirits\nC: Consuming alcohol in moderation\nD: Drinking with different people\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Drink alcoholic drinks with moderation. Alcohol affects everyone differently, and knowing your limit is very important. Possible long term health events from excessive drinking can include liver damage and even blindness and death. The potential danger is increased when consuming illegally produced alcohol. Illegal spirits can contain various dangerous impurities including methanol, which can cause blindness or death even in small doses.\nQ: As stated in the passage, what could potentially lessen the harmful affects of alcohol?\nA: Consuming alcohol with methanol\nB: Drinking illegally produced spirits\nC: Consuming alcohol in moderation\nD: Drinking with different people\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Drink alcoholic drinks with moderation. Alcohol affects everyone differently, and knowing your limit is very important. Possible long term health events from excessive drinking can include liver damage and even blindness and death. The potential danger is increased when consuming illegally produced alcohol. Illegal spirits can contain various dangerous impurities including methanol, which can cause blindness or death even in small doses.\nQ: As stated in the passage, what could potentially lessen the harmful affects of alcohol?\nA: Consuming alcohol with methanol\nB: Drinking illegally produced spirits\nC: Consuming alcohol in moderation\nD: Drinking with different people\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.555309295654297,
+              false
+            ]
+          ],
+          [
+            [
+              -5.199332237243652,
+              false
+            ]
+          ],
+          [
+            [
+              -0.08903324604034424,
+              true
+            ]
+          ],
+          [
+            [
+              -6.824915885925293,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.555309295654297,
+            false
+          ],
+          [
+            -5.199332237243652,
+            false
+          ],
+          [
+            -0.08903324604034424,
+            true
+          ],
+          [
+            -6.824915885925293,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "65c96589f24cf2589f45b7d9f40162e4dc932c6c24fbe9e5c84c8a9c602d6815",
+        "prompt_hash": "ea4088fe6e452c87aa7115aaf15839cfb49c332de1abb9e3c4e48f5e26e5d3d1",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 193,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Tornado_safety",
+          "question_number": 2,
+          "flores_passage": "\"A tornado is a spinning column of very low-pressure air, which sucks the surrounding air inward and upward. They generate high winds (often 100-200 miles/hour) and can lift heavy objects into the air, carrying them as the tornado moves. They begin as funnels descending from storm clouds, and become \"\"tornadoes\"\" when they touch the ground.\"",
+          "question": "Which of these is an accurate characteristic of a tornado?",
+          "mc_answer1": "They always generate winds around 100-200 miles per hour",
+          "mc_answer2": "They often move with heavy objects",
+          "mc_answer3": "They become funnels after touching the ground",
+          "mc_answer4": "They are spinning columns that push air outward",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"A tornado is a spinning column of very low-pressure air, which sucks the surrounding air inward and upward. They generate high winds (often 100-200 miles/hour) and can lift heavy objects into the air, carrying them as the tornado moves. They begin as funnels descending from storm clouds, and become \"\"tornadoes\"\" when they touch the ground.\"\nQ: Which of these is an accurate characteristic of a tornado?\nA: They always generate winds around 100-200 miles per hour\nB: They often move with heavy objects\nC: They become funnels after touching the ground\nD: They are spinning columns that push air outward\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"A tornado is a spinning column of very low-pressure air, which sucks the surrounding air inward and upward. They generate high winds (often 100-200 miles/hour) and can lift heavy objects into the air, carrying them as the tornado moves. They begin as funnels descending from storm clouds, and become \"\"tornadoes\"\" when they touch the ground.\"\nQ: Which of these is an accurate characteristic of a tornado?\nA: They always generate winds around 100-200 miles per hour\nB: They often move with heavy objects\nC: They become funnels after touching the ground\nD: They are spinning columns that push air outward\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"A tornado is a spinning column of very low-pressure air, which sucks the surrounding air inward and upward. They generate high winds (often 100-200 miles/hour) and can lift heavy objects into the air, carrying them as the tornado moves. They begin as funnels descending from storm clouds, and become \"\"tornadoes\"\" when they touch the ground.\"\nQ: Which of these is an accurate characteristic of a tornado?\nA: They always generate winds around 100-200 miles per hour\nB: They often move with heavy objects\nC: They become funnels after touching the ground\nD: They are spinning columns that push air outward\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"A tornado is a spinning column of very low-pressure air, which sucks the surrounding air inward and upward. They generate high winds (often 100-200 miles/hour) and can lift heavy objects into the air, carrying them as the tornado moves. They begin as funnels descending from storm clouds, and become \"\"tornadoes\"\" when they touch the ground.\"\nQ: Which of these is an accurate characteristic of a tornado?\nA: They always generate winds around 100-200 miles per hour\nB: They often move with heavy objects\nC: They become funnels after touching the ground\nD: They are spinning columns that push air outward\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.174231767654419,
+              false
+            ]
+          ],
+          [
+            [
+              -2.5061142444610596,
+              false
+            ]
+          ],
+          [
+            [
+              -0.24954341351985931,
+              true
+            ]
+          ],
+          [
+            [
+              -4.375279426574707,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.174231767654419,
+            false
+          ],
+          [
+            -2.5061142444610596,
+            false
+          ],
+          [
+            -0.24954341351985931,
+            true
+          ],
+          [
+            -4.375279426574707,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9a42dd73541df4a04cb75dc0a9ecc2bca4171e76feff2129cd5baec99b6d37b5",
+        "prompt_hash": "e95894a9ff91b0ac62f5c1faa45240202fe85cd012c48b4d2fad7f722fd5600d",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792528889.5871584,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

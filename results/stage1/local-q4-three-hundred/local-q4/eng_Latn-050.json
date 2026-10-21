@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 316,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Light_Bulb",
+          "question_number": 2,
+          "flores_passage": "After hundreds of hours of operation the filament in the bulb eventually burns out and the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected. This is because electricity flowing into the socket where the metallic part of bulb sits can give you a severe electric shock if you touch the inside of the socket or the metal base of the bulb while it is still partly in the socket.",
+          "question": "Which of the following could potentially be dangerous to touch while replacing a light bulb?",
+          "mc_answer1": "The filament",
+          "mc_answer2": "The light switch",
+          "mc_answer3": "The base of the bulb",
+          "mc_answer4": "The cable ",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: After hundreds of hours of operation the filament in the bulb eventually burns out and the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected. This is because electricity flowing into the socket where the metallic part of bulb sits can give you a severe electric shock if you touch the inside of the socket or the metal base of the bulb while it is still partly in the socket.\nQ: Which of the following could potentially be dangerous to touch while replacing a light bulb?\nA: The filament\nB: The light switch\nC: The base of the bulb\nD: The cable \nAnswer:",
+            " A"
+          ],
+          [
+            "P: After hundreds of hours of operation the filament in the bulb eventually burns out and the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected. This is because electricity flowing into the socket where the metallic part of bulb sits can give you a severe electric shock if you touch the inside of the socket or the metal base of the bulb while it is still partly in the socket.\nQ: Which of the following could potentially be dangerous to touch while replacing a light bulb?\nA: The filament\nB: The light switch\nC: The base of the bulb\nD: The cable \nAnswer:",
+            " B"
+          ],
+          [
+            "P: After hundreds of hours of operation the filament in the bulb eventually burns out and the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected. This is because electricity flowing into the socket where the metallic part of bulb sits can give you a severe electric shock if you touch the inside of the socket or the metal base of the bulb while it is still partly in the socket.\nQ: Which of the following could potentially be dangerous to touch while replacing a light bulb?\nA: The filament\nB: The light switch\nC: The base of the bulb\nD: The cable \nAnswer:",
+            " C"
+          ],
+          [
+            "P: After hundreds of hours of operation the filament in the bulb eventually burns out and the light bulb no longer works. The light bulb then needs replacing. It is necessary to be careful in replacing the light bulb. First, the switch for the light fixture needs to be turned off or the cable disconnected. This is because electricity flowing into the socket where the metallic part of bulb sits can give you a severe electric shock if you touch the inside of the socket or the metal base of the bulb while it is still partly in the socket.\nQ: Which of the following could potentially be dangerous to touch while replacing a light bulb?\nA: The filament\nB: The light switch\nC: The base of the bulb\nD: The cable \nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.9672054648399353,
+              false
+            ]
+          ],
+          [
+            [
+              -4.337759494781494,
+              false
+            ]
+          ],
+          [
+            [
+              -0.7019733786582947,
+              true
+            ]
+          ],
+          [
+            [
+              -4.986435413360596,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.9672054648399353,
+            false
+          ],
+          [
+            -4.337759494781494,
+            false
+          ],
+          [
+            -0.7019733786582947,
+            true
+          ],
+          [
+            -4.986435413360596,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "19bac4b8a66c12f169be8729da100901a7557533cf10ceeb7449c81deb72bccd",
+        "prompt_hash": "e633fb6ff167abce9f55d3d1402218e2c3f50b1231835e7a2139fa667a732eb6",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 499,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/BBC_newsreader_sacked_after_conviction_for_wounding_teenager",
+          "question_number": 1,
+          "flores_passage": "\"The trial took place at Birmingham Crown Court and concluded on August 3. The presenter, who was arrested at the scene, denied the attack and claimed he used the pole to protect himself from bottles being thrown at him by up to thirty people. Blake was also convicted of attempting to pervert the course of justice. The judge told Blake it was \"\"almost inevitable\"\" he was going to be sent to jail.\"",
+          "question": "According to the passage, which statement about Blake is not accurate?",
+          "mc_answer1": "He was arrested at the scene",
+          "mc_answer2": "He admitted to the attack",
+          "mc_answer3": "He used a pole during the attack",
+          "mc_answer4": "He claimed that bottles were thrown at him",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"The trial took place at Birmingham Crown Court and concluded on August 3. The presenter, who was arrested at the scene, denied the attack and claimed he used the pole to protect himself from bottles being thrown at him by up to thirty people. Blake was also convicted of attempting to pervert the course of justice. The judge told Blake it was \"\"almost inevitable\"\" he was going to be sent to jail.\"\nQ: According to the passage, which statement about Blake is not accurate?\nA: He was arrested at the scene\nB: He admitted to the attack\nC: He used a pole during the attack\nD: He claimed that bottles were thrown at him\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"The trial took place at Birmingham Crown Court and concluded on August 3. The presenter, who was arrested at the scene, denied the attack and claimed he used the pole to protect himself from bottles being thrown at him by up to thirty people. Blake was also convicted of attempting to pervert the course of justice. The judge told Blake it was \"\"almost inevitable\"\" he was going to be sent to jail.\"\nQ: According to the passage, which statement about Blake is not accurate?\nA: He was arrested at the scene\nB: He admitted to the attack\nC: He used a pole during the attack\nD: He claimed that bottles were thrown at him\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"The trial took place at Birmingham Crown Court and concluded on August 3. The presenter, who was arrested at the scene, denied the attack and claimed he used the pole to protect himself from bottles being thrown at him by up to thirty people. Blake was also convicted of attempting to pervert the course of justice. The judge told Blake it was \"\"almost inevitable\"\" he was going to be sent to jail.\"\nQ: According to the passage, which statement about Blake is not accurate?\nA: He was arrested at the scene\nB: He admitted to the attack\nC: He used a pole during the attack\nD: He claimed that bottles were thrown at him\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"The trial took place at Birmingham Crown Court and concluded on August 3. The presenter, who was arrested at the scene, denied the attack and claimed he used the pole to protect himself from bottles being thrown at him by up to thirty people. Blake was also convicted of attempting to pervert the course of justice. The judge told Blake it was \"\"almost inevitable\"\" he was going to be sent to jail.\"\nQ: According to the passage, which statement about Blake is not accurate?\nA: He was arrested at the scene\nB: He admitted to the attack\nC: He used a pole during the attack\nD: He claimed that bottles were thrown at him\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -7.483065128326416,
+              false
+            ]
+          ],
+          [
+            [
+              -0.036737121641635895,
+              true
+            ]
+          ],
+          [
+            [
+              -6.99032735824585,
+              false
+            ]
+          ],
+          [
+            [
+              -6.696700572967529,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -7.483065128326416,
+            false
+          ],
+          [
+            -0.036737121641635895,
+            true
+          ],
+          [
+            -6.99032735824585,
+            false
+          ],
+          [
+            -6.696700572967529,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a0ccaa9833d1af626e34a17d6893c649b9086ce696b2b157cae4a39e23a8cfef",
+        "prompt_hash": "325b5eab2c060d10211b34c675c50ccb0d8bf393f5c44c5a90f4c0619278d888",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 670,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Nadal_beats_Raonic_to_reach_Australian_Open_semis",
+          "question_number": 1,
+          "flores_passage": "\"Nadal's head to head record against the Canadian is 7–2. He recently lost against Raonic in the Brisbane Open. Nadal bagged 88% net points in the match winning 76 points in the first serve. After the match, King of Clay said, \"\"I am just excited about being back in the final rounds of the most important events. I am here to try to win this.\"\"\"",
+          "question": "Which statement accurately reflects the outcome of Nadal and Raonic’s Brisbane Open match mentioned in the passage?",
+          "mc_answer1": "Raonic beat Nadal",
+          "mc_answer2": "Raonic had 88% net points",
+          "mc_answer3": "Nadal beat Raonic",
+          "mc_answer4": "Raonic scored 76 points",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"Nadal's head to head record against the Canadian is 7–2. He recently lost against Raonic in the Brisbane Open. Nadal bagged 88% net points in the match winning 76 points in the first serve. After the match, King of Clay said, \"\"I am just excited about being back in the final rounds of the most important events. I am here to try to win this.\"\"\"\nQ: Which statement accurately reflects the outcome of Nadal and Raonic’s Brisbane Open match mentioned in the passage?\nA: Raonic beat Nadal\nB: Raonic had 88% net points\nC: Nadal beat Raonic\nD: Raonic scored 76 points\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Nadal's head to head record against the Canadian is 7–2. He recently lost against Raonic in the Brisbane Open. Nadal bagged 88% net points in the match winning 76 points in the first serve. After the match, King of Clay said, \"\"I am just excited about being back in the final rounds of the most important events. I am here to try to win this.\"\"\"\nQ: Which statement accurately reflects the outcome of Nadal and Raonic’s Brisbane Open match mentioned in the passage?\nA: Raonic beat Nadal\nB: Raonic had 88% net points\nC: Nadal beat Raonic\nD: Raonic scored 76 points\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Nadal's head to head record against the Canadian is 7–2. He recently lost against Raonic in the Brisbane Open. Nadal bagged 88% net points in the match winning 76 points in the first serve. After the match, King of Clay said, \"\"I am just excited about being back in the final rounds of the most important events. I am here to try to win this.\"\"\"\nQ: Which statement accurately reflects the outcome of Nadal and Raonic’s Brisbane Open match mentioned in the passage?\nA: Raonic beat Nadal\nB: Raonic had 88% net points\nC: Nadal beat Raonic\nD: Raonic scored 76 points\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Nadal's head to head record against the Canadian is 7–2. He recently lost against Raonic in the Brisbane Open. Nadal bagged 88% net points in the match winning 76 points in the first serve. After the match, King of Clay said, \"\"I am just excited about being back in the final rounds of the most important events. I am here to try to win this.\"\"\"\nQ: Which statement accurately reflects the outcome of Nadal and Raonic’s Brisbane Open match mentioned in the passage?\nA: Raonic beat Nadal\nB: Raonic had 88% net points\nC: Nadal beat Raonic\nD: Raonic scored 76 points\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.3663687705993652,
+              false
+            ]
+          ],
+          [
+            [
+              -4.321824550628662,
+              false
+            ]
+          ],
+          [
+            [
+              -0.1973472237586975,
+              true
+            ]
+          ],
+          [
+            [
+              -3.7317538261413574,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.3663687705993652,
+            false
+          ],
+          [
+            -4.321824550628662,
+            false
+          ],
+          [
+            -0.1973472237586975,
+            true
+          ],
+          [
+            -3.7317538261413574,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "b38fc88eaf493aeefb06bdc93f82999ce1eb2bfcafd565186d591bc4022ca1f7",
+        "prompt_hash": "56ea83d7788c7d5940fa7ac66bdfe7561a004e863fc94daed7325b26a4cb2fbd",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 482,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/New_fossils_from_10_million_year_old_ape_found_in_Ethiopia",
+          "question_number": 2,
+          "flores_passage": "\"\"\"Based on this fossil, that means the split is much earlier than has been anticipated by the molecular evidence. That means everything has to be put back,\"\" said researcher at the Rift Valley Research Service in Ethiopia and a co-author of the study, Berhane Asfaw.\"",
+          "question": "According to the passage, what occurred sooner than expected?",
+          "mc_answer1": "The discovery of the fossil",
+          "mc_answer2": "The split",
+          "mc_answer3": "The analysis of molecular evidence",
+          "mc_answer4": "The research at Rift Valley",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"\"\"Based on this fossil, that means the split is much earlier than has been anticipated by the molecular evidence. That means everything has to be put back,\"\" said researcher at the Rift Valley Research Service in Ethiopia and a co-author of the study, Berhane Asfaw.\"\nQ: According to the passage, what occurred sooner than expected?\nA: The discovery of the fossil\nB: The split\nC: The analysis of molecular evidence\nD: The research at Rift Valley\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"\"\"Based on this fossil, that means the split is much earlier than has been anticipated by the molecular evidence. That means everything has to be put back,\"\" said researcher at the Rift Valley Research Service in Ethiopia and a co-author of the study, Berhane Asfaw.\"\nQ: According to the passage, what occurred sooner than expected?\nA: The discovery of the fossil\nB: The split\nC: The analysis of molecular evidence\nD: The research at Rift Valley\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"\"\"Based on this fossil, that means the split is much earlier than has been anticipated by the molecular evidence. That means everything has to be put back,\"\" said researcher at the Rift Valley Research Service in Ethiopia and a co-author of the study, Berhane Asfaw.\"\nQ: According to the passage, what occurred sooner than expected?\nA: The discovery of the fossil\nB: The split\nC: The analysis of molecular evidence\nD: The research at Rift Valley\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"\"\"Based on this fossil, that means the split is much earlier than has been anticipated by the molecular evidence. That means everything has to be put back,\"\" said researcher at the Rift Valley Research Service in Ethiopia and a co-author of the study, Berhane Asfaw.\"\nQ: According to the passage, what occurred sooner than expected?\nA: The discovery of the fossil\nB: The split\nC: The analysis of molecular evidence\nD: The research at Rift Valley\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.20969203114509583,
+              true
+            ]
+          ],
+          [
+            [
+              -2.166604995727539,
+              false
+            ]
+          ],
+          [
+            [
+              -5.476871490478516,
+              false
+            ]
+          ],
+          [
+            [
+              -3.4451828002929688,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.20969203114509583,
+            true
+          ],
+          [
+            -2.166604995727539,
+            false
+          ],
+          [
+            -5.476871490478516,
+            false
+          ],
+          [
+            -3.4451828002929688,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "3deb0b47b939fcb34d83dcea9dc915577724942d90cd590ad9cccaf79ef9a5cf",
+        "prompt_hash": "3bd5b930751a0595694b647d01f7f7faf24ed63585c787ede55827f4436a526f",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 221,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Car_camping",
+          "question_number": 1,
+          "flores_passage": "\"Getting into your own car and heading off on a long road trip has an intrinsic appeal in its simplicity. Unlike larger vehicles, you are probably already familiar with driving your car and know its limitations. Setting up a tent on private property or in a town of any size can easily attract unwanted attention. In short, using your car is a great way to take a road trip but seldom in itself a way to \"\"camp\"\". Car camping is possible if you have a large minivan, SUV, Sedan or Station Wagon with seats that lay down.\"",
+          "question": "According to the passage, what would be helpful for someone planning to camp in their car?",
+          "mc_answer1": "A strong understanding of your vehicle’s limitations",
+          "mc_answer2": "A vehicle that allows the seats to lay down",
+          "mc_answer3": "A tent",
+          "mc_answer4": "A private property to camp on",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"Getting into your own car and heading off on a long road trip has an intrinsic appeal in its simplicity. Unlike larger vehicles, you are probably already familiar with driving your car and know its limitations. Setting up a tent on private property or in a town of any size can easily attract unwanted attention. In short, using your car is a great way to take a road trip but seldom in itself a way to \"\"camp\"\". Car camping is possible if you have a large minivan, SUV, Sedan or Station Wagon with seats that lay down.\"\nQ: According to the passage, what would be helpful for someone planning to camp in their car?\nA: A strong understanding of your vehicle’s limitations\nB: A vehicle that allows the seats to lay down\nC: A tent\nD: A private property to camp on\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Getting into your own car and heading off on a long road trip has an intrinsic appeal in its simplicity. Unlike larger vehicles, you are probably already familiar with driving your car and know its limitations. Setting up a tent on private property or in a town of any size can easily attract unwanted attention. In short, using your car is a great way to take a road trip but seldom in itself a way to \"\"camp\"\". Car camping is possible if you have a large minivan, SUV, Sedan or Station Wagon with seats that lay down.\"\nQ: According to the passage, what would be helpful for someone planning to camp in their car?\nA: A strong understanding of your vehicle’s limitations\nB: A vehicle that allows the seats to lay down\nC: A tent\nD: A private property to camp on\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Getting into your own car and heading off on a long road trip has an intrinsic appeal in its simplicity. Unlike larger vehicles, you are probably already familiar with driving your car and know its limitations. Setting up a tent on private property or in a town of any size can easily attract unwanted attention. In short, using your car is a great way to take a road trip but seldom in itself a way to \"\"camp\"\". Car camping is possible if you have a large minivan, SUV, Sedan or Station Wagon with seats that lay down.\"\nQ: According to the passage, what would be helpful for someone planning to camp in their car?\nA: A strong understanding of your vehicle’s limitations\nB: A vehicle that allows the seats to lay down\nC: A tent\nD: A private property to camp on\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Getting into your own car and heading off on a long road trip has an intrinsic appeal in its simplicity. Unlike larger vehicles, you are probably already familiar with driving your car and know its limitations. Setting up a tent on private property or in a town of any size can easily attract unwanted attention. In short, using your car is a great way to take a road trip but seldom in itself a way to \"\"camp\"\". Car camping is possible if you have a large minivan, SUV, Sedan or Station Wagon with seats that lay down.\"\nQ: According to the passage, what would be helpful for someone planning to camp in their car?\nA: A strong understanding of your vehicle’s limitations\nB: A vehicle that allows the seats to lay down\nC: A tent\nD: A private property to camp on\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.6363160610198975,
+              false
+            ]
+          ],
+          [
+            [
+              -0.1332281529903412,
+              true
+            ]
+          ],
+          [
+            [
+              -5.323375701904297,
+              false
+            ]
+          ],
+          [
+            [
+              -6.61346435546875,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.6363160610198975,
+            false
+          ],
+          [
+            -0.1332281529903412,
+            true
+          ],
+          [
+            -5.323375701904297,
+            false
+          ],
+          [
+            -6.61346435546875,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "fa8e6e98977425a4b6be9fc1911097353d9fa89370d2945230dff2c7477830f3",
+        "prompt_hash": "80059c6535368caad3b11ca984a01fda5a6e40e9aa52038b2b30739f9f4758c0",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792527809.3504834,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

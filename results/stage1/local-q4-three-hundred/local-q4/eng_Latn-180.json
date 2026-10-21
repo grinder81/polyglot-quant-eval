@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 467,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Judge_orders_Baltimore_City_prison_to_produce_plan_for_improvement",
+          "question_number": 2,
+          "flores_passage": "In the last 3 months, over 80 arrestees were released from the Central Booking facility without being formally charged. In April this year, a temporary restaining order was issued by Judge Glynn against the facility to enforce the release of those held more than 24 hours after their intake who did not receive a hearing by a court commissioner. The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system where the case is tracked. The hearing also marks the date for the suspect’s right to a speedy trial.",
+          "question": "According to the temporary restraining order mentioned in the passage, what must arrestees be allowed to have in order to be held longer than 24 hours?",
+          "mc_answer1": "Bail",
+          "mc_answer2": "A meeting with the arresting officer",
+          "mc_answer3": "Formal charges issued by Judge Glynn",
+          "mc_answer4": "A hearing",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: In the last 3 months, over 80 arrestees were released from the Central Booking facility without being formally charged. In April this year, a temporary restaining order was issued by Judge Glynn against the facility to enforce the release of those held more than 24 hours after their intake who did not receive a hearing by a court commissioner. The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system where the case is tracked. The hearing also marks the date for the suspect’s right to a speedy trial.\nQ: According to the temporary restraining order mentioned in the passage, what must arrestees be allowed to have in order to be held longer than 24 hours?\nA: Bail\nB: A meeting with the arresting officer\nC: Formal charges issued by Judge Glynn\nD: A hearing\nAnswer:",
+            " A"
+          ],
+          [
+            "P: In the last 3 months, over 80 arrestees were released from the Central Booking facility without being formally charged. In April this year, a temporary restaining order was issued by Judge Glynn against the facility to enforce the release of those held more than 24 hours after their intake who did not receive a hearing by a court commissioner. The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system where the case is tracked. The hearing also marks the date for the suspect’s right to a speedy trial.\nQ: According to the temporary restraining order mentioned in the passage, what must arrestees be allowed to have in order to be held longer than 24 hours?\nA: Bail\nB: A meeting with the arresting officer\nC: Formal charges issued by Judge Glynn\nD: A hearing\nAnswer:",
+            " B"
+          ],
+          [
+            "P: In the last 3 months, over 80 arrestees were released from the Central Booking facility without being formally charged. In April this year, a temporary restaining order was issued by Judge Glynn against the facility to enforce the release of those held more than 24 hours after their intake who did not receive a hearing by a court commissioner. The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system where the case is tracked. The hearing also marks the date for the suspect’s right to a speedy trial.\nQ: According to the temporary restraining order mentioned in the passage, what must arrestees be allowed to have in order to be held longer than 24 hours?\nA: Bail\nB: A meeting with the arresting officer\nC: Formal charges issued by Judge Glynn\nD: A hearing\nAnswer:",
+            " C"
+          ],
+          [
+            "P: In the last 3 months, over 80 arrestees were released from the Central Booking facility without being formally charged. In April this year, a temporary restaining order was issued by Judge Glynn against the facility to enforce the release of those held more than 24 hours after their intake who did not receive a hearing by a court commissioner. The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system where the case is tracked. The hearing also marks the date for the suspect’s right to a speedy trial.\nQ: According to the temporary restraining order mentioned in the passage, what must arrestees be allowed to have in order to be held longer than 24 hours?\nA: Bail\nB: A meeting with the arresting officer\nC: Formal charges issued by Judge Glynn\nD: A hearing\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.351090908050537,
+              false
+            ]
+          ],
+          [
+            [
+              -5.778146266937256,
+              false
+            ]
+          ],
+          [
+            [
+              -4.0441718101501465,
+              false
+            ]
+          ],
+          [
+            [
+              -0.08401244878768921,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.351090908050537,
+            false
+          ],
+          [
+            -5.778146266937256,
+            false
+          ],
+          [
+            -4.0441718101501465,
+            false
+          ],
+          [
+            -0.08401244878768921,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "eac509b7bbe526c4be773b01fd805334af7db78b735b6363ec2767c442dce1d6",
+        "prompt_hash": "60e41e12d2e5e45ee146d274321916b67905c0a029f373669d6edd1e8af938d7",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 508,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Meteorites_in_Morocco_found_to_be_from_Mars",
+          "question_number": 2,
+          "flores_passage": "This is believed to be the fifth time in history that people have observed what turned out to be chemically confirmed martian material falling to Earth. Out of the approximately 24,000 known meteorites to have fallen to Earth, only about 34 have been verified to be martian in origin. Fifteen of these rocks are attributed to the meteorite shower last July. Some of the rocks, which are very rare on Earth, are being sold from US$11,000 to $22,500 per ounce, which is about ten times more than the cost of gold.",
+          "question": "As mentioned in the passage, what is true of the rocks that have been found to be martian in origin?",
+          "mc_answer1": "All of them were found during the July meteorite shower",
+          "mc_answer2": "There are 24,000 of them",
+          "mc_answer3": "They are worth $11,000 more than gold",
+          "mc_answer4": "There are 34 of them",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: This is believed to be the fifth time in history that people have observed what turned out to be chemically confirmed martian material falling to Earth. Out of the approximately 24,000 known meteorites to have fallen to Earth, only about 34 have been verified to be martian in origin. Fifteen of these rocks are attributed to the meteorite shower last July. Some of the rocks, which are very rare on Earth, are being sold from US$11,000 to $22,500 per ounce, which is about ten times more than the cost of gold.\nQ: As mentioned in the passage, what is true of the rocks that have been found to be martian in origin?\nA: All of them were found during the July meteorite shower\nB: There are 24,000 of them\nC: They are worth $11,000 more than gold\nD: There are 34 of them\nAnswer:",
+            " A"
+          ],
+          [
+            "P: This is believed to be the fifth time in history that people have observed what turned out to be chemically confirmed martian material falling to Earth. Out of the approximately 24,000 known meteorites to have fallen to Earth, only about 34 have been verified to be martian in origin. Fifteen of these rocks are attributed to the meteorite shower last July. Some of the rocks, which are very rare on Earth, are being sold from US$11,000 to $22,500 per ounce, which is about ten times more than the cost of gold.\nQ: As mentioned in the passage, what is true of the rocks that have been found to be martian in origin?\nA: All of them were found during the July meteorite shower\nB: There are 24,000 of them\nC: They are worth $11,000 more than gold\nD: There are 34 of them\nAnswer:",
+            " B"
+          ],
+          [
+            "P: This is believed to be the fifth time in history that people have observed what turned out to be chemically confirmed martian material falling to Earth. Out of the approximately 24,000 known meteorites to have fallen to Earth, only about 34 have been verified to be martian in origin. Fifteen of these rocks are attributed to the meteorite shower last July. Some of the rocks, which are very rare on Earth, are being sold from US$11,000 to $22,500 per ounce, which is about ten times more than the cost of gold.\nQ: As mentioned in the passage, what is true of the rocks that have been found to be martian in origin?\nA: All of them were found during the July meteorite shower\nB: There are 24,000 of them\nC: They are worth $11,000 more than gold\nD: There are 34 of them\nAnswer:",
+            " C"
+          ],
+          [
+            "P: This is believed to be the fifth time in history that people have observed what turned out to be chemically confirmed martian material falling to Earth. Out of the approximately 24,000 known meteorites to have fallen to Earth, only about 34 have been verified to be martian in origin. Fifteen of these rocks are attributed to the meteorite shower last July. Some of the rocks, which are very rare on Earth, are being sold from US$11,000 to $22,500 per ounce, which is about ten times more than the cost of gold.\nQ: As mentioned in the passage, what is true of the rocks that have been found to be martian in origin?\nA: All of them were found during the July meteorite shower\nB: There are 24,000 of them\nC: They are worth $11,000 more than gold\nD: There are 34 of them\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.3202089071273804,
+              false
+            ]
+          ],
+          [
+            [
+              -3.614306926727295,
+              false
+            ]
+          ],
+          [
+            [
+              -0.721183180809021,
+              true
+            ]
+          ],
+          [
+            [
+              -1.7738107442855835,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.3202089071273804,
+            false
+          ],
+          [
+            -3.614306926727295,
+            false
+          ],
+          [
+            -0.721183180809021,
+            true
+          ],
+          [
+            -1.7738107442855835,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "b142b55eec2b986ea4bf18d02cde95590e7c2aebda4f3a189060807294a08cc8",
+        "prompt_hash": "e059fc0d0ca7df50d0096e420427908d38fdf3fd67045cbddfc2490b6f377575",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 480,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Mumbai_2008_attack_plotter_sentenced_to_35_years",
+          "question_number": 1,
+          "flores_passage": "The Mumbai attackers arrived via boat on Novemeber 26, 2008, bringing with them grenades, automatic weapons and hit multiple targets including the crowded Chhatrapati Shivaji Terminus railway station and the famous Taj Mahal Hotel. David Headley's scouting and information gathering had helped to enable the operation by the 10 gunmen from the Pakistani militant group Laskhar-e-Taiba. The attack put a huge strain on relations between India and Pakistan.",
+          "question": "What did David Headley gather that ultimately aided the militant group’s attack?",
+          "mc_answer1": "Information",
+          "mc_answer2": "Grenades",
+          "mc_answer3": "Gunmen",
+          "mc_answer4": "Automatic weapons",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The Mumbai attackers arrived via boat on Novemeber 26, 2008, bringing with them grenades, automatic weapons and hit multiple targets including the crowded Chhatrapati Shivaji Terminus railway station and the famous Taj Mahal Hotel. David Headley's scouting and information gathering had helped to enable the operation by the 10 gunmen from the Pakistani militant group Laskhar-e-Taiba. The attack put a huge strain on relations between India and Pakistan.\nQ: What did David Headley gather that ultimately aided the militant group’s attack?\nA: Information\nB: Grenades\nC: Gunmen\nD: Automatic weapons\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Mumbai attackers arrived via boat on Novemeber 26, 2008, bringing with them grenades, automatic weapons and hit multiple targets including the crowded Chhatrapati Shivaji Terminus railway station and the famous Taj Mahal Hotel. David Headley's scouting and information gathering had helped to enable the operation by the 10 gunmen from the Pakistani militant group Laskhar-e-Taiba. The attack put a huge strain on relations between India and Pakistan.\nQ: What did David Headley gather that ultimately aided the militant group’s attack?\nA: Information\nB: Grenades\nC: Gunmen\nD: Automatic weapons\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Mumbai attackers arrived via boat on Novemeber 26, 2008, bringing with them grenades, automatic weapons and hit multiple targets including the crowded Chhatrapati Shivaji Terminus railway station and the famous Taj Mahal Hotel. David Headley's scouting and information gathering had helped to enable the operation by the 10 gunmen from the Pakistani militant group Laskhar-e-Taiba. The attack put a huge strain on relations between India and Pakistan.\nQ: What did David Headley gather that ultimately aided the militant group’s attack?\nA: Information\nB: Grenades\nC: Gunmen\nD: Automatic weapons\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Mumbai attackers arrived via boat on Novemeber 26, 2008, bringing with them grenades, automatic weapons and hit multiple targets including the crowded Chhatrapati Shivaji Terminus railway station and the famous Taj Mahal Hotel. David Headley's scouting and information gathering had helped to enable the operation by the 10 gunmen from the Pakistani militant group Laskhar-e-Taiba. The attack put a huge strain on relations between India and Pakistan.\nQ: What did David Headley gather that ultimately aided the militant group’s attack?\nA: Information\nB: Grenades\nC: Gunmen\nD: Automatic weapons\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.05861607566475868,
+              true
+            ]
+          ],
+          [
+            [
+              -5.034434795379639,
+              false
+            ]
+          ],
+          [
+            [
+              -5.750667095184326,
+              false
+            ]
+          ],
+          [
+            [
+              -3.5400137901306152,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.05861607566475868,
+            true
+          ],
+          [
+            -5.034434795379639,
+            false
+          ],
+          [
+            -5.750667095184326,
+            false
+          ],
+          [
+            -3.5400137901306152,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "74ac99a8bc40ac143a7db4e1b1bea9f175318aa9c264d08cb9420ad85d77b6a8",
+        "prompt_hash": "addb1eed1c47d563b23d6141a556c731520ab6d4547637820da99ca9db0b7fdb",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 450,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Oil_spill_in_Alaska_closes_800_miles_of_pipeline",
+          "question_number": 1,
+          "flores_passage": "800 miles of the Trans-Alaska Pipeline System were closed down following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska. A power failure following a routine fire-command system test caused relief valves to open and crude oil overflowed near the Fort Greely pump station 9. The valves opening allowed a pressure release for the system and oil flowed on a pad to a tank that can hold 55,000 barrels (2.3 million gallons). As of Wednesday afternoon, the tank vents were still leaking probably from thermal expansion inside the tank. Another secondary containment area below the tanks capable of holding 104,500 barrels was not yet filled to capacity.",
+          "question": "According to the passage, what is the likely cause of continued leakage from the tank vents?",
+          "mc_answer1": "The secondary containment area being filled to capacity",
+          "mc_answer2": "A routine test of the fire-command system",
+          "mc_answer3": "Thermal expansion",
+          "mc_answer4": "A fire at one of Fort Greely’s pump stations",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: 800 miles of the Trans-Alaska Pipeline System were closed down following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska. A power failure following a routine fire-command system test caused relief valves to open and crude oil overflowed near the Fort Greely pump station 9. The valves opening allowed a pressure release for the system and oil flowed on a pad to a tank that can hold 55,000 barrels (2.3 million gallons). As of Wednesday afternoon, the tank vents were still leaking probably from thermal expansion inside the tank. Another secondary containment area below the tanks capable of holding 104,500 barrels was not yet filled to capacity.\nQ: According to the passage, what is the likely cause of continued leakage from the tank vents?\nA: The secondary containment area being filled to capacity\nB: A routine test of the fire-command system\nC: Thermal expansion\nD: A fire at one of Fort Greely’s pump stations\nAnswer:",
+            " A"
+          ],
+          [
+            "P: 800 miles of the Trans-Alaska Pipeline System were closed down following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska. A power failure following a routine fire-command system test caused relief valves to open and crude oil overflowed near the Fort Greely pump station 9. The valves opening allowed a pressure release for the system and oil flowed on a pad to a tank that can hold 55,000 barrels (2.3 million gallons). As of Wednesday afternoon, the tank vents were still leaking probably from thermal expansion inside the tank. Another secondary containment area below the tanks capable of holding 104,500 barrels was not yet filled to capacity.\nQ: According to the passage, what is the likely cause of continued leakage from the tank vents?\nA: The secondary containment area being filled to capacity\nB: A routine test of the fire-command system\nC: Thermal expansion\nD: A fire at one of Fort Greely’s pump stations\nAnswer:",
+            " B"
+          ],
+          [
+            "P: 800 miles of the Trans-Alaska Pipeline System were closed down following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska. A power failure following a routine fire-command system test caused relief valves to open and crude oil overflowed near the Fort Greely pump station 9. The valves opening allowed a pressure release for the system and oil flowed on a pad to a tank that can hold 55,000 barrels (2.3 million gallons). As of Wednesday afternoon, the tank vents were still leaking probably from thermal expansion inside the tank. Another secondary containment area below the tanks capable of holding 104,500 barrels was not yet filled to capacity.\nQ: According to the passage, what is the likely cause of continued leakage from the tank vents?\nA: The secondary containment area being filled to capacity\nB: A routine test of the fire-command system\nC: Thermal expansion\nD: A fire at one of Fort Greely’s pump stations\nAnswer:",
+            " C"
+          ],
+          [
+            "P: 800 miles of the Trans-Alaska Pipeline System were closed down following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska. A power failure following a routine fire-command system test caused relief valves to open and crude oil overflowed near the Fort Greely pump station 9. The valves opening allowed a pressure release for the system and oil flowed on a pad to a tank that can hold 55,000 barrels (2.3 million gallons). As of Wednesday afternoon, the tank vents were still leaking probably from thermal expansion inside the tank. Another secondary containment area below the tanks capable of holding 104,500 barrels was not yet filled to capacity.\nQ: According to the passage, what is the likely cause of continued leakage from the tank vents?\nA: The secondary containment area being filled to capacity\nB: A routine test of the fire-command system\nC: Thermal expansion\nD: A fire at one of Fort Greely’s pump stations\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.220880508422852,
+              false
+            ]
+          ],
+          [
+            [
+              -7.20529842376709,
+              false
+            ]
+          ],
+          [
+            [
+              -0.034124236553907394,
+              true
+            ]
+          ],
+          [
+            [
+              -7.487430572509766,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.220880508422852,
+            false
+          ],
+          [
+            -7.20529842376709,
+            false
+          ],
+          [
+            -0.034124236553907394,
+            true
+          ],
+          [
+            -7.487430572509766,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "459b2f92802fb84b98e007ab9ed582d38e1679d75dc807d5de607106fe48a3d1",
+        "prompt_hash": "4ad8c787575aac877b50b7b54377350da9380229e8731fc8d6f1468cabb3d3f8",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 713,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/First_and_business_class_flights",
+          "question_number": 2,
+          "flores_passage": "The obvious way of flying in first or business class is to fork out a thick wad of money for the privilege (or, better yet, get your company to do it for you). However, this does not come cheap: as rough rules of thumb, you can expect to pay up to four times the normal economy fare for business, and eleven times for first class! Generally speaking, there is no point in even looking for discounts for business or first-class seats on direct flights from A to B. Airlines know well that there is a certain core group of flyers who are willing to pay top dollar for the privilege of getting somewhere fast and in comfort, and charge accordingly.",
+          "question": "According to the passage, what would be a waste of time to search for when booking certain fare classes?",
+          "mc_answer1": "Direct flights",
+          "mc_answer2": "Business class",
+          "mc_answer3": "Discounts",
+          "mc_answer4": "First class",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The obvious way of flying in first or business class is to fork out a thick wad of money for the privilege (or, better yet, get your company to do it for you). However, this does not come cheap: as rough rules of thumb, you can expect to pay up to four times the normal economy fare for business, and eleven times for first class! Generally speaking, there is no point in even looking for discounts for business or first-class seats on direct flights from A to B. Airlines know well that there is a certain core group of flyers who are willing to pay top dollar for the privilege of getting somewhere fast and in comfort, and charge accordingly.\nQ: According to the passage, what would be a waste of time to search for when booking certain fare classes?\nA: Direct flights\nB: Business class\nC: Discounts\nD: First class\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The obvious way of flying in first or business class is to fork out a thick wad of money for the privilege (or, better yet, get your company to do it for you). However, this does not come cheap: as rough rules of thumb, you can expect to pay up to four times the normal economy fare for business, and eleven times for first class! Generally speaking, there is no point in even looking for discounts for business or first-class seats on direct flights from A to B. Airlines know well that there is a certain core group of flyers who are willing to pay top dollar for the privilege of getting somewhere fast and in comfort, and charge accordingly.\nQ: According to the passage, what would be a waste of time to search for when booking certain fare classes?\nA: Direct flights\nB: Business class\nC: Discounts\nD: First class\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The obvious way of flying in first or business class is to fork out a thick wad of money for the privilege (or, better yet, get your company to do it for you). However, this does not come cheap: as rough rules of thumb, you can expect to pay up to four times the normal economy fare for business, and eleven times for first class! Generally speaking, there is no point in even looking for discounts for business or first-class seats on direct flights from A to B. Airlines know well that there is a certain core group of flyers who are willing to pay top dollar for the privilege of getting somewhere fast and in comfort, and charge accordingly.\nQ: According to the passage, what would be a waste of time to search for when booking certain fare classes?\nA: Direct flights\nB: Business class\nC: Discounts\nD: First class\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The obvious way of flying in first or business class is to fork out a thick wad of money for the privilege (or, better yet, get your company to do it for you). However, this does not come cheap: as rough rules of thumb, you can expect to pay up to four times the normal economy fare for business, and eleven times for first class! Generally speaking, there is no point in even looking for discounts for business or first-class seats on direct flights from A to B. Airlines know well that there is a certain core group of flyers who are willing to pay top dollar for the privilege of getting somewhere fast and in comfort, and charge accordingly.\nQ: According to the passage, what would be a waste of time to search for when booking certain fare classes?\nA: Direct flights\nB: Business class\nC: Discounts\nD: First class\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.1408124715089798,
+              true
+            ]
+          ],
+          [
+            [
+              -4.640766620635986,
+              false
+            ]
+          ],
+          [
+            [
+              -2.856825351715088,
+              false
+            ]
+          ],
+          [
+            [
+              -3.6520867347717285,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.1408124715089798,
+            true
+          ],
+          [
+            -4.640766620635986,
+            false
+          ],
+          [
+            -2.856825351715088,
+            false
+          ],
+          [
+            -3.6520867347717285,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "6f7463518fff94357a3a5abb742052310033af2bcf205646c86059b2979313fa",
+        "prompt_hash": "c1badc5888c734fec14ec5763a25fa0e0ac7f10289476d0eb85787f2a0162812",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792529312.369602,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

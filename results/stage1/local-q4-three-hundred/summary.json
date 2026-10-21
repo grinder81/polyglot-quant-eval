@@ -1,0 +1,44 @@
+{
+  "n": 900,
+  "correct": 591,
+  "languages": {
+    "eng_Latn": {
+      "n": 300,
+      "correct": 226,
+      "accuracy": 0.7533333333333333,
+      "source_passages": 250,
+      "cluster_bootstrap_95_interval": [
+        0.7027027027027027,
+        0.8013937282229965
+      ]
+    },
+    "ben_Beng": {
+      "n": 300,
+      "correct": 189,
+      "accuracy": 0.63,
+      "source_passages": 250,
+      "cluster_bootstrap_95_interval": [
+        0.5748299319727891,
+        0.6843853820598007
+      ]
+    },
+    "hin_Deva": {
+      "n": 300,
+      "correct": 176,
+      "accuracy": 0.5866666666666667,
+      "source_passages": 250,
+      "cluster_bootstrap_95_interval": [
+        0.5313531353135313,
+        0.6426116838487973
+      ]
+    }
+  },
+  "english_bangla_paired": {
+    "en0_bn0": 59,
+    "en1_bn1": 174,
+    "en1_bn0": 52,
+    "en0_bn1": 15
+  },
+  "bootstrap_seed": 42,
+  "bootstrap_replicates": 10000
+}

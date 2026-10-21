@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 697,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Biology/Kingdoms/Animals",
+          "question_number": 2,
+          "flores_passage": "Animals are made of many cells. They eat things and digest them inside. Most animals can move. Only animals have brains (though not even all animals do; jellyfish, for example, do not have brains). Animals are found all over the earth. They dig in the ground, swim in the oceans, and fly in the sky.",
+          "question": "According to the passage, what do some animals not have?",
+          "mc_answer1": "Cells",
+          "mc_answer2": "The ability to digest",
+          "mc_answer3": "Brains",
+          "mc_answer4": "The ability to eat",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Animals are made of many cells. They eat things and digest them inside. Most animals can move. Only animals have brains (though not even all animals do; jellyfish, for example, do not have brains). Animals are found all over the earth. They dig in the ground, swim in the oceans, and fly in the sky.\nQ: According to the passage, what do some animals not have?\nA: Cells\nB: The ability to digest\nC: Brains\nD: The ability to eat\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Animals are made of many cells. They eat things and digest them inside. Most animals can move. Only animals have brains (though not even all animals do; jellyfish, for example, do not have brains). Animals are found all over the earth. They dig in the ground, swim in the oceans, and fly in the sky.\nQ: According to the passage, what do some animals not have?\nA: Cells\nB: The ability to digest\nC: Brains\nD: The ability to eat\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Animals are made of many cells. They eat things and digest them inside. Most animals can move. Only animals have brains (though not even all animals do; jellyfish, for example, do not have brains). Animals are found all over the earth. They dig in the ground, swim in the oceans, and fly in the sky.\nQ: According to the passage, what do some animals not have?\nA: Cells\nB: The ability to digest\nC: Brains\nD: The ability to eat\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Animals are made of many cells. They eat things and digest them inside. Most animals can move. Only animals have brains (though not even all animals do; jellyfish, for example, do not have brains). Animals are found all over the earth. They dig in the ground, swim in the oceans, and fly in the sky.\nQ: According to the passage, what do some animals not have?\nA: Cells\nB: The ability to digest\nC: Brains\nD: The ability to eat\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.288348197937012,
+              false
+            ]
+          ],
+          [
+            [
+              -6.487637519836426,
+              false
+            ]
+          ],
+          [
+            [
+              -0.011877881363034248,
+              true
+            ]
+          ],
+          [
+            [
+              -9.622037887573242,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.288348197937012,
+            false
+          ],
+          [
+            -6.487637519836426,
+            false
+          ],
+          [
+            -0.011877881363034248,
+            true
+          ],
+          [
+            -9.622037887573242,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "b0d2a4ac0d984987e4153d728f8b31c22c75095efc913c140ae082f48aaed021",
+        "prompt_hash": "82813edce8573203ffd0fd20c77e6397fc1f4a01d024c4dbb9ab5c43914c0a6e",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 895,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/2009_Shri_Shyam_Bhajan_Hindu_religious_festival_held_in_Hyderabad",
+          "question_number": 2,
+          "flores_passage": "The program started at 8:30 p.m. local time (15.00 UTC). Famous singers across the country presented bhajans, or devotional songs, to Shri Shyam's feet. Singer Sanju Sharma started the evening, followed by Jai Shankar Choudhary. esented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him. Then, Lakkha Singh took the lead in singing the bhajans. 108 plates of Chhappan Bhog (in Hinduism, 56 different edible items, like, sweets, fruits, nuts, dishes etc. which are offered to deity) were served to Baba Shyam. Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.",
+          "question": "According to the passage, who presented a devotional song during the offering of food?",
+          "mc_answer1": "Lakkha Singh",
+          "mc_answer2": "Jai Shankar Choudhary",
+          "mc_answer3": "Shri Shyam",
+          "mc_answer4": "Sanju Sharma",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The program started at 8:30 p.m. local time (15.00 UTC). Famous singers across the country presented bhajans, or devotional songs, to Shri Shyam's feet. Singer Sanju Sharma started the evening, followed by Jai Shankar Choudhary. esented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him. Then, Lakkha Singh took the lead in singing the bhajans. 108 plates of Chhappan Bhog (in Hinduism, 56 different edible items, like, sweets, fruits, nuts, dishes etc. which are offered to deity) were served to Baba Shyam. Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.\nQ: According to the passage, who presented a devotional song during the offering of food?\nA: Lakkha Singh\nB: Jai Shankar Choudhary\nC: Shri Shyam\nD: Sanju Sharma\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The program started at 8:30 p.m. local time (15.00 UTC). Famous singers across the country presented bhajans, or devotional songs, to Shri Shyam's feet. Singer Sanju Sharma started the evening, followed by Jai Shankar Choudhary. esented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him. Then, Lakkha Singh took the lead in singing the bhajans. 108 plates of Chhappan Bhog (in Hinduism, 56 different edible items, like, sweets, fruits, nuts, dishes etc. which are offered to deity) were served to Baba Shyam. Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.\nQ: According to the passage, who presented a devotional song during the offering of food?\nA: Lakkha Singh\nB: Jai Shankar Choudhary\nC: Shri Shyam\nD: Sanju Sharma\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The program started at 8:30 p.m. local time (15.00 UTC). Famous singers across the country presented bhajans, or devotional songs, to Shri Shyam's feet. Singer Sanju Sharma started the evening, followed by Jai Shankar Choudhary. esented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him. Then, Lakkha Singh took the lead in singing the bhajans. 108 plates of Chhappan Bhog (in Hinduism, 56 different edible items, like, sweets, fruits, nuts, dishes etc. which are offered to deity) were served to Baba Shyam. Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.\nQ: According to the passage, who presented a devotional song during the offering of food?\nA: Lakkha Singh\nB: Jai Shankar Choudhary\nC: Shri Shyam\nD: Sanju Sharma\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The program started at 8:30 p.m. local time (15.00 UTC). Famous singers across the country presented bhajans, or devotional songs, to Shri Shyam's feet. Singer Sanju Sharma started the evening, followed by Jai Shankar Choudhary. esented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him. Then, Lakkha Singh took the lead in singing the bhajans. 108 plates of Chhappan Bhog (in Hinduism, 56 different edible items, like, sweets, fruits, nuts, dishes etc. which are offered to deity) were served to Baba Shyam. Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.\nQ: According to the passage, who presented a devotional song during the offering of food?\nA: Lakkha Singh\nB: Jai Shankar Choudhary\nC: Shri Shyam\nD: Sanju Sharma\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.2709030210971832,
+              true
+            ]
+          ],
+          [
+            [
+              -2.330383777618408,
+              false
+            ]
+          ],
+          [
+            [
+              -3.240990161895752,
+              false
+            ]
+          ],
+          [
+            [
+              -3.0770936012268066,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.2709030210971832,
+            true
+          ],
+          [
+            -2.330383777618408,
+            false
+          ],
+          [
+            -3.240990161895752,
+            false
+          ],
+          [
+            -3.0770936012268066,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a342029ee49f81d7d62f7c9dca2e0bfab0209a8d448843359a93ca96d7e85d47",
+        "prompt_hash": "093ad4d561a0ce0cd72ce1638aa470539e84ad87f0ce50ad3fcd58aba2c3bb83",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 277,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Naked_News_to_create_international_language_editions",
+          "question_number": 2,
+          "flores_passage": "Last week, Naked News announced that it would dramatically increase its international language mandate to news reporting, with three new broadcasts. Already reporting in English and Japanese, the global organization is launching Spanish, Italian, and Korean-language programs, for television, the web, and mobile devices.",
+          "question": "According to the passage, where won’t the new Naked News broadcasts be available?",
+          "mc_answer1": "Cellphones",
+          "mc_answer2": "The internet",
+          "mc_answer3": "Theaters",
+          "mc_answer4": "Television",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Last week, Naked News announced that it would dramatically increase its international language mandate to news reporting, with three new broadcasts. Already reporting in English and Japanese, the global organization is launching Spanish, Italian, and Korean-language programs, for television, the web, and mobile devices.\nQ: According to the passage, where won’t the new Naked News broadcasts be available?\nA: Cellphones\nB: The internet\nC: Theaters\nD: Television\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Last week, Naked News announced that it would dramatically increase its international language mandate to news reporting, with three new broadcasts. Already reporting in English and Japanese, the global organization is launching Spanish, Italian, and Korean-language programs, for television, the web, and mobile devices.\nQ: According to the passage, where won’t the new Naked News broadcasts be available?\nA: Cellphones\nB: The internet\nC: Theaters\nD: Television\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Last week, Naked News announced that it would dramatically increase its international language mandate to news reporting, with three new broadcasts. Already reporting in English and Japanese, the global organization is launching Spanish, Italian, and Korean-language programs, for television, the web, and mobile devices.\nQ: According to the passage, where won’t the new Naked News broadcasts be available?\nA: Cellphones\nB: The internet\nC: Theaters\nD: Television\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Last week, Naked News announced that it would dramatically increase its international language mandate to news reporting, with three new broadcasts. Already reporting in English and Japanese, the global organization is launching Spanish, Italian, and Korean-language programs, for television, the web, and mobile devices.\nQ: According to the passage, where won’t the new Naked News broadcasts be available?\nA: Cellphones\nB: The internet\nC: Theaters\nD: Television\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.809816360473633,
+              false
+            ]
+          ],
+          [
+            [
+              -6.3528852462768555,
+              false
+            ]
+          ],
+          [
+            [
+              -0.11553184688091278,
+              true
+            ]
+          ],
+          [
+            [
+              -4.819272994995117,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.809816360473633,
+            false
+          ],
+          [
+            -6.3528852462768555,
+            false
+          ],
+          [
+            -0.11553184688091278,
+            true
+          ],
+          [
+            -4.819272994995117,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "214812f0a6825e882ad7893aea2ba82a1d58fdc9b4f24741bd177a1e51d8bd6b",
+        "prompt_hash": "5fa9355b839f1408f397c9467ec927953cc36bc8996e66b45c34ca91bf0e0606",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 192,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Dominican_Republic",
+          "question_number": 1,
+          "flores_passage": "The Dominican Republic (Spanish: República Dominicana) is a Caribbean country that occupies the eastern half of the island of Hispaniola, which it shares with Haiti Besides white sand beaches and mountain landscapes, the country is home to the oldest European city in the Americas, now part of Santo Domingo. The island was first inhabited by the Taínos and Caribes. The Caribes were an Arawakan-speaking people who had arrived around 10,000 BCE. Within a few short years following the arrival of European explorers, the population of Tainos had significantly been reduced by the Spanish conquerors Based on Fray Bartolomé de las Casas (Tratado de las Indias) between 1492 and 1498 the Spanish conquerors killed around 100,000 Taínos.",
+          "question": "According to the passage, which group’s population was greatly affected after the arrival of explorers?",
+          "mc_answer1": "The Haitians ",
+          "mc_answer2": "The Caribes",
+          "mc_answer3": "The Taínos",
+          "mc_answer4": "The Spanish",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The Dominican Republic (Spanish: República Dominicana) is a Caribbean country that occupies the eastern half of the island of Hispaniola, which it shares with Haiti Besides white sand beaches and mountain landscapes, the country is home to the oldest European city in the Americas, now part of Santo Domingo. The island was first inhabited by the Taínos and Caribes. The Caribes were an Arawakan-speaking people who had arrived around 10,000 BCE. Within a few short years following the arrival of European explorers, the population of Tainos had significantly been reduced by the Spanish conquerors Based on Fray Bartolomé de las Casas (Tratado de las Indias) between 1492 and 1498 the Spanish conquerors killed around 100,000 Taínos.\nQ: According to the passage, which group’s population was greatly affected after the arrival of explorers?\nA: The Haitians \nB: The Caribes\nC: The Taínos\nD: The Spanish\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Dominican Republic (Spanish: República Dominicana) is a Caribbean country that occupies the eastern half of the island of Hispaniola, which it shares with Haiti Besides white sand beaches and mountain landscapes, the country is home to the oldest European city in the Americas, now part of Santo Domingo. The island was first inhabited by the Taínos and Caribes. The Caribes were an Arawakan-speaking people who had arrived around 10,000 BCE. Within a few short years following the arrival of European explorers, the population of Tainos had significantly been reduced by the Spanish conquerors Based on Fray Bartolomé de las Casas (Tratado de las Indias) between 1492 and 1498 the Spanish conquerors killed around 100,000 Taínos.\nQ: According to the passage, which group’s population was greatly affected after the arrival of explorers?\nA: The Haitians \nB: The Caribes\nC: The Taínos\nD: The Spanish\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Dominican Republic (Spanish: República Dominicana) is a Caribbean country that occupies the eastern half of the island of Hispaniola, which it shares with Haiti Besides white sand beaches and mountain landscapes, the country is home to the oldest European city in the Americas, now part of Santo Domingo. The island was first inhabited by the Taínos and Caribes. The Caribes were an Arawakan-speaking people who had arrived around 10,000 BCE. Within a few short years following the arrival of European explorers, the population of Tainos had significantly been reduced by the Spanish conquerors Based on Fray Bartolomé de las Casas (Tratado de las Indias) between 1492 and 1498 the Spanish conquerors killed around 100,000 Taínos.\nQ: According to the passage, which group’s population was greatly affected after the arrival of explorers?\nA: The Haitians \nB: The Caribes\nC: The Taínos\nD: The Spanish\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Dominican Republic (Spanish: República Dominicana) is a Caribbean country that occupies the eastern half of the island of Hispaniola, which it shares with Haiti Besides white sand beaches and mountain landscapes, the country is home to the oldest European city in the Americas, now part of Santo Domingo. The island was first inhabited by the Taínos and Caribes. The Caribes were an Arawakan-speaking people who had arrived around 10,000 BCE. Within a few short years following the arrival of European explorers, the population of Tainos had significantly been reduced by the Spanish conquerors Based on Fray Bartolomé de las Casas (Tratado de las Indias) between 1492 and 1498 the Spanish conquerors killed around 100,000 Taínos.\nQ: According to the passage, which group’s population was greatly affected after the arrival of explorers?\nA: The Haitians \nB: The Caribes\nC: The Taínos\nD: The Spanish\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.401209831237793,
+              false
+            ]
+          ],
+          [
+            [
+              -5.171323776245117,
+              false
+            ]
+          ],
+          [
+            [
+              -0.09311097115278244,
+              true
+            ]
+          ],
+          [
+            [
+              -7.71019172668457,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.401209831237793,
+            false
+          ],
+          [
+            -5.171323776245117,
+            false
+          ],
+          [
+            -0.09311097115278244,
+            true
+          ],
+          [
+            -7.71019172668457,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "eb298da2fb71e5e6e5d39f78585db3adae684c10cb2a251cc07c63a49a7aa470",
+        "prompt_hash": "bbcbc79607786044519f6f39b4529d431e62a9e6cf7a29e2ad01e1f5990cccf0",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 485,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Working_abroad",
+          "question_number": 2,
+          "flores_passage": "Unless you are a diplomat, working overseas generally means that you will have to file income tax in the country you are based in. Income tax is structured differently in different countries, and the tax rates and brackets vary widely from one country to another. In some federal countries, such as the United States and Canada, income tax is levied both at the federal level and at the local level, so the rates and brackets can vary from region to region.",
+          "question": "According to the passage, if you’re working overseas but based somewhere else, where will you likely be filing your income taxes?",
+          "mc_answer1": "Wherever you are usually based",
+          "mc_answer2": "In the United States",
+          "mc_answer3": "In the country where you’re currently working",
+          "mc_answer4": "Wherever the fees are the lowest",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Unless you are a diplomat, working overseas generally means that you will have to file income tax in the country you are based in. Income tax is structured differently in different countries, and the tax rates and brackets vary widely from one country to another. In some federal countries, such as the United States and Canada, income tax is levied both at the federal level and at the local level, so the rates and brackets can vary from region to region.\nQ: According to the passage, if you’re working overseas but based somewhere else, where will you likely be filing your income taxes?\nA: Wherever you are usually based\nB: In the United States\nC: In the country where you’re currently working\nD: Wherever the fees are the lowest\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Unless you are a diplomat, working overseas generally means that you will have to file income tax in the country you are based in. Income tax is structured differently in different countries, and the tax rates and brackets vary widely from one country to another. In some federal countries, such as the United States and Canada, income tax is levied both at the federal level and at the local level, so the rates and brackets can vary from region to region.\nQ: According to the passage, if you’re working overseas but based somewhere else, where will you likely be filing your income taxes?\nA: Wherever you are usually based\nB: In the United States\nC: In the country where you’re currently working\nD: Wherever the fees are the lowest\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Unless you are a diplomat, working overseas generally means that you will have to file income tax in the country you are based in. Income tax is structured differently in different countries, and the tax rates and brackets vary widely from one country to another. In some federal countries, such as the United States and Canada, income tax is levied both at the federal level and at the local level, so the rates and brackets can vary from region to region.\nQ: According to the passage, if you’re working overseas but based somewhere else, where will you likely be filing your income taxes?\nA: Wherever you are usually based\nB: In the United States\nC: In the country where you’re currently working\nD: Wherever the fees are the lowest\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Unless you are a diplomat, working overseas generally means that you will have to file income tax in the country you are based in. Income tax is structured differently in different countries, and the tax rates and brackets vary widely from one country to another. In some federal countries, such as the United States and Canada, income tax is levied both at the federal level and at the local level, so the rates and brackets can vary from region to region.\nQ: According to the passage, if you’re working overseas but based somewhere else, where will you likely be filing your income taxes?\nA: Wherever you are usually based\nB: In the United States\nC: In the country where you’re currently working\nD: Wherever the fees are the lowest\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.067714624106884,
+              true
+            ]
+          ],
+          [
+            [
+              -6.637345314025879,
+              false
+            ]
+          ],
+          [
+            [
+              -3.294797897338867,
+              false
+            ]
+          ],
+          [
+            [
+              -7.739850997924805,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.067714624106884,
+            true
+          ],
+          [
+            -6.637345314025879,
+            false
+          ],
+          [
+            -3.294797897338867,
+            false
+          ],
+          [
+            -7.739850997924805,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "992bbd0b8ad88c8d4401ab769f6b73f801f2803dfd65c3a1d9b8bf606fe80bfb",
+        "prompt_hash": "f2dab42e0aa1cdc5f73874609ba0a4025e0cf99089f940c6e6ad40235c08daa4",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792529883.5363011,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}
