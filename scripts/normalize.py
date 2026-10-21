@@ -37,6 +37,9 @@ def main():
     ap.add_argument("--runtime", required=True)
     ap.add_argument("--device", required=True)
     ap.add_argument("--model-id", default="CohereLabs/tiny-aya-global")
+    ap.add_argument("--model-revision")
+    ap.add_argument("--sample-set-hash", help="Verified sample-membership manifest SHA256; never inferred from n")
+    ap.add_argument("--scoring-contract-hash", help="Verified scoring/template settings manifest SHA256")
     ap.add_argument("--quantizer"); ap.add_argument("--quantizer-version")
     ap.add_argument("--calibration-set", default="none")
     ap.add_argument("--bits", type=float); ap.add_argument("--group-size", type=int)
@@ -71,7 +74,8 @@ def main():
             se_key = key.replace(metric, metric + "_stderr")
             n = nsamples.get(task, {}).get("effective") or nsamples.get(task, {}).get("original") or 0
             rows.append({
-                "run_id": run_id, "timestamp": ts, "model_id": a.model_id, "model_revision": None,
+                "run_id": run_id, "timestamp": ts, "model_id": a.model_id, "model_revision": a.model_revision,
+                "sample_set_hash": a.sample_set_hash, "scoring_contract_hash": a.scoring_contract_hash,
                 "format": a.format, "quantizer": a.quantizer, "quantizer_version": a.quantizer_version,
                 "calibration_set": a.calibration_set, "bits": a.bits, "group_size": a.group_size,
                 "runtime": a.runtime, "runtime_version": a.runtime_version, "backend": a.backend,

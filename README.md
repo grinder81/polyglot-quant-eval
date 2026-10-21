@@ -58,4 +58,8 @@ python scripts/normalize.py results/smoke --format bf16 --runtime vllm --device 
 python scripts/report.py results/rows.jsonl
 ```
 
+The generic report displays separate runs by default. Delta tables require explicit
+canonical/control/candidate run IDs and verified sample/scoring provenance; see
+[report safeguards](docs/report-reference-safeguards.md). It never averages BF16 runtimes.
+
 License: Apache-2.0 for code. Results JSONL: CC-BY-4.0. Model weights are not in this repo.
