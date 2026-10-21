@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 355,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/History_of_Technology/Technological_Determinism",
+          "question_number": 1,
+          "flores_passage": "\"Technological determinism is a term that encompasses a wide range of ideas in practice, from technology-push or the technological imperative to a strict sense that human destiny is driven by an underlying logic associated with scientific laws and their manifestation in technology. Most interpretations of technological determinism share two general ideas: that the development of technology itself follows a path largely beyond cultural or political influence, and that technology in turn has \"\"effects\"\" on societies that are inherent, rather than socially conditioned. For example, one might say that the motor car necessarily leads to the development of roads. However, a nationwide road network is not economically viable for just a handful of cars, so new methods of production are developed to reduce the cost of car ownership. Mass car ownership also leads to a higher incidence of accidents on the roads, which leads to the invention of new techniques in healthcare for repairing damaged bodies.\"",
+          "question": "Which of the following statements does not reflect a general idea of technological determinism? ",
+          "mc_answer1": "Technology’s effects on society are socially conditioned",
+          "mc_answer2": "Development of technology is not influenced by culture",
+          "mc_answer3": "Technology has inherent effects on society",
+          "mc_answer4": "Technological development is not based on political influence",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"Technological determinism is a term that encompasses a wide range of ideas in practice, from technology-push or the technological imperative to a strict sense that human destiny is driven by an underlying logic associated with scientific laws and their manifestation in technology. Most interpretations of technological determinism share two general ideas: that the development of technology itself follows a path largely beyond cultural or political influence, and that technology in turn has \"\"effects\"\" on societies that are inherent, rather than socially conditioned. For example, one might say that the motor car necessarily leads to the development of roads. However, a nationwide road network is not economically viable for just a handful of cars, so new methods of production are developed to reduce the cost of car ownership. Mass car ownership also leads to a higher incidence of accidents on the roads, which leads to the invention of new techniques in healthcare for repairing damaged bodies.\"\nQ: Which of the following statements does not reflect a general idea of technological determinism?\nA: Technology’s effects on society are socially conditioned\nB: Development of technology is not influenced by culture\nC: Technology has inherent effects on society\nD: Technological development is not based on political influence\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Technological determinism is a term that encompasses a wide range of ideas in practice, from technology-push or the technological imperative to a strict sense that human destiny is driven by an underlying logic associated with scientific laws and their manifestation in technology. Most interpretations of technological determinism share two general ideas: that the development of technology itself follows a path largely beyond cultural or political influence, and that technology in turn has \"\"effects\"\" on societies that are inherent, rather than socially conditioned. For example, one might say that the motor car necessarily leads to the development of roads. However, a nationwide road network is not economically viable for just a handful of cars, so new methods of production are developed to reduce the cost of car ownership. Mass car ownership also leads to a higher incidence of accidents on the roads, which leads to the invention of new techniques in healthcare for repairing damaged bodies.\"\nQ: Which of the following statements does not reflect a general idea of technological determinism?\nA: Technology’s effects on society are socially conditioned\nB: Development of technology is not influenced by culture\nC: Technology has inherent effects on society\nD: Technological development is not based on political influence\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Technological determinism is a term that encompasses a wide range of ideas in practice, from technology-push or the technological imperative to a strict sense that human destiny is driven by an underlying logic associated with scientific laws and their manifestation in technology. Most interpretations of technological determinism share two general ideas: that the development of technology itself follows a path largely beyond cultural or political influence, and that technology in turn has \"\"effects\"\" on societies that are inherent, rather than socially conditioned. For example, one might say that the motor car necessarily leads to the development of roads. However, a nationwide road network is not economically viable for just a handful of cars, so new methods of production are developed to reduce the cost of car ownership. Mass car ownership also leads to a higher incidence of accidents on the roads, which leads to the invention of new techniques in healthcare for repairing damaged bodies.\"\nQ: Which of the following statements does not reflect a general idea of technological determinism?\nA: Technology’s effects on society are socially conditioned\nB: Development of technology is not influenced by culture\nC: Technology has inherent effects on society\nD: Technological development is not based on political influence\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Technological determinism is a term that encompasses a wide range of ideas in practice, from technology-push or the technological imperative to a strict sense that human destiny is driven by an underlying logic associated with scientific laws and their manifestation in technology. Most interpretations of technological determinism share two general ideas: that the development of technology itself follows a path largely beyond cultural or political influence, and that technology in turn has \"\"effects\"\" on societies that are inherent, rather than socially conditioned. For example, one might say that the motor car necessarily leads to the development of roads. However, a nationwide road network is not economically viable for just a handful of cars, so new methods of production are developed to reduce the cost of car ownership. Mass car ownership also leads to a higher incidence of accidents on the roads, which leads to the invention of new techniques in healthcare for repairing damaged bodies.\"\nQ: Which of the following statements does not reflect a general idea of technological determinism?\nA: Technology’s effects on society are socially conditioned\nB: Development of technology is not influenced by culture\nC: Technology has inherent effects on society\nD: Technological development is not based on political influence\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.014895997010171413,
+              true
+            ]
+          ],
+          [
+            [
+              -5.1207098960876465,
+              false
+            ]
+          ],
+          [
+            [
+              -6.845927715301514,
+              false
+            ]
+          ],
+          [
+            [
+              -5.286685466766357,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.014895997010171413,
+            true
+          ],
+          [
+            -5.1207098960876465,
+            false
+          ],
+          [
+            -6.845927715301514,
+            false
+          ],
+          [
+            -5.286685466766357,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a76f235e5cedde3052ffe3c6d52eef5fe4d9dd64458137a66d5c04122d82ed77",
+        "prompt_hash": "c50d3b24ed9d8929565aa7982f060aa967673dab43f05f6ce94b82cf3a13c441",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 150,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/The_Seven_Wonders_of_the_World/The_Great_Pyramid",
+          "question_number": 2,
+          "flores_passage": "\"The Great Pyramid at Giza is the only one of the seven wonders that is still standing today. Built by the Egyptians in the third century BCE, the Great Pyramid is one of many large pyramid structures built to honor dead Pharaoh. The Giza Plateau, or \"\"Giza Necropolis\"\" in the Egyptian Valley of the Dead contains several pyramids (of which the great pyramid is the largest), several small tombs, several temples, and the great Sphinx. The great pyramid was created to honor the Pharaoh Khufu, and many of the smaller pyramids, tombs, and temples were built to honor Khufu's wives and family members.\"",
+          "question": "What was the purpose of the Great Pyramid?",
+          "mc_answer1": "To become one of the seven wonders of the world",
+          "mc_answer2": "To honour a Pharaoh",
+          "mc_answer3": "To serve as a landmark",
+          "mc_answer4": "To store the tombs of people who have passed away",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"The Great Pyramid at Giza is the only one of the seven wonders that is still standing today. Built by the Egyptians in the third century BCE, the Great Pyramid is one of many large pyramid structures built to honor dead Pharaoh. The Giza Plateau, or \"\"Giza Necropolis\"\" in the Egyptian Valley of the Dead contains several pyramids (of which the great pyramid is the largest), several small tombs, several temples, and the great Sphinx. The great pyramid was created to honor the Pharaoh Khufu, and many of the smaller pyramids, tombs, and temples were built to honor Khufu's wives and family members.\"\nQ: What was the purpose of the Great Pyramid?\nA: To become one of the seven wonders of the world\nB: To honour a Pharaoh\nC: To serve as a landmark\nD: To store the tombs of people who have passed away\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"The Great Pyramid at Giza is the only one of the seven wonders that is still standing today. Built by the Egyptians in the third century BCE, the Great Pyramid is one of many large pyramid structures built to honor dead Pharaoh. The Giza Plateau, or \"\"Giza Necropolis\"\" in the Egyptian Valley of the Dead contains several pyramids (of which the great pyramid is the largest), several small tombs, several temples, and the great Sphinx. The great pyramid was created to honor the Pharaoh Khufu, and many of the smaller pyramids, tombs, and temples were built to honor Khufu's wives and family members.\"\nQ: What was the purpose of the Great Pyramid?\nA: To become one of the seven wonders of the world\nB: To honour a Pharaoh\nC: To serve as a landmark\nD: To store the tombs of people who have passed away\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"The Great Pyramid at Giza is the only one of the seven wonders that is still standing today. Built by the Egyptians in the third century BCE, the Great Pyramid is one of many large pyramid structures built to honor dead Pharaoh. The Giza Plateau, or \"\"Giza Necropolis\"\" in the Egyptian Valley of the Dead contains several pyramids (of which the great pyramid is the largest), several small tombs, several temples, and the great Sphinx. The great pyramid was created to honor the Pharaoh Khufu, and many of the smaller pyramids, tombs, and temples were built to honor Khufu's wives and family members.\"\nQ: What was the purpose of the Great Pyramid?\nA: To become one of the seven wonders of the world\nB: To honour a Pharaoh\nC: To serve as a landmark\nD: To store the tombs of people who have passed away\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"The Great Pyramid at Giza is the only one of the seven wonders that is still standing today. Built by the Egyptians in the third century BCE, the Great Pyramid is one of many large pyramid structures built to honor dead Pharaoh. The Giza Plateau, or \"\"Giza Necropolis\"\" in the Egyptian Valley of the Dead contains several pyramids (of which the great pyramid is the largest), several small tombs, several temples, and the great Sphinx. The great pyramid was created to honor the Pharaoh Khufu, and many of the smaller pyramids, tombs, and temples were built to honor Khufu's wives and family members.\"\nQ: What was the purpose of the Great Pyramid?\nA: To become one of the seven wonders of the world\nB: To honour a Pharaoh\nC: To serve as a landmark\nD: To store the tombs of people who have passed away\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.495960235595703,
+              false
+            ]
+          ],
+          [
+            [
+              -0.026794275268912315,
+              true
+            ]
+          ],
+          [
+            [
+              -7.694195747375488,
+              false
+            ]
+          ],
+          [
+            [
+              -7.488288879394531,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.495960235595703,
+            false
+          ],
+          [
+            -0.026794275268912315,
+            true
+          ],
+          [
+            -7.694195747375488,
+            false
+          ],
+          [
+            -7.488288879394531,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "6b2f116841754f2a65e2973e0153c03b0f6cd4adffaa23cdc8b76f11af8d9445",
+        "prompt_hash": "59524be6ddeffc0ab539a32cc62d6f8bff905810efe8b569b103bd2092cb2981",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 661,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Cosmonaut_Alexei_Leonov_dies_at_age_85",
+          "question_number": 2,
+          "flores_passage": "\"Leonov, also known as \"\"cosmonaut No. 11\"\", was part of the Soviet Union's original team of cosmonauts. On March 18, 1965, he performed the first manned extravehicular activity (EVA), or \"\"spacewalk\"\", remaining alone outside the spacecraft for just over twelve minutes. He received the \"\"Hero of the Soviet Union\"\", the Soviet Union's highest honor, for his work. Ten years later, he led the Soviet part of the Apollo–Soyuz mission symbolizing that the Space Race was over.\"",
+          "question": "Leonov led the Soviet part of which mission?",
+          "mc_answer1": "The Space Race",
+          "mc_answer2": "Apollo-Soyuz",
+          "mc_answer3": "Cosmonaut No. 11",
+          "mc_answer4": "EVA",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"Leonov, also known as \"\"cosmonaut No. 11\"\", was part of the Soviet Union's original team of cosmonauts. On March 18, 1965, he performed the first manned extravehicular activity (EVA), or \"\"spacewalk\"\", remaining alone outside the spacecraft for just over twelve minutes. He received the \"\"Hero of the Soviet Union\"\", the Soviet Union's highest honor, for his work. Ten years later, he led the Soviet part of the Apollo–Soyuz mission symbolizing that the Space Race was over.\"\nQ: Leonov led the Soviet part of which mission?\nA: The Space Race\nB: Apollo-Soyuz\nC: Cosmonaut No. 11\nD: EVA\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Leonov, also known as \"\"cosmonaut No. 11\"\", was part of the Soviet Union's original team of cosmonauts. On March 18, 1965, he performed the first manned extravehicular activity (EVA), or \"\"spacewalk\"\", remaining alone outside the spacecraft for just over twelve minutes. He received the \"\"Hero of the Soviet Union\"\", the Soviet Union's highest honor, for his work. Ten years later, he led the Soviet part of the Apollo–Soyuz mission symbolizing that the Space Race was over.\"\nQ: Leonov led the Soviet part of which mission?\nA: The Space Race\nB: Apollo-Soyuz\nC: Cosmonaut No. 11\nD: EVA\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Leonov, also known as \"\"cosmonaut No. 11\"\", was part of the Soviet Union's original team of cosmonauts. On March 18, 1965, he performed the first manned extravehicular activity (EVA), or \"\"spacewalk\"\", remaining alone outside the spacecraft for just over twelve minutes. He received the \"\"Hero of the Soviet Union\"\", the Soviet Union's highest honor, for his work. Ten years later, he led the Soviet part of the Apollo–Soyuz mission symbolizing that the Space Race was over.\"\nQ: Leonov led the Soviet part of which mission?\nA: The Space Race\nB: Apollo-Soyuz\nC: Cosmonaut No. 11\nD: EVA\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Leonov, also known as \"\"cosmonaut No. 11\"\", was part of the Soviet Union's original team of cosmonauts. On March 18, 1965, he performed the first manned extravehicular activity (EVA), or \"\"spacewalk\"\", remaining alone outside the spacecraft for just over twelve minutes. He received the \"\"Hero of the Soviet Union\"\", the Soviet Union's highest honor, for his work. Ten years later, he led the Soviet part of the Apollo–Soyuz mission symbolizing that the Space Race was over.\"\nQ: Leonov led the Soviet part of which mission?\nA: The Space Race\nB: Apollo-Soyuz\nC: Cosmonaut No. 11\nD: EVA\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.9499340057373047,
+              false
+            ]
+          ],
+          [
+            [
+              -0.06970398873090744,
+              true
+            ]
+          ],
+          [
+            [
+              -6.088966369628906,
+              false
+            ]
+          ],
+          [
+            [
+              -5.09843635559082,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.9499340057373047,
+            false
+          ],
+          [
+            -0.06970398873090744,
+            true
+          ],
+          [
+            -6.088966369628906,
+            false
+          ],
+          [
+            -5.09843635559082,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "bc9c7d0f978bb1d53908607720d60e716b336abe70df6af23cac4c54f7392239",
+        "prompt_hash": "3b76becd0db8fe3e4aab78af2ae9a9476e2139f485335c849f066ae8461937bb",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 88,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Botanical_tourism_in_Singapore",
+          "question_number": 1,
+          "flores_passage": "\"Singapore is generally an extremely safe place to be and very easy to navigate, and you can buy almost anything after arriving. But being placed in the \"\"high tropics\"\" just a few degrees north of equator you will need to deal with both heat (always) and strong sun (when the sky is clear, more rarely).\"",
+          "question": "Which of the following is issues is mostly likely to arise while staying in the high tropics area of Singapore?",
+          "mc_answer1": "Getting mugged",
+          "mc_answer2": "Having no access to shops",
+          "mc_answer3": "Suffering heat exhaustion",
+          "mc_answer4": "Getting lost",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"Singapore is generally an extremely safe place to be and very easy to navigate, and you can buy almost anything after arriving. But being placed in the \"\"high tropics\"\" just a few degrees north of equator you will need to deal with both heat (always) and strong sun (when the sky is clear, more rarely).\"\nQ: Which of the following is issues is mostly likely to arise while staying in the high tropics area of Singapore?\nA: Getting mugged\nB: Having no access to shops\nC: Suffering heat exhaustion\nD: Getting lost\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Singapore is generally an extremely safe place to be and very easy to navigate, and you can buy almost anything after arriving. But being placed in the \"\"high tropics\"\" just a few degrees north of equator you will need to deal with both heat (always) and strong sun (when the sky is clear, more rarely).\"\nQ: Which of the following is issues is mostly likely to arise while staying in the high tropics area of Singapore?\nA: Getting mugged\nB: Having no access to shops\nC: Suffering heat exhaustion\nD: Getting lost\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Singapore is generally an extremely safe place to be and very easy to navigate, and you can buy almost anything after arriving. But being placed in the \"\"high tropics\"\" just a few degrees north of equator you will need to deal with both heat (always) and strong sun (when the sky is clear, more rarely).\"\nQ: Which of the following is issues is mostly likely to arise while staying in the high tropics area of Singapore?\nA: Getting mugged\nB: Having no access to shops\nC: Suffering heat exhaustion\nD: Getting lost\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Singapore is generally an extremely safe place to be and very easy to navigate, and you can buy almost anything after arriving. But being placed in the \"\"high tropics\"\" just a few degrees north of equator you will need to deal with both heat (always) and strong sun (when the sky is clear, more rarely).\"\nQ: Which of the following is issues is mostly likely to arise while staying in the high tropics area of Singapore?\nA: Getting mugged\nB: Having no access to shops\nC: Suffering heat exhaustion\nD: Getting lost\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.178980350494385,
+              false
+            ]
+          ],
+          [
+            [
+              -5.137143611907959,
+              false
+            ]
+          ],
+          [
+            [
+              -0.02926012873649597,
+              true
+            ]
+          ],
+          [
+            [
+              -7.4900994300842285,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.178980350494385,
+            false
+          ],
+          [
+            -5.137143611907959,
+            false
+          ],
+          [
+            -0.02926012873649597,
+            true
+          ],
+          [
+            -7.4900994300842285,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "2bf34192fef26d3e2c3cad67fa39437dc12ec027305b3b55fc50505f530e811f",
+        "prompt_hash": "d0eeddeb209b4017c560d7eaf6acee87d0c5baaa995b412042ac84cd13aa001e",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 708,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Falkland_Islands",
+          "question_number": 1,
+          "flores_passage": "The official Falklands currency is the Falkland pound (FKP) whose value is set equivalent to that of one British pound (GBP). Money can be exchanged at the only bank in the islands which is located in Stanley across from the FIC West store. British pounds will generally be accepted anywhere in the islands and within Stanley credit cards and United States dollars are also often accepted. On the outlying islands credit cards will probably not be accepted, although British and United States currency may be taken; check with the owners in advance to determine what is an acceptable payment method. It is nearly impossible to exchange Falklands currency outside of the islands, so exchange money prior to leaving the islands.",
+          "question": "Regarding the use of currency in the Falklands, which of the following statements is true?",
+          "mc_answer1": "Only credit cards and British pounds are accepted on the outlying islands",
+          "mc_answer2": "Stanley is the only place that will accept the United States dollar",
+          "mc_answer3": "Falkland pounds should be exchanged after leaving the islands",
+          "mc_answer4": "Aside from the Falkland pound, the British pound is generally the most accepted currency",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: The official Falklands currency is the Falkland pound (FKP) whose value is set equivalent to that of one British pound (GBP). Money can be exchanged at the only bank in the islands which is located in Stanley across from the FIC West store. British pounds will generally be accepted anywhere in the islands and within Stanley credit cards and United States dollars are also often accepted. On the outlying islands credit cards will probably not be accepted, although British and United States currency may be taken; check with the owners in advance to determine what is an acceptable payment method. It is nearly impossible to exchange Falklands currency outside of the islands, so exchange money prior to leaving the islands.\nQ: Regarding the use of currency in the Falklands, which of the following statements is true?\nA: Only credit cards and British pounds are accepted on the outlying islands\nB: Stanley is the only place that will accept the United States dollar\nC: Falkland pounds should be exchanged after leaving the islands\nD: Aside from the Falkland pound, the British pound is generally the most accepted currency\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The official Falklands currency is the Falkland pound (FKP) whose value is set equivalent to that of one British pound (GBP). Money can be exchanged at the only bank in the islands which is located in Stanley across from the FIC West store. British pounds will generally be accepted anywhere in the islands and within Stanley credit cards and United States dollars are also often accepted. On the outlying islands credit cards will probably not be accepted, although British and United States currency may be taken; check with the owners in advance to determine what is an acceptable payment method. It is nearly impossible to exchange Falklands currency outside of the islands, so exchange money prior to leaving the islands.\nQ: Regarding the use of currency in the Falklands, which of the following statements is true?\nA: Only credit cards and British pounds are accepted on the outlying islands\nB: Stanley is the only place that will accept the United States dollar\nC: Falkland pounds should be exchanged after leaving the islands\nD: Aside from the Falkland pound, the British pound is generally the most accepted currency\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The official Falklands currency is the Falkland pound (FKP) whose value is set equivalent to that of one British pound (GBP). Money can be exchanged at the only bank in the islands which is located in Stanley across from the FIC West store. British pounds will generally be accepted anywhere in the islands and within Stanley credit cards and United States dollars are also often accepted. On the outlying islands credit cards will probably not be accepted, although British and United States currency may be taken; check with the owners in advance to determine what is an acceptable payment method. It is nearly impossible to exchange Falklands currency outside of the islands, so exchange money prior to leaving the islands.\nQ: Regarding the use of currency in the Falklands, which of the following statements is true?\nA: Only credit cards and British pounds are accepted on the outlying islands\nB: Stanley is the only place that will accept the United States dollar\nC: Falkland pounds should be exchanged after leaving the islands\nD: Aside from the Falkland pound, the British pound is generally the most accepted currency\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The official Falklands currency is the Falkland pound (FKP) whose value is set equivalent to that of one British pound (GBP). Money can be exchanged at the only bank in the islands which is located in Stanley across from the FIC West store. British pounds will generally be accepted anywhere in the islands and within Stanley credit cards and United States dollars are also often accepted. On the outlying islands credit cards will probably not be accepted, although British and United States currency may be taken; check with the owners in advance to determine what is an acceptable payment method. It is nearly impossible to exchange Falklands currency outside of the islands, so exchange money prior to leaving the islands.\nQ: Regarding the use of currency in the Falklands, which of the following statements is true?\nA: Only credit cards and British pounds are accepted on the outlying islands\nB: Stanley is the only place that will accept the United States dollar\nC: Falkland pounds should be exchanged after leaving the islands\nD: Aside from the Falkland pound, the British pound is generally the most accepted currency\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.0551862716674805,
+              false
+            ]
+          ],
+          [
+            [
+              -4.017786979675293,
+              false
+            ]
+          ],
+          [
+            [
+              -2.412308692932129,
+              false
+            ]
+          ],
+          [
+            [
+              -0.22016440331935883,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.0551862716674805,
+            false
+          ],
+          [
+            -4.017786979675293,
+            false
+          ],
+          [
+            -2.412308692932129,
+            false
+          ],
+          [
+            -0.22016440331935883,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a1f04ca84bdcf6544ec08cd4055bc536166799d1c108dbc37846789255496636",
+        "prompt_hash": "9b623a58f5a1753913c1ad8df9d6d1f4ee45902fb724afd5bbea7f7a99a649ce",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792528763.5554397,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 684,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Origami/Types/Pureland_Origami",
+          "question_number": 2,
+          "flores_passage": "Pureland origami is origami with the restriction that only one fold may be done at a time, more complex folds like reverse folds are not allowed, and all folds have straightforward locations. It was developed by John Smith in the 1970s to help inexperienced folders or those with limited motor skills.",
+          "question": "Which of the following does not accurately describe Pureland origami?",
+          "mc_answer1": "It’s intended for experienced folders",
+          "mc_answer2": "The method does not include reverse folds",
+          "mc_answer3": "Folds must have straightforward locations",
+          "mc_answer4": "It’s a good method for folders with limited motor skills",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Pureland origami is origami with the restriction that only one fold may be done at a time, more complex folds like reverse folds are not allowed, and all folds have straightforward locations. It was developed by John Smith in the 1970s to help inexperienced folders or those with limited motor skills.\nQ: Which of the following does not accurately describe Pureland origami?\nA: It’s intended for experienced folders\nB: The method does not include reverse folds\nC: Folds must have straightforward locations\nD: It’s a good method for folders with limited motor skills\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Pureland origami is origami with the restriction that only one fold may be done at a time, more complex folds like reverse folds are not allowed, and all folds have straightforward locations. It was developed by John Smith in the 1970s to help inexperienced folders or those with limited motor skills.\nQ: Which of the following does not accurately describe Pureland origami?\nA: It’s intended for experienced folders\nB: The method does not include reverse folds\nC: Folds must have straightforward locations\nD: It’s a good method for folders with limited motor skills\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Pureland origami is origami with the restriction that only one fold may be done at a time, more complex folds like reverse folds are not allowed, and all folds have straightforward locations. It was developed by John Smith in the 1970s to help inexperienced folders or those with limited motor skills.\nQ: Which of the following does not accurately describe Pureland origami?\nA: It’s intended for experienced folders\nB: The method does not include reverse folds\nC: Folds must have straightforward locations\nD: It’s a good method for folders with limited motor skills\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Pureland origami is origami with the restriction that only one fold may be done at a time, more complex folds like reverse folds are not allowed, and all folds have straightforward locations. It was developed by John Smith in the 1970s to help inexperienced folders or those with limited motor skills.\nQ: Which of the following does not accurately describe Pureland origami?\nA: It’s intended for experienced folders\nB: The method does not include reverse folds\nC: Folds must have straightforward locations\nD: It’s a good method for folders with limited motor skills\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.02025059424340725,
+              true
+            ]
+          ],
+          [
+            [
+              -5.7693047523498535,
+              false
+            ]
+          ],
+          [
+            [
+              -7.289618015289307,
+              false
+            ]
+          ],
+          [
+            [
+              -6.911705493927002,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.02025059424340725,
+            true
+          ],
+          [
+            -5.7693047523498535,
+            false
+          ],
+          [
+            -7.289618015289307,
+            false
+          ],
+          [
+            -6.911705493927002,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "4dbf0e50071024facb40d4375957b04397020d9d5a17ad1adee12c99c2af19dc",
+        "prompt_hash": "822517cda9967f0be76dfdf5ca2ceaee07591a56d5084ab25c3332c294ca0e6d",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 638,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Explorers_find_shipwreck_thought_to_be_massive_WWII_battleship_Musashi",
+          "question_number": 2,
+          "flores_passage": "If confirmed, the find completes Allen's eight-year search for the Musashi. Following seabed mapping the wreck was found using an ROV. One of the world's richest people, Allen has reportedly invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in the war.",
+          "question": "According to the passage, what did Allen spend a significant amount of his money on?",
+          "mc_answer1": "Restoring the Musashi",
+          "mc_answer2": "Marine exploration",
+          "mc_answer3": "Building an ROV",
+          "mc_answer4": "Learning about seabed mapping",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: If confirmed, the find completes Allen's eight-year search for the Musashi. Following seabed mapping the wreck was found using an ROV. One of the world's richest people, Allen has reportedly invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in the war.\nQ: According to the passage, what did Allen spend a significant amount of his money on?\nA: Restoring the Musashi\nB: Marine exploration\nC: Building an ROV\nD: Learning about seabed mapping\nAnswer:",
+            " A"
+          ],
+          [
+            "P: If confirmed, the find completes Allen's eight-year search for the Musashi. Following seabed mapping the wreck was found using an ROV. One of the world's richest people, Allen has reportedly invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in the war.\nQ: According to the passage, what did Allen spend a significant amount of his money on?\nA: Restoring the Musashi\nB: Marine exploration\nC: Building an ROV\nD: Learning about seabed mapping\nAnswer:",
+            " B"
+          ],
+          [
+            "P: If confirmed, the find completes Allen's eight-year search for the Musashi. Following seabed mapping the wreck was found using an ROV. One of the world's richest people, Allen has reportedly invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in the war.\nQ: According to the passage, what did Allen spend a significant amount of his money on?\nA: Restoring the Musashi\nB: Marine exploration\nC: Building an ROV\nD: Learning about seabed mapping\nAnswer:",
+            " C"
+          ],
+          [
+            "P: If confirmed, the find completes Allen's eight-year search for the Musashi. Following seabed mapping the wreck was found using an ROV. One of the world's richest people, Allen has reportedly invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in the war.\nQ: According to the passage, what did Allen spend a significant amount of his money on?\nA: Restoring the Musashi\nB: Marine exploration\nC: Building an ROV\nD: Learning about seabed mapping\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.019637584686279,
+              false
+            ]
+          ],
+          [
+            [
+              -0.021197669208049774,
+              true
+            ]
+          ],
+          [
+            [
+              -6.89258337020874,
+              false
+            ]
+          ],
+          [
+            [
+              -7.542185306549072,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.019637584686279,
+            false
+          ],
+          [
+            -0.021197669208049774,
+            true
+          ],
+          [
+            -6.89258337020874,
+            false
+          ],
+          [
+            -7.542185306549072,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "8270b976317b591ab91f3344aa697f29727f542492ace346447449da7e248414",
+        "prompt_hash": "7bbf9cdd90beb4573e3aa7b188a83cf96a090e21ab3a59be71ca58a8dcbba76f",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 375,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Noted_stamp_engraver_Czeslaw_Slania_dies_at_83",
+          "question_number": 1,
+          "flores_passage": "\"In 1956 Słania moved to Sweden, where three years later he began work for the Swedish Post Office and became their chief engraver. He produced over 1,000 stamps for Sweden and 28 other countries. His work is of such recognized quality and detail that he is one of the very few \"\"household names\"\" among philatelists. Some specialize in collecting his work alone. His 1,000th stamp was the magnificent \"\"Great Deeds by Swedish Kings\"\" by David Klöcker Ehrenstrahl in 2000, which is listed in the Guinness Book of World Records. He was also engaged in engraving banknotes for many countries, recent examples of his work including the Prime Ministerial portraits on the front of the new Canadian $5 and $100 bills.\"",
+          "question": "How many stamps did Słania produce for various countries?",
+          "mc_answer1": "Over 2,000",
+          "mc_answer2": "1000",
+          "mc_answer3": "Almost 2,000",
+          "mc_answer4": "Over 1,000",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: \"In 1956 Słania moved to Sweden, where three years later he began work for the Swedish Post Office and became their chief engraver. He produced over 1,000 stamps for Sweden and 28 other countries. His work is of such recognized quality and detail that he is one of the very few \"\"household names\"\" among philatelists. Some specialize in collecting his work alone. His 1,000th stamp was the magnificent \"\"Great Deeds by Swedish Kings\"\" by David Klöcker Ehrenstrahl in 2000, which is listed in the Guinness Book of World Records. He was also engaged in engraving banknotes for many countries, recent examples of his work including the Prime Ministerial portraits on the front of the new Canadian $5 and $100 bills.\"\nQ: How many stamps did Słania produce for various countries?\nA: Over 2,000\nB: 1000\nC: Almost 2,000\nD: Over 1,000\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"In 1956 Słania moved to Sweden, where three years later he began work for the Swedish Post Office and became their chief engraver. He produced over 1,000 stamps for Sweden and 28 other countries. His work is of such recognized quality and detail that he is one of the very few \"\"household names\"\" among philatelists. Some specialize in collecting his work alone. His 1,000th stamp was the magnificent \"\"Great Deeds by Swedish Kings\"\" by David Klöcker Ehrenstrahl in 2000, which is listed in the Guinness Book of World Records. He was also engaged in engraving banknotes for many countries, recent examples of his work including the Prime Ministerial portraits on the front of the new Canadian $5 and $100 bills.\"\nQ: How many stamps did Słania produce for various countries?\nA: Over 2,000\nB: 1000\nC: Almost 2,000\nD: Over 1,000\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"In 1956 Słania moved to Sweden, where three years later he began work for the Swedish Post Office and became their chief engraver. He produced over 1,000 stamps for Sweden and 28 other countries. His work is of such recognized quality and detail that he is one of the very few \"\"household names\"\" among philatelists. Some specialize in collecting his work alone. His 1,000th stamp was the magnificent \"\"Great Deeds by Swedish Kings\"\" by David Klöcker Ehrenstrahl in 2000, which is listed in the Guinness Book of World Records. He was also engaged in engraving banknotes for many countries, recent examples of his work including the Prime Ministerial portraits on the front of the new Canadian $5 and $100 bills.\"\nQ: How many stamps did Słania produce for various countries?\nA: Over 2,000\nB: 1000\nC: Almost 2,000\nD: Over 1,000\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"In 1956 Słania moved to Sweden, where three years later he began work for the Swedish Post Office and became their chief engraver. He produced over 1,000 stamps for Sweden and 28 other countries. His work is of such recognized quality and detail that he is one of the very few \"\"household names\"\" among philatelists. Some specialize in collecting his work alone. His 1,000th stamp was the magnificent \"\"Great Deeds by Swedish Kings\"\" by David Klöcker Ehrenstrahl in 2000, which is listed in the Guinness Book of World Records. He was also engaged in engraving banknotes for many countries, recent examples of his work including the Prime Ministerial portraits on the front of the new Canadian $5 and $100 bills.\"\nQ: How many stamps did Słania produce for various countries?\nA: Over 2,000\nB: 1000\nC: Almost 2,000\nD: Over 1,000\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.371787071228027,
+              false
+            ]
+          ],
+          [
+            [
+              -6.308602333068848,
+              false
+            ]
+          ],
+          [
+            [
+              -6.856623649597168,
+              false
+            ]
+          ],
+          [
+            [
+              -0.012568431906402111,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.371787071228027,
+            false
+          ],
+          [
+            -6.308602333068848,
+            false
+          ],
+          [
+            -6.856623649597168,
+            false
+          ],
+          [
+            -0.012568431906402111,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9ffc54c73635b88a822e9cf13e784f3f4589c007058eff581f362b1a2ce687b8",
+        "prompt_hash": "a6130a9efafc132d98e3bd440e5798d9f0b4169ad335d3b01b4a779447647be6",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 507,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Angkor_Archaeological_Park",
+          "question_number": 2,
+          "flores_passage": "Phnom Krom, 12 km southwest of Siem Reap. This hilltop temple was built at the end of the 9th century, during the reign of King Yasovarman. The gloomy atmosphere of the temple and the view over the Tonle Sap lake make the climb to the hill worthwhile. A visit to the site can be conveniently combined with a boat trip to the lake. The Angkor Pass is needed to enter the temple so do not forget to bring your passport along when heading to Tonle Sap.",
+          "question": "According to the passage, what is required for visitors to enter Phnom Krom?",
+          "mc_answer1": "Climbing past the Yasovarman temple",
+          "mc_answer2": "Traveling around Siem Reap",
+          "mc_answer3": "Getting the Angkor Pass",
+          "mc_answer4": "Boating around Tonle Sap",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Phnom Krom, 12 km southwest of Siem Reap. This hilltop temple was built at the end of the 9th century, during the reign of King Yasovarman. The gloomy atmosphere of the temple and the view over the Tonle Sap lake make the climb to the hill worthwhile. A visit to the site can be conveniently combined with a boat trip to the lake. The Angkor Pass is needed to enter the temple so do not forget to bring your passport along when heading to Tonle Sap.\nQ: According to the passage, what is required for visitors to enter Phnom Krom?\nA: Climbing past the Yasovarman temple\nB: Traveling around Siem Reap\nC: Getting the Angkor Pass\nD: Boating around Tonle Sap\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Phnom Krom, 12 km southwest of Siem Reap. This hilltop temple was built at the end of the 9th century, during the reign of King Yasovarman. The gloomy atmosphere of the temple and the view over the Tonle Sap lake make the climb to the hill worthwhile. A visit to the site can be conveniently combined with a boat trip to the lake. The Angkor Pass is needed to enter the temple so do not forget to bring your passport along when heading to Tonle Sap.\nQ: According to the passage, what is required for visitors to enter Phnom Krom?\nA: Climbing past the Yasovarman temple\nB: Traveling around Siem Reap\nC: Getting the Angkor Pass\nD: Boating around Tonle Sap\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Phnom Krom, 12 km southwest of Siem Reap. This hilltop temple was built at the end of the 9th century, during the reign of King Yasovarman. The gloomy atmosphere of the temple and the view over the Tonle Sap lake make the climb to the hill worthwhile. A visit to the site can be conveniently combined with a boat trip to the lake. The Angkor Pass is needed to enter the temple so do not forget to bring your passport along when heading to Tonle Sap.\nQ: According to the passage, what is required for visitors to enter Phnom Krom?\nA: Climbing past the Yasovarman temple\nB: Traveling around Siem Reap\nC: Getting the Angkor Pass\nD: Boating around Tonle Sap\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Phnom Krom, 12 km southwest of Siem Reap. This hilltop temple was built at the end of the 9th century, during the reign of King Yasovarman. The gloomy atmosphere of the temple and the view over the Tonle Sap lake make the climb to the hill worthwhile. A visit to the site can be conveniently combined with a boat trip to the lake. The Angkor Pass is needed to enter the temple so do not forget to bring your passport along when heading to Tonle Sap.\nQ: According to the passage, what is required for visitors to enter Phnom Krom?\nA: Climbing past the Yasovarman temple\nB: Traveling around Siem Reap\nC: Getting the Angkor Pass\nD: Boating around Tonle Sap\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.55179762840271,
+              false
+            ]
+          ],
+          [
+            [
+              -5.80111837387085,
+              false
+            ]
+          ],
+          [
+            [
+              -0.2574097216129303,
+              true
+            ]
+          ],
+          [
+            [
+              -8.6157808303833,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.55179762840271,
+            false
+          ],
+          [
+            -5.80111837387085,
+            false
+          ],
+          [
+            -0.2574097216129303,
+            true
+          ],
+          [
+            -8.6157808303833,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "882240b92ae975549c0f9090a3302ad3832b4924e0571898c32405915623bbd2",
+        "prompt_hash": "9556ed36ee0af5d493e9f3ecf26f5f7a657782b70dcf823f10c62c6fdbc5102c",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 126,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Cold_weather",
+          "question_number": 2,
+          "flores_passage": "The most common cause for accidents in winter is slippery roads, pavements (sidewalks) and especially steps. At a minimum, you need footwear with suitable soles. Summer shoes are usually very slippery on ice and snow, even some winter boots are deficient. The pattern should be deep enough, 5 mm (1/5 inch) or more, and the material soft enough in cold temperatures. Some boots have studs and there is studded add-on equipment for slippery conditions, suitable for most shoes and boots, for the heels or heels and sole. Heels should be low and wide. Sand, gravel or salt (calcium chloride) is often scattered on roads or paths to improve traction.",
+          "question": "Which of these would not help improve traction on icy roads during wintery conditions?",
+          "mc_answer1": "Salt",
+          "mc_answer2": "Gravel",
+          "mc_answer3": "Sand",
+          "mc_answer4": "Water",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: The most common cause for accidents in winter is slippery roads, pavements (sidewalks) and especially steps. At a minimum, you need footwear with suitable soles. Summer shoes are usually very slippery on ice and snow, even some winter boots are deficient. The pattern should be deep enough, 5 mm (1/5 inch) or more, and the material soft enough in cold temperatures. Some boots have studs and there is studded add-on equipment for slippery conditions, suitable for most shoes and boots, for the heels or heels and sole. Heels should be low and wide. Sand, gravel or salt (calcium chloride) is often scattered on roads or paths to improve traction.\nQ: Which of these would not help improve traction on icy roads during wintery conditions?\nA: Salt\nB: Gravel\nC: Sand\nD: Water\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The most common cause for accidents in winter is slippery roads, pavements (sidewalks) and especially steps. At a minimum, you need footwear with suitable soles. Summer shoes are usually very slippery on ice and snow, even some winter boots are deficient. The pattern should be deep enough, 5 mm (1/5 inch) or more, and the material soft enough in cold temperatures. Some boots have studs and there is studded add-on equipment for slippery conditions, suitable for most shoes and boots, for the heels or heels and sole. Heels should be low and wide. Sand, gravel or salt (calcium chloride) is often scattered on roads or paths to improve traction.\nQ: Which of these would not help improve traction on icy roads during wintery conditions?\nA: Salt\nB: Gravel\nC: Sand\nD: Water\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The most common cause for accidents in winter is slippery roads, pavements (sidewalks) and especially steps. At a minimum, you need footwear with suitable soles. Summer shoes are usually very slippery on ice and snow, even some winter boots are deficient. The pattern should be deep enough, 5 mm (1/5 inch) or more, and the material soft enough in cold temperatures. Some boots have studs and there is studded add-on equipment for slippery conditions, suitable for most shoes and boots, for the heels or heels and sole. Heels should be low and wide. Sand, gravel or salt (calcium chloride) is often scattered on roads or paths to improve traction.\nQ: Which of these would not help improve traction on icy roads during wintery conditions?\nA: Salt\nB: Gravel\nC: Sand\nD: Water\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The most common cause for accidents in winter is slippery roads, pavements (sidewalks) and especially steps. At a minimum, you need footwear with suitable soles. Summer shoes are usually very slippery on ice and snow, even some winter boots are deficient. The pattern should be deep enough, 5 mm (1/5 inch) or more, and the material soft enough in cold temperatures. Some boots have studs and there is studded add-on equipment for slippery conditions, suitable for most shoes and boots, for the heels or heels and sole. Heels should be low and wide. Sand, gravel or salt (calcium chloride) is often scattered on roads or paths to improve traction.\nQ: Which of these would not help improve traction on icy roads during wintery conditions?\nA: Salt\nB: Gravel\nC: Sand\nD: Water\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.520104885101318,
+              false
+            ]
+          ],
+          [
+            [
+              -6.921707630157471,
+              false
+            ]
+          ],
+          [
+            [
+              -7.548608303070068,
+              false
+            ]
+          ],
+          [
+            [
+              -0.028321821242570877,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.520104885101318,
+            false
+          ],
+          [
+            -6.921707630157471,
+            false
+          ],
+          [
+            -7.548608303070068,
+            false
+          ],
+          [
+            -0.028321821242570877,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "e95cae5246beae04682082b0c594e183bbbf681b6904ab35edafe2833d4e07a0",
+        "prompt_hash": "c333cf4888b2bcb1ca02644ef39c8465b60f0df7a833f1f7632ec441be56f289",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792530438.0980382,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

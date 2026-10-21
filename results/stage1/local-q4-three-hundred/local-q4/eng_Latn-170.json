@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 13,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Animal_Behavior/Population_Genetics",
+          "question_number": 1,
+          "flores_passage": "A population is the collection of organisms of a particular species within a given geographic area. When all individuals in a population are identical with regard to a particular phenotypic trait they are known as monomorphic. When the individuals show several variants of a particular trait they are polymorphic.",
+          "question": "Which term describes individuals that display variances of a certain phenotypic trait?",
+          "mc_answer1": "Monomorphic",
+          "mc_answer2": "Organisms",
+          "mc_answer3": "Species",
+          "mc_answer4": "Polymorphic",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: A population is the collection of organisms of a particular species within a given geographic area. When all individuals in a population are identical with regard to a particular phenotypic trait they are known as monomorphic. When the individuals show several variants of a particular trait they are polymorphic.\nQ: Which term describes individuals that display variances of a certain phenotypic trait?\nA: Monomorphic\nB: Organisms\nC: Species\nD: Polymorphic\nAnswer:",
+            " A"
+          ],
+          [
+            "P: A population is the collection of organisms of a particular species within a given geographic area. When all individuals in a population are identical with regard to a particular phenotypic trait they are known as monomorphic. When the individuals show several variants of a particular trait they are polymorphic.\nQ: Which term describes individuals that display variances of a certain phenotypic trait?\nA: Monomorphic\nB: Organisms\nC: Species\nD: Polymorphic\nAnswer:",
+            " B"
+          ],
+          [
+            "P: A population is the collection of organisms of a particular species within a given geographic area. When all individuals in a population are identical with regard to a particular phenotypic trait they are known as monomorphic. When the individuals show several variants of a particular trait they are polymorphic.\nQ: Which term describes individuals that display variances of a certain phenotypic trait?\nA: Monomorphic\nB: Organisms\nC: Species\nD: Polymorphic\nAnswer:",
+            " C"
+          ],
+          [
+            "P: A population is the collection of organisms of a particular species within a given geographic area. When all individuals in a population are identical with regard to a particular phenotypic trait they are known as monomorphic. When the individuals show several variants of a particular trait they are polymorphic.\nQ: Which term describes individuals that display variances of a certain phenotypic trait?\nA: Monomorphic\nB: Organisms\nC: Species\nD: Polymorphic\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.8933939933776855,
+              false
+            ]
+          ],
+          [
+            [
+              -6.6627516746521,
+              false
+            ]
+          ],
+          [
+            [
+              -6.404757976531982,
+              false
+            ]
+          ],
+          [
+            [
+              -0.04464862868189812,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.8933939933776855,
+            false
+          ],
+          [
+            -6.6627516746521,
+            false
+          ],
+          [
+            -6.404757976531982,
+            false
+          ],
+          [
+            -0.04464862868189812,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "63b6aa9850e62b460431512657ada6d3d438ee16ecb2af1dc1c9839f81ff79b4",
+        "prompt_hash": "26df2ee4d3819708e921b3c449c5dc7173bc7368067b90b26d65752e32c752e6",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 534,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Renault_F1_launch_criminal_complaint_against_former_driver_over_race-fixing_allegation",
+          "question_number": 2,
+          "flores_passage": "Piquet Jr. crashed in the 2008 Singapore Grand Prix just after an early pit stop for Fernando Alonso, bringing out the safety car. As the cars ahead of Alonso went in for fuel under the safety car, he moved up the pack to take victory. Piquet Jr. was sacked after the 2009 Hungarian Grand Prix.",
+          "question": "When did the crash occur?",
+          "mc_answer1": "Immediately after Alonso’s pit stop",
+          "mc_answer2": "While the other cars were fueling up",
+          "mc_answer3": "Before the safety car came out",
+          "mc_answer4": "After Piquet went in for fuel",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Piquet Jr. crashed in the 2008 Singapore Grand Prix just after an early pit stop for Fernando Alonso, bringing out the safety car. As the cars ahead of Alonso went in for fuel under the safety car, he moved up the pack to take victory. Piquet Jr. was sacked after the 2009 Hungarian Grand Prix.\nQ: When did the crash occur?\nA: Immediately after Alonso’s pit stop\nB: While the other cars were fueling up\nC: Before the safety car came out\nD: After Piquet went in for fuel\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Piquet Jr. crashed in the 2008 Singapore Grand Prix just after an early pit stop for Fernando Alonso, bringing out the safety car. As the cars ahead of Alonso went in for fuel under the safety car, he moved up the pack to take victory. Piquet Jr. was sacked after the 2009 Hungarian Grand Prix.\nQ: When did the crash occur?\nA: Immediately after Alonso’s pit stop\nB: While the other cars were fueling up\nC: Before the safety car came out\nD: After Piquet went in for fuel\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Piquet Jr. crashed in the 2008 Singapore Grand Prix just after an early pit stop for Fernando Alonso, bringing out the safety car. As the cars ahead of Alonso went in for fuel under the safety car, he moved up the pack to take victory. Piquet Jr. was sacked after the 2009 Hungarian Grand Prix.\nQ: When did the crash occur?\nA: Immediately after Alonso’s pit stop\nB: While the other cars were fueling up\nC: Before the safety car came out\nD: After Piquet went in for fuel\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Piquet Jr. crashed in the 2008 Singapore Grand Prix just after an early pit stop for Fernando Alonso, bringing out the safety car. As the cars ahead of Alonso went in for fuel under the safety car, he moved up the pack to take victory. Piquet Jr. was sacked after the 2009 Hungarian Grand Prix.\nQ: When did the crash occur?\nA: Immediately after Alonso’s pit stop\nB: While the other cars were fueling up\nC: Before the safety car came out\nD: After Piquet went in for fuel\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.0950541496276855,
+              false
+            ]
+          ],
+          [
+            [
+              -0.4821600914001465,
+              true
+            ]
+          ],
+          [
+            [
+              -5.164866924285889,
+              false
+            ]
+          ],
+          [
+            [
+              -5.275905132293701,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.0950541496276855,
+            false
+          ],
+          [
+            -0.4821600914001465,
+            true
+          ],
+          [
+            -5.164866924285889,
+            false
+          ],
+          [
+            -5.275905132293701,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "5f9a0ece998a06cf820bd5dd416d3a55b53e983dcbac9d84884e9571589e7c22",
+        "prompt_hash": "73f543db64b8988478dbe5d63f27633263c7746548213bed49c95ce5097a8384",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 761,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Sam_Simon,_%27The_Simpsons%27_co-creator,_dies_aged_59",
+          "question_number": 2,
+          "flores_passage": "Before The Simpsons Simon had worked on several shows in various positions. During the 1980s he worked on shows such as Taxi, Cheers, and The Tracy Ullman Show. In 1989 he helped create The Simpsons with Brooks and Groening, and was responsible for hiring the show's first writing team. Despite leaving the show in 1993 he kept the title of executive producer, and continued to receive tens of millions of dollars every season in royalties.",
+          "question": "Who hired the writing team for The Simpsons?",
+          "mc_answer1": "Brooks",
+          "mc_answer2": "Simon",
+          "mc_answer3": "Ullman",
+          "mc_answer4": "Groening",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Before The Simpsons Simon had worked on several shows in various positions. During the 1980s he worked on shows such as Taxi, Cheers, and The Tracy Ullman Show. In 1989 he helped create The Simpsons with Brooks and Groening, and was responsible for hiring the show's first writing team. Despite leaving the show in 1993 he kept the title of executive producer, and continued to receive tens of millions of dollars every season in royalties.\nQ: Who hired the writing team for The Simpsons?\nA: Brooks\nB: Simon\nC: Ullman\nD: Groening\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Before The Simpsons Simon had worked on several shows in various positions. During the 1980s he worked on shows such as Taxi, Cheers, and The Tracy Ullman Show. In 1989 he helped create The Simpsons with Brooks and Groening, and was responsible for hiring the show's first writing team. Despite leaving the show in 1993 he kept the title of executive producer, and continued to receive tens of millions of dollars every season in royalties.\nQ: Who hired the writing team for The Simpsons?\nA: Brooks\nB: Simon\nC: Ullman\nD: Groening\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Before The Simpsons Simon had worked on several shows in various positions. During the 1980s he worked on shows such as Taxi, Cheers, and The Tracy Ullman Show. In 1989 he helped create The Simpsons with Brooks and Groening, and was responsible for hiring the show's first writing team. Despite leaving the show in 1993 he kept the title of executive producer, and continued to receive tens of millions of dollars every season in royalties.\nQ: Who hired the writing team for The Simpsons?\nA: Brooks\nB: Simon\nC: Ullman\nD: Groening\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Before The Simpsons Simon had worked on several shows in various positions. During the 1980s he worked on shows such as Taxi, Cheers, and The Tracy Ullman Show. In 1989 he helped create The Simpsons with Brooks and Groening, and was responsible for hiring the show's first writing team. Despite leaving the show in 1993 he kept the title of executive producer, and continued to receive tens of millions of dollars every season in royalties.\nQ: Who hired the writing team for The Simpsons?\nA: Brooks\nB: Simon\nC: Ullman\nD: Groening\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.2633867263793945,
+              false
+            ]
+          ],
+          [
+            [
+              -0.34392085671424866,
+              true
+            ]
+          ],
+          [
+            [
+              -6.64540958404541,
+              false
+            ]
+          ],
+          [
+            [
+              -1.53455650806427,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.2633867263793945,
+            false
+          ],
+          [
+            -0.34392085671424866,
+            true
+          ],
+          [
+            -6.64540958404541,
+            false
+          ],
+          [
+            -1.53455650806427,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "11e49d67ea45fa9246ca1e6be44ab3037725a8be8b670f9ee9f01d2d7ce054ca",
+        "prompt_hash": "374a701c86f00c9048253f9907a9666f2c8fd3375bf38f24b8f6f7e2457d1235",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 527,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Support_for_an_Australian_republic_slips",
+          "question_number": 1,
+          "flores_passage": "Out of 1,400 people polled prior to the 2010 federal election, those who oppose Australia becoming a republic grew by 8 per cent since 2008. Caretaker Prime Minister Julia Gillard claimed during the campaign of the 2010 federal election that she believed Australia should become a republic at the end of Queen Elizabeth II's reign. 34 per cent of those in the poll share this view, wanting Queen Elizabeth II to be Australia's last monarch. At the extremes of the poll, 29 per cent of those surveyed believe Australia should become a republic as soon as possible, while 31 per cent believe Australia should never become a republic.",
+          "question": "What percentage of people surveyed support Australia becoming a republic immediately?",
+          "mc_answer1": "31 percent",
+          "mc_answer2": "29 percent",
+          "mc_answer3": "8 percent",
+          "mc_answer4": "34 percent",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Out of 1,400 people polled prior to the 2010 federal election, those who oppose Australia becoming a republic grew by 8 per cent since 2008. Caretaker Prime Minister Julia Gillard claimed during the campaign of the 2010 federal election that she believed Australia should become a republic at the end of Queen Elizabeth II's reign. 34 per cent of those in the poll share this view, wanting Queen Elizabeth II to be Australia's last monarch. At the extremes of the poll, 29 per cent of those surveyed believe Australia should become a republic as soon as possible, while 31 per cent believe Australia should never become a republic.\nQ: What percentage of people surveyed support Australia becoming a republic immediately?\nA: 31 percent\nB: 29 percent\nC: 8 percent\nD: 34 percent\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Out of 1,400 people polled prior to the 2010 federal election, those who oppose Australia becoming a republic grew by 8 per cent since 2008. Caretaker Prime Minister Julia Gillard claimed during the campaign of the 2010 federal election that she believed Australia should become a republic at the end of Queen Elizabeth II's reign. 34 per cent of those in the poll share this view, wanting Queen Elizabeth II to be Australia's last monarch. At the extremes of the poll, 29 per cent of those surveyed believe Australia should become a republic as soon as possible, while 31 per cent believe Australia should never become a republic.\nQ: What percentage of people surveyed support Australia becoming a republic immediately?\nA: 31 percent\nB: 29 percent\nC: 8 percent\nD: 34 percent\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Out of 1,400 people polled prior to the 2010 federal election, those who oppose Australia becoming a republic grew by 8 per cent since 2008. Caretaker Prime Minister Julia Gillard claimed during the campaign of the 2010 federal election that she believed Australia should become a republic at the end of Queen Elizabeth II's reign. 34 per cent of those in the poll share this view, wanting Queen Elizabeth II to be Australia's last monarch. At the extremes of the poll, 29 per cent of those surveyed believe Australia should become a republic as soon as possible, while 31 per cent believe Australia should never become a republic.\nQ: What percentage of people surveyed support Australia becoming a republic immediately?\nA: 31 percent\nB: 29 percent\nC: 8 percent\nD: 34 percent\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Out of 1,400 people polled prior to the 2010 federal election, those who oppose Australia becoming a republic grew by 8 per cent since 2008. Caretaker Prime Minister Julia Gillard claimed during the campaign of the 2010 federal election that she believed Australia should become a republic at the end of Queen Elizabeth II's reign. 34 per cent of those in the poll share this view, wanting Queen Elizabeth II to be Australia's last monarch. At the extremes of the poll, 29 per cent of those surveyed believe Australia should become a republic as soon as possible, while 31 per cent believe Australia should never become a republic.\nQ: What percentage of people surveyed support Australia becoming a republic immediately?\nA: 31 percent\nB: 29 percent\nC: 8 percent\nD: 34 percent\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.44440221786499,
+              false
+            ]
+          ],
+          [
+            [
+              -0.014833161607384682,
+              true
+            ]
+          ],
+          [
+            [
+              -8.420184135437012,
+              false
+            ]
+          ],
+          [
+            [
+              -7.505565166473389,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.44440221786499,
+            false
+          ],
+          [
+            -0.014833161607384682,
+            true
+          ],
+          [
+            -8.420184135437012,
+            false
+          ],
+          [
+            -7.505565166473389,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c1ed2877b2dfa258fbeda3c032075c5e783f362071bbde7ce14ed0757d23206d",
+        "prompt_hash": "fa3d604583be8e4c525196795d2a04b0ae3e5ba3a031e9b1dddddc6edddbf4f3",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 572,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Infectious_diseases",
+          "question_number": 2,
+          "flores_passage": "For those unfamiliar with medical jargon, the words infectious and contagious have distinct meanings. An infectious disease is one that is caused by a pathogen, such as a virus, bacterium, fungus or other parasites. A contagious disease is a disease which is easily transmitted by being in the vicinity of an infected person. Many governments require visitors entering, or residents leaving, their countries to be vaccinated for a range of diseases. These requirements may often depend on what countries a traveller has visited or intends to visit.",
+          "question": "According to the passage, what isn’t known to cause an infectious disease?",
+          "mc_answer1": "Vaccinations",
+          "mc_answer2": "Viruses",
+          "mc_answer3": "Bacteria",
+          "mc_answer4": "Fungus",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: For those unfamiliar with medical jargon, the words infectious and contagious have distinct meanings. An infectious disease is one that is caused by a pathogen, such as a virus, bacterium, fungus or other parasites. A contagious disease is a disease which is easily transmitted by being in the vicinity of an infected person. Many governments require visitors entering, or residents leaving, their countries to be vaccinated for a range of diseases. These requirements may often depend on what countries a traveller has visited or intends to visit.\nQ: According to the passage, what isn’t known to cause an infectious disease?\nA: Vaccinations\nB: Viruses\nC: Bacteria\nD: Fungus\nAnswer:",
+            " A"
+          ],
+          [
+            "P: For those unfamiliar with medical jargon, the words infectious and contagious have distinct meanings. An infectious disease is one that is caused by a pathogen, such as a virus, bacterium, fungus or other parasites. A contagious disease is a disease which is easily transmitted by being in the vicinity of an infected person. Many governments require visitors entering, or residents leaving, their countries to be vaccinated for a range of diseases. These requirements may often depend on what countries a traveller has visited or intends to visit.\nQ: According to the passage, what isn’t known to cause an infectious disease?\nA: Vaccinations\nB: Viruses\nC: Bacteria\nD: Fungus\nAnswer:",
+            " B"
+          ],
+          [
+            "P: For those unfamiliar with medical jargon, the words infectious and contagious have distinct meanings. An infectious disease is one that is caused by a pathogen, such as a virus, bacterium, fungus or other parasites. A contagious disease is a disease which is easily transmitted by being in the vicinity of an infected person. Many governments require visitors entering, or residents leaving, their countries to be vaccinated for a range of diseases. These requirements may often depend on what countries a traveller has visited or intends to visit.\nQ: According to the passage, what isn’t known to cause an infectious disease?\nA: Vaccinations\nB: Viruses\nC: Bacteria\nD: Fungus\nAnswer:",
+            " C"
+          ],
+          [
+            "P: For those unfamiliar with medical jargon, the words infectious and contagious have distinct meanings. An infectious disease is one that is caused by a pathogen, such as a virus, bacterium, fungus or other parasites. A contagious disease is a disease which is easily transmitted by being in the vicinity of an infected person. Many governments require visitors entering, or residents leaving, their countries to be vaccinated for a range of diseases. These requirements may often depend on what countries a traveller has visited or intends to visit.\nQ: According to the passage, what isn’t known to cause an infectious disease?\nA: Vaccinations\nB: Viruses\nC: Bacteria\nD: Fungus\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.04074447229504585,
+              true
+            ]
+          ],
+          [
+            [
+              -5.34005880355835,
+              false
+            ]
+          ],
+          [
+            [
+              -7.218458652496338,
+              false
+            ]
+          ],
+          [
+            [
+              -7.653348445892334,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.04074447229504585,
+            true
+          ],
+          [
+            -5.34005880355835,
+            false
+          ],
+          [
+            -7.218458652496338,
+            false
+          ],
+          [
+            -7.653348445892334,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "d2c20bdc9ef66b54b17c925ab8609c2ae585c94a7a7331d6e7d4643775999fe0",
+        "prompt_hash": "d6f7594c7fdf20325749e03463b83acecbc6ff182e93ed3331b7aa51bd14151c",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792529212.1711302,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

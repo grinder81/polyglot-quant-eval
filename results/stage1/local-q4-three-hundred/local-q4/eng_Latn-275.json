@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 132,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Remembering_the_Templars",
+          "question_number": 1,
+          "flores_passage": "To understand the Templars one must understand the context that prompted the creation of the order. The age where the events took place is commonly referred as the High Middle Ages the period of European history in the 11th, 12th, and 13th centuries (AD 1000–1300). The High Middle Ages were preceded by the Early Middle Ages and followed by the Late Middle Ages, which by convention ends around 1500.",
+          "question": "Which time period came before the age of the Templars?",
+          "mc_answer1": "The Late Middle Ages",
+          "mc_answer2": "The 12th century",
+          "mc_answer3": "The Early Middle Ages",
+          "mc_answer4": "The 13th century",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: To understand the Templars one must understand the context that prompted the creation of the order. The age where the events took place is commonly referred as the High Middle Ages the period of European history in the 11th, 12th, and 13th centuries (AD 1000–1300). The High Middle Ages were preceded by the Early Middle Ages and followed by the Late Middle Ages, which by convention ends around 1500.\nQ: Which time period came before the age of the Templars?\nA: The Late Middle Ages\nB: The 12th century\nC: The Early Middle Ages\nD: The 13th century\nAnswer:",
+            " A"
+          ],
+          [
+            "P: To understand the Templars one must understand the context that prompted the creation of the order. The age where the events took place is commonly referred as the High Middle Ages the period of European history in the 11th, 12th, and 13th centuries (AD 1000–1300). The High Middle Ages were preceded by the Early Middle Ages and followed by the Late Middle Ages, which by convention ends around 1500.\nQ: Which time period came before the age of the Templars?\nA: The Late Middle Ages\nB: The 12th century\nC: The Early Middle Ages\nD: The 13th century\nAnswer:",
+            " B"
+          ],
+          [
+            "P: To understand the Templars one must understand the context that prompted the creation of the order. The age where the events took place is commonly referred as the High Middle Ages the period of European history in the 11th, 12th, and 13th centuries (AD 1000–1300). The High Middle Ages were preceded by the Early Middle Ages and followed by the Late Middle Ages, which by convention ends around 1500.\nQ: Which time period came before the age of the Templars?\nA: The Late Middle Ages\nB: The 12th century\nC: The Early Middle Ages\nD: The 13th century\nAnswer:",
+            " C"
+          ],
+          [
+            "P: To understand the Templars one must understand the context that prompted the creation of the order. The age where the events took place is commonly referred as the High Middle Ages the period of European history in the 11th, 12th, and 13th centuries (AD 1000–1300). The High Middle Ages were preceded by the Early Middle Ages and followed by the Late Middle Ages, which by convention ends around 1500.\nQ: Which time period came before the age of the Templars?\nA: The Late Middle Ages\nB: The 12th century\nC: The Early Middle Ages\nD: The 13th century\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.7490603923797607,
+              false
+            ]
+          ],
+          [
+            [
+              -6.041813373565674,
+              false
+            ]
+          ],
+          [
+            [
+              -0.047438282519578934,
+              true
+            ]
+          ],
+          [
+            [
+              -8.202176094055176,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.7490603923797607,
+            false
+          ],
+          [
+            -6.041813373565674,
+            false
+          ],
+          [
+            -0.047438282519578934,
+            true
+          ],
+          [
+            -8.202176094055176,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "91adba33f7fc9f0b002f85731c30f14b1522b5941d6b083a051ffe6fdb0e1170",
+        "prompt_hash": "4557ffe9f5836863b2f08697601c4cb6cdd46d4e2c541407b833b1ca9ed89fd5",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 666,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/California_bans_sale_of_violent_video_games_to_minors",
+          "question_number": 1,
+          "flores_passage": "\"California Governor Arnold Schwarzenegger signed into law a bill that bans the sale or rental of violent video games to minors. The bill requires violent video games sold in the state of California to be labeled with a decal reading \"\"18\"\" and makes their sale to a minor punishable by a fine of $1000 per offense.\"",
+          "question": "What isn’t a part of the bill signed by Governor Arnold Schwarzenegger?",
+          "mc_answer1": "A ban on the sale or rental of violent video games to minors throughout California",
+          "mc_answer2": "Monetary fines for offenders",
+          "mc_answer3": "A ban on the sale or rental of violent video games to minors outside of California",
+          "mc_answer4": "A decal requirement on violent games",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"California Governor Arnold Schwarzenegger signed into law a bill that bans the sale or rental of violent video games to minors. The bill requires violent video games sold in the state of California to be labeled with a decal reading \"\"18\"\" and makes their sale to a minor punishable by a fine of $1000 per offense.\"\nQ: What isn’t a part of the bill signed by Governor Arnold Schwarzenegger?\nA: A ban on the sale or rental of violent video games to minors throughout California\nB: Monetary fines for offenders\nC: A ban on the sale or rental of violent video games to minors outside of California\nD: A decal requirement on violent games\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"California Governor Arnold Schwarzenegger signed into law a bill that bans the sale or rental of violent video games to minors. The bill requires violent video games sold in the state of California to be labeled with a decal reading \"\"18\"\" and makes their sale to a minor punishable by a fine of $1000 per offense.\"\nQ: What isn’t a part of the bill signed by Governor Arnold Schwarzenegger?\nA: A ban on the sale or rental of violent video games to minors throughout California\nB: Monetary fines for offenders\nC: A ban on the sale or rental of violent video games to minors outside of California\nD: A decal requirement on violent games\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"California Governor Arnold Schwarzenegger signed into law a bill that bans the sale or rental of violent video games to minors. The bill requires violent video games sold in the state of California to be labeled with a decal reading \"\"18\"\" and makes their sale to a minor punishable by a fine of $1000 per offense.\"\nQ: What isn’t a part of the bill signed by Governor Arnold Schwarzenegger?\nA: A ban on the sale or rental of violent video games to minors throughout California\nB: Monetary fines for offenders\nC: A ban on the sale or rental of violent video games to minors outside of California\nD: A decal requirement on violent games\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"California Governor Arnold Schwarzenegger signed into law a bill that bans the sale or rental of violent video games to minors. The bill requires violent video games sold in the state of California to be labeled with a decal reading \"\"18\"\" and makes their sale to a minor punishable by a fine of $1000 per offense.\"\nQ: What isn’t a part of the bill signed by Governor Arnold Schwarzenegger?\nA: A ban on the sale or rental of violent video games to minors throughout California\nB: Monetary fines for offenders\nC: A ban on the sale or rental of violent video games to minors outside of California\nD: A decal requirement on violent games\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -7.284915447235107,
+              false
+            ]
+          ],
+          [
+            [
+              -7.57735013961792,
+              false
+            ]
+          ],
+          [
+            [
+              -0.0056701768189668655,
+              true
+            ]
+          ],
+          [
+            [
+              -7.21161413192749,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -7.284915447235107,
+            false
+          ],
+          [
+            -7.57735013961792,
+            false
+          ],
+          [
+            -0.0056701768189668655,
+            true
+          ],
+          [
+            -7.21161413192749,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "b8da322d3be4e65cc4bfc487c83321a61ad44e6f40a3dee0acaa0f4f9cae8649",
+        "prompt_hash": "02399f99249d93fb10a2ac451695b880783533d0ba83ae968930ed867d611f2a",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 333,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Thousands_march_in_London_calling_for_David_Cameron%27s_resignation_over_tax_affairs",
+          "question_number": 1,
+          "flores_passage": "The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence. Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall. At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up. Around 11:29, the protest moved up Whitehall, past Trafalgar Square, along the Strand, passing by Aldwych and up Kingsway towards Holborn where the Conservative Party were holding their Spring Forum in the Grand Connaught Rooms hotel.",
+          "question": "According to the passage, what was being guarded by police?",
+          "mc_answer1": "Trafalgar Square",
+          "mc_answer2": "The Spring Forum",
+          "mc_answer3": "The Downing Street entrance",
+          "mc_answer4": "The Grand Connaught Rooms hotel",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence. Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall. At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up. Around 11:29, the protest moved up Whitehall, past Trafalgar Square, along the Strand, passing by Aldwych and up Kingsway towards Holborn where the Conservative Party were holding their Spring Forum in the Grand Connaught Rooms hotel.\nQ: According to the passage, what was being guarded by police?\nA: Trafalgar Square\nB: The Spring Forum\nC: The Downing Street entrance\nD: The Grand Connaught Rooms hotel\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence. Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall. At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up. Around 11:29, the protest moved up Whitehall, past Trafalgar Square, along the Strand, passing by Aldwych and up Kingsway towards Holborn where the Conservative Party were holding their Spring Forum in the Grand Connaught Rooms hotel.\nQ: According to the passage, what was being guarded by police?\nA: Trafalgar Square\nB: The Spring Forum\nC: The Downing Street entrance\nD: The Grand Connaught Rooms hotel\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence. Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall. At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up. Around 11:29, the protest moved up Whitehall, past Trafalgar Square, along the Strand, passing by Aldwych and up Kingsway towards Holborn where the Conservative Party were holding their Spring Forum in the Grand Connaught Rooms hotel.\nQ: According to the passage, what was being guarded by police?\nA: Trafalgar Square\nB: The Spring Forum\nC: The Downing Street entrance\nD: The Grand Connaught Rooms hotel\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The protest started around 11:00 local time (UTC+1) on Whitehall opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence. Just after 11:00, protesters blocked traffic on the northbound carriage in Whitehall. At 11:20, the police asked the protesters to move back on to the pavement, stating that they needed to balance the right to protest with the traffic building up. Around 11:29, the protest moved up Whitehall, past Trafalgar Square, along the Strand, passing by Aldwych and up Kingsway towards Holborn where the Conservative Party were holding their Spring Forum in the Grand Connaught Rooms hotel.\nQ: According to the passage, what was being guarded by police?\nA: Trafalgar Square\nB: The Spring Forum\nC: The Downing Street entrance\nD: The Grand Connaught Rooms hotel\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.595028400421143,
+              false
+            ]
+          ],
+          [
+            [
+              -5.08812952041626,
+              false
+            ]
+          ],
+          [
+            [
+              -0.04855973646044731,
+              true
+            ]
+          ],
+          [
+            [
+              -7.8924174308776855,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.595028400421143,
+            false
+          ],
+          [
+            -5.08812952041626,
+            false
+          ],
+          [
+            -0.04855973646044731,
+            true
+          ],
+          [
+            -7.8924174308776855,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "417f4ead81a9619e91ecbedd2a1defbb7293b3fd30e5d63f79dc54989970435b",
+        "prompt_hash": "75b2197d38950dc0f446659acf9b5d2d0f70d2a938a4c7245a15c55d6189cd67",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 587,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Buffalo-Pittsburgh_Highway",
+          "question_number": 1,
+          "flores_passage": "The stretch between Point Marion and Fairmont presents the most challenging driving conditions on the Buffalo-Pittsburgh Highway, passing frequently through isolated backwoods terrain. If you're not used to driving on country roads, keep your wits about you: steep grades, narrow lanes, and sharp curves predominate. Posted speed limits are noticeably lower than in previous and subsequent sections — commonly 35-40 mph (56-64 km/h) — and strict obedience to them is even more important than otherwise. Curiously, though, mobile phone service is much stronger here than along many other stretches of the route, e.g. the Pennsylvania Wilds.",
+          "question": "Which of the following statements does not accurately describe the drive between Point Marion and Fairmont?",
+          "mc_answer1": "There are long stretches of remote country road",
+          "mc_answer2": "Lanes are tight",
+          "mc_answer3": "Speed limits are rarely adhered to",
+          "mc_answer4": "Cellphone service should not be an issue",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The stretch between Point Marion and Fairmont presents the most challenging driving conditions on the Buffalo-Pittsburgh Highway, passing frequently through isolated backwoods terrain. If you're not used to driving on country roads, keep your wits about you: steep grades, narrow lanes, and sharp curves predominate. Posted speed limits are noticeably lower than in previous and subsequent sections — commonly 35-40 mph (56-64 km/h) — and strict obedience to them is even more important than otherwise. Curiously, though, mobile phone service is much stronger here than along many other stretches of the route, e.g. the Pennsylvania Wilds.\nQ: Which of the following statements does not accurately describe the drive between Point Marion and Fairmont?\nA: There are long stretches of remote country road\nB: Lanes are tight\nC: Speed limits are rarely adhered to\nD: Cellphone service should not be an issue\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The stretch between Point Marion and Fairmont presents the most challenging driving conditions on the Buffalo-Pittsburgh Highway, passing frequently through isolated backwoods terrain. If you're not used to driving on country roads, keep your wits about you: steep grades, narrow lanes, and sharp curves predominate. Posted speed limits are noticeably lower than in previous and subsequent sections — commonly 35-40 mph (56-64 km/h) — and strict obedience to them is even more important than otherwise. Curiously, though, mobile phone service is much stronger here than along many other stretches of the route, e.g. the Pennsylvania Wilds.\nQ: Which of the following statements does not accurately describe the drive between Point Marion and Fairmont?\nA: There are long stretches of remote country road\nB: Lanes are tight\nC: Speed limits are rarely adhered to\nD: Cellphone service should not be an issue\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The stretch between Point Marion and Fairmont presents the most challenging driving conditions on the Buffalo-Pittsburgh Highway, passing frequently through isolated backwoods terrain. If you're not used to driving on country roads, keep your wits about you: steep grades, narrow lanes, and sharp curves predominate. Posted speed limits are noticeably lower than in previous and subsequent sections — commonly 35-40 mph (56-64 km/h) — and strict obedience to them is even more important than otherwise. Curiously, though, mobile phone service is much stronger here than along many other stretches of the route, e.g. the Pennsylvania Wilds.\nQ: Which of the following statements does not accurately describe the drive between Point Marion and Fairmont?\nA: There are long stretches of remote country road\nB: Lanes are tight\nC: Speed limits are rarely adhered to\nD: Cellphone service should not be an issue\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The stretch between Point Marion and Fairmont presents the most challenging driving conditions on the Buffalo-Pittsburgh Highway, passing frequently through isolated backwoods terrain. If you're not used to driving on country roads, keep your wits about you: steep grades, narrow lanes, and sharp curves predominate. Posted speed limits are noticeably lower than in previous and subsequent sections — commonly 35-40 mph (56-64 km/h) — and strict obedience to them is even more important than otherwise. Curiously, though, mobile phone service is much stronger here than along many other stretches of the route, e.g. the Pennsylvania Wilds.\nQ: Which of the following statements does not accurately describe the drive between Point Marion and Fairmont?\nA: There are long stretches of remote country road\nB: Lanes are tight\nC: Speed limits are rarely adhered to\nD: Cellphone service should not be an issue\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.281961441040039,
+              false
+            ]
+          ],
+          [
+            [
+              -6.433135986328125,
+              false
+            ]
+          ],
+          [
+            [
+              -3.098863363265991,
+              false
+            ]
+          ],
+          [
+            [
+              -0.06838014721870422,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.281961441040039,
+            false
+          ],
+          [
+            -6.433135986328125,
+            false
+          ],
+          [
+            -3.098863363265991,
+            false
+          ],
+          [
+            -0.06838014721870422,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9134022fde8e81959743a3e084d0284e2e00dbb4dd04892772bbd8593a785f0d",
+        "prompt_hash": "ee2002c56d96e53416dcb91867299f8486c1c2e833640af04eb2ca9092afbdae",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 893,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Winter_driving",
+          "question_number": 1,
+          "flores_passage": "Anyone who's going to drive at high latitudes or over mountain passes should consider the possibility of snow, ice, or freezing temperatures. On icy and snowy roadways, friction is low and you cannot drive as if you were on bare asphalt. During blizzards, enough snow to get you stuck can fall in very little time. Visibility may also be restricted by falling or blowing snow or by condensation or ice on vehicle windows. On the other hand, icy and snowy conditions are normal in many countries, and traffic goes on mostly uninterrupted all year round.",
+          "question": "Which of the following would likely cause the least problems for a driver traveling through mountain passes?",
+          "mc_answer1": "Heavy traffic ",
+          "mc_answer2": "Low friction",
+          "mc_answer3": "Excessive condensation",
+          "mc_answer4": "Reduced visibility",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Anyone who's going to drive at high latitudes or over mountain passes should consider the possibility of snow, ice, or freezing temperatures. On icy and snowy roadways, friction is low and you cannot drive as if you were on bare asphalt. During blizzards, enough snow to get you stuck can fall in very little time. Visibility may also be restricted by falling or blowing snow or by condensation or ice on vehicle windows. On the other hand, icy and snowy conditions are normal in many countries, and traffic goes on mostly uninterrupted all year round.\nQ: Which of the following would likely cause the least problems for a driver traveling through mountain passes?\nA: Heavy traffic \nB: Low friction\nC: Excessive condensation\nD: Reduced visibility\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Anyone who's going to drive at high latitudes or over mountain passes should consider the possibility of snow, ice, or freezing temperatures. On icy and snowy roadways, friction is low and you cannot drive as if you were on bare asphalt. During blizzards, enough snow to get you stuck can fall in very little time. Visibility may also be restricted by falling or blowing snow or by condensation or ice on vehicle windows. On the other hand, icy and snowy conditions are normal in many countries, and traffic goes on mostly uninterrupted all year round.\nQ: Which of the following would likely cause the least problems for a driver traveling through mountain passes?\nA: Heavy traffic \nB: Low friction\nC: Excessive condensation\nD: Reduced visibility\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Anyone who's going to drive at high latitudes or over mountain passes should consider the possibility of snow, ice, or freezing temperatures. On icy and snowy roadways, friction is low and you cannot drive as if you were on bare asphalt. During blizzards, enough snow to get you stuck can fall in very little time. Visibility may also be restricted by falling or blowing snow or by condensation or ice on vehicle windows. On the other hand, icy and snowy conditions are normal in many countries, and traffic goes on mostly uninterrupted all year round.\nQ: Which of the following would likely cause the least problems for a driver traveling through mountain passes?\nA: Heavy traffic \nB: Low friction\nC: Excessive condensation\nD: Reduced visibility\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Anyone who's going to drive at high latitudes or over mountain passes should consider the possibility of snow, ice, or freezing temperatures. On icy and snowy roadways, friction is low and you cannot drive as if you were on bare asphalt. During blizzards, enough snow to get you stuck can fall in very little time. Visibility may also be restricted by falling or blowing snow or by condensation or ice on vehicle windows. On the other hand, icy and snowy conditions are normal in many countries, and traffic goes on mostly uninterrupted all year round.\nQ: Which of the following would likely cause the least problems for a driver traveling through mountain passes?\nA: Heavy traffic \nB: Low friction\nC: Excessive condensation\nD: Reduced visibility\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.14805127680301666,
+              true
+            ]
+          ],
+          [
+            [
+              -2.2127389907836914,
+              false
+            ]
+          ],
+          [
+            [
+              -4.458434104919434,
+              false
+            ]
+          ],
+          [
+            [
+              -5.022269248962402,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.14805127680301666,
+            true
+          ],
+          [
+            -2.2127389907836914,
+            false
+          ],
+          [
+            -4.458434104919434,
+            false
+          ],
+          [
+            -5.022269248962402,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "e1416af4395cf081b4bced7ae66a76bb5f253014a3c1d408b7f5ce71fde08b12",
+        "prompt_hash": "70553f269a469e7925a676aaffe77e851e262d71c5e4727a8d4d7d01652a1f7d",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792530500.4240072,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

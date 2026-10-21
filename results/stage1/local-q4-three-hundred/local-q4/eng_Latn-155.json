@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 29,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Coaching_Youth_Middle_Distance_Runners/Introduction",
+          "question_number": 1,
+          "flores_passage": "With the change from the quarter to the half mile run, speed becomes of much less importance and endurance becomes an absolute necessity. Of course a first-class half-miler, a man who can beat two minutes, must be possessed of a fair amount of speed, but endurance must be cultivated at all hazards. Some cross country running during the winter, combined with gymnasium work for the upper part of the body, is the best preparation for the running season.",
+          "question": "According to the passage, which of the following would be the most beneficial for a runner preparing for the upcoming season?",
+          "mc_answer1": "Practicing cross country running in the summer",
+          "mc_answer2": "Focusing on cultivating speed while training",
+          "mc_answer3": "Beating a three minute time",
+          "mc_answer4": "Utilizing the gym to work out the upper body",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: With the change from the quarter to the half mile run, speed becomes of much less importance and endurance becomes an absolute necessity. Of course a first-class half-miler, a man who can beat two minutes, must be possessed of a fair amount of speed, but endurance must be cultivated at all hazards. Some cross country running during the winter, combined with gymnasium work for the upper part of the body, is the best preparation for the running season.\nQ: According to the passage, which of the following would be the most beneficial for a runner preparing for the upcoming season?\nA: Practicing cross country running in the summer\nB: Focusing on cultivating speed while training\nC: Beating a three minute time\nD: Utilizing the gym to work out the upper body\nAnswer:",
+            " A"
+          ],
+          [
+            "P: With the change from the quarter to the half mile run, speed becomes of much less importance and endurance becomes an absolute necessity. Of course a first-class half-miler, a man who can beat two minutes, must be possessed of a fair amount of speed, but endurance must be cultivated at all hazards. Some cross country running during the winter, combined with gymnasium work for the upper part of the body, is the best preparation for the running season.\nQ: According to the passage, which of the following would be the most beneficial for a runner preparing for the upcoming season?\nA: Practicing cross country running in the summer\nB: Focusing on cultivating speed while training\nC: Beating a three minute time\nD: Utilizing the gym to work out the upper body\nAnswer:",
+            " B"
+          ],
+          [
+            "P: With the change from the quarter to the half mile run, speed becomes of much less importance and endurance becomes an absolute necessity. Of course a first-class half-miler, a man who can beat two minutes, must be possessed of a fair amount of speed, but endurance must be cultivated at all hazards. Some cross country running during the winter, combined with gymnasium work for the upper part of the body, is the best preparation for the running season.\nQ: According to the passage, which of the following would be the most beneficial for a runner preparing for the upcoming season?\nA: Practicing cross country running in the summer\nB: Focusing on cultivating speed while training\nC: Beating a three minute time\nD: Utilizing the gym to work out the upper body\nAnswer:",
+            " C"
+          ],
+          [
+            "P: With the change from the quarter to the half mile run, speed becomes of much less importance and endurance becomes an absolute necessity. Of course a first-class half-miler, a man who can beat two minutes, must be possessed of a fair amount of speed, but endurance must be cultivated at all hazards. Some cross country running during the winter, combined with gymnasium work for the upper part of the body, is the best preparation for the running season.\nQ: According to the passage, which of the following would be the most beneficial for a runner preparing for the upcoming season?\nA: Practicing cross country running in the summer\nB: Focusing on cultivating speed while training\nC: Beating a three minute time\nD: Utilizing the gym to work out the upper body\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.15924416482448578,
+              true
+            ]
+          ],
+          [
+            [
+              -3.7496256828308105,
+              false
+            ]
+          ],
+          [
+            [
+              -2.8909411430358887,
+              false
+            ]
+          ],
+          [
+            [
+              -4.477906703948975,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.15924416482448578,
+            true
+          ],
+          [
+            -3.7496256828308105,
+            false
+          ],
+          [
+            -2.8909411430358887,
+            false
+          ],
+          [
+            -4.477906703948975,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "d63c0a60c6db8108e8cbf86b2714bcc5da15b8fbe85c19624b2f88a4360c4251",
+        "prompt_hash": "a284cbcfbaef3c399c1f346266f0f0bc4ba8c454b8f56b622aa97ed32230b8a8",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 458,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Exercise_as_it_relates_to_Disease/Physical_activity_effect_on_mental_health_in_people_with_chronic_lower_back_pain",
+          "question_number": 1,
+          "flores_passage": "The study found that depression, fear and catastrophising mediated the relationship between pain and disability in lower back pain sufferers. Only the effects of catastrophizing, not depression and fear was conditional of regular weekly structured PA sessions. Those participating in regular activity required more support in terms of negative perception of pain distinguishing the differences of chronic pain and discomfort feel from normal physical movement.",
+          "question": "According to the passage, participants in regular activity required more support for what?",
+          "mc_answer1": "Negative perception of pain",
+          "mc_answer2": "The lower back",
+          "mc_answer3": "Depression",
+          "mc_answer4": "Fear",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The study found that depression, fear and catastrophising mediated the relationship between pain and disability in lower back pain sufferers. Only the effects of catastrophizing, not depression and fear was conditional of regular weekly structured PA sessions. Those participating in regular activity required more support in terms of negative perception of pain distinguishing the differences of chronic pain and discomfort feel from normal physical movement.\nQ: According to the passage, participants in regular activity required more support for what?\nA: Negative perception of pain\nB: The lower back\nC: Depression\nD: Fear\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The study found that depression, fear and catastrophising mediated the relationship between pain and disability in lower back pain sufferers. Only the effects of catastrophizing, not depression and fear was conditional of regular weekly structured PA sessions. Those participating in regular activity required more support in terms of negative perception of pain distinguishing the differences of chronic pain and discomfort feel from normal physical movement.\nQ: According to the passage, participants in regular activity required more support for what?\nA: Negative perception of pain\nB: The lower back\nC: Depression\nD: Fear\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The study found that depression, fear and catastrophising mediated the relationship between pain and disability in lower back pain sufferers. Only the effects of catastrophizing, not depression and fear was conditional of regular weekly structured PA sessions. Those participating in regular activity required more support in terms of negative perception of pain distinguishing the differences of chronic pain and discomfort feel from normal physical movement.\nQ: According to the passage, participants in regular activity required more support for what?\nA: Negative perception of pain\nB: The lower back\nC: Depression\nD: Fear\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The study found that depression, fear and catastrophising mediated the relationship between pain and disability in lower back pain sufferers. Only the effects of catastrophizing, not depression and fear was conditional of regular weekly structured PA sessions. Those participating in regular activity required more support in terms of negative perception of pain distinguishing the differences of chronic pain and discomfort feel from normal physical movement.\nQ: According to the passage, participants in regular activity required more support for what?\nA: Negative perception of pain\nB: The lower back\nC: Depression\nD: Fear\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.09427189826965332,
+              true
+            ]
+          ],
+          [
+            [
+              -4.970595359802246,
+              false
+            ]
+          ],
+          [
+            [
+              -4.716269493103027,
+              false
+            ]
+          ],
+          [
+            [
+              -5.400649070739746,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.09427189826965332,
+            true
+          ],
+          [
+            -4.970595359802246,
+            false
+          ],
+          [
+            -4.716269493103027,
+            false
+          ],
+          [
+            -5.400649070739746,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f484b7d0a58f3bd5451ae9c6d9c1892bfdb636fa76942335b33671688b9aac56",
+        "prompt_hash": "d4edcd7c9a9088180c587ac4e6c388a114c7808a1e19f51a40957988ade77b5d",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 201,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Dinosaurs/Extinction",
+          "question_number": 1,
+          "flores_passage": "Many paleontologists today believe that one group of dinosaurs survived and is alive today. We call them birds. Many people don't think about them as dinosaurs because they have feathers and can fly. But there are a lot of things about birds that still look like a dinosaur. They have feet with scales and claws, they lay eggs, and they walk on their two back legs like a T-Rex.",
+          "question": "Which of the following characteristics is not commonly associated with dinosaurs?",
+          "mc_answer1": "Back-leg walking",
+          "mc_answer2": "Feathers",
+          "mc_answer3": "Egg laying",
+          "mc_answer4": "Clawed feet",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Many paleontologists today believe that one group of dinosaurs survived and is alive today. We call them birds. Many people don't think about them as dinosaurs because they have feathers and can fly. But there are a lot of things about birds that still look like a dinosaur. They have feet with scales and claws, they lay eggs, and they walk on their two back legs like a T-Rex.\nQ: Which of the following characteristics is not commonly associated with dinosaurs?\nA: Back-leg walking\nB: Feathers\nC: Egg laying\nD: Clawed feet\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Many paleontologists today believe that one group of dinosaurs survived and is alive today. We call them birds. Many people don't think about them as dinosaurs because they have feathers and can fly. But there are a lot of things about birds that still look like a dinosaur. They have feet with scales and claws, they lay eggs, and they walk on their two back legs like a T-Rex.\nQ: Which of the following characteristics is not commonly associated with dinosaurs?\nA: Back-leg walking\nB: Feathers\nC: Egg laying\nD: Clawed feet\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Many paleontologists today believe that one group of dinosaurs survived and is alive today. We call them birds. Many people don't think about them as dinosaurs because they have feathers and can fly. But there are a lot of things about birds that still look like a dinosaur. They have feet with scales and claws, they lay eggs, and they walk on their two back legs like a T-Rex.\nQ: Which of the following characteristics is not commonly associated with dinosaurs?\nA: Back-leg walking\nB: Feathers\nC: Egg laying\nD: Clawed feet\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Many paleontologists today believe that one group of dinosaurs survived and is alive today. We call them birds. Many people don't think about them as dinosaurs because they have feathers and can fly. But there are a lot of things about birds that still look like a dinosaur. They have feet with scales and claws, they lay eggs, and they walk on their two back legs like a T-Rex.\nQ: Which of the following characteristics is not commonly associated with dinosaurs?\nA: Back-leg walking\nB: Feathers\nC: Egg laying\nD: Clawed feet\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.04445001110434532,
+              true
+            ]
+          ],
+          [
+            [
+              -3.346654176712036,
+              false
+            ]
+          ],
+          [
+            [
+              -7.541214942932129,
+              false
+            ]
+          ],
+          [
+            [
+              -7.358288764953613,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.04445001110434532,
+            true
+          ],
+          [
+            -3.346654176712036,
+            false
+          ],
+          [
+            -7.541214942932129,
+            false
+          ],
+          [
+            -7.358288764953613,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "6f38893f34c57b83680334d2ed0dd5228ae8ecdfa62260e61b3ce53a7974d542",
+        "prompt_hash": "4685a11cf93da899c7210fd0cf97eba41d0f31acfad6ac515056e7ebe80d0899",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 61,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Large_earthquake_off_Japan,_tsunami_warning_issued",
+          "question_number": 2,
+          "flores_passage": "NHK also reported that the Kashiwazaki Kariwa nuclear power plant in Niigata prefecture was operating normally. Hokuriku Electric Power Co. reported no effects from the earthquake and that the Number 1 and 2 reactors at its Shika nuclear power plant were shut down. It is reported that some 9400 homes in the region are without water and approximately 100 without electricity. Some roads have been damaged, railway service interrupted in the affected areas, and the Noto Airport in Ishikawa prefecture remains closed.",
+          "question": "According to the passage, which of the following sustained damage due to the earthquake?",
+          "mc_answer1": "Some homes",
+          "mc_answer2": "Two reactors at the Shika plant",
+          "mc_answer3": "Some roads",
+          "mc_answer4": "The Noto Airport",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: NHK also reported that the Kashiwazaki Kariwa nuclear power plant in Niigata prefecture was operating normally. Hokuriku Electric Power Co. reported no effects from the earthquake and that the Number 1 and 2 reactors at its Shika nuclear power plant were shut down. It is reported that some 9400 homes in the region are without water and approximately 100 without electricity. Some roads have been damaged, railway service interrupted in the affected areas, and the Noto Airport in Ishikawa prefecture remains closed.\nQ: According to the passage, which of the following sustained damage due to the earthquake?\nA: Some homes\nB: Two reactors at the Shika plant\nC: Some roads\nD: The Noto Airport\nAnswer:",
+            " A"
+          ],
+          [
+            "P: NHK also reported that the Kashiwazaki Kariwa nuclear power plant in Niigata prefecture was operating normally. Hokuriku Electric Power Co. reported no effects from the earthquake and that the Number 1 and 2 reactors at its Shika nuclear power plant were shut down. It is reported that some 9400 homes in the region are without water and approximately 100 without electricity. Some roads have been damaged, railway service interrupted in the affected areas, and the Noto Airport in Ishikawa prefecture remains closed.\nQ: According to the passage, which of the following sustained damage due to the earthquake?\nA: Some homes\nB: Two reactors at the Shika plant\nC: Some roads\nD: The Noto Airport\nAnswer:",
+            " B"
+          ],
+          [
+            "P: NHK also reported that the Kashiwazaki Kariwa nuclear power plant in Niigata prefecture was operating normally. Hokuriku Electric Power Co. reported no effects from the earthquake and that the Number 1 and 2 reactors at its Shika nuclear power plant were shut down. It is reported that some 9400 homes in the region are without water and approximately 100 without electricity. Some roads have been damaged, railway service interrupted in the affected areas, and the Noto Airport in Ishikawa prefecture remains closed.\nQ: According to the passage, which of the following sustained damage due to the earthquake?\nA: Some homes\nB: Two reactors at the Shika plant\nC: Some roads\nD: The Noto Airport\nAnswer:",
+            " C"
+          ],
+          [
+            "P: NHK also reported that the Kashiwazaki Kariwa nuclear power plant in Niigata prefecture was operating normally. Hokuriku Electric Power Co. reported no effects from the earthquake and that the Number 1 and 2 reactors at its Shika nuclear power plant were shut down. It is reported that some 9400 homes in the region are without water and approximately 100 without electricity. Some roads have been damaged, railway service interrupted in the affected areas, and the Noto Airport in Ishikawa prefecture remains closed.\nQ: According to the passage, which of the following sustained damage due to the earthquake?\nA: Some homes\nB: Two reactors at the Shika plant\nC: Some roads\nD: The Noto Airport\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.2332342863082886,
+              false
+            ]
+          ],
+          [
+            [
+              -6.654071807861328,
+              false
+            ]
+          ],
+          [
+            [
+              -0.42645254731178284,
+              true
+            ]
+          ],
+          [
+            [
+              -5.7826995849609375,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.2332342863082886,
+            false
+          ],
+          [
+            -6.654071807861328,
+            false
+          ],
+          [
+            -0.42645254731178284,
+            true
+          ],
+          [
+            -5.7826995849609375,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c351e6869182c25dea8586c0180de713e95dff9a0f8ec345a5213bd3b9f5155c",
+        "prompt_hash": "24b4d2aa18f0b128a4c42eb85d47c9705e34f2d9f28f0563f5fd3507aa738ed7",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 579,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Teen_post_officer_hides_400_New_Year_cards_in_Japanese_snow",
+          "question_number": 1,
+          "flores_passage": "The issue started on January 1st when dozens of local residents started complaining to the Obanazawa Post Office that they hadn't received their traditional and regular New Year cards. Yesterday, the post office released their apology to citizens and the media after discovering that the boy had hidden more than 600 postal documents, including 429 New Year postcards, which weren't delivered to their intended recipients.",
+          "question": "Who was responsible for the missing postal documents?",
+          "mc_answer1": "Postal workers",
+          "mc_answer2": "A group of Obanazawa residents",
+          "mc_answer3": "A boy",
+          "mc_answer4": "The media",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The issue started on January 1st when dozens of local residents started complaining to the Obanazawa Post Office that they hadn't received their traditional and regular New Year cards. Yesterday, the post office released their apology to citizens and the media after discovering that the boy had hidden more than 600 postal documents, including 429 New Year postcards, which weren't delivered to their intended recipients.\nQ: Who was responsible for the missing postal documents?\nA: Postal workers\nB: A group of Obanazawa residents\nC: A boy\nD: The media\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The issue started on January 1st when dozens of local residents started complaining to the Obanazawa Post Office that they hadn't received their traditional and regular New Year cards. Yesterday, the post office released their apology to citizens and the media after discovering that the boy had hidden more than 600 postal documents, including 429 New Year postcards, which weren't delivered to their intended recipients.\nQ: Who was responsible for the missing postal documents?\nA: Postal workers\nB: A group of Obanazawa residents\nC: A boy\nD: The media\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The issue started on January 1st when dozens of local residents started complaining to the Obanazawa Post Office that they hadn't received their traditional and regular New Year cards. Yesterday, the post office released their apology to citizens and the media after discovering that the boy had hidden more than 600 postal documents, including 429 New Year postcards, which weren't delivered to their intended recipients.\nQ: Who was responsible for the missing postal documents?\nA: Postal workers\nB: A group of Obanazawa residents\nC: A boy\nD: The media\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The issue started on January 1st when dozens of local residents started complaining to the Obanazawa Post Office that they hadn't received their traditional and regular New Year cards. Yesterday, the post office released their apology to citizens and the media after discovering that the boy had hidden more than 600 postal documents, including 429 New Year postcards, which weren't delivered to their intended recipients.\nQ: Who was responsible for the missing postal documents?\nA: Postal workers\nB: A group of Obanazawa residents\nC: A boy\nD: The media\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.139397382736206,
+              false
+            ]
+          ],
+          [
+            [
+              -3.3697307109832764,
+              false
+            ]
+          ],
+          [
+            [
+              -0.2357376664876938,
+              true
+            ]
+          ],
+          [
+            [
+              -5.654689788818359,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.139397382736206,
+            false
+          ],
+          [
+            -3.3697307109832764,
+            false
+          ],
+          [
+            -0.2357376664876938,
+            true
+          ],
+          [
+            -5.654689788818359,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "ad60570b832dcea3742dfe8ab02282c0d64ae1c0d2683b689a548cc8cb780e05",
+        "prompt_hash": "60e6417b8b8cf5563bb4ed83f9eb80c49f898877b66a0557a300a392b3017e03",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792529054.4371343,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

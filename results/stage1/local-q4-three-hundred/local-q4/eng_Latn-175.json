@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 64,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/First_Aid/Primary_Assessment_%26_Basic_Life_Support",
+          "question_number": 1,
+          "flores_passage": "To Check the victim, you must first survey the scene to ensure your safety. You need to notice the victim's position as you approach him or her and any automatic red flags. If you get hurt trying to help, you may only serve to make matters worse.",
+          "question": "According to the passage, what is the appropriate first step when assessing a victim?",
+          "mc_answer1": "Observe the scene",
+          "mc_answer2": "Approach the victim",
+          "mc_answer3": "Check the victim’s position",
+          "mc_answer4": "Wait for help",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: To Check the victim, you must first survey the scene to ensure your safety. You need to notice the victim's position as you approach him or her and any automatic red flags. If you get hurt trying to help, you may only serve to make matters worse.\nQ: According to the passage, what is the appropriate first step when assessing a victim?\nA: Observe the scene\nB: Approach the victim\nC: Check the victim’s position\nD: Wait for help\nAnswer:",
+            " A"
+          ],
+          [
+            "P: To Check the victim, you must first survey the scene to ensure your safety. You need to notice the victim's position as you approach him or her and any automatic red flags. If you get hurt trying to help, you may only serve to make matters worse.\nQ: According to the passage, what is the appropriate first step when assessing a victim?\nA: Observe the scene\nB: Approach the victim\nC: Check the victim’s position\nD: Wait for help\nAnswer:",
+            " B"
+          ],
+          [
+            "P: To Check the victim, you must first survey the scene to ensure your safety. You need to notice the victim's position as you approach him or her and any automatic red flags. If you get hurt trying to help, you may only serve to make matters worse.\nQ: According to the passage, what is the appropriate first step when assessing a victim?\nA: Observe the scene\nB: Approach the victim\nC: Check the victim’s position\nD: Wait for help\nAnswer:",
+            " C"
+          ],
+          [
+            "P: To Check the victim, you must first survey the scene to ensure your safety. You need to notice the victim's position as you approach him or her and any automatic red flags. If you get hurt trying to help, you may only serve to make matters worse.\nQ: According to the passage, what is the appropriate first step when assessing a victim?\nA: Observe the scene\nB: Approach the victim\nC: Check the victim’s position\nD: Wait for help\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.08975601941347122,
+              true
+            ]
+          ],
+          [
+            [
+              -5.261146545410156,
+              false
+            ]
+          ],
+          [
+            [
+              -3.3820934295654297,
+              false
+            ]
+          ],
+          [
+            [
+              -5.512556076049805,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.08975601941347122,
+            true
+          ],
+          [
+            -5.261146545410156,
+            false
+          ],
+          [
+            -3.3820934295654297,
+            false
+          ],
+          [
+            -5.512556076049805,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "1517b2d3518894608d92e0a2ea2b6ced228bfe7ef63b4ab35db03cba261598f3",
+        "prompt_hash": "f506571f47b69cbe97f2988f92b3aef24bd4f8e5c754b6f38bfe871c503ec4e7",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 756,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Big_Cats/Meet_The_Cats",
+          "question_number": 2,
+          "flores_passage": "Under them are more medium sized cats that eat medium sized prey ranging from rabbits to antelopes and deer. Finally, there are many small cats (including loose pet cats) that eat the far more numerous small prey like insects, rodents, lizards, and birds. The secret to their success is the concept of the niche, a special job each cat holds that keeps it from competing with others.",
+          "question": "Smaller cats commonly hunt which of the following?",
+          "mc_answer1": "Rodents",
+          "mc_answer2": "Rabbits",
+          "mc_answer3": "Antelopes",
+          "mc_answer4": "Deer",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Under them are more medium sized cats that eat medium sized prey ranging from rabbits to antelopes and deer. Finally, there are many small cats (including loose pet cats) that eat the far more numerous small prey like insects, rodents, lizards, and birds. The secret to their success is the concept of the niche, a special job each cat holds that keeps it from competing with others.\nQ: Smaller cats commonly hunt which of the following?\nA: Rodents\nB: Rabbits\nC: Antelopes\nD: Deer\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Under them are more medium sized cats that eat medium sized prey ranging from rabbits to antelopes and deer. Finally, there are many small cats (including loose pet cats) that eat the far more numerous small prey like insects, rodents, lizards, and birds. The secret to their success is the concept of the niche, a special job each cat holds that keeps it from competing with others.\nQ: Smaller cats commonly hunt which of the following?\nA: Rodents\nB: Rabbits\nC: Antelopes\nD: Deer\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Under them are more medium sized cats that eat medium sized prey ranging from rabbits to antelopes and deer. Finally, there are many small cats (including loose pet cats) that eat the far more numerous small prey like insects, rodents, lizards, and birds. The secret to their success is the concept of the niche, a special job each cat holds that keeps it from competing with others.\nQ: Smaller cats commonly hunt which of the following?\nA: Rodents\nB: Rabbits\nC: Antelopes\nD: Deer\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Under them are more medium sized cats that eat medium sized prey ranging from rabbits to antelopes and deer. Finally, there are many small cats (including loose pet cats) that eat the far more numerous small prey like insects, rodents, lizards, and birds. The secret to their success is the concept of the niche, a special job each cat holds that keeps it from competing with others.\nQ: Smaller cats commonly hunt which of the following?\nA: Rodents\nB: Rabbits\nC: Antelopes\nD: Deer\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.07740326970815659,
+              true
+            ]
+          ],
+          [
+            [
+              -4.198752403259277,
+              false
+            ]
+          ],
+          [
+            [
+              -5.700812339782715,
+              false
+            ]
+          ],
+          [
+            [
+              -6.750532150268555,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.07740326970815659,
+            true
+          ],
+          [
+            -4.198752403259277,
+            false
+          ],
+          [
+            -5.700812339782715,
+            false
+          ],
+          [
+            -6.750532150268555,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "fad9fc787a1ed06b80f0cf28905f72efcdf6d1b2af191606a6b4080eeb7c61c6",
+        "prompt_hash": "2a7935e6284f2fea012078abf816491a1ba66c4d7a3b9115feeff9aadc326929",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 827,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Crossing_guard_killed_by_truck_in_Glasgow,_Scotland",
+          "question_number": 1,
+          "flores_passage": "\"After the accident occurred, Gibson was transported to a hospital but died shortly afterwards. The truck driver, who is aged 64, was not injured in the crash. The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day. A person working in a garage near where the accident occurred said: \"\"There were children waiting to cross the road and they were all screaming and crying.\"\" They all ran back from where the accident had happened.\"",
+          "question": "Who was injured in the crash?",
+          "mc_answer1": "Gibson",
+          "mc_answer2": "A garage worker",
+          "mc_answer3": "Children",
+          "mc_answer4": "A truck driver",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"After the accident occurred, Gibson was transported to a hospital but died shortly afterwards. The truck driver, who is aged 64, was not injured in the crash. The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day. A person working in a garage near where the accident occurred said: \"\"There were children waiting to cross the road and they were all screaming and crying.\"\" They all ran back from where the accident had happened.\"\nQ: Who was injured in the crash?\nA: Gibson\nB: A garage worker\nC: Children\nD: A truck driver\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"After the accident occurred, Gibson was transported to a hospital but died shortly afterwards. The truck driver, who is aged 64, was not injured in the crash. The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day. A person working in a garage near where the accident occurred said: \"\"There were children waiting to cross the road and they were all screaming and crying.\"\" They all ran back from where the accident had happened.\"\nQ: Who was injured in the crash?\nA: Gibson\nB: A garage worker\nC: Children\nD: A truck driver\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"After the accident occurred, Gibson was transported to a hospital but died shortly afterwards. The truck driver, who is aged 64, was not injured in the crash. The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day. A person working in a garage near where the accident occurred said: \"\"There were children waiting to cross the road and they were all screaming and crying.\"\" They all ran back from where the accident had happened.\"\nQ: Who was injured in the crash?\nA: Gibson\nB: A garage worker\nC: Children\nD: A truck driver\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"After the accident occurred, Gibson was transported to a hospital but died shortly afterwards. The truck driver, who is aged 64, was not injured in the crash. The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day. A person working in a garage near where the accident occurred said: \"\"There were children waiting to cross the road and they were all screaming and crying.\"\" They all ran back from where the accident had happened.\"\nQ: Who was injured in the crash?\nA: Gibson\nB: A garage worker\nC: Children\nD: A truck driver\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.6953466534614563,
+              true
+            ]
+          ],
+          [
+            [
+              -2.678382635116577,
+              false
+            ]
+          ],
+          [
+            [
+              -2.4331796169281006,
+              false
+            ]
+          ],
+          [
+            [
+              -1.2277085781097412,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.6953466534614563,
+            true
+          ],
+          [
+            -2.678382635116577,
+            false
+          ],
+          [
+            -2.4331796169281006,
+            false
+          ],
+          [
+            -1.2277085781097412,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "17bee2d1c41bdd7f18f5ad2710d8b8823f86a45bf2117fd6c29e3acd33006c17",
+        "prompt_hash": "309b2e0f9db73c749d5b8faf0e852604ffcc9dce8abf35c772617cca1e346049",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 184,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Hostels",
+          "question_number": 1,
+          "flores_passage": "Hostels cater primarily to young people – a typical guest is in their twenties – but you can often find older travellers there too. Families with children are a rare sight, but some hostels do allow them in private rooms.",
+          "question": "According to the passage, which type of guest is least likely to be found in a shared hostel room?",
+          "mc_answer1": "A guest in their early twenties",
+          "mc_answer2": "A guest traveling solo",
+          "mc_answer3": "A guest traveling with small children",
+          "mc_answer4": "A guest in their mid-thirties",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Hostels cater primarily to young people – a typical guest is in their twenties – but you can often find older travellers there too. Families with children are a rare sight, but some hostels do allow them in private rooms.\nQ: According to the passage, which type of guest is least likely to be found in a shared hostel room?\nA: A guest in their early twenties\nB: A guest traveling solo\nC: A guest traveling with small children\nD: A guest in their mid-thirties\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Hostels cater primarily to young people – a typical guest is in their twenties – but you can often find older travellers there too. Families with children are a rare sight, but some hostels do allow them in private rooms.\nQ: According to the passage, which type of guest is least likely to be found in a shared hostel room?\nA: A guest in their early twenties\nB: A guest traveling solo\nC: A guest traveling with small children\nD: A guest in their mid-thirties\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Hostels cater primarily to young people – a typical guest is in their twenties – but you can often find older travellers there too. Families with children are a rare sight, but some hostels do allow them in private rooms.\nQ: According to the passage, which type of guest is least likely to be found in a shared hostel room?\nA: A guest in their early twenties\nB: A guest traveling solo\nC: A guest traveling with small children\nD: A guest in their mid-thirties\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Hostels cater primarily to young people – a typical guest is in their twenties – but you can often find older travellers there too. Families with children are a rare sight, but some hostels do allow them in private rooms.\nQ: According to the passage, which type of guest is least likely to be found in a shared hostel room?\nA: A guest in their early twenties\nB: A guest traveling solo\nC: A guest traveling with small children\nD: A guest in their mid-thirties\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.460262775421143,
+              false
+            ]
+          ],
+          [
+            [
+              -6.1557087898254395,
+              false
+            ]
+          ],
+          [
+            [
+              -0.05124315991997719,
+              true
+            ]
+          ],
+          [
+            [
+              -6.5894694328308105,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.460262775421143,
+            false
+          ],
+          [
+            -6.1557087898254395,
+            false
+          ],
+          [
+            -0.05124315991997719,
+            true
+          ],
+          [
+            -6.5894694328308105,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "5d57979cd8b475f8c7569a07becfe89b2b9518e1f82aacaaf15b609408ae94cc",
+        "prompt_hash": "cf4c86fb58eaab448dce650cc4a863c6de1e0174d90e6f9fd028b3698d459563",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 356,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/South_Asian_cuisine",
+          "question_number": 1,
+          "flores_passage": "\"A curry is a dish based on herbs and spices, together with either meat or vegetables. A curry can be either \"\"dry\"\" or \"\"wet\"\" depending on the amount of liquid. In inland regions of Northern India and Pakistan, yogurt is commonly used in curries; in Southern India and some other coastal regions of the subcontinent, coconut milk is commonly used.\"",
+          "question": "According to the passage, a curry is based around which ingredients?",
+          "mc_answer1": "Yogurt and water",
+          "mc_answer2": "Herbs and spices",
+          "mc_answer3": "Coconut milk and meat",
+          "mc_answer4": "Vegetables and milk",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"A curry is a dish based on herbs and spices, together with either meat or vegetables. A curry can be either \"\"dry\"\" or \"\"wet\"\" depending on the amount of liquid. In inland regions of Northern India and Pakistan, yogurt is commonly used in curries; in Southern India and some other coastal regions of the subcontinent, coconut milk is commonly used.\"\nQ: According to the passage, a curry is based around which ingredients?\nA: Yogurt and water\nB: Herbs and spices\nC: Coconut milk and meat\nD: Vegetables and milk\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"A curry is a dish based on herbs and spices, together with either meat or vegetables. A curry can be either \"\"dry\"\" or \"\"wet\"\" depending on the amount of liquid. In inland regions of Northern India and Pakistan, yogurt is commonly used in curries; in Southern India and some other coastal regions of the subcontinent, coconut milk is commonly used.\"\nQ: According to the passage, a curry is based around which ingredients?\nA: Yogurt and water\nB: Herbs and spices\nC: Coconut milk and meat\nD: Vegetables and milk\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"A curry is a dish based on herbs and spices, together with either meat or vegetables. A curry can be either \"\"dry\"\" or \"\"wet\"\" depending on the amount of liquid. In inland regions of Northern India and Pakistan, yogurt is commonly used in curries; in Southern India and some other coastal regions of the subcontinent, coconut milk is commonly used.\"\nQ: According to the passage, a curry is based around which ingredients?\nA: Yogurt and water\nB: Herbs and spices\nC: Coconut milk and meat\nD: Vegetables and milk\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"A curry is a dish based on herbs and spices, together with either meat or vegetables. A curry can be either \"\"dry\"\" or \"\"wet\"\" depending on the amount of liquid. In inland regions of Northern India and Pakistan, yogurt is commonly used in curries; in Southern India and some other coastal regions of the subcontinent, coconut milk is commonly used.\"\nQ: According to the passage, a curry is based around which ingredients?\nA: Yogurt and water\nB: Herbs and spices\nC: Coconut milk and meat\nD: Vegetables and milk\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.3674299716949463,
+              false
+            ]
+          ],
+          [
+            [
+              -0.0587732270359993,
+              true
+            ]
+          ],
+          [
+            [
+              -4.506832122802734,
+              false
+            ]
+          ],
+          [
+            [
+              -6.586141586303711,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.3674299716949463,
+            false
+          ],
+          [
+            -0.0587732270359993,
+            true
+          ],
+          [
+            -4.506832122802734,
+            false
+          ],
+          [
+            -6.586141586303711,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c058aac20f5aeef3315d8edad9173255e71f525737191dd596f82c329be00a55",
+        "prompt_hash": "bc26300886dcc6e6166fa2adc2666d71b8897258abd5a036a175cbc0a9841760",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792529265.4469516,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

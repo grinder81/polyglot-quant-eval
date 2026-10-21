@@ -21,3 +21,6 @@ Dated entries: what changed, the numbers, open problems.
   documentation with adaptation as the broader goal and explicit runtime controls.
 - No model runs, downloads or measurements performed. Artifact revisions and sample locks
   remain gates for later tasks. Existing smoke and report scripts need separate fixes.
+
+## 2026-10-20
+- Completed local Q4 only on 300 Belebele questions per language: English 226/300, Bangla 189/300, Hindi 176/300. Evidence and caveats: results/stage1/local-q4-three-hundred/README.md. All questions rerun under the join-control-corrected runtime; no other models or performance tests run.

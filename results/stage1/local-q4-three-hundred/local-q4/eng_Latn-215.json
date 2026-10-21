@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 396,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/European_History/Revolution_in_France",
+          "question_number": 1,
+          "flores_passage": "The terrified King Louis XVI, Queen Marie Antoinette their two young children (11 year old Marie Therese and four year old Louis-Charles) and the King's sister, Madam Elizabeth, on the 6th October 1789 were forced back to Paris from Versailles by a mob of market women. In a carriage, they traveled back to Paris surrounded by a mob of people screaming and shouting threats against the King and Queen. The mob of people forced the King And Queen to have their carriage windows wide open. At one point a member of the mob waved the head of a royal guard killed at Versailles in front of the terrified Queen.",
+          "question": "According to the passage, who was murdered at Versailles?",
+          "mc_answer1": "One of the market women",
+          "mc_answer2": "King Louis XVI",
+          "mc_answer3": "A member of the mob",
+          "mc_answer4": "A guard",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: The terrified King Louis XVI, Queen Marie Antoinette their two young children (11 year old Marie Therese and four year old Louis-Charles) and the King's sister, Madam Elizabeth, on the 6th October 1789 were forced back to Paris from Versailles by a mob of market women. In a carriage, they traveled back to Paris surrounded by a mob of people screaming and shouting threats against the King and Queen. The mob of people forced the King And Queen to have their carriage windows wide open. At one point a member of the mob waved the head of a royal guard killed at Versailles in front of the terrified Queen.\nQ: According to the passage, who was murdered at Versailles?\nA: One of the market women\nB: King Louis XVI\nC: A member of the mob\nD: A guard\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The terrified King Louis XVI, Queen Marie Antoinette their two young children (11 year old Marie Therese and four year old Louis-Charles) and the King's sister, Madam Elizabeth, on the 6th October 1789 were forced back to Paris from Versailles by a mob of market women. In a carriage, they traveled back to Paris surrounded by a mob of people screaming and shouting threats against the King and Queen. The mob of people forced the King And Queen to have their carriage windows wide open. At one point a member of the mob waved the head of a royal guard killed at Versailles in front of the terrified Queen.\nQ: According to the passage, who was murdered at Versailles?\nA: One of the market women\nB: King Louis XVI\nC: A member of the mob\nD: A guard\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The terrified King Louis XVI, Queen Marie Antoinette their two young children (11 year old Marie Therese and four year old Louis-Charles) and the King's sister, Madam Elizabeth, on the 6th October 1789 were forced back to Paris from Versailles by a mob of market women. In a carriage, they traveled back to Paris surrounded by a mob of people screaming and shouting threats against the King and Queen. The mob of people forced the King And Queen to have their carriage windows wide open. At one point a member of the mob waved the head of a royal guard killed at Versailles in front of the terrified Queen.\nQ: According to the passage, who was murdered at Versailles?\nA: One of the market women\nB: King Louis XVI\nC: A member of the mob\nD: A guard\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The terrified King Louis XVI, Queen Marie Antoinette their two young children (11 year old Marie Therese and four year old Louis-Charles) and the King's sister, Madam Elizabeth, on the 6th October 1789 were forced back to Paris from Versailles by a mob of market women. In a carriage, they traveled back to Paris surrounded by a mob of people screaming and shouting threats against the King and Queen. The mob of people forced the King And Queen to have their carriage windows wide open. At one point a member of the mob waved the head of a royal guard killed at Versailles in front of the terrified Queen.\nQ: According to the passage, who was murdered at Versailles?\nA: One of the market women\nB: King Louis XVI\nC: A member of the mob\nD: A guard\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.6111202239990234,
+              false
+            ]
+          ],
+          [
+            [
+              -3.1635494232177734,
+              false
+            ]
+          ],
+          [
+            [
+              -2.4381370544433594,
+              false
+            ]
+          ],
+          [
+            [
+              -0.5709075331687927,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.6111202239990234,
+            false
+          ],
+          [
+            -3.1635494232177734,
+            false
+          ],
+          [
+            -2.4381370544433594,
+            false
+          ],
+          [
+            -0.5709075331687927,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "b0ffc58d7fa36fddd634e89aaf0211541efae66a71b1ee82aa07a223de1ff497",
+        "prompt_hash": "82432af2b426ab6aba4ebc8221e48c3d3d1cc9c2a9e65f7841fc4da1791f89d6",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 301,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Another_arrest_in_Minnesota_school_shooting",
+          "question_number": 2,
+          "flores_passage": "News spread in the Red Lake community today as funerals for Jeff Weise and three of the nine victims were held that another student was arrested in connection with the school shootings of March 21. Authorities said little officially beyond confirming today's arrest. However, a source with knowledge of the investigation told the Minneapolis Star-Tribune that it was Louis Jourdain, 16-year old son of Red Lake Tribal Chairman Floyd Jourdain. It is not known at this time what charges will be laid or what led authorities to the boy but juvenile proceedings have begun in federal court.",
+          "question": "According to the passage, while news was spreading about another arrest, funerals were being held for how many victims?",
+          "mc_answer1": "One",
+          "mc_answer2": "Three",
+          "mc_answer3": "Nine",
+          "mc_answer4": "Four",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: News spread in the Red Lake community today as funerals for Jeff Weise and three of the nine victims were held that another student was arrested in connection with the school shootings of March 21. Authorities said little officially beyond confirming today's arrest. However, a source with knowledge of the investigation told the Minneapolis Star-Tribune that it was Louis Jourdain, 16-year old son of Red Lake Tribal Chairman Floyd Jourdain. It is not known at this time what charges will be laid or what led authorities to the boy but juvenile proceedings have begun in federal court.\nQ: According to the passage, while news was spreading about another arrest, funerals were being held for how many victims?\nA: One\nB: Three\nC: Nine\nD: Four\nAnswer:",
+            " A"
+          ],
+          [
+            "P: News spread in the Red Lake community today as funerals for Jeff Weise and three of the nine victims were held that another student was arrested in connection with the school shootings of March 21. Authorities said little officially beyond confirming today's arrest. However, a source with knowledge of the investigation told the Minneapolis Star-Tribune that it was Louis Jourdain, 16-year old son of Red Lake Tribal Chairman Floyd Jourdain. It is not known at this time what charges will be laid or what led authorities to the boy but juvenile proceedings have begun in federal court.\nQ: According to the passage, while news was spreading about another arrest, funerals were being held for how many victims?\nA: One\nB: Three\nC: Nine\nD: Four\nAnswer:",
+            " B"
+          ],
+          [
+            "P: News spread in the Red Lake community today as funerals for Jeff Weise and three of the nine victims were held that another student was arrested in connection with the school shootings of March 21. Authorities said little officially beyond confirming today's arrest. However, a source with knowledge of the investigation told the Minneapolis Star-Tribune that it was Louis Jourdain, 16-year old son of Red Lake Tribal Chairman Floyd Jourdain. It is not known at this time what charges will be laid or what led authorities to the boy but juvenile proceedings have begun in federal court.\nQ: According to the passage, while news was spreading about another arrest, funerals were being held for how many victims?\nA: One\nB: Three\nC: Nine\nD: Four\nAnswer:",
+            " C"
+          ],
+          [
+            "P: News spread in the Red Lake community today as funerals for Jeff Weise and three of the nine victims were held that another student was arrested in connection with the school shootings of March 21. Authorities said little officially beyond confirming today's arrest. However, a source with knowledge of the investigation told the Minneapolis Star-Tribune that it was Louis Jourdain, 16-year old son of Red Lake Tribal Chairman Floyd Jourdain. It is not known at this time what charges will be laid or what led authorities to the boy but juvenile proceedings have begun in federal court.\nQ: According to the passage, while news was spreading about another arrest, funerals were being held for how many victims?\nA: One\nB: Three\nC: Nine\nD: Four\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.1544859409332275,
+              false
+            ]
+          ],
+          [
+            [
+              -0.08345254510641098,
+              true
+            ]
+          ],
+          [
+            [
+              -3.564483880996704,
+              false
+            ]
+          ],
+          [
+            [
+              -6.944180011749268,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.1544859409332275,
+            false
+          ],
+          [
+            -0.08345254510641098,
+            true
+          ],
+          [
+            -3.564483880996704,
+            false
+          ],
+          [
+            -6.944180011749268,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "e29be52637b54d8dcee90e158b9e2561b2c2e5450508e2f067c6dd8b7d62d183",
+        "prompt_hash": "1c28b84174789dcc18b3c849708129b8ea4478caa45e0332322ced61e7ecc928",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 56,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Anti-ACTA_activists_protest_across_Europe",
+          "question_number": 1,
+          "flores_passage": "Organisers of the protest said about 100,000 people turned up in German cities such as Berlin, Cologne, Hamburg, and Hanover. In Berlin, police estimated 6,500 protestors. Protests also took place in Paris, Sofia in Bulgaria, Vilnius in Lithuania, Valetta in Malta, Tallinn in Estonia, and Edinburgh and Glasgow in Scotland. In London, about 200 people protested outside some major copyright holders' offices. Last month, there were major protests in Poland when that country signed ACTA, which has led to the Polish government deciding not to ratify the agreement, for now. Latvia and Slovakia have both delayed the process of joining ACTA.",
+          "question": "In response to the protests, which country did not move forward with their signed ACTA agreement?",
+          "mc_answer1": "Germany",
+          "mc_answer2": "Poland",
+          "mc_answer3": "Scotland",
+          "mc_answer4": "Lithuania",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Organisers of the protest said about 100,000 people turned up in German cities such as Berlin, Cologne, Hamburg, and Hanover. In Berlin, police estimated 6,500 protestors. Protests also took place in Paris, Sofia in Bulgaria, Vilnius in Lithuania, Valetta in Malta, Tallinn in Estonia, and Edinburgh and Glasgow in Scotland. In London, about 200 people protested outside some major copyright holders' offices. Last month, there were major protests in Poland when that country signed ACTA, which has led to the Polish government deciding not to ratify the agreement, for now. Latvia and Slovakia have both delayed the process of joining ACTA.\nQ: In response to the protests, which country did not move forward with their signed ACTA agreement?\nA: Germany\nB: Poland\nC: Scotland\nD: Lithuania\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Organisers of the protest said about 100,000 people turned up in German cities such as Berlin, Cologne, Hamburg, and Hanover. In Berlin, police estimated 6,500 protestors. Protests also took place in Paris, Sofia in Bulgaria, Vilnius in Lithuania, Valetta in Malta, Tallinn in Estonia, and Edinburgh and Glasgow in Scotland. In London, about 200 people protested outside some major copyright holders' offices. Last month, there were major protests in Poland when that country signed ACTA, which has led to the Polish government deciding not to ratify the agreement, for now. Latvia and Slovakia have both delayed the process of joining ACTA.\nQ: In response to the protests, which country did not move forward with their signed ACTA agreement?\nA: Germany\nB: Poland\nC: Scotland\nD: Lithuania\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Organisers of the protest said about 100,000 people turned up in German cities such as Berlin, Cologne, Hamburg, and Hanover. In Berlin, police estimated 6,500 protestors. Protests also took place in Paris, Sofia in Bulgaria, Vilnius in Lithuania, Valetta in Malta, Tallinn in Estonia, and Edinburgh and Glasgow in Scotland. In London, about 200 people protested outside some major copyright holders' offices. Last month, there were major protests in Poland when that country signed ACTA, which has led to the Polish government deciding not to ratify the agreement, for now. Latvia and Slovakia have both delayed the process of joining ACTA.\nQ: In response to the protests, which country did not move forward with their signed ACTA agreement?\nA: Germany\nB: Poland\nC: Scotland\nD: Lithuania\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Organisers of the protest said about 100,000 people turned up in German cities such as Berlin, Cologne, Hamburg, and Hanover. In Berlin, police estimated 6,500 protestors. Protests also took place in Paris, Sofia in Bulgaria, Vilnius in Lithuania, Valetta in Malta, Tallinn in Estonia, and Edinburgh and Glasgow in Scotland. In London, about 200 people protested outside some major copyright holders' offices. Last month, there were major protests in Poland when that country signed ACTA, which has led to the Polish government deciding not to ratify the agreement, for now. Latvia and Slovakia have both delayed the process of joining ACTA.\nQ: In response to the protests, which country did not move forward with their signed ACTA agreement?\nA: Germany\nB: Poland\nC: Scotland\nD: Lithuania\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.953585147857666,
+              false
+            ]
+          ],
+          [
+            [
+              -0.15451852977275848,
+              true
+            ]
+          ],
+          [
+            [
+              -4.565344333648682,
+              false
+            ]
+          ],
+          [
+            [
+              -3.892935276031494,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.953585147857666,
+            false
+          ],
+          [
+            -0.15451852977275848,
+            true
+          ],
+          [
+            -4.565344333648682,
+            false
+          ],
+          [
+            -3.892935276031494,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9373defae8f4f69e2108b5436378833b10ee733776352a603ab2f596796bfbcb",
+        "prompt_hash": "ebad762dc4fbf47872418f783289a029fd42482bbbe9378b52d93ce58b9d2c21",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 760,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/French_campaigning_film_director_Ren%C3%A9_Vautier_dies",
+          "question_number": 2,
+          "flores_passage": "Vautier's achievements outside of directing include a hunger strike in 1973 against what he viewed as political censorship. French law was changed. His activism went back to age 15 when he joined the French Resistance during World War II. He documented himself in a 1998 book. In the 1960s he headed back to newly-independent Algeria to teach film directing.",
+          "question": "In what decade did Algeria gain independence?",
+          "mc_answer1": "1940s",
+          "mc_answer2": "1950s",
+          "mc_answer3": "1960s",
+          "mc_answer4": "1970s",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Vautier's achievements outside of directing include a hunger strike in 1973 against what he viewed as political censorship. French law was changed. His activism went back to age 15 when he joined the French Resistance during World War II. He documented himself in a 1998 book. In the 1960s he headed back to newly-independent Algeria to teach film directing.\nQ: In what decade did Algeria gain independence?\nA: 1940s\nB: 1950s\nC: 1960s\nD: 1970s\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Vautier's achievements outside of directing include a hunger strike in 1973 against what he viewed as political censorship. French law was changed. His activism went back to age 15 when he joined the French Resistance during World War II. He documented himself in a 1998 book. In the 1960s he headed back to newly-independent Algeria to teach film directing.\nQ: In what decade did Algeria gain independence?\nA: 1940s\nB: 1950s\nC: 1960s\nD: 1970s\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Vautier's achievements outside of directing include a hunger strike in 1973 against what he viewed as political censorship. French law was changed. His activism went back to age 15 when he joined the French Resistance during World War II. He documented himself in a 1998 book. In the 1960s he headed back to newly-independent Algeria to teach film directing.\nQ: In what decade did Algeria gain independence?\nA: 1940s\nB: 1950s\nC: 1960s\nD: 1970s\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Vautier's achievements outside of directing include a hunger strike in 1973 against what he viewed as political censorship. French law was changed. His activism went back to age 15 when he joined the French Resistance during World War II. He documented himself in a 1998 book. In the 1960s he headed back to newly-independent Algeria to teach film directing.\nQ: In what decade did Algeria gain independence?\nA: 1940s\nB: 1950s\nC: 1960s\nD: 1970s\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.494214057922363,
+              false
+            ]
+          ],
+          [
+            [
+              -3.4039697647094727,
+              false
+            ]
+          ],
+          [
+            [
+              -0.07105540484189987,
+              true
+            ]
+          ],
+          [
+            [
+              -6.590053558349609,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.494214057922363,
+            false
+          ],
+          [
+            -3.4039697647094727,
+            false
+          ],
+          [
+            -0.07105540484189987,
+            true
+          ],
+          [
+            -6.590053558349609,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9c1d09fe38a22a2be8ebb74a5ec4daca3e99f461c6f327a3f7df6bcd24c70318",
+        "prompt_hash": "f414eeea93b18cd1314faa63dd10523993e891d45784a2f438c4693fb04a3f65",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 302,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Infectious_diseases",
+          "question_number": 1,
+          "flores_passage": "For those unfamiliar with medical jargon, the words infectious and contagious have distinct meanings. An infectious disease is one that is caused by a pathogen, such as a virus, bacterium, fungus or other parasites. A contagious disease is a disease which is easily transmitted by being in the vicinity of an infected person. Many governments require visitors entering, or residents leaving, their countries to be vaccinated for a range of diseases. These requirements may often depend on what countries a traveller has visited or intends to visit.",
+          "question": "According to the passage, how is a contagious disease spread?",
+          "mc_answer1": "Infected people",
+          "mc_answer2": "Pathogens",
+          "mc_answer3": "Bacterium",
+          "mc_answer4": "Vaccinations",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: For those unfamiliar with medical jargon, the words infectious and contagious have distinct meanings. An infectious disease is one that is caused by a pathogen, such as a virus, bacterium, fungus or other parasites. A contagious disease is a disease which is easily transmitted by being in the vicinity of an infected person. Many governments require visitors entering, or residents leaving, their countries to be vaccinated for a range of diseases. These requirements may often depend on what countries a traveller has visited or intends to visit.\nQ: According to the passage, how is a contagious disease spread?\nA: Infected people\nB: Pathogens\nC: Bacterium\nD: Vaccinations\nAnswer:",
+            " A"
+          ],
+          [
+            "P: For those unfamiliar with medical jargon, the words infectious and contagious have distinct meanings. An infectious disease is one that is caused by a pathogen, such as a virus, bacterium, fungus or other parasites. A contagious disease is a disease which is easily transmitted by being in the vicinity of an infected person. Many governments require visitors entering, or residents leaving, their countries to be vaccinated for a range of diseases. These requirements may often depend on what countries a traveller has visited or intends to visit.\nQ: According to the passage, how is a contagious disease spread?\nA: Infected people\nB: Pathogens\nC: Bacterium\nD: Vaccinations\nAnswer:",
+            " B"
+          ],
+          [
+            "P: For those unfamiliar with medical jargon, the words infectious and contagious have distinct meanings. An infectious disease is one that is caused by a pathogen, such as a virus, bacterium, fungus or other parasites. A contagious disease is a disease which is easily transmitted by being in the vicinity of an infected person. Many governments require visitors entering, or residents leaving, their countries to be vaccinated for a range of diseases. These requirements may often depend on what countries a traveller has visited or intends to visit.\nQ: According to the passage, how is a contagious disease spread?\nA: Infected people\nB: Pathogens\nC: Bacterium\nD: Vaccinations\nAnswer:",
+            " C"
+          ],
+          [
+            "P: For those unfamiliar with medical jargon, the words infectious and contagious have distinct meanings. An infectious disease is one that is caused by a pathogen, such as a virus, bacterium, fungus or other parasites. A contagious disease is a disease which is easily transmitted by being in the vicinity of an infected person. Many governments require visitors entering, or residents leaving, their countries to be vaccinated for a range of diseases. These requirements may often depend on what countries a traveller has visited or intends to visit.\nQ: According to the passage, how is a contagious disease spread?\nA: Infected people\nB: Pathogens\nC: Bacterium\nD: Vaccinations\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.026582449674606323,
+              true
+            ]
+          ],
+          [
+            [
+              -4.23901891708374,
+              false
+            ]
+          ],
+          [
+            [
+              -5.883798122406006,
+              false
+            ]
+          ],
+          [
+            [
+              -6.061755657196045,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.026582449674606323,
+            true
+          ],
+          [
+            -4.23901891708374,
+            false
+          ],
+          [
+            -5.883798122406006,
+            false
+          ],
+          [
+            -6.061755657196045,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "2cf9fd71d77e4e96e0e8bd9871944b92ff5ea3a6ca56a9c721deec54dc1ca37c",
+        "prompt_hash": "df4e46240ee252b099d0b6841d25ddd73ce356103eb3e93f1ab07cb23739b2b2",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792529760.9293156,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

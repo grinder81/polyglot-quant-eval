@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 435,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Languages/Sanskrit",
+          "question_number": 2,
+          "flores_passage": "There are many theories to how Sanskrit came into existence. One of them is about an Aryan migration from the west into India who brought their language with them. Sanskrit is an ancient language and is comparable to the Latin language spoken in Europe. The earliest known book in the world was written in Sanskrit. After the compilation of Upanishads, Sanskrit just faded due to hierarchy. Sanskrit is a very complex and rich language, which has served to be the source for many modern Indian languages, just like Latin is the source for European languages like French and Spanish.",
+          "question": "According to the passage, the use of Sanskrit was diminished due to what?",
+          "mc_answer1": "Complexity ",
+          "mc_answer2": "Aryan migration",
+          "mc_answer3": "Latin languages",
+          "mc_answer4": "Hierarchy",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: There are many theories to how Sanskrit came into existence. One of them is about an Aryan migration from the west into India who brought their language with them. Sanskrit is an ancient language and is comparable to the Latin language spoken in Europe. The earliest known book in the world was written in Sanskrit. After the compilation of Upanishads, Sanskrit just faded due to hierarchy. Sanskrit is a very complex and rich language, which has served to be the source for many modern Indian languages, just like Latin is the source for European languages like French and Spanish.\nQ: According to the passage, the use of Sanskrit was diminished due to what?\nA: Complexity \nB: Aryan migration\nC: Latin languages\nD: Hierarchy\nAnswer:",
+            " A"
+          ],
+          [
+            "P: There are many theories to how Sanskrit came into existence. One of them is about an Aryan migration from the west into India who brought their language with them. Sanskrit is an ancient language and is comparable to the Latin language spoken in Europe. The earliest known book in the world was written in Sanskrit. After the compilation of Upanishads, Sanskrit just faded due to hierarchy. Sanskrit is a very complex and rich language, which has served to be the source for many modern Indian languages, just like Latin is the source for European languages like French and Spanish.\nQ: According to the passage, the use of Sanskrit was diminished due to what?\nA: Complexity \nB: Aryan migration\nC: Latin languages\nD: Hierarchy\nAnswer:",
+            " B"
+          ],
+          [
+            "P: There are many theories to how Sanskrit came into existence. One of them is about an Aryan migration from the west into India who brought their language with them. Sanskrit is an ancient language and is comparable to the Latin language spoken in Europe. The earliest known book in the world was written in Sanskrit. After the compilation of Upanishads, Sanskrit just faded due to hierarchy. Sanskrit is a very complex and rich language, which has served to be the source for many modern Indian languages, just like Latin is the source for European languages like French and Spanish.\nQ: According to the passage, the use of Sanskrit was diminished due to what?\nA: Complexity \nB: Aryan migration\nC: Latin languages\nD: Hierarchy\nAnswer:",
+            " C"
+          ],
+          [
+            "P: There are many theories to how Sanskrit came into existence. One of them is about an Aryan migration from the west into India who brought their language with them. Sanskrit is an ancient language and is comparable to the Latin language spoken in Europe. The earliest known book in the world was written in Sanskrit. After the compilation of Upanishads, Sanskrit just faded due to hierarchy. Sanskrit is a very complex and rich language, which has served to be the source for many modern Indian languages, just like Latin is the source for European languages like French and Spanish.\nQ: According to the passage, the use of Sanskrit was diminished due to what?\nA: Complexity \nB: Aryan migration\nC: Latin languages\nD: Hierarchy\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.452844142913818,
+              false
+            ]
+          ],
+          [
+            [
+              -7.656280994415283,
+              false
+            ]
+          ],
+          [
+            [
+              -7.160190105438232,
+              false
+            ]
+          ],
+          [
+            [
+              -0.08395139127969742,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.452844142913818,
+            false
+          ],
+          [
+            -7.656280994415283,
+            false
+          ],
+          [
+            -7.160190105438232,
+            false
+          ],
+          [
+            -0.08395139127969742,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "dc0de2e5865d1919171b86cc2da170f454fa2c05c64dbde531259b7d2c98de5e",
+        "prompt_hash": "9a4819a2a931507a85a6ce36efceeda3e71e21cb0f8b73281c07e25bba3b2965",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 792,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Battleships",
+          "question_number": 2,
+          "flores_passage": "\"Let's start with an explanation about Italy's plans. Italy was mainly the \"\"little brother\"\" of Germany and Japan. It had a weaker army and a weaker navy, although they had just built four new ships right before the beginning of the war. Italy's main goals were African countries. To capture those countries, they would need to have a troop launching pad, so as troops could sail across the Mediterranean Sea and invade Africa. For that, they had to get rid of British bases and ships in Egypt. Besides those actions, Italy's battleships were not supposed to do anything else. Now for Japan. Japan was an island country, just like Britain.\"",
+          "question": "According to the passage, what was considered Italy’s primary objective of the war?",
+          "mc_answer1": "Capturing African countries",
+          "mc_answer2": "Building a stronger army and navy",
+          "mc_answer3": "Getting rid of Egyptian ships",
+          "mc_answer4": "Establishing British bases",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"Let's start with an explanation about Italy's plans. Italy was mainly the \"\"little brother\"\" of Germany and Japan. It had a weaker army and a weaker navy, although they had just built four new ships right before the beginning of the war. Italy's main goals were African countries. To capture those countries, they would need to have a troop launching pad, so as troops could sail across the Mediterranean Sea and invade Africa. For that, they had to get rid of British bases and ships in Egypt. Besides those actions, Italy's battleships were not supposed to do anything else. Now for Japan. Japan was an island country, just like Britain.\"\nQ: According to the passage, what was considered Italy’s primary objective of the war?\nA: Capturing African countries\nB: Building a stronger army and navy\nC: Getting rid of Egyptian ships\nD: Establishing British bases\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Let's start with an explanation about Italy's plans. Italy was mainly the \"\"little brother\"\" of Germany and Japan. It had a weaker army and a weaker navy, although they had just built four new ships right before the beginning of the war. Italy's main goals were African countries. To capture those countries, they would need to have a troop launching pad, so as troops could sail across the Mediterranean Sea and invade Africa. For that, they had to get rid of British bases and ships in Egypt. Besides those actions, Italy's battleships were not supposed to do anything else. Now for Japan. Japan was an island country, just like Britain.\"\nQ: According to the passage, what was considered Italy’s primary objective of the war?\nA: Capturing African countries\nB: Building a stronger army and navy\nC: Getting rid of Egyptian ships\nD: Establishing British bases\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Let's start with an explanation about Italy's plans. Italy was mainly the \"\"little brother\"\" of Germany and Japan. It had a weaker army and a weaker navy, although they had just built four new ships right before the beginning of the war. Italy's main goals were African countries. To capture those countries, they would need to have a troop launching pad, so as troops could sail across the Mediterranean Sea and invade Africa. For that, they had to get rid of British bases and ships in Egypt. Besides those actions, Italy's battleships were not supposed to do anything else. Now for Japan. Japan was an island country, just like Britain.\"\nQ: According to the passage, what was considered Italy’s primary objective of the war?\nA: Capturing African countries\nB: Building a stronger army and navy\nC: Getting rid of Egyptian ships\nD: Establishing British bases\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Let's start with an explanation about Italy's plans. Italy was mainly the \"\"little brother\"\" of Germany and Japan. It had a weaker army and a weaker navy, although they had just built four new ships right before the beginning of the war. Italy's main goals were African countries. To capture those countries, they would need to have a troop launching pad, so as troops could sail across the Mediterranean Sea and invade Africa. For that, they had to get rid of British bases and ships in Egypt. Besides those actions, Italy's battleships were not supposed to do anything else. Now for Japan. Japan was an island country, just like Britain.\"\nQ: According to the passage, what was considered Italy’s primary objective of the war?\nA: Capturing African countries\nB: Building a stronger army and navy\nC: Getting rid of Egyptian ships\nD: Establishing British bases\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.0028154519386589527,
+              true
+            ]
+          ],
+          [
+            [
+              -7.334861755371094,
+              false
+            ]
+          ],
+          [
+            [
+              -7.241825103759766,
+              false
+            ]
+          ],
+          [
+            [
+              -8.51984691619873,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.0028154519386589527,
+            true
+          ],
+          [
+            -7.334861755371094,
+            false
+          ],
+          [
+            -7.241825103759766,
+            false
+          ],
+          [
+            -8.51984691619873,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "35ca5a1da8faa65c095563cc525ed0c7d22f1f4689b3e2f0219cc8727e4040fd",
+        "prompt_hash": "1201b2d7b5dc07e5e522267a49fd964793eec463e6312b8f1b538606f387eca1",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 897,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Indiana_legislators_vote_for_state_constitutional_ban_on_same-sex_marriage",
+          "question_number": 2,
+          "flores_passage": "The proposed amendment already passed both houses in 2011. A change was made this legislative session when the second sentence was deleted first by the House of Representatives and then was passed in a similar form by the Senate Monday. The failure of the second sentence, which proposes to ban same-sex civil unions, could possibly open the door for civil unions in the future. Following the process, HJR-3 will be reviewed again by the next elected legislature in either 2015 or 2016 to remain in process.",
+          "question": "According to the passage, when was the second sentence deleted?",
+          "mc_answer1": "During the legislative session",
+          "mc_answer2": "In 2011",
+          "mc_answer3": "On Monday",
+          "mc_answer4": "In 2015",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The proposed amendment already passed both houses in 2011. A change was made this legislative session when the second sentence was deleted first by the House of Representatives and then was passed in a similar form by the Senate Monday. The failure of the second sentence, which proposes to ban same-sex civil unions, could possibly open the door for civil unions in the future. Following the process, HJR-3 will be reviewed again by the next elected legislature in either 2015 or 2016 to remain in process.\nQ: According to the passage, when was the second sentence deleted?\nA: During the legislative session\nB: In 2011\nC: On Monday\nD: In 2015\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The proposed amendment already passed both houses in 2011. A change was made this legislative session when the second sentence was deleted first by the House of Representatives and then was passed in a similar form by the Senate Monday. The failure of the second sentence, which proposes to ban same-sex civil unions, could possibly open the door for civil unions in the future. Following the process, HJR-3 will be reviewed again by the next elected legislature in either 2015 or 2016 to remain in process.\nQ: According to the passage, when was the second sentence deleted?\nA: During the legislative session\nB: In 2011\nC: On Monday\nD: In 2015\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The proposed amendment already passed both houses in 2011. A change was made this legislative session when the second sentence was deleted first by the House of Representatives and then was passed in a similar form by the Senate Monday. The failure of the second sentence, which proposes to ban same-sex civil unions, could possibly open the door for civil unions in the future. Following the process, HJR-3 will be reviewed again by the next elected legislature in either 2015 or 2016 to remain in process.\nQ: According to the passage, when was the second sentence deleted?\nA: During the legislative session\nB: In 2011\nC: On Monday\nD: In 2015\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The proposed amendment already passed both houses in 2011. A change was made this legislative session when the second sentence was deleted first by the House of Representatives and then was passed in a similar form by the Senate Monday. The failure of the second sentence, which proposes to ban same-sex civil unions, could possibly open the door for civil unions in the future. Following the process, HJR-3 will be reviewed again by the next elected legislature in either 2015 or 2016 to remain in process.\nQ: According to the passage, when was the second sentence deleted?\nA: During the legislative session\nB: In 2011\nC: On Monday\nD: In 2015\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.20080839097499847,
+              true
+            ]
+          ],
+          [
+            [
+              -3.2701785564422607,
+              false
+            ]
+          ],
+          [
+            [
+              -3.3806426525115967,
+              false
+            ]
+          ],
+          [
+            [
+              -5.276101112365723,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.20080839097499847,
+            true
+          ],
+          [
+            -3.2701785564422607,
+            false
+          ],
+          [
+            -3.3806426525115967,
+            false
+          ],
+          [
+            -5.276101112365723,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "ef17bab756a961581507eb914b4b5ee5b8a3fb3d0d3008593e81e8e9f50084ea",
+        "prompt_hash": "41c3fb6aba429076e6415733c400ededbf33ca71f14a9243cb77713f3ef17b38",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 237,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/New_Mexico_Pueblos",
+          "question_number": 1,
+          "flores_passage": "Given how remote many of the pueblos are, you won't be able to find a significant amount of nightlife without traveling to Albuquerque or Santa Fe. However, nearly all of the casinos listed above serve drinks, and several of them bring in name-brand entertainment (primarily the large ones immediately surrounding Albuquerque and Santa Fe). Beware: small-town bars here are not always good places for the out-of-state visitor to hang out. For one thing, northern New Mexico has significant problems with drunk driving, and the concentration of intoxicated drivers is high close to small-town bars.",
+          "question": "According to the passage, where should visitors avoid when seeking nightlife in northern New Mexico?",
+          "mc_answer1": "Pueblos",
+          "mc_answer2": "Small-town bars",
+          "mc_answer3": "Malls",
+          "mc_answer4": "Casinos",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Given how remote many of the pueblos are, you won't be able to find a significant amount of nightlife without traveling to Albuquerque or Santa Fe. However, nearly all of the casinos listed above serve drinks, and several of them bring in name-brand entertainment (primarily the large ones immediately surrounding Albuquerque and Santa Fe). Beware: small-town bars here are not always good places for the out-of-state visitor to hang out. For one thing, northern New Mexico has significant problems with drunk driving, and the concentration of intoxicated drivers is high close to small-town bars.\nQ: According to the passage, where should visitors avoid when seeking nightlife in northern New Mexico?\nA: Pueblos\nB: Small-town bars\nC: Malls\nD: Casinos\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Given how remote many of the pueblos are, you won't be able to find a significant amount of nightlife without traveling to Albuquerque or Santa Fe. However, nearly all of the casinos listed above serve drinks, and several of them bring in name-brand entertainment (primarily the large ones immediately surrounding Albuquerque and Santa Fe). Beware: small-town bars here are not always good places for the out-of-state visitor to hang out. For one thing, northern New Mexico has significant problems with drunk driving, and the concentration of intoxicated drivers is high close to small-town bars.\nQ: According to the passage, where should visitors avoid when seeking nightlife in northern New Mexico?\nA: Pueblos\nB: Small-town bars\nC: Malls\nD: Casinos\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Given how remote many of the pueblos are, you won't be able to find a significant amount of nightlife without traveling to Albuquerque or Santa Fe. However, nearly all of the casinos listed above serve drinks, and several of them bring in name-brand entertainment (primarily the large ones immediately surrounding Albuquerque and Santa Fe). Beware: small-town bars here are not always good places for the out-of-state visitor to hang out. For one thing, northern New Mexico has significant problems with drunk driving, and the concentration of intoxicated drivers is high close to small-town bars.\nQ: According to the passage, where should visitors avoid when seeking nightlife in northern New Mexico?\nA: Pueblos\nB: Small-town bars\nC: Malls\nD: Casinos\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Given how remote many of the pueblos are, you won't be able to find a significant amount of nightlife without traveling to Albuquerque or Santa Fe. However, nearly all of the casinos listed above serve drinks, and several of them bring in name-brand entertainment (primarily the large ones immediately surrounding Albuquerque and Santa Fe). Beware: small-town bars here are not always good places for the out-of-state visitor to hang out. For one thing, northern New Mexico has significant problems with drunk driving, and the concentration of intoxicated drivers is high close to small-town bars.\nQ: According to the passage, where should visitors avoid when seeking nightlife in northern New Mexico?\nA: Pueblos\nB: Small-town bars\nC: Malls\nD: Casinos\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.300381660461426,
+              false
+            ]
+          ],
+          [
+            [
+              -0.03422435000538826,
+              true
+            ]
+          ],
+          [
+            [
+              -6.469749450683594,
+              false
+            ]
+          ],
+          [
+            [
+              -6.094639778137207,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.300381660461426,
+            false
+          ],
+          [
+            -0.03422435000538826,
+            true
+          ],
+          [
+            -6.469749450683594,
+            false
+          ],
+          [
+            -6.094639778137207,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "ef309f13b19d57b352246827f2f59323adbe1b788131cb30ae8f64c6db4f31f3",
+        "prompt_hash": "f9f9096af934a9d2f7b5c4c7cfe035564d983b82e62e087e6410580b085c7471",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 265,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/World%27s_Fair",
+          "question_number": 2,
+          "flores_passage": "A World's Fair (commonly called World Exposition, or simply Expo) is large international festival of arts and sciences. Participating countries present artistic and educational displays in national pavilions to showcase world issues or their country's culture and history. International Horticultural Expositions are specialised events which showcase floral displays, botanical gardens and anything else to do with plants. Although in theory they can take place annually (so long as they are in different countries), in practice they are not. These events normally last anywhere between three and six months, and are held on sites no smaller than 50 hectares.",
+          "question": "Which of the following is a rule of a World’s Fair or International Exposition?",
+          "mc_answer1": "Displays must showcase both a country’s history and world issues",
+          "mc_answer2": "The same country cannot host the events on a yearly basis",
+          "mc_answer3": "Events must last up to six months",
+          "mc_answer4": "For the fair to be held, all countries must participate",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: A World's Fair (commonly called World Exposition, or simply Expo) is large international festival of arts and sciences. Participating countries present artistic and educational displays in national pavilions to showcase world issues or their country's culture and history. International Horticultural Expositions are specialised events which showcase floral displays, botanical gardens and anything else to do with plants. Although in theory they can take place annually (so long as they are in different countries), in practice they are not. These events normally last anywhere between three and six months, and are held on sites no smaller than 50 hectares.\nQ: Which of the following is a rule of a World’s Fair or International Exposition?\nA: Displays must showcase both a country’s history and world issues\nB: The same country cannot host the events on a yearly basis\nC: Events must last up to six months\nD: For the fair to be held, all countries must participate\nAnswer:",
+            " A"
+          ],
+          [
+            "P: A World's Fair (commonly called World Exposition, or simply Expo) is large international festival of arts and sciences. Participating countries present artistic and educational displays in national pavilions to showcase world issues or their country's culture and history. International Horticultural Expositions are specialised events which showcase floral displays, botanical gardens and anything else to do with plants. Although in theory they can take place annually (so long as they are in different countries), in practice they are not. These events normally last anywhere between three and six months, and are held on sites no smaller than 50 hectares.\nQ: Which of the following is a rule of a World’s Fair or International Exposition?\nA: Displays must showcase both a country’s history and world issues\nB: The same country cannot host the events on a yearly basis\nC: Events must last up to six months\nD: For the fair to be held, all countries must participate\nAnswer:",
+            " B"
+          ],
+          [
+            "P: A World's Fair (commonly called World Exposition, or simply Expo) is large international festival of arts and sciences. Participating countries present artistic and educational displays in national pavilions to showcase world issues or their country's culture and history. International Horticultural Expositions are specialised events which showcase floral displays, botanical gardens and anything else to do with plants. Although in theory they can take place annually (so long as they are in different countries), in practice they are not. These events normally last anywhere between three and six months, and are held on sites no smaller than 50 hectares.\nQ: Which of the following is a rule of a World’s Fair or International Exposition?\nA: Displays must showcase both a country’s history and world issues\nB: The same country cannot host the events on a yearly basis\nC: Events must last up to six months\nD: For the fair to be held, all countries must participate\nAnswer:",
+            " C"
+          ],
+          [
+            "P: A World's Fair (commonly called World Exposition, or simply Expo) is large international festival of arts and sciences. Participating countries present artistic and educational displays in national pavilions to showcase world issues or their country's culture and history. International Horticultural Expositions are specialised events which showcase floral displays, botanical gardens and anything else to do with plants. Although in theory they can take place annually (so long as they are in different countries), in practice they are not. These events normally last anywhere between three and six months, and are held on sites no smaller than 50 hectares.\nQ: Which of the following is a rule of a World’s Fair or International Exposition?\nA: Displays must showcase both a country’s history and world issues\nB: The same country cannot host the events on a yearly basis\nC: Events must last up to six months\nD: For the fair to be held, all countries must participate\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.579737663269043,
+              false
+            ]
+          ],
+          [
+            [
+              -3.371090888977051,
+              false
+            ]
+          ],
+          [
+            [
+              -0.20548732578754425,
+              true
+            ]
+          ],
+          [
+            [
+              -3.4180173873901367,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.579737663269043,
+            false
+          ],
+          [
+            -3.371090888977051,
+            false
+          ],
+          [
+            -0.20548732578754425,
+            true
+          ],
+          [
+            -3.4180173873901367,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "19e22fad0ff02c161eb20b687d87db138f5a8306a03210bb2e0403bef2161341",
+        "prompt_hash": "820902f5354b65fa1c283ef655331d3df7fcdc0e16b4b6dd04841ef396f5e18a",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792530666.8955376,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 406,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/High_School_Biology/Nature_of_Science",
+          "question_number": 1,
+          "flores_passage": "Science’s main goal is to figure out the way the world works through the scientific method. This method in fact guides most scientific research. It isn’t alone though, experimentation, and an experiment is a test that is used to eliminate one or more of the possible hypotheses, asking questions, and making observations also guide scientific research.",
+          "question": "Which is the typical purpose of an experiment?",
+          "mc_answer1": "To eliminate one or more possible hypotheses",
+          "mc_answer2": "To figure out how the world works",
+          "mc_answer3": "To pose questions",
+          "mc_answer4": "To guide scientific research",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Science’s main goal is to figure out the way the world works through the scientific method. This method in fact guides most scientific research. It isn’t alone though, experimentation, and an experiment is a test that is used to eliminate one or more of the possible hypotheses, asking questions, and making observations also guide scientific research.\nQ: Which is the typical purpose of an experiment?\nA: To eliminate one or more possible hypotheses\nB: To figure out how the world works\nC: To pose questions\nD: To guide scientific research\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Science’s main goal is to figure out the way the world works through the scientific method. This method in fact guides most scientific research. It isn’t alone though, experimentation, and an experiment is a test that is used to eliminate one or more of the possible hypotheses, asking questions, and making observations also guide scientific research.\nQ: Which is the typical purpose of an experiment?\nA: To eliminate one or more possible hypotheses\nB: To figure out how the world works\nC: To pose questions\nD: To guide scientific research\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Science’s main goal is to figure out the way the world works through the scientific method. This method in fact guides most scientific research. It isn’t alone though, experimentation, and an experiment is a test that is used to eliminate one or more of the possible hypotheses, asking questions, and making observations also guide scientific research.\nQ: Which is the typical purpose of an experiment?\nA: To eliminate one or more possible hypotheses\nB: To figure out how the world works\nC: To pose questions\nD: To guide scientific research\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Science’s main goal is to figure out the way the world works through the scientific method. This method in fact guides most scientific research. It isn’t alone though, experimentation, and an experiment is a test that is used to eliminate one or more of the possible hypotheses, asking questions, and making observations also guide scientific research.\nQ: Which is the typical purpose of an experiment?\nA: To eliminate one or more possible hypotheses\nB: To figure out how the world works\nC: To pose questions\nD: To guide scientific research\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.05899700149893761,
+              true
+            ]
+          ],
+          [
+            [
+              -6.118527412414551,
+              false
+            ]
+          ],
+          [
+            [
+              -7.320240020751953,
+              false
+            ]
+          ],
+          [
+            [
+              -7.500118255615234,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.05899700149893761,
+            true
+          ],
+          [
+            -6.118527412414551,
+            false
+          ],
+          [
+            -7.320240020751953,
+            false
+          ],
+          [
+            -7.500118255615234,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "892ab0b919f8b97bb78d2377f78d48e5b6b95f26567227a2ac143e18a1bfe860",
+        "prompt_hash": "96c3494b017194b574d2c40a6422dc69aafb3f606d170ca5788f2b9e7a469a23",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 78,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Apple_Japan_to_replace_overheating_iPod_Nanos",
+          "question_number": 1,
+          "flores_passage": "\"Around 60 cases of malfunctioning iPods overheating have been reported, causing a total of six fires and leaving four people with minor burns. Japan's Ministry of Economy, Trade and Industry (METI) said that it had been aware of 27 accidents related to the devices. Last week, METI announced that Apple had informed it of 34 additional overheating incidents, which the company called \"\"non-serious.\"\" The ministry responded by calling Apple's postponement of the report \"\"truly regrettable.\"\"\"",
+          "question": "How many people were injured as a result of iPod overheating incidents?",
+          "mc_answer1": "4",
+          "mc_answer2": "27",
+          "mc_answer3": "6",
+          "mc_answer4": "34",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"Around 60 cases of malfunctioning iPods overheating have been reported, causing a total of six fires and leaving four people with minor burns. Japan's Ministry of Economy, Trade and Industry (METI) said that it had been aware of 27 accidents related to the devices. Last week, METI announced that Apple had informed it of 34 additional overheating incidents, which the company called \"\"non-serious.\"\" The ministry responded by calling Apple's postponement of the report \"\"truly regrettable.\"\"\"\nQ: How many people were injured as a result of iPod overheating incidents?\nA: 4\nB: 27\nC: 6\nD: 34\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Around 60 cases of malfunctioning iPods overheating have been reported, causing a total of six fires and leaving four people with minor burns. Japan's Ministry of Economy, Trade and Industry (METI) said that it had been aware of 27 accidents related to the devices. Last week, METI announced that Apple had informed it of 34 additional overheating incidents, which the company called \"\"non-serious.\"\" The ministry responded by calling Apple's postponement of the report \"\"truly regrettable.\"\"\"\nQ: How many people were injured as a result of iPod overheating incidents?\nA: 4\nB: 27\nC: 6\nD: 34\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Around 60 cases of malfunctioning iPods overheating have been reported, causing a total of six fires and leaving four people with minor burns. Japan's Ministry of Economy, Trade and Industry (METI) said that it had been aware of 27 accidents related to the devices. Last week, METI announced that Apple had informed it of 34 additional overheating incidents, which the company called \"\"non-serious.\"\" The ministry responded by calling Apple's postponement of the report \"\"truly regrettable.\"\"\"\nQ: How many people were injured as a result of iPod overheating incidents?\nA: 4\nB: 27\nC: 6\nD: 34\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Around 60 cases of malfunctioning iPods overheating have been reported, causing a total of six fires and leaving four people with minor burns. Japan's Ministry of Economy, Trade and Industry (METI) said that it had been aware of 27 accidents related to the devices. Last week, METI announced that Apple had informed it of 34 additional overheating incidents, which the company called \"\"non-serious.\"\" The ministry responded by calling Apple's postponement of the report \"\"truly regrettable.\"\"\"\nQ: How many people were injured as a result of iPod overheating incidents?\nA: 4\nB: 27\nC: 6\nD: 34\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.030420297756791115,
+              true
+            ]
+          ],
+          [
+            [
+              -5.076601028442383,
+              false
+            ]
+          ],
+          [
+            [
+              -5.928272247314453,
+              false
+            ]
+          ],
+          [
+            [
+              -4.247026443481445,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.030420297756791115,
+            true
+          ],
+          [
+            -5.076601028442383,
+            false
+          ],
+          [
+            -5.928272247314453,
+            false
+          ],
+          [
+            -4.247026443481445,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "d274a564bddc9aafeadc1029b58b96b5ff7e7278bb495d3a9ba1ff5d1f4cf2d8",
+        "prompt_hash": "36a4e325e57c3ba59afb9bdb0c5b7e3f31c2e2e6f4fd5db13c8a6e7df9d90091",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 304,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Guinness_turns_250",
+          "question_number": 2,
+          "flores_passage": "On September 24, 1759, Arthur Guinness signed a 9,000 year lease for the St James' Gate Brewery in Dublin, Ireland. 250 years later, Guinness has grown to a global business that turns over 10 billion euros (US$14.7 billion) every year.",
+          "question": "About how many billion dollars does Guinness bring in each year?",
+          "mc_answer1": "9",
+          "mc_answer2": "250",
+          "mc_answer3": "14",
+          "mc_answer4": "10",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: On September 24, 1759, Arthur Guinness signed a 9,000 year lease for the St James' Gate Brewery in Dublin, Ireland. 250 years later, Guinness has grown to a global business that turns over 10 billion euros (US$14.7 billion) every year.\nQ: About how many billion dollars does Guinness bring in each year?\nA: 9\nB: 250\nC: 14\nD: 10\nAnswer:",
+            " A"
+          ],
+          [
+            "P: On September 24, 1759, Arthur Guinness signed a 9,000 year lease for the St James' Gate Brewery in Dublin, Ireland. 250 years later, Guinness has grown to a global business that turns over 10 billion euros (US$14.7 billion) every year.\nQ: About how many billion dollars does Guinness bring in each year?\nA: 9\nB: 250\nC: 14\nD: 10\nAnswer:",
+            " B"
+          ],
+          [
+            "P: On September 24, 1759, Arthur Guinness signed a 9,000 year lease for the St James' Gate Brewery in Dublin, Ireland. 250 years later, Guinness has grown to a global business that turns over 10 billion euros (US$14.7 billion) every year.\nQ: About how many billion dollars does Guinness bring in each year?\nA: 9\nB: 250\nC: 14\nD: 10\nAnswer:",
+            " C"
+          ],
+          [
+            "P: On September 24, 1759, Arthur Guinness signed a 9,000 year lease for the St James' Gate Brewery in Dublin, Ireland. 250 years later, Guinness has grown to a global business that turns over 10 billion euros (US$14.7 billion) every year.\nQ: About how many billion dollars does Guinness bring in each year?\nA: 9\nB: 250\nC: 14\nD: 10\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.030331134796143,
+              false
+            ]
+          ],
+          [
+            [
+              -5.494369983673096,
+              false
+            ]
+          ],
+          [
+            [
+              -5.68166971206665,
+              false
+            ]
+          ],
+          [
+            [
+              -0.027622701600193977,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.030331134796143,
+            false
+          ],
+          [
+            -5.494369983673096,
+            false
+          ],
+          [
+            -5.68166971206665,
+            false
+          ],
+          [
+            -0.027622701600193977,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "d5f6c46a8b82ab79fc94fa19240abcc823cfdd62f8be6bd9c4dc470cf6e093ab",
+        "prompt_hash": "1b64a947b146a09aaf7d0d0847c0824689cde83ca24170cdc89e8614d131cce4",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 523,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Red_tide_affects_South_Padre_Island,_Mexico",
+          "question_number": 2,
+          "flores_passage": "Red tide is caused by a higher than normal concentration of Karenia brevis, a naturally-occurring single-celled marine organism. Natural factors can intersect to produce ideal conditions, allowing this algae to increase in number dramatically. The algae produces a neurotoxin that can disable nerves in both humans and fish. Fish often die because of the high concentrations of the toxin in the waters. Humans can be affected by breathing affected water taken into the air by wind and waves.",
+          "question": "Which of the following is Karena brevis unable to do?",
+          "mc_answer1": "Disable nerves in fish",
+          "mc_answer2": "Increase rapidly in number under any condition",
+          "mc_answer3": "Affect the water",
+          "mc_answer4": "Produce a neurotoxin",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Red tide is caused by a higher than normal concentration of Karenia brevis, a naturally-occurring single-celled marine organism. Natural factors can intersect to produce ideal conditions, allowing this algae to increase in number dramatically. The algae produces a neurotoxin that can disable nerves in both humans and fish. Fish often die because of the high concentrations of the toxin in the waters. Humans can be affected by breathing affected water taken into the air by wind and waves.\nQ: Which of the following is Karena brevis unable to do?\nA: Disable nerves in fish\nB: Increase rapidly in number under any condition\nC: Affect the water\nD: Produce a neurotoxin\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Red tide is caused by a higher than normal concentration of Karenia brevis, a naturally-occurring single-celled marine organism. Natural factors can intersect to produce ideal conditions, allowing this algae to increase in number dramatically. The algae produces a neurotoxin that can disable nerves in both humans and fish. Fish often die because of the high concentrations of the toxin in the waters. Humans can be affected by breathing affected water taken into the air by wind and waves.\nQ: Which of the following is Karena brevis unable to do?\nA: Disable nerves in fish\nB: Increase rapidly in number under any condition\nC: Affect the water\nD: Produce a neurotoxin\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Red tide is caused by a higher than normal concentration of Karenia brevis, a naturally-occurring single-celled marine organism. Natural factors can intersect to produce ideal conditions, allowing this algae to increase in number dramatically. The algae produces a neurotoxin that can disable nerves in both humans and fish. Fish often die because of the high concentrations of the toxin in the waters. Humans can be affected by breathing affected water taken into the air by wind and waves.\nQ: Which of the following is Karena brevis unable to do?\nA: Disable nerves in fish\nB: Increase rapidly in number under any condition\nC: Affect the water\nD: Produce a neurotoxin\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Red tide is caused by a higher than normal concentration of Karenia brevis, a naturally-occurring single-celled marine organism. Natural factors can intersect to produce ideal conditions, allowing this algae to increase in number dramatically. The algae produces a neurotoxin that can disable nerves in both humans and fish. Fish often die because of the high concentrations of the toxin in the waters. Humans can be affected by breathing affected water taken into the air by wind and waves.\nQ: Which of the following is Karena brevis unable to do?\nA: Disable nerves in fish\nB: Increase rapidly in number under any condition\nC: Affect the water\nD: Produce a neurotoxin\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.4738306999206543,
+              false
+            ]
+          ],
+          [
+            [
+              -0.13625861704349518,
+              true
+            ]
+          ],
+          [
+            [
+              -5.549529552459717,
+              false
+            ]
+          ],
+          [
+            [
+              -7.492947101593018,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.4738306999206543,
+            false
+          ],
+          [
+            -0.13625861704349518,
+            true
+          ],
+          [
+            -5.549529552459717,
+            false
+          ],
+          [
+            -7.492947101593018,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "1caffa98e9b884239e5fb28aabcd1a4ccd4b1110c3d94addf9e2cbeb690ed8f5",
+        "prompt_hash": "d1b253d4af39b683602e196b641432a41aac2e94715dd7e55e71f043d1205d0d",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 740,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Guanajuato",
+          "question_number": 1,
+          "flores_passage": "Jardín de la Unión. This space was built as the atrium for a 17th-century convent, of which the Templo de San Diego is the sole surviving building. It now functions as the central plaza, and always has a lot of things going on, day and night. There are a number of restaurants surrounding the garden, and in the afternoons and evening there free concerts are often given from the central gazebo. Callejon del Beso (Alley of the Kiss). Two balconies separated by only 69 centimeters is home of an old love legend. For a few pennies some children will tell you the story.",
+          "question": "Which of the following is now used as a central plaza?",
+          "mc_answer1": "Jardín de la Unión",
+          "mc_answer2": "The Alley of the Kiss",
+          "mc_answer3": "Templo de San Diego",
+          "mc_answer4": "Callejon del Beso",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Jardín de la Unión. This space was built as the atrium for a 17th-century convent, of which the Templo de San Diego is the sole surviving building. It now functions as the central plaza, and always has a lot of things going on, day and night. There are a number of restaurants surrounding the garden, and in the afternoons and evening there free concerts are often given from the central gazebo. Callejon del Beso (Alley of the Kiss). Two balconies separated by only 69 centimeters is home of an old love legend. For a few pennies some children will tell you the story.\nQ: Which of the following is now used as a central plaza?\nA: Jardín de la Unión\nB: The Alley of the Kiss\nC: Templo de San Diego\nD: Callejon del Beso\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Jardín de la Unión. This space was built as the atrium for a 17th-century convent, of which the Templo de San Diego is the sole surviving building. It now functions as the central plaza, and always has a lot of things going on, day and night. There are a number of restaurants surrounding the garden, and in the afternoons and evening there free concerts are often given from the central gazebo. Callejon del Beso (Alley of the Kiss). Two balconies separated by only 69 centimeters is home of an old love legend. For a few pennies some children will tell you the story.\nQ: Which of the following is now used as a central plaza?\nA: Jardín de la Unión\nB: The Alley of the Kiss\nC: Templo de San Diego\nD: Callejon del Beso\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Jardín de la Unión. This space was built as the atrium for a 17th-century convent, of which the Templo de San Diego is the sole surviving building. It now functions as the central plaza, and always has a lot of things going on, day and night. There are a number of restaurants surrounding the garden, and in the afternoons and evening there free concerts are often given from the central gazebo. Callejon del Beso (Alley of the Kiss). Two balconies separated by only 69 centimeters is home of an old love legend. For a few pennies some children will tell you the story.\nQ: Which of the following is now used as a central plaza?\nA: Jardín de la Unión\nB: The Alley of the Kiss\nC: Templo de San Diego\nD: Callejon del Beso\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Jardín de la Unión. This space was built as the atrium for a 17th-century convent, of which the Templo de San Diego is the sole surviving building. It now functions as the central plaza, and always has a lot of things going on, day and night. There are a number of restaurants surrounding the garden, and in the afternoons and evening there free concerts are often given from the central gazebo. Callejon del Beso (Alley of the Kiss). Two balconies separated by only 69 centimeters is home of an old love legend. For a few pennies some children will tell you the story.\nQ: Which of the following is now used as a central plaza?\nA: Jardín de la Unión\nB: The Alley of the Kiss\nC: Templo de San Diego\nD: Callejon del Beso\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.008462994359433651,
+              true
+            ]
+          ],
+          [
+            [
+              -7.727933883666992,
+              false
+            ]
+          ],
+          [
+            [
+              -7.818670272827148,
+              false
+            ]
+          ],
+          [
+            [
+              -9.551728248596191,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.008462994359433651,
+            true
+          ],
+          [
+            -7.727933883666992,
+            false
+          ],
+          [
+            -7.818670272827148,
+            false
+          ],
+          [
+            -9.551728248596191,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "0815e4f4a3c51b3a9b18b1adf2e60de6cf11b6d3419521c2c076c6c9f5d5d575",
+        "prompt_hash": "40096e941b6b703ff68561ef58c9eaef3adc7ed7dbe680cb8634de3c0aefabc8",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792530259.849224,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}
