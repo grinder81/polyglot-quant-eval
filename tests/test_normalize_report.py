@@ -22,5 +22,23 @@ def test_end_to_end(tmp_path):
         for k in schema["required"]:
             assert k in r, k
     out = run("scripts/report.py", str(rows))
-    assert "delta vs bf16" in out and "bn" in out
-    assert "gap vs English" in out
+    assert "No deltas" in out and "bn" in out
+    assert "no averaging" in out
+
+
+def test_explicit_reference_cli_preserves_provenance(tmp_path):
+    rows = tmp_path / 'explicit.jsonl'
+    for source, run_id, fmt, runtime in [('bf16', 'canonical', 'bf16', 'vllm'),
+            ('bf16', 'control', 'bf16', 'llama_cpp_python'),
+            ('q4', 'candidate', 'gguf-q4_k_m', 'llama_cpp_python')]:
+        run('scripts/normalize.py', f'{FIX}/{source}', '--format', fmt, '--runtime', runtime,
+            '--device', 'rtx5090', '--run-id', run_id, '--runtime-version', 'pinned',
+            '--model-revision', 'source-commit', '--backend', 'cuda', '--os-version', 'wsl',
+            '--sample-set-hash', 'a' * 64, '--scoring-contract-hash', 'b' * 64,
+            '--out', str(rows))
+    records = [json.loads(line) for line in rows.read_text().splitlines()]
+    assert all(r['sample_set_hash'] == 'a' * 64 for r in records)
+    out = run('scripts/report.py', str(rows), '--task', 'belebele', '--canonical-run',
+              'canonical', '--control-run', 'control', '--candidate-run', 'candidate')
+    assert all(label in out for label in ['runtime/conversion', 'same-runtime compression',
+                                        'total difference', 'gap vs English', 'unavailable'])
