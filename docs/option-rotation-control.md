@@ -50,3 +50,29 @@ and train only on those 100 for the other 200; keep all adjusted results labeled
 The utility tests check content/gold mapping across all rotations, recovery under
 a known additive bias, and source exclusion. These do not prove a real model has
 an additive letter prior. Runtime and full diagnostic-run validation remain required.
+
+## Execution tooling
+
+Prepare a fresh lock with `scripts/prepare_rotation_lock.py --lock SOURCE_LOCK
+--spec configs/option-rotation.json --tokenizer ORIGINAL_MODEL_DIRECTORY
+--tokenizer-python TOKENIZER_PYTHON --output NEW_ROTATION_LOCK`. This renders only
+the selected development questions and stores original-tokenizer context/candidate IDs.
+
+Run `scripts/check_rotation_tokens.py --lock ROTATION_LOCK --model GGUF
+--output NEW_PREFLIGHT` for each GGUF arm using the pinned patched library. It checks
+1,200 contexts and 4,800 candidate sequences plus decoded-text roundtrips, recording
+model/library/Python-wrapper hashes. Vocabulary-only checks perform no scoring.
+
+After A1 closes, start one pinned server at a time with the recorded baseline
+command/settings and capture its runtime manifest. Run `scripts/run_rotation_shards.py
+--lock ROTATION_LOCK --preflight PREFLIGHT --runtime-manifest MANIFEST --arm ARM
+--base-url ENDPOINT --directory NEW_RESULTS_DIRECTORY`. It uses the unchanged upstream
+GGUF scorer and evaluator on five transformed development documents per shard.
+No held-out documents are transformed. All four rotations are run anew for both arms.
+
+The runner requires matching lock, preflight and runtime identities, rechecks artifact
+hashes, and validates existing shards before reuse. Changed code or runtime rejects
+resume. Interrupted incomplete shards are not treated as completed results. Save
+the full lock, preflights, identities, manifests and raw outputs with the final report.
+This tooling does not itself establish endpoint likelihood parity; the same validated
+upstream integration remains required. No custom scoring adapter is introduced.
