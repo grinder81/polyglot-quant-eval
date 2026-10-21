@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 493,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Big_Book_of_Fun_Science_Experiments/Red_cabbage_indicator",
+          "question_number": 2,
+          "flores_passage": "This is called a chemical's pH. You can make an indicator using red cabbage juice. The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is. The pH level is indicated by the amount of Hydrogen (the H in pH) ions in the tested chemical. Hydrogen ions are protons that had their electrons stripped off them (since Hydrogen atoms consist of one proton and one electron).",
+          "question": "What was removed from Hydrogen ions?",
+          "mc_answer1": "Protons",
+          "mc_answer2": "pH",
+          "mc_answer3": "Alkaline",
+          "mc_answer4": "Electrons",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: This is called a chemical's pH. You can make an indicator using red cabbage juice. The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is. The pH level is indicated by the amount of Hydrogen (the H in pH) ions in the tested chemical. Hydrogen ions are protons that had their electrons stripped off them (since Hydrogen atoms consist of one proton and one electron).\nQ: What was removed from Hydrogen ions?\nA: Protons\nB: pH\nC: Alkaline\nD: Electrons\nAnswer:",
+            " A"
+          ],
+          [
+            "P: This is called a chemical's pH. You can make an indicator using red cabbage juice. The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is. The pH level is indicated by the amount of Hydrogen (the H in pH) ions in the tested chemical. Hydrogen ions are protons that had their electrons stripped off them (since Hydrogen atoms consist of one proton and one electron).\nQ: What was removed from Hydrogen ions?\nA: Protons\nB: pH\nC: Alkaline\nD: Electrons\nAnswer:",
+            " B"
+          ],
+          [
+            "P: This is called a chemical's pH. You can make an indicator using red cabbage juice. The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is. The pH level is indicated by the amount of Hydrogen (the H in pH) ions in the tested chemical. Hydrogen ions are protons that had their electrons stripped off them (since Hydrogen atoms consist of one proton and one electron).\nQ: What was removed from Hydrogen ions?\nA: Protons\nB: pH\nC: Alkaline\nD: Electrons\nAnswer:",
+            " C"
+          ],
+          [
+            "P: This is called a chemical's pH. You can make an indicator using red cabbage juice. The cabbage juice changes color depending on how acidic or basic (alkaline) the chemical is. The pH level is indicated by the amount of Hydrogen (the H in pH) ions in the tested chemical. Hydrogen ions are protons that had their electrons stripped off them (since Hydrogen atoms consist of one proton and one electron).\nQ: What was removed from Hydrogen ions?\nA: Protons\nB: pH\nC: Alkaline\nD: Electrons\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.011399256996810436,
+              true
+            ]
+          ],
+          [
+            [
+              -6.867764472961426,
+              false
+            ]
+          ],
+          [
+            [
+              -6.744210243225098,
+              false
+            ]
+          ],
+          [
+            [
+              -5.205483436584473,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.011399256996810436,
+            true
+          ],
+          [
+            -6.867764472961426,
+            false
+          ],
+          [
+            -6.744210243225098,
+            false
+          ],
+          [
+            -5.205483436584473,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "9c00d69fc86e7a8ecd33c4d601004984d647dd3da24db3d8d77f4784d3ec180e",
+        "prompt_hash": "879922898946020ca1f034eeb7b0423a9e6d122a2390c24e217412dffcc72742",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 676,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:United_States_Charters_of_Freedom/Declaration_of_Independence",
+          "question_number": 1,
+          "flores_passage": "\"If you have watched the movie National Treasure, you may think a treasure map was written on the back of the Declaration of Independence. However, that is not true. Although there is something written on the back of the document, it is not a treasure map. Written on the back of the Declaration of Independence were the words \"\"Original Declaration of Independence dated 4th July 1776\"\". The text appears on the bottom of the document, upside down. While no one knows for certain who wrote it, it is known that early in its life, the large parchment document (it measures 29¾ inches by 24½ inches) was rolled up for storage. So, it is likely that the notation was added simply as a label.\"",
+          "question": "How are the words on the back of the Declaration of Independence written?",
+          "mc_answer1": "In large font",
+          "mc_answer2": "In code",
+          "mc_answer3": "Upside down",
+          "mc_answer4": "In small font",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: \"If you have watched the movie National Treasure, you may think a treasure map was written on the back of the Declaration of Independence. However, that is not true. Although there is something written on the back of the document, it is not a treasure map. Written on the back of the Declaration of Independence were the words \"\"Original Declaration of Independence dated 4th July 1776\"\". The text appears on the bottom of the document, upside down. While no one knows for certain who wrote it, it is known that early in its life, the large parchment document (it measures 29¾ inches by 24½ inches) was rolled up for storage. So, it is likely that the notation was added simply as a label.\"\nQ: How are the words on the back of the Declaration of Independence written?\nA: In large font\nB: In code\nC: Upside down\nD: In small font\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"If you have watched the movie National Treasure, you may think a treasure map was written on the back of the Declaration of Independence. However, that is not true. Although there is something written on the back of the document, it is not a treasure map. Written on the back of the Declaration of Independence were the words \"\"Original Declaration of Independence dated 4th July 1776\"\". The text appears on the bottom of the document, upside down. While no one knows for certain who wrote it, it is known that early in its life, the large parchment document (it measures 29¾ inches by 24½ inches) was rolled up for storage. So, it is likely that the notation was added simply as a label.\"\nQ: How are the words on the back of the Declaration of Independence written?\nA: In large font\nB: In code\nC: Upside down\nD: In small font\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"If you have watched the movie National Treasure, you may think a treasure map was written on the back of the Declaration of Independence. However, that is not true. Although there is something written on the back of the document, it is not a treasure map. Written on the back of the Declaration of Independence were the words \"\"Original Declaration of Independence dated 4th July 1776\"\". The text appears on the bottom of the document, upside down. While no one knows for certain who wrote it, it is known that early in its life, the large parchment document (it measures 29¾ inches by 24½ inches) was rolled up for storage. So, it is likely that the notation was added simply as a label.\"\nQ: How are the words on the back of the Declaration of Independence written?\nA: In large font\nB: In code\nC: Upside down\nD: In small font\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"If you have watched the movie National Treasure, you may think a treasure map was written on the back of the Declaration of Independence. However, that is not true. Although there is something written on the back of the document, it is not a treasure map. Written on the back of the Declaration of Independence were the words \"\"Original Declaration of Independence dated 4th July 1776\"\". The text appears on the bottom of the document, upside down. While no one knows for certain who wrote it, it is known that early in its life, the large parchment document (it measures 29¾ inches by 24½ inches) was rolled up for storage. So, it is likely that the notation was added simply as a label.\"\nQ: How are the words on the back of the Declaration of Independence written?\nA: In large font\nB: In code\nC: Upside down\nD: In small font\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -8.444244384765625,
+              false
+            ]
+          ],
+          [
+            [
+              -7.682421684265137,
+              false
+            ]
+          ],
+          [
+            [
+              -0.010523069649934769,
+              true
+            ]
+          ],
+          [
+            [
+              -8.354964256286621,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -8.444244384765625,
+            false
+          ],
+          [
+            -7.682421684265137,
+            false
+          ],
+          [
+            -0.010523069649934769,
+            true
+          ],
+          [
+            -8.354964256286621,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a3853337749a5a64a498bcbcdd364bcb3822a8173ff4723d3ac5e1d20a805558",
+        "prompt_hash": "c7cd8c07a57163b705b540c7efdc91f27222929c326bb744d7a57f1b0db61bc0",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 256,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Mumbai_2008_attack_plotter_sentenced_to_35_years",
+          "question_number": 2,
+          "flores_passage": "The Mumbai attackers arrived via boat on Novemeber 26, 2008, bringing with them grenades, automatic weapons and hit multiple targets including the crowded Chhatrapati Shivaji Terminus railway station and the famous Taj Mahal Hotel. David Headley's scouting and information gathering had helped to enable the operation by the 10 gunmen from the Pakistani militant group Laskhar-e-Taiba. The attack put a huge strain on relations between India and Pakistan.",
+          "question": "Which mode of transportation did the militant group use to travel to Mumbai?",
+          "mc_answer1": "Railway",
+          "mc_answer2": "Plane",
+          "mc_answer3": "Boat",
+          "mc_answer4": "Car",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The Mumbai attackers arrived via boat on Novemeber 26, 2008, bringing with them grenades, automatic weapons and hit multiple targets including the crowded Chhatrapati Shivaji Terminus railway station and the famous Taj Mahal Hotel. David Headley's scouting and information gathering had helped to enable the operation by the 10 gunmen from the Pakistani militant group Laskhar-e-Taiba. The attack put a huge strain on relations between India and Pakistan.\nQ: Which mode of transportation did the militant group use to travel to Mumbai?\nA: Railway\nB: Plane\nC: Boat\nD: Car\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Mumbai attackers arrived via boat on Novemeber 26, 2008, bringing with them grenades, automatic weapons and hit multiple targets including the crowded Chhatrapati Shivaji Terminus railway station and the famous Taj Mahal Hotel. David Headley's scouting and information gathering had helped to enable the operation by the 10 gunmen from the Pakistani militant group Laskhar-e-Taiba. The attack put a huge strain on relations between India and Pakistan.\nQ: Which mode of transportation did the militant group use to travel to Mumbai?\nA: Railway\nB: Plane\nC: Boat\nD: Car\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Mumbai attackers arrived via boat on Novemeber 26, 2008, bringing with them grenades, automatic weapons and hit multiple targets including the crowded Chhatrapati Shivaji Terminus railway station and the famous Taj Mahal Hotel. David Headley's scouting and information gathering had helped to enable the operation by the 10 gunmen from the Pakistani militant group Laskhar-e-Taiba. The attack put a huge strain on relations between India and Pakistan.\nQ: Which mode of transportation did the militant group use to travel to Mumbai?\nA: Railway\nB: Plane\nC: Boat\nD: Car\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Mumbai attackers arrived via boat on Novemeber 26, 2008, bringing with them grenades, automatic weapons and hit multiple targets including the crowded Chhatrapati Shivaji Terminus railway station and the famous Taj Mahal Hotel. David Headley's scouting and information gathering had helped to enable the operation by the 10 gunmen from the Pakistani militant group Laskhar-e-Taiba. The attack put a huge strain on relations between India and Pakistan.\nQ: Which mode of transportation did the militant group use to travel to Mumbai?\nA: Railway\nB: Plane\nC: Boat\nD: Car\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.306215763092041,
+              false
+            ]
+          ],
+          [
+            [
+              -6.747927188873291,
+              false
+            ]
+          ],
+          [
+            [
+              -0.018713707104325294,
+              true
+            ]
+          ],
+          [
+            [
+              -8.977237701416016,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.306215763092041,
+            false
+          ],
+          [
+            -6.747927188873291,
+            false
+          ],
+          [
+            -0.018713707104325294,
+            true
+          ],
+          [
+            -8.977237701416016,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "eb315d1f77aea52846054b32244a0459fbecee81837fac10d0e7c8030ebd9ba1",
+        "prompt_hash": "5b96c00e10bd30de4aa9d6e2740bfb216a00fc147ad58a262ff9cd18ce745118",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 481,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Nationalised_bank_Northern_Rock_sold_to_Virgin_Money",
+          "question_number": 2,
+          "flores_passage": "The Northern Rock bank had been nationalised in 2008 following the revelation that the company had received emergency support from the UK Government. Northern Rock had required support due to its exposure during the subprime mortgage crisis in 2007. Sir Richard Branson's Virgin Group had a bid for the bank rejected prior to the bank’s nationalisation. In 2010, while nationalised, the current high street bank Northern Rock plc was split from the ‘bad bank’, Northern Rock (Asset Management). Virgin have only purchased the ‘good bank’ of Northern Rock, not the asset management company.",
+          "question": "According to the passage, which of the following statements accurately describes Virgin Group’s dealings with Northern Rock bank?",
+          "mc_answer1": "Virgin Group also purchased Northern Rock’s asset management company",
+          "mc_answer2": "Virgin Group purchased the bank after it’s nationalization",
+          "mc_answer3": "Virgin Group offered the bank emergency support during the mortgage crisis",
+          "mc_answer4": "Virgin Group’s first bid for the bank was made after the bank’s nationalization",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: The Northern Rock bank had been nationalised in 2008 following the revelation that the company had received emergency support from the UK Government. Northern Rock had required support due to its exposure during the subprime mortgage crisis in 2007. Sir Richard Branson's Virgin Group had a bid for the bank rejected prior to the bank’s nationalisation. In 2010, while nationalised, the current high street bank Northern Rock plc was split from the ‘bad bank’, Northern Rock (Asset Management). Virgin have only purchased the ‘good bank’ of Northern Rock, not the asset management company.\nQ: According to the passage, which of the following statements accurately describes Virgin Group’s dealings with Northern Rock bank?\nA: Virgin Group also purchased Northern Rock’s asset management company\nB: Virgin Group purchased the bank after it’s nationalization\nC: Virgin Group offered the bank emergency support during the mortgage crisis\nD: Virgin Group’s first bid for the bank was made after the bank’s nationalization\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Northern Rock bank had been nationalised in 2008 following the revelation that the company had received emergency support from the UK Government. Northern Rock had required support due to its exposure during the subprime mortgage crisis in 2007. Sir Richard Branson's Virgin Group had a bid for the bank rejected prior to the bank’s nationalisation. In 2010, while nationalised, the current high street bank Northern Rock plc was split from the ‘bad bank’, Northern Rock (Asset Management). Virgin have only purchased the ‘good bank’ of Northern Rock, not the asset management company.\nQ: According to the passage, which of the following statements accurately describes Virgin Group’s dealings with Northern Rock bank?\nA: Virgin Group also purchased Northern Rock’s asset management company\nB: Virgin Group purchased the bank after it’s nationalization\nC: Virgin Group offered the bank emergency support during the mortgage crisis\nD: Virgin Group’s first bid for the bank was made after the bank’s nationalization\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Northern Rock bank had been nationalised in 2008 following the revelation that the company had received emergency support from the UK Government. Northern Rock had required support due to its exposure during the subprime mortgage crisis in 2007. Sir Richard Branson's Virgin Group had a bid for the bank rejected prior to the bank’s nationalisation. In 2010, while nationalised, the current high street bank Northern Rock plc was split from the ‘bad bank’, Northern Rock (Asset Management). Virgin have only purchased the ‘good bank’ of Northern Rock, not the asset management company.\nQ: According to the passage, which of the following statements accurately describes Virgin Group’s dealings with Northern Rock bank?\nA: Virgin Group also purchased Northern Rock’s asset management company\nB: Virgin Group purchased the bank after it’s nationalization\nC: Virgin Group offered the bank emergency support during the mortgage crisis\nD: Virgin Group’s first bid for the bank was made after the bank’s nationalization\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Northern Rock bank had been nationalised in 2008 following the revelation that the company had received emergency support from the UK Government. Northern Rock had required support due to its exposure during the subprime mortgage crisis in 2007. Sir Richard Branson's Virgin Group had a bid for the bank rejected prior to the bank’s nationalisation. In 2010, while nationalised, the current high street bank Northern Rock plc was split from the ‘bad bank’, Northern Rock (Asset Management). Virgin have only purchased the ‘good bank’ of Northern Rock, not the asset management company.\nQ: According to the passage, which of the following statements accurately describes Virgin Group’s dealings with Northern Rock bank?\nA: Virgin Group also purchased Northern Rock’s asset management company\nB: Virgin Group purchased the bank after it’s nationalization\nC: Virgin Group offered the bank emergency support during the mortgage crisis\nD: Virgin Group’s first bid for the bank was made after the bank’s nationalization\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.683382987976074,
+              false
+            ]
+          ],
+          [
+            [
+              -0.12379743903875351,
+              true
+            ]
+          ],
+          [
+            [
+              -4.763848304748535,
+              false
+            ]
+          ],
+          [
+            [
+              -3.769209861755371,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.683382987976074,
+            false
+          ],
+          [
+            -0.12379743903875351,
+            true
+          ],
+          [
+            -4.763848304748535,
+            false
+          ],
+          [
+            -3.769209861755371,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "05cfe7eb993db7815acf76c7a7a94050c30663c74016c8454e1169e25a828245",
+        "prompt_hash": "c076c3ad51b7c0027c828bbd0c25614e750dffe34262cafab8e76f7b5f512225",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 180,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Caucasus",
+          "question_number": 2,
+          "flores_passage": "In 1994, the ethnically Armenian Nagorno-Karabakh region of Azerbaijan waged war against the Azeris. With Armenian backing, a new republic was created. However, no established nation - not even Armenia - officially recognizes it. Diplomatic arguments over the region continue to mar relations between Armenia and Azerbaijan.",
+          "question": "What continues to affect relations between Azerbaijan and Armenia?",
+          "mc_answer1": "Armenians that live in Azerbaijan",
+          "mc_answer2": "The war of 1994",
+          "mc_answer3": "Diplomatic arguments",
+          "mc_answer4": "Nagorno-Karabakh region ",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: In 1994, the ethnically Armenian Nagorno-Karabakh region of Azerbaijan waged war against the Azeris. With Armenian backing, a new republic was created. However, no established nation - not even Armenia - officially recognizes it. Diplomatic arguments over the region continue to mar relations between Armenia and Azerbaijan.\nQ: What continues to affect relations between Azerbaijan and Armenia?\nA: Armenians that live in Azerbaijan\nB: The war of 1994\nC: Diplomatic arguments\nD: Nagorno-Karabakh region \nAnswer:",
+            " A"
+          ],
+          [
+            "P: In 1994, the ethnically Armenian Nagorno-Karabakh region of Azerbaijan waged war against the Azeris. With Armenian backing, a new republic was created. However, no established nation - not even Armenia - officially recognizes it. Diplomatic arguments over the region continue to mar relations between Armenia and Azerbaijan.\nQ: What continues to affect relations between Azerbaijan and Armenia?\nA: Armenians that live in Azerbaijan\nB: The war of 1994\nC: Diplomatic arguments\nD: Nagorno-Karabakh region \nAnswer:",
+            " B"
+          ],
+          [
+            "P: In 1994, the ethnically Armenian Nagorno-Karabakh region of Azerbaijan waged war against the Azeris. With Armenian backing, a new republic was created. However, no established nation - not even Armenia - officially recognizes it. Diplomatic arguments over the region continue to mar relations between Armenia and Azerbaijan.\nQ: What continues to affect relations between Azerbaijan and Armenia?\nA: Armenians that live in Azerbaijan\nB: The war of 1994\nC: Diplomatic arguments\nD: Nagorno-Karabakh region \nAnswer:",
+            " C"
+          ],
+          [
+            "P: In 1994, the ethnically Armenian Nagorno-Karabakh region of Azerbaijan waged war against the Azeris. With Armenian backing, a new republic was created. However, no established nation - not even Armenia - officially recognizes it. Diplomatic arguments over the region continue to mar relations between Armenia and Azerbaijan.\nQ: What continues to affect relations between Azerbaijan and Armenia?\nA: Armenians that live in Azerbaijan\nB: The war of 1994\nC: Diplomatic arguments\nD: Nagorno-Karabakh region \nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -7.460758209228516,
+              false
+            ]
+          ],
+          [
+            [
+              -7.840655326843262,
+              false
+            ]
+          ],
+          [
+            [
+              -0.02648366056382656,
+              true
+            ]
+          ],
+          [
+            [
+              -6.789809226989746,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -7.460758209228516,
+            false
+          ],
+          [
+            -7.840655326843262,
+            false
+          ],
+          [
+            -0.02648366056382656,
+            true
+          ],
+          [
+            -6.789809226989746,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "2dfc9820b0014d8c781cf05e8a46d6d4a849d7bcf3c43af1bc14966e93409bb2",
+        "prompt_hash": "29f30a142ad81e41109b7e2194226aae0dfd5ec77cbc23c8c84ae1241a3da4ce",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792553588.2130945,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

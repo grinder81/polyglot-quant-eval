@@ -1,0 +1,125 @@
+{
+  "languages": {
+    "eng_Latn": {
+      "n": 300,
+      "bf16_correct": 230,
+      "q4_correct": 226,
+      "changed_choices": 17,
+      "right_to_wrong": 9,
+      "wrong_to_right": 5,
+      "wrong_to_wrong": 3,
+      "bf16_predicted_letters": {
+        "A": 106,
+        "B": 73,
+        "D": 53,
+        "C": 68
+      },
+      "q4_predicted_letters": {
+        "A": 110,
+        "B": 75,
+        "D": 50,
+        "C": 65
+      },
+      "gold_letters": {
+        "D": 64,
+        "B": 92,
+        "C": 72,
+        "A": 72
+      },
+      "accuracy_delta_q4_minus_bf16": -0.013333333333333334,
+      "paired_cluster_95_delta_interval": [
+        -0.03832752613240418,
+        0.01020408163265306
+      ],
+      "delta_minus_english_delta": 0.0,
+      "paired_cluster_95_delta_minus_english_interval": [
+        0.0,
+        0.0
+      ],
+      "bf16_accuracy_gap_to_english": 0.0,
+      "q4_accuracy_gap_to_english": 0.0
+    },
+    "ben_Beng": {
+      "n": 300,
+      "bf16_correct": 188,
+      "q4_correct": 189,
+      "changed_choices": 36,
+      "right_to_wrong": 12,
+      "wrong_to_right": 13,
+      "wrong_to_wrong": 11,
+      "bf16_predicted_letters": {
+        "A": 137,
+        "C": 54,
+        "D": 43,
+        "B": 66
+      },
+      "q4_predicted_letters": {
+        "A": 127,
+        "C": 57,
+        "D": 49,
+        "B": 67
+      },
+      "gold_letters": {
+        "D": 64,
+        "B": 92,
+        "C": 72,
+        "A": 72
+      },
+      "accuracy_delta_q4_minus_bf16": 0.0033333333333333335,
+      "paired_cluster_95_delta_interval": [
+        -0.02768166089965398,
+        0.03642384105960265
+      ],
+      "delta_minus_english_delta": 0.016666666666666666,
+      "paired_cluster_95_delta_minus_english_interval": [
+        -0.023255813953488372,
+        0.056105610561056105
+      ],
+      "bf16_accuracy_gap_to_english": -0.14,
+      "q4_accuracy_gap_to_english": -0.12333333333333334
+    },
+    "hin_Deva": {
+      "n": 300,
+      "bf16_correct": 184,
+      "q4_correct": 176,
+      "changed_choices": 37,
+      "right_to_wrong": 19,
+      "wrong_to_right": 11,
+      "wrong_to_wrong": 7,
+      "bf16_predicted_letters": {
+        "A": 134,
+        "C": 59,
+        "D": 49,
+        "B": 58
+      },
+      "q4_predicted_letters": {
+        "A": 148,
+        "C": 48,
+        "D": 49,
+        "B": 55
+      },
+      "gold_letters": {
+        "D": 64,
+        "B": 92,
+        "C": 72,
+        "A": 72
+      },
+      "accuracy_delta_q4_minus_bf16": -0.02666666666666667,
+      "paired_cluster_95_delta_interval": [
+        -0.06291390728476821,
+        0.009933774834437087
+      ],
+      "delta_minus_english_delta": -0.013333333333333334,
+      "paired_cluster_95_delta_minus_english_interval": [
+        -0.052083333333333336,
+        0.026058631921824105
+      ],
+      "bf16_accuracy_gap_to_english": -0.15333333333333332,
+      "q4_accuracy_gap_to_english": -0.16666666666666666
+    }
+  },
+  "source_clusters": 250,
+  "bootstrap_seed": 42,
+  "bootstrap_replicates": 10000,
+  "interpretation": "Development-sample uncertainty, conditional on these sources and scoring. Not evidence of equivalence or a causal language mechanism."
+}

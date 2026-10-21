@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 611,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Biology/Systems/Circulatory_System",
+          "question_number": 2,
+          "flores_passage": "The major organ of the circulatory system is the heart, which pumps the blood. Blood goes away from the heart in tubes called arteries and comes back to the heart in tubes called veins. The smallest tubes are called capillaries.",
+          "question": "Which tubes are the smallest in the circulatory system?",
+          "mc_answer1": "Capillaries",
+          "mc_answer2": "Arteries",
+          "mc_answer3": "Veins",
+          "mc_answer4": "Organs",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The major organ of the circulatory system is the heart, which pumps the blood. Blood goes away from the heart in tubes called arteries and comes back to the heart in tubes called veins. The smallest tubes are called capillaries.\nQ: Which tubes are the smallest in the circulatory system?\nA: Capillaries\nB: Arteries\nC: Veins\nD: Organs\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The major organ of the circulatory system is the heart, which pumps the blood. Blood goes away from the heart in tubes called arteries and comes back to the heart in tubes called veins. The smallest tubes are called capillaries.\nQ: Which tubes are the smallest in the circulatory system?\nA: Capillaries\nB: Arteries\nC: Veins\nD: Organs\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The major organ of the circulatory system is the heart, which pumps the blood. Blood goes away from the heart in tubes called arteries and comes back to the heart in tubes called veins. The smallest tubes are called capillaries.\nQ: Which tubes are the smallest in the circulatory system?\nA: Capillaries\nB: Arteries\nC: Veins\nD: Organs\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The major organ of the circulatory system is the heart, which pumps the blood. Blood goes away from the heart in tubes called arteries and comes back to the heart in tubes called veins. The smallest tubes are called capillaries.\nQ: Which tubes are the smallest in the circulatory system?\nA: Capillaries\nB: Arteries\nC: Veins\nD: Organs\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.029999518766999245,
+              true
+            ]
+          ],
+          [
+            [
+              -6.001896858215332,
+              false
+            ]
+          ],
+          [
+            [
+              -3.865797758102417,
+              false
+            ]
+          ],
+          [
+            [
+              -6.284083366394043,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.029999518766999245,
+            true
+          ],
+          [
+            -6.001896858215332,
+            false
+          ],
+          [
+            -3.865797758102417,
+            false
+          ],
+          [
+            -6.284083366394043,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "aa95393add9faea5fad8991a35f71696c4c5085a873b376083014d5b33b65560",
+        "prompt_hash": "bbe1c1630bff3916565bdf4eadeede0bc436141d8f10818a2b62d65a83059d42",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 788,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Doctor_to_be_charged_after_mother%27s_death_in_Ohio",
+          "question_number": 2,
+          "flores_passage": "A doctor who worked at Children's Hospital of Pittsburgh, Pennsylvania will be charged with aggravated murder after her mother was found dead in the trunk of her car Wednesday, authorities in Ohio say. Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state. She directed officers to her black Oldsmobile Intrigue which was 500 feet away. There, they found the body of Saroja Balasubramanian, 53, covered with blood-stained blankets. Police said that the body appeared to have been there for about a day.",
+          "question": "Where was the body of Sara Balasubramanian found?",
+          "mc_answer1": "In Cincinnati ",
+          "mc_answer2": "Beside the road",
+          "mc_answer3": "In the trunk of car",
+          "mc_answer4": "In Pittsburgh",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: A doctor who worked at Children's Hospital of Pittsburgh, Pennsylvania will be charged with aggravated murder after her mother was found dead in the trunk of her car Wednesday, authorities in Ohio say. Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state. She directed officers to her black Oldsmobile Intrigue which was 500 feet away. There, they found the body of Saroja Balasubramanian, 53, covered with blood-stained blankets. Police said that the body appeared to have been there for about a day.\nQ: Where was the body of Sara Balasubramanian found?\nA: In Cincinnati \nB: Beside the road\nC: In the trunk of car\nD: In Pittsburgh\nAnswer:",
+            " A"
+          ],
+          [
+            "P: A doctor who worked at Children's Hospital of Pittsburgh, Pennsylvania will be charged with aggravated murder after her mother was found dead in the trunk of her car Wednesday, authorities in Ohio say. Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state. She directed officers to her black Oldsmobile Intrigue which was 500 feet away. There, they found the body of Saroja Balasubramanian, 53, covered with blood-stained blankets. Police said that the body appeared to have been there for about a day.\nQ: Where was the body of Sara Balasubramanian found?\nA: In Cincinnati \nB: Beside the road\nC: In the trunk of car\nD: In Pittsburgh\nAnswer:",
+            " B"
+          ],
+          [
+            "P: A doctor who worked at Children's Hospital of Pittsburgh, Pennsylvania will be charged with aggravated murder after her mother was found dead in the trunk of her car Wednesday, authorities in Ohio say. Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state. She directed officers to her black Oldsmobile Intrigue which was 500 feet away. There, they found the body of Saroja Balasubramanian, 53, covered with blood-stained blankets. Police said that the body appeared to have been there for about a day.\nQ: Where was the body of Sara Balasubramanian found?\nA: In Cincinnati \nB: Beside the road\nC: In the trunk of car\nD: In Pittsburgh\nAnswer:",
+            " C"
+          ],
+          [
+            "P: A doctor who worked at Children's Hospital of Pittsburgh, Pennsylvania will be charged with aggravated murder after her mother was found dead in the trunk of her car Wednesday, authorities in Ohio say. Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state. She directed officers to her black Oldsmobile Intrigue which was 500 feet away. There, they found the body of Saroja Balasubramanian, 53, covered with blood-stained blankets. Police said that the body appeared to have been there for about a day.\nQ: Where was the body of Sara Balasubramanian found?\nA: In Cincinnati \nB: Beside the road\nC: In the trunk of car\nD: In Pittsburgh\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.4851207733154297,
+              false
+            ]
+          ],
+          [
+            [
+              -0.7772921323776245,
+              true
+            ]
+          ],
+          [
+            [
+              -1.3091925382614136,
+              false
+            ]
+          ],
+          [
+            [
+              -2.1905517578125,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.4851207733154297,
+            false
+          ],
+          [
+            -0.7772921323776245,
+            true
+          ],
+          [
+            -1.3091925382614136,
+            false
+          ],
+          [
+            -2.1905517578125,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "d6c220f30b3f9162135f6a6ee5a8f6b9d2367b318c9453fe9de99adb2cf09a45",
+        "prompt_hash": "4c0a7c734ae901ac32e20e81b3f6fb9cb12111f8c81a2f74f539c183ce9aafa4",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 475,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Mitt_Romney_wins_2012_Florida_primary",
+          "question_number": 2,
+          "flores_passage": "Former Massachusetts governor Mitt Romney won the Florida Republican Party presidential primary election on Tuesday with over 46 percent of the vote. Former U.S. Speaker of the House Newt Gingrich came in second with 32 percent. As a winner-takes-all state, Florida awarded all fifty of its delegates to Romney, pushing him ahead as the front-runner for the Republican Party nomination.",
+          "question": "According to the passage, what percent of the vote did Gingrich have in the primary election?",
+          "mc_answer1": "50 percent",
+          "mc_answer2": "32 percent",
+          "mc_answer3": "46 percent",
+          "mc_answer4": "35 percent",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Former Massachusetts governor Mitt Romney won the Florida Republican Party presidential primary election on Tuesday with over 46 percent of the vote. Former U.S. Speaker of the House Newt Gingrich came in second with 32 percent. As a winner-takes-all state, Florida awarded all fifty of its delegates to Romney, pushing him ahead as the front-runner for the Republican Party nomination.\nQ: According to the passage, what percent of the vote did Gingrich have in the primary election?\nA: 50 percent\nB: 32 percent\nC: 46 percent\nD: 35 percent\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Former Massachusetts governor Mitt Romney won the Florida Republican Party presidential primary election on Tuesday with over 46 percent of the vote. Former U.S. Speaker of the House Newt Gingrich came in second with 32 percent. As a winner-takes-all state, Florida awarded all fifty of its delegates to Romney, pushing him ahead as the front-runner for the Republican Party nomination.\nQ: According to the passage, what percent of the vote did Gingrich have in the primary election?\nA: 50 percent\nB: 32 percent\nC: 46 percent\nD: 35 percent\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Former Massachusetts governor Mitt Romney won the Florida Republican Party presidential primary election on Tuesday with over 46 percent of the vote. Former U.S. Speaker of the House Newt Gingrich came in second with 32 percent. As a winner-takes-all state, Florida awarded all fifty of its delegates to Romney, pushing him ahead as the front-runner for the Republican Party nomination.\nQ: According to the passage, what percent of the vote did Gingrich have in the primary election?\nA: 50 percent\nB: 32 percent\nC: 46 percent\nD: 35 percent\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Former Massachusetts governor Mitt Romney won the Florida Republican Party presidential primary election on Tuesday with over 46 percent of the vote. Former U.S. Speaker of the House Newt Gingrich came in second with 32 percent. As a winner-takes-all state, Florida awarded all fifty of its delegates to Romney, pushing him ahead as the front-runner for the Republican Party nomination.\nQ: According to the passage, what percent of the vote did Gingrich have in the primary election?\nA: 50 percent\nB: 32 percent\nC: 46 percent\nD: 35 percent\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -7.701089859008789,
+              false
+            ]
+          ],
+          [
+            [
+              -0.011018620803952217,
+              true
+            ]
+          ],
+          [
+            [
+              -8.90166187286377,
+              false
+            ]
+          ],
+          [
+            [
+              -8.70813274383545,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -7.701089859008789,
+            false
+          ],
+          [
+            -0.011018620803952217,
+            true
+          ],
+          [
+            -8.90166187286377,
+            false
+          ],
+          [
+            -8.70813274383545,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "722debc2b3fa3a2dde7acbfb34c6a5cbeb1714afe4db8407dd98508b43a50b43",
+        "prompt_hash": "07934d1beeb6a17eaba5a085a6fcac56d786e3995f315d62542edfbd522b3048",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 198,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/US_helicopter_with_17_on_board_believed_to_have_been_shot_down_in_Afghanistan",
+          "question_number": 1,
+          "flores_passage": "Coalition and Afghan troops moved into the area to secure the site and other coalition aircraft have been sent to assist. The crash occurred high up in mountainous terrain, and is believed to have been the result of hostile fire. Efforts to search for the crash site are being met by bad weather and harsh terrain.",
+          "question": "What is believed to be the cause of the crash?",
+          "mc_answer1": "Harsh terrain",
+          "mc_answer2": "Hostile fire",
+          "mc_answer3": "Mountainous terrain",
+          "mc_answer4": "Bad weather",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Coalition and Afghan troops moved into the area to secure the site and other coalition aircraft have been sent to assist. The crash occurred high up in mountainous terrain, and is believed to have been the result of hostile fire. Efforts to search for the crash site are being met by bad weather and harsh terrain.\nQ: What is believed to be the cause of the crash?\nA: Harsh terrain\nB: Hostile fire\nC: Mountainous terrain\nD: Bad weather\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Coalition and Afghan troops moved into the area to secure the site and other coalition aircraft have been sent to assist. The crash occurred high up in mountainous terrain, and is believed to have been the result of hostile fire. Efforts to search for the crash site are being met by bad weather and harsh terrain.\nQ: What is believed to be the cause of the crash?\nA: Harsh terrain\nB: Hostile fire\nC: Mountainous terrain\nD: Bad weather\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Coalition and Afghan troops moved into the area to secure the site and other coalition aircraft have been sent to assist. The crash occurred high up in mountainous terrain, and is believed to have been the result of hostile fire. Efforts to search for the crash site are being met by bad weather and harsh terrain.\nQ: What is believed to be the cause of the crash?\nA: Harsh terrain\nB: Hostile fire\nC: Mountainous terrain\nD: Bad weather\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Coalition and Afghan troops moved into the area to secure the site and other coalition aircraft have been sent to assist. The crash occurred high up in mountainous terrain, and is believed to have been the result of hostile fire. Efforts to search for the crash site are being met by bad weather and harsh terrain.\nQ: What is believed to be the cause of the crash?\nA: Harsh terrain\nB: Hostile fire\nC: Mountainous terrain\nD: Bad weather\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.671649932861328,
+              false
+            ]
+          ],
+          [
+            [
+              -0.014127719216048717,
+              true
+            ]
+          ],
+          [
+            [
+              -7.548307418823242,
+              false
+            ]
+          ],
+          [
+            [
+              -7.534485816955566,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.671649932861328,
+            false
+          ],
+          [
+            -0.014127719216048717,
+            true
+          ],
+          [
+            -7.548307418823242,
+            false
+          ],
+          [
+            -7.534485816955566,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a5ce13da9bc8bea49372ac28da69bace523a993c31c6b4f3d1a7407294218d74",
+        "prompt_hash": "b276f59d939fcaf65a3ea5c6b67758af59807fea3921987f1d2282a0522e731b",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 365,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Montevideo",
+          "question_number": 2,
+          "flores_passage": "\"Since Montevideo is south of the Equator, it is summer there when it's winter in the Northern Hemisphere and vice versa. Montevideo is in the subtropics; in the summer months, temperatures above +30°C are common. The winter can be deceptively chilly: temperatures rarely go below freezing, but the wind and humidity combine to make it feel colder than what the thermometer says. There are no particular \"\"rainy\"\" and \"\"dry\"\" seasons: the amount of rain stays roughly the same throughout the year.\"",
+          "question": "According to the passage, when should a traveler visit Montevideo if they are partial to a cooler climate?",
+          "mc_answer1": "When it’s summer in Montevideo",
+          "mc_answer2": "When it’s summer in the Northern Hemisphere",
+          "mc_answer3": "When it’s Montevideo’s rainy season",
+          "mc_answer4": "When it’s winter in the Northern Hemisphere",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"Since Montevideo is south of the Equator, it is summer there when it's winter in the Northern Hemisphere and vice versa. Montevideo is in the subtropics; in the summer months, temperatures above +30°C are common. The winter can be deceptively chilly: temperatures rarely go below freezing, but the wind and humidity combine to make it feel colder than what the thermometer says. There are no particular \"\"rainy\"\" and \"\"dry\"\" seasons: the amount of rain stays roughly the same throughout the year.\"\nQ: According to the passage, when should a traveler visit Montevideo if they are partial to a cooler climate?\nA: When it’s summer in Montevideo\nB: When it’s summer in the Northern Hemisphere\nC: When it’s Montevideo’s rainy season\nD: When it’s winter in the Northern Hemisphere\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Since Montevideo is south of the Equator, it is summer there when it's winter in the Northern Hemisphere and vice versa. Montevideo is in the subtropics; in the summer months, temperatures above +30°C are common. The winter can be deceptively chilly: temperatures rarely go below freezing, but the wind and humidity combine to make it feel colder than what the thermometer says. There are no particular \"\"rainy\"\" and \"\"dry\"\" seasons: the amount of rain stays roughly the same throughout the year.\"\nQ: According to the passage, when should a traveler visit Montevideo if they are partial to a cooler climate?\nA: When it’s summer in Montevideo\nB: When it’s summer in the Northern Hemisphere\nC: When it’s Montevideo’s rainy season\nD: When it’s winter in the Northern Hemisphere\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Since Montevideo is south of the Equator, it is summer there when it's winter in the Northern Hemisphere and vice versa. Montevideo is in the subtropics; in the summer months, temperatures above +30°C are common. The winter can be deceptively chilly: temperatures rarely go below freezing, but the wind and humidity combine to make it feel colder than what the thermometer says. There are no particular \"\"rainy\"\" and \"\"dry\"\" seasons: the amount of rain stays roughly the same throughout the year.\"\nQ: According to the passage, when should a traveler visit Montevideo if they are partial to a cooler climate?\nA: When it’s summer in Montevideo\nB: When it’s summer in the Northern Hemisphere\nC: When it’s Montevideo’s rainy season\nD: When it’s winter in the Northern Hemisphere\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Since Montevideo is south of the Equator, it is summer there when it's winter in the Northern Hemisphere and vice versa. Montevideo is in the subtropics; in the summer months, temperatures above +30°C are common. The winter can be deceptively chilly: temperatures rarely go below freezing, but the wind and humidity combine to make it feel colder than what the thermometer says. There are no particular \"\"rainy\"\" and \"\"dry\"\" seasons: the amount of rain stays roughly the same throughout the year.\"\nQ: According to the passage, when should a traveler visit Montevideo if they are partial to a cooler climate?\nA: When it’s summer in Montevideo\nB: When it’s summer in the Northern Hemisphere\nC: When it’s Montevideo’s rainy season\nD: When it’s winter in the Northern Hemisphere\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.586575508117676,
+              false
+            ]
+          ],
+          [
+            [
+              -4.5203657150268555,
+              false
+            ]
+          ],
+          [
+            [
+              -6.442281723022461,
+              false
+            ]
+          ],
+          [
+            [
+              -0.11290466785430908,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.586575508117676,
+            false
+          ],
+          [
+            -4.5203657150268555,
+            false
+          ],
+          [
+            -6.442281723022461,
+            false
+          ],
+          [
+            -0.11290466785430908,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "0fb1308c7c6a04229a9abbac0e75a0cd65462c7b30d41b8f347b0d44fd8bb320",
+        "prompt_hash": "ba57560a3dc895d019cb9cca0889212ad71ee7a1570796ba94c7e7066b471158",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792554594.3235722,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

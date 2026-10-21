@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 819,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Asia/Bhutan",
+          "question_number": 1,
+          "flores_passage": "The Drukgyal Dzong is a ruined fortress and Buddhist monastery in the upper part of the Paro District (in Phondey Village). It is said that in 1649, Zhabdrung Ngawang Namgyel created the fortress to commemorate his victory against the Tibetan-Mongol forces. In 1951, a fire caused for only some of the relics of the Drukgyal Dzong to remain, such as the image of Zhabdrung Ngawang Namgyal. After the fire, the fortress was preserved and protected, remaining to be one of Bhutan's most sensational attractions.",
+          "question": "Which statement about The Drukgyal Dzong is not true?",
+          "mc_answer1": "It was built to celebrate the victory of the Tibetan-Mongol forces",
+          "mc_answer2": "It’s located in Bhutan",
+          "mc_answer3": "A fire destroyed many of the fortress’s relics",
+          "mc_answer4": "It was created by Zhabdrung Ngawang Namgyel",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: The Drukgyal Dzong is a ruined fortress and Buddhist monastery in the upper part of the Paro District (in Phondey Village). It is said that in 1649, Zhabdrung Ngawang Namgyel created the fortress to commemorate his victory against the Tibetan-Mongol forces. In 1951, a fire caused for only some of the relics of the Drukgyal Dzong to remain, such as the image of Zhabdrung Ngawang Namgyal. After the fire, the fortress was preserved and protected, remaining to be one of Bhutan's most sensational attractions.\nQ: Which statement about The Drukgyal Dzong is not true?\nA: It was built to celebrate the victory of the Tibetan-Mongol forces\nB: It’s located in Bhutan\nC: A fire destroyed many of the fortress’s relics\nD: It was created by Zhabdrung Ngawang Namgyel\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The Drukgyal Dzong is a ruined fortress and Buddhist monastery in the upper part of the Paro District (in Phondey Village). It is said that in 1649, Zhabdrung Ngawang Namgyel created the fortress to commemorate his victory against the Tibetan-Mongol forces. In 1951, a fire caused for only some of the relics of the Drukgyal Dzong to remain, such as the image of Zhabdrung Ngawang Namgyal. After the fire, the fortress was preserved and protected, remaining to be one of Bhutan's most sensational attractions.\nQ: Which statement about The Drukgyal Dzong is not true?\nA: It was built to celebrate the victory of the Tibetan-Mongol forces\nB: It’s located in Bhutan\nC: A fire destroyed many of the fortress’s relics\nD: It was created by Zhabdrung Ngawang Namgyel\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The Drukgyal Dzong is a ruined fortress and Buddhist monastery in the upper part of the Paro District (in Phondey Village). It is said that in 1649, Zhabdrung Ngawang Namgyel created the fortress to commemorate his victory against the Tibetan-Mongol forces. In 1951, a fire caused for only some of the relics of the Drukgyal Dzong to remain, such as the image of Zhabdrung Ngawang Namgyal. After the fire, the fortress was preserved and protected, remaining to be one of Bhutan's most sensational attractions.\nQ: Which statement about The Drukgyal Dzong is not true?\nA: It was built to celebrate the victory of the Tibetan-Mongol forces\nB: It’s located in Bhutan\nC: A fire destroyed many of the fortress’s relics\nD: It was created by Zhabdrung Ngawang Namgyel\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The Drukgyal Dzong is a ruined fortress and Buddhist monastery in the upper part of the Paro District (in Phondey Village). It is said that in 1649, Zhabdrung Ngawang Namgyel created the fortress to commemorate his victory against the Tibetan-Mongol forces. In 1951, a fire caused for only some of the relics of the Drukgyal Dzong to remain, such as the image of Zhabdrung Ngawang Namgyal. After the fire, the fortress was preserved and protected, remaining to be one of Bhutan's most sensational attractions.\nQ: Which statement about The Drukgyal Dzong is not true?\nA: It was built to celebrate the victory of the Tibetan-Mongol forces\nB: It’s located in Bhutan\nC: A fire destroyed many of the fortress’s relics\nD: It was created by Zhabdrung Ngawang Namgyel\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.008377647027373314,
+              true
+            ]
+          ],
+          [
+            [
+              -6.392847537994385,
+              false
+            ]
+          ],
+          [
+            [
+              -6.3703293800354,
+              false
+            ]
+          ],
+          [
+            [
+              -7.676903247833252,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.008377647027373314,
+            true
+          ],
+          [
+            -6.392847537994385,
+            false
+          ],
+          [
+            -6.3703293800354,
+            false
+          ],
+          [
+            -7.676903247833252,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f604daaf2ba0817704f9fe84a50545a571d5520b2018be5546f883d34f34a236",
+        "prompt_hash": "dbf85abd25a7b4231a6846b53ba7b5e1654855276fd25688253d79b61361b4b6",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 617,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Brazilian_footballer_Gabriel_Jesus_signs_contract_extension_with_Manchester_City",
+          "question_number": 1,
+          "flores_passage": "21-year-old Jesus joined Manchester City last year in January 2017 from Brazilian club Palmeiras for a reported fee of £27 million. Since then, the Brazilian has featured in 53 matches for the club in all competitions and has scored 24 goals.",
+          "question": "Since joining Manchester City in 2017, how many matches has Jesus played in?",
+          "mc_answer1": "24",
+          "mc_answer2": "21",
+          "mc_answer3": "27",
+          "mc_answer4": "53",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: 21-year-old Jesus joined Manchester City last year in January 2017 from Brazilian club Palmeiras for a reported fee of £27 million. Since then, the Brazilian has featured in 53 matches for the club in all competitions and has scored 24 goals.\nQ: Since joining Manchester City in 2017, how many matches has Jesus played in?\nA: 24\nB: 21\nC: 27\nD: 53\nAnswer:",
+            " A"
+          ],
+          [
+            "P: 21-year-old Jesus joined Manchester City last year in January 2017 from Brazilian club Palmeiras for a reported fee of £27 million. Since then, the Brazilian has featured in 53 matches for the club in all competitions and has scored 24 goals.\nQ: Since joining Manchester City in 2017, how many matches has Jesus played in?\nA: 24\nB: 21\nC: 27\nD: 53\nAnswer:",
+            " B"
+          ],
+          [
+            "P: 21-year-old Jesus joined Manchester City last year in January 2017 from Brazilian club Palmeiras for a reported fee of £27 million. Since then, the Brazilian has featured in 53 matches for the club in all competitions and has scored 24 goals.\nQ: Since joining Manchester City in 2017, how many matches has Jesus played in?\nA: 24\nB: 21\nC: 27\nD: 53\nAnswer:",
+            " C"
+          ],
+          [
+            "P: 21-year-old Jesus joined Manchester City last year in January 2017 from Brazilian club Palmeiras for a reported fee of £27 million. Since then, the Brazilian has featured in 53 matches for the club in all competitions and has scored 24 goals.\nQ: Since joining Manchester City in 2017, how many matches has Jesus played in?\nA: 24\nB: 21\nC: 27\nD: 53\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.316761493682861,
+              false
+            ]
+          ],
+          [
+            [
+              -8.224750518798828,
+              false
+            ]
+          ],
+          [
+            [
+              -8.104361534118652,
+              false
+            ]
+          ],
+          [
+            [
+              -0.009827327914536,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.316761493682861,
+            false
+          ],
+          [
+            -8.224750518798828,
+            false
+          ],
+          [
+            -8.104361534118652,
+            false
+          ],
+          [
+            -0.009827327914536,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "fc20745d63cbfb63135580e2eaf989ff2aa405f7b2174a9bb1683ee8f069b2c6",
+        "prompt_hash": "79174458ca11b17cfb036d9a1fe5fa297ff1fe87fcef9bf80c3ed313cd62ec28",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 173,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/War_between_top_lawyers_in_Greece",
+          "question_number": 1,
+          "flores_passage": "\"The famous Greek lawyers, Sakis Kechagioglou and George Nikolakopoulos have been imprisoned in the Athens' jail of Korydallus, as they were found guilty of graft and corruption. As a result of this, a big scandal within the Greek legal community has been raised through the exposure of illegal actions that judges, lawyers, solicitors and attorneys have done during the previous years. A few weeks ago, after the information published by the journalist Makis Triantafylopoulos in his popular Television show \"\"Zoungla\"\" in Alpha TV, the member of Parliament and lawyer, Petros Mantouvalos was abdicated as members of his office had been involved in illegal graft and corruption. Moreover, top judge Evangelos Kalousis is imprisoned as he found guilty of corruption and degenerate behaviour.\"",
+          "question": "Which of the following people is not a lawyer?",
+          "mc_answer1": "Petros Mantouvalos",
+          "mc_answer2": "Sakis Kechagioglou",
+          "mc_answer3": "George Nikolakopoulos",
+          "mc_answer4": "Makis Triantafylopoulos",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: \"The famous Greek lawyers, Sakis Kechagioglou and George Nikolakopoulos have been imprisoned in the Athens' jail of Korydallus, as they were found guilty of graft and corruption. As a result of this, a big scandal within the Greek legal community has been raised through the exposure of illegal actions that judges, lawyers, solicitors and attorneys have done during the previous years. A few weeks ago, after the information published by the journalist Makis Triantafylopoulos in his popular Television show \"\"Zoungla\"\" in Alpha TV, the member of Parliament and lawyer, Petros Mantouvalos was abdicated as members of his office had been involved in illegal graft and corruption. Moreover, top judge Evangelos Kalousis is imprisoned as he found guilty of corruption and degenerate behaviour.\"\nQ: Which of the following people is not a lawyer?\nA: Petros Mantouvalos\nB: Sakis Kechagioglou\nC: George Nikolakopoulos\nD: Makis Triantafylopoulos\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"The famous Greek lawyers, Sakis Kechagioglou and George Nikolakopoulos have been imprisoned in the Athens' jail of Korydallus, as they were found guilty of graft and corruption. As a result of this, a big scandal within the Greek legal community has been raised through the exposure of illegal actions that judges, lawyers, solicitors and attorneys have done during the previous years. A few weeks ago, after the information published by the journalist Makis Triantafylopoulos in his popular Television show \"\"Zoungla\"\" in Alpha TV, the member of Parliament and lawyer, Petros Mantouvalos was abdicated as members of his office had been involved in illegal graft and corruption. Moreover, top judge Evangelos Kalousis is imprisoned as he found guilty of corruption and degenerate behaviour.\"\nQ: Which of the following people is not a lawyer?\nA: Petros Mantouvalos\nB: Sakis Kechagioglou\nC: George Nikolakopoulos\nD: Makis Triantafylopoulos\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"The famous Greek lawyers, Sakis Kechagioglou and George Nikolakopoulos have been imprisoned in the Athens' jail of Korydallus, as they were found guilty of graft and corruption. As a result of this, a big scandal within the Greek legal community has been raised through the exposure of illegal actions that judges, lawyers, solicitors and attorneys have done during the previous years. A few weeks ago, after the information published by the journalist Makis Triantafylopoulos in his popular Television show \"\"Zoungla\"\" in Alpha TV, the member of Parliament and lawyer, Petros Mantouvalos was abdicated as members of his office had been involved in illegal graft and corruption. Moreover, top judge Evangelos Kalousis is imprisoned as he found guilty of corruption and degenerate behaviour.\"\nQ: Which of the following people is not a lawyer?\nA: Petros Mantouvalos\nB: Sakis Kechagioglou\nC: George Nikolakopoulos\nD: Makis Triantafylopoulos\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"The famous Greek lawyers, Sakis Kechagioglou and George Nikolakopoulos have been imprisoned in the Athens' jail of Korydallus, as they were found guilty of graft and corruption. As a result of this, a big scandal within the Greek legal community has been raised through the exposure of illegal actions that judges, lawyers, solicitors and attorneys have done during the previous years. A few weeks ago, after the information published by the journalist Makis Triantafylopoulos in his popular Television show \"\"Zoungla\"\" in Alpha TV, the member of Parliament and lawyer, Petros Mantouvalos was abdicated as members of his office had been involved in illegal graft and corruption. Moreover, top judge Evangelos Kalousis is imprisoned as he found guilty of corruption and degenerate behaviour.\"\nQ: Which of the following people is not a lawyer?\nA: Petros Mantouvalos\nB: Sakis Kechagioglou\nC: George Nikolakopoulos\nD: Makis Triantafylopoulos\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.289229393005371,
+              false
+            ]
+          ],
+          [
+            [
+              -5.473389625549316,
+              false
+            ]
+          ],
+          [
+            [
+              -5.755862236022949,
+              false
+            ]
+          ],
+          [
+            [
+              -0.03288000077009201,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.289229393005371,
+            false
+          ],
+          [
+            -5.473389625549316,
+            false
+          ],
+          [
+            -5.755862236022949,
+            false
+          ],
+          [
+            -0.03288000077009201,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "42fbf7b228b8a35a85fded03739c5c75d3e77d5cf90fb585b45280345df95e27",
+        "prompt_hash": "aa804049dfe91003d0073bac020fddc42897544ac4a6f735db09b579b226a7d5",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 776,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Machu_Picchu",
+          "question_number": 2,
+          "flores_passage": "Towering above the north end of Machu Picchu is this steep mountain, often the backdrop to many photos of the ruins. It looks a bit daunting from below, and it is a steep and difficult ascent, but most reasonably fit persons should be able to make it in about 45 minutes. Stone steps are laid along most of the path, and in the steeper sections steel cables provide a supporting handrail. That said, expect to be out of breath, and take care in the steeper portions, especially when wet, as it can become dangerous quickly. There's a tiny cave near the top that must be passed through, it is quite low and a rather tight squeeze.",
+          "question": "Which of the following statements does not accurately reflect the ascent of the Machu Picchu mountain described in the passage?",
+          "mc_answer1": "Even fit climbers will likely be out of breath",
+          "mc_answer2": "There are no handrails throughout the steeper portions",
+          "mc_answer3": "You must pass through a cave at the top",
+          "mc_answer4": "The steeper portions become dangerous when wet",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Towering above the north end of Machu Picchu is this steep mountain, often the backdrop to many photos of the ruins. It looks a bit daunting from below, and it is a steep and difficult ascent, but most reasonably fit persons should be able to make it in about 45 minutes. Stone steps are laid along most of the path, and in the steeper sections steel cables provide a supporting handrail. That said, expect to be out of breath, and take care in the steeper portions, especially when wet, as it can become dangerous quickly. There's a tiny cave near the top that must be passed through, it is quite low and a rather tight squeeze.\nQ: Which of the following statements does not accurately reflect the ascent of the Machu Picchu mountain described in the passage?\nA: Even fit climbers will likely be out of breath\nB: There are no handrails throughout the steeper portions\nC: You must pass through a cave at the top\nD: The steeper portions become dangerous when wet\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Towering above the north end of Machu Picchu is this steep mountain, often the backdrop to many photos of the ruins. It looks a bit daunting from below, and it is a steep and difficult ascent, but most reasonably fit persons should be able to make it in about 45 minutes. Stone steps are laid along most of the path, and in the steeper sections steel cables provide a supporting handrail. That said, expect to be out of breath, and take care in the steeper portions, especially when wet, as it can become dangerous quickly. There's a tiny cave near the top that must be passed through, it is quite low and a rather tight squeeze.\nQ: Which of the following statements does not accurately reflect the ascent of the Machu Picchu mountain described in the passage?\nA: Even fit climbers will likely be out of breath\nB: There are no handrails throughout the steeper portions\nC: You must pass through a cave at the top\nD: The steeper portions become dangerous when wet\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Towering above the north end of Machu Picchu is this steep mountain, often the backdrop to many photos of the ruins. It looks a bit daunting from below, and it is a steep and difficult ascent, but most reasonably fit persons should be able to make it in about 45 minutes. Stone steps are laid along most of the path, and in the steeper sections steel cables provide a supporting handrail. That said, expect to be out of breath, and take care in the steeper portions, especially when wet, as it can become dangerous quickly. There's a tiny cave near the top that must be passed through, it is quite low and a rather tight squeeze.\nQ: Which of the following statements does not accurately reflect the ascent of the Machu Picchu mountain described in the passage?\nA: Even fit climbers will likely be out of breath\nB: There are no handrails throughout the steeper portions\nC: You must pass through a cave at the top\nD: The steeper portions become dangerous when wet\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Towering above the north end of Machu Picchu is this steep mountain, often the backdrop to many photos of the ruins. It looks a bit daunting from below, and it is a steep and difficult ascent, but most reasonably fit persons should be able to make it in about 45 minutes. Stone steps are laid along most of the path, and in the steeper sections steel cables provide a supporting handrail. That said, expect to be out of breath, and take care in the steeper portions, especially when wet, as it can become dangerous quickly. There's a tiny cave near the top that must be passed through, it is quite low and a rather tight squeeze.\nQ: Which of the following statements does not accurately reflect the ascent of the Machu Picchu mountain described in the passage?\nA: Even fit climbers will likely be out of breath\nB: There are no handrails throughout the steeper portions\nC: You must pass through a cave at the top\nD: The steeper portions become dangerous when wet\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.4079389572143555,
+              false
+            ]
+          ],
+          [
+            [
+              -0.36194705963134766,
+              true
+            ]
+          ],
+          [
+            [
+              -7.340066909790039,
+              false
+            ]
+          ],
+          [
+            [
+              -8.053162574768066,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.4079389572143555,
+            false
+          ],
+          [
+            -0.36194705963134766,
+            true
+          ],
+          [
+            -7.340066909790039,
+            false
+          ],
+          [
+            -8.053162574768066,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "59d972f0fb6a5a33623c558e2102903f3bd53a7ebab03dd06fd1b96434b60b2a",
+        "prompt_hash": "e7075cedc4b32d581346832892661f192389ab3eb2ab5fd545996ecd53297255",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 325,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/San_Francisco",
+          "question_number": 1,
+          "flores_passage": "While San Francisco's economy is linked to it being a world-class tourist attraction, its economy is diversified. The largest employment sectors are professional services, government, finance, trade, and tourism. Its frequent portrayal in music, films, literature and popular culture has helped make the city and its landmarks known throughout the world. San Francisco has developed a large tourist infrastructure with numerous hotels, restaurants, and top-notch convention facilities. San Francisco is also one of the best places in the nation for other Asian cuisine: Korean, Thai, Indian, and Japanese.",
+          "question": "According to the passage, what contributed to San Francisco’s worldwide recognition?",
+          "mc_answer1": "A frequent presence in various forms of art and media",
+          "mc_answer2": "The top-notch convention facilities",
+          "mc_answer3": "The economic diversity",
+          "mc_answer4": "An up-and-coming Asian food scene",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: While San Francisco's economy is linked to it being a world-class tourist attraction, its economy is diversified. The largest employment sectors are professional services, government, finance, trade, and tourism. Its frequent portrayal in music, films, literature and popular culture has helped make the city and its landmarks known throughout the world. San Francisco has developed a large tourist infrastructure with numerous hotels, restaurants, and top-notch convention facilities. San Francisco is also one of the best places in the nation for other Asian cuisine: Korean, Thai, Indian, and Japanese.\nQ: According to the passage, what contributed to San Francisco’s worldwide recognition?\nA: A frequent presence in various forms of art and media\nB: The top-notch convention facilities\nC: The economic diversity\nD: An up-and-coming Asian food scene\nAnswer:",
+            " A"
+          ],
+          [
+            "P: While San Francisco's economy is linked to it being a world-class tourist attraction, its economy is diversified. The largest employment sectors are professional services, government, finance, trade, and tourism. Its frequent portrayal in music, films, literature and popular culture has helped make the city and its landmarks known throughout the world. San Francisco has developed a large tourist infrastructure with numerous hotels, restaurants, and top-notch convention facilities. San Francisco is also one of the best places in the nation for other Asian cuisine: Korean, Thai, Indian, and Japanese.\nQ: According to the passage, what contributed to San Francisco’s worldwide recognition?\nA: A frequent presence in various forms of art and media\nB: The top-notch convention facilities\nC: The economic diversity\nD: An up-and-coming Asian food scene\nAnswer:",
+            " B"
+          ],
+          [
+            "P: While San Francisco's economy is linked to it being a world-class tourist attraction, its economy is diversified. The largest employment sectors are professional services, government, finance, trade, and tourism. Its frequent portrayal in music, films, literature and popular culture has helped make the city and its landmarks known throughout the world. San Francisco has developed a large tourist infrastructure with numerous hotels, restaurants, and top-notch convention facilities. San Francisco is also one of the best places in the nation for other Asian cuisine: Korean, Thai, Indian, and Japanese.\nQ: According to the passage, what contributed to San Francisco’s worldwide recognition?\nA: A frequent presence in various forms of art and media\nB: The top-notch convention facilities\nC: The economic diversity\nD: An up-and-coming Asian food scene\nAnswer:",
+            " C"
+          ],
+          [
+            "P: While San Francisco's economy is linked to it being a world-class tourist attraction, its economy is diversified. The largest employment sectors are professional services, government, finance, trade, and tourism. Its frequent portrayal in music, films, literature and popular culture has helped make the city and its landmarks known throughout the world. San Francisco has developed a large tourist infrastructure with numerous hotels, restaurants, and top-notch convention facilities. San Francisco is also one of the best places in the nation for other Asian cuisine: Korean, Thai, Indian, and Japanese.\nQ: According to the passage, what contributed to San Francisco’s worldwide recognition?\nA: A frequent presence in various forms of art and media\nB: The top-notch convention facilities\nC: The economic diversity\nD: An up-and-coming Asian food scene\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.012036784552037716,
+              true
+            ]
+          ],
+          [
+            [
+              -8.031781196594238,
+              false
+            ]
+          ],
+          [
+            [
+              -7.266709804534912,
+              false
+            ]
+          ],
+          [
+            [
+              -8.629096031188965,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.012036784552037716,
+            true
+          ],
+          [
+            -8.031781196594238,
+            false
+          ],
+          [
+            -7.266709804534912,
+            false
+          ],
+          [
+            -8.629096031188965,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "0dcc0b5fd4a6b6f3ca8cfe0034c77e887d73b130c9e4e3261d333c9acb69216e",
+        "prompt_hash": "a875df6f252f538a6cfc2fa344e3ce322a09f308b2d5789178d49a24e2d53271",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792554774.6566074,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

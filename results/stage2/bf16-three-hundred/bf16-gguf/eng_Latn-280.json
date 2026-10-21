@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.6,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 728,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Egyptians",
+          "question_number": 2,
+          "flores_passage": "\"Yes! King Tutankhamun, sometimes referred to as \"\"King Tut\"\" or \"\"The Boy King\"\", is one of the most well known ancient Egyptian kings in modern times. Interestingly, he was not considered to be very important in ancient times and was not recorded on most ancient king lists. However, the discovery of his tomb in 1922 made him a celebrity. While many tombs of the past were robbed, this tomb was left virtually undisturbed. Most of the items buried with Tutankhamun have been well preserved, including thousands of artefacts made from precious metals and rare stones.\"",
+          "question": "What made King Tutankhamun a well known Egyptian king?",
+          "mc_answer1": "The discovery of his undisturbed tomb",
+          "mc_answer2": "His status on ancient king lists",
+          "mc_answer3": "The robbery of thousands of artifacts from his tomb",
+          "mc_answer4": "His significance during ancient Egyptian times",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"Yes! King Tutankhamun, sometimes referred to as \"\"King Tut\"\" or \"\"The Boy King\"\", is one of the most well known ancient Egyptian kings in modern times. Interestingly, he was not considered to be very important in ancient times and was not recorded on most ancient king lists. However, the discovery of his tomb in 1922 made him a celebrity. While many tombs of the past were robbed, this tomb was left virtually undisturbed. Most of the items buried with Tutankhamun have been well preserved, including thousands of artefacts made from precious metals and rare stones.\"\nQ: What made King Tutankhamun a well known Egyptian king?\nA: The discovery of his undisturbed tomb\nB: His status on ancient king lists\nC: The robbery of thousands of artifacts from his tomb\nD: His significance during ancient Egyptian times\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Yes! King Tutankhamun, sometimes referred to as \"\"King Tut\"\" or \"\"The Boy King\"\", is one of the most well known ancient Egyptian kings in modern times. Interestingly, he was not considered to be very important in ancient times and was not recorded on most ancient king lists. However, the discovery of his tomb in 1922 made him a celebrity. While many tombs of the past were robbed, this tomb was left virtually undisturbed. Most of the items buried with Tutankhamun have been well preserved, including thousands of artefacts made from precious metals and rare stones.\"\nQ: What made King Tutankhamun a well known Egyptian king?\nA: The discovery of his undisturbed tomb\nB: His status on ancient king lists\nC: The robbery of thousands of artifacts from his tomb\nD: His significance during ancient Egyptian times\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Yes! King Tutankhamun, sometimes referred to as \"\"King Tut\"\" or \"\"The Boy King\"\", is one of the most well known ancient Egyptian kings in modern times. Interestingly, he was not considered to be very important in ancient times and was not recorded on most ancient king lists. However, the discovery of his tomb in 1922 made him a celebrity. While many tombs of the past were robbed, this tomb was left virtually undisturbed. Most of the items buried with Tutankhamun have been well preserved, including thousands of artefacts made from precious metals and rare stones.\"\nQ: What made King Tutankhamun a well known Egyptian king?\nA: The discovery of his undisturbed tomb\nB: His status on ancient king lists\nC: The robbery of thousands of artifacts from his tomb\nD: His significance during ancient Egyptian times\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Yes! King Tutankhamun, sometimes referred to as \"\"King Tut\"\" or \"\"The Boy King\"\", is one of the most well known ancient Egyptian kings in modern times. Interestingly, he was not considered to be very important in ancient times and was not recorded on most ancient king lists. However, the discovery of his tomb in 1922 made him a celebrity. While many tombs of the past were robbed, this tomb was left virtually undisturbed. Most of the items buried with Tutankhamun have been well preserved, including thousands of artefacts made from precious metals and rare stones.\"\nQ: What made King Tutankhamun a well known Egyptian king?\nA: The discovery of his undisturbed tomb\nB: His status on ancient king lists\nC: The robbery of thousands of artifacts from his tomb\nD: His significance during ancient Egyptian times\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.001795586314983666,
+              true
+            ]
+          ],
+          [
+            [
+              -8.086228370666504,
+              false
+            ]
+          ],
+          [
+            [
+              -9.261429786682129,
+              false
+            ]
+          ],
+          [
+            [
+              -9.343106269836426,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.001795586314983666,
+            true
+          ],
+          [
+            -8.086228370666504,
+            false
+          ],
+          [
+            -9.261429786682129,
+            false
+          ],
+          [
+            -9.343106269836426,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "dac393e166f00621ba7411e0f5340090092f731c78bab5f31846b5a9ce2e31a6",
+        "prompt_hash": "407f5564904ab35e90ad45d068fbdf9dc4749f37e5565ea4666218bfea136dc5",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 494,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Botanic_Gardens",
+          "question_number": 2,
+          "flores_passage": "Early in the nation's independence, Singapore Botanic Gardens' expertise helped to transform the island into a tropical Garden City. In 1981, Vanda Miss Joaquim, an orchid hybrid, was chosen as the nation's national flower.",
+          "question": "What is the Vanda Miss Joaquim?",
+          "mc_answer1": "An island",
+          "mc_answer2": "A flower",
+          "mc_answer3": "A botanical garden",
+          "mc_answer4": "A national monument",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Early in the nation's independence, Singapore Botanic Gardens' expertise helped to transform the island into a tropical Garden City. In 1981, Vanda Miss Joaquim, an orchid hybrid, was chosen as the nation's national flower.\nQ: What is the Vanda Miss Joaquim?\nA: An island\nB: A flower\nC: A botanical garden\nD: A national monument\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Early in the nation's independence, Singapore Botanic Gardens' expertise helped to transform the island into a tropical Garden City. In 1981, Vanda Miss Joaquim, an orchid hybrid, was chosen as the nation's national flower.\nQ: What is the Vanda Miss Joaquim?\nA: An island\nB: A flower\nC: A botanical garden\nD: A national monument\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Early in the nation's independence, Singapore Botanic Gardens' expertise helped to transform the island into a tropical Garden City. In 1981, Vanda Miss Joaquim, an orchid hybrid, was chosen as the nation's national flower.\nQ: What is the Vanda Miss Joaquim?\nA: An island\nB: A flower\nC: A botanical garden\nD: A national monument\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Early in the nation's independence, Singapore Botanic Gardens' expertise helped to transform the island into a tropical Garden City. In 1981, Vanda Miss Joaquim, an orchid hybrid, was chosen as the nation's national flower.\nQ: What is the Vanda Miss Joaquim?\nA: An island\nB: A flower\nC: A botanical garden\nD: A national monument\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.856330633163452,
+              false
+            ]
+          ],
+          [
+            [
+              -0.12711304426193237,
+              true
+            ]
+          ],
+          [
+            [
+              -5.778253078460693,
+              false
+            ]
+          ],
+          [
+            [
+              -3.105294942855835,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.856330633163452,
+            false
+          ],
+          [
+            -0.12711304426193237,
+            true
+          ],
+          [
+            -5.778253078460693,
+            false
+          ],
+          [
+            -3.105294942855835,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "60db340cbd14ee33f2051c05973a4cd4cd98751d568990e3081c6f599966bce7",
+        "prompt_hash": "d119b5eb0725d2e4e30986b1aa7842dcd8033e0a456a450cfd33456027c3e32e",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 258,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Burning_debris_from_satellites_spotted_over_several_US_cities",
+          "question_number": 1,
+          "flores_passage": "The satellites, both of which weighed in excess of 1,000 pounds, and traveling at approximately 17,500 miles per hour, collided 491 miles above the Earth. Scientists say the explosion caused by the collision was massive. They are still trying to determine just how large the crash was and how the Earth will be affected. The United States Strategic Command of the U.S. Department of Defense office is tracking the debris. The result of plotting analysis will be posted to a public website.",
+          "question": "Based on the passage, what information about the collision is not uncertain?",
+          "mc_answer1": "The size of the collision",
+          "mc_answer2": "The location of the collision",
+          "mc_answer3": "The collision’s impact on the Earth",
+          "mc_answer4": "The location of debris",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: The satellites, both of which weighed in excess of 1,000 pounds, and traveling at approximately 17,500 miles per hour, collided 491 miles above the Earth. Scientists say the explosion caused by the collision was massive. They are still trying to determine just how large the crash was and how the Earth will be affected. The United States Strategic Command of the U.S. Department of Defense office is tracking the debris. The result of plotting analysis will be posted to a public website.\nQ: Based on the passage, what information about the collision is not uncertain?\nA: The size of the collision\nB: The location of the collision\nC: The collision’s impact on the Earth\nD: The location of debris\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The satellites, both of which weighed in excess of 1,000 pounds, and traveling at approximately 17,500 miles per hour, collided 491 miles above the Earth. Scientists say the explosion caused by the collision was massive. They are still trying to determine just how large the crash was and how the Earth will be affected. The United States Strategic Command of the U.S. Department of Defense office is tracking the debris. The result of plotting analysis will be posted to a public website.\nQ: Based on the passage, what information about the collision is not uncertain?\nA: The size of the collision\nB: The location of the collision\nC: The collision’s impact on the Earth\nD: The location of debris\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The satellites, both of which weighed in excess of 1,000 pounds, and traveling at approximately 17,500 miles per hour, collided 491 miles above the Earth. Scientists say the explosion caused by the collision was massive. They are still trying to determine just how large the crash was and how the Earth will be affected. The United States Strategic Command of the U.S. Department of Defense office is tracking the debris. The result of plotting analysis will be posted to a public website.\nQ: Based on the passage, what information about the collision is not uncertain?\nA: The size of the collision\nB: The location of the collision\nC: The collision’s impact on the Earth\nD: The location of debris\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The satellites, both of which weighed in excess of 1,000 pounds, and traveling at approximately 17,500 miles per hour, collided 491 miles above the Earth. Scientists say the explosion caused by the collision was massive. They are still trying to determine just how large the crash was and how the Earth will be affected. The United States Strategic Command of the U.S. Department of Defense office is tracking the debris. The result of plotting analysis will be posted to a public website.\nQ: Based on the passage, what information about the collision is not uncertain?\nA: The size of the collision\nB: The location of the collision\nC: The collision’s impact on the Earth\nD: The location of debris\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.5192495584487915,
+              true
+            ]
+          ],
+          [
+            [
+              -5.311295032501221,
+              false
+            ]
+          ],
+          [
+            [
+              -0.9395967721939087,
+              false
+            ]
+          ],
+          [
+            [
+              -7.051310062408447,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.5192495584487915,
+            true
+          ],
+          [
+            -5.311295032501221,
+            false
+          ],
+          [
+            -0.9395967721939087,
+            false
+          ],
+          [
+            -7.051310062408447,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "4a5529781cab8ac7c57f8da13ce1368f2c399199702b3e529edaf67309fbdcbb",
+        "prompt_hash": "81eb05abd07e27cf54c52b192adad0164d95e76dbb9eeae11061cc351de09a0c",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 329,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/New_Australian_Prime_Minister_signs_Kyoto",
+          "question_number": 1,
+          "flores_passage": "Mr. Rudd's decision to sign the Kyoto climate accord isolates the United States, which will now be the only developed nation not to ratify the agreement. Australia's former conservative government refused to ratify Kyoto, saying it would damage the economy with its heavy reliance on coal exports, while countries like India and China were not bound by emissions targets.",
+          "question": "As stated in the passage, which nation is affected by the signing of the Kyoto climate accord?",
+          "mc_answer1": "United States",
+          "mc_answer2": "India",
+          "mc_answer3": "Australia",
+          "mc_answer4": "China",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Mr. Rudd's decision to sign the Kyoto climate accord isolates the United States, which will now be the only developed nation not to ratify the agreement. Australia's former conservative government refused to ratify Kyoto, saying it would damage the economy with its heavy reliance on coal exports, while countries like India and China were not bound by emissions targets.\nQ: As stated in the passage, which nation is affected by the signing of the Kyoto climate accord?\nA: United States\nB: India\nC: Australia\nD: China\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Mr. Rudd's decision to sign the Kyoto climate accord isolates the United States, which will now be the only developed nation not to ratify the agreement. Australia's former conservative government refused to ratify Kyoto, saying it would damage the economy with its heavy reliance on coal exports, while countries like India and China were not bound by emissions targets.\nQ: As stated in the passage, which nation is affected by the signing of the Kyoto climate accord?\nA: United States\nB: India\nC: Australia\nD: China\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Mr. Rudd's decision to sign the Kyoto climate accord isolates the United States, which will now be the only developed nation not to ratify the agreement. Australia's former conservative government refused to ratify Kyoto, saying it would damage the economy with its heavy reliance on coal exports, while countries like India and China were not bound by emissions targets.\nQ: As stated in the passage, which nation is affected by the signing of the Kyoto climate accord?\nA: United States\nB: India\nC: Australia\nD: China\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Mr. Rudd's decision to sign the Kyoto climate accord isolates the United States, which will now be the only developed nation not to ratify the agreement. Australia's former conservative government refused to ratify Kyoto, saying it would damage the economy with its heavy reliance on coal exports, while countries like India and China were not bound by emissions targets.\nQ: As stated in the passage, which nation is affected by the signing of the Kyoto climate accord?\nA: United States\nB: India\nC: Australia\nD: China\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.04064066708087921,
+              true
+            ]
+          ],
+          [
+            [
+              -7.040919303894043,
+              false
+            ]
+          ],
+          [
+            [
+              -3.6729533672332764,
+              false
+            ]
+          ],
+          [
+            [
+              -7.98112678527832,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.04064066708087921,
+            true
+          ],
+          [
+            -7.040919303894043,
+            false
+          ],
+          [
+            -3.6729533672332764,
+            false
+          ],
+          [
+            -7.98112678527832,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "89f4bdf591cb756d7de75c69081d54514ae438c3858efcdd127efdd6fa664f4f",
+        "prompt_hash": "590909e100f52b197d4f436af317b8352c653e893f702d78ed0cb85c18f549b2",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 162,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Gestures",
+          "question_number": 1,
+          "flores_passage": "\"In many parts of the world, waving is a friendly gesture, indicating \"\"hello.\"\" However, in Malaysia, at least among the Malays in rural areas, it means \"\"come over,\"\" similar to the index finger bent toward the body, a gesture which is used in certain Western countries, and should be used only for that purpose. Similarly, a British traveller in Spain may mistake a wave goodbye involving the palm facing the waver (rather than the person being waved at) as a gesture to come back.\"",
+          "question": "In rural parts of Malaysia, which gesture means “come over”?",
+          "mc_answer1": "Bending the index finger",
+          "mc_answer2": "Waving",
+          "mc_answer3": "High-fiving",
+          "mc_answer4": "Giving the thumbs up",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: \"In many parts of the world, waving is a friendly gesture, indicating \"\"hello.\"\" However, in Malaysia, at least among the Malays in rural areas, it means \"\"come over,\"\" similar to the index finger bent toward the body, a gesture which is used in certain Western countries, and should be used only for that purpose. Similarly, a British traveller in Spain may mistake a wave goodbye involving the palm facing the waver (rather than the person being waved at) as a gesture to come back.\"\nQ: In rural parts of Malaysia, which gesture means “come over”?\nA: Bending the index finger\nB: Waving\nC: High-fiving\nD: Giving the thumbs up\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"In many parts of the world, waving is a friendly gesture, indicating \"\"hello.\"\" However, in Malaysia, at least among the Malays in rural areas, it means \"\"come over,\"\" similar to the index finger bent toward the body, a gesture which is used in certain Western countries, and should be used only for that purpose. Similarly, a British traveller in Spain may mistake a wave goodbye involving the palm facing the waver (rather than the person being waved at) as a gesture to come back.\"\nQ: In rural parts of Malaysia, which gesture means “come over”?\nA: Bending the index finger\nB: Waving\nC: High-fiving\nD: Giving the thumbs up\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"In many parts of the world, waving is a friendly gesture, indicating \"\"hello.\"\" However, in Malaysia, at least among the Malays in rural areas, it means \"\"come over,\"\" similar to the index finger bent toward the body, a gesture which is used in certain Western countries, and should be used only for that purpose. Similarly, a British traveller in Spain may mistake a wave goodbye involving the palm facing the waver (rather than the person being waved at) as a gesture to come back.\"\nQ: In rural parts of Malaysia, which gesture means “come over”?\nA: Bending the index finger\nB: Waving\nC: High-fiving\nD: Giving the thumbs up\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"In many parts of the world, waving is a friendly gesture, indicating \"\"hello.\"\" However, in Malaysia, at least among the Malays in rural areas, it means \"\"come over,\"\" similar to the index finger bent toward the body, a gesture which is used in certain Western countries, and should be used only for that purpose. Similarly, a British traveller in Spain may mistake a wave goodbye involving the palm facing the waver (rather than the person being waved at) as a gesture to come back.\"\nQ: In rural parts of Malaysia, which gesture means “come over”?\nA: Bending the index finger\nB: Waving\nC: High-fiving\nD: Giving the thumbs up\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.05674451217055321,
+              true
+            ]
+          ],
+          [
+            [
+              -3.138482093811035,
+              false
+            ]
+          ],
+          [
+            [
+              -6.786214828491211,
+              false
+            ]
+          ],
+          [
+            [
+              -7.163369178771973,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.05674451217055321,
+            true
+          ],
+          [
+            -3.138482093811035,
+            false
+          ],
+          [
+            -6.786214828491211,
+            false
+          ],
+          [
+            -7.163369178771973,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "eedd23fbeb52e3030eead5b43a4fc363442875f1f27cb87ee17a178e0ee1b6a5",
+        "prompt_hash": "f09fa7043c4a55248aaa8e8fedcddeafacc077d0261d369a46fcfa488771b6e7",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792555684.139671,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

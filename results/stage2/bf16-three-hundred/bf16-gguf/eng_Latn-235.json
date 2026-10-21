@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.4,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.4,
+      "acc_norm_stderr,none": 0.24494897427831783
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 870,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/American_Revolution/The_Declaration_of_Independence",
+          "question_number": 1,
+          "flores_passage": "\"After its adoption by Congress on July 4, a handwritten draft signed by the President of Congress John Hancock and the Secretary Charles Thomson was then sent a few blocks away to the printing shop of John Dunlap. Through the night between 150 and 200 copies were made, now known as \"\"Dunlap broadsides\"\". The first public reading of the document was by John Nixon in the yard of Independence Hall on July 8. One was sent to George Washington on July 6, who had it read to his troops in New York on July 9. A copy reached London on August 10. The 25 Dunlap broadsides still known to exist are the oldest surviving copies of the document. The original handwritten copy has not survived.\"",
+          "question": "Whose signature appeared on the handwritten draft?",
+          "mc_answer1": "John Dunlap",
+          "mc_answer2": "George Washington",
+          "mc_answer3": "John Nixon",
+          "mc_answer4": "Charles Thomson",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: \"After its adoption by Congress on July 4, a handwritten draft signed by the President of Congress John Hancock and the Secretary Charles Thomson was then sent a few blocks away to the printing shop of John Dunlap. Through the night between 150 and 200 copies were made, now known as \"\"Dunlap broadsides\"\". The first public reading of the document was by John Nixon in the yard of Independence Hall on July 8. One was sent to George Washington on July 6, who had it read to his troops in New York on July 9. A copy reached London on August 10. The 25 Dunlap broadsides still known to exist are the oldest surviving copies of the document. The original handwritten copy has not survived.\"\nQ: Whose signature appeared on the handwritten draft?\nA: John Dunlap\nB: George Washington\nC: John Nixon\nD: Charles Thomson\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"After its adoption by Congress on July 4, a handwritten draft signed by the President of Congress John Hancock and the Secretary Charles Thomson was then sent a few blocks away to the printing shop of John Dunlap. Through the night between 150 and 200 copies were made, now known as \"\"Dunlap broadsides\"\". The first public reading of the document was by John Nixon in the yard of Independence Hall on July 8. One was sent to George Washington on July 6, who had it read to his troops in New York on July 9. A copy reached London on August 10. The 25 Dunlap broadsides still known to exist are the oldest surviving copies of the document. The original handwritten copy has not survived.\"\nQ: Whose signature appeared on the handwritten draft?\nA: John Dunlap\nB: George Washington\nC: John Nixon\nD: Charles Thomson\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"After its adoption by Congress on July 4, a handwritten draft signed by the President of Congress John Hancock and the Secretary Charles Thomson was then sent a few blocks away to the printing shop of John Dunlap. Through the night between 150 and 200 copies were made, now known as \"\"Dunlap broadsides\"\". The first public reading of the document was by John Nixon in the yard of Independence Hall on July 8. One was sent to George Washington on July 6, who had it read to his troops in New York on July 9. A copy reached London on August 10. The 25 Dunlap broadsides still known to exist are the oldest surviving copies of the document. The original handwritten copy has not survived.\"\nQ: Whose signature appeared on the handwritten draft?\nA: John Dunlap\nB: George Washington\nC: John Nixon\nD: Charles Thomson\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"After its adoption by Congress on July 4, a handwritten draft signed by the President of Congress John Hancock and the Secretary Charles Thomson was then sent a few blocks away to the printing shop of John Dunlap. Through the night between 150 and 200 copies were made, now known as \"\"Dunlap broadsides\"\". The first public reading of the document was by John Nixon in the yard of Independence Hall on July 8. One was sent to George Washington on July 6, who had it read to his troops in New York on July 9. A copy reached London on August 10. The 25 Dunlap broadsides still known to exist are the oldest surviving copies of the document. The original handwritten copy has not survived.\"\nQ: Whose signature appeared on the handwritten draft?\nA: John Dunlap\nB: George Washington\nC: John Nixon\nD: Charles Thomson\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.2339254468679428,
+              true
+            ]
+          ],
+          [
+            [
+              -2.1121296882629395,
+              false
+            ]
+          ],
+          [
+            [
+              -3.4386868476867676,
+              false
+            ]
+          ],
+          [
+            [
+              -3.040867328643799,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.2339254468679428,
+            true
+          ],
+          [
+            -2.1121296882629395,
+            false
+          ],
+          [
+            -3.4386868476867676,
+            false
+          ],
+          [
+            -3.040867328643799,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f9dc8e4d6fd5a5834f64802cd4c9c8758c83f17e11fb0e2bc86871e2bcb5fa0d",
+        "prompt_hash": "b5bc5c26085e666215e5027e3e5dd906ce9969ca7bf03c47e3b33a4bdfd962af",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 268,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Asia/Taiwan",
+          "question_number": 2,
+          "flores_passage": "Taiwan beginning start way back in 15th century where European sailors passing by record the island’s name as Ilha Formosa, or beautiful island. In 1624,Dutch East India Company establishes a base in southwestern Taiwan, initiating a transformation in aboriginal grain production practices and employing Chinese laborers to work on its rice and sugar plantations. In 1683, Qing dynasty (1644-1912) forces take control of Taiwan’s western and northern coastal areas and declared Taiwan as a province of the Qing Empire in 1885. In 1895, after defeat in the First Sino-Japanese War (1894-1895), the Qing government signs the Treaty of Shimonoseki, by which it cedes sovereignty over Taiwan to Japan, which rules the island until 1945.",
+          "question": "What did the Treaty of Shimonoseki establish?",
+          "mc_answer1": "Japan’s defeat in the First Sino-Japanese War ",
+          "mc_answer2": "Taiwan’s status as a province under the Qing dynasty",
+          "mc_answer3": "Taiwan’s ability to take back control over its coastal areas",
+          "mc_answer4": "Japan’s authority over Taiwan",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Taiwan beginning start way back in 15th century where European sailors passing by record the island’s name as Ilha Formosa, or beautiful island. In 1624,Dutch East India Company establishes a base in southwestern Taiwan, initiating a transformation in aboriginal grain production practices and employing Chinese laborers to work on its rice and sugar plantations. In 1683, Qing dynasty (1644-1912) forces take control of Taiwan’s western and northern coastal areas and declared Taiwan as a province of the Qing Empire in 1885. In 1895, after defeat in the First Sino-Japanese War (1894-1895), the Qing government signs the Treaty of Shimonoseki, by which it cedes sovereignty over Taiwan to Japan, which rules the island until 1945.\nQ: What did the Treaty of Shimonoseki establish?\nA: Japan’s defeat in the First Sino-Japanese War \nB: Taiwan’s status as a province under the Qing dynasty\nC: Taiwan’s ability to take back control over its coastal areas\nD: Japan’s authority over Taiwan\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Taiwan beginning start way back in 15th century where European sailors passing by record the island’s name as Ilha Formosa, or beautiful island. In 1624,Dutch East India Company establishes a base in southwestern Taiwan, initiating a transformation in aboriginal grain production practices and employing Chinese laborers to work on its rice and sugar plantations. In 1683, Qing dynasty (1644-1912) forces take control of Taiwan’s western and northern coastal areas and declared Taiwan as a province of the Qing Empire in 1885. In 1895, after defeat in the First Sino-Japanese War (1894-1895), the Qing government signs the Treaty of Shimonoseki, by which it cedes sovereignty over Taiwan to Japan, which rules the island until 1945.\nQ: What did the Treaty of Shimonoseki establish?\nA: Japan’s defeat in the First Sino-Japanese War \nB: Taiwan’s status as a province under the Qing dynasty\nC: Taiwan’s ability to take back control over its coastal areas\nD: Japan’s authority over Taiwan\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Taiwan beginning start way back in 15th century where European sailors passing by record the island’s name as Ilha Formosa, or beautiful island. In 1624,Dutch East India Company establishes a base in southwestern Taiwan, initiating a transformation in aboriginal grain production practices and employing Chinese laborers to work on its rice and sugar plantations. In 1683, Qing dynasty (1644-1912) forces take control of Taiwan’s western and northern coastal areas and declared Taiwan as a province of the Qing Empire in 1885. In 1895, after defeat in the First Sino-Japanese War (1894-1895), the Qing government signs the Treaty of Shimonoseki, by which it cedes sovereignty over Taiwan to Japan, which rules the island until 1945.\nQ: What did the Treaty of Shimonoseki establish?\nA: Japan’s defeat in the First Sino-Japanese War \nB: Taiwan’s status as a province under the Qing dynasty\nC: Taiwan’s ability to take back control over its coastal areas\nD: Japan’s authority over Taiwan\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Taiwan beginning start way back in 15th century where European sailors passing by record the island’s name as Ilha Formosa, or beautiful island. In 1624,Dutch East India Company establishes a base in southwestern Taiwan, initiating a transformation in aboriginal grain production practices and employing Chinese laborers to work on its rice and sugar plantations. In 1683, Qing dynasty (1644-1912) forces take control of Taiwan’s western and northern coastal areas and declared Taiwan as a province of the Qing Empire in 1885. In 1895, after defeat in the First Sino-Japanese War (1894-1895), the Qing government signs the Treaty of Shimonoseki, by which it cedes sovereignty over Taiwan to Japan, which rules the island until 1945.\nQ: What did the Treaty of Shimonoseki establish?\nA: Japan’s defeat in the First Sino-Japanese War \nB: Taiwan’s status as a province under the Qing dynasty\nC: Taiwan’s ability to take back control over its coastal areas\nD: Japan’s authority over Taiwan\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.21196815371513367,
+              true
+            ]
+          ],
+          [
+            [
+              -3.7813193798065186,
+              false
+            ]
+          ],
+          [
+            [
+              -6.240835666656494,
+              false
+            ]
+          ],
+          [
+            [
+              -1.9393489360809326,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.21196815371513367,
+            true
+          ],
+          [
+            -3.7813193798065186,
+            false
+          ],
+          [
+            -6.240835666656494,
+            false
+          ],
+          [
+            -1.9393489360809326,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c5524eec307b94743876b9ee67d5ef5fca8ace22d4b70f39c5b799ec9e85f3cf",
+        "prompt_hash": "299837a9c575e0e1286c01e877fb96959c13e06b3499c02fd5dea8b575697567",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 644,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Submarines",
+          "question_number": 1,
+          "flores_passage": "Submarines are ships designed to travel underwater, and remain there for an extended amount of time. Submarines were used in World War I and World War II. Back then they were very slow and had a very limited shooting range. In the beginning of the war they mostly travelled on top of the sea, but as radar began developing and becoming more accurate the submarines were forced to go under water to avoid being seen. German submarines were called U-Boats. The Germans were very good at navigating and operating their submarines. Because of their success with submarines, after the war Germans aren't trusted to have many of them.",
+          "question": "The development of what technology caused submarines to start traveling under water?",
+          "mc_answer1": "U-Boats",
+          "mc_answer2": "Shooting range",
+          "mc_answer3": "Navigation",
+          "mc_answer4": "Radar",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Submarines are ships designed to travel underwater, and remain there for an extended amount of time. Submarines were used in World War I and World War II. Back then they were very slow and had a very limited shooting range. In the beginning of the war they mostly travelled on top of the sea, but as radar began developing and becoming more accurate the submarines were forced to go under water to avoid being seen. German submarines were called U-Boats. The Germans were very good at navigating and operating their submarines. Because of their success with submarines, after the war Germans aren't trusted to have many of them.\nQ: The development of what technology caused submarines to start traveling under water?\nA: U-Boats\nB: Shooting range\nC: Navigation\nD: Radar\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Submarines are ships designed to travel underwater, and remain there for an extended amount of time. Submarines were used in World War I and World War II. Back then they were very slow and had a very limited shooting range. In the beginning of the war they mostly travelled on top of the sea, but as radar began developing and becoming more accurate the submarines were forced to go under water to avoid being seen. German submarines were called U-Boats. The Germans were very good at navigating and operating their submarines. Because of their success with submarines, after the war Germans aren't trusted to have many of them.\nQ: The development of what technology caused submarines to start traveling under water?\nA: U-Boats\nB: Shooting range\nC: Navigation\nD: Radar\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Submarines are ships designed to travel underwater, and remain there for an extended amount of time. Submarines were used in World War I and World War II. Back then they were very slow and had a very limited shooting range. In the beginning of the war they mostly travelled on top of the sea, but as radar began developing and becoming more accurate the submarines were forced to go under water to avoid being seen. German submarines were called U-Boats. The Germans were very good at navigating and operating their submarines. Because of their success with submarines, after the war Germans aren't trusted to have many of them.\nQ: The development of what technology caused submarines to start traveling under water?\nA: U-Boats\nB: Shooting range\nC: Navigation\nD: Radar\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Submarines are ships designed to travel underwater, and remain there for an extended amount of time. Submarines were used in World War I and World War II. Back then they were very slow and had a very limited shooting range. In the beginning of the war they mostly travelled on top of the sea, but as radar began developing and becoming more accurate the submarines were forced to go under water to avoid being seen. German submarines were called U-Boats. The Germans were very good at navigating and operating their submarines. Because of their success with submarines, after the war Germans aren't trusted to have many of them.\nQ: The development of what technology caused submarines to start traveling under water?\nA: U-Boats\nB: Shooting range\nC: Navigation\nD: Radar\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -6.547562599182129,
+              false
+            ]
+          ],
+          [
+            [
+              -8.933588981628418,
+              false
+            ]
+          ],
+          [
+            [
+              -8.44150447845459,
+              false
+            ]
+          ],
+          [
+            [
+              -0.012829974293708801,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -6.547562599182129,
+            false
+          ],
+          [
+            -8.933588981628418,
+            false
+          ],
+          [
+            -8.44150447845459,
+            false
+          ],
+          [
+            -0.012829974293708801,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "ca2dd97bf09b52f1568cc670b2231d6ebf0d408e694e879443c84dc7a62dc732",
+        "prompt_hash": "085fcaf02e59e65e70f3ac03d246f1c9ec83c861f1db6d68b9117b592aa00131",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 5,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Auckland",
+          "question_number": 2,
+          "flores_passage": "There are many beaches, due to Auckland's straddling of two harbours. The most popular ones are in three areas. North Shore beaches (in North Harbour district) are on the Pacific Ocean and stretch from Long Bay in the north to Devonport in the south. They are almost all sandy beaches with safe swimming, and most have shade provided by pohutukawa trees. Tamaki Drive beaches are on the Waitemata Harbour, in the upmarket suburbs of Mission Bay and St Heliers in Central Auckland. These are sometimes-crowded family beaches with a good range of shops lining the shore. Swimming is safe.",
+          "question": "According the passage, where are swimming conditions likely to be the safest?",
+          "mc_answer1": "Devonport",
+          "mc_answer2": "North Harbor District",
+          "mc_answer3": "Central Auckland",
+          "mc_answer4": "Long Bay",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: There are many beaches, due to Auckland's straddling of two harbours. The most popular ones are in three areas. North Shore beaches (in North Harbour district) are on the Pacific Ocean and stretch from Long Bay in the north to Devonport in the south. They are almost all sandy beaches with safe swimming, and most have shade provided by pohutukawa trees. Tamaki Drive beaches are on the Waitemata Harbour, in the upmarket suburbs of Mission Bay and St Heliers in Central Auckland. These are sometimes-crowded family beaches with a good range of shops lining the shore. Swimming is safe.\nQ: According the passage, where are swimming conditions likely to be the safest?\nA: Devonport\nB: North Harbor District\nC: Central Auckland\nD: Long Bay\nAnswer:",
+            " A"
+          ],
+          [
+            "P: There are many beaches, due to Auckland's straddling of two harbours. The most popular ones are in three areas. North Shore beaches (in North Harbour district) are on the Pacific Ocean and stretch from Long Bay in the north to Devonport in the south. They are almost all sandy beaches with safe swimming, and most have shade provided by pohutukawa trees. Tamaki Drive beaches are on the Waitemata Harbour, in the upmarket suburbs of Mission Bay and St Heliers in Central Auckland. These are sometimes-crowded family beaches with a good range of shops lining the shore. Swimming is safe.\nQ: According the passage, where are swimming conditions likely to be the safest?\nA: Devonport\nB: North Harbor District\nC: Central Auckland\nD: Long Bay\nAnswer:",
+            " B"
+          ],
+          [
+            "P: There are many beaches, due to Auckland's straddling of two harbours. The most popular ones are in three areas. North Shore beaches (in North Harbour district) are on the Pacific Ocean and stretch from Long Bay in the north to Devonport in the south. They are almost all sandy beaches with safe swimming, and most have shade provided by pohutukawa trees. Tamaki Drive beaches are on the Waitemata Harbour, in the upmarket suburbs of Mission Bay and St Heliers in Central Auckland. These are sometimes-crowded family beaches with a good range of shops lining the shore. Swimming is safe.\nQ: According the passage, where are swimming conditions likely to be the safest?\nA: Devonport\nB: North Harbor District\nC: Central Auckland\nD: Long Bay\nAnswer:",
+            " C"
+          ],
+          [
+            "P: There are many beaches, due to Auckland's straddling of two harbours. The most popular ones are in three areas. North Shore beaches (in North Harbour district) are on the Pacific Ocean and stretch from Long Bay in the north to Devonport in the south. They are almost all sandy beaches with safe swimming, and most have shade provided by pohutukawa trees. Tamaki Drive beaches are on the Waitemata Harbour, in the upmarket suburbs of Mission Bay and St Heliers in Central Auckland. These are sometimes-crowded family beaches with a good range of shops lining the shore. Swimming is safe.\nQ: According the passage, where are swimming conditions likely to be the safest?\nA: Devonport\nB: North Harbor District\nC: Central Auckland\nD: Long Bay\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.2346092164516449,
+              true
+            ]
+          ],
+          [
+            [
+              -2.1707072257995605,
+              false
+            ]
+          ],
+          [
+            [
+              -2.784005641937256,
+              false
+            ]
+          ],
+          [
+            [
+              -4.507607936859131,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.2346092164516449,
+            true
+          ],
+          [
+            -2.1707072257995605,
+            false
+          ],
+          [
+            -2.784005641937256,
+            false
+          ],
+          [
+            -4.507607936859131,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "188e2d64f37cd08253d8adaa591d6637dc5fd0c7cbe5cf3be2ccd877580d09e8",
+        "prompt_hash": "b961460be1db242bd93d56fd97d3b3d733a1a3541473b32d1474ad56aa3cb94f",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 178,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Valley_of_the_Kings",
+          "question_number": 1,
+          "flores_passage": "Tomb of Tutankhamun (KV62). KV62 may be the most famous of the tombs in the Valley, the scene of Howard Carter's 1922 discovery of the almost intact royal burial of the young king. Compared to most of the other royal tombs, however, the tomb of Tutankhamun is barely worth visiting, being much smaller and with limited decoration. Anyone interested in seeing evidence of the damage to the mummy done during attempts to remove it from the coffin will be disappointed as only the head and shoulders are visible. The fabulous riches of the tomb are no longer in it, but have been removed to the Egyptian Museum in Cairo. Visitors with limited time would be best to spend their time elsewhere.",
+          "question": "What can no longer be found in the tomb of Tutankhamun?",
+          "mc_answer1": "Some decoration",
+          "mc_answer2": "The mummy’s head",
+          "mc_answer3": "The mummy’s shoulders",
+          "mc_answer4": "The riches",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Tomb of Tutankhamun (KV62). KV62 may be the most famous of the tombs in the Valley, the scene of Howard Carter's 1922 discovery of the almost intact royal burial of the young king. Compared to most of the other royal tombs, however, the tomb of Tutankhamun is barely worth visiting, being much smaller and with limited decoration. Anyone interested in seeing evidence of the damage to the mummy done during attempts to remove it from the coffin will be disappointed as only the head and shoulders are visible. The fabulous riches of the tomb are no longer in it, but have been removed to the Egyptian Museum in Cairo. Visitors with limited time would be best to spend their time elsewhere.\nQ: What can no longer be found in the tomb of Tutankhamun?\nA: Some decoration\nB: The mummy’s head\nC: The mummy’s shoulders\nD: The riches\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Tomb of Tutankhamun (KV62). KV62 may be the most famous of the tombs in the Valley, the scene of Howard Carter's 1922 discovery of the almost intact royal burial of the young king. Compared to most of the other royal tombs, however, the tomb of Tutankhamun is barely worth visiting, being much smaller and with limited decoration. Anyone interested in seeing evidence of the damage to the mummy done during attempts to remove it from the coffin will be disappointed as only the head and shoulders are visible. The fabulous riches of the tomb are no longer in it, but have been removed to the Egyptian Museum in Cairo. Visitors with limited time would be best to spend their time elsewhere.\nQ: What can no longer be found in the tomb of Tutankhamun?\nA: Some decoration\nB: The mummy’s head\nC: The mummy’s shoulders\nD: The riches\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Tomb of Tutankhamun (KV62). KV62 may be the most famous of the tombs in the Valley, the scene of Howard Carter's 1922 discovery of the almost intact royal burial of the young king. Compared to most of the other royal tombs, however, the tomb of Tutankhamun is barely worth visiting, being much smaller and with limited decoration. Anyone interested in seeing evidence of the damage to the mummy done during attempts to remove it from the coffin will be disappointed as only the head and shoulders are visible. The fabulous riches of the tomb are no longer in it, but have been removed to the Egyptian Museum in Cairo. Visitors with limited time would be best to spend their time elsewhere.\nQ: What can no longer be found in the tomb of Tutankhamun?\nA: Some decoration\nB: The mummy’s head\nC: The mummy’s shoulders\nD: The riches\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Tomb of Tutankhamun (KV62). KV62 may be the most famous of the tombs in the Valley, the scene of Howard Carter's 1922 discovery of the almost intact royal burial of the young king. Compared to most of the other royal tombs, however, the tomb of Tutankhamun is barely worth visiting, being much smaller and with limited decoration. Anyone interested in seeing evidence of the damage to the mummy done during attempts to remove it from the coffin will be disappointed as only the head and shoulders are visible. The fabulous riches of the tomb are no longer in it, but have been removed to the Egyptian Museum in Cairo. Visitors with limited time would be best to spend their time elsewhere.\nQ: What can no longer be found in the tomb of Tutankhamun?\nA: Some decoration\nB: The mummy’s head\nC: The mummy’s shoulders\nD: The riches\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.628811359405518,
+              false
+            ]
+          ],
+          [
+            [
+              -6.259546756744385,
+              false
+            ]
+          ],
+          [
+            [
+              -6.9271368980407715,
+              false
+            ]
+          ],
+          [
+            [
+              -0.04846615716814995,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.628811359405518,
+            false
+          ],
+          [
+            -6.259546756744385,
+            false
+          ],
+          [
+            -6.9271368980407715,
+            false
+          ],
+          [
+            -0.04846615716814995,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c2f19467e64b0faed7d84593531628391197166bd76a8aac741564972e783a90",
+        "prompt_hash": "25bed8ba6389de79688f761e31d204839a7064a64a0113537fee19b8eb61eee0",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792555142.0324304,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

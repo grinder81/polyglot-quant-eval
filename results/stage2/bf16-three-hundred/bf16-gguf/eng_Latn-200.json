@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 891,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Cognitive_Psychology_and_Cognitive_Neuroscience/Problem_Solving_from_an_Evolutionary_Perspective",
+          "question_number": 2,
+          "flores_passage": "Convergent thinking patterns are problem solving techniques that unite different ideas or fields to find a solution. The focus of this mindset is speed, logic and accuracy, also identification of facts, reapplying existing techniques, gathering information. The most important factor of this mindset is: there is only one correct answer. You only think of two answers, namely right or wrong. This type of thinking is associated with certain science or standard procedures. People with this type of thinking have logical thinking, are able to memorize patterns, solve problems and work on scientific tests.",
+          "question": "According to the passage, which of following is not considered a focus of the convergent thinking mindset?",
+          "mc_answer1": "Understanding that there is only one correct answer",
+          "mc_answer2": "Taking one’s time",
+          "mc_answer3": "Identifying facts",
+          "mc_answer4": "Gathering information",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Convergent thinking patterns are problem solving techniques that unite different ideas or fields to find a solution. The focus of this mindset is speed, logic and accuracy, also identification of facts, reapplying existing techniques, gathering information. The most important factor of this mindset is: there is only one correct answer. You only think of two answers, namely right or wrong. This type of thinking is associated with certain science or standard procedures. People with this type of thinking have logical thinking, are able to memorize patterns, solve problems and work on scientific tests.\nQ: According to the passage, which of following is not considered a focus of the convergent thinking mindset?\nA: Understanding that there is only one correct answer\nB: Taking one’s time\nC: Identifying facts\nD: Gathering information\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Convergent thinking patterns are problem solving techniques that unite different ideas or fields to find a solution. The focus of this mindset is speed, logic and accuracy, also identification of facts, reapplying existing techniques, gathering information. The most important factor of this mindset is: there is only one correct answer. You only think of two answers, namely right or wrong. This type of thinking is associated with certain science or standard procedures. People with this type of thinking have logical thinking, are able to memorize patterns, solve problems and work on scientific tests.\nQ: According to the passage, which of following is not considered a focus of the convergent thinking mindset?\nA: Understanding that there is only one correct answer\nB: Taking one’s time\nC: Identifying facts\nD: Gathering information\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Convergent thinking patterns are problem solving techniques that unite different ideas or fields to find a solution. The focus of this mindset is speed, logic and accuracy, also identification of facts, reapplying existing techniques, gathering information. The most important factor of this mindset is: there is only one correct answer. You only think of two answers, namely right or wrong. This type of thinking is associated with certain science or standard procedures. People with this type of thinking have logical thinking, are able to memorize patterns, solve problems and work on scientific tests.\nQ: According to the passage, which of following is not considered a focus of the convergent thinking mindset?\nA: Understanding that there is only one correct answer\nB: Taking one’s time\nC: Identifying facts\nD: Gathering information\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Convergent thinking patterns are problem solving techniques that unite different ideas or fields to find a solution. The focus of this mindset is speed, logic and accuracy, also identification of facts, reapplying existing techniques, gathering information. The most important factor of this mindset is: there is only one correct answer. You only think of two answers, namely right or wrong. This type of thinking is associated with certain science or standard procedures. People with this type of thinking have logical thinking, are able to memorize patterns, solve problems and work on scientific tests.\nQ: According to the passage, which of following is not considered a focus of the convergent thinking mindset?\nA: Understanding that there is only one correct answer\nB: Taking one’s time\nC: Identifying facts\nD: Gathering information\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -7.513763427734375,
+              false
+            ]
+          ],
+          [
+            [
+              -0.017266197130084038,
+              true
+            ]
+          ],
+          [
+            [
+              -7.868125915527344,
+              false
+            ]
+          ],
+          [
+            [
+              -8.21687126159668,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -7.513763427734375,
+            false
+          ],
+          [
+            -0.017266197130084038,
+            true
+          ],
+          [
+            -7.868125915527344,
+            false
+          ],
+          [
+            -8.21687126159668,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "3e56ca5a9d3d367efa5cd26de789457160fde36f7f8de8bc072e8051710592b3",
+        "prompt_hash": "0d0f4a5a727fd942d6525ee5716068bbeaa7b9f785babad97fdcfeb2f299f059",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 651,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Big_Cats/Ocelot",
+          "question_number": 1,
+          "flores_passage": "Ocelots like to eat small animals. They will catch monkeys, snakes, rodents and birds if they can. Almost all of the animals that the ocelot hunts are far smaller than it is. Scientists think that ocelots follow and find animals to eat (prey) by smell, sniffing for where they've been on the ground. They can see very well in the dark with night vision, and move very stealthily, too. Ocelots hunt their prey by blending in with their surroundings then pouncing on their prey.",
+          "question": "Which of the following is not a part of an ocelot’s hunting method?",
+          "mc_answer1": "Camouflaging into their surroundings",
+          "mc_answer2": "Following the scent of their prey",
+          "mc_answer3": "Following their prey during the night",
+          "mc_answer4": "Only preying on animals of a smaller size",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Ocelots like to eat small animals. They will catch monkeys, snakes, rodents and birds if they can. Almost all of the animals that the ocelot hunts are far smaller than it is. Scientists think that ocelots follow and find animals to eat (prey) by smell, sniffing for where they've been on the ground. They can see very well in the dark with night vision, and move very stealthily, too. Ocelots hunt their prey by blending in with their surroundings then pouncing on their prey.\nQ: Which of the following is not a part of an ocelot’s hunting method?\nA: Camouflaging into their surroundings\nB: Following the scent of their prey\nC: Following their prey during the night\nD: Only preying on animals of a smaller size\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Ocelots like to eat small animals. They will catch monkeys, snakes, rodents and birds if they can. Almost all of the animals that the ocelot hunts are far smaller than it is. Scientists think that ocelots follow and find animals to eat (prey) by smell, sniffing for where they've been on the ground. They can see very well in the dark with night vision, and move very stealthily, too. Ocelots hunt their prey by blending in with their surroundings then pouncing on their prey.\nQ: Which of the following is not a part of an ocelot’s hunting method?\nA: Camouflaging into their surroundings\nB: Following the scent of their prey\nC: Following their prey during the night\nD: Only preying on animals of a smaller size\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Ocelots like to eat small animals. They will catch monkeys, snakes, rodents and birds if they can. Almost all of the animals that the ocelot hunts are far smaller than it is. Scientists think that ocelots follow and find animals to eat (prey) by smell, sniffing for where they've been on the ground. They can see very well in the dark with night vision, and move very stealthily, too. Ocelots hunt their prey by blending in with their surroundings then pouncing on their prey.\nQ: Which of the following is not a part of an ocelot’s hunting method?\nA: Camouflaging into their surroundings\nB: Following the scent of their prey\nC: Following their prey during the night\nD: Only preying on animals of a smaller size\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Ocelots like to eat small animals. They will catch monkeys, snakes, rodents and birds if they can. Almost all of the animals that the ocelot hunts are far smaller than it is. Scientists think that ocelots follow and find animals to eat (prey) by smell, sniffing for where they've been on the ground. They can see very well in the dark with night vision, and move very stealthily, too. Ocelots hunt their prey by blending in with their surroundings then pouncing on their prey.\nQ: Which of the following is not a part of an ocelot’s hunting method?\nA: Camouflaging into their surroundings\nB: Following the scent of their prey\nC: Following their prey during the night\nD: Only preying on animals of a smaller size\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.528642416000366,
+              false
+            ]
+          ],
+          [
+            [
+              -5.412698268890381,
+              false
+            ]
+          ],
+          [
+            [
+              -3.563300848007202,
+              false
+            ]
+          ],
+          [
+            [
+              -0.13834543526172638,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.528642416000366,
+            false
+          ],
+          [
+            -5.412698268890381,
+            false
+          ],
+          [
+            -3.563300848007202,
+            false
+          ],
+          [
+            -0.13834543526172638,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "7cad3af619ff7e46afa9d2494a8ef229bd931cf3ad98281a6084ea12c7352dad",
+        "prompt_hash": "1a1576068df7f78d42df67f776b51bdc2618ff0816378f1f72dc5bb31889c5f5",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 249,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:South_America/Venezuela",
+          "question_number": 2,
+          "flores_passage": "Eighteen percent of Venezuelans are unemployed, and most of those who are employed work in the informal economy. Two thirds of Venezuelans who work do so in the service sector, nearly a quarter work in industry and a fifth work in agriculture. An important industry for Venezuelans is oil, where the country is a net exporter, even though only one percent work in the oil industry.",
+          "question": "According to the passage, which of the following sectors employs the largest number of Venezuelans?",
+          "mc_answer1": "Service",
+          "mc_answer2": "Agriculture",
+          "mc_answer3": "Industry",
+          "mc_answer4": "Oil",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Eighteen percent of Venezuelans are unemployed, and most of those who are employed work in the informal economy. Two thirds of Venezuelans who work do so in the service sector, nearly a quarter work in industry and a fifth work in agriculture. An important industry for Venezuelans is oil, where the country is a net exporter, even though only one percent work in the oil industry.\nQ: According to the passage, which of the following sectors employs the largest number of Venezuelans?\nA: Service\nB: Agriculture\nC: Industry\nD: Oil\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Eighteen percent of Venezuelans are unemployed, and most of those who are employed work in the informal economy. Two thirds of Venezuelans who work do so in the service sector, nearly a quarter work in industry and a fifth work in agriculture. An important industry for Venezuelans is oil, where the country is a net exporter, even though only one percent work in the oil industry.\nQ: According to the passage, which of the following sectors employs the largest number of Venezuelans?\nA: Service\nB: Agriculture\nC: Industry\nD: Oil\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Eighteen percent of Venezuelans are unemployed, and most of those who are employed work in the informal economy. Two thirds of Venezuelans who work do so in the service sector, nearly a quarter work in industry and a fifth work in agriculture. An important industry for Venezuelans is oil, where the country is a net exporter, even though only one percent work in the oil industry.\nQ: According to the passage, which of the following sectors employs the largest number of Venezuelans?\nA: Service\nB: Agriculture\nC: Industry\nD: Oil\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Eighteen percent of Venezuelans are unemployed, and most of those who are employed work in the informal economy. Two thirds of Venezuelans who work do so in the service sector, nearly a quarter work in industry and a fifth work in agriculture. An important industry for Venezuelans is oil, where the country is a net exporter, even though only one percent work in the oil industry.\nQ: According to the passage, which of the following sectors employs the largest number of Venezuelans?\nA: Service\nB: Agriculture\nC: Industry\nD: Oil\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.04809562489390373,
+              true
+            ]
+          ],
+          [
+            [
+              -6.221685409545898,
+              false
+            ]
+          ],
+          [
+            [
+              -5.3243560791015625,
+              false
+            ]
+          ],
+          [
+            [
+              -6.27159309387207,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.04809562489390373,
+            true
+          ],
+          [
+            -6.221685409545898,
+            false
+          ],
+          [
+            -5.3243560791015625,
+            false
+          ],
+          [
+            -6.27159309387207,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "dc70eca5ce20f7e162f8945f40a61e917cb27528c70abfb4d6f853af87683080",
+        "prompt_hash": "ae18d17bf17af13054bc4b5c3650eaadd3fef87e9d8f35f3cf9757d82b30f4e0",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 42,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Barcelona",
+          "question_number": 2,
+          "flores_passage": "Barcelona's official languages are Catalan and Spanish. About a half prefer to speak Catalan, a vast majority understands it, and virtually everyone knows Spanish. However, most signs are indicated only in Catalan because it is established by law as the first official language. Yet, Spanish is also widely used in public transport and other facilities. Regular announcements in the Metro are made only in Catalan, but unplanned disruptions are announced by an automated system in a wide variety of languages including Spanish, English, French, Arabic and Japanese.",
+          "question": "Which of the following languages is used by Barcelona’s Metro system for regular announcements?",
+          "mc_answer1": "English",
+          "mc_answer2": "Catalan",
+          "mc_answer3": "Spanish",
+          "mc_answer4": "French",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Barcelona's official languages are Catalan and Spanish. About a half prefer to speak Catalan, a vast majority understands it, and virtually everyone knows Spanish. However, most signs are indicated only in Catalan because it is established by law as the first official language. Yet, Spanish is also widely used in public transport and other facilities. Regular announcements in the Metro are made only in Catalan, but unplanned disruptions are announced by an automated system in a wide variety of languages including Spanish, English, French, Arabic and Japanese.\nQ: Which of the following languages is used by Barcelona’s Metro system for regular announcements?\nA: English\nB: Catalan\nC: Spanish\nD: French\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Barcelona's official languages are Catalan and Spanish. About a half prefer to speak Catalan, a vast majority understands it, and virtually everyone knows Spanish. However, most signs are indicated only in Catalan because it is established by law as the first official language. Yet, Spanish is also widely used in public transport and other facilities. Regular announcements in the Metro are made only in Catalan, but unplanned disruptions are announced by an automated system in a wide variety of languages including Spanish, English, French, Arabic and Japanese.\nQ: Which of the following languages is used by Barcelona’s Metro system for regular announcements?\nA: English\nB: Catalan\nC: Spanish\nD: French\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Barcelona's official languages are Catalan and Spanish. About a half prefer to speak Catalan, a vast majority understands it, and virtually everyone knows Spanish. However, most signs are indicated only in Catalan because it is established by law as the first official language. Yet, Spanish is also widely used in public transport and other facilities. Regular announcements in the Metro are made only in Catalan, but unplanned disruptions are announced by an automated system in a wide variety of languages including Spanish, English, French, Arabic and Japanese.\nQ: Which of the following languages is used by Barcelona’s Metro system for regular announcements?\nA: English\nB: Catalan\nC: Spanish\nD: French\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Barcelona's official languages are Catalan and Spanish. About a half prefer to speak Catalan, a vast majority understands it, and virtually everyone knows Spanish. However, most signs are indicated only in Catalan because it is established by law as the first official language. Yet, Spanish is also widely used in public transport and other facilities. Regular announcements in the Metro are made only in Catalan, but unplanned disruptions are announced by an automated system in a wide variety of languages including Spanish, English, French, Arabic and Japanese.\nQ: Which of the following languages is used by Barcelona’s Metro system for regular announcements?\nA: English\nB: Catalan\nC: Spanish\nD: French\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -5.276061534881592,
+              false
+            ]
+          ],
+          [
+            [
+              -0.03694692626595497,
+              true
+            ]
+          ],
+          [
+            [
+              -5.192956447601318,
+              false
+            ]
+          ],
+          [
+            [
+              -9.144107818603516,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -5.276061534881592,
+            false
+          ],
+          [
+            -0.03694692626595497,
+            true
+          ],
+          [
+            -5.192956447601318,
+            false
+          ],
+          [
+            -9.144107818603516,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "d17c14d97b85689374484040ad1313ab1f3c9e309cfec8ee843c75a210b55628",
+        "prompt_hash": "8bd04dc3a0e9ea7395d4194a80264e3001cadeec06868b2105f2231585470258",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 185,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Wildlife_photography",
+          "question_number": 1,
+          "flores_passage": "Wildlife is among the most challenging motifs for a photographer, and needs a combination of good luck, patience, experience and good equipment. Wildlife photography is often taken for granted, but like photography in general, a picture is worth a thousand words. Wildlife photography often requires a long telephoto lens, though things like a flock of birds or a tiny creature need other lenses. Many exotic animals are hard to find, and parks sometimes have rules about taking photographs for commercial purposes. Wild animals might either be shy or aggressive. The environment might be cold, hot, or otherwise hostile.",
+          "question": "Based on the passage, which scenario might require a wildlife photographer to use a speciality lens?",
+          "mc_answer1": "If they’re photographing especially small creatures",
+          "mc_answer2": "If the photographs are being used for commercial purposes",
+          "mc_answer3": "If the animals being photographed are shy",
+          "mc_answer4": "If a park has special rules regarding wildlife photography",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Wildlife is among the most challenging motifs for a photographer, and needs a combination of good luck, patience, experience and good equipment. Wildlife photography is often taken for granted, but like photography in general, a picture is worth a thousand words. Wildlife photography often requires a long telephoto lens, though things like a flock of birds or a tiny creature need other lenses. Many exotic animals are hard to find, and parks sometimes have rules about taking photographs for commercial purposes. Wild animals might either be shy or aggressive. The environment might be cold, hot, or otherwise hostile.\nQ: Based on the passage, which scenario might require a wildlife photographer to use a speciality lens?\nA: If they’re photographing especially small creatures\nB: If the photographs are being used for commercial purposes\nC: If the animals being photographed are shy\nD: If a park has special rules regarding wildlife photography\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Wildlife is among the most challenging motifs for a photographer, and needs a combination of good luck, patience, experience and good equipment. Wildlife photography is often taken for granted, but like photography in general, a picture is worth a thousand words. Wildlife photography often requires a long telephoto lens, though things like a flock of birds or a tiny creature need other lenses. Many exotic animals are hard to find, and parks sometimes have rules about taking photographs for commercial purposes. Wild animals might either be shy or aggressive. The environment might be cold, hot, or otherwise hostile.\nQ: Based on the passage, which scenario might require a wildlife photographer to use a speciality lens?\nA: If they’re photographing especially small creatures\nB: If the photographs are being used for commercial purposes\nC: If the animals being photographed are shy\nD: If a park has special rules regarding wildlife photography\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Wildlife is among the most challenging motifs for a photographer, and needs a combination of good luck, patience, experience and good equipment. Wildlife photography is often taken for granted, but like photography in general, a picture is worth a thousand words. Wildlife photography often requires a long telephoto lens, though things like a flock of birds or a tiny creature need other lenses. Many exotic animals are hard to find, and parks sometimes have rules about taking photographs for commercial purposes. Wild animals might either be shy or aggressive. The environment might be cold, hot, or otherwise hostile.\nQ: Based on the passage, which scenario might require a wildlife photographer to use a speciality lens?\nA: If they’re photographing especially small creatures\nB: If the photographs are being used for commercial purposes\nC: If the animals being photographed are shy\nD: If a park has special rules regarding wildlife photography\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Wildlife is among the most challenging motifs for a photographer, and needs a combination of good luck, patience, experience and good equipment. Wildlife photography is often taken for granted, but like photography in general, a picture is worth a thousand words. Wildlife photography often requires a long telephoto lens, though things like a flock of birds or a tiny creature need other lenses. Many exotic animals are hard to find, and parks sometimes have rules about taking photographs for commercial purposes. Wild animals might either be shy or aggressive. The environment might be cold, hot, or otherwise hostile.\nQ: Based on the passage, which scenario might require a wildlife photographer to use a speciality lens?\nA: If they’re photographing especially small creatures\nB: If the photographs are being used for commercial purposes\nC: If the animals being photographed are shy\nD: If a park has special rules regarding wildlife photography\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.04639921709895134,
+              true
+            ]
+          ],
+          [
+            [
+              -4.4350690841674805,
+              false
+            ]
+          ],
+          [
+            [
+              -5.205079078674316,
+              false
+            ]
+          ],
+          [
+            [
+              -6.791608810424805,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.04639921709895134,
+            true
+          ],
+          [
+            -4.4350690841674805,
+            false
+          ],
+          [
+            -5.205079078674316,
+            false
+          ],
+          [
+            -6.791608810424805,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "5591db4628a0db3d3732c91700644b603f9a8c4a04cd26279ef04c33e65193b4",
+        "prompt_hash": "0f1dceca94d7fbb7ef8fa0a229d79d317bbba94c0a217f45fcfe479ee9522550",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792554713.616628,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

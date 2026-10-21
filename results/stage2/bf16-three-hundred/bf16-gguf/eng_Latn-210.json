@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 227,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Wikijunior:Kings_and_Queens_of_England/Future_monarchs",
+          "question_number": 1,
+          "flores_passage": "Traditionally, the heir to the throne would go straight into the military after finishing school. However, Charles went to university at Trinity College, Cambridge where he studied Anthropology and Archaeology, and later History, earning a 2:2 (a lower second class degree). Charles was the first member of the British Royal Family to be awarded a degree.",
+          "question": "According to the passage, which of the following is considered typical for an heir to the throne?",
+          "mc_answer1": "Earning a 2:2 degree",
+          "mc_answer2": "Forgoing university to join the military",
+          "mc_answer3": "Studying History",
+          "mc_answer4": "Going to university before joining the military",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: Traditionally, the heir to the throne would go straight into the military after finishing school. However, Charles went to university at Trinity College, Cambridge where he studied Anthropology and Archaeology, and later History, earning a 2:2 (a lower second class degree). Charles was the first member of the British Royal Family to be awarded a degree.\nQ: According to the passage, which of the following is considered typical for an heir to the throne?\nA: Earning a 2:2 degree\nB: Forgoing university to join the military\nC: Studying History\nD: Going to university before joining the military\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Traditionally, the heir to the throne would go straight into the military after finishing school. However, Charles went to university at Trinity College, Cambridge where he studied Anthropology and Archaeology, and later History, earning a 2:2 (a lower second class degree). Charles was the first member of the British Royal Family to be awarded a degree.\nQ: According to the passage, which of the following is considered typical for an heir to the throne?\nA: Earning a 2:2 degree\nB: Forgoing university to join the military\nC: Studying History\nD: Going to university before joining the military\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Traditionally, the heir to the throne would go straight into the military after finishing school. However, Charles went to university at Trinity College, Cambridge where he studied Anthropology and Archaeology, and later History, earning a 2:2 (a lower second class degree). Charles was the first member of the British Royal Family to be awarded a degree.\nQ: According to the passage, which of the following is considered typical for an heir to the throne?\nA: Earning a 2:2 degree\nB: Forgoing university to join the military\nC: Studying History\nD: Going to university before joining the military\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Traditionally, the heir to the throne would go straight into the military after finishing school. However, Charles went to university at Trinity College, Cambridge where he studied Anthropology and Archaeology, and later History, earning a 2:2 (a lower second class degree). Charles was the first member of the British Royal Family to be awarded a degree.\nQ: According to the passage, which of the following is considered typical for an heir to the throne?\nA: Earning a 2:2 degree\nB: Forgoing university to join the military\nC: Studying History\nD: Going to university before joining the military\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.2668259143829346,
+              false
+            ]
+          ],
+          [
+            [
+              -0.13336296379566193,
+              true
+            ]
+          ],
+          [
+            [
+              -5.399022102355957,
+              false
+            ]
+          ],
+          [
+            [
+              -4.349972724914551,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.2668259143829346,
+            false
+          ],
+          [
+            -0.13336296379566193,
+            true
+          ],
+          [
+            -5.399022102355957,
+            false
+          ],
+          [
+            -4.349972724914551,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "2a1ced8a6e39b384f8342b7623f76f60fd846eee9bc04c75841dc21becf50a89",
+        "prompt_hash": "3f33d3e3dffeea35eb69d6cce8b5e9c72f6403f59a9bc37228cf9fa66911f1ab",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 657,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Oil_spill_in_Alaska_closes_800_miles_of_pipeline",
+          "question_number": 2,
+          "flores_passage": "800 miles of the Trans-Alaska Pipeline System were closed down following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska. A power failure following a routine fire-command system test caused relief valves to open and crude oil overflowed near the Fort Greely pump station 9. The valves opening allowed a pressure release for the system and oil flowed on a pad to a tank that can hold 55,000 barrels (2.3 million gallons). As of Wednesday afternoon, the tank vents were still leaking probably from thermal expansion inside the tank. Another secondary containment area below the tanks capable of holding 104,500 barrels was not yet filled to capacity.",
+          "question": "Why did the relief valves open?",
+          "mc_answer1": "There was thermal expansion inside the tanks",
+          "mc_answer2": "There was a power failure after a system test",
+          "mc_answer3": "The tanks were at full capacity",
+          "mc_answer4": "The secondary containment area could not hold enough barrels",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: 800 miles of the Trans-Alaska Pipeline System were closed down following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska. A power failure following a routine fire-command system test caused relief valves to open and crude oil overflowed near the Fort Greely pump station 9. The valves opening allowed a pressure release for the system and oil flowed on a pad to a tank that can hold 55,000 barrels (2.3 million gallons). As of Wednesday afternoon, the tank vents were still leaking probably from thermal expansion inside the tank. Another secondary containment area below the tanks capable of holding 104,500 barrels was not yet filled to capacity.\nQ: Why did the relief valves open?\nA: There was thermal expansion inside the tanks\nB: There was a power failure after a system test\nC: The tanks were at full capacity\nD: The secondary containment area could not hold enough barrels\nAnswer:",
+            " A"
+          ],
+          [
+            "P: 800 miles of the Trans-Alaska Pipeline System were closed down following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska. A power failure following a routine fire-command system test caused relief valves to open and crude oil overflowed near the Fort Greely pump station 9. The valves opening allowed a pressure release for the system and oil flowed on a pad to a tank that can hold 55,000 barrels (2.3 million gallons). As of Wednesday afternoon, the tank vents were still leaking probably from thermal expansion inside the tank. Another secondary containment area below the tanks capable of holding 104,500 barrels was not yet filled to capacity.\nQ: Why did the relief valves open?\nA: There was thermal expansion inside the tanks\nB: There was a power failure after a system test\nC: The tanks were at full capacity\nD: The secondary containment area could not hold enough barrels\nAnswer:",
+            " B"
+          ],
+          [
+            "P: 800 miles of the Trans-Alaska Pipeline System were closed down following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska. A power failure following a routine fire-command system test caused relief valves to open and crude oil overflowed near the Fort Greely pump station 9. The valves opening allowed a pressure release for the system and oil flowed on a pad to a tank that can hold 55,000 barrels (2.3 million gallons). As of Wednesday afternoon, the tank vents were still leaking probably from thermal expansion inside the tank. Another secondary containment area below the tanks capable of holding 104,500 barrels was not yet filled to capacity.\nQ: Why did the relief valves open?\nA: There was thermal expansion inside the tanks\nB: There was a power failure after a system test\nC: The tanks were at full capacity\nD: The secondary containment area could not hold enough barrels\nAnswer:",
+            " C"
+          ],
+          [
+            "P: 800 miles of the Trans-Alaska Pipeline System were closed down following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska. A power failure following a routine fire-command system test caused relief valves to open and crude oil overflowed near the Fort Greely pump station 9. The valves opening allowed a pressure release for the system and oil flowed on a pad to a tank that can hold 55,000 barrels (2.3 million gallons). As of Wednesday afternoon, the tank vents were still leaking probably from thermal expansion inside the tank. Another secondary containment area below the tanks capable of holding 104,500 barrels was not yet filled to capacity.\nQ: Why did the relief valves open?\nA: There was thermal expansion inside the tanks\nB: There was a power failure after a system test\nC: The tanks were at full capacity\nD: The secondary containment area could not hold enough barrels\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.459162473678589,
+              false
+            ]
+          ],
+          [
+            [
+              -0.07739720493555069,
+              true
+            ]
+          ],
+          [
+            [
+              -7.199612617492676,
+              false
+            ]
+          ],
+          [
+            [
+              -8.207791328430176,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.459162473678589,
+            false
+          ],
+          [
+            -0.07739720493555069,
+            true
+          ],
+          [
+            -7.199612617492676,
+            false
+          ],
+          [
+            -8.207791328430176,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "cf60f79b31f6361a023c89bed0210ff95fffd260ac9a9601ebf891c242b6b9a0",
+        "prompt_hash": "48f07fd578cad302ed57bbe2bbad04a2582d1c16aa3cfe2337c80b539bf7f581",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 509,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Wikimedia_Foundation_addresses_controversial_content_conflict",
+          "question_number": 2,
+          "flores_passage": "\"Commons Administrator Adam Cuerden expressed his frustration over the deletions when he spoke to Wikinews last month. \"\"He [Wales] basically lied to us from the start. First, by acting as if this was for legal reasons. Second, by pretending he was listening to us, right up to his art deletion.\"\" The community irritation led to current efforts to draft a policy regarding sexual content for the site which hosts millions of openly-licensed media.\"",
+          "question": "According to the passage, what was deleted from the site?",
+          "mc_answer1": "Art",
+          "mc_answer2": "Sexual content",
+          "mc_answer3": "A policy draft",
+          "mc_answer4": "Privately-owned media",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"Commons Administrator Adam Cuerden expressed his frustration over the deletions when he spoke to Wikinews last month. \"\"He [Wales] basically lied to us from the start. First, by acting as if this was for legal reasons. Second, by pretending he was listening to us, right up to his art deletion.\"\" The community irritation led to current efforts to draft a policy regarding sexual content for the site which hosts millions of openly-licensed media.\"\nQ: According to the passage, what was deleted from the site?\nA: Art\nB: Sexual content\nC: A policy draft\nD: Privately-owned media\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Commons Administrator Adam Cuerden expressed his frustration over the deletions when he spoke to Wikinews last month. \"\"He [Wales] basically lied to us from the start. First, by acting as if this was for legal reasons. Second, by pretending he was listening to us, right up to his art deletion.\"\" The community irritation led to current efforts to draft a policy regarding sexual content for the site which hosts millions of openly-licensed media.\"\nQ: According to the passage, what was deleted from the site?\nA: Art\nB: Sexual content\nC: A policy draft\nD: Privately-owned media\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Commons Administrator Adam Cuerden expressed his frustration over the deletions when he spoke to Wikinews last month. \"\"He [Wales] basically lied to us from the start. First, by acting as if this was for legal reasons. Second, by pretending he was listening to us, right up to his art deletion.\"\" The community irritation led to current efforts to draft a policy regarding sexual content for the site which hosts millions of openly-licensed media.\"\nQ: According to the passage, what was deleted from the site?\nA: Art\nB: Sexual content\nC: A policy draft\nD: Privately-owned media\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Commons Administrator Adam Cuerden expressed his frustration over the deletions when he spoke to Wikinews last month. \"\"He [Wales] basically lied to us from the start. First, by acting as if this was for legal reasons. Second, by pretending he was listening to us, right up to his art deletion.\"\" The community irritation led to current efforts to draft a policy regarding sexual content for the site which hosts millions of openly-licensed media.\"\nQ: According to the passage, what was deleted from the site?\nA: Art\nB: Sexual content\nC: A policy draft\nD: Privately-owned media\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.022398117929697037,
+              true
+            ]
+          ],
+          [
+            [
+              -4.759061813354492,
+              false
+            ]
+          ],
+          [
+            [
+              -5.027063369750977,
+              false
+            ]
+          ],
+          [
+            [
+              -6.387702941894531,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.022398117929697037,
+            true
+          ],
+          [
+            -4.759061813354492,
+            false
+          ],
+          [
+            -5.027063369750977,
+            false
+          ],
+          [
+            -6.387702941894531,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "73b0f7a422ee6afc11c8a7e620040757120c7376f8112fdd26f04ae84d6700d1",
+        "prompt_hash": "c91712abdc3b0f0f3c823c698dbce1da75aca3a983dde82d76279c41b2a5e28b",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 622,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Birdwatching",
+          "question_number": 2,
+          "flores_passage": "Bird flu, or more formally avian influenza, can infect both birds and mammals. Fewer than a thousand cases have ever been reported in humans, but some of them have been fatal. Most have involved people who work with poultry, but there is also some risk to birdwatchers.",
+          "question": "According to the passage, which of the following statements accurately describes bird flu?",
+          "mc_answer1": "Only poultry workers have contracted the flu",
+          "mc_answer2": "More cases have been reported in humans than in birds",
+          "mc_answer3": "Birdwatchers are at risk of being infected",
+          "mc_answer4": "All cases reported in humans have been fatal",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Bird flu, or more formally avian influenza, can infect both birds and mammals. Fewer than a thousand cases have ever been reported in humans, but some of them have been fatal. Most have involved people who work with poultry, but there is also some risk to birdwatchers.\nQ: According to the passage, which of the following statements accurately describes bird flu?\nA: Only poultry workers have contracted the flu\nB: More cases have been reported in humans than in birds\nC: Birdwatchers are at risk of being infected\nD: All cases reported in humans have been fatal\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Bird flu, or more formally avian influenza, can infect both birds and mammals. Fewer than a thousand cases have ever been reported in humans, but some of them have been fatal. Most have involved people who work with poultry, but there is also some risk to birdwatchers.\nQ: According to the passage, which of the following statements accurately describes bird flu?\nA: Only poultry workers have contracted the flu\nB: More cases have been reported in humans than in birds\nC: Birdwatchers are at risk of being infected\nD: All cases reported in humans have been fatal\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Bird flu, or more formally avian influenza, can infect both birds and mammals. Fewer than a thousand cases have ever been reported in humans, but some of them have been fatal. Most have involved people who work with poultry, but there is also some risk to birdwatchers.\nQ: According to the passage, which of the following statements accurately describes bird flu?\nA: Only poultry workers have contracted the flu\nB: More cases have been reported in humans than in birds\nC: Birdwatchers are at risk of being infected\nD: All cases reported in humans have been fatal\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Bird flu, or more formally avian influenza, can infect both birds and mammals. Fewer than a thousand cases have ever been reported in humans, but some of them have been fatal. Most have involved people who work with poultry, but there is also some risk to birdwatchers.\nQ: According to the passage, which of the following statements accurately describes bird flu?\nA: Only poultry workers have contracted the flu\nB: More cases have been reported in humans than in birds\nC: Birdwatchers are at risk of being infected\nD: All cases reported in humans have been fatal\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -3.9235336780548096,
+              false
+            ]
+          ],
+          [
+            [
+              -4.317477703094482,
+              false
+            ]
+          ],
+          [
+            [
+              -0.0757497102022171,
+              true
+            ]
+          ],
+          [
+            [
+              -4.456468105316162,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -3.9235336780548096,
+            false
+          ],
+          [
+            -4.317477703094482,
+            false
+          ],
+          [
+            -0.0757497102022171,
+            true
+          ],
+          [
+            -4.456468105316162,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f9797a7fd2df8c65699627edfcd6ad91c5239ec3b898e15496e34946ee1d5d45",
+        "prompt_hash": "5200ee67830b937e08c491bf08d8c28bdbf39118fab004fa08c63d47848b55c1",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 835,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Staycation",
+          "question_number": 1,
+          "flores_passage": "Fill your home with a rich coffee in the morning and some relaxing chamomile tea at night. When you're on a staycation, you have the time to treat yourself and take a few extra minutes to brew up something special. If you're feeling more adventurous, take the opportunity to juice or blend up some smoothies: maybe you'll discover a simple beverage that you can make for breakfast when you're back to your daily routine. If you live in a city with a varied drinking culture, go to bars or pubs in neighborhoods you don't frequent.",
+          "question": "Which kind of beverage is not mentioned as something to try making at home during a staycation?",
+          "mc_answer1": "Juice",
+          "mc_answer2": "Coffee",
+          "mc_answer3": "Beer",
+          "mc_answer4": "Tea",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: Fill your home with a rich coffee in the morning and some relaxing chamomile tea at night. When you're on a staycation, you have the time to treat yourself and take a few extra minutes to brew up something special. If you're feeling more adventurous, take the opportunity to juice or blend up some smoothies: maybe you'll discover a simple beverage that you can make for breakfast when you're back to your daily routine. If you live in a city with a varied drinking culture, go to bars or pubs in neighborhoods you don't frequent.\nQ: Which kind of beverage is not mentioned as something to try making at home during a staycation?\nA: Juice\nB: Coffee\nC: Beer\nD: Tea\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Fill your home with a rich coffee in the morning and some relaxing chamomile tea at night. When you're on a staycation, you have the time to treat yourself and take a few extra minutes to brew up something special. If you're feeling more adventurous, take the opportunity to juice or blend up some smoothies: maybe you'll discover a simple beverage that you can make for breakfast when you're back to your daily routine. If you live in a city with a varied drinking culture, go to bars or pubs in neighborhoods you don't frequent.\nQ: Which kind of beverage is not mentioned as something to try making at home during a staycation?\nA: Juice\nB: Coffee\nC: Beer\nD: Tea\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Fill your home with a rich coffee in the morning and some relaxing chamomile tea at night. When you're on a staycation, you have the time to treat yourself and take a few extra minutes to brew up something special. If you're feeling more adventurous, take the opportunity to juice or blend up some smoothies: maybe you'll discover a simple beverage that you can make for breakfast when you're back to your daily routine. If you live in a city with a varied drinking culture, go to bars or pubs in neighborhoods you don't frequent.\nQ: Which kind of beverage is not mentioned as something to try making at home during a staycation?\nA: Juice\nB: Coffee\nC: Beer\nD: Tea\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Fill your home with a rich coffee in the morning and some relaxing chamomile tea at night. When you're on a staycation, you have the time to treat yourself and take a few extra minutes to brew up something special. If you're feeling more adventurous, take the opportunity to juice or blend up some smoothies: maybe you'll discover a simple beverage that you can make for breakfast when you're back to your daily routine. If you live in a city with a varied drinking culture, go to bars or pubs in neighborhoods you don't frequent.\nQ: Which kind of beverage is not mentioned as something to try making at home during a staycation?\nA: Juice\nB: Coffee\nC: Beer\nD: Tea\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.096020221710205,
+              false
+            ]
+          ],
+          [
+            [
+              -6.9902520179748535,
+              false
+            ]
+          ],
+          [
+            [
+              -0.03105217218399048,
+              true
+            ]
+          ],
+          [
+            [
+              -8.013118743896484,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.096020221710205,
+            false
+          ],
+          [
+            -6.9902520179748535,
+            false
+          ],
+          [
+            -0.03105217218399048,
+            true
+          ],
+          [
+            -8.013118743896484,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c5eb336a0855cf013b12a2b5c434998f67fb444e89804ec7428aeddc8edafef8",
+        "prompt_hash": "78b7d1d1ecdf60e5866161813bf8e76f5c3ce71318234993fefda980748a744e",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792554842.6712081,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

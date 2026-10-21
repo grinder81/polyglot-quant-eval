@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 1.0,
+      "acc_stderr,none": 0.0,
+      "acc_norm,none": 1.0,
+      "acc_norm_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 557,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Cognitive_Psychology_and_Cognitive_Neuroscience/Problem_Solving_from_an_Evolutionary_Perspective",
+          "question_number": 1,
+          "flores_passage": "Convergent thinking patterns are problem solving techniques that unite different ideas or fields to find a solution. The focus of this mindset is speed, logic and accuracy, also identification of facts, reapplying existing techniques, gathering information. The most important factor of this mindset is: there is only one correct answer. You only think of two answers, namely right or wrong. This type of thinking is associated with certain science or standard procedures. People with this type of thinking have logical thinking, are able to memorize patterns, solve problems and work on scientific tests.",
+          "question": "According to the passage, which of the following is a strength of someone with convergent thinking patterns?",
+          "mc_answer1": "Identifying multiple correct answers to a problem",
+          "mc_answer2": "Applying new techniques to a problem",
+          "mc_answer3": "Taking their time to solve problems",
+          "mc_answer4": "Memorizing patterns",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: Convergent thinking patterns are problem solving techniques that unite different ideas or fields to find a solution. The focus of this mindset is speed, logic and accuracy, also identification of facts, reapplying existing techniques, gathering information. The most important factor of this mindset is: there is only one correct answer. You only think of two answers, namely right or wrong. This type of thinking is associated with certain science or standard procedures. People with this type of thinking have logical thinking, are able to memorize patterns, solve problems and work on scientific tests.\nQ: According to the passage, which of the following is a strength of someone with convergent thinking patterns?\nA: Identifying multiple correct answers to a problem\nB: Applying new techniques to a problem\nC: Taking their time to solve problems\nD: Memorizing patterns\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Convergent thinking patterns are problem solving techniques that unite different ideas or fields to find a solution. The focus of this mindset is speed, logic and accuracy, also identification of facts, reapplying existing techniques, gathering information. The most important factor of this mindset is: there is only one correct answer. You only think of two answers, namely right or wrong. This type of thinking is associated with certain science or standard procedures. People with this type of thinking have logical thinking, are able to memorize patterns, solve problems and work on scientific tests.\nQ: According to the passage, which of the following is a strength of someone with convergent thinking patterns?\nA: Identifying multiple correct answers to a problem\nB: Applying new techniques to a problem\nC: Taking their time to solve problems\nD: Memorizing patterns\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Convergent thinking patterns are problem solving techniques that unite different ideas or fields to find a solution. The focus of this mindset is speed, logic and accuracy, also identification of facts, reapplying existing techniques, gathering information. The most important factor of this mindset is: there is only one correct answer. You only think of two answers, namely right or wrong. This type of thinking is associated with certain science or standard procedures. People with this type of thinking have logical thinking, are able to memorize patterns, solve problems and work on scientific tests.\nQ: According to the passage, which of the following is a strength of someone with convergent thinking patterns?\nA: Identifying multiple correct answers to a problem\nB: Applying new techniques to a problem\nC: Taking their time to solve problems\nD: Memorizing patterns\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Convergent thinking patterns are problem solving techniques that unite different ideas or fields to find a solution. The focus of this mindset is speed, logic and accuracy, also identification of facts, reapplying existing techniques, gathering information. The most important factor of this mindset is: there is only one correct answer. You only think of two answers, namely right or wrong. This type of thinking is associated with certain science or standard procedures. People with this type of thinking have logical thinking, are able to memorize patterns, solve problems and work on scientific tests.\nQ: According to the passage, which of the following is a strength of someone with convergent thinking patterns?\nA: Identifying multiple correct answers to a problem\nB: Applying new techniques to a problem\nC: Taking their time to solve problems\nD: Memorizing patterns\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -2.4291164875030518,
+              false
+            ]
+          ],
+          [
+            [
+              -4.723860740661621,
+              false
+            ]
+          ],
+          [
+            [
+              -5.288558006286621,
+              false
+            ]
+          ],
+          [
+            [
+              -0.13051718473434448,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -2.4291164875030518,
+            false
+          ],
+          [
+            -4.723860740661621,
+            false
+          ],
+          [
+            -5.288558006286621,
+            false
+          ],
+          [
+            -0.13051718473434448,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "46f34b1fd7f692553bcb8268da820c7ae4c7f1e8bd4aa23d5c2f65b6728cfe78",
+        "prompt_hash": "ca9208b3576faa00ed7b5451293898f18c092d75568ef340e9e39f904f45bfbf",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 41,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Sikhism",
+          "question_number": 2,
+          "flores_passage": "\"Sikhism is a religion from the Indian sub-continent. It originated in the Punjab region during the 15th century from a sectarian split within the Hindu tradition. Sikhs consider their faith to be a separate religion from Hinduism though they acknowledge its Hindu roots and traditions. Sikhs call their religion Gurmat, which is Punjabi for \"\"way of the guru\"\". The guru is a fundamental aspect of all Indian religions but in Sikhism has taken on an importance that forms the core of Sikh beliefs. The religion was founded in the 15th century by Guru Nanak (1469–1539). There followed in succession a further nine gurus.\"",
+          "question": "According to the passage, which of the following is considered a core aspect of the Sikh belief system?",
+          "mc_answer1": "The concept of the guru",
+          "mc_answer2": "Hindu traditions ",
+          "mc_answer3": "A refusal to acknowledge other Indian religions",
+          "mc_answer4": "Speaking the Punjabi language",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"Sikhism is a religion from the Indian sub-continent. It originated in the Punjab region during the 15th century from a sectarian split within the Hindu tradition. Sikhs consider their faith to be a separate religion from Hinduism though they acknowledge its Hindu roots and traditions. Sikhs call their religion Gurmat, which is Punjabi for \"\"way of the guru\"\". The guru is a fundamental aspect of all Indian religions but in Sikhism has taken on an importance that forms the core of Sikh beliefs. The religion was founded in the 15th century by Guru Nanak (1469–1539). There followed in succession a further nine gurus.\"\nQ: According to the passage, which of the following is considered a core aspect of the Sikh belief system?\nA: The concept of the guru\nB: Hindu traditions \nC: A refusal to acknowledge other Indian religions\nD: Speaking the Punjabi language\nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Sikhism is a religion from the Indian sub-continent. It originated in the Punjab region during the 15th century from a sectarian split within the Hindu tradition. Sikhs consider their faith to be a separate religion from Hinduism though they acknowledge its Hindu roots and traditions. Sikhs call their religion Gurmat, which is Punjabi for \"\"way of the guru\"\". The guru is a fundamental aspect of all Indian religions but in Sikhism has taken on an importance that forms the core of Sikh beliefs. The religion was founded in the 15th century by Guru Nanak (1469–1539). There followed in succession a further nine gurus.\"\nQ: According to the passage, which of the following is considered a core aspect of the Sikh belief system?\nA: The concept of the guru\nB: Hindu traditions \nC: A refusal to acknowledge other Indian religions\nD: Speaking the Punjabi language\nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Sikhism is a religion from the Indian sub-continent. It originated in the Punjab region during the 15th century from a sectarian split within the Hindu tradition. Sikhs consider their faith to be a separate religion from Hinduism though they acknowledge its Hindu roots and traditions. Sikhs call their religion Gurmat, which is Punjabi for \"\"way of the guru\"\". The guru is a fundamental aspect of all Indian religions but in Sikhism has taken on an importance that forms the core of Sikh beliefs. The religion was founded in the 15th century by Guru Nanak (1469–1539). There followed in succession a further nine gurus.\"\nQ: According to the passage, which of the following is considered a core aspect of the Sikh belief system?\nA: The concept of the guru\nB: Hindu traditions \nC: A refusal to acknowledge other Indian religions\nD: Speaking the Punjabi language\nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Sikhism is a religion from the Indian sub-continent. It originated in the Punjab region during the 15th century from a sectarian split within the Hindu tradition. Sikhs consider their faith to be a separate religion from Hinduism though they acknowledge its Hindu roots and traditions. Sikhs call their religion Gurmat, which is Punjabi for \"\"way of the guru\"\". The guru is a fundamental aspect of all Indian religions but in Sikhism has taken on an importance that forms the core of Sikh beliefs. The religion was founded in the 15th century by Guru Nanak (1469–1539). There followed in succession a further nine gurus.\"\nQ: According to the passage, which of the following is considered a core aspect of the Sikh belief system?\nA: The concept of the guru\nB: Hindu traditions \nC: A refusal to acknowledge other Indian religions\nD: Speaking the Punjabi language\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.003008009400218725,
+              true
+            ]
+          ],
+          [
+            [
+              -9.32418441772461,
+              false
+            ]
+          ],
+          [
+            [
+              -8.172122955322266,
+              false
+            ]
+          ],
+          [
+            [
+              -10.696196556091309,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.003008009400218725,
+            true
+          ],
+          [
+            -9.32418441772461,
+            false
+          ],
+          [
+            -8.172122955322266,
+            false
+          ],
+          [
+            -10.696196556091309,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "46b1f8be5791b0231d301d3af822ba3911edf4aaa78da4ad28cf8c706946d203",
+        "prompt_hash": "6cbe977842c7854d63c1e12d6c3f619328e2c8feca2bdd007d0f73cb3e9d5c72",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 841,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Benin,_Nigeria_join_African_Union_continental_free_trade_bloc",
+          "question_number": 1,
+          "flores_passage": "\"Nigeria previously announced it planned to join the AfCFTA in the week leading up to the summit. AU trade and industry commissioner Albert Muchanga announced Benin was to join. The commissioner said, \"\"We haven't yet agreed on rules of origin and tariff con[c]essions, but the framework we have is enough to start trading on July 1, 2020\"\".\"",
+          "question": "Which of the following was not cited by Albert Muchanga as something that still needed to be agreed upon?",
+          "mc_answer1": "If Benin would join AfCTA",
+          "mc_answer2": "The date that trading could begin",
+          "mc_answer3": "Origin rules",
+          "mc_answer4": "Tariff concessions ",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: \"Nigeria previously announced it planned to join the AfCFTA in the week leading up to the summit. AU trade and industry commissioner Albert Muchanga announced Benin was to join. The commissioner said, \"\"We haven't yet agreed on rules of origin and tariff con[c]essions, but the framework we have is enough to start trading on July 1, 2020\"\".\"\nQ: Which of the following was not cited by Albert Muchanga as something that still needed to be agreed upon?\nA: If Benin would join AfCTA\nB: The date that trading could begin\nC: Origin rules\nD: Tariff concessions \nAnswer:",
+            " A"
+          ],
+          [
+            "P: \"Nigeria previously announced it planned to join the AfCFTA in the week leading up to the summit. AU trade and industry commissioner Albert Muchanga announced Benin was to join. The commissioner said, \"\"We haven't yet agreed on rules of origin and tariff con[c]essions, but the framework we have is enough to start trading on July 1, 2020\"\".\"\nQ: Which of the following was not cited by Albert Muchanga as something that still needed to be agreed upon?\nA: If Benin would join AfCTA\nB: The date that trading could begin\nC: Origin rules\nD: Tariff concessions \nAnswer:",
+            " B"
+          ],
+          [
+            "P: \"Nigeria previously announced it planned to join the AfCFTA in the week leading up to the summit. AU trade and industry commissioner Albert Muchanga announced Benin was to join. The commissioner said, \"\"We haven't yet agreed on rules of origin and tariff con[c]essions, but the framework we have is enough to start trading on July 1, 2020\"\".\"\nQ: Which of the following was not cited by Albert Muchanga as something that still needed to be agreed upon?\nA: If Benin would join AfCTA\nB: The date that trading could begin\nC: Origin rules\nD: Tariff concessions \nAnswer:",
+            " C"
+          ],
+          [
+            "P: \"Nigeria previously announced it planned to join the AfCFTA in the week leading up to the summit. AU trade and industry commissioner Albert Muchanga announced Benin was to join. The commissioner said, \"\"We haven't yet agreed on rules of origin and tariff con[c]essions, but the framework we have is enough to start trading on July 1, 2020\"\".\"\nQ: Which of the following was not cited by Albert Muchanga as something that still needed to be agreed upon?\nA: If Benin would join AfCTA\nB: The date that trading could begin\nC: Origin rules\nD: Tariff concessions \nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.014001240022480488,
+              true
+            ]
+          ],
+          [
+            [
+              -6.564095973968506,
+              false
+            ]
+          ],
+          [
+            [
+              -5.322152614593506,
+              false
+            ]
+          ],
+          [
+            [
+              -8.20872688293457,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.014001240022480488,
+            true
+          ],
+          [
+            -6.564095973968506,
+            false
+          ],
+          [
+            -5.322152614593506,
+            false
+          ],
+          [
+            -8.20872688293457,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f2edb8f24edfebb7dd8cab0cbd2a77a0a7f7142836a94eb08d4a6df96116fc3f",
+        "prompt_hash": "ebeadca474c1bd2c410e6d78717999a88ae9d9f6650f6ddfc99fcfa6f34962b6",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 320,
+        "doc": {
+          "link": "https://en.wikinews.org/wiki/Seven_killed_in_Chinese_bombing",
+          "question_number": 2,
+          "flores_passage": "The man allegedly drove a three-wheeled vehicle armed with explosives into a crowd. The man suspected of detonating the bomb was detained, after sustaining injuries from the blast. His name is still unknown to authorities, although they do know he is a member of the Uighur ethnic group.",
+          "question": "What information regarding the attack have the authorities confirmed?",
+          "mc_answer1": "The identities of any accomplices",
+          "mc_answer2": "The ethnicity of the suspect",
+          "mc_answer3": "The motivation behind the attack",
+          "mc_answer4": "The first and last name of the suspect",
+          "correct_answer_num": "2",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 1,
+        "arguments": [
+          [
+            "P: The man allegedly drove a three-wheeled vehicle armed with explosives into a crowd. The man suspected of detonating the bomb was detained, after sustaining injuries from the blast. His name is still unknown to authorities, although they do know he is a member of the Uighur ethnic group.\nQ: What information regarding the attack have the authorities confirmed?\nA: The identities of any accomplices\nB: The ethnicity of the suspect\nC: The motivation behind the attack\nD: The first and last name of the suspect\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The man allegedly drove a three-wheeled vehicle armed with explosives into a crowd. The man suspected of detonating the bomb was detained, after sustaining injuries from the blast. His name is still unknown to authorities, although they do know he is a member of the Uighur ethnic group.\nQ: What information regarding the attack have the authorities confirmed?\nA: The identities of any accomplices\nB: The ethnicity of the suspect\nC: The motivation behind the attack\nD: The first and last name of the suspect\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The man allegedly drove a three-wheeled vehicle armed with explosives into a crowd. The man suspected of detonating the bomb was detained, after sustaining injuries from the blast. His name is still unknown to authorities, although they do know he is a member of the Uighur ethnic group.\nQ: What information regarding the attack have the authorities confirmed?\nA: The identities of any accomplices\nB: The ethnicity of the suspect\nC: The motivation behind the attack\nD: The first and last name of the suspect\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The man allegedly drove a three-wheeled vehicle armed with explosives into a crowd. The man suspected of detonating the bomb was detained, after sustaining injuries from the blast. His name is still unknown to authorities, although they do know he is a member of the Uighur ethnic group.\nQ: What information regarding the attack have the authorities confirmed?\nA: The identities of any accomplices\nB: The ethnicity of the suspect\nC: The motivation behind the attack\nD: The first and last name of the suspect\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -4.951590061187744,
+              false
+            ]
+          ],
+          [
+            [
+              -0.037747129797935486,
+              true
+            ]
+          ],
+          [
+            [
+              -5.879749774932861,
+              false
+            ]
+          ],
+          [
+            [
+              -5.453915119171143,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -4.951590061187744,
+            false
+          ],
+          [
+            -0.037747129797935486,
+            true
+          ],
+          [
+            -5.879749774932861,
+            false
+          ],
+          [
+            -5.453915119171143,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a7bea528508dc9e6ed6f3638e77b5544838b8a3541aeb001456018030ec186ac",
+        "prompt_hash": "54da861a7774679f07ff50ad85b9e5ebd1fa36065ce92f7387e40b0de32b1bc4",
+        "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 139,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/Subtropical_rainforests",
+          "question_number": 2,
+          "flores_passage": "In summer, especially, you'll need to watch out for mosquitoes if you decide to hike through the rainforest. Even if you're driving through the subtropical rainforest, a few seconds with the doors open while you get inside the vehicle is enough time for mosquitoes to get in the vehicle with you.",
+          "question": "According to the passage, what should you refrain from doing in order to avoid mosquitoes while driving through the rainforest?",
+          "mc_answer1": "Leaving the vehicle’s doors open for too long",
+          "mc_answer2": "Driving through during the summer",
+          "mc_answer3": "Driving through the subtropical areas",
+          "mc_answer4": "Leaving the vehicle unattended while hiking",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: In summer, especially, you'll need to watch out for mosquitoes if you decide to hike through the rainforest. Even if you're driving through the subtropical rainforest, a few seconds with the doors open while you get inside the vehicle is enough time for mosquitoes to get in the vehicle with you.\nQ: According to the passage, what should you refrain from doing in order to avoid mosquitoes while driving through the rainforest?\nA: Leaving the vehicle’s doors open for too long\nB: Driving through during the summer\nC: Driving through the subtropical areas\nD: Leaving the vehicle unattended while hiking\nAnswer:",
+            " A"
+          ],
+          [
+            "P: In summer, especially, you'll need to watch out for mosquitoes if you decide to hike through the rainforest. Even if you're driving through the subtropical rainforest, a few seconds with the doors open while you get inside the vehicle is enough time for mosquitoes to get in the vehicle with you.\nQ: According to the passage, what should you refrain from doing in order to avoid mosquitoes while driving through the rainforest?\nA: Leaving the vehicle’s doors open for too long\nB: Driving through during the summer\nC: Driving through the subtropical areas\nD: Leaving the vehicle unattended while hiking\nAnswer:",
+            " B"
+          ],
+          [
+            "P: In summer, especially, you'll need to watch out for mosquitoes if you decide to hike through the rainforest. Even if you're driving through the subtropical rainforest, a few seconds with the doors open while you get inside the vehicle is enough time for mosquitoes to get in the vehicle with you.\nQ: According to the passage, what should you refrain from doing in order to avoid mosquitoes while driving through the rainforest?\nA: Leaving the vehicle’s doors open for too long\nB: Driving through during the summer\nC: Driving through the subtropical areas\nD: Leaving the vehicle unattended while hiking\nAnswer:",
+            " C"
+          ],
+          [
+            "P: In summer, especially, you'll need to watch out for mosquitoes if you decide to hike through the rainforest. Even if you're driving through the subtropical rainforest, a few seconds with the doors open while you get inside the vehicle is enough time for mosquitoes to get in the vehicle with you.\nQ: According to the passage, what should you refrain from doing in order to avoid mosquitoes while driving through the rainforest?\nA: Leaving the vehicle’s doors open for too long\nB: Driving through during the summer\nC: Driving through the subtropical areas\nD: Leaving the vehicle unattended while hiking\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.04625331237912178,
+              true
+            ]
+          ],
+          [
+            [
+              -6.655722618103027,
+              false
+            ]
+          ],
+          [
+            [
+              -7.515994071960449,
+              false
+            ]
+          ],
+          [
+            [
+              -8.62680721282959,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.04625331237912178,
+            true
+          ],
+          [
+            -6.655722618103027,
+            false
+          ],
+          [
+            -7.515994071960449,
+            false
+          ],
+          [
+            -8.62680721282959,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a2e7452b8aadcc3c0924b224ab52a7a2a110bdd57aeed0ff0d387494cefd1e43",
+        "prompt_hash": "f0918d6a3c5050e9770ec2c1bd1bc834c53abbf4fc9a6e5ab4cbfaa8923771c6",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792555440.5799897,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

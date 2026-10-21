@@ -1,0 +1,564 @@
+{
+  "results": {
+    "belebele_eng_Latn": {
+      "name": "belebele_eng_Latn",
+      "alias": "belebele_eng_Latn",
+      "sample_len": 5,
+      "acc,none": 0.8,
+      "acc_stderr,none": 0.19999999999999998,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "belebele_eng_Latn": {
+      "task": "belebele_eng_Latn",
+      "dataset_path": "facebook/belebele",
+      "dataset_name": "eng_Latn",
+      "dataset_kwargs": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
+      },
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+      "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "first_n",
+        "split": "test",
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "P: {{flores_passage}}\nQ: {{question.strip()}}\nA: {{mc_answer1}}\nB: {{mc_answer2}}\nC: {{mc_answer3}}\nD: {{mc_answer4}}\nAnswer:",
+        "doc_to_choice": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "doc_to_target": "{{['1', '2', '3', '4'].index(correct_answer_num)}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": true,
+      "doc_to_decontamination_query": "{{question}}",
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "belebele_eng_Latn": 0.0
+  },
+  "n-shot": {
+    "belebele_eng_Latn": 0
+  },
+  "higher_is_better": {
+    "belebele_eng_Latn": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "belebele_eng_Latn": {
+      "original": 900,
+      "effective": 5
+    }
+  },
+  "samples": {
+    "belebele_eng_Latn": [
+      {
+        "doc_id": 53,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/European_History/Absolutism_in_Europe",
+          "question_number": 1,
+          "flores_passage": "The balance of power was a system in which European nations sought to maintain the national sovereignty of all European states. The concept was that all European nations had to seek to prevent one nation from becoming powerful, and thus national governments often changed their alliances in order to maintain the balance. The War of Spanish Succession marked the first war whose central issue was the balance of power. This marked an important change, as European powers would no longer have the pretext of being religious wars. Thus, the Thirty Years' War would be the last war to be labeled a religious war.",
+          "question": "In which country was the first war in Europe whose central issue was said to relate to the balance of power rather than having a religious context?",
+          "mc_answer1": "England",
+          "mc_answer2": "Germany",
+          "mc_answer3": "Portugal",
+          "mc_answer4": "Spain",
+          "correct_answer_num": "4",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 3,
+        "arguments": [
+          [
+            "P: The balance of power was a system in which European nations sought to maintain the national sovereignty of all European states. The concept was that all European nations had to seek to prevent one nation from becoming powerful, and thus national governments often changed their alliances in order to maintain the balance. The War of Spanish Succession marked the first war whose central issue was the balance of power. This marked an important change, as European powers would no longer have the pretext of being religious wars. Thus, the Thirty Years' War would be the last war to be labeled a religious war.\nQ: In which country was the first war in Europe whose central issue was said to relate to the balance of power rather than having a religious context?\nA: England\nB: Germany\nC: Portugal\nD: Spain\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The balance of power was a system in which European nations sought to maintain the national sovereignty of all European states. The concept was that all European nations had to seek to prevent one nation from becoming powerful, and thus national governments often changed their alliances in order to maintain the balance. The War of Spanish Succession marked the first war whose central issue was the balance of power. This marked an important change, as European powers would no longer have the pretext of being religious wars. Thus, the Thirty Years' War would be the last war to be labeled a religious war.\nQ: In which country was the first war in Europe whose central issue was said to relate to the balance of power rather than having a religious context?\nA: England\nB: Germany\nC: Portugal\nD: Spain\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The balance of power was a system in which European nations sought to maintain the national sovereignty of all European states. The concept was that all European nations had to seek to prevent one nation from becoming powerful, and thus national governments often changed their alliances in order to maintain the balance. The War of Spanish Succession marked the first war whose central issue was the balance of power. This marked an important change, as European powers would no longer have the pretext of being religious wars. Thus, the Thirty Years' War would be the last war to be labeled a religious war.\nQ: In which country was the first war in Europe whose central issue was said to relate to the balance of power rather than having a religious context?\nA: England\nB: Germany\nC: Portugal\nD: Spain\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The balance of power was a system in which European nations sought to maintain the national sovereignty of all European states. The concept was that all European nations had to seek to prevent one nation from becoming powerful, and thus national governments often changed their alliances in order to maintain the balance. The War of Spanish Succession marked the first war whose central issue was the balance of power. This marked an important change, as European powers would no longer have the pretext of being religious wars. Thus, the Thirty Years' War would be the last war to be labeled a religious war.\nQ: In which country was the first war in Europe whose central issue was said to relate to the balance of power rather than having a religious context?\nA: England\nB: Germany\nC: Portugal\nD: Spain\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -1.6983829736709595,
+              false
+            ]
+          ],
+          [
+            [
+              -3.060981273651123,
+              false
+            ]
+          ],
+          [
+            [
+              -4.104188442230225,
+              false
+            ]
+          ],
+          [
+            [
+              -0.3177124261856079,
+              true
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -1.6983829736709595,
+            false
+          ],
+          [
+            -3.060981273651123,
+            false
+          ],
+          [
+            -4.104188442230225,
+            false
+          ],
+          [
+            -0.3177124261856079,
+            true
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "e25b551c60e343a8eaf73c76a18581828569218b3b25d69c7855d47d276df93b",
+        "prompt_hash": "523527c22b42391e81588ae4c158d6f2d8e5957aeb4cafde23d782a2915c1773",
+        "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 717,
+        "doc": {
+          "link": "https://en.wikibooks.org/wiki/Peak_Oil:_High_Tide_for_an_Oil_Addicted_World/Personal_Action",
+          "question_number": 1,
+          "flores_passage": "Greed and selfishness will always be with us and it is the nature of cooperation that when the majority benefit there will always be more to gain in the short term by acting selfishly Hopefully, most people will realise that their long term best option is to work together with others.",
+          "question": "According to the passage, which of the following yields a long term benefit?",
+          "mc_answer1": "Cooperating with others",
+          "mc_answer2": "Prioritizing one’s self interests",
+          "mc_answer3": "Emphasizing what would benefit the minority over the majority",
+          "mc_answer4": "Recognizing that greed can be beneficial",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Greed and selfishness will always be with us and it is the nature of cooperation that when the majority benefit there will always be more to gain in the short term by acting selfishly Hopefully, most people will realise that their long term best option is to work together with others.\nQ: According to the passage, which of the following yields a long term benefit?\nA: Cooperating with others\nB: Prioritizing one’s self interests\nC: Emphasizing what would benefit the minority over the majority\nD: Recognizing that greed can be beneficial\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Greed and selfishness will always be with us and it is the nature of cooperation that when the majority benefit there will always be more to gain in the short term by acting selfishly Hopefully, most people will realise that their long term best option is to work together with others.\nQ: According to the passage, which of the following yields a long term benefit?\nA: Cooperating with others\nB: Prioritizing one’s self interests\nC: Emphasizing what would benefit the minority over the majority\nD: Recognizing that greed can be beneficial\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Greed and selfishness will always be with us and it is the nature of cooperation that when the majority benefit there will always be more to gain in the short term by acting selfishly Hopefully, most people will realise that their long term best option is to work together with others.\nQ: According to the passage, which of the following yields a long term benefit?\nA: Cooperating with others\nB: Prioritizing one’s self interests\nC: Emphasizing what would benefit the minority over the majority\nD: Recognizing that greed can be beneficial\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Greed and selfishness will always be with us and it is the nature of cooperation that when the majority benefit there will always be more to gain in the short term by acting selfishly Hopefully, most people will realise that their long term best option is to work together with others.\nQ: According to the passage, which of the following yields a long term benefit?\nA: Cooperating with others\nB: Prioritizing one’s self interests\nC: Emphasizing what would benefit the minority over the majority\nD: Recognizing that greed can be beneficial\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.022700101137161255,
+              true
+            ]
+          ],
+          [
+            [
+              -5.478964805603027,
+              false
+            ]
+          ],
+          [
+            [
+              -6.3296613693237305,
+              false
+            ]
+          ],
+          [
+            [
+              -8.243318557739258,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.022700101137161255,
+            true
+          ],
+          [
+            -5.478964805603027,
+            false
+          ],
+          [
+            -6.3296613693237305,
+            false
+          ],
+          [
+            -8.243318557739258,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "3fed54653d3e36f7db3ecaf363824b10d9d85cb95786e75d98cce83d9ccd1525",
+        "prompt_hash": "86903e6c38dab91664fa068ff00c8116d84ca0ce90f179baf40347dc1e3b937e",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 722,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/French_phrasebook",
+          "question_number": 1,
+          "flores_passage": "The varieties of French which are spoken in Belgium and Switzerland differ slightly from the French spoken in France, though they are similar enough to be mutually intelligible. In particular, the numbering system in French-speaking Belgium and Switzerland has some slight peculiarities that are different from the French spoken in France, and the pronunciation of some words is slightly different. Nevertheless, all French-speaking Belgians and Swiss would have learned standard French in school, so they would be able to understand you even if you used the standard French numbering system.",
+          "question": "Which of the following might not be understood by French-speaking Belgians and Swiss?",
+          "mc_answer1": "The standard French numbering system",
+          "mc_answer2": "Peculiar French words",
+          "mc_answer3": "Certain pronunciations of French words",
+          "mc_answer4": "Most French spoken in France",
+          "correct_answer_num": "3",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 2,
+        "arguments": [
+          [
+            "P: The varieties of French which are spoken in Belgium and Switzerland differ slightly from the French spoken in France, though they are similar enough to be mutually intelligible. In particular, the numbering system in French-speaking Belgium and Switzerland has some slight peculiarities that are different from the French spoken in France, and the pronunciation of some words is slightly different. Nevertheless, all French-speaking Belgians and Swiss would have learned standard French in school, so they would be able to understand you even if you used the standard French numbering system.\nQ: Which of the following might not be understood by French-speaking Belgians and Swiss?\nA: The standard French numbering system\nB: Peculiar French words\nC: Certain pronunciations of French words\nD: Most French spoken in France\nAnswer:",
+            " A"
+          ],
+          [
+            "P: The varieties of French which are spoken in Belgium and Switzerland differ slightly from the French spoken in France, though they are similar enough to be mutually intelligible. In particular, the numbering system in French-speaking Belgium and Switzerland has some slight peculiarities that are different from the French spoken in France, and the pronunciation of some words is slightly different. Nevertheless, all French-speaking Belgians and Swiss would have learned standard French in school, so they would be able to understand you even if you used the standard French numbering system.\nQ: Which of the following might not be understood by French-speaking Belgians and Swiss?\nA: The standard French numbering system\nB: Peculiar French words\nC: Certain pronunciations of French words\nD: Most French spoken in France\nAnswer:",
+            " B"
+          ],
+          [
+            "P: The varieties of French which are spoken in Belgium and Switzerland differ slightly from the French spoken in France, though they are similar enough to be mutually intelligible. In particular, the numbering system in French-speaking Belgium and Switzerland has some slight peculiarities that are different from the French spoken in France, and the pronunciation of some words is slightly different. Nevertheless, all French-speaking Belgians and Swiss would have learned standard French in school, so they would be able to understand you even if you used the standard French numbering system.\nQ: Which of the following might not be understood by French-speaking Belgians and Swiss?\nA: The standard French numbering system\nB: Peculiar French words\nC: Certain pronunciations of French words\nD: Most French spoken in France\nAnswer:",
+            " C"
+          ],
+          [
+            "P: The varieties of French which are spoken in Belgium and Switzerland differ slightly from the French spoken in France, though they are similar enough to be mutually intelligible. In particular, the numbering system in French-speaking Belgium and Switzerland has some slight peculiarities that are different from the French spoken in France, and the pronunciation of some words is slightly different. Nevertheless, all French-speaking Belgians and Swiss would have learned standard French in school, so they would be able to understand you even if you used the standard French numbering system.\nQ: Which of the following might not be understood by French-speaking Belgians and Swiss?\nA: The standard French numbering system\nB: Peculiar French words\nC: Certain pronunciations of French words\nD: Most French spoken in France\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.031882502138614655,
+              true
+            ]
+          ],
+          [
+            [
+              -6.355435371398926,
+              false
+            ]
+          ],
+          [
+            [
+              -8.510917663574219,
+              false
+            ]
+          ],
+          [
+            [
+              -4.105345726013184,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.031882502138614655,
+            true
+          ],
+          [
+            -6.355435371398926,
+            false
+          ],
+          [
+            -8.510917663574219,
+            false
+          ],
+          [
+            -4.105345726013184,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "a1436ffa736edc613fd45ff4d161d46f1f2dd9660f68da722d4fe98f6f93f16f",
+        "prompt_hash": "f3f976efce66bdf0d1bcf803c9f73ca7c69d2d3c0fd521b22def48225439c62c",
+        "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "acc": 0.0,
+        "acc_norm": 0.0
+      },
+      {
+        "doc_id": 889,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/GPS_navigation",
+          "question_number": 2,
+          "flores_passage": "Using GPS navigation apps on your smartphone can be the easiest and most convenient way to navigate when out of your home country. It can save money over buying new maps for a GPS, or a standalone GPS device or renting one from a car rental company. If you don't have a data connection for your phone, or when it is out of range, their performance can be limited or unavailable.",
+          "question": "What is a not good reason to use a GPS navigation app as opposed to a standalone device?",
+          "mc_answer1": "Not needing to worry about a data connection",
+          "mc_answer2": "Saving money",
+          "mc_answer3": "Avoiding rentals",
+          "mc_answer4": "Not needing to buy new maps",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: Using GPS navigation apps on your smartphone can be the easiest and most convenient way to navigate when out of your home country. It can save money over buying new maps for a GPS, or a standalone GPS device or renting one from a car rental company. If you don't have a data connection for your phone, or when it is out of range, their performance can be limited or unavailable.\nQ: What is a not good reason to use a GPS navigation app as opposed to a standalone device?\nA: Not needing to worry about a data connection\nB: Saving money\nC: Avoiding rentals\nD: Not needing to buy new maps\nAnswer:",
+            " A"
+          ],
+          [
+            "P: Using GPS navigation apps on your smartphone can be the easiest and most convenient way to navigate when out of your home country. It can save money over buying new maps for a GPS, or a standalone GPS device or renting one from a car rental company. If you don't have a data connection for your phone, or when it is out of range, their performance can be limited or unavailable.\nQ: What is a not good reason to use a GPS navigation app as opposed to a standalone device?\nA: Not needing to worry about a data connection\nB: Saving money\nC: Avoiding rentals\nD: Not needing to buy new maps\nAnswer:",
+            " B"
+          ],
+          [
+            "P: Using GPS navigation apps on your smartphone can be the easiest and most convenient way to navigate when out of your home country. It can save money over buying new maps for a GPS, or a standalone GPS device or renting one from a car rental company. If you don't have a data connection for your phone, or when it is out of range, their performance can be limited or unavailable.\nQ: What is a not good reason to use a GPS navigation app as opposed to a standalone device?\nA: Not needing to worry about a data connection\nB: Saving money\nC: Avoiding rentals\nD: Not needing to buy new maps\nAnswer:",
+            " C"
+          ],
+          [
+            "P: Using GPS navigation apps on your smartphone can be the easiest and most convenient way to navigate when out of your home country. It can save money over buying new maps for a GPS, or a standalone GPS device or renting one from a car rental company. If you don't have a data connection for your phone, or when it is out of range, their performance can be limited or unavailable.\nQ: What is a not good reason to use a GPS navigation app as opposed to a standalone device?\nA: Not needing to worry about a data connection\nB: Saving money\nC: Avoiding rentals\nD: Not needing to buy new maps\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.022546732798218727,
+              true
+            ]
+          ],
+          [
+            [
+              -5.332120895385742,
+              false
+            ]
+          ],
+          [
+            [
+              -4.744068145751953,
+              false
+            ]
+          ],
+          [
+            [
+              -5.479188919067383,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.022546732798218727,
+            true
+          ],
+          [
+            -5.332120895385742,
+            false
+          ],
+          [
+            -4.744068145751953,
+            false
+          ],
+          [
+            -5.479188919067383,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "c45e3ebae30123cdf9b58adc39eea3a806914fde7c2fd68cf567c55ef0742bec",
+        "prompt_hash": "cbb22405d52c68a6e59535562295a36ac4c9915710fe67989ec3a26d8df473c2",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      },
+      {
+        "doc_id": 129,
+        "doc": {
+          "link": "https://en.wikivoyage.org/wiki/West_Africa",
+          "question_number": 1,
+          "flores_passage": "In the north the region is bounded by the Sahel, and in the south and west by the Atlantic Ocean. Women: It is recommended that any women travellers say that they are married, regardless of actual marital status. It is helpful to also wear a ring (just not one that looks too expensive. Women should realize that cultural differences may result in what they would consider harassment and it is not uncommon to be followed, grabbed by the arm, etc. Be firm in turning down men, and don't be afraid to stand your ground (cultural differences or not, it doesn't make it ok!).",
+          "question": "According to the passage, which of the following would not be a recommended tip for women traveling in the area?",
+          "mc_answer1": "Refrain from discussing martial status",
+          "mc_answer2": "Be aware that cultural differences may instigate forceful behavior from locals",
+          "mc_answer3": "Avoid wearing flashy jewelry",
+          "mc_answer4": "Use toughness when necessary",
+          "correct_answer_num": "1",
+          "dialect": "eng_Latn",
+          "ds": "2023-05-03 00:00:00"
+        },
+        "target": 0,
+        "arguments": [
+          [
+            "P: In the north the region is bounded by the Sahel, and in the south and west by the Atlantic Ocean. Women: It is recommended that any women travellers say that they are married, regardless of actual marital status. It is helpful to also wear a ring (just not one that looks too expensive. Women should realize that cultural differences may result in what they would consider harassment and it is not uncommon to be followed, grabbed by the arm, etc. Be firm in turning down men, and don't be afraid to stand your ground (cultural differences or not, it doesn't make it ok!).\nQ: According to the passage, which of the following would not be a recommended tip for women traveling in the area?\nA: Refrain from discussing martial status\nB: Be aware that cultural differences may instigate forceful behavior from locals\nC: Avoid wearing flashy jewelry\nD: Use toughness when necessary\nAnswer:",
+            " A"
+          ],
+          [
+            "P: In the north the region is bounded by the Sahel, and in the south and west by the Atlantic Ocean. Women: It is recommended that any women travellers say that they are married, regardless of actual marital status. It is helpful to also wear a ring (just not one that looks too expensive. Women should realize that cultural differences may result in what they would consider harassment and it is not uncommon to be followed, grabbed by the arm, etc. Be firm in turning down men, and don't be afraid to stand your ground (cultural differences or not, it doesn't make it ok!).\nQ: According to the passage, which of the following would not be a recommended tip for women traveling in the area?\nA: Refrain from discussing martial status\nB: Be aware that cultural differences may instigate forceful behavior from locals\nC: Avoid wearing flashy jewelry\nD: Use toughness when necessary\nAnswer:",
+            " B"
+          ],
+          [
+            "P: In the north the region is bounded by the Sahel, and in the south and west by the Atlantic Ocean. Women: It is recommended that any women travellers say that they are married, regardless of actual marital status. It is helpful to also wear a ring (just not one that looks too expensive. Women should realize that cultural differences may result in what they would consider harassment and it is not uncommon to be followed, grabbed by the arm, etc. Be firm in turning down men, and don't be afraid to stand your ground (cultural differences or not, it doesn't make it ok!).\nQ: According to the passage, which of the following would not be a recommended tip for women traveling in the area?\nA: Refrain from discussing martial status\nB: Be aware that cultural differences may instigate forceful behavior from locals\nC: Avoid wearing flashy jewelry\nD: Use toughness when necessary\nAnswer:",
+            " C"
+          ],
+          [
+            "P: In the north the region is bounded by the Sahel, and in the south and west by the Atlantic Ocean. Women: It is recommended that any women travellers say that they are married, regardless of actual marital status. It is helpful to also wear a ring (just not one that looks too expensive. Women should realize that cultural differences may result in what they would consider harassment and it is not uncommon to be followed, grabbed by the arm, etc. Be firm in turning down men, and don't be afraid to stand your ground (cultural differences or not, it doesn't make it ok!).\nQ: According to the passage, which of the following would not be a recommended tip for women traveling in the area?\nA: Refrain from discussing martial status\nB: Be aware that cultural differences may instigate forceful behavior from locals\nC: Avoid wearing flashy jewelry\nD: Use toughness when necessary\nAnswer:",
+            " D"
+          ]
+        ],
+        "resps": [
+          [
+            [
+              -0.019403530284762383,
+              true
+            ]
+          ],
+          [
+            [
+              -5.2091064453125,
+              false
+            ]
+          ],
+          [
+            [
+              -5.043355941772461,
+              false
+            ]
+          ],
+          [
+            [
+              -6.522859573364258,
+              false
+            ]
+          ]
+        ],
+        "filtered_resps": [
+          [
+            -0.019403530284762383,
+            true
+          ],
+          [
+            -5.2091064453125,
+            false
+          ],
+          [
+            -5.043355941772461,
+            false
+          ],
+          [
+            -6.522859573364258,
+            false
+          ]
+        ],
+        "filter": "none",
+        "metrics": [
+          "acc",
+          "acc_norm"
+        ],
+        "doc_hash": "f77427136d686005585395f826c8395cf23acee08b6a6c0ada2dafe9a0f8e80d",
+        "prompt_hash": "ace8d577b8ce3029dea413588d5c3ce53a755169e28e5f86e719e1376e0341e8",
+        "target_hash": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "acc": 1.0,
+        "acc_norm": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "GGUFLM",
+    "model_args": null,
+    "batch_size": null,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 1000,
+    "gen_kwargs": null,
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "fewshot_seed": 42
+  },
+  "git_hash": null,
+  "date": 1792553837.245124,
+  "pretty_env_info": "N/A (torch not installed)",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.13",
+  "upper_git_hash": null
+}

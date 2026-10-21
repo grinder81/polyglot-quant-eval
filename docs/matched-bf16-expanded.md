@@ -14,7 +14,8 @@ Before scoring, all 900 contexts and 3600 candidate sequences passed token-ID an
 roundtrip validation. Live manifests agree with the local-Q4 run on runtime files,
 packages, server settings, scoring runner and sample lock, excluding the model
 artifact and arm name. The original preflight and manifests accompany final results.
-The active run remains incomplete until all 180 five-question shards validate.
+All 180 five-question shards now validate. Results and the paired comparison are
+in `results/stage2/bf16-three-hundred/README.md`.
 
 ## Report contract
 
