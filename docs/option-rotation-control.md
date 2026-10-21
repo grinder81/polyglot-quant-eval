@@ -101,3 +101,17 @@ validate every shard against its lock/runtime, report per-question paired flips
 and identical-text choice flags, then call it. No real rotation result is claimed
 by its synthetic tests. Tests independently check known-bias recovery, weighted
 fitting, held-source exclusion, paired zero differences and degenerate resamples.
+
+`python -m scripts.summarize_rotations ROOT --output NEW_REPORT` supplies the
+evidence-loading and serialization step. ROOT must contain `rotation-lock.json`,
+`ARM-runtime.json`, `ARM-preflight.json`, and `ARM/` with all 240 raw shards and
+its identity for each of `bf16-gguf` and `local-q4`. The approved spec hash and
+membership, lock/preflight/runtime links, matching scoring code and runtime
+settings, and every prompt/target/score/shard accuracy are checked. The report
+retains raw shard hashes, original-content predictions for every rotation,
+per-language/rotation paired outcome flips, and exact identical-text choice pairs.
+It does not overwrite existing reports. Preserve the raw files and lock as well;
+the JSON report is not a substitute for them. Hash links establish consistency,
+not independent authenticity of arbitrary supplied evidence. This is currently
+validated with synthetic complete and deliberately damaged evidence, not a
+completed real A2 run.
