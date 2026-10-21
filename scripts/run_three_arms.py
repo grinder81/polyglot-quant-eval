@@ -21,8 +21,11 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--root', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
-    p.add_argument('--local-q4-only', action='store_true',
+    selection = p.add_mutually_exclusive_group()
+    selection.add_argument('--local-q4-only', action='store_true',
                    help='Evaluate the approved local control without rerunning the existing arms')
+    selection.add_argument('--bf16-gguf-only', action='store_true',
+                          help='Run only the matched BF16 GGUF reference')
     p.add_argument('--start', type=int, default=0)
     p.add_argument('--count', type=int, default=50)
     args = p.parse_args()
@@ -36,6 +39,8 @@ def main():
               ('bf16-vllm', original)]
     if args.local_q4_only:
         models = [('local-q4', root / 'models/tiny-aya-global-local-q4_k_m.gguf')]
+    elif args.bf16_gguf_only:
+        models = [models[1]]
     for arm, model in models:
         is_vllm = arm == 'bf16-vllm'
         env = os.environ.copy()
