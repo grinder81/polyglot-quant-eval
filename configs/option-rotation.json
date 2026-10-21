@@ -1,0 +1,426 @@
+{
+  "version": 1,
+  "scope": "diagnostic only",
+  "original_lock_sha256": "7de16ffcfb75033d1c88ccc6299a00a4df956821f82dec580907539633f1321c",
+  "selection": "First 100 groups of existing frozen development lock; no selection by correctness",
+  "languages": [
+    "eng_Latn",
+    "ben_Beng",
+    "hin_Deva"
+  ],
+  "arms": [
+    "bf16-gguf",
+    "local-q4"
+  ],
+  "rotations": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "sample_membership": [
+    {
+      "source": "https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/Bones",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Visa",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Italy_arrests_reputed_Mafia_boss_Lo_Piccolo",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Mitt_Romney_wins_2012_Florida_primary",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Toronto_team-led_research_on_Type_1_Diabetes_%27groundbreaking%27",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Victoria_Falls",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:The_Elements/Hydrogen",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Senate_questions_Roberts_in_confirmation_hearings",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Australian_Big_Brother_cleared_of_breaching_content_laws",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/National_Hockey_League_news:_March_22,_2008",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/What_is_a_Civilization%3F",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Anonymous_people_reveal_animal_cruelty_at_Australian_Inghams_poultry_producer_factory_using_CCTV_footage",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Castles_of_England/Tudor_Castles",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Explorers_find_shipwreck_thought_to_be_massive_WWII_battleship_Musashi",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Russian_military_cargo_jet_crash_kills_eleven_in_Siberia",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Sandra_Fluke_insists_she_will_not_be_silenced",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Philae_space_probe_lands_on_comet",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Corcovado_National_Park",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Chris_Huhne_resigns_from_UK_Cabinet_to_face_charges",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Bugs/Insects_Intro",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Thimphu",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Funeral_of_Pope_John_Paul_II_takes_place",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Scientists_say_new_medical_diagnostic_chip_can_sort_cells_anywhere_with_an_inkjet",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Space_station_crew_perform_successful_spacewalk",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Round_the_world_flights",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Cross_country_skiing",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Funeral_of_Pope_John_Paul_II_takes_place",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Pests",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Researchers_report_rapid_formation_of_new_bird_species_in_Gal%C3%A1pagos_islands",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Glaciers",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Salar_de_Uyuni",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Languages/Hindi",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Cognitive_Psychology_and_Cognitive_Neuroscience/Behavioural_and_Neuroscience_Methods",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travel_writing",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Sealing_ships_trapped_in_ice_off_coast_of_Newfoundland",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Asia/Bhutan",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Edmonton_prison_conflict_wounds_eight",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Fossilized_remains_of_small_dinosaur_rediscovered_in_Canada",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Ma_Ying-jeou_wins_2008_Taiwan_presidential_election",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Chile",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Funeral_travel",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/FAA:_Metroplex_NextGen_project_in_place_in_north_Texas",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/The_Organ_Systems/nervous",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Doctor_to_be_charged_after_mother%27s_death_in_Ohio",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Angkor_Archaeological_Park",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Costume_History/Gothic",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Dangerous_animals",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/California_lawmaker_denies_affairs_after_sexual_discussion_becomes_public",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/United_States_warns_of_suicide_attacks_in_Kenya_and_Ethiopia",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Space_station_crew_perform_successful_spacewalk",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/BBC_newsreader_sacked_after_conviction_for_wounding_teenager",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/New_fossils_from_10_million_year_old_ape_found_in_Ethiopia",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Car_camping",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Nadal_beats_Raonic_to_reach_Australian_Open_semis",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Light_Bulb",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:South_America/The_Amazon",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Sundarbans_National_Park",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Thousands_march_in_London_calling_for_David_Cameron%27s_resignation_over_tax_affairs",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Airline_alliances",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/National_Basketball_Association_suspends_season_due_to_COVID-19_concerns",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Romanian_artists_auction_off_their_works_for_tsunami_victims",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Plitvice_Lakes_National_Park",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travel_photography/Film",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/Space_exploration",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Meteora",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Tropical_Storm_Danielle_forms_in_Atlantic_Ocean",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Rock_climbing",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/The_Seven_Wonders_of_the_World/The_Temple_of_Artemis",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Deserts",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Judge_orders_Baltimore_City_prison_to_produce_plan_for_improvement",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Support_for_an_Australian_republic_slips",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Blended_Learning_in_K-12/Synchronous_and_asynchronous_communication_methods",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Lucid_Dreaming/Induction_Techniques",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Nintendo_unveils_controller_for_Revolution_console",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Asia/Taiwan",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Kings_and_Queens_of_England/The_Anglo-Saxons",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Corcovado_National_Park",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Huge_Gay_Pride_parade_held_in_Brazil",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Coaching_Youth_Middle_Distance_Runners/Training",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Communication_Theory/Orality_and_Literacy",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Past_events/Wikimania_2018_Cape_Town_Guidebook",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Canyoning",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Australian_treasurer_enters_nuclear_debate",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/Moon",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Battle_of_Britain",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Aerosmith_sued_over_late_cancellation_of_gig_in_Maui,_Hawaii",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Parts_of_New_Orleans_flood_again",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Hong_Kong",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/History_of_Rail_Transport/Early_Rail_Transportation",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Guanajuato",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Baltic_Sea_ferries",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/IEEE_approves_802.11n_standard_after_six_years",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Cascais",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/Women%E2%80%99s_boxing_to_be_included_in_the_2012_Olympics_for_the_first_time",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Thimphu",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Travel_insurance",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikibooks.org/wiki/Coaching_Youth_Middle_Distance_Runners/Nutrition",
+      "question": 1
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/Bed_and_breakfasts",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikinews.org/wiki/German_judge_orders_life_sentence_for_nation%27s_%27first_Islamic-motivated_terror_attack%27",
+      "question": 2
+    },
+    {
+      "source": "https://en.wikivoyage.org/wiki/German_phrasebook",
+      "question": 1
+    }
+  ],
+  "fold": "int(sha256(source UTF-8),16) % 5; source shared across languages",
+  "estimator": "Mean centered log-likelihood by displayed letter over complete rotations; fit separately by arm and language excluding held fold; no labels used",
+  "canonical_scoring": "Unchanged original upstream letter likelihood; adjusted results diagnostic only"
+}

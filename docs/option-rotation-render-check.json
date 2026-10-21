@@ -1,0 +1,8 @@
+{
+  "rendered_rotations": 1200,
+  "zero_rotation_prompt_hashes_matched": 300,
+  "candidate_contract": " A / B / C / D unchanged",
+  "model_requests": 0,
+  "tokenizer_validation": "pending before inference",
+  "spec_sha256": "f52d701b18a8cf4cdd39d9e9037c1e24a0e7d415bbfa1e549440fa58d2fc4339"
+}
