@@ -101,7 +101,9 @@ def main():
             lines += [f'### {lang}', '', doc['passage'], '', '**Question:** ' + doc['question'], '']
             lines += [f'{letter}. {text}' for letter, text in zip('ABCD', doc['choices'], strict=True)]
             lines += ['', 'Screening hints: ' + ', '.join(doc['screening_hints']), '']
-    (args.output_directory / 'review.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    # Presentation-only whitespace cleanup; packet.json preserves source text exactly.
+    display = '\n'.join(line.rstrip() for line in '\n'.join(lines).splitlines()).rstrip() + '\n'
+    (args.output_directory / 'review.md').write_text(display, encoding='utf-8')
     print(json.dumps(summary, indent=2))
 
 
