@@ -76,3 +76,28 @@ resume. Interrupted incomplete shards are not treated as completed results. Save
 the full lock, preflights, identities, manifests and raw outputs with the final report.
 This tooling does not itself establish endpoint likelihood parity; the same validated
 upstream integration remains required. No custom scoring adapter is introduced.
+
+## Statistical implementation
+
+`scripts/rotation_statistics.py` implements the preregistered calculations over
+validated records (`source`, `question`, original `target`, and four `rotations`
+of four scores). `measure` reports rotation accuracies, original-order and
+rotation-average accuracy, all-four content consistency, six-pair agreement,
+letter counts and cross-fitted offsets. Counts refer to original option indices;
+the final report must separately flag synonymous or identical-text options.
+
+`joint_statistics` resamples sources jointly across arms/languages, includes every
+question in a drawn source, and refits offsets with bootstrap multiplicities on
+each draw. The source fold remains fixed. It reports raw/corrected estimates,
+paired Q4-minus-BF16 intervals and their difference from English. Empty-training
+fold replicates are counted and excluded, never repaired with held-source data;
+intervals are null if none remain. These are percentile development-sample
+intervals conditional on this diagnostic, not simultaneous confidence bounds or
+proof of equivalence. Review invalid-replicate counts before interpreting them.
+
+The module is a calculation utility with tuple-keyed in-memory cells; it is not a
+raw-file loader or final serialized report. The later evidence aggregation must
+validate every shard against its lock/runtime, report per-question paired flips
+and identical-text choice flags, then call it. No real rotation result is claimed
+by its synthetic tests. Tests independently check known-bias recovery, weighted
+fitting, held-source exclusion, paired zero differences and degenerate resamples.
