@@ -29,6 +29,8 @@
     "fewshot": {"type": ["integer", "null"]},
     "seed": {"type": ["integer", "null"]},
     "prompt_hash": {"type": ["string", "null"]},
+    "sample_set_hash": {"type": ["string", "null"], "description": "Verified sample-membership manifest hash; count alone is insufficient"},
+    "scoring_contract_hash": {"type": ["string", "null"], "description": "Verified scoring contract including template, normalization, task version and decoding settings"},
     "parity_rate": {"type": ["number", "null"], "description": "desktop-vs-device greedy token agreement for this format, if measured"},
     "source_file": {"type": ["string", "null"]},
     "notes": {"type": ["string", "null"]}
