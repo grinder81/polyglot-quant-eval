@@ -7,3 +7,10 @@ results/stage1/local-q4-three-hundred/**/*.json -text
 results/stage1/local-q4-three-hundred/*.json -text
 configs/option-rotation.json -text
 results/stage2/**/*.json -text
+# New A3 execution identities hash source bytes; keep these sources portable.
+scripts/run_scoring_variants.py text eol=lf
+scripts/scoring_variant_statistics.py text eol=lf
+scripts/summarize_scoring_variants.py text eol=lf
+tests/test_scoring_variant_report.py text eol=lf
+tests/test_scoring_variant_runner.py text eol=lf
+tests/test_scoring_variant_statistics.py text eol=lf

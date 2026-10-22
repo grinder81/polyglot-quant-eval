@@ -1,0 +1,40 @@
+{
+  "arm": "local-q4",
+  "lock_sha256": "75486c22c0c25f7c6c9d3da6abfaaa0165babf4a5de24970147ab9d1488d9844",
+  "runtime_sha256": "ba55c25a5d962a7cf1286c8d151265ebb4ae972c0e970f8c85dc491ab56f013f",
+  "model_args": {
+    "model": "a3-locked",
+    "base_url": "http://127.0.0.1:8098/v1/completions",
+    "tokenizer": "/home/shohag/tiny-aya-stage1/models/tiny-aya-global",
+    "tokenizer_backend": "huggingface",
+    "tokenized_requests": false,
+    "add_bos_token": false,
+    "max_length": 8192,
+    "batch_size": 1
+  },
+  "endpoint_models": [
+    "/home/shohag/tiny-aya-stage1/models/tiny-aya-global-local-q4_k_m.gguf"
+  ],
+  "validation_sha256": "ea21f66753ab5cc998af52f23be0565bae7230bad88b915348a185d8a75b9f3e",
+  "order_validation_sha256": "225073e08086c111fbb4c97a3c782d1931257f7951aa826e3ccb343cfc054da7",
+  "files": {
+    "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/polyglot-quant-eval/scripts/run_scoring_variants.py": "b749965854a23f3105b0dd422b7c7f644ab99ebfc0d2ebb5f759acffcbd0e5f5",
+    "/home/shohag/tiny-aya-stage1/a3-api-client/client/lib/python3.13/site-packages/lm_eval/models/openai_completions.py": "0afb2771209f9261a2ec0146cbd01928f22747e994a25225c24fd046c5c138ff",
+    "/home/shohag/tiny-aya-stage1/a3-api-client/client/lib/python3.13/site-packages/lm_eval/api/task.py": "4c25a4f1949488483b833ce4fcf91cfd3e066084a9ea00079c6879ae3ba95657",
+    "/home/shohag/tiny-aya-stage1/a3-api-client/client/lib/python3.13/site-packages/lm_eval/api/model.py": "b8b1db336e168b53d9ca808fe837d5bf8943d9dca76a14cf747e4f3a22d50545",
+    "/home/shohag/tiny-aya-stage1/a3-api-client/client/lib/python3.13/site-packages/lm_eval/models/api_models.py": "8da25fde90c9a14ee7c603177a08814a3ac57aed7f18f6a00e040771335212cf",
+    "/home/shohag/tiny-aya-stage1/a3-api-client/client/lib/python3.13/site-packages/lm_eval/evaluator.py": "628120153cf24471ead0789106e5c18b02855a7cc77a9aa5da8069fdeab57ed5"
+  },
+  "tokenizer": {
+    "tokenizer.json": "2227ea9c52e8afb3f98bfed2679008b275f2664de69dfde174b374389eb0225d",
+    "tokenizer_config.json": "fb56a3ef7659346aae196a2ab877355f1e7fd871c36843f709bb2e23c606d972",
+    "special_tokens_map.json": "2b7ce39630f8a18705331a9b32c3b2236e96e7410791f98a9f8b6494e3ab2ea6"
+  },
+  "versions": {
+    "lm-eval": "0.4.13",
+    "transformers": "5.20.1",
+    "tokenizers": "0.23.3",
+    "datasets": "5.1.0"
+  },
+  "scorer": "unchanged upstream ConfigurableTask + LocalCompletionsAPI; summed primary; Unicode-choice-character acc_norm"
+}

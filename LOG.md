@@ -27,3 +27,8 @@ Dated entries: what changed, the numbers, open problems.
 
 ## 2026-10-20
 - Completed local Q4 only on 300 Belebele questions per language: English 226/300, Bangla 189/300, Hindi 176/300. Evidence and caveats: results/stage1/local-q4-three-hundred/README.md. All questions rerun under the join-control-corrected runtime; no other models or performance tests run.
+
+## 2026-10-22 — A3 execution preparation
+- Added a resumable driver around unchanged upstream ConfigurableTask, LocalCompletionsAPI and evaluator, plus complete-evidence reporting for all three locked variants, both arms and all rotations. Primary summed likelihood and character-normalized acc_norm remain separate; this entry is not a full variant accuracy result.
+- The isolated cold-prefill runtime passed 192 independent candidate checks and 36 reversed-order checks per arm. Raw evidence and the failed/incomplete predecessor diagnostics are preserved in [runtime PR36](https://github.com/grinder81/tiny-aya-edge/pull/36). Legacy A2 numerical differences are explicitly reported; historical A1/A2 identities remain unchanged.
+- The full diagnostic, canonical-contract choice and affected-baseline decisions remain distinct gates before B5. No holdout or generation-quality result is claimed.
