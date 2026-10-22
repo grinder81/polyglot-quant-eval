@@ -94,6 +94,14 @@ This is a candidate path, not a verified solution. Before selecting it:
 No inference is authorized merely by a passing offline lock. The approved A2/A3
 order and these validation gates still apply.
 
+Live execution update, 22 October 2026: the unchanged supported client passed
+both-arm probability and reversed-order gates under an isolated cold-prefill
+runtime. The original prefix-reuse runtime failed cold comparisons; its A2
+numerical bridge differences are preserved. See
+[`scoring-variant-execution.md`](scoring-variant-execution.md) for the new identity,
+upstream runner, resume checks and reporting gates. This is not a full variant
+accuracy result or canonical-contract selection.
+
 ## Analysis fixed before collecting variant scores
 
 Keep raw summed continuation log-likelihood as the primary prediction for each
