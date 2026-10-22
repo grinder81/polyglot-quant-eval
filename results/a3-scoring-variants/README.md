@@ -2,7 +2,7 @@
 
 Completed 22 October 2026. All 1,440 shards passed the frozen complete-evidence loader. Each arm scored the same 100 development questions per language in four cyclic rotations under three variants: 3,600 contexts and 14,400 candidate likelihoods per arm. Both arms share 300 distinct questions; rotations and variants are repeated measurements, not additional independent questions. No holdout was evaluated.
 
-The conservative recommendation is to retain plain-letter summed-likelihood scoring under the newly validated cold runtime, pending the user’s explicit canonical-contract decision. Chat-letter is a useful sensitivity diagnostic, with mixed accuracy/consistency consequences; option-text performs substantially worse here. This recommendation does not relabel historical A1/A2 evidence or authorize B5 before that decision.
+The conservative recommendation was to retain plain-letter summed-likelihood scoring under the newly validated cold runtime. The user accepted that choice on 22 October 2026; see the [recorded contract decision](../../docs/scoring-contract-a3.md). Chat-letter remains a useful sensitivity diagnostic, with mixed accuracy/consistency consequences; option-text performs substantially worse here. Historical A1/A2 evidence retains its original identity.
 
 ## Scope, scoring and uncertainty
 
@@ -156,6 +156,12 @@ Raw option-text accuracy is markedly below both letter formats in English, Bangl
 **Recommendation pending user decision:** retain the plain-letter summed-likelihood contract and use fresh cold-runtime baseline identities for subsequent compression work; retain chat-letter and normalized option-text as named diagnostics. English’s raw plain-letter Q4−BF16 estimate is −0.75 pp, Bangla’s −0.25 pp and Hindi’s −2.25 pp, with the paired uncertainty shown above. This recommendation balances accuracy, stability and continuity; it is not a claim that plain-letter removes position sensitivity. The user must explicitly freeze the canonical contract before B5. If settings change, rerun affected baselines with new identities; do not relabel old scores.
 
 The 100-question-per-language A3 diagnostic does not replace the 300-question A1 reference. Decide which affected baseline comparisons need fresh collection under the ratified runtime/scoring identity before the sweep; the old runtime's scores cannot be presented as new cold-runtime baselines.
+
+## User decision — 22 October 2026
+
+The user selected **“Retain plain-letter summed likelihood on fresh cold-runtime baselines.”** A3's diagnostic and canonical-contract gate are complete. The [contract record](../../docs/scoring-contract-a3.md) freezes prompt/candidate bytes, summed-score prediction, tie handling, token boundaries, rotation interpretation and validated runtime pins. The recommendation above is preserved as the pre-decision interpretation of these unchanged results.
+
+Fresh affected BF16 GGUF and local-Q4 downstream comparator arms under new cold-runtime identities are required before compression comparisons. A3's existing 100-question-per-language arms do not constitute fresh full 300-question baseline reruns, and no such reruns are claimed here. Historical A1/A2 results remain unchanged; the original BF16 vLLM reference is not replaced by BF16 GGUF. A4 human labels and B5's other prerequisites remain gates. This decision record launches no new inference or sweep.
 
 ## Runtime limits, evidence and reproduction
 
