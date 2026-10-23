@@ -39,3 +39,7 @@ A1 then A2 then A3 then A4. Reserve B7 before the sweep. B5 and B6 proceed toget
 The local-Q4 900-question run is complete: English226/300, Bangla189/300, Hindi176/300, merged evaluation PR15. BF16 at300 and the new controls are next; old n=50 results retain their own runtime/settings. The raw doc-ID caveat is tracked in evaluation issue16; use verified source/question identities.
 
 Older Mac and kernel tasks remain supporting backlog, not gates on this sequence. Existing generic reporter and other-task audits remain explicitly open. All code and repository documentation changes use small PRs; ready PRs may merge under standing approval after CI. Update issues and clean branches/worktrees without deleting unrelated user files.
+
+## 23 October 2026 status addendum
+
+Fresh T1 affected comparator arms are complete under new cold-runtime identities: 300 original-order development questions per language, BF16 GGUF and local Q4_K_M. See [complete results and evidence](../results/t1-cold-baselines/README.md). This supersedes the prospective baseline status above, preserving its historical measurements. The original BF16 vLLM reference remains separate. A4 human labels and all remaining B5/B6 prerequisites remain gates; no sweep or holdout scoring is implied.

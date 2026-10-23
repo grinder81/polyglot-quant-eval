@@ -180,3 +180,7 @@ Verify committed evidence without extracting members: `python -m scripts.archive
 The [execution record](execution-record.json) preserves the exact `report_command` and `report_working_directory`, frozen hashes, process history and successful final verification. Its machine paths and operational state are historical records; both scoring servers were stopped at completion. Use those recorded inputs to reproduce the report in the preserved environment.
 
 In the decompressed JSON, tuple-keyed maps are lists of `{key, value}` records: `statistics.cells` keys are `[arm, variant, language]`; `statistics.contrasts` keys identify compression, compression−English or ordered variant differences. `statistics.arm_flips`, `statistics.variant_flips`, predictions, exact duplicate flags, cell intervals and all per-rotation outputs remain inspectable. The tables here are deterministic rounded projections of that report.
+
+## Subsequent fresh comparator evidence: 23 October 2026
+
+[Fresh T1 results](../t1-cold-baselines/README.md) now supply separately identified 300-question-per-language original-order BF16 GGUF and local-Q4 comparators. A3 tables, historical decision text and the 100-question rotation diagnostic remain unchanged. T1 does not replace the original BF16 vLLM reference; A4/B5 gates remain.

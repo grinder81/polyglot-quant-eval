@@ -42,7 +42,7 @@ model x format x quantizer x calibration x runtime x device x task x language.
 - Stage 1 is baseline-only. Follow [the Stage 1 protocol](docs/stage1-protocol.md) for the
   three-language subset, explicit same-runtime BF16 control, sample locks and review gates.
 
-**Status.** Plumbing stage: reference runtime, smoke test and results schema are in place. See `LOG.md`.
+**Status (23 October 2026).** Fresh original-order BF16 GGUF and local Q4_K_M comparators are complete on 300 Belebele development questions per language (English, Bangla, Hindi): [T1 results and preserved evidence](results/t1-cold-baselines/README.md). [A3](results/a3-scoring-variants/README.md) and its [accepted scoring contract](docs/scoring-contract-a3.md) remain separately identified. A4 human labels and precision-sweep gates remain pending; no holdout, generation or phone claim is made. See `LOG.md`.
 
 **Quick start (existing smoke plumbing).**
 The script below is not yet compliant with the Stage 1 protocol: it applies a chat template.

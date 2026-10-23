@@ -128,3 +128,7 @@ check. Prepare a focused **proposed issue** with affected revision, minimal case
 expected/observed behavior and evidence. Complete substantive review and obtain
 the user's filing authorization before external submission; this checklist does
 not send an issue, comment, message or PR and does not promise acceptance.
+
+## 23 October 2026 completion link
+
+After a separate explicit user launch decision, complete fresh T1 collection and the frozen report finished successfully. [Results and evidence](../results/t1-cold-baselines/README.md) retain exact identities, paired uncertainty, historical comparisons and completion receipt. Preparation language above records the earlier authorization boundary; publication, A4 and later sweep/generation gates remain separate.
