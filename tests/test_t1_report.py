@@ -135,7 +135,7 @@ class CompleteT1EvidenceTests(unittest.TestCase):
             identity=dict(schema='t1-cold-original-order-v1',arm=arm,
                 lock_sha256=hashlib.sha256(self.lock.read_bytes()).hexdigest(),
                 readiness_sha256='a'*64,a3_record_sha256='b'*64,a3_evidence=dict(synthetic=True),
-                model_args=dict(base_url='http://synthetic/v1/completions'),versions=dict(synthetic='1'),
+                model_args=dict(base_url='http://synthetic/v1/completions',batch_size=1),versions=dict(synthetic='1'),
                 tokenizer=dict(synthetic='c'*64),files={'synthetic.py':'d'*64},scorer='unchanged upstream',
                 endpoint_models=[arm+'.gguf'],expanded_gate_sha256=dict(synthetic='e'*64),
                 expanded_gate_paths=dict(synthetic='unused; external environment mocked'))
@@ -181,15 +181,16 @@ class CompleteT1EvidenceTests(unittest.TestCase):
     def test_incomplete_corrupt_requests_scores_targets_and_checkpoint_rejected(self):
         directory=self.inputs['local-q4']['directory'];shard=directory/'hin_Deva-000.json'
         original=shard.read_bytes();marker=directory/'identity.json';identity_bytes=marker.read_bytes()
-        for kind in ('missing','unexpected','duplicate','nan','target','arguments','identity','gate'):
+        for kind in ('missing','unexpected','duplicate','nan','target','arguments','identity','gate','bool_batch_size'):
             with self.subTest(kind=kind):
                 extra=directory/'extra.json';data=json.loads(original)
                 if kind=='missing':shard.unlink()
                 elif kind=='unexpected':self.write(extra,data)
-                elif kind in ('identity','gate'):
+                elif kind in ('identity','gate','bool_batch_size'):
                     identity=json.loads(identity_bytes)
                     if kind=='identity':identity['files']['synthetic.py']='changed'
-                    else:identity['expanded_gate_sha256']['synthetic']='changed'
+                    elif kind=='gate':identity['expanded_gate_sha256']['synthetic']='changed'
+                    else:identity['model_args']['batch_size']=True
                     self.write(marker,identity)
                 else:
                     samples=data['samples']['a3_locked']

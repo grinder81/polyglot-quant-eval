@@ -1,0 +1,133 @@
+{
+  "status": "offline readiness only; live gates and collection NOT executed",
+  "request_lock": {
+    "retained_path": "/home/shohag/tiny-aya-stage1/pilot/t1-cold-baselines/readiness-2026-10-23/request-lock-v2.json",
+    "sha256": "27d4164a13c62c61ac43ceecbcb684f5a58c541320e9ce12bceddc2a395f9e04",
+    "bytes": 12818649
+  },
+  "artifacts": {
+    "preparation-v2.json": "bf7077d0ba91823727b819ef45c6637ee13e3bf4bd9c01b5c3ffe01ea0427c91",
+    "bf16-token-check-v3.json": "0d147327b41e7079e5764e2f36d0b0c5abcdbac5260bf44c7b25a46e7b17e6ba",
+    "q4-token-check-v3.json": "52a2c4fcc87f4f0f81a1b102fdeade441806ffb78381a04a98d4cbd7fbd9bb6c",
+    "bf16-token-check.json": "4cde5ff94a6e131cece5ff54919bfca6190c99f488984a964d0d71be29299698"
+  },
+  "offline_runner": {
+    "bf16-gguf": {
+      "completed_shards": 0,
+      "total_shards": 180,
+      "complete": false,
+      "identity_sha256": "72c018b3f6f6138d63812b7503dafdb1cdfc163ac52485e57622b6f199e109a2",
+      "log_sha256": "74fa53b1408de3fa69d4c76e31b1bb67a87d9b6ba627445fba18ec72380f5419"
+    },
+    "local-q4": {
+      "completed_shards": 0,
+      "total_shards": 180,
+      "complete": false,
+      "identity_sha256": "7752482938ca9d666c0d3296d60ff2363ab9e100ce2572a31b95da56d34eef57",
+      "log_sha256": "d4df2276d04c70e2b0be130184cea23cd5967f1d1b9e5c5ba2e7fce8c250ed58"
+    }
+  },
+  "checks": {
+    "hf_contexts": 900,
+    "hf_candidates": 3600,
+    "single_token_continuations": 3600,
+    "a3_overlap_contexts": 300,
+    "token_checks_per_arm": {
+      "contexts": 900,
+      "candidates": 3600
+    },
+    "upstream_cpu_task_smoke": "PASS; exact request arguments and acc/acc_norm",
+    "full_suite": "74 passed, 82 subtests passed"
+  },
+  "failed_native_attempt": {
+    "file": "bf16-token-check.json",
+    "failures": 75,
+    "cause": "LD_LIBRARY_PATH does not override llama_cpp native library selection; packaged library was loaded",
+    "resolution": "LLAMA_CPP_LIB_PATH plus mandatory runtime/model/native/wrapper hash assertion; final v3 checks pass"
+  },
+  "coverage_vs_a3_gate": {
+    "eng_Latn": {
+      "t1_distinct_model_token_ids": 7255,
+      "a3_gate_distinct_model_token_ids": 454,
+      "t1_token_ids_not_in_a3_gate_count": 6895,
+      "new_context_last4_boundaries": 280,
+      "max_t1_model_tokens": 325
+    },
+    "ben_Beng": {
+      "t1_distinct_model_token_ids": 3172,
+      "a3_gate_distinct_model_token_ids": 681,
+      "t1_token_ids_not_in_a3_gate_count": 2709,
+      "new_context_last4_boundaries": 179,
+      "max_t1_model_tokens": 475
+    },
+    "hin_Deva": {
+      "t1_distinct_model_token_ids": 4282,
+      "a3_gate_distinct_model_token_ids": 617,
+      "t1_token_ids_not_in_a3_gate_count": 3882,
+      "new_context_last4_boundaries": 192,
+      "max_t1_model_tokens": 462
+    }
+  },
+  "planned_live_selection": [
+    {
+      "row": 0,
+      "language": "eng_Latn",
+      "index": 0
+    },
+    {
+      "row": 100,
+      "language": "eng_Latn",
+      "index": 100
+    },
+    {
+      "row": 188,
+      "language": "eng_Latn",
+      "index": 188
+    },
+    {
+      "row": 299,
+      "language": "eng_Latn",
+      "index": 299
+    },
+    {
+      "row": 300,
+      "language": "ben_Beng",
+      "index": 0
+    },
+    {
+      "row": 400,
+      "language": "ben_Beng",
+      "index": 100
+    },
+    {
+      "row": 488,
+      "language": "ben_Beng",
+      "index": 188
+    },
+    {
+      "row": 599,
+      "language": "ben_Beng",
+      "index": 299
+    },
+    {
+      "row": 600,
+      "language": "hin_Deva",
+      "index": 0
+    },
+    {
+      "row": 700,
+      "language": "hin_Deva",
+      "index": 100
+    },
+    {
+      "row": 788,
+      "language": "hin_Deva",
+      "index": 188
+    },
+    {
+      "row": 899,
+      "language": "hin_Deva",
+      "index": 299
+    }
+  ]
+}

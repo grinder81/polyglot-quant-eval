@@ -1,30 +1,33 @@
 {
   "status": "offline readiness only; live gates and collection NOT executed",
   "request_lock": {
-    "retained_path": "/home/shohag/tiny-aya-stage1/pilot/t1-cold-baselines/readiness-2026-10-23/request-lock-v2.json",
-    "sha256": "27d4164a13c62c61ac43ceecbcb684f5a58c541320e9ce12bceddc2a395f9e04",
+    "retained_path": "/home/shohag/tiny-aya-stage1/pilot/t1-cold-baselines/readiness-2026-10-23/request-lock-v3.json",
+    "sha256": "6dfdd304dcba7bd772c37a7634e74c0c16d1e4b70728be6dcb0e218f3847aa19",
     "bytes": 12818649
   },
   "artifacts": {
     "preparation-v2.json": "bf7077d0ba91823727b819ef45c6637ee13e3bf4bd9c01b5c3ffe01ea0427c91",
     "bf16-token-check-v3.json": "0d147327b41e7079e5764e2f36d0b0c5abcdbac5260bf44c7b25a46e7b17e6ba",
     "q4-token-check-v3.json": "52a2c4fcc87f4f0f81a1b102fdeade441806ffb78381a04a98d4cbd7fbd9bb6c",
-    "bf16-token-check.json": "4cde5ff94a6e131cece5ff54919bfca6190c99f488984a964d0d71be29299698"
+    "bf16-token-check.json": "4cde5ff94a6e131cece5ff54919bfca6190c99f488984a964d0d71be29299698",
+    "preparation-v3.json": "90a9b7fa107c297a853b2b0eb42848e3f8abcdc097497ebbab1bbcee7e8e685f",
+    "bf16-token-check-v4.json": "0833b4917b11ca3b5b49382592a8a19314e8794d02bf415de7d5101e0978023d",
+    "q4-token-check-v4.json": "1772136f52a4a21844b049612945a5d5f4b78447dc80a72c51def50dd920fb1e"
   },
   "offline_runner": {
     "bf16-gguf": {
       "completed_shards": 0,
       "total_shards": 180,
       "complete": false,
-      "identity_sha256": "72c018b3f6f6138d63812b7503dafdb1cdfc163ac52485e57622b6f199e109a2",
-      "log_sha256": "74fa53b1408de3fa69d4c76e31b1bb67a87d9b6ba627445fba18ec72380f5419"
+      "identity_sha256": "0a9fff348b33c982db5fc0f60c925fc919d5ae969d368fb2825ff49d82977c61",
+      "log_sha256": "2457e57fe160023473c60ff2b98962ac8cc0d972c439804102b5893e01db3864"
     },
     "local-q4": {
       "completed_shards": 0,
       "total_shards": 180,
       "complete": false,
-      "identity_sha256": "7752482938ca9d666c0d3296d60ff2363ab9e100ce2572a31b95da56d34eef57",
-      "log_sha256": "d4df2276d04c70e2b0be130184cea23cd5967f1d1b9e5c5ba2e7fce8c250ed58"
+      "identity_sha256": "ac35a180089699b8afd5cc8d1fe9c993324827a8eeeb3f61c1ebd13ee8fd334d",
+      "log_sha256": "b3cd2a39927c752f98ed17efab12468d198ef180d36d481e8836013045617b30"
     }
   },
   "checks": {
@@ -37,13 +40,13 @@
       "candidates": 3600
     },
     "upstream_cpu_task_smoke": "PASS; exact request arguments and acc/acc_norm",
-    "full_suite": "74 passed, 82 subtests passed"
+    "full_suite": "75 passed, 89 subtests passed"
   },
   "failed_native_attempt": {
     "file": "bf16-token-check.json",
     "failures": 75,
     "cause": "LD_LIBRARY_PATH does not override llama_cpp native library selection; packaged library was loaded",
-    "resolution": "LLAMA_CPP_LIB_PATH plus mandatory runtime/model/native/wrapper hash assertion; final v3 checks pass"
+    "resolution": "LLAMA_CPP_LIB_PATH plus mandatory runtime/model/native/wrapper hash assertion; final v4 checks pass"
   },
   "coverage_vs_a3_gate": {
     "eng_Latn": {
@@ -129,5 +132,12 @@
       "language": "hin_Deva",
       "index": 299
     }
-  ]
+  ],
+  "superseded_artifacts": [
+    "preparation-v2.json",
+    "bf16-token-check-v3.json",
+    "q4-token-check-v3.json",
+    "offline-evidence-v1.json"
+  ],
+  "revision_reason": "Reject boolean/integer/float JSON type conflation in checkpoint documents and identities; request text, membership, targets and token arrays unchanged"
 }

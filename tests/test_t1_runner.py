@@ -53,7 +53,8 @@ class T1Tests(unittest.TestCase):
     def test_saved_shard_request_and_numeric_validation(self):
         rows=lock_fixture()['rows'][:5]
         self.assertEqual(len(t.validate(samples(rows),rows,'bf16-gguf')),5)
-        for change in ('duplicate','missing','nan','boolean','wrong_prompt','wrong_choice','target','metric'):
+        for change in ('duplicate','missing','nan','boolean','wrong_prompt','wrong_choice','target','metric',
+                       'bool_target','bool_doc_index','bool_doc_question','float_doc_index','float_target','bool_metric'):
             bad=samples(rows); s=bad['samples']['a3_locked'][0]
             if change=='duplicate': bad['samples']['a3_locked'][1]=copy.deepcopy(s)
             if change=='missing': bad['samples']['a3_locked'].pop()
@@ -63,6 +64,12 @@ class T1Tests(unittest.TestCase):
             if change=='wrong_choice': s['doc']['choices'][0]='wrong'
             if change=='target': s['target']=3
             if change=='metric': s['acc']=1-s['acc']
+            if change=='bool_target':s['target']=False
+            if change=='bool_doc_index':s['doc']['index']=False
+            if change=='bool_doc_question':s['doc']['question']=False
+            if change=='float_doc_index':s['doc']['index']=0.0
+            if change=='float_target':s['target']=0.0
+            if change=='bool_metric':s['acc']=True
             with self.subTest(change=change),self.assertRaises((AssertionError,ValueError,KeyError)):
                 t.validate(bad,rows,'bf16-gguf')
 
@@ -100,6 +107,9 @@ class T1Tests(unittest.TestCase):
             capture_output=True,text=True)
         self.assertNotEqual(result.returncode,0)
         self.assertIn('without -O',result.stderr)
+
+    def test_exact_identity_distinguishes_boolean_and_integer(self):
+        self.assertFalse(t.exact_json(dict(batch_size=1),dict(batch_size=True)))
 
 
 if __name__=='__main__': unittest.main()

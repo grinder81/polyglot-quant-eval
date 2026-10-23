@@ -10,11 +10,11 @@ tokenizer: 900 contexts and 3,600 candidates. Every letter continuation is exact
 one token. The first 100 original-order items per language match A3 plain-letter/r0
 by index, source/question, target, bytes and model/wire token IDs.
 
-The new 12,818,649-byte lock is retained locally rather than duplicated here.
-Its SHA-256 is `27d4164a13c62c61ac43ceecbcb684f5a58c541320e9ce12bceddc2a395f9e04`.
+The new lock is retained locally rather than duplicated here.
+Its SHA-256 is `6dfdd304dcba7bd772c37a7634e74c0c16d1e4b70728be6dcb0e218f3847aa19`.
 The retained path and all compact artifact hashes are in `offline-evidence.json`.
-`preparation-v2.json` binds the original lock, preparer/helper sources and tokenizer.
-Both `*-token-check-v3.json` files pass 900 contexts and 3,600 candidates under the
+`preparation-v3.json` binds the original lock, preparer/helper sources and tokenizer.
+Both `*-token-check-v4.json` files pass 900 contexts and 3,600 candidates under the
 exact model, native library and wrapper identities in the A3 v4 runtime manifests.
 
 The longest full model inputs are English 325, Bangla 475 and Hindi 462 tokens,
@@ -40,13 +40,17 @@ the wrapper's packaged native library. Its 75 token-ID failures are preserved in
 `bf16-token-check.json` and are **not** a passed readiness artifact. The checker
 now requires a runtime manifest and validates the actually loaded native library,
 wrapper and model before tokenization. `LLAMA_CPP_LIB_PATH` selects the correct
-pinned native library; both final v3 checks pass. The provisional v1 lock and
-earlier pinned BF16 v2 token check remain in the local readiness directory.
+pinned native library; both final v4 checks pass. Provisional locks, vocabulary
+checks and the first offline receipt are preserved. The v3 lock replaces v2 only
+to bind the reviewed strict JSON type checks; request bytes and token IDs did not
+change. `preparation-v2.json`, `*-token-check-v3.json` and `offline-evidence-v1.json`
+are superseded evidence, not current readiness inputs.
 
-Validation: 74 tests and 82 subtests pass, including a complete 360-shard synthetic
+Validation: 75 tests and 89 subtests pass, including a complete 360-shard synthetic
 report integration, wrong request/target/metric/score/identity rejection, all
 present shards checked despite earlier gaps, strict overlap intersection,
-prediction inversion preservation, Python `-O` rejection, and raw expanded-gate
+prediction inversion preservation, strict boolean/integer/float identity types,
+Python `-O` rejection, and raw expanded-gate
 tampering rejection. Future A3 overlap uses a maximum absolute single-token error
 of 0.0002 nats **and** a separate summed limit of 0.001 nats, with no tolerance
 relaxation. Any prediction inversion stops for review.

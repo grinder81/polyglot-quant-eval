@@ -3,7 +3,7 @@ import json
 import math
 from pathlib import Path
 
-from scripts.run_scoring_variants import LANGUAGES, LOCK, sha, task_for, validate as a3_validate
+from scripts.run_scoring_variants import LANGUAGES, LOCK, sha, task_for, task_document, validate as a3_validate
 from scripts.summarize_scoring_variants import require, read, load_evidence, verify_files
 
 ARMS = ('bf16-gguf', 'local-q4')
@@ -11,11 +11,24 @@ TOKEN_ATOL = 0.0002
 SUM_ATOL = 0.001
 
 
+def exact_json(left,right):
+    """Scientific identities distinguish JSON booleans, integers and strings."""
+    return json.dumps(left,sort_keys=True,ensure_ascii=False,allow_nan=False)==json.dumps(
+        right,sort_keys=True,ensure_ascii=False,allow_nan=False)
+
+
 def validate(data,expected,arm):
     """Use the frozen A3 sample join plus strict numeric type/margin checks."""
     import sys
     require(not sys.flags.optimize,'Upstream assertion validators require Python without -O')
+    wanted={(r['source'],r['question']):r for r in expected}
     for sample in data['samples']['a3_locked']:
+        doc=sample['doc']
+        row=wanted[doc['source'],doc['question']]
+        require(type(sample['target']) is int and exact_json(doc,task_document(row)),
+                'Exact JSON document/target types required')
+        require(all(type(sample[k]) in (int,float) and math.isfinite(sample[k]) for k in ('acc','acc_norm')),
+                'Numeric nonboolean metrics required')
         scores=[r[0] for r in sample['filtered_resps']]
         require(len(scores)==4 and all(type(s) in (int,float) and math.isfinite(s) for s in scores),
                 'Four finite nonboolean numeric scores required')
@@ -36,7 +49,9 @@ def validate_lock(lock):
                 'Duplicate original source/question')
     import hashlib
     for r in rows:
-        require(r['variant'] == 'plain-letter' and r['shift'] == 0 and
+        require(type(r['index']) is int and type(r['dataset_index']) is int and r['dataset_index']>=0 and
+                type(r['original_target']) is int,'Integer sample indices/target required')
+        require(r['variant'] == 'plain-letter' and type(r['shift']) is int and r['shift'] == 0 and
                 type(r['target']) is int and r['target'] in range(4) and
                 r['original_target'] == r['target'], 'Original-order target contract')
         require(r['choices'] == list('ABCD') and r['candidates'] == [' A',' B',' C',' D'] and
@@ -44,6 +59,9 @@ def validate_lock(lock):
         require(hashlib.sha256(r['prompt'].encode()).hexdigest() == r['prompt_sha256'],
                 'Prompt byte hash mismatch')
         context = r['model_context_ids']
+        require(all(type(t) is int and t>=0 for ids in
+                [context,r['wire_context_ids']]+r['model_token_ids']+r['wire_token_ids'] for t in ids),
+                'Nonnegative integer token IDs required')
         require(context and context[1:] == r['wire_context_ids'], 'BOS/context mismatch')
         require(len(r['model_token_ids']) == len(r['wire_token_ids']) == 4,
                 'Four candidate token arrays required')
@@ -62,7 +80,7 @@ def compare_a3_requests(rows, a3):
               'model_context_ids','model_token_ids','wire_context_ids','wire_token_ids')
     for row in rows:
         if row['index'] < 100:
-            require(all(row[f] == old[row['language'], row['index']][f] for f in fields),
+            require(all(exact_json(row[f],old[row['language'], row['index']][f]) for f in fields),
                     'A3 overlap request bytes/tokens/identity changed')
 
 
@@ -71,10 +89,10 @@ def compare_original_requests(rows,original):
             'Exact original 300-question authority required')
     for row in rows:
         before=original['items'][row['index']][row['language']]
-        require(row['dataset_index']==before['index'] and all(row[f]==before[f] for f in
+        require(row['dataset_index']==before['index'] and all(exact_json(row[f],before[f]) for f in
                 ('source','question','target','prompt','prompt_sha256','candidates')) and
-                row['model_context_ids']==before['context_ids'] and
-                row['model_token_ids']==before['token_ids'], 'Original 900 request membership/bytes/tokens changed')
+                exact_json(row['model_context_ids'],before['context_ids']) and
+                exact_json(row['model_token_ids'],before['token_ids']), 'Original 900 request membership/bytes/tokens changed')
 
 
 def expected_shards(rows):
@@ -101,14 +119,15 @@ def verify_expanded_gate(lock_path, runtime_path, paths, previous_gate, previous
                 artifact['runtime_sha256']==sha(runtime_path) and
                 artifact['script_sha256']==sha(paths['validator_script']) and
                 artifact['protocol_sha256']==sha(paths['protocol']), 'Expanded gate identity mismatch')
-        require(artifact['selection']==selection and not artifact['failures'] and
+        require(exact_json(artifact['selection'],selection) and not artifact['failures'] and
                 [(r['row'],r['candidate']) for r in artifact['records']]==expected and
-                all(not r.get('errors') for r in artifact['records']), 'Incomplete/failed expanded gate')
+                all(type(r['row']) is int and type(r['candidate']) is int and not r.get('errors')
+                    for r in artifact['records']), 'Incomplete/failed expanded gate')
     require(client['order_check'] is False and order['order_check'] is True and
             client['oracle_sha256']==order['oracle_sha256']==sha(paths['oracle']) and
             [r['row'] for r in client['predictions']]==selection, 'Expanded gate order/oracle mismatch')
     runtime=read(runtime_path)
-    require(oracle['server_model_settings']==previous_oracle['server_model_settings'],
+    require(exact_json(oracle['server_model_settings'],previous_oracle['server_model_settings']),
             'Expanded direct model settings differ from validated cold runtime')
     require(oracle['bos_id']==previous_oracle['bos_id'] and oracle['eos_id']==previous_oracle['eos_id'],
             'Expanded runtime BOS/EOS identity changed')
@@ -121,7 +140,7 @@ def verify_expanded_gate(lock_path, runtime_path, paths, previous_gate, previous
     for ref in refs.values():
         row=rows[ref['row']]
         ids=row['model_token_ids'][ref['candidate']]
-        require(ref['model_ids']==ids and oracle['bos_id']==ids[0] and
+        require(exact_json(ref['model_ids'],ids) and oracle['bos_id']==ids[0] and
                 len(ref['supplied_logprobs'])==len(ids)-1 and
                 len(ref['echo_strings'])==len(ids), 'Expanded direct token alignment mismatch')
         require(type(ref['generated_id']) is int and all(type(x) in (int,float) and math.isfinite(x)
@@ -141,12 +160,14 @@ def verify_expanded_gate(lock_path, runtime_path, paths, previous_gate, previous
             n=len(ref['model_ids'])-1
             context=len(row['wire_context_ids'])
             payload=rec['payload']
-            require(payload==dict(model='t1-validation',prompt=row['prompt']+row['candidates'][rec['candidate']],
-                    temperature=0,max_tokens=1,echo=True,logprobs=1,seed=1234),'Wrong expanded HTTP payload')
+            require(exact_json(payload,dict(model='t1-validation',prompt=row['prompt']+row['candidates'][rec['candidate']],
+                    temperature=0,max_tokens=1,echo=True,logprobs=1,seed=1234)),'Wrong expanded HTTP payload')
             response=rec['response']
             logs=response['choices'][0]['logprobs']
             require(logs['tokens']==ref['echo_strings'] and all(len(logs[k])==n+1 for k in
                     ('tokens','token_logprobs','top_logprobs','text_offset')) and
+                    type(response['usage']['prompt_tokens']) is int and
+                    type(response['usage']['completion_tokens']) is int and
                     response['usage']['prompt_tokens']==n+1 and response['usage']['completion_tokens']==1,
                     'Expanded echo counts/strings/BOS/suffix mismatch')
             supplied=logs['token_logprobs']
@@ -175,7 +196,7 @@ def verify_expanded_gate(lock_path, runtime_path, paths, previous_gate, previous
                 return dict(prediction=order[0],margin=values[order[0]]-values[order[1]])
             d,c=prediction(direct),prediction(scores)
             expected=dict(row=ri,direct=d,client=c,inversion=False,tie_sensitive=d['margin']<=2*SUM_ATOL)
-            require(next(p for p in artifact['predictions'] if p['row']==ri)==expected,
+            require(exact_json(next(p for p in artifact['predictions'] if p['row']==ri),expected),
                     'Expanded stored prediction/margin differs from raw evidence')
     return {n:sha(p) for n,p in paths.items()}
 
@@ -330,7 +351,7 @@ def verify_run_identity(lock_path,readiness_path,token_check_path,a3_lock_path,a
     identity,rows,cells,runtime=run_identity(lock_path,readiness_path,token_check_path,
         a3_lock_path,a3_record_path,tokenizer_path,arm,base_url,expanded_gate)
     if saved is not None:
-        require(saved==identity,'T1 checkpoint identity differs')
+        require(exact_json(saved,identity),'T1 checkpoint identity differs')
         require(identity['expanded_gate_sha256'] is not None,'Saved scores require expanded live gate')
     else:
         require(not list(Path(directory).glob('*.json')),'Unidentified existing shards')
