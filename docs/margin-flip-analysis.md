@@ -70,5 +70,10 @@ comparators before downstream compression comparisons. This script does not
 invent that runner's identity schema, strip rotations/variants from A3, or accept
 an arbitrary compact-row export. A fresh original-order baseline can be accepted
 only through an explicitly reviewed loader for its actual finalized identity,
-membership and cold-runtime validation artifacts. Review that adapter when the T1
-runner design exists; do not weaken the current loader to make a new shape pass.
+membership and cold-runtime validation artifacts. The T1 readiness implementation
+in `scripts/summarize_t1_baselines.py` integrates this module's pure `analyze`
+function **after** the dedicated T1 runner's complete identity/shard validation;
+it does not route T1 files through this historical loader. Review that integration
+with the actual runner and complete-schema tests before launch. See
+[T1 reporting readiness](t1-reporting-readiness.md). Do not weaken the historical
+loader to make a new shape pass, or label old inputs as fresh results.

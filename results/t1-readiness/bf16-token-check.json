@@ -1,0 +1,391 @@
+{
+  "scope": "vocab_only=True, n_gpu_layers=0; no inference",
+  "lock_sha256": "938adfefc241edcf8e89cbd9847066c3e654e81de20f6d09894f9fc4032ab751",
+  "contexts": 900,
+  "candidates": 3600,
+  "failures": [
+    {
+      "language": "eng_Latn",
+      "index": 12,
+      "candidate": -1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 12,
+      "candidate": 0
+    },
+    {
+      "language": "eng_Latn",
+      "index": 12,
+      "candidate": 1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 12,
+      "candidate": 2
+    },
+    {
+      "language": "eng_Latn",
+      "index": 12,
+      "candidate": 3
+    },
+    {
+      "language": "eng_Latn",
+      "index": 14,
+      "candidate": -1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 14,
+      "candidate": 0
+    },
+    {
+      "language": "eng_Latn",
+      "index": 14,
+      "candidate": 1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 14,
+      "candidate": 2
+    },
+    {
+      "language": "eng_Latn",
+      "index": 14,
+      "candidate": 3
+    },
+    {
+      "language": "eng_Latn",
+      "index": 20,
+      "candidate": -1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 20,
+      "candidate": 0
+    },
+    {
+      "language": "eng_Latn",
+      "index": 20,
+      "candidate": 1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 20,
+      "candidate": 2
+    },
+    {
+      "language": "eng_Latn",
+      "index": 20,
+      "candidate": 3
+    },
+    {
+      "language": "eng_Latn",
+      "index": 32,
+      "candidate": -1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 32,
+      "candidate": 0
+    },
+    {
+      "language": "eng_Latn",
+      "index": 32,
+      "candidate": 1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 32,
+      "candidate": 2
+    },
+    {
+      "language": "eng_Latn",
+      "index": 32,
+      "candidate": 3
+    },
+    {
+      "language": "eng_Latn",
+      "index": 171,
+      "candidate": -1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 171,
+      "candidate": 0
+    },
+    {
+      "language": "eng_Latn",
+      "index": 171,
+      "candidate": 1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 171,
+      "candidate": 2
+    },
+    {
+      "language": "eng_Latn",
+      "index": 171,
+      "candidate": 3
+    },
+    {
+      "language": "eng_Latn",
+      "index": 215,
+      "candidate": -1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 215,
+      "candidate": 0
+    },
+    {
+      "language": "eng_Latn",
+      "index": 215,
+      "candidate": 1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 215,
+      "candidate": 2
+    },
+    {
+      "language": "eng_Latn",
+      "index": 215,
+      "candidate": 3
+    },
+    {
+      "language": "eng_Latn",
+      "index": 274,
+      "candidate": -1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 274,
+      "candidate": 0
+    },
+    {
+      "language": "eng_Latn",
+      "index": 274,
+      "candidate": 1
+    },
+    {
+      "language": "eng_Latn",
+      "index": 274,
+      "candidate": 2
+    },
+    {
+      "language": "eng_Latn",
+      "index": 274,
+      "candidate": 3
+    },
+    {
+      "language": "ben_Beng",
+      "index": 3,
+      "candidate": -1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 3,
+      "candidate": 0
+    },
+    {
+      "language": "ben_Beng",
+      "index": 3,
+      "candidate": 1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 3,
+      "candidate": 2
+    },
+    {
+      "language": "ben_Beng",
+      "index": 3,
+      "candidate": 3
+    },
+    {
+      "language": "ben_Beng",
+      "index": 91,
+      "candidate": -1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 91,
+      "candidate": 0
+    },
+    {
+      "language": "ben_Beng",
+      "index": 91,
+      "candidate": 1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 91,
+      "candidate": 2
+    },
+    {
+      "language": "ben_Beng",
+      "index": 91,
+      "candidate": 3
+    },
+    {
+      "language": "ben_Beng",
+      "index": 101,
+      "candidate": -1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 101,
+      "candidate": 0
+    },
+    {
+      "language": "ben_Beng",
+      "index": 101,
+      "candidate": 1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 101,
+      "candidate": 2
+    },
+    {
+      "language": "ben_Beng",
+      "index": 101,
+      "candidate": 3
+    },
+    {
+      "language": "ben_Beng",
+      "index": 156,
+      "candidate": -1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 156,
+      "candidate": 0
+    },
+    {
+      "language": "ben_Beng",
+      "index": 156,
+      "candidate": 1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 156,
+      "candidate": 2
+    },
+    {
+      "language": "ben_Beng",
+      "index": 156,
+      "candidate": 3
+    },
+    {
+      "language": "ben_Beng",
+      "index": 192,
+      "candidate": -1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 192,
+      "candidate": 0
+    },
+    {
+      "language": "ben_Beng",
+      "index": 192,
+      "candidate": 1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 192,
+      "candidate": 2
+    },
+    {
+      "language": "ben_Beng",
+      "index": 192,
+      "candidate": 3
+    },
+    {
+      "language": "ben_Beng",
+      "index": 270,
+      "candidate": -1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 270,
+      "candidate": 0
+    },
+    {
+      "language": "ben_Beng",
+      "index": 270,
+      "candidate": 1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 270,
+      "candidate": 2
+    },
+    {
+      "language": "ben_Beng",
+      "index": 270,
+      "candidate": 3
+    },
+    {
+      "language": "ben_Beng",
+      "index": 295,
+      "candidate": -1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 295,
+      "candidate": 0
+    },
+    {
+      "language": "ben_Beng",
+      "index": 295,
+      "candidate": 1
+    },
+    {
+      "language": "ben_Beng",
+      "index": 295,
+      "candidate": 2
+    },
+    {
+      "language": "ben_Beng",
+      "index": 295,
+      "candidate": 3
+    },
+    {
+      "language": "hin_Deva",
+      "index": 273,
+      "candidate": -1
+    },
+    {
+      "language": "hin_Deva",
+      "index": 273,
+      "candidate": 0
+    },
+    {
+      "language": "hin_Deva",
+      "index": 273,
+      "candidate": 1
+    },
+    {
+      "language": "hin_Deva",
+      "index": 273,
+      "candidate": 2
+    },
+    {
+      "language": "hin_Deva",
+      "index": 273,
+      "candidate": 3
+    }
+  ],
+  "model": "/home/shohag/tiny-aya-stage1/models/tiny-aya-global-control-bf16.gguf",
+  "files": {
+    "/home/shohag/tiny-aya-stage1/models/tiny-aya-global-control-bf16.gguf": "0e2f666ac8fb50a7f53d14164147beeca35905b76b93eb90e0e3a963eb203b4b",
+    "/home/shohag/tiny-aya-stage1/llama-python-a3-cold-fast/lib/python3.13/site-packages/llama_cpp/lib/libllama.so": "88d91120b284c7ed687e427116ceeaca9a2a500588da6f4d52b31e576a84e51c",
+    "/home/shohag/tiny-aya-stage1/llama-python-a3-cold-fast/lib/python3.13/site-packages/llama_cpp/_internals.py": "1d7c702b0513bb2dcdeabdeb3475924d5ade0cf4029b2b9a65cf7df18f4e78cf",
+    "/home/shohag/tiny-aya-stage1/llama-python-a3-cold-fast/lib/python3.13/site-packages/llama_cpp/llama.py": "114c18646074b3ada403ac2963d12d298bb45b354329cb1d0e95e8bd072fdc8b",
+    "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/polyglot-quant-eval/scripts/check_t1_tokens.py": "b46b5d307ca92bd62830c5710cb6af34c223cd42f17e1a71d155c8b275e8b0dc"
+  }
+}
