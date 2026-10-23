@@ -93,3 +93,7 @@ Protect the reserved holdout and do not tune or score it during this baseline
 work. Chat-letter and option-text remain named development diagnostics. No new
 inference, sweep, holdout evaluation or generation result occurred as part of
 recording this decision.
+
+## Subsequent evidence: 23 October 2026
+
+The affected full comparator collection is now recorded separately in [fresh T1 results](../results/t1-cold-baselines/README.md): 300 original-order development questions per language in each new BF16 GGUF/local-Q4 arm. This link does not rewrite the 22 October decision or historical runtime/result identities; A4 and later B5 gates remain.

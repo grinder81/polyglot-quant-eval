@@ -1,0 +1,3063 @@
+{
+  "archives": {
+    "bf16-gguf.tar.gz": {
+      "bytes": 833873,
+      "sha256": "43b35953b56cb0b0d1f2f1fccd3ae41af178c41809d5e59e7c400c5e852763ff"
+    },
+    "local-q4.tar.gz": {
+      "bytes": 833521,
+      "sha256": "cd40d08f135a1885f6bd8ccc7d5f172cbf781486b3f7ae6ad329669265801884"
+    },
+    "validated-report.json.gz": {
+      "bytes": 531804,
+      "sha256": "4d82353056d96a5e77aba8295d418240e40a54ed15f14fd8c0ec349fad41bf68"
+    },
+    "validation.tar.gz": {
+      "bytes": 1897453,
+      "sha256": "37b679454b07153514f355cd7332b8fec17b64a09b4278198f1368c2d23e4aae"
+    }
+  },
+  "execution_record_sha256": "905432e1c2e3158d7d579859a91e149cb3e924b331ac7dee613dfb7ba4b0da85",
+  "files": {
+    "raw/bf16-gguf/ben_Beng-000.json": {
+      "bytes": 60434,
+      "sha256": "a10be9638386791170d570fa8b3877b1ae96587f7da6c4acd866d8b30b51174f",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-000.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-005.json": {
+      "bytes": 48922,
+      "sha256": "20afd737631a42db94f66e8c8496ac221a055cdf797dccd72eec77a1b78bc30c",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-005.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-010.json": {
+      "bytes": 50440,
+      "sha256": "18cadeca745b2c87caa10da7062b17eaa203bedc601a6f822dd2fb1fddfd935f",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-010.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-015.json": {
+      "bytes": 44826,
+      "sha256": "de78f8a742943da6898d98de897d9a11f049a051f7d8b6cb666b7600804ba1e3",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-015.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-020.json": {
+      "bytes": 53616,
+      "sha256": "5e2727ba538a3cea75f86fe2f1985b6cbfeffdb5c3c06dcf784856cd1259d0e7",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-020.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-025.json": {
+      "bytes": 44958,
+      "sha256": "14449ce257d55194f78c4532abf91d5183b88f4673048d0827b11c456548d913",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-025.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-030.json": {
+      "bytes": 45412,
+      "sha256": "04f19950956a1e237627f61fe6e642a683b55743df22f8fae8ab2400b680740c",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-030.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-035.json": {
+      "bytes": 47885,
+      "sha256": "45df7cb74ea98c57ba95504c8cf9daa0b9cbf7cb953c169674a9d9c66cb5eca9",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-035.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-040.json": {
+      "bytes": 48825,
+      "sha256": "a799a055bc28200f825ec58a74971b6f387f853793cf22e96f39e13035eade1a",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-040.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-045.json": {
+      "bytes": 40494,
+      "sha256": "1387a67ae0700c51a406a62a4455e3c045bffaa95a5fdb8f935c3455ca5cbccd",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-045.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-050.json": {
+      "bytes": 50211,
+      "sha256": "4141690b69b3a358459f1b02365cab89f545648cc85644e2f3cfa67f7e4c0ca8",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-050.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-055.json": {
+      "bytes": 49622,
+      "sha256": "da8674c6f00f2b172b71b8cf93d9cc6f725406d37b82847e66eb384e5b62d9cc",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-055.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-060.json": {
+      "bytes": 50158,
+      "sha256": "26accb3d5683aba8ba3f0de0b9a39620d92cc021897e7310b8255bae9cde3eae",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-060.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-065.json": {
+      "bytes": 53360,
+      "sha256": "2c6c1d5067350a45ecda98dc3222a8870ffc37730bfe1578ffb5c9f7aa14093c",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-065.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-070.json": {
+      "bytes": 61090,
+      "sha256": "853da50dd894e8aab4867390f4b5291923f705087affbc95ae1932afe0535a8a",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-070.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-075.json": {
+      "bytes": 48008,
+      "sha256": "2f0b9a1fd5e032da9636a299115fcb5c77062df2042d4e235bf5adc16e449930",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-075.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-080.json": {
+      "bytes": 46423,
+      "sha256": "746d874e7fb700c66c4584bad1d58cba04eb50e8802bcb9b3a8c58f16170a970",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-080.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-085.json": {
+      "bytes": 49018,
+      "sha256": "1fe52dec1f1c2348927de2e50bdb6eba9da2fb7818ba8f602936b1b32cd5b61d",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-085.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-090.json": {
+      "bytes": 44231,
+      "sha256": "6dd6fc383197b0b42c68b6b66964ba9bf8c8d6d1626b85da701a0f5a4b3e60ab",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-090.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-095.json": {
+      "bytes": 48948,
+      "sha256": "cacc972b29f5f0bd5ed795757ea1374db999f9691d6ee61072c0aceab8582cbc",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-095.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-100.json": {
+      "bytes": 49367,
+      "sha256": "86ac5a724850a722d99a2ffe1a00a0ed434621e774fa0c3bb81ea04e9b98ac20",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-100.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-105.json": {
+      "bytes": 50302,
+      "sha256": "27d72ad15aa9cab78468960f7764c044a89ff5de7f717176d5c74f0079ebd7de",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-105.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-110.json": {
+      "bytes": 55488,
+      "sha256": "d2ea51ad78e11fb928eff9e4bcfab714c657c27f1195e0d5356ef09cea35c14e",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-110.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-115.json": {
+      "bytes": 58962,
+      "sha256": "8f24b80938d1b04c734b2933d53ced8f77304841d67bd9aedd985dcf893ff9af",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-115.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-120.json": {
+      "bytes": 49124,
+      "sha256": "bf8a668ba0f0f67f38ac615a6269a63e2d415efec56575204cda99a060e0fe72",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-120.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-125.json": {
+      "bytes": 54898,
+      "sha256": "8422af7aa4f3cefd95da2e7bfe86333915de16b136834cc64f413f45d2e8cb5a",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-125.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-130.json": {
+      "bytes": 63104,
+      "sha256": "dc51d682646bdf6ea87e986ba388ee8a0a2aa5d0b99bf66a96b6c680d9c959f4",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-130.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-135.json": {
+      "bytes": 48295,
+      "sha256": "6d30fc0e9489e140fc783f27a7862f3379687e748f0581e0b2e0eeca526edfd9",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-135.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-140.json": {
+      "bytes": 46423,
+      "sha256": "55b000345f5d1238d1b46e00ee6472e475a7b6a17c40f9b31838bf48b38597a5",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-140.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-145.json": {
+      "bytes": 45427,
+      "sha256": "0fb8505003578f0806796f975cca9b9d9d54185de7f5539ed806d85be814aeea",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-145.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-150.json": {
+      "bytes": 50533,
+      "sha256": "2194bd2a80d96f0cba2e79b4351703205004f357358da1f1fcebc7cd8b856281",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-150.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-155.json": {
+      "bytes": 46445,
+      "sha256": "51a31b8f060b019644bb7ae876e35b33938dfc2abb0ca5628e6330e1e66d5bc8",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-155.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-160.json": {
+      "bytes": 44521,
+      "sha256": "fc171bd12cf08f3a1d029ef74f3c09115c3906f54c679fa5a82288b654c21245",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-160.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-165.json": {
+      "bytes": 47325,
+      "sha256": "13f5d442c88e2401cc6f5914ad1fa6abc689b801518048259693d3c28711ecc1",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-165.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-170.json": {
+      "bytes": 46252,
+      "sha256": "fb8ea700b80d383194b7a2dfe334f3789ce320afbc350e47237b58820fb2248b",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-170.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-175.json": {
+      "bytes": 39657,
+      "sha256": "2e829700cd17c90e778f199e04a0f1eb7bee7e6141d49208ed06e190b6472b45",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-175.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-180.json": {
+      "bytes": 58123,
+      "sha256": "d2fa5316f89650239a3a703a291dc5ac08c1af89216dff171a196efec754b28c",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-180.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-185.json": {
+      "bytes": 59433,
+      "sha256": "b0c96761ca9723ae6f4900ba14cd4358bb52f1488d5419a5181d29369e12bfb3",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-185.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-190.json": {
+      "bytes": 44115,
+      "sha256": "1657963684a61ca2c6981d40a455d173985c77ad313aa38ffd25c710a69c290f",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-190.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-195.json": {
+      "bytes": 55078,
+      "sha256": "2a030e46f4ee33c5d2657fe0de6edfbc3911ab290bacb62ed6ab38a73fd7eacb",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-195.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-200.json": {
+      "bytes": 54943,
+      "sha256": "470df69d6db10933211fd61355ddf8afd187452103bfa71ffdac4bdc1f2653cb",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-200.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-205.json": {
+      "bytes": 55793,
+      "sha256": "4835a55cefd121a289f80e07c2940289beb2b0d1c43efd98c532b416f3e22b6d",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-205.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-210.json": {
+      "bytes": 52663,
+      "sha256": "6e314b2db46b2c96e1f8bc5efa95df8502fd1c217a1e7af8250ff4f1273b060a",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-210.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-215.json": {
+      "bytes": 51253,
+      "sha256": "ddc99848fc79f31845c19411a99639e59ce3cafae630f06e9d626b35d4f59ff1",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-215.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-220.json": {
+      "bytes": 53198,
+      "sha256": "ad8e826121a02aa99a247a7248a50e5966648f39b2475fe22907e0584a3f1c7e",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-220.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-225.json": {
+      "bytes": 48532,
+      "sha256": "0e89593f14ef6f26fb5d8411e0d88e88c7c9ef467fa3ac2998447682cc9643a3",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-225.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-230.json": {
+      "bytes": 53445,
+      "sha256": "7a67aa745573be2c0f62104a5934c4ba232821d9c09df3286eaf0934dbeac25d",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-230.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-235.json": {
+      "bytes": 57253,
+      "sha256": "c59ff3b302ae3e67f5dbfb28d34dcea82426647d09975fce62ff2035baf68495",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-235.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-240.json": {
+      "bytes": 54588,
+      "sha256": "044e830aae2a26c378bbd27eaa1eb711115a9078b6ddcadb585127989d77cd1f",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-240.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-245.json": {
+      "bytes": 48580,
+      "sha256": "f9de6abeaa6cb8894cc1709d81355d1f9070de3a711a2ef360b76a9c15d452fa",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-245.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-250.json": {
+      "bytes": 53009,
+      "sha256": "c366acfca1460d98d7e621c360e72992c5eb8bfe9976d3182540aa1d190c2d73",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-250.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-255.json": {
+      "bytes": 44306,
+      "sha256": "483cba16a2857069255ef714487960a7dfd498d8482564df9ad35fee525493e5",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-255.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-260.json": {
+      "bytes": 48053,
+      "sha256": "0c3de39fbfbcc33e23ecd138ac3ae20e42eeef31466c522bd45b9ee5386cf1f6",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-260.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-265.json": {
+      "bytes": 63142,
+      "sha256": "c7f23ccee71a2656862c626ceb7247f96f3a48d292890d347c96f58b1c451393",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-265.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-270.json": {
+      "bytes": 52160,
+      "sha256": "9be99ebca59b39a4d2db9efff26bd5743165140254b8a02361a78416f23ee0f7",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-270.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-275.json": {
+      "bytes": 53503,
+      "sha256": "73debcc4b488bd7af56985e7b970a29a288e615780cdad254880d43948bc275a",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-275.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-280.json": {
+      "bytes": 48721,
+      "sha256": "4a67352bcc40ff3bcb93248ffefe48f30e04624944033b334a5267e47e7c7014",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-280.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-285.json": {
+      "bytes": 42654,
+      "sha256": "0ba042d6a45a214402fc63636c46305573dc5870961b273a3fe74e319d7c9070",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-285.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-290.json": {
+      "bytes": 57057,
+      "sha256": "06cba71ffe46cb7c9a24b9aa30713cb7a241eb06eaa105955a902a57aaa5d2e9",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-290.json"
+      }
+    },
+    "raw/bf16-gguf/ben_Beng-295.json": {
+      "bytes": 55328,
+      "sha256": "fe635d1c42ee1f9b8a187036511eb1e937ecbcde8ae6408a492d479c71491f4f",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/ben_Beng-295.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-000.json": {
+      "bytes": 27482,
+      "sha256": "e4cf8e86014bed045cd14a3702677e3988701939511141b28c5076a61a3e5efd",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-000.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-005.json": {
+      "bytes": 24332,
+      "sha256": "9ea04181719350195ab4cb84620f4e986db7eab2cfc47973c8579aedd8524449",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-005.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-010.json": {
+      "bytes": 23746,
+      "sha256": "182c3a0e448161200a0e5f88cd90df8040d09865eafccadbc75fd13ef1e8e38d",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-010.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-015.json": {
+      "bytes": 21800,
+      "sha256": "3b89bed3bd65646f2b976b487688933c8b93c5ebb726b3fc947b4b32376ae2b2",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-015.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-020.json": {
+      "bytes": 25289,
+      "sha256": "b4fe5ad5121eeba0cab995860627e215851bf87b4b2ff9890bc215e12e92a85a",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-020.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-025.json": {
+      "bytes": 22837,
+      "sha256": "847f93cee0686d1fdbfaa4f42aa1a47721563338b2d4f73c2c780ee38ddce7a1",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-025.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-030.json": {
+      "bytes": 23578,
+      "sha256": "52a3054ea25a10cfe82a39cdd0ee3fe3ea83aa767a79fa929a422bd3a68ecb14",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-030.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-035.json": {
+      "bytes": 24325,
+      "sha256": "ae8521ec0da262cd94305dd7443649009bdb65627244beebc95f0dcaeae34556",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-035.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-040.json": {
+      "bytes": 23248,
+      "sha256": "98c37ee79ea010f9ce5f33e4f9a2a1fe8e8dc82eecd0d4522fcf7b5a7ce9c6f3",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-040.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-045.json": {
+      "bytes": 21100,
+      "sha256": "cc7778c20ffd1b89d0397726ac53768f2c2b30192c5da2abfe22567c95e8de6b",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-045.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-050.json": {
+      "bytes": 23757,
+      "sha256": "cc274df46d90ed698625a683977f30907b344b91b4d4a6e1d7621eacadab8e78",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-050.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-055.json": {
+      "bytes": 25929,
+      "sha256": "8c2ac920adfef75f1d08421ed28ae76ff16ff0b8e466ff26aa796a2f38ee2362",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-055.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-060.json": {
+      "bytes": 25117,
+      "sha256": "8dd3d897f9a6e97ba7cfdf22ff8c76cf9d05eef4a7867b64ca4e49f3eccedf89",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-060.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-065.json": {
+      "bytes": 25174,
+      "sha256": "ff64c30b7279d7a9b988839cde82707b75276e6336f5abe02e8620c89279b65e",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-065.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-070.json": {
+      "bytes": 29109,
+      "sha256": "ceb306df79c040e300cacd5ca2132458ff7ba98407ba508f9d6624ffcf8f3db5",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-070.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-075.json": {
+      "bytes": 24423,
+      "sha256": "66b1c6bf089b584efddf7fc9d9911b717f61a3d098ee8c587e921876439cc617",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-075.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-080.json": {
+      "bytes": 23000,
+      "sha256": "0baef0fb77191f809c9eb7e5cbaeadbde61f301b86f081d4ff6391c55704e950",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-080.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-085.json": {
+      "bytes": 24306,
+      "sha256": "13274f9e69cd8e7bba83faa439506aecb6af0b8a6eb29437dd8068c5dc6cddcd",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-085.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-090.json": {
+      "bytes": 22213,
+      "sha256": "100c7793dfaf3386978d6971d9aa3c255fda2e9885aab109635865bd783c1145",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-090.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-095.json": {
+      "bytes": 23984,
+      "sha256": "2df1c2ce0acf2e25736dc0e213a3ad258fdcb16377383eb663a01fa07e475063",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-095.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-100.json": {
+      "bytes": 23549,
+      "sha256": "e074c6f6df1b1f17bc61e76244f199aab7738e35d931f9748c4195b04935e2f6",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-100.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-105.json": {
+      "bytes": 25323,
+      "sha256": "9a8e423092db7f40b05fcca856135a44d182dccdff2579489d3dba3d2f2acb27",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-105.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-110.json": {
+      "bytes": 26286,
+      "sha256": "7f0dd7f282fcb02e135ffde48368b6c10a75659f2f52c4e056d13421bef2979e",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-110.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-115.json": {
+      "bytes": 27017,
+      "sha256": "c8f75f378329ed08f867f9a44eeafd1df4a5f58866a4bd17eaca1c008dd84f8f",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-115.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-120.json": {
+      "bytes": 24369,
+      "sha256": "d80470cc7a9946292113cc1fbcf84c07db3735de94802795d5e9cea3819c3aab",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-120.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-125.json": {
+      "bytes": 26180,
+      "sha256": "ed730486dafd162da8001a6cb870be59377aeaa978c4555f6ba7e2de204bd91a",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-125.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-130.json": {
+      "bytes": 30071,
+      "sha256": "15c28c2803f1a3127d29842be89a464e76945a70e9583745973ea74af905d6ee",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-130.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-135.json": {
+      "bytes": 23838,
+      "sha256": "8fb003c1b1d6576014662ef787825b1cf244311cc5d7b1965aa0e3da45c7a2aa",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-135.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-140.json": {
+      "bytes": 22986,
+      "sha256": "25ca1aff55598d09c29d8de21e3db8f84af7dc535a01c56530ac92257c6de556",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-140.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-145.json": {
+      "bytes": 22942,
+      "sha256": "f1eaeb71104caff5e6057fe78bf0213004fba017ec4f66c5cc39b61b6d2a966e",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-145.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-150.json": {
+      "bytes": 25178,
+      "sha256": "478bcc6fd87670dd26678ea210b9e8d2397132d3acafae48fea0d48d5e33d6a5",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-150.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-155.json": {
+      "bytes": 23999,
+      "sha256": "0ce6a4d1b0236b307576da3ac1f9324a3ae556789dd213c764d2673d0ef55c11",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-155.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-160.json": {
+      "bytes": 22533,
+      "sha256": "106a29ba6a67538d689543ae6a478e561e0710b39446e59d028d4aa47dd317f3",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-160.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-165.json": {
+      "bytes": 23908,
+      "sha256": "77deeae5e976c8d296aac391f7518b330d253b8ece043a563f3d570cc03ba9d4",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-165.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-170.json": {
+      "bytes": 22702,
+      "sha256": "c14419918800369438aeeaa9299f8fec6c67ad55bfd6fa419a34ada726d969f4",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-170.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-175.json": {
+      "bytes": 20440,
+      "sha256": "1c0b57319141c2d0f88b249c55877dd113ae346110ca588d6da25d78230ec6bf",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-175.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-180.json": {
+      "bytes": 28128,
+      "sha256": "8e77bf96db455d2696bbec3574d821acee7639cd40af7064738d5bfc3b4a7b2d",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-180.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-185.json": {
+      "bytes": 28379,
+      "sha256": "ca35f282a74423603544e43562c47b50cb2fd63121da65146a7111c2fd637124",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-185.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-190.json": {
+      "bytes": 22632,
+      "sha256": "2b7be5bfaff665a96861f4409a9d4177aadbf6abfdad0e8e1196449a208652f2",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-190.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-195.json": {
+      "bytes": 26109,
+      "sha256": "85957a3038b9d9b5e6ce9dcb1eb2138b808d3a0c916dd7d110a486abd46d378b",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-195.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-200.json": {
+      "bytes": 26802,
+      "sha256": "122bc8be3262c715e4f3ee1b9c9642d58b6f38c5f7a94dc0f9078ab67cff516b",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-200.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-205.json": {
+      "bytes": 27419,
+      "sha256": "b1d23ba9911b150c7cb8e5e07bd8585a4ae785dd656310d3aa9ef3d27b1e9ff4",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-205.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-210.json": {
+      "bytes": 24650,
+      "sha256": "d97c727a93d7fafed4a36d6edaa9372f7745f3a4158ade679e570807efbbdd3e",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-210.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-215.json": {
+      "bytes": 25073,
+      "sha256": "50f3fdf74d4a51955c2e808b2934bfc95def522ef53d913787a873579aa1c502",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-215.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-220.json": {
+      "bytes": 25221,
+      "sha256": "898c1c2e9d72202a6d410b324c47c1bd061e9af4d4376daf1f499f74e8e2ed51",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-220.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-225.json": {
+      "bytes": 24782,
+      "sha256": "1273cf68fd2d22bf666fc5257649a69662b6d4449c156d7d441f508b5a396455",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-225.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-230.json": {
+      "bytes": 25011,
+      "sha256": "c166401aca4521fde32fcd1010b34ce1db715bb7a2d4f25117ac1026651dca07",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-230.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-235.json": {
+      "bytes": 28799,
+      "sha256": "cfb7979f2a658f682336f8a9883c3e27f170ec79330aa092f0b0786510970bf0",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-235.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-240.json": {
+      "bytes": 25675,
+      "sha256": "6bf6f2b649ec47bbf420eeece53cf09e9ccf4dcdc6f7dcd013fed75e49be84ab",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-240.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-245.json": {
+      "bytes": 24296,
+      "sha256": "48729fc80e245b3db1d481c14631d051bcb6873ec8951fb43ee450249e52c663",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-245.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-250.json": {
+      "bytes": 25936,
+      "sha256": "53f80e512f19ffeefad374d75370a83e38c87bf4f7ccfb860d0140aa6c63ca77",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-250.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-255.json": {
+      "bytes": 22380,
+      "sha256": "4883a677266abd4c51de7ddb812d31a71baf47caf71faff8d348bb269f5146d4",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-255.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-260.json": {
+      "bytes": 25211,
+      "sha256": "c4116927ebd4a6647ba79f6ae24a4cad3112d7e0c1b636218894734475c41569",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-260.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-265.json": {
+      "bytes": 29582,
+      "sha256": "2abc08591b965e1af8d66c9f6eb5108edbfd33d03608b6d8996462b25f4d0047",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-265.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-270.json": {
+      "bytes": 24807,
+      "sha256": "2d404556deec07a5250b6d2537045d013e3a46ed4684c4f7a9cdbc2be828594d",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-270.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-275.json": {
+      "bytes": 26413,
+      "sha256": "531b997ffbf15757c7299d39b14788b002799387444ef700a0ed40ad2b519f50",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-275.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-280.json": {
+      "bytes": 23141,
+      "sha256": "76909e0d261a25cf0298eb49d58adddc082d10f99c1b1489778cccad6dec2588",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-280.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-285.json": {
+      "bytes": 21798,
+      "sha256": "745ad44c9170cb0b62c3e0ec90667983bc2b00c00b7f48c7b9ab95fcf0d3cda1",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-285.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-290.json": {
+      "bytes": 27887,
+      "sha256": "a72ba31df9c40a8d70b2e0f3de9bac017a02507fa2765cb5516d07bda47b393e",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-290.json"
+      }
+    },
+    "raw/bf16-gguf/eng_Latn-295.json": {
+      "bytes": 27137,
+      "sha256": "6ee70cefc7bfd8ea169135700ad978b195047206f0cad8860c23b300dff41dc5",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/eng_Latn-295.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-000.json": {
+      "bytes": 57520,
+      "sha256": "585566c63ba946a688082a8af493df3a266d1ccab9f7537e1d3adbc49becf0ed",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-000.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-005.json": {
+      "bytes": 48498,
+      "sha256": "dc6085eeaaa92ced26a707750895c1904b248b179780dc97f0d8edf142837a6e",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-005.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-010.json": {
+      "bytes": 46312,
+      "sha256": "0e974a2382858af2512b74e7a1ad15cc6fea68a0d9471b1d7f01e36279fd9c68",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-010.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-015.json": {
+      "bytes": 43037,
+      "sha256": "24cdd1aa552cef637e1e7f739490f2dc272de2c38c72aa82b429da0ca2fbaf07",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-015.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-020.json": {
+      "bytes": 50134,
+      "sha256": "4969b7c41fe9663bf0097c34f1fc97ae15cabbf7e3c1b02b8214d0f5f18b52a8",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-020.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-025.json": {
+      "bytes": 46014,
+      "sha256": "efddf48f9dbaf404de0c4d8af923f867639462e8e70c9c97f45708658d7292fa",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-025.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-030.json": {
+      "bytes": 47199,
+      "sha256": "be4289107d8bc4bc5e70db43ae32c01064f5c8d778ebcf235efaf784d0135905",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-030.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-035.json": {
+      "bytes": 45444,
+      "sha256": "673ff80960ee6801f399941713179ba5de3f896586386830122248a0d68e391e",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-035.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-040.json": {
+      "bytes": 45798,
+      "sha256": "e7670ea68a020c533564b18b3b667073086f093ef0a5c223acd600bcd27a8e36",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-040.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-045.json": {
+      "bytes": 38017,
+      "sha256": "eab3d78a15d4c67811dec2706bbeec4830977a4b83421b32b9807905661b62e9",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-045.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-050.json": {
+      "bytes": 44751,
+      "sha256": "9f316bb8aeccfb1f00ded0268455d98cb6fe370d5e2fc3aa56dfa0d83de3c380",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-050.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-055.json": {
+      "bytes": 52436,
+      "sha256": "b9e2236caef160c5672d85087487201ccab9dd41323a1f3737c1245083a991bc",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-055.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-060.json": {
+      "bytes": 51578,
+      "sha256": "53d6e6ddb60e7d4f35418c882fe38c928976bc949b21a036ed8c4681608afe3e",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-060.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-065.json": {
+      "bytes": 53371,
+      "sha256": "2efd959786dcf5ce1dd3d3d3a938b4868e6870b520a28df75c5ad033a387417c",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-065.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-070.json": {
+      "bytes": 59054,
+      "sha256": "8c8662fe49ba0186dd40dc896de13fc745492260b834f8772472da41ae61612c",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-070.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-075.json": {
+      "bytes": 48197,
+      "sha256": "247990485606bb31d335eb93ae5e7ae199ae23325b5f66080c6ee16737f14591",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-075.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-080.json": {
+      "bytes": 44932,
+      "sha256": "607934e4b8fcea616bde1e85f8109859981064dcae45b48887aee61e725b9611",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-080.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-085.json": {
+      "bytes": 48413,
+      "sha256": "99cf5df71cba066f321620f28a761329716aedcd9412e2968f7350ce7184801a",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-085.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-090.json": {
+      "bytes": 42351,
+      "sha256": "bab81f2f0937db9dd258e3196802634ba7977b8def4290dc7dbd68c8604166fb",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-090.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-095.json": {
+      "bytes": 47574,
+      "sha256": "86212f637ccb5dbee2260f057319dca774084a4fa8ebb6ec02302bd1301fb549",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-095.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-100.json": {
+      "bytes": 46831,
+      "sha256": "4fe491ff6fa42caafb420de495af7cf23e87cd7953cb48ca9008e877474cd1b8",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-100.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-105.json": {
+      "bytes": 48340,
+      "sha256": "a7f29c7f0c4e5b3b9067f8f03a3d14c20140a5b7a3e6af3aaa250f13d0941651",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-105.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-110.json": {
+      "bytes": 52310,
+      "sha256": "f5fcebea468f10a8306d91d77cfb69641b478d789c5d3eb23c2d9b8dd0cc17b3",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-110.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-115.json": {
+      "bytes": 55401,
+      "sha256": "7fef242b1a3aa0224e3f86eb2b1e123b829170e1d593b58fdf3d9c94e498bff1",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-115.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-120.json": {
+      "bytes": 47734,
+      "sha256": "16a3ddc4d8b43447f04904b2e98aa07f38ca646462f6d3cd25087dc90553a872",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-120.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-125.json": {
+      "bytes": 53971,
+      "sha256": "4db6e404978dae04a413c0df1d53616d8b509d5fbf6a75e29bc4fa66dd457a01",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-125.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-130.json": {
+      "bytes": 61380,
+      "sha256": "f82d85af191cba934f09f1b02e07b023b85ec7e9d4c5d9ebd8780408cb1c8213",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-130.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-135.json": {
+      "bytes": 48242,
+      "sha256": "5af3f2b72dc858ad9fbefcf9e27cc4a358dac44cecdcf6f8b986a479065c12b6",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-135.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-140.json": {
+      "bytes": 45292,
+      "sha256": "11ef9c160252694ed227ef549b0ec1e0c537e2a8e02d2a533d582fc8aa2577d7",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-140.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-145.json": {
+      "bytes": 45515,
+      "sha256": "0c91308637b6d1c01bd0ecdd2d7c9eef843a1229a55d396f98462a8e689cbab8",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-145.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-150.json": {
+      "bytes": 51951,
+      "sha256": "a41626e68387603f8f45acd8bb6cf03499b519faa6bfa8547b6630d6d1441e80",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-150.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-155.json": {
+      "bytes": 46132,
+      "sha256": "8088a586ec47e8665e6d383b908e5775c79cfbadf2cae91bc3f147ffb9cd2d67",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-155.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-160.json": {
+      "bytes": 43864,
+      "sha256": "21db9527b1da3731d8fc19c94c7e8821e7770bc29280ffa08cd497cf506cfaac",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-160.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-165.json": {
+      "bytes": 48000,
+      "sha256": "1e4bd794a8f28d9ba0c071d551872c64cd799427f620610e263af5c756718412",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-165.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-170.json": {
+      "bytes": 44744,
+      "sha256": "7c3d76cc5646f92babc162325c0f4a33bbdb5052ae62676820eb83ce0a136338",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-170.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-175.json": {
+      "bytes": 38900,
+      "sha256": "957af3acf1aa97e670967191ee7e13a393fba6be88897200a5939c758c91ed82",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-175.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-180.json": {
+      "bytes": 55484,
+      "sha256": "c35629b1d539def7eb957771cedef42ccb349ccaba8c07aa3cf7058e77fabdfb",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-180.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-185.json": {
+      "bytes": 57929,
+      "sha256": "ff6fe526354a08254731dc9b877c698b120d360634597f39e636270bd413212e",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-185.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-190.json": {
+      "bytes": 42286,
+      "sha256": "2cb01dde8e30cea8ec0578563317a4634ca125ea767efc3f78e4e07371a2c796",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-190.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-195.json": {
+      "bytes": 54665,
+      "sha256": "bfb0b2d295acb377faf114c84b1315af1eeacc2c7f4e814c52460313d410fd98",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-195.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-200.json": {
+      "bytes": 56669,
+      "sha256": "14a18111cce2654b5e5869f4d39225de663009580e712a715a04d8e4c0962de9",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-200.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-205.json": {
+      "bytes": 56044,
+      "sha256": "3bff4b8b19e3ab06e5705758b6d072cd0c19daa73e36c9b7fb6644fe1eaf053c",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-205.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-210.json": {
+      "bytes": 49472,
+      "sha256": "398c63af8e95b73ab2ea5ea41fca65f03b7b39e6194f2f024c43cc1d4b8d9801",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-210.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-215.json": {
+      "bytes": 50051,
+      "sha256": "e46450197470a4163039085578d6b25c39693ac81374e3775997b54dfb72b0cb",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-215.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-220.json": {
+      "bytes": 50140,
+      "sha256": "f728ae51c092f3e83aab28541750260e09f505f9182c22fd0531556e59f2831f",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-220.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-225.json": {
+      "bytes": 46987,
+      "sha256": "55079e9d9747f21108a9a70f5ff559f1aa989097a20f09ba56c219d2035f908a",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-225.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-230.json": {
+      "bytes": 52502,
+      "sha256": "64644b24e20eb6b2741a0d9d712a5b88d77233bd38f073f6e1580ff9a4bb446f",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-230.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-235.json": {
+      "bytes": 58602,
+      "sha256": "e1acc8dfd6267b630727c75d9fc09f4f23c5b84eac40edf44dcfd10e497cea14",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-235.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-240.json": {
+      "bytes": 49139,
+      "sha256": "e63211980045b5c11a2940aa45ad6357adc1eb3b4b0a424ee2ba55ba9605c538",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-240.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-245.json": {
+      "bytes": 48383,
+      "sha256": "d52e1d377ece8208534647325c9f4324e279b60bc6f53c12179b8d51bc871ee7",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-245.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-250.json": {
+      "bytes": 50489,
+      "sha256": "d34b8b180d1c761ce1ca773553a86add5f8d8753c4d44e2e9c8b1f9678b327ed",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-250.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-255.json": {
+      "bytes": 44130,
+      "sha256": "693fa9ee4bef985daf601928e1a081be1978638f249fa8282ea931b618d2e3d5",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-255.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-260.json": {
+      "bytes": 48750,
+      "sha256": "81683b6ee066f31d03d4aa9227f5ab92fde61cd477549001f47deb273360f9fb",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-260.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-265.json": {
+      "bytes": 63668,
+      "sha256": "3457f5d6c4d2ca2630c2e9411d9c8ac37290f77f61cb3df1d589aaf3b5484750",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-265.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-270.json": {
+      "bytes": 49927,
+      "sha256": "2f43344f9e57941c21423975510dcabc7c88edc7b6af43cb83d691811a6152cb",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-270.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-275.json": {
+      "bytes": 53251,
+      "sha256": "eed8689db2a0e5cbca2cb4a0cf784f51770a63fce99ab0e6c3c640cada0c0cd7",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-275.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-280.json": {
+      "bytes": 46273,
+      "sha256": "b9aa18f74e21972d29e18c8d1db1898f231a64c69f7d94e7b4171b2bc2fb6917",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-280.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-285.json": {
+      "bytes": 41837,
+      "sha256": "d202d256f6572995777fdcb24a3c69241c647d460f4b0284ea359cb38cf74ff3",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-285.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-290.json": {
+      "bytes": 56036,
+      "sha256": "24f2611dc48455c44b76f953e4367617e469eee1048336ae63ea52b460f40804",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-290.json"
+      }
+    },
+    "raw/bf16-gguf/hin_Deva-295.json": {
+      "bytes": 53915,
+      "sha256": "200b1daec1526a04d1ce4b184dfde794d6a3604983ee93110a827387eaef91eb",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/hin_Deva-295.json"
+      }
+    },
+    "raw/bf16-gguf/identity.json": {
+      "bytes": 226486,
+      "sha256": "93c1f16f9253f0fb177c95e8f5312d82db12dd6d874ef78575aba5fccb4f710c",
+      "storage": {
+        "archive": "bf16-gguf.tar.gz",
+        "member": "raw/bf16-gguf/identity.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-000.json": {
+      "bytes": 60436,
+      "sha256": "3a30bfc6cbf3bbc5659b25f277ab889c6a89f1321b45b72c72eda409d2247365",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-000.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-005.json": {
+      "bytes": 48938,
+      "sha256": "bde2b5e7b41a2da27801eef94a9eb79ede0a69b55cbdf539bf326cd5247416ba",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-005.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-010.json": {
+      "bytes": 50453,
+      "sha256": "42c81f664ebed5a1ddc887968cd3a7ba218b0c09a5b10aea8a06c511056dc92a",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-010.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-015.json": {
+      "bytes": 44820,
+      "sha256": "ef22941398ecb29299f5aa27d468521a48e9cd895da59539e6f3ce4939ad3b67",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-015.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-020.json": {
+      "bytes": 53611,
+      "sha256": "03af5a4b78e7721472abb306cb3ec0a3105e9c9534b1dc70126e8c70025d6b9a",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-020.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-025.json": {
+      "bytes": 44950,
+      "sha256": "151d1b4a83911816d8b3859fbf8c4904c403d25381726db0e9a2ee0f39e289c6",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-025.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-030.json": {
+      "bytes": 45431,
+      "sha256": "954d8886eabc38598b97f6f787b8d1ccf1c961fae49d34620807f89619eb8ef4",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-030.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-035.json": {
+      "bytes": 47891,
+      "sha256": "2535c668330be9407b8b1abae3ebb45b17ac6fa9da2cbc0f1ff9ed01bf07c91b",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-035.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-040.json": {
+      "bytes": 48824,
+      "sha256": "7426ee5c44d69929896130297aed3fb2928bcae202279bd07ec4396c6e5df90d",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-040.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-045.json": {
+      "bytes": 40487,
+      "sha256": "a8e96906f7b761dc6d59eca56dc7fa75f276f497f37f4691badf8f7f1ef95bc8",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-045.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-050.json": {
+      "bytes": 50211,
+      "sha256": "698b44a26c8d08687a33b7554278fe6fe549179a4e480401acf04eb011e7df47",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-050.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-055.json": {
+      "bytes": 49622,
+      "sha256": "907effea537993d70bf952f07d47f855cc0d171ef4ebf38758f429d171745376",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-055.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-060.json": {
+      "bytes": 50162,
+      "sha256": "65b2070174355075ef85cf591460c64d93e4cfd88c0770671cc89682ee2adf59",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-060.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-065.json": {
+      "bytes": 53367,
+      "sha256": "3301341743039c8accb2c33fd09a9a476a267af0984a6d169c1491974e7f6492",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-065.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-070.json": {
+      "bytes": 61092,
+      "sha256": "c82b6f33993c8fb543b56441977223c577b7030c0a046c33e815e8ff11d07e75",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-070.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-075.json": {
+      "bytes": 48000,
+      "sha256": "ce9e236f7b36760fe2195f51a096253a172bdff229b70eafa1f4509708d616c6",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-075.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-080.json": {
+      "bytes": 46430,
+      "sha256": "17a0a17d645a11fb7df32911749887d4f7927da77d492bff30a1378a5a722fbc",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-080.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-085.json": {
+      "bytes": 49017,
+      "sha256": "42eb80d993b69e2bbc03634462c1aac715be0ddfa3214c195211dbd73cf66bca",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-085.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-090.json": {
+      "bytes": 44229,
+      "sha256": "e9f6edde4f177f071aa78becf18f738e1d6cef61865d9a19d2a4532027453b49",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-090.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-095.json": {
+      "bytes": 48949,
+      "sha256": "721fa947872762ca82fa4f978475f3f4484f158aeaff6facee8c3855be5baa7b",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-095.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-100.json": {
+      "bytes": 49390,
+      "sha256": "e09abd757eca39db7ce1164b115540cc80c63d7d5fd178a4b89ad69609cdbd0d",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-100.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-105.json": {
+      "bytes": 50302,
+      "sha256": "2862c5ff5b0ce46f11951d231ce4481864fc723d54e177f1269f9ff63b432d29",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-105.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-110.json": {
+      "bytes": 55484,
+      "sha256": "f1711563d89ebc5d64fb2a5aef7ada6abb050e58108245d0e95d7d412f5c5309",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-110.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-115.json": {
+      "bytes": 58967,
+      "sha256": "0e15093368a26ff05b2a886ec956edf13082f1942c54c37d0b1fac98cb7b4ee6",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-115.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-120.json": {
+      "bytes": 49121,
+      "sha256": "455cea11c2e7bd3682dbe039a27dbd9cd622b122dc67dc966f1190f7b6121f4a",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-120.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-125.json": {
+      "bytes": 54901,
+      "sha256": "03c66e89722c8011fd9b2c10aa7aebae5e604a5aade2b4ef3346b1a1dc73b5a1",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-125.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-130.json": {
+      "bytes": 63114,
+      "sha256": "688fa965ce13998fb879bd1e94116f3feeae84b6491f960c9e906185131bc3ab",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-130.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-135.json": {
+      "bytes": 48281,
+      "sha256": "542c2b4d6b7e32f9d99c162ec617a26c0a5ca993c95502a4e44e596539dcac39",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-135.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-140.json": {
+      "bytes": 46433,
+      "sha256": "009f22d5b2269f1509f178a41c351d743bf12c56d693c2a641090a07c24d9d85",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-140.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-145.json": {
+      "bytes": 45413,
+      "sha256": "f70b60c9de65256e48b7f87fcbbb579676eb97c27e8cf4c5d03402fbb5b28ab3",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-145.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-150.json": {
+      "bytes": 50523,
+      "sha256": "9aa898e40c29fa47ed5141df1aefdacc336e7d01baec4527da1efec5fd61d917",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-150.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-155.json": {
+      "bytes": 46441,
+      "sha256": "9955adb1583a8a38e46f5d71d265c4d8aec2a365c719c41253c7eb90f39dc6eb",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-155.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-160.json": {
+      "bytes": 44515,
+      "sha256": "a3572dc532b87eba6ee6d9426882811ba9ab4e5923521ab10f5bb940506327dc",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-160.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-165.json": {
+      "bytes": 47327,
+      "sha256": "b47641d3bca1a22ab094f20bb193f2bcba006acc8578df181b7d2414c37f7d52",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-165.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-170.json": {
+      "bytes": 46244,
+      "sha256": "0d5ad251145d25e9b83c20f5e83e804639886140ccf5246787ba73b25252ffc8",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-170.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-175.json": {
+      "bytes": 39651,
+      "sha256": "d13fce38d002bb4bd5fc1fe9cb3670d7c4b18a9ae44e4b923d321e787078f610",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-175.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-180.json": {
+      "bytes": 58127,
+      "sha256": "ee1761a5facfd848188b359ff2644316645a96414597a8863a0409b9347e2c4d",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-180.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-185.json": {
+      "bytes": 59441,
+      "sha256": "0aee9ab01b0f3a66e2b68bf27f6527fd1edec24166e268eaf35cfe33430705d8",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-185.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-190.json": {
+      "bytes": 44114,
+      "sha256": "0759157676792b438814eaaf2a5db5ad29cfbc070cb16ec0ce89f95d44414f49",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-190.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-195.json": {
+      "bytes": 55078,
+      "sha256": "85ee504287bb877acae9ca35e547f8e39a4df8c9ce75c0b74869e98ee3809057",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-195.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-200.json": {
+      "bytes": 54949,
+      "sha256": "2258c93cef6de8a2315bdc254e0783325d5e28d0e03f3f857026a91ff7f7d3dc",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-200.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-205.json": {
+      "bytes": 55789,
+      "sha256": "445164a51720401922bddac2ebe86ceff1d7f75bfbb4b156e2e739cff357cdad",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-205.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-210.json": {
+      "bytes": 52667,
+      "sha256": "2d3d714945cd5488641e64a20c7b1ea4360b6ace8604ce8399af58bc8238bb5a",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-210.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-215.json": {
+      "bytes": 51256,
+      "sha256": "87ffd098700fbbe4011ba4bde174e3ffe0286f18e390e506a96af61d26b8aad5",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-215.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-220.json": {
+      "bytes": 53203,
+      "sha256": "4105ff2a9a400f0aecf1b518e76eb7b522a232d2583ebb2c6fc89e5c4bc280b6",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-220.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-225.json": {
+      "bytes": 48536,
+      "sha256": "9cd64722ff342b0b5fc0b85581caa4b7741a9e6d5a2ff5ebda2b0337fff87d63",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-225.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-230.json": {
+      "bytes": 53437,
+      "sha256": "8d64537af3582c5bf51f10b538478ada8ce3b01ccac5ee37a6d29a5758fefa97",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-230.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-235.json": {
+      "bytes": 57253,
+      "sha256": "36cfd6cd0164022408c14038c8450970df90608d88e1ade83c2b323a3d09256c",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-235.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-240.json": {
+      "bytes": 54583,
+      "sha256": "75659ae78406b4c9e9108dd4954f2e4bccc4572726cf123692d2ff1431d6d469",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-240.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-245.json": {
+      "bytes": 48584,
+      "sha256": "36f47af976a05d4271430df79702ac4751b04595ad8f99ed410c591e10d9c7d6",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-245.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-250.json": {
+      "bytes": 53009,
+      "sha256": "6c0d5d61509efe3a41addc1ec78eead1a5bd022de44fa71bbf2116b82ecfcd33",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-250.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-255.json": {
+      "bytes": 44302,
+      "sha256": "18e95cdef629cabb051affea4ab22e0235229d7096790bfaa2a0b7efdce9e88f",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-255.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-260.json": {
+      "bytes": 48053,
+      "sha256": "5e82581eb1f198a096b30928b10135d6f1f7754cce6944c5fcb9e8b097d92ad0",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-260.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-265.json": {
+      "bytes": 63138,
+      "sha256": "44eb5cea5f18627d3e813789ca5685e0aa132b7efb205741c06bc1e80509134d",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-265.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-270.json": {
+      "bytes": 52161,
+      "sha256": "2386a8bec62f0d68bbc3db0deb3b61e2a730da69fe1c94ed4949e4cdbf5dbccb",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-270.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-275.json": {
+      "bytes": 53495,
+      "sha256": "f75f1ebc3dfd2d3f0ab632924488bfe88dad5c55270df7182436b0b0c9e1a671",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-275.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-280.json": {
+      "bytes": 48734,
+      "sha256": "5bc0247d2c37fead8065869d6870cb094801fab5d970ce05a8d7a9953c4bc38e",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-280.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-285.json": {
+      "bytes": 42658,
+      "sha256": "1c7ccda4e75c0f5768f6ea7de8a001ea75dae7c93b90ef6c79846c0e8c6e0331",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-285.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-290.json": {
+      "bytes": 57053,
+      "sha256": "f1fe0cd8a549f36d6f4359cae068bfb93e26c75c90c79fdc18bf42e5f13cb826",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-290.json"
+      }
+    },
+    "raw/local-q4/ben_Beng-295.json": {
+      "bytes": 55325,
+      "sha256": "7aff2c192d0c7aecaa817e9f1b601e477452bf0cc4e6cc8c112e4929917e8381",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/ben_Beng-295.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-000.json": {
+      "bytes": 27481,
+      "sha256": "00c803430ba2dbb8d1d2743cc0f9ff132bc75ea75082fcb63dd8a50b287b95f8",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-000.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-005.json": {
+      "bytes": 24329,
+      "sha256": "5aafad16a7cd84771a68239faecf0e26c59fbc6fd5432cdff77f63782a307113",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-005.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-010.json": {
+      "bytes": 23746,
+      "sha256": "2502bc6f417402fead5f420ff86e0dc1e37fcfdf1f1546d3d981c38c39af2892",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-010.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-015.json": {
+      "bytes": 21794,
+      "sha256": "2d0cc1eb5a139358b76b8a9397a323e2c1e4155885b978435ed5433c5fbf4ec2",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-015.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-020.json": {
+      "bytes": 25293,
+      "sha256": "77e92724a873ce388b4e590cd7419e8a0dfcbd42ca4bf19aa165dabf14a569a6",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-020.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-025.json": {
+      "bytes": 22827,
+      "sha256": "6cb5e091fdc50222835ebf76917b33a9a1023019059217eb13fce9a819043b58",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-025.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-030.json": {
+      "bytes": 23570,
+      "sha256": "59995268ebe18faf905d6fa1b43f3c6a1fd72461fb1f099c6a96389bfa491d83",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-030.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-035.json": {
+      "bytes": 24324,
+      "sha256": "53b1119283c24a52537baa6522991d079153d11bcbfce88e349b74f12da2ed07",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-035.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-040.json": {
+      "bytes": 23239,
+      "sha256": "6d37a2c7fa5ba1d567c7243b30241822b6162f3ffec8ebfd201ee2da553ad07a",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-040.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-045.json": {
+      "bytes": 21114,
+      "sha256": "7739d20722a847f3cc9f352130551a086947c0aa66b812c7a97c648ccc627afa",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-045.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-050.json": {
+      "bytes": 23757,
+      "sha256": "cac96e98c05892bf50f258e4f063d66a6baed3029a4da3d34d8da217757a6318",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-050.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-055.json": {
+      "bytes": 25925,
+      "sha256": "e8bcf43bb25bdc7836c58191a0ec501f499d08e8e0e2a259d7cbe46455d2d646",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-055.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-060.json": {
+      "bytes": 25111,
+      "sha256": "ad4db945527b9eb5e418a6c3d379467170ae726a4e2685be8b789b97a4d8d9f1",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-060.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-065.json": {
+      "bytes": 25169,
+      "sha256": "28e143def42d81a0d356dda886eb7578486f147e7ee7530598a3e547f597c125",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-065.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-070.json": {
+      "bytes": 29097,
+      "sha256": "2e674bd1d16a3993360fff1b88047389d1cbdc4edf0a9e76f0a655e2681d9977",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-070.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-075.json": {
+      "bytes": 24426,
+      "sha256": "50c24eac32b2f48c4185cfdae7df7f1cbda43999e4423ffb27430ecee90a0a6b",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-075.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-080.json": {
+      "bytes": 22996,
+      "sha256": "32147d162d3d3a48b2990d3e000a1da90e7e1a85e600b88ad62286b71ccd0bbc",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-080.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-085.json": {
+      "bytes": 24312,
+      "sha256": "32265bff0480b97a5d77dfc80e43518190d79e4581feb4841854903e4f107512",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-085.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-090.json": {
+      "bytes": 22215,
+      "sha256": "2358743fbedca12ce29714d8908d44c3eb10c33b7f26e8461edb881e2f16955e",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-090.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-095.json": {
+      "bytes": 23975,
+      "sha256": "38393c23ec182c4871c5bb948c0321dc38622dbd20d8295e968a4a08d2119b5c",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-095.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-100.json": {
+      "bytes": 23546,
+      "sha256": "43675c63e8177543f1b4c2acb1e81cc5ef4536c09b3827004a35e2fbefa81114",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-100.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-105.json": {
+      "bytes": 25320,
+      "sha256": "a90fb2f4527c2b77a9e095ddbb2a3049df3681679a008890334972ad38af520c",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-105.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-110.json": {
+      "bytes": 26288,
+      "sha256": "fead02cc9beaf3afa56ed4c050240b1e52149c19261cb55780f3f11baaea35cf",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-110.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-115.json": {
+      "bytes": 27015,
+      "sha256": "cc77360468195111c49b7fd9b02494621043d1c5cf058fcf17b7cd75ff9ead0d",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-115.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-120.json": {
+      "bytes": 24369,
+      "sha256": "4c38001699015e12127f2472655b7970b182ae9f022ac3dff8721cc6fe30ef59",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-120.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-125.json": {
+      "bytes": 26187,
+      "sha256": "ab429b3528997bb8a017deff07ced3fe223efc80f33cfeb19b1be4b47530eedf",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-125.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-130.json": {
+      "bytes": 30080,
+      "sha256": "61b00ff5794ea58b2022aef19a11a367ecdfa7235d914c58b33fe8d4e00aa2c0",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-130.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-135.json": {
+      "bytes": 23832,
+      "sha256": "190f50a7b5a2046a65fb34fbf23e4b35211f7a40a1d5f881e25c0b513603d240",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-135.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-140.json": {
+      "bytes": 22978,
+      "sha256": "2507ab649c43132fb031711f52f6bfebeda3ca642ed449366b21363a49133070",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-140.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-145.json": {
+      "bytes": 22947,
+      "sha256": "c6259d58842151aec2ebf755da85d36dc17a9b4e7b510dc80ef0be04e6f4009d",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-145.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-150.json": {
+      "bytes": 25186,
+      "sha256": "f191549a054074eca83a6208b39aa4d7315da290e2e84e5b90e094ae9030d76b",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-150.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-155.json": {
+      "bytes": 23995,
+      "sha256": "b0ababc18be2198f82913764f2ea69f5f111af4335e1ef5e9235521db5ddcd3f",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-155.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-160.json": {
+      "bytes": 22530,
+      "sha256": "f5adcb16e245a9c9e0c33041abf5243d0b345cb23cf16950e7bb57e4920bad31",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-160.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-165.json": {
+      "bytes": 23912,
+      "sha256": "8691d391c19796f497eda5aa20fa289013c81b4359a72c27322060817e6a13b6",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-165.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-170.json": {
+      "bytes": 22706,
+      "sha256": "b719e47719d90d9168c0fb6e9cda67a5747cff745f9757de0fca0ccaf14c30fb",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-170.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-175.json": {
+      "bytes": 20435,
+      "sha256": "731826256e6fb473652dbc4ede127deba0d6022743272ba0df06eafa60e1f81d",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-175.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-180.json": {
+      "bytes": 28116,
+      "sha256": "b35310546460755f7c870fd8791394c837b1af91a91b60496e6b40083d3f0d23",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-180.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-185.json": {
+      "bytes": 28378,
+      "sha256": "c062b094cd824f604068e24b4c4f948929a4504d4dad3e7cec6138111cbdcc99",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-185.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-190.json": {
+      "bytes": 22637,
+      "sha256": "fc938b0bd63af132f5b128f589d92149d6df7e744e06ed8c85147486aaa01606",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-190.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-195.json": {
+      "bytes": 26113,
+      "sha256": "5a3b6facfbeb1087db905a89c2cb18f9d173699108a64509c63583e813ccd760",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-195.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-200.json": {
+      "bytes": 26796,
+      "sha256": "584ad427c1d158638efa7d3e889f110cda996d73a448c4e313954d14a842925e",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-200.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-205.json": {
+      "bytes": 27433,
+      "sha256": "da9830a56f2a2679cbe284edd9a889626be2b0d91a7e7e4c929acfb41e88edce",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-205.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-210.json": {
+      "bytes": 24644,
+      "sha256": "8c852c0aa11d6e069d33c0e5e5253e5bae088568fd5ecc7cebafbafcf5787c54",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-210.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-215.json": {
+      "bytes": 25063,
+      "sha256": "d6b6c19a7e663846666a9c0a4ebda444d194f2a9ddfb7d1798e6f5a5aae88a3c",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-215.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-220.json": {
+      "bytes": 25215,
+      "sha256": "3e52d0e3071ef7358c5813d573ba5d6b9ff87e2019f1ffc969d8dc6fc3c18fc4",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-220.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-225.json": {
+      "bytes": 24796,
+      "sha256": "e59cbc3212b37f4513b0bc20d35ceb3b3cca4797c5df2103bab756c11a78604b",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-225.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-230.json": {
+      "bytes": 25008,
+      "sha256": "a112a4860f480d28185f1ffb94b53bcf22d3611c3ffa7f316e08a6672e4c8363",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-230.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-235.json": {
+      "bytes": 28793,
+      "sha256": "5f335f473792080d8d65887fed91d598f08225a3b2491bded077d22dc62417fd",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-235.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-240.json": {
+      "bytes": 25670,
+      "sha256": "6c2fefc7ddbe0f174c7aa835fc889eb79fa55d6309c7963302d01dc8e7217649",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-240.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-245.json": {
+      "bytes": 24305,
+      "sha256": "e2071a51b35727a1c5486a6af9ddd50603d45e4327ed16d32d8a8afc8f2ec0f4",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-245.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-250.json": {
+      "bytes": 25934,
+      "sha256": "ebc3f4ee5cb00a762bbe5b943b961b81ab29f515d8abc844e24d9e65af38baaa",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-250.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-255.json": {
+      "bytes": 22388,
+      "sha256": "ce22a4605489f0f355326dababd71c647bb631ad7ad030139916e3f1d3f6d371",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-255.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-260.json": {
+      "bytes": 25213,
+      "sha256": "b12f529b5f19696904ab3f42f3483c533cf6ec6b64dbb961fc43aeadfbe350f0",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-260.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-265.json": {
+      "bytes": 29568,
+      "sha256": "5724857e0e855a16645c283e5962520e57fd95854a29a0e480cea13124f53808",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-265.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-270.json": {
+      "bytes": 24811,
+      "sha256": "310ef4042dd1ecd3f23d6b40d178e347d260e154322962a0845c63bc2420bed4",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-270.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-275.json": {
+      "bytes": 26417,
+      "sha256": "bf3a3d724c35f05f27e5fcda9f309a7f300c8d69b0048dd8cfbfbd101eb3db34",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-275.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-280.json": {
+      "bytes": 23141,
+      "sha256": "ec1cc52017baa625b70080c871ea0f64a3701d767ae278fa5265cbc2646c8cf7",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-280.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-285.json": {
+      "bytes": 21807,
+      "sha256": "da8f68af96dcad55d50f7fc1de536da503e3b343b916f466b962c28b826ecab4",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-285.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-290.json": {
+      "bytes": 27877,
+      "sha256": "1fbdac691a6ba128d6f75f590fc9b5e9082c46e4dd214efcb5f039bb4632cf7e",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-290.json"
+      }
+    },
+    "raw/local-q4/eng_Latn-295.json": {
+      "bytes": 27154,
+      "sha256": "7183ad9e235fc6736edcbbb5895a299b601d8ce01866dacde38c5b10877a58f1",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/eng_Latn-295.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-000.json": {
+      "bytes": 57520,
+      "sha256": "8825db34824b60d39b7c30030711d0c9f8db728cbffcfdce9b770bad7a0217ef",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-000.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-005.json": {
+      "bytes": 48502,
+      "sha256": "51e9ed2fc40f4e4c30940e090bcd7386986fc94499e9f137301294c7ffb3839d",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-005.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-010.json": {
+      "bytes": 46319,
+      "sha256": "257e50034508f0d95be41881ed04ce968368ba86975c57d79595568dc26db9f3",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-010.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-015.json": {
+      "bytes": 43037,
+      "sha256": "1d86aba7dadd9eed1339681e3d6db1668d3238d6261571eed8b719a32c715438",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-015.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-020.json": {
+      "bytes": 50128,
+      "sha256": "29b7416b98daea07cdb4727e27f7d852dc5df7c9c8d67b5da8dd58c06b50d778",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-020.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-025.json": {
+      "bytes": 46024,
+      "sha256": "5487127a08b99b8418030fafad7f4f94eba08babcfc0c1760cc2ea8eeb8e969b",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-025.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-030.json": {
+      "bytes": 47193,
+      "sha256": "a9a2238ab7405fe00ef13aa896f44dac8996c3c085426887541fc6a3322f87f5",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-030.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-035.json": {
+      "bytes": 45454,
+      "sha256": "f4d61f0dd565770d74cac93c54eb2182cc03077aad2de1d0f18c7e480e84325d",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-035.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-040.json": {
+      "bytes": 45802,
+      "sha256": "1be01581fd0e177f0518f83442f69c56d68f0b226f3c29c50f8b035b120d4064",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-040.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-045.json": {
+      "bytes": 38024,
+      "sha256": "3428b6651270499283fe634cbbbf37f7c80d0423f1fa92f19d8867891453280a",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-045.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-050.json": {
+      "bytes": 44740,
+      "sha256": "6538c57ffa97a36f6e4c082ff1beffce0f0bc14a5713205162ad4ea52b90c6e1",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-050.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-055.json": {
+      "bytes": 52436,
+      "sha256": "844ce0e3e4ad51f4084fe8375c45e3f27b35209c1616a07e53d62be3300d525c",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-055.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-060.json": {
+      "bytes": 51578,
+      "sha256": "c6ec5e612513383f64049310b5407160c76846ffdaa40fbe1155c3192e4c829b",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-060.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-065.json": {
+      "bytes": 53376,
+      "sha256": "b3daec5601d49134b1ef530b2c21f2c266fe7d03bd8d4657c9914e69caf78b13",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-065.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-070.json": {
+      "bytes": 59053,
+      "sha256": "f58660e156d1b00a99459c19a3f449eed24747c12e4e88585e9503e6a164163b",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-070.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-075.json": {
+      "bytes": 48197,
+      "sha256": "7751e29449e553dc37bfa567f6bbe835f6ca06b0f7c24bae78861875d1a595d9",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-075.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-080.json": {
+      "bytes": 44924,
+      "sha256": "3b2725ac0388b76ba4cdf0e55d8b715e96f9f60cfd789ade4c4dec7c5e7752f1",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-080.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-085.json": {
+      "bytes": 48402,
+      "sha256": "fb48fc3e9cd6f6e574e8e9921041a6d5de4f338d51735458d00d3a1505f28bd7",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-085.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-090.json": {
+      "bytes": 42356,
+      "sha256": "0812a7be1d080fe2b39e14514b9636abe878a71d29993adcd1b3d9e85ae21ad0",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-090.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-095.json": {
+      "bytes": 47571,
+      "sha256": "f9bf809e37701ef6411da2c3ba3d98f65a5b7747ec5f5254e369d40f4be3b7c6",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-095.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-100.json": {
+      "bytes": 46841,
+      "sha256": "bf987a8383198e2965fcd9c55119ef5b3df25a82a048074c2d90dd537b362b01",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-100.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-105.json": {
+      "bytes": 48342,
+      "sha256": "efcffe9064f611e357d2351861055073b0088f90624e5c79de3c77d7c8372df3",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-105.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-110.json": {
+      "bytes": 52315,
+      "sha256": "1a154d31ccdda65a752c9f8a0421e18c6a9847518f214e6b04a20b623a4722db",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-110.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-115.json": {
+      "bytes": 55397,
+      "sha256": "933f8b5ae71fd8f69ec75e34489c0c6b00ff39615b3432a799d7835ab36f7798",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-115.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-120.json": {
+      "bytes": 47742,
+      "sha256": "2074c842a0c022d45d0e77f9468ea06b986a664297733d31d09a16dd99b02618",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-120.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-125.json": {
+      "bytes": 53982,
+      "sha256": "3de32f03223f607a33ceb035f6afd5c074102b740607ee5a7f2a988750891c6a",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-125.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-130.json": {
+      "bytes": 61388,
+      "sha256": "980d6305d7ef8f56cf44f4f8e82d79acb1e8e87e77a192bdafd24e46e6b98dcf",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-130.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-135.json": {
+      "bytes": 48239,
+      "sha256": "4d3c6212887e12f4e2dc0c448d93b38fc8055c733f6569db897e3afb2b228477",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-135.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-140.json": {
+      "bytes": 45302,
+      "sha256": "56995e7513060690f599521c4e5a9ae75b13d3d41f8264790828fbc099f107c8",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-140.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-145.json": {
+      "bytes": 45509,
+      "sha256": "39ae9f9e6d9082b84eef6ec0ae621bd0ce06c7e837304e991621b5326fe8b676",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-145.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-150.json": {
+      "bytes": 51961,
+      "sha256": "13c7a58380d19ad6f4a97017fb8f5e0347400adbc89dea4f6179b5b35ff7b381",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-150.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-155.json": {
+      "bytes": 46139,
+      "sha256": "73c6c555a23418155255e9d0d587116f13071540c8757eefcb9cdffefc289316",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-155.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-160.json": {
+      "bytes": 43874,
+      "sha256": "a3bd851e0ed695b042c63852598abe0a98740f94bb78fb94a065a1e4d1a31e6e",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-160.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-165.json": {
+      "bytes": 48006,
+      "sha256": "84690bae7b2b848ba61db77e13a4baa798e2e630c861bdbdcc0077364a2b2884",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-165.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-170.json": {
+      "bytes": 44753,
+      "sha256": "8ad1ffbb018b4291d36ba4aab5ddf2021c5fbca1970024afc33249a27ba42687",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-170.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-175.json": {
+      "bytes": 38899,
+      "sha256": "6c96603f1301fbc9f580023269723fc6866f4b48760362f85527b645ecadc527",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-175.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-180.json": {
+      "bytes": 55494,
+      "sha256": "eebdf5efc0c0fa905ee8933057d29be94e963e51286824a9db745aa595310eb3",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-180.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-185.json": {
+      "bytes": 57934,
+      "sha256": "0116ffc4bb0aac14088b42fee9a2586db47afec4c04a7721fd495312834231d4",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-185.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-190.json": {
+      "bytes": 42282,
+      "sha256": "73a909c7942c7bbe62ca268d8181bb89744813fa5ac4fa83289f7e426216307e",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-190.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-195.json": {
+      "bytes": 54675,
+      "sha256": "ddaff87080a33c91f78a7fa112861a414eddbc325beb4025639210a632c9a873",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-195.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-200.json": {
+      "bytes": 56656,
+      "sha256": "b1c97907abc44a6927308e5a6a9795d3a58109f398c5f91b357966ebe2e53646",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-200.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-205.json": {
+      "bytes": 56050,
+      "sha256": "dd4747e51243081363ae05a93e1c251cbf3d6551fd9955b2e2145360ab25e1a4",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-205.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-210.json": {
+      "bytes": 49466,
+      "sha256": "beb102d18f1c1036ff90152a546cd61938324c7f801cf49ae502b8b9a0a06213",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-210.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-215.json": {
+      "bytes": 50045,
+      "sha256": "67b625a2854d21907c848a9d1f2ef2469a52ab2f2d96021826563fdc25c0effd",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-215.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-220.json": {
+      "bytes": 50130,
+      "sha256": "53abcb1530182a34953a301a59cc031e1dbd2caa16b94b8dd2e276466e126f0f",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-220.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-225.json": {
+      "bytes": 46985,
+      "sha256": "8156ce4e1c1323c8969b5d454b60fd7f6824fd8be3e8a5873937acff837af6ea",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-225.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-230.json": {
+      "bytes": 52508,
+      "sha256": "b95f01f8807fc2d1bd25ee1ed3ff1e7b86741eea34d1f6164656be395bcad7c3",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-230.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-235.json": {
+      "bytes": 58608,
+      "sha256": "4b1a84783bf763e70460436dd1153939d9868b8262a489887d75c77b1927f052",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-235.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-240.json": {
+      "bytes": 49141,
+      "sha256": "6f465956cd6f2a2890546ffd9b3d7ea7408a460ea673336028d6206cb8743500",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-240.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-245.json": {
+      "bytes": 48379,
+      "sha256": "150d0c8798e08d3c521cfbdbd2570f8047ed5f025d15136750497109f5c77a56",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-245.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-250.json": {
+      "bytes": 50493,
+      "sha256": "47ffb5b87dd53c26c88b57de0f4dad0f4dc745cc88e0be66ff5605618a0605b9",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-250.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-255.json": {
+      "bytes": 44134,
+      "sha256": "cfea665d19e2892617e89a6e1dc243cff4251f83afee860965e482d999104947",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-255.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-260.json": {
+      "bytes": 48749,
+      "sha256": "ae84678eef28b0633a0b796be95f5b61f431faf7ad06ec6172c2f9130ee006f8",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-260.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-265.json": {
+      "bytes": 63668,
+      "sha256": "4e887e10982bf4dd15485f85b177a4d607b96353d7558286854141b62c62ada5",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-265.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-270.json": {
+      "bytes": 49925,
+      "sha256": "63b4b51b8e0e6c869e25a5763bff3b4b2d6dce35a629decfcabdf69fcefcb8a2",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-270.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-275.json": {
+      "bytes": 53260,
+      "sha256": "8c53b241c0780138edbfcf8b3c1ef5f8f7637641681cb84ad83ee235c9b64499",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-275.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-280.json": {
+      "bytes": 46275,
+      "sha256": "4e285b9f3e390859a41142ca9cc673373c6f60fde9bee40229c06595399da2c3",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-280.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-285.json": {
+      "bytes": 41831,
+      "sha256": "3d6037e3636aba194fe797cd3e19b882fa1c1918e91fd1479c75600e09ea61b0",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-285.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-290.json": {
+      "bytes": 56038,
+      "sha256": "53427686796b309068f496fb510e488da531cf8e858101cea6aa468054dfa151",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-290.json"
+      }
+    },
+    "raw/local-q4/hin_Deva-295.json": {
+      "bytes": 53911,
+      "sha256": "9861144321478fa0c07672cea293572b311066ec3b59bdc87afa1edf5727b72c",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/hin_Deva-295.json"
+      }
+    },
+    "raw/local-q4/identity.json": {
+      "bytes": 226482,
+      "sha256": "1ae26333cb9041da38008a382cfffebc246562b34c6d9e53bb8c742e61e50c80",
+      "storage": {
+        "archive": "local-q4.tar.gz",
+        "member": "raw/local-q4/identity.json"
+      }
+    },
+    "validated-report.json": {
+      "bytes": 2907276,
+      "sha256": "c1ffee6b6030b1d5beb6c6afe3d855c1e1703df3e2fd6329270b06d55a1941a1",
+      "storage": {
+        "archive": "validated-report.json.gz",
+        "member": null
+      }
+    },
+    "validation/bf16-gguf/client.json": {
+      "bytes": 2682910,
+      "sha256": "6ff1aefebdb4eae13e048b5df4dcc48a952a4771a5ce3c9b2a2d26aca373a1f6",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/bf16-gguf/client.json"
+      }
+    },
+    "validation/bf16-gguf/oracle.json": {
+      "bytes": 782619,
+      "sha256": "9d8459537441d128e5e485364f69dd2f071cd158497d14a1e925f865cce30f28",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/bf16-gguf/oracle.json"
+      }
+    },
+    "validation/bf16-gguf/protocol.md": {
+      "bytes": 3397,
+      "sha256": "af28d2c034a84409317f4d433680d688cd0e95fe2ca62bdf0c7eaf8e78f74c7b",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/bf16-gguf/protocol.md"
+      }
+    },
+    "validation/bf16-gguf/reverse.json": {
+      "bytes": 2682909,
+      "sha256": "c44074057f3f2492b80fe0243c5d8ca908165e3614c8e26c46537fb36e834800",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/bf16-gguf/reverse.json"
+      }
+    },
+    "validation/bf16-gguf/runtime.json": {
+      "bytes": 2626,
+      "sha256": "f405c7da19b898e943d0dfba89465d39c9f04b940fca54c1a2ecb211da38429f",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/bf16-gguf/runtime.json"
+      }
+    },
+    "validation/bf16-gguf/tokens.json": {
+      "bytes": 1234,
+      "sha256": "0833b4917b11ca3b5b49382592a8a19314e8794d02bf415de7d5101e0978023d",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/bf16-gguf/tokens.json"
+      }
+    },
+    "validation/bf16-gguf/validator.py": {
+      "bytes": 13805,
+      "sha256": "3643100897b1552fc827b21dc6e4e8ab5d83aab7ba55128f2d1db9fbe74d90f9",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/bf16-gguf/validator.py"
+      }
+    },
+    "validation/execution-record.json": {
+      "bytes": 105256,
+      "sha256": "905432e1c2e3158d7d579859a91e149cb3e924b331ac7dee613dfb7ba4b0da85",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/execution-record.json"
+      }
+    },
+    "validation/local-q4/client.json": {
+      "bytes": 2682886,
+      "sha256": "7c100b6757644e615b525731582212ecb811713730098176ad4508bcaccd3bdb",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/local-q4/client.json"
+      }
+    },
+    "validation/local-q4/oracle.json": {
+      "bytes": 782396,
+      "sha256": "ad394b1a9542aa084063230973c10e8734dddf08158ea4e26bf95260201a310d",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/local-q4/oracle.json"
+      }
+    },
+    "validation/local-q4/protocol.md": {
+      "bytes": 3397,
+      "sha256": "af28d2c034a84409317f4d433680d688cd0e95fe2ca62bdf0c7eaf8e78f74c7b",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/local-q4/protocol.md"
+      }
+    },
+    "validation/local-q4/reverse.json": {
+      "bytes": 2682885,
+      "sha256": "d8ca8dcefffd93aad988fbd404c679c848678930e4d4e4c3dae372c5982905fa",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/local-q4/reverse.json"
+      }
+    },
+    "validation/local-q4/runtime.json": {
+      "bytes": 2625,
+      "sha256": "ba55c25a5d962a7cf1286c8d151265ebb4ae972c0e970f8c85dc491ab56f013f",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/local-q4/runtime.json"
+      }
+    },
+    "validation/local-q4/tokens.json": {
+      "bytes": 1234,
+      "sha256": "1772136f52a4a21844b049612945a5d5f4b78447dc80a72c51def50dd920fb1e",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/local-q4/tokens.json"
+      }
+    },
+    "validation/local-q4/validator.py": {
+      "bytes": 13805,
+      "sha256": "3643100897b1552fc827b21dc6e4e8ab5d83aab7ba55128f2d1db9fbe74d90f9",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/local-q4/validator.py"
+      }
+    },
+    "validation/preparation.json": {
+      "bytes": 2381,
+      "sha256": "90a9b7fa107c297a853b2b0eb42848e3f8abcdc097497ebbab1bbcee7e8e685f",
+      "storage": {
+        "archive": "validation.tar.gz",
+        "member": "validation/preparation.json"
+      }
+    }
+  },
+  "format": "t1-lossless-tar-gzip-v1",
+  "identity_proof": "Typed JSON equality to report identity; original identity byte hashes captured here",
+  "lock_reference": {
+    "included": false,
+    "path": "/home/shohag/tiny-aya-stage1/pilot/t1-cold-baselines/readiness-2026-10-23/request-lock-v3.json",
+    "sha256": "6dfdd304dcba7bd772c37a7634e74c0c16d1e4b70728be6dcb0e218f3847aa19"
+  },
+  "report_sha256": "c1ffee6b6030b1d5beb6c6afe3d855c1e1703df3e2fd6329270b06d55a1941a1"
+}
