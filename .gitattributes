@@ -14,3 +14,12 @@ scripts/summarize_scoring_variants.py text eol=lf
 tests/test_scoring_variant_report.py text eol=lf
 tests/test_scoring_variant_runner.py text eol=lf
 tests/test_scoring_variant_statistics.py text eol=lf
+scripts/t1_baselines.py text eol=lf
+scripts/prepare_t1_baselines.py text eol=lf
+scripts/check_t1_tokens.py text eol=lf
+scripts/run_t1_baselines.py text eol=lf
+scripts/summarize_t1_baselines.py text eol=lf
+tests/test_t1_runner.py text eol=lf
+tests/test_t1_gate.py text eol=lf
+tests/test_t1_report.py text eol=lf
+results/t1-readiness/**/*.json -text

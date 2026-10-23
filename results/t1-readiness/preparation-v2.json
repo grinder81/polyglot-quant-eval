@@ -1,0 +1,53 @@
+{
+  "status": "offline-ready; live expanded coverage NOT run",
+  "lock_sha256": "27d4164a13c62c61ac43ceecbcb684f5a58c541320e9ce12bceddc2a395f9e04",
+  "provenance": {
+    "original_lock_path": "/home/shohag/tiny-aya-stage1/pilot/sample-lock.json",
+    "original_lock_sha256": "7de16ffcfb75033d1c88ccc6299a00a4df956821f82dec580907539633f1321c",
+    "a3_lock_sha256": "75486c22c0c25f7c6c9d3da6abfaaa0165babf4a5de24970147ab9d1488d9844",
+    "tokenizer_files": {
+      "tokenizer.json": "2227ea9c52e8afb3f98bfed2679008b275f2664de69dfde174b374389eb0225d",
+      "tokenizer_config.json": "fb56a3ef7659346aae196a2ab877355f1e7fd871c36843f709bb2e23c606d972",
+      "special_tokens_map.json": "2b7ce39630f8a18705331a9b32c3b2236e96e7410791f98a9f8b6494e3ab2ea6"
+    },
+    "transformers_version": "5.20.1",
+    "tokenizers_version": "0.23.3",
+    "files": {
+      "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/polyglot-quant-eval/scripts/prepare_t1_baselines.py": "22acc60990f9df2a46673d97f9fe0fbbe93795871c5cd07609fc552552975632",
+      "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/polyglot-quant-eval/scripts/prepare_scoring_variants.py": "e5e214deb62e8cb4b16408363b48be6685b371887a36e3ef7a0f3cc8f8dc20d0",
+      "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/polyglot-quant-eval/scripts/t1_baselines.py": "de6ba357d02b5daa94a0c30a39f3b10d510919f57d572721dfde94b3e1cb71f5",
+      "/home/shohag/tiny-aya-stage1/a3-api-client/client/lib/python3.13/site-packages/transformers/tokenization_utils_tokenizers.py": "afabf78cdb832aacead1ec6d553888d07b6d27fa188a9b15ce34492e9b15aca6"
+    }
+  },
+  "coverage": {
+    "eng_Latn": {
+      "contexts": 300,
+      "candidates": 1200,
+      "max_model_tokens": 325,
+      "longest_indices": [
+        188
+      ]
+    },
+    "ben_Beng": {
+      "contexts": 300,
+      "candidates": 1200,
+      "max_model_tokens": 475,
+      "longest_indices": [
+        188
+      ]
+    },
+    "hin_Deva": {
+      "contexts": 300,
+      "candidates": 1200,
+      "max_model_tokens": 462,
+      "longest_indices": [
+        188
+      ]
+    }
+  },
+  "continuation_tokens": 1,
+  "a3_overlap_contexts": 300,
+  "a3_overlap_candidates_per_arm": 1200,
+  "a3_live_max_model_tokens": 717,
+  "future_gate": "Review expanded longest contexts and novel token boundaries; bounded direct-logit and cold/order gate after explicit collection approval"
+}
