@@ -44,7 +44,10 @@ model x format x quantizer x calibration x runtime x device x task x language.
 
 **Status (23 October 2026).** Fresh original-order BF16 GGUF and local Q4_K_M comparators are complete on 300 Belebele development questions per language (English, Bangla, Hindi): [T1 results and preserved evidence](results/t1-cold-baselines/README.md). [A3](results/a3-scoring-variants/README.md) and its [accepted scoring contract](docs/scoring-contract-a3.md) remain separately identified. A4 human labels and precision-sweep gates remain pending; no holdout, generation or phone claim is made. See `LOG.md`.
 
+**Related work (25 October 2026).** The [research landscape review](docs/research-landscape.md) maps multilingual quantization, calibration, answer instability and community resources to this project's contribution limits and existing gates. It records source-reading depth and unresolved evidence gaps; it does not report new experiments.
+
 **Quick start (existing smoke plumbing).**
+
 The script below is not yet compliant with the Stage 1 protocol: it applies a chat template.
 Complete the scoring-audit task before using it for canonical baseline measurements.
 
