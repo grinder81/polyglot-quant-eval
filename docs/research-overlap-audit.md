@@ -48,6 +48,14 @@ Read depth: abstract, Section III-B/C, Sections IV-A–D, and the initial result
 
 The paper compares full-vocabulary prompt-boundary distributions using TVD and JSD, separately from candidate-sequence accuracy. It examines five architectures, four benchmarks and multiple llama.cpp precisions. Its “total flips” means harmful plus beneficial correctness transitions, not every changed answer. It explicitly limits divergence to fidelity relative to BF16, without establishing correctness, safety or perceived quality. This precedes a distribution-sensitive GGUF evaluation contribution; adding TVD/JSD alone would be incremental. Its prompt-boundary diagnostic also differs from Dutta et al.'s option-token-averaged KL and from this repository's letter-score margins: these values must not be treated as interchangeable.
 
+### Unsloth Dynamic GGUFs — maintainer documentation
+
+[Dynamic 2.0 documentation](https://docs.unsloth.ai/basics/unsloth-dynamic-2.0-ggufs); [Dynamic 3.0 documentation](https://unsloth.ai/docs/basics/dynamic-3.0-ggufs.md). Added in the second pass of 25 October.
+
+Read depth: both documentation pages. No code, imatrix file, selection algorithm or quantized artifact was audited; the pages are mutable and undated apart from an April 2026 update note, and no snapshot was pinned.
+
+The documentation describes selecting the quantization type of every possible layer per model to reduce divergence from BF16 at small size cost, motivated explicitly by Dutta et al.'s flips argument against accuracy-only comparison. Quality is reported as mean KL divergence and top-1 agreement against BF16 on held-out text, a 300-prompt greedy-decoding divergence set that includes non-Latin prompts, and, for the 2.0 generation, a reproduced 5-shot MMLU harness. The 3.0 generation uses a refined imatrix calibration set described as multilingual, released publicly, with no QAT. No per-language results, no uniform or random-allocation ablation and no equal-measured-bytes comparison are published, so the benefit of the layer selection cannot be isolated from the pages. Per-tensor allocation in GGUF is therefore established practice; this project's differentiator is the language dimension, the uniform and seeded-random controls, equal measured shipped bytes and paired uncertainty, not the mechanism. Cite it as a precedent rather than as a validated method.
+
 ## Metric contract needed in this project
 
 For matched single-answer MCQ items, let H count baseline-correct/candidate-wrong items, B baseline-wrong/candidate-correct items, and W items where both are wrong but choose different answers. With N matched items:
@@ -73,4 +81,4 @@ Keep claims bounded to measured models, languages, tasks, formats and devices. C
 
 ## Remaining audit work
 
-Before manuscript positioning, pin FlipEval to a commit and inspect its implementation/paper; read the final Dutta proceedings PDF and the relevant full appendices of the 2026 studies; follow primary references on multilingual quantization and calibration; and update the overlap map against the actual completed experiments. This targeted set cannot establish that no other matching study exists. The main synthesis should combine this audit with the broader primary-source and community ledgers, keeping evidence depth visible.
+Before manuscript positioning, pin FlipEval to a commit and inspect its implementation/paper; pin a dated snapshot of the Unsloth documentation and imatrix release; read the final Dutta proceedings PDF and the relevant full appendices of the 2026 studies; follow primary references on multilingual quantization and calibration; and update the overlap map against the actual completed experiments. This targeted set cannot establish that no other matching study exists. The main synthesis should combine this audit with the broader primary-source and community ledgers, keeping evidence depth visible.

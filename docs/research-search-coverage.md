@@ -21,6 +21,7 @@ Discord was used to discover topics and public links. Primary papers, author rep
 | Research advice/resources | First page of channel search | Research process and mentorship discussion; no additional compression evidence retained from that page. |
 | Find collaborators | `in:find-collaborators quantization` | No results returned for that exact query; other terms/history remain unexhausted. |
 | Public web and linked citations | Multilingual calibration; language-aware mixed precision; Bangla quantization; answer flips/churn; regional-language quantization; source-ledger follow-ups | Direct overlaps beyond the original Discord pass, notably TASA, Bangla evaluation, Bavarian comparison and FlipEval. |
+| Second-pass public web, 25 October | Language-aware repair of quantized models; calibration language in pruning; per-tensor GGUF allocation precedents; K-quant degradation curves; Indic imatrix pilots; Belebele under quantization; multilingual KV-cache quantization; language-neuron-guided allocation | Added Language-Conditional Dequantization, Kurz et al., Unsloth Dynamic GGUFs, the llama.cpp K-quant evaluation of Llama-3.1-8B and the indic-quant pilot; surfaced the Belebele and Hindi tables inside Marchisio et al. Not found: language-neuron-guided precision allocation, any multilingual KV-cache quantization evaluation, any per-language Tiny Aya GGUF benchmark. Absence in this bounded search is not evidence of absence. |
 
 The review stops at an actionable, documented source set with explicit gaps, rather than presenting an unbounded search as complete. Older pages, recordings without inspected transcripts, gated datasets, private documents and external code execution remain outside the verified evidence. Result counts can include quoted replies and change while searching; they are not unique-paper counts.
 
@@ -84,6 +85,7 @@ Private annotation trackers, unpublished steering and code-mixing proposals, per
 - Pin mutable code/schema/dataset revisions before adoption. Audit FlipEval's resampling unit against passage dependence and Every Eval Ever's provenance fields.
 - Obtain public artifact identities for close Tiny Facade comparisons before interpreting their reported direction against T1.
 - Check licenses, semantic equivalence, human validation and pool contamination before adding any Bengali/Indic task. The inaccessible SA-LLM benchmark is a lead, not available evidence.
+- Language-Conditional Dequantization covers Hindi but not Bengali, only INT3 GPTQ, and compares against a language-agnostic adapter on one model and four languages; its final version and any Bengali follow-up should be checked before quotation. The Unsloth selection method and imatrix composition are undocumented and unpinned.
 - Re-run a focused novelty search against the eventual intervention and completed results. No paper set can certify absence of prior work.
 
 The [main review](research-landscape.md) maps these gaps to the existing experiment gates. No follow-up listed here implies permission for new inference or a protocol change.
