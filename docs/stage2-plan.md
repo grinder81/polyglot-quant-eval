@@ -43,3 +43,7 @@ Older Mac and kernel tasks remain supporting backlog, not gates on this sequence
 ## 23 October 2026 status addendum
 
 Fresh T1 affected comparator arms are complete under new cold-runtime identities: 300 original-order development questions per language, BF16 GGUF and local Q4_K_M. See [complete results and evidence](../results/t1-cold-baselines/README.md). This supersedes the prospective baseline status above, preserving its historical measurements. The original BF16 vLLM reference remains separate. A4 human labels and all remaining B5/B6 prerequisites remain gates; no sweep or holdout scoring is implied.
+
+## 26 October 2026 amendment: A4 and T3 sequencing
+
+The user decided on 26 October 2026 that T3, the staged precision curve that opens B5, may build and run inference before the A4 human negation labels are merged. Until the adjudicated labels are merged with a recorded hash, no negation-slice analysis of any arm, T1 or T3, is computed, read or reported. The sealed analyses are named in the [T3 preregistration](t3-preregistration.md) and run once, after the labels, on the frozen rows. A4's acceptance criteria and its human-only labelling rule are unchanged, and B5's other prerequisites still apply: the committed preregistration, per-build readiness gates and a separate collection authorization. The same day's decisions on the allocation operating point, the byte ceiling, endpoint roles, the meaningful margin, Tiny Aya Fire, adaptation and the T3 precision points are recorded in that preregistration; none of them changes a governing gate above.
