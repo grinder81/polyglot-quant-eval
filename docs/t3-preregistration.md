@@ -63,6 +63,7 @@ For each build `b` and each language, on the 300 development questions:
 - Predicted-letter histograms against gold 72/92/72/64.
 - Margin association: the fresh BF16 top-two summed-score margin per question, with the fixed bins [0, 0.25), [0.25, 0.5), [0.5, 1), [1, 2), [2, ∞) nats from [the margin analysis](margin-flip-analysis.md); per bin, the count of questions and the count whose selected option differs from BF16 (and separately from Q4_K_M).
 - Candidate-score and margin deltas versus BF16 as descriptive distributions.
+- Per-language KL fidelity (decision D12, 30 October): for every build and language, mean per-token KL(BF16 ‖ build) over the prompt tokens of the 900 development questions (excluding BOS), computed in-process on the direct-logit path with float64 full-vocabulary log-softmax, averaged over tokens within a question and then over questions, with the p50 and p95 over questions, plus the top-1 agreement rate. Descriptive, reported beside accuracy, never in place of it; it enters no success criterion. The BF16 reference logits are computed once and reused across builds.
 
 Uncertainty: paired bootstrap over the 250 source clusters, jointly resampled across languages and arms, 10,000 draws, seed 42, percentile 95% intervals, exactly as in T1 (`scripts/compare_expanded.compare_rows` and `scripts/summarize_t1_baselines.paired_report`). Margin-bin counts are descriptive and carry no intervals. Multiple endpoints are reported together without a multiplicity-adjusted confirmatory claim; T3 is development evidence.
 
@@ -101,6 +102,8 @@ Recorded here so they are frozen before any curve result is seen; they bind C10,
 - Secondary endpoint: the B6 generation protocol (absolute task success, naturalness, wrong-language flag, pairwise preference) with blinded Bangla human judgment, frozen separately before any generation.
 - Meaningful benefit: a per-language accuracy gain of at least 3.00 pp on the primary endpoint over the best equal-byte control. Positive: the paired 95% interval's lower bound exceeds 0 and the point estimate is at least 3.00 pp. Null: the interval's upper bound is below 3.00 pp. Inconclusive: neither; reported as inconclusive, never as "allocation does not work".
 - Instrument limit, stated in advance: with 300 questions per language the paired half-width is about 3 pp, so the Belebele arm may be inconclusive. The development set is not expanded for Article 2.
+- C10 arm set (decision D9, 30 October): Bangla-informed, English-informed and pooled-multilingual-informed allocations built by the same procedure; the llama.cpp default at the file type; uniform (`--pure`); three seeded random allocations; all within the frozen equal-byte tolerance. Primary contrast: Bangla-informed versus English-informed on the Bangla primary endpoint; the others are secondary contrasts and controls. The probe, cost-table, knapsack and export machinery is prior art and is cited, not claimed.
+- C8 and C9 commitments (decisions D10 and D11, 30 October), to be written into their own preregistrations before those stages: a preregistered metric-comparison pilot (measured degrade-one KL with the pinned quantizer, per-weight diagonal Fisher, activation-weighted proxy; per language; fixed quantizer calibration; disjoint probe, calibration and evaluation text; repeated probe sampling) decides whether a cheap score may replace the measured scan; C9 validates rank agreement among equal-budget builds separately from magnitude error, with the provisional 0.7 criterion attached to the equal-budget ranking.
 
 ## 10. Scope decisions carried (D6, D7)
 
@@ -123,6 +126,8 @@ After the labels are merged, these run once on the frozen T1 and T3 rows, with t
 4. IQ3_S as the stage-3 point rather than IQ3_M or IQ3_XS.
 5. Optional densification near the expected operating point (Q4_K_S, Q5_K_S) as a further stage; not required by the decisions and not planned unless the user adds it.
 6. Whether `scripts/archive_t1_baselines.py` is generalized for N arms or a sibling script is written; either way the archive format and verification command are recorded in the results README.
+7. The KL fidelity computation in §6: confirm the token scope (prompt tokens excluding BOS), the direction KL(BF16 ‖ build), and that the direct-logit path is run for all 900 prompts per build rather than the 12-context gate subset; record its wall-clock cost after the first build.
+8. The §9 C10 arm set and the C8/C9 commitments are recorded here for traceability; they bind C8–C10 and are restated in those stages' own preregistrations, which are separate review items.
 
 ## 13. What this document does not do
 
