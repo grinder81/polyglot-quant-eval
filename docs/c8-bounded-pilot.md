@@ -1,0 +1,45 @@
+# Bounded language sensitivity pilot specification
+
+Prepared 1 November 2026 for [protocol48](https://github.com/grinder81/polyglot-quant-eval/issues/48) and existing [C8](https://github.com/grinder81/tiny-aya-edge/issues/25). Status: executable design pending exact-commit review and freeze, before comparative C8 outcomes. T3 numerical gates and the complete staged development curve precede operating-point selection. This pilot screens the value of a larger study; it does not establish the final task or generation benefit.
+
+## Samples and evidence budgets
+
+Use OPUS TED2020 v1, with the exact locally frozen pool SHA256 `c17a79fede7ff993f247d4a23cce533ea796887b0ce416c227407bc471997fd3`, produced by `scripts/prepare_ted_pilot_pool.py`. The pinned bn-en/en-hi archives have exact English sentence/document alignment. There are59 eligible shared talks and19 selected talk groups. No TED source domain occurs in development or reserved holdout membership. The earlier FLORES dev candidate was rejected:964/997 sentences share a protected source; its remaining long parallel sources are insufficient. Source separation is not proof against quotations, near-duplicates across domains or pretraining exposure.
+
+One talk is reserved exclusively for the completed G1 Fisher profile. Each of three repetitions has three construction talks and three different probe talks. All19talk groups are distinct. For each talk, the same aligned English/Bangla/Hindi sentence span supplies a prefix of64model content tokens plus one BOS, without padding or appended EOS. Fixed token budgets do not guarantee identical semantic coverage after truncation. Construction supplies cheap proxies; separate probe talks supply measured native KL. Belebele remains task development, and final holdout outcomes stay sealed.
+
+Within a repetition every individual-language arm uses all three matching sources,192content tokens. The pooled arm uses source0 in English, source1 in Bangla and source2 in Hindi,64tokens each, also192total. Hindi is measured as a diagnostic language and contributes to pooled evidence. Average tokens within examples, then examples within each arm. Publication exports identifiers and hashes rather than TED transcript extracts.
+
+## Fixed tensor subset and formats
+
+Use these eight unique stored tensors: `token_embd.weight`; `blk.0.attn_v.weight`; `blk.3.attn_v.weight`; `blk.0.ffn_down.weight`; `blk.17.ffn_down.weight`; `blk.35.ffn_down.weight`; `blk.17.ffn_gate.weight`; `blk.17.ffn_up.weight`. This spans the tied embedding/output, local/global attention, early/middle/late MLP-down and gate/up roles. It is a fixed diagnostic subset, not a claim that these are the most important sites.
+
+After the English-only T3 rule selects the operating point, inspect its actual type for `blk.17.ffn_gate.weight`. If it is Q4_K or a format using more than144bytes per256weights, use native formats Q3_K and Q4_K. Otherwise use Q2_K and Q3_K. Freeze that mechanically derived choice and inventory before comparative probes. No language outcome chooses the formats. Both format pairs are supported without an importance matrix by the pinned quantizer; validate actual exported bytes and native dequantization before scoring.
+
+Each degrade-one diagnostic contains the BF16 control's other tensors unchanged, with one tensor quantized by the real pinned exporter. Use Q4_K_M as the command's activating file-type flag, a first exact-name target override and a subsequent all-other-weights BF16 override; the pinned quantizer ignores general tensor overrides with BF16 as the command file type. Verify the complete resulting inventory and unchanged non-target payload hashes. Diagnostic files can exceed2.2GB. File-type metadata is recorded beside the actual mostly-BF16 inventory so it cannot be mistaken for a shipped Q4 model. No generic fake rounding supplies the measured costs.
+
+## Measured native endpoint and cheap proxies
+
+Measured cost is mean per-token KL(BF16 || diagnostic) on probe text, float64 normalization in chunks of at most8rows, evaluated in the pinned T1 native runtime. For BOS plus64content tokens, compare logit rows0through63. Verify native IDs against the frozen pool, use cold prefill and retain source-level values, top1agreement, file/runtime/implementation hashes and timing. Cache the BF16 reference once. No task labels are used.
+
+The Fisher score is one half the sum over weights of quantization-error squared times the average squared per-example gradient. For each construction example differentiate mean next-token NLL over its64content tokens; square gradients before averaging examples. This is sequence-level empirical Fisher, not token-wise Fisher or an exact KL Hessian. The float32/eager HF proxy path has TF32 disabled, uses the pinned checkpoint, and must exactly match all eight selected matrices to the BF16 GGUF values and all token IDs. Freeze other parameters, do no optimizer steps, and record tied embedding/output gradient sharing. Whole-runtime HF/native equality is not assumed.
+
+The activation proxy is the mean squared linear-output-error approximation: sum of per-weight squared quantization error multiplied by the corresponding mean squared input activation. Use predictor positions0through63. For the tied embedding include lookup-row frequency and the final-head input contribution; report those two components separately as well as their sum. The proxies' rankings, rank uncertainty and magnitude mismatch with measured native KL are descriptive. This small pilot cannot authorize replacing measured KL with a proxy.
+
+## Feasible precision choices and the repetition gate
+
+Prespecify four pairs: attentionV at blocks0/3; MLP-down at blocks0/17; MLP-down at blocks17/35; MLP gate/up at block17. For each equal-shape pair compare two restricted maps: higher format on the first/lower on the second, or the reverse. Lock every other tensor to the selected operating-point inventory. Calculate exact native bytes before language probes; only pairs whose two maps have identical bytes and remain within the operating-point shipped-byte budget are eligible. Both maps must also satisfy2.2GB. Keep all infeasible pairs in the report. No padding or post-outcome compensation is permitted.
+
+Discovery uses repetitions1and2. For a pair define the language's predicted preference margin as the decrease in degrade-one KL from raising the first tensor's precision minus the corresponding decrease for the second. A positive margin prefers higher precision on the first tensor. A pair is nominatable only if BN and EN have opposite preference signs in both discovery repetitions, each language retains its sign across repetitions, and every absolute margin exceeds1e-5nats per content token. This epsilon screens numerical triviality; it is not a threshold for task importance.
+
+Nominate at most one eligible pair, taking the first in the fixed order above. Before inspecting any repetition3comparative results, write an immutable nomination receipt with the pair, discovered signs and evidence hashes, or explicitly record no nominee. Repetition3may provide descriptive tables even when no pair is nominated; it cannot nominate a new pair after discovery.
+
+For a nominated pair, export both complete restricted maps from BF16 using the locked native layout, verify identical actual file bytes and that only the pair's format assignments differ, then measure their native KL on repetition3probe sources. Call the screen promising only if the complete maps reproduce the nominated opposite BN/EN preference directions, each with absolute difference above1e-5nats per token. Report actual margins, pooled/Hindi diagnostics, all discovery costs and all repetition3results. Compare additive predictions with complete-map differences separately.
+
+## Resource cap and decision
+
+Use one GPU owner. Cap G3 native builds and probes at90minutes and proxy collection at30minutes, with a400GB cumulative local artifact cap. Record actual timing and memory. Preserve partial failures and stop rather than reducing sample counts, changing tensors or relaxing gates after seeing outcomes. Chunk the large embedding error/gradient products so full float64 weight accumulators are unnecessary.
+
+Proceed means the nominated actual maps pass the independent sample screen and the full task/generation study remains feasible with the known precision limits. Inconclusive means an affordable valid screen fails to produce reproducible language preferences or lacks enough information; it does not establish language equivalence. Do not proceed with this implementation means native export, exact-byte, data-isolation or resource requirements fail. G4 reports which condition occurred. Final allocation success still requires C9/C10 task comparisons, genuine B6 review and once-only frozen confirmation later.
+
+Exact MLP channel rebalancing is the alternative next experiment, with its own pre-quantization equivalence and fixed-format comparisons. It is not combined with these allocations. No weight training, pruning, attention replacement, A4 slice or holdout scoring belongs to this bounded pilot.
