@@ -1,6 +1,6 @@
 # Bounded language sensitivity pilot specification
 
-Prepared 1 November 2026 for [protocol48](https://github.com/grinder81/polyglot-quant-eval/issues/48) and existing [C8](https://github.com/grinder81/tiny-aya-edge/issues/25). Status: executable design pending exact-commit review and freeze, before comparative C8 outcomes. T3 numerical gates and the complete staged development curve precede operating-point selection. This pilot screens the value of a larger study; it does not establish the final task or generation benefit.
+Prepared 1 November 2026 for [protocol48](https://github.com/grinder81/polyglot-quant-eval/issues/48) and existing [C8](https://github.com/grinder81/tiny-aya-edge/issues/25). Status: frozen design after Astra approved exact content at commit6e72eb3 without scientific/protocol blockers. This status update changes no experimental rule. Record the resulting Git blob before comparative outcomes; the mechanically derived formats and eligible maps are recorded after the complete T3 curve and before C8 measurement. T3 numerical gates and the complete staged development curve precede operating-point selection. This pilot screens the value of a larger study; it does not establish the final task or generation benefit.
 
 ## Samples and evidence budgets
 
