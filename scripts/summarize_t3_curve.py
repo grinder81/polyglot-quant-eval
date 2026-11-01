@@ -15,6 +15,20 @@ def read(path):
     return json.loads(Path(path).read_text())
 
 
+def require_final_stages(outcomes):
+    required={'diag-q6k','diag-q3km'}
+    if not required<=outcomes.keys():
+        raise ValueError('Final curve lacks stage1')
+    stop=any(outcomes[name]['vs_bf16']['languages']['eng_Latn']['candidate_correct']<=185 for name in required)
+    later={'diag-q3ks','diag-q2k','diag-iq3s'}
+    if stop and outcomes.keys() & later:
+        raise ValueError('Smaller stages collected after stage1 descent stop')
+    if not stop and not later<=outcomes.keys():
+        # IQ3_S is larger than both stage2 builds, so a stage2 descent stop
+        # does not exclude it under the frozen actual-byte rule.
+        raise ValueError('Final curve lacks required later stages')
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--t1-report',type=Path,required=True)
@@ -71,6 +85,7 @@ def main():
             t1['fresh_paired_GGUF']['languages'][l]['changed_choices'] for l in ('eng_Latn','ben_Beng','hin_Deva')}
     point=None
     if a.final:
+        require_final_stages(outcomes)
         if not all(name in fidelity for name in evidence) or 'local-q4' not in fidelity:
             raise ValueError('Final operating-point report needs complete fidelity endpoints')
         options=[dict(arm=name,bytes=evidence[name]['build']['output_bytes'],
