@@ -3,6 +3,7 @@ import argparse
 import gzip
 import hashlib
 import json
+import math
 from pathlib import Path
 
 from scripts.run_t3_baselines import identity
@@ -27,6 +28,35 @@ def require_final_stages(outcomes):
         # IQ3_S is larger than both stage2 builds, so a stage2 descent stop
         # does not exclude it under the frozen actual-byte rule.
         raise ValueError('Final curve lacks required later stages')
+
+
+def margin_bins(reference,candidate,q4):
+    def index(rows):
+        return {(r['language'],r['source'],str(r['question'])):r for r in rows}
+    ref,other,old=index(reference),index(candidate),index(q4)
+    if ref.keys()!=other.keys() or ref.keys()!=old.keys():
+        raise ValueError('Margin-bin membership differs')
+    edges=(0.,.25,.5,1.,2.,math.inf)
+    result={}
+    for language in ('eng_Latn','ben_Beng','hin_Deva'):
+        bins=[dict(lower=edges[i],upper=edges[i+1] if math.isfinite(edges[i+1]) else None,n=0,
+            flips_vs_bf16=0,flips_vs_q4=0) for i in range(5)]
+        for key,row in ref.items():
+            if key[0]!=language:
+                continue
+            scores=sorted(row['scores'],reverse=True)
+            margin=scores[0]-scores[1]
+            chosen=next(i for i in range(5) if edges[i]<=margin<edges[i+1])
+            bins[chosen]['n']+=1
+            bins[chosen]['flips_vs_bf16']+=other[key]['prediction']!=row['prediction']
+            bins[chosen]['flips_vs_q4']+=other[key]['prediction']!=old[key]['prediction']
+        low_n=sum(x['n'] for x in bins[:3]);high_n=sum(x['n'] for x in bins[3:])
+        low_flips=sum(x['flips_vs_bf16'] for x in bins[:3]);high_flips=sum(x['flips_vs_bf16'] for x in bins[3:])
+        result[language]=dict(bins=bins,sub1_n=low_n,atleast1_n=high_n,
+            sub1_flip_rate=low_flips/low_n if low_n else None,
+            atleast1_flip_rate=high_flips/high_n if high_n else None,
+            more_than_half_flips_sub1=low_flips>high_flips)
+    return result
 
 
 def main():
@@ -65,6 +95,7 @@ def main():
         score_delta=historical_comparison(reference,candidate,replicates=10000)
         outcomes[name]=dict(vs_bf16=paired_report(reference,candidate,replicates=10000),
             vs_local_q4=paired_report(q4,candidate,replicates=10000),
+            bf16_margin_bins=margin_bins(reference,candidate,q4),
             descriptive_score_margin_deltas_vs_bf16=score_delta['descriptive_distributions'])
     fidelity={}
     for name,directory in a.fidelity:
@@ -83,6 +114,11 @@ def main():
     if 'diag-q6k' in outcomes:
         predictions['P3']={l:outcomes['diag-q6k']['vs_bf16']['languages'][l]['changed_choices']<
             t1['fresh_paired_GGUF']['languages'][l]['changed_choices'] for l in ('eng_Latn','ben_Beng','hin_Deva')}
+    smaller={name:data for name,data in outcomes.items() if evidence[name]['build']['output_bytes']<=2143976960}
+    predictions['P2']={name:{lang:data['bf16_margin_bins'][lang]['sub1_flip_rate']>
+        data['bf16_margin_bins'][lang]['atleast1_flip_rate'] for lang in ('eng_Latn','ben_Beng','hin_Deva')} for name,data in smaller.items()}
+    predictions['P4']={name:all(data['vs_bf16']['languages']['eng_Latn']['changed_choices']<=
+        data['vs_bf16']['languages'][lang]['changed_choices'] for lang in ('ben_Beng','hin_Deva')) for name,data in smaller.items()}
     point=None
     if a.final:
         require_final_stages(outcomes)
