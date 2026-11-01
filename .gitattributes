@@ -5,6 +5,9 @@ results/article2-pilot/*.json -text
 scripts/run_t3_baselines.py text eol=lf
 scripts/summarize_t3_curve.py text eol=lf
 scripts/archive_t3_arm.py text eol=lf
+scripts/archive_t3_fidelity.py text eol=lf
+scripts/validate_t3_fidelity.py text eol=lf
+tests/test_t3_fidelity_validation.py text eol=lf
 scripts/plan_pilot_precision.py text eol=lf
 scripts/prepare_compression_pilot_pool.py text eol=lf
 scripts/prepare_ted_pilot_pool.py text eol=lf
