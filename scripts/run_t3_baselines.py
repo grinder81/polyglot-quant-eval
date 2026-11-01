@@ -14,6 +14,7 @@ from scripts.run_scoring_variants import sha
 from scripts.summarize_scoring_variants import verify_files
 
 LOCK_SHA='6dfdd304dcba7bd772c37a7634e74c0c16d1e4b70728be6dcb0e218f3847aa19'
+ARM_TYPES={'diag-q6k':'Q6_K','diag-q3km':'Q3_K_M','diag-q3ks':'Q3_K_S','diag-q2k':'Q2_K','diag-iq3s':'IQ3_S'}
 
 
 def identity(config):
@@ -23,6 +24,8 @@ def identity(config):
     require(sha(paths['lock'])==LOCK_SHA,'Wrong frozen T1 request lock')
     rows=validate_lock(read(paths['lock']))
     runtime,build,tokens,old_runtime,previous=[read(paths[k]) for k in ('runtime','build','token_check','t1_runtime','t1_identity')]
+    require(paths.get('arm') in ARM_TYPES and runtime.get('arm')==paths['arm'] and
+            build.get('file_type')==ARM_TYPES[paths['arm']],'T3 arm label and quantization format disagree')
     model=runtime['server_command'][runtime['server_command'].index('--model')+1]
     original_model=old_runtime['server_command'][old_runtime['server_command'].index('--model')+1]
     require(build['status']=='complete' and model==build['output_path'] and

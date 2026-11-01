@@ -9,6 +9,15 @@ from scripts import run_t3_baselines as runner
 
 
 class T3CheckpointTests(unittest.TestCase):
+    def test_changed_arm_cannot_relabel_valid_q6_artifacts(self):
+        paths={key:key for key in ('lock','runtime','build','token_check','t1_runtime','t1_identity','t1_client','t1_oracle','tokenizer')}
+        paths['arm']='diag-q3km'
+        values={'config':paths,'runtime':{'arm':'diag-q6k'},'build':{'file_type':'Q6_K'},
+                'token_check':{},'t1_runtime':{},'t1_identity':{},'lock':{}}
+        with patch.object(runner,'read',side_effect=lambda path:values[str(path)]),patch.object(runner,'sha',return_value=runner.LOCK_SHA),patch.object(runner,'validate_lock',return_value=[]):
+            with self.assertRaisesRegex(ValueError,'arm label and quantization format disagree'):
+                runner.identity('config')
+
     def test_saved_identity_change_stops_before_any_endpoint(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)
