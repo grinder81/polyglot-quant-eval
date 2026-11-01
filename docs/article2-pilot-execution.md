@@ -32,6 +32,8 @@ For future confirmation, retain both language-informed finalists and the frozen 
 
 ## Resource and evidence rules
 
+The user's later instruction adds an account-usage stop condition: monitor remaining weekly allowance and, if it drops below10%, preserve a resumable checkpoint, launch no new operations and pause this goal. This is separate from the scientific/resource stop rules. Collection is divided into complete shard/question batches without changing the frozen scoring or KL implementations. The account meter is shared across chats; no allowance reset is authorized.
+
 Use one GPU owner and inspect current processes before each launch. Preserve historical artifacts, failed evidence and immutable run identities. A competing process is not permission to terminate unrelated work. Build provenance includes the existing pinned native quantizer, exact command, binary/source hashes, output SHA256, measured bytes and tensor inventory. Weights and credentials never enter Git.
 
 KL is KL(BF16 || candidate), descriptive beside task results. The profile must establish a bounded chunk/cache strategy and validate it against a full-array oracle. At vocabulary size 262144, float32 logits occupy 1 MiB per token; full-dataset caching needs an explicit disk budget. Distinguish raw logits, normalized log probabilities and numerical precision. Fisher means an average of squared per-example gradients under a specified objective and normalization, not the square of an averaged gradient. A resource failure is recorded rather than silently changing the estimator.
