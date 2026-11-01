@@ -6,6 +6,7 @@ from pathlib import Path
 from statistics import mean
 
 from scripts.c8_pilot_decision import EPS,LANGS,nominate,read,sha,table
+from scripts.validate_c8_reports import native,proxy
 
 
 def ranks(values):
@@ -86,21 +87,25 @@ def confirmed_pair(report,plan,nomination,nomination_path):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    for key in ('plan','discovery','nomination','confirmation-diagnostics','proxy-discovery','proxy-confirmation','output'):
+    for key in ('plan','discovery','nomination','reference-discovery','reference-confirmation','confirmation-diagnostics','proxy-discovery','proxy-confirmation','output'):
         p.add_argument('--'+key,type=Path,required=True)
     p.add_argument('--pair-confirmation',type=Path)
     a=p.parse_args()
     if a.output.exists():
         raise FileExistsError(a.output)
     plan=read(a.plan)|{'_sha256':sha(a.plan)}
-    first=table(read(a.discovery),plan,[1,2])
+    native(a.reference_discovery,plan,[1,2],'reference')
+    discovery=native(a.discovery,plan,[1,2],'diagnostics',reference=a.reference_discovery)
+    first=table(discovery,plan,[1,2])
     nominee=read(a.nomination)
     rebuilt=nominate(plan,first)
     if nominee['plan_sha256']!=sha(a.plan) or nominee['discovery_report_sha256']!=sha(a.discovery) or any(nominee[k]!=rebuilt[k] for k in rebuilt):
         raise ValueError('Discovery nomination cannot be reconstructed')
-    third=table(read(a.confirmation_diagnostics),plan,[3])
+    nomination_sha=sha(a.nomination)
+    native(a.reference_confirmation,plan,[3],'reference',nomination_sha)
+    third=table(native(a.confirmation_diagnostics,plan,[3],'diagnostics',nomination_sha,a.reference_confirmation),plan,[3])
     costs=first|third
-    predicted=proxies(read(a.proxy_discovery),plan,[1,2])|proxies(read(a.proxy_confirmation),plan,[3])
+    predicted=proxies(proxy(a.proxy_discovery,plan,[1,2]),plan,[1,2])|proxies(proxy(a.proxy_confirmation,plan,[3],nomination_sha),plan,[3])
     labels=sorted(e['tensor']+'::'+e['native_type'] for e in plan['diagnostics'])
     subsets={'all':labels}|{kind:[label for label in labels if label.endswith('::'+kind)] for kind in plan['formats'].values() if kind in (plan['formats']['lower'],plan['formats']['higher'])}
     agreement={}
@@ -121,7 +126,7 @@ def main():
     if nominee['pair'] is not None:
         if not a.pair_confirmation:
             raise ValueError('Nominated pair requires actual complete-map confirmation')
-        confirmation=confirmed_pair(read(a.pair_confirmation),plan,nominee,a.nomination)
+        confirmation=confirmed_pair(native(a.pair_confirmation,plan,[3],'pair',nomination_sha,a.reference_confirmation),plan,nominee,a.nomination)
         status='promising_screen' if confirmation['promising'] else 'inconclusive'
     else:
         if a.pair_confirmation:
@@ -130,7 +135,8 @@ def main():
     result=dict(schema='c8-bounded-decision-v1',status=status,nomination=nominee,confirmation=confirmation,
         proxy_rank_agreement=agreement,raw_score_ranges=ranges,
         native_cost_table=[dict(repeat=r,language=lang,tensor_format=label,mean_kl_nats=costs[r,lang,label]) for r in (1,2,3) for lang in LANGS for label in labels],
-        inputs={key:sha(getattr(a,key)) for key in ('plan','discovery','nomination','confirmation_diagnostics','proxy_discovery','proxy_confirmation')},
+        inputs={key:sha(getattr(a,key)) for key in ('plan','discovery','nomination','reference_discovery','reference_confirmation','confirmation_diagnostics','proxy_discovery','proxy_confirmation')},
+        budget_ledger_sha256=sha(Path(plan['artifact_workspace'])/'resource-ledger.json'),
         implementation_sha256=sha(__file__),
         interpretation='Investment screen on three short source samples. Repeat ranges are descriptive, not confidence intervals or evidence of generality. Sequence Fisher and activation magnitudes are uncalibrated proxies; no absolute-KL or proxy-substitution claim. Full task/generation and final confirmation remain future work.')
     if a.pair_confirmation:

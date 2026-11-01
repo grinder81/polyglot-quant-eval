@@ -104,7 +104,7 @@ def main():
             '5823bd1e52be1027a7ba6f31b43edfd40ae1766020cddec967f0d76618948290' if name=='local-q4' else None)
         if expected is None or name in fidelity:
             raise ValueError('Unknown or duplicate fidelity arm')
-        runtime_sha=evidence[name]['identity']['inputs']['runtime'] if name in evidence else None
+        runtime_sha=evidence[name]['identity']['inputs']['runtime'] if name in evidence else t1['provenance']['fresh']['local-q4']['identity']['runtime_sha256']
         fidelity[name]=validate_fidelity(directory,rows,expected,frozen['inputs']['lock'],runtime_sha)
     predictions={}
     if 'diag-q3km' in outcomes:
