@@ -1,0 +1,503 @@
+{
+  "schema": "compression-pilot-pools-v1",
+  "corpus": "OPUS TED2020 v1",
+  "archives": {
+    "bn-en": {
+      "sha256": "e5461d5f1a1dc89960359e6c75c54ba43be39217625678273258c2a80f20cd19",
+      "url": "https://object.pouta.csc.fi/OPUS-TED2020/v1/moses/bn-en.txt.zip"
+    },
+    "en-hi": {
+      "sha256": "4aaea1c9fb2fda3c96926c1c9494a3da502b0f80bf2ee958531691c0e55917ce",
+      "url": "https://object.pouta.csc.fi/OPUS-TED2020/v1/moses/en-hi.txt.zip"
+    }
+  },
+  "license": "Original-source TED Talks usage policy; cache text locally, publish identifiers/hashes rather than transcript extracts.",
+  "lock_sha256": "6dfdd304dcba7bd772c37a7634e74c0c16d1e4b70728be6dcb0e218f3847aa19",
+  "holdout_membership_file_sha256": "626eddea4c694087dcf4719b64eca6637943bcb7a097a99844e9971a5a8befd4",
+  "implementation_sha256": "42caa873eabe1edb842aa799db7c9a1d38b21f7987c6c4e68397ceb428d2d04b",
+  "protected_source_hosts": [
+    "en.wikibooks.org",
+    "en.wikinews.org",
+    "en.wikivoyage.org"
+  ],
+  "tokenizer_files": {
+    "tokenizer.json": "2227ea9c52e8afb3f98bfed2679008b275f2664de69dfde174b374389eb0225d",
+    "tokenizer_config.json": "fb56a3ef7659346aae196a2ab877355f1e7fd871c36843f709bb2e23c606d972",
+    "special_tokens_map.json": "2b7ce39630f8a18705331a9b32c3b2236e96e7410791f98a9f8b6494e3ab2ea6"
+  },
+  "eligible_parallel_talks": 59,
+  "selected_source_groups": 19,
+  "seed": 20261101,
+  "tokens_per_example": 64,
+  "examples_per_language_per_repeat": 3,
+  "total_tokens_per_language_per_repeat": 192,
+  "pooled_rule": "For both construction and probe, source0 English, source1 Bangla, source2 Hindi,64 tokens each. Individual-language arms use all3 matched sources. All arms total192 tokens.",
+  "limitations": "Exact English sentence alignment and talk grouping; protected wiki source domains differ. No guarantee against quoted content or pretraining contamination. Prefix truncation equalizes tokens, not semantic coverage. TED-to-Belebele domain transfer remains empirical. No holdout text, labels or outcomes read.",
+  "private_pool_sha256": "c17a79fede7ff993f247d4a23cce533ea796887b0ce416c227407bc471997fd3",
+  "pools": {
+    "g1_fisher_profile": [
+      {
+        "source": "TED2020:talk:127",
+        "english_segment_ids": [
+          "1.1 1.2 1.3",
+          "2",
+          "3"
+        ],
+        "original_tokens": {
+          "eng_Latn": 68,
+          "ben_Beng": 82,
+          "hin_Deva": 88
+        },
+        "text_sha256": {
+          "eng_Latn": "728a2f72a30dda9090f9bdd8c95cbd191ee2888a549093805d1d1e53c44c7711",
+          "ben_Beng": "13271814988088a3413bf9339d6f7ab0ab4c676eba2ba00de52cf1b5d4112fd9",
+          "hin_Deva": "5c62061c846bd84a24642c34df3bd84d349910c060822536437ea35377a4d97c"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "c2224e3f70c0e655d2f4d6a28c79bc3ce6bcbbd48b66414e1cd55fcbff222378",
+          "ben_Beng": "b073b8c790ee3f3dac72f514c1aad12abc5476c8e3f551ff6d12a4fddefdcb2f",
+          "hin_Deva": "f632294225cdbd48572c4e3b59232b51c14f1855b5374f4026bdad860ab839ba"
+        }
+      }
+    ],
+    "rep1_construction": [
+      {
+        "source": "TED2020:talk:2659",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "original_tokens": {
+          "eng_Latn": 72,
+          "ben_Beng": 100,
+          "hin_Deva": 119
+        },
+        "text_sha256": {
+          "eng_Latn": "64513e21897cfd431d7520453c72ab49a946fcbac51caea44697a4095aa3e62f",
+          "ben_Beng": "804949ce5248fd35743cb737c2aa4ec5b71310dcc7f445b656aa60b71d319a84",
+          "hin_Deva": "2c63fe33eb1f131eecda0bf1865632d1eb79eb87183c2671639fe09fd0b08856"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "2fbad7527c7c68a75a092ab713d436fa396a96fea850ea2e27ba4bf355e30e95",
+          "ben_Beng": "9d96bf278aeca70d99a55cf7060d3a32ae681b5830d9d3c7fe4186715f0d509b",
+          "hin_Deva": "2dee9f24af7931c12059a523ff98f8811ace0c95a5cdacbb4646a24aae84fcb1"
+        }
+      },
+      {
+        "source": "TED2020:talk:1130",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "8.1 8.2"
+        ],
+        "original_tokens": {
+          "eng_Latn": 85,
+          "ben_Beng": 179,
+          "hin_Deva": 173
+        },
+        "text_sha256": {
+          "eng_Latn": "c368a4f4cf44b3f0b91c4d07f0d121fbcd06c2289cb6246120f99ebc09fed6d6",
+          "ben_Beng": "b448a797744efd72cb6cc762dd2282b5f26158236b63bd839edef6d7d0d3c82a",
+          "hin_Deva": "5a876518a9941fac4a4f67e6962429b30e8cce07ee896e51d4f879ec8a780fdd"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "39b13dc002fee8439a223352c788383331170c0a196f3877a026591afd901ec2",
+          "ben_Beng": "7fa251926a1156e4b6c0fbfac4173b1ab0a9bc93b51735d66408086ff44a6350",
+          "hin_Deva": "9f4a742e5dd6871384c5d264960879858e4849169a03067ea2ba2faafaa40bce"
+        }
+      },
+      {
+        "source": "TED2020:talk:494",
+        "english_segment_ids": [
+          "1.1 1.2",
+          "2"
+        ],
+        "original_tokens": {
+          "eng_Latn": 66,
+          "ben_Beng": 94,
+          "hin_Deva": 88
+        },
+        "text_sha256": {
+          "eng_Latn": "41cd4a5889deac7520d75da04d921176b359369ceb30d3e970808fbc7d5d3bd1",
+          "ben_Beng": "5d55a7c82bc487d070e7873603817febc625118e39991494d77f3708adc7f851",
+          "hin_Deva": "1c663fd70258718d46b1436fddddabe7ec0838ce83b61a8cae69b47e50036c6b"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "bcf7db3d422b849a2cf6f49af7c238af87c379da71e781e8c011f75f54a2cb23",
+          "ben_Beng": "872f6d7683d6ef763f46b53dfeaed51b6793eda81502b9c2210e85b7ecbd8f62",
+          "hin_Deva": "7d77d954409a6b0015405c68d03b768f0fd5a7e6f088fa8bf2c0fe1dd2ccd7c9"
+        }
+      }
+    ],
+    "rep1_probe": [
+      {
+        "source": "TED2020:talk:2837",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "original_tokens": {
+          "eng_Latn": 72,
+          "ben_Beng": 119,
+          "hin_Deva": 89
+        },
+        "text_sha256": {
+          "eng_Latn": "df51673e165199c9f90378551a628d6f1886feeb75358c75c9328ecbdb70dd3b",
+          "ben_Beng": "414197f340b88f795018f4ff3ca82e9a79507fcfd4e404dc95a8e361ec3ca9f8",
+          "hin_Deva": "c4b0c0ca74ecb69fe7063c847f3f70b6cfdc139be66d511ec9a6c3fa75a8550b"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "2193deda9862749c543d545ff0eec131ef852400633e424f7688de039c02609b",
+          "ben_Beng": "353b7368972b70e86b797083ca2a2a59a3309fe03ff172e0073245269a9d47ad",
+          "hin_Deva": "40bdc720e8e8453bec5748d5349ce1658ce7b5ef7bc2b4c9e87541673d9c6f78"
+        }
+      },
+      {
+        "source": "TED2020:talk:1371",
+        "english_segment_ids": [
+          "1.1 1.2",
+          "2",
+          "3",
+          "4"
+        ],
+        "original_tokens": {
+          "eng_Latn": 82,
+          "ben_Beng": 118,
+          "hin_Deva": 115
+        },
+        "text_sha256": {
+          "eng_Latn": "190b565de264def819e739eab16476d1b783db7ad9cdea71edd2f4b672af61e3",
+          "ben_Beng": "0c8cf7a1957ca3a220f3b0c0d35b7d8f1064f10470181d8f134919a290850673",
+          "hin_Deva": "9edd5a5058e81f5703c8186aefba22b796cb6e53220d2091b0871f9dfed6b51f"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "b26c55018193d40043805257e7560173351fd43ac244b5c7f32e066c81febbb8",
+          "ben_Beng": "86decf1a2caf693122846bb6030a5e3a1d47ca66c71db8d39b6ef1703a77d867",
+          "hin_Deva": "1e3874ecb313321631815305017ee649441b4ab56c5f8dd9c9023eef1dc734a8"
+        }
+      },
+      {
+        "source": "TED2020:talk:755",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3"
+        ],
+        "original_tokens": {
+          "eng_Latn": 68,
+          "ben_Beng": 92,
+          "hin_Deva": 86
+        },
+        "text_sha256": {
+          "eng_Latn": "6d69e8ae8a3e3fa96970310403e8ba99356ecf60a536684f1b2a60352898b412",
+          "ben_Beng": "067f46c4d294018239836758d45c232ddc0918689f9272f2d226291eb9861ec1",
+          "hin_Deva": "acf4f18dc1c8f7e319af7143f16484fcd9f863c164125f7ad7ec968816eb53cd"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "cc52a3534dd1d5180c6cb2fb8ae37c186baa5a404cd0582f4c9d706aa6e7c321",
+          "ben_Beng": "cd37ece364e334705b98deef7828f76d6f0e8d993640358ccbcaa59eb70477f1",
+          "hin_Deva": "578003c07d5afe585c6cfbb806fee03f0c50c4d1850e175e186ac312acce3e35"
+        }
+      }
+    ],
+    "rep2_construction": [
+      {
+        "source": "TED2020:talk:587",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3"
+        ],
+        "original_tokens": {
+          "eng_Latn": 66,
+          "ben_Beng": 94,
+          "hin_Deva": 87
+        },
+        "text_sha256": {
+          "eng_Latn": "fe37d191904d0c4ba5ad925353e65943c4c09874048e57f8d1a0826d220a97c5",
+          "ben_Beng": "85e4b4867776bf0e950ce343f987d1b44064924ce7a727f1617b885c1f08327f",
+          "hin_Deva": "e189ac60af795e6581eb83a994c46185155457d1937a663ffc0bf1bbb746b296"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "01c890d5cd0cec6b4b9c761d3f72788eee2e41c62f10b6bdc8cf84470784f157",
+          "ben_Beng": "358e9a0b0fd7580d5cc4f798db2efa4f8e237d94712d17142ca1a9a221f4c65c",
+          "hin_Deva": "1bcb4047e54a3f493118fa47088562f8b624b3676beacd1ba7ab72597a93d4f0"
+        }
+      },
+      {
+        "source": "TED2020:talk:686",
+        "english_segment_ids": [
+          "1",
+          "2"
+        ],
+        "original_tokens": {
+          "eng_Latn": 78,
+          "ben_Beng": 104,
+          "hin_Deva": 102
+        },
+        "text_sha256": {
+          "eng_Latn": "479b39cb7ccd4a9d3a7af76c12681731ea3f85eac98797890655ef8555bdf718",
+          "ben_Beng": "c292759d4d86e470957ed64284c205d4dbf2aa834fc2893d163938367e0bd573",
+          "hin_Deva": "c178d3a3647368a68edcc2c0c61fa2e31252e7438c98f26e9a4eaf4e40d2c4f7"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "41c7d5d0d85a36040df0736eec356174c0f4e7561e2795b052bceefd08974ced",
+          "ben_Beng": "1e326e40b2998cf5c2b621980dcd542f10406c8e2c759f20c0826d4ac3f83609",
+          "hin_Deva": "149784242c9cdb290138e6fdfb710a48c37da27c5eece046e37c998c081cc998"
+        }
+      },
+      {
+        "source": "TED2020:talk:815",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3"
+        ],
+        "original_tokens": {
+          "eng_Latn": 68,
+          "ben_Beng": 124,
+          "hin_Deva": 97
+        },
+        "text_sha256": {
+          "eng_Latn": "a67cb2344f4ebf8b71680010089ffb6395ea397e15bb987785ad364e7fb83cd7",
+          "ben_Beng": "cca93b0913b12abdbc6d2c931d02e02a26f3af6fb34b9bdc2e72c236a1f15e5c",
+          "hin_Deva": "d53c8b1a15e866cec8c0a822b10eecc29985100a9b1b5398721355b1a2157327"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "5b844a508dc3e41ce80f256d27699493fed9ac30a6ead7184561afd8e66e8db0",
+          "ben_Beng": "3f225ff1d14c342adb3c14763bedd1efe2572216a79ba777d35d2ccc5bdb0a84",
+          "hin_Deva": "b435e21425208f72b29d7f69070691871b28668ef1ba211ac45051c3061a92aa"
+        }
+      }
+    ],
+    "rep2_probe": [
+      {
+        "source": "TED2020:talk:1784",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "original_tokens": {
+          "eng_Latn": 71,
+          "ben_Beng": 116,
+          "hin_Deva": 88
+        },
+        "text_sha256": {
+          "eng_Latn": "34b4573acbc24c9d353918e13877d57fef3c959d2985e0d2e18a843eac209b87",
+          "ben_Beng": "de88b31728e4fcb02765589d777b40e9656e86808c9320c4ea962b44ff096cd6",
+          "hin_Deva": "b54789f53d424c82bbb915f5fa00447ae0cc2e6efc5058ba90d994bf90d9fffa"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "92e7abe4ce7fd2f3c20cb882c2e636be21b5906c1f43e9374782fb2e7055c1c1",
+          "ben_Beng": "fccf5287b4b5be82c9ca68c7dfaef7e8a9e996c4abdd69b6c975130b1c805723",
+          "hin_Deva": "a1ea07b03ff1cfc32fe6f473229851afb3e530fe5c22ae792c0429053e87820e"
+        }
+      },
+      {
+        "source": "TED2020:talk:1282",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "original_tokens": {
+          "eng_Latn": 72,
+          "ben_Beng": 99,
+          "hin_Deva": 87
+        },
+        "text_sha256": {
+          "eng_Latn": "d1da77cc8331da2d1b0bde801e56b2e7f9e6715858940e5f99ebdcd1d44ccb37",
+          "ben_Beng": "55cd9d67fd880091766de1201467011996c217166f7776c36661c47e4de3682b",
+          "hin_Deva": "a503cf01147c3b667cf209ae98aeb543341e8cb230d22b8abd1b3d2f89004c4a"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "1cebd8bf15c36d1e27e5250dae2b19b54b78021dfbb6930fd40fbe28f9f24647",
+          "ben_Beng": "0324f2a6e5e1beddb96cacdb41809dabf2c96af910ab3dacb758b8fa32bc1467",
+          "hin_Deva": "2eb42dcf32a97a656018ee3cb50ca128a1c6fb345562b0c5fad8707262081621"
+        }
+      },
+      {
+        "source": "TED2020:talk:2537",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "original_tokens": {
+          "eng_Latn": 93,
+          "ben_Beng": 130,
+          "hin_Deva": 115
+        },
+        "text_sha256": {
+          "eng_Latn": "15b4f4fa7ce0f246a65f4a627ca92892d3e843527830998a9c5b2aec6329f9b2",
+          "ben_Beng": "dfc4731e25bc44e6556e937653451b36ca2bb4dfc31118ae05af40c2398d9ccd",
+          "hin_Deva": "07de42f8a1d0d8fd906656a233725a081032fc401d08f9368ddfc7114ea8f91e"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "e5868251665abf24dd710dd45f50363ac2240628487ace4af502985ba57fe9ad",
+          "ben_Beng": "1cebc4dd1224fc3ec6674c0323a3220748aef63079db93061012e7a572ba60a4",
+          "hin_Deva": "af6985ace5373356f4d1e47d91b0ab0823a221aedd28080d6d7af38e87c99da4"
+        }
+      }
+    ],
+    "rep3_construction": [
+      {
+        "source": "TED2020:talk:1045",
+        "english_segment_ids": [
+          "1",
+          "2"
+        ],
+        "original_tokens": {
+          "eng_Latn": 67,
+          "ben_Beng": 116,
+          "hin_Deva": 105
+        },
+        "text_sha256": {
+          "eng_Latn": "476b246cf241ea8c51d616e4095452841f255ec5b65de6e5d955cf1b75909df0",
+          "ben_Beng": "f37d2975b933fa39295b0ae837356bf0460ccfd97671f9c151a8e922bf242747",
+          "hin_Deva": "7a481c81b65f17b24f8383f1422dd45a767deddc47251bfe1bedf9ae0f07f116"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "a992257a4a027b638bdddafef5f80ef8900a528c8ef19238dea69cee6fc7efac",
+          "ben_Beng": "5b5172e2e1d67f77520b1153744541b145faf93bcb27d7db6e5374bb6c5451a5",
+          "hin_Deva": "eda040d4ffe495539d1e4a07db1e003ceeeed6476f81bbdd48e124e6b155b185"
+        }
+      },
+      {
+        "source": "TED2020:talk:814",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3"
+        ],
+        "original_tokens": {
+          "eng_Latn": 70,
+          "ben_Beng": 131,
+          "hin_Deva": 95
+        },
+        "text_sha256": {
+          "eng_Latn": "d982ef4591d0f61821fdb720968bacb46b8221142cd29b64d4a1f63830aa9d7d",
+          "ben_Beng": "d8b8243ffbd4c5bfa347439dd88c0ba485d4dd8928f78df2e45a19bb2c37a0a3",
+          "hin_Deva": "b25367e531ece3dcc88a3df9846a0592243d0899e2c0cb2a7f8c083e317322a2"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "ace44eb8210c960af54d3357258242bef098156fccce6fdf580a87661632c7f2",
+          "ben_Beng": "d19e5e963a3e157ad638f6837adbe26f3d600d744aeccff750e6c168b4b1ddcc",
+          "hin_Deva": "189c563007277502e9082ed22901600dd22efdb4690215ff20a0ba61bdb8600b"
+        }
+      },
+      {
+        "source": "TED2020:talk:3231",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3"
+        ],
+        "original_tokens": {
+          "eng_Latn": 103,
+          "ben_Beng": 159,
+          "hin_Deva": 144
+        },
+        "text_sha256": {
+          "eng_Latn": "7330592eadce6e9fa203765066037049d9cf15049c52c6c74ceb4952117d0948",
+          "ben_Beng": "249f6edaaf7872a55b4d6ce6996a3739b4d380fe967d078dc6bd453a804ad1a9",
+          "hin_Deva": "5b08009bfc41e922ddcb9e0f73eb020727b9830b322dfce7c69a9e1b04032842"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "9eb294fceb8eee5ce3876e0f1603531ce814ac62e99f8bcdf16848dd2a052a6f",
+          "ben_Beng": "86ab136846169efe3acee9a1ce9e8b0bb957458c684aa5ffd9dad9f1ebcb2479",
+          "hin_Deva": "dde7eefa1cf00ffbe1e09993ac22d6f07c8b6c75f496cc1812a3cba506419ab8"
+        }
+      }
+    ],
+    "rep3_probe": [
+      {
+        "source": "TED2020:talk:605",
+        "english_segment_ids": [
+          "1",
+          "2"
+        ],
+        "original_tokens": {
+          "eng_Latn": 136,
+          "ben_Beng": 230,
+          "hin_Deva": 202
+        },
+        "text_sha256": {
+          "eng_Latn": "2eddc89d87b006e585fd04b8e517a0ecd5bcc7da73f6ea4cb26a46064bebbe80",
+          "ben_Beng": "f15721b4b627e55d323681a64cb7404de70280e6b9860fa0562aaeb2a8aa18ea",
+          "hin_Deva": "b31f1410a44ca3a1135f7c09220892fbb1ff158dbb8925ea0e8396dc81ca838b"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "aaa1dbd612620a5e0e11cb3404651dd2e79a63cdbbaace46ad03b0672ff81320",
+          "ben_Beng": "5acf6f4b87f7afe177e9586d7175df38daf8579ebf39021ae9f0d013f918df43",
+          "hin_Deva": "56d0a66712b113ea496439d06d15a6a2df5433fdfea264d818e6e41a29305c4b"
+        }
+      },
+      {
+        "source": "TED2020:talk:949",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3"
+        ],
+        "original_tokens": {
+          "eng_Latn": 86,
+          "ben_Beng": 161,
+          "hin_Deva": 94
+        },
+        "text_sha256": {
+          "eng_Latn": "8a6190dbaec059a0174507f14e93bc197c5e9379818872490b11c7a2ea09358a",
+          "ben_Beng": "38e6e17aac2512c61004e4a58b5e43ddcfc21943028b84a68744ed828336d99d",
+          "hin_Deva": "5756ca360a705447b483b0a858509c2df675ebe11e5595d129b114ccf6c16003"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "e22d32a3b2c4eb0b45147fa7efc75454ec5268bc6a1ac0d00cedb7c1ac925a1b",
+          "ben_Beng": "f8f25d1a9ec514b4d15da0e40bc1fa2af44dd059f9f988482be38069c97099e9",
+          "hin_Deva": "702c9bcdf7d6779342e7cc0e7288e4b663daf11ffc8fb63e3d963b79f97ba648"
+        }
+      },
+      {
+        "source": "TED2020:talk:1397",
+        "english_segment_ids": [
+          "1",
+          "2",
+          "3"
+        ],
+        "original_tokens": {
+          "eng_Latn": 69,
+          "ben_Beng": 87,
+          "hin_Deva": 77
+        },
+        "text_sha256": {
+          "eng_Latn": "b085c8c7eb1847a309d1f9451e9eb595170bc9a5036418f0c6b0fb8e177e840a",
+          "ben_Beng": "cff8e62d33cdcbc83a330142218ba09958deff6b67b7f4cb19d7d90818febb67",
+          "hin_Deva": "8e28546a61c502a26440e97e419344273a9c99732eca3e0e894fc2a204e125cf"
+        },
+        "model_ids_sha256": {
+          "eng_Latn": "4a4dd1cb0011d643d76b60ec4fce084ac9228fc68d9d9856aa43d8aeaac4b6a2",
+          "ben_Beng": "56bdd043868e2c5e2e8b4ff200010c16692d2b484d05828c0e058f2b27254626",
+          "hin_Deva": "9997d2126b254d028e07f762a0486c9ed3567f649a86920e1552832b9b162042"
+        }
+      }
+    ]
+  }
+}
