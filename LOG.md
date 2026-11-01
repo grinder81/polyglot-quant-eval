@@ -67,3 +67,9 @@ Dated entries: what changed, the numbers, open problems.
 
 - PR46 merged as `2bfea18c282cf2667fa24c8c05a888ce8e50a838` after both GitHub CI checks passed and Astra approved exact head `d3ce91ba0b9f34bb4356f22de88eaf2c9ad89f97` without blockers. Frozen `docs/t3-preregistration.md` Git blob: `700a0f601e6503d95b485ad5d048c20b4ef96910`. Git blob identity refers to repository content, not a platform-dependent checkout newline hash.
 - The freeze precedes Q6_K/Q3_K_M quantization. It does not claim any new T3 build, numerical gate or task result. Per-build readiness review and the separate C8 pilot freeze remain required; holdout outcomes and A4 slices remain sealed.
+
+## 2026-11-01 — First T3 arm readiness and throughput checkpoint
+
+- Q6_K and Q3_K_M builds completed from the pinned BF16 source; manifests and actual bytes are committed in runtime PR43. Q6_K is2,759,532,032bytes; Q3_K_M is1,799,740,928bytes. Both vocabulary-only checks passed900contexts and3,600candidates. These are build/readiness facts, not precision-curve results.
+- Q6_K passed the48candidate direct,48client and48reversed-order numerical gates. The new runner's offline identity/raw-gate verification exited0. Astra reviewed the collection code and found one arm-label provenance blocker; commit ef2582e fixes it with an arm/format map and rejection test. All3 runner tests and both GitHub CI checks passed before collection.
+- The first20five-question shards completed and validated. The raw completion log records throughput and the remaining160shards continue under the same frozen identity. No partial accuracy or language claim is reported; the complete arm and stage report remain pending.
