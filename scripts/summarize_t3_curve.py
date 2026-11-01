@@ -10,6 +10,7 @@ from scripts.run_t3_baselines import identity
 from scripts.t1_baselines import load_shards
 from scripts.summarize_t1_baselines import paired_report,normalize,historical_comparison
 from scripts.plan_pilot_precision import REPORT_SHA
+from scripts.validate_t3_fidelity import validate as validate_fidelity
 
 
 def read(path):
@@ -99,14 +100,12 @@ def main():
             descriptive_score_margin_deltas_vs_bf16=score_delta['descriptive_distributions'])
     fidelity={}
     for name,directory in a.fidelity:
-        manifest=read(Path(directory)/'manifest.json')
-        if manifest['questions']!=900 or 'languages' not in manifest:
-            raise ValueError('Incomplete fidelity arm')
         expected=evidence[name]['build']['output_sha256'] if name in evidence else (
             '5823bd1e52be1027a7ba6f31b43edfd40ae1766020cddec967f0d76618948290' if name=='local-q4' else None)
-        if manifest['identity']['model_sha256']!=expected:
-            raise ValueError('Fidelity/model mismatch')
-        fidelity[name]=dict(directory=str(directory),manifest_sha256=hashlib.sha256((Path(directory)/'manifest.json').read_bytes()).hexdigest(),manifest=manifest)
+        if expected is None or name in fidelity:
+            raise ValueError('Unknown or duplicate fidelity arm')
+        runtime_sha=evidence[name]['identity']['inputs']['runtime'] if name in evidence else None
+        fidelity[name]=validate_fidelity(directory,rows,expected,frozen['inputs']['lock'],runtime_sha)
     predictions={}
     if 'diag-q3km' in outcomes:
         predictions['P1']={l:outcomes['diag-q3km']['vs_bf16']['languages'][l]['changed_choices']>
