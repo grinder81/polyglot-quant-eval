@@ -64,6 +64,8 @@ def confirmed_pair(report,plan,nomination,nomination_path):
     cases={r['case']['label']:r for r in report['cases']}
     if cases.keys()!={'mapA','mapB'} or len(report['cases'])!=2:
         raise ValueError('Two complete confirmation maps required')
+    if any(row['case']['bytes']!=nomination['pair']['map_a_bytes'] or row['case']['bytes']>plan['operating_point']['bytes'] for row in cases.values()):
+        raise ValueError('Confirmation maps violate the matched-byte budget')
     measured={}
     for label,case in cases.items():
         rows=case['records']
@@ -73,7 +75,7 @@ def confirmed_pair(report,plan,nomination,nomination_path):
             raise ValueError('Confirmation source identity differs')
         for lang in LANGS:
             selected=[r['mean_kl_nats'] for r in rows if (r['language']==lang if lang!='pooled' else r['language']==LANGS[r['index']])]
-            if len(selected)!=3 or any(not math.isfinite(v) or v<0 for v in selected):
+            if len(selected)!=3 or any(type(v) not in (int,float) or not math.isfinite(v) or v<0 for v in selected):
                 raise ValueError('Invalid confirmation KL')
             measured[label,lang]=mean(selected)
     margins={lang:measured['mapB',lang]-measured['mapA',lang] for lang in LANGS}
