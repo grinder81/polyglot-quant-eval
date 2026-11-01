@@ -83,3 +83,8 @@ Dated entries: what changed, the numbers, open problems.
 
 - Full KL reporting now verifies all 900 per-question hashes, source/prompt/token coverage, token means and language aggregates, and requires the verified native-before-Torch execution receipt. Rejection tests cover changed question evidence, aggregate manipulation and absent execution receipts. No scoring or fidelity collection implementation changed.
 - The first two T3 build records lacked attached actual-file tensor inventories, although the actual model hashes, bytes and native dry-run layouts were pinned. Runtime PR43 now includes supplements that match every predicted type, shape and payload size. The Q6 supplement follows task scoring; the Q3 supplement precedes inference. Original manifests and Q6 run identities remain intact. Remaining builds attach actual inventories before inference.
+
+## 2026-11-01 — Q6 full fidelity complete
+
+- The fresh native-before-Torch run completed900questions and176,756content-token KL distributions in1,235.02seconds. English/Bangla/Hindi mean question KL is0.004857/0.005127/0.003965nats per content token. All question hashes, source/prompt/token identities, token means, aggregates and numerical execution receipts passed reporting validation. These are descriptive fidelity endpoints; no language-effect or allocation-success conclusion follows.
+- Published the [combined Q6 checkpoint and903-member KL archive](results/t3-precision-curve/diag-q6k/README.md), excluding raw logits and the preserved interrupted run. Q3 direct validation has started. T3 Stage1 remains incomplete, and no operating point or C8 outcome is selected. The user's weekly-allowance stop threshold is recorded in the execution plan.
