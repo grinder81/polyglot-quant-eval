@@ -2,6 +2,8 @@
 
 Approved by the user on 20 October 2026.
 
+Current execution amendment, 1 November 2026: [pilot tracker 47](https://github.com/grinder81/polyglot-quant-eval/issues/47) governs the bounded decision gate before full C8-C10. The user authorized implementation and pilot collection after the Astra review. Freeze the relevant specification and pass technical gates first; preserve all holdout and A4 seals. The [T3 specification](t3-preregistration.md), including its November amendment, resolves the prior draft defaults and separates the primary language contrast from practical superiority. Existing unfinished issues remain open.
+
 Compression is the primary experimental objective: measure per-language damage under deployment formats and test precision allocation at matched shipped bytes. Adaptation is secondary and requires an explicit user decision after compression evidence; sensitivity results guide placement rather than presuming attention or MLP targets.
 
 ## Task order
