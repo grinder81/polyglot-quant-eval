@@ -88,3 +88,8 @@ Dated entries: what changed, the numbers, open problems.
 
 - The fresh native-before-Torch run completed 900 questions and 176,756 content-token KL distributions in 1,235.02 seconds. English/Bangla/Hindi mean question KL is 0.004857/0.005127/0.003965 nats per content token. All question hashes, source/prompt/token identities, token means, aggregates and numerical execution receipts passed reporting validation. These are descriptive fidelity endpoints; no language-effect or allocation-success conclusion follows.
 - Published the [combined Q6 checkpoint and 903-member KL archive](results/t3-precision-curve/diag-q6k/README.md), excluding raw logits and the preserved interrupted run. Q3 direct validation has started. T3 Stage 1 remains incomplete, and no operating point or C8 outcome is selected. The user's weekly-allowance stop threshold is recorded in the execution plan.
+
+## 2026-11-01 — Readiness issues reconciled
+
+- Closed the newly scoped protocol #48 and runtime resource task tiny-aya-edge#42 with completion receipts and evidence links. The master #47 and every unfinished legacy scope remain open. Clarified the master's goal as a bounded investment decision rather than a claim of established allocation task benefit.
+- Q3 passed its direct, API-client, reversed-order and offline identity gates. Its first 100 task questions completed and validated in 242.34 seconds. Collection continues in complete batches under the unchanged identity. The [resume guide](docs/article2-pilot-resume.md) records artifact locations, protected analyses and the account-allowance stop procedure.
