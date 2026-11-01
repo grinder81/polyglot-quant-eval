@@ -74,6 +74,7 @@ def main():
     plan=read(a.plan)|{'_sha256':sha(a.plan)}
     decision=nominate(plan,table(read(a.discovery),plan,[1,2]))
     decision.update(plan_sha256=sha(a.plan),discovery_report_sha256=sha(a.discovery),
+        discovery_report_path=str(a.discovery.resolve()),
         implementation_sha256=sha(__file__),schema='c8-discovery-nomination-v1')
     a.output.parent.mkdir(parents=True,exist_ok=True)
     with a.output.open('x') as stream:
