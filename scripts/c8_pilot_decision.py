@@ -33,6 +33,8 @@ def table(report,plan,repeats):
             raise ValueError('Incomplete source/language repetitions')
         if any(type(x['mean_kl_nats']) not in (int,float) or not math.isfinite(x['mean_kl_nats']) or x['mean_kl_nats']<0 or x['tokens']!=64 for x in rows):
             raise ValueError('Invalid per-example KL')
+        if any(x['source']!=plan['probe_sources'][str(x['repeat'])][x['index']] for x in rows):
+            raise ValueError('Frozen probe source identity differs')
         for rep in repeats:
             for lang in LANGS:
                 selected=[row['mean_kl_nats'] for row in rows if row['repeat']==rep and
