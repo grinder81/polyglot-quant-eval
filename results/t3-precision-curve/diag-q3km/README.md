@@ -20,4 +20,12 @@ The [complete task report](complete-accuracy.json.gz) includes normalized score 
 python -m scripts.archive_t3_arm verify results/t3-precision-curve/diag-q3km/scoring-evidence
 ```
 
-The nine complete collection batches total 2,965.70 seconds, 49.4 minutes, excluding their initial identity-validation and process-startup intervals. Q6's combined collection interval was about 17.5 minutes on this workstation. These are evaluation costs under the recorded desktop load and scorer; they are not controlled decoding-throughput or phone-performance benchmarks. Full Q3 and Q4 KL, the remaining curve, C8, genuine generation review and final holdout confirmation remain separate work. A4-conditioned slices and holdout outcomes remain sealed.
+The nine complete collection batches total 2,965.70 seconds, 49.4 minutes, excluding their initial identity-validation and process-startup intervals. Q6's combined collection interval was about 17.5 minutes on this workstation. These are evaluation costs under the recorded desktop load and scorer; they are not controlled decoding-throughput or phone-performance benchmarks. Q4 KL, the remaining curve, C8, genuine generation review and final holdout confirmation remain separate work. A4-conditioned slices and holdout outcomes remain sealed.
+
+## Complete fidelity endpoint
+
+Q3's full KL endpoint covers all 900 questions and 176,756 content-token distributions. Mean question-level KL(BF16 || Q3_K_M), in nats per content token, is 0.102541 for English, 0.124599 for Bangla and 0.095921 for Hindi. These descriptive fidelity values do not establish a language effect or predict task-accuracy benefit. In particular, the relative sizes of the KL means and observed accuracy changes answer different questions.
+
+All per-question hashes, source/prompt/token identities, token KL means, language aggregates and the verified native-before-Torch execution receipt passed validation. The [combined accuracy and fidelity report](complete-accuracy-fidelity.json.gz) and [903-member fidelity archive](fidelity-evidence/manifest.json) retain the evidence. Archive SHA256 is `7fc3eaeaf31f1050bac082130935ba618667b3784329a355cd9327ba00cdb863`. Raw vocabulary logits remain local.
+
+The 30 complete-question collection batches sum to 1,732.25 seconds, 28.9 minutes, of recorded core execution intervals. This excludes verification/import/startup intervals between processes. Batching implements the user's weekly-allowance checkpoint rule without changing the frozen extraction, arithmetic or sample identities. Q3's full-fidelity endpoint is complete; Stage 1 still needs existing local Q4's full KL before its report can precede Stage 2.
