@@ -103,3 +103,7 @@ Dated entries: what changed, the numbers, open problems.
 
 - Q3 completed and validated all 900 KL questions and 176,756 content-token distributions. English/Bangla/Hindi mean question KL is 0.102541/0.124599/0.095921 nats per content token. The combined report verifies every question's hash, source/prompt/token identity, KL mean, language aggregate and verified execution receipt. These are descriptive fidelity endpoints, not task-benefit or causal language-effect evidence.
 - Published the [combined Q3 checkpoint and 903-member fidelity archive](results/t3-precision-curve/diag-q3km/README.md). Thirty complete-question batches total 1,732.25 seconds, 28.9 minutes, of core intervals excluding process/verification/import startup. Existing Q4 full KL has begun; Stage 1 remains incomplete until that endpoint is validated and its report committed. Weekly allowance was 11% at the latest check; the below-10% stop guard remains active.
+
+## 2026-11-01 — Account stop threshold revised by the user
+
+- The user explicitly authorized continued execution and replaced the earlier 10% threshold with a stop **below 2% weekly allowance remaining**. The execution plan and resume record now carry that rule. No scientific endpoint, sample, runtime or decision rule changed. Q4 KL collection continues under its existing identity, with complete-question checkpoints and no allowance-reset action.

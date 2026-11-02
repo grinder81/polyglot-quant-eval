@@ -2,7 +2,7 @@
 
 1 November 2026. This is a resume guide, not a completion report. [Tracker #47](https://github.com/grinder81/polyglot-quant-eval/issues/47) owns the bounded pilot; [evaluation PR #50](https://github.com/grinder81/polyglot-quant-eval/pull/50) and [runtime PR #43](https://github.com/grinder81/tiny-aya-edge/pull/43) contain its implementation and evidence. G0 protocol and G1 resource issues are complete. Full precision collection, C8 and the decision report remain open.
 
-The user instructed a clean checkpoint and stop if weekly allowance falls below 10%. Read the current account meter rather than estimating from task tokens; the latest check was 10% remaining while Q4 KL was collecting. Do not consume an allowance reset. A pause is not an experimental failure or a completed pilot.
+The user's latest instruction replaces the earlier 10% threshold: continue and make a clean checkpoint and stop only if weekly allowance falls **below 2% remaining**. Read the current account meter rather than estimating from task tokens; the latest check was 10% remaining while Q4 KL was collecting. Do not consume an allowance reset. A pause is not an experimental failure or a completed pilot.
 
 ## Locations and immutable evidence
 

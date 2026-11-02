@@ -32,7 +32,7 @@ For future confirmation, retain both language-informed finalists and the frozen 
 
 ## Resource and evidence rules
 
-The user's later instruction adds an account-usage stop condition: monitor remaining weekly allowance and, if it drops below10%, preserve a resumable checkpoint, launch no new operations and pause this goal. This is separate from the scientific/resource stop rules. Collection is divided into complete shard/question batches without changing the frozen scoring or KL implementations. The account meter is shared across chats; no allowance reset is authorized.
+The user's latest instruction replaces the earlier 10% account-usage stop threshold with **below 2% remaining**: monitor weekly allowance and, if it drops below 2%, preserve a resumable checkpoint, launch no new operations and pause this goal. This is separate from the scientific/resource stop rules. Collection is divided into complete shard/question batches without changing the frozen scoring or KL implementations. The account meter is shared across chats; no allowance reset is authorized.
 
 Use one GPU owner and inspect current processes before each launch. Preserve historical artifacts, failed evidence and immutable run identities. A competing process is not permission to terminate unrelated work. Build provenance includes the existing pinned native quantizer, exact command, binary/source hashes, output SHA256, measured bytes and tensor inventory. Weights and credentials never enter Git.
 
