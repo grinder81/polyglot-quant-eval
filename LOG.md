@@ -117,3 +117,8 @@ Dated entries: what changed, the numbers, open problems.
 
 - After Stage 1 report commit `2cf0371`, Q3_K_S and Q2_K were built and passed vocabulary checks. Both actual inventories match all 290 prior predicted tensor types/payloads and exact file bytes: 1,660,984,832 and 1,481,973,248. Runtime commit `d737c68` records actual inventories, model hashes, runtime bindings, vocabulary receipts and the preceding-report prerequisite before either model's inference.
 - Q3_K_S subsequently passed direct, client, reversed-order and offline identity gates and began complete-shard task collection. Both repositories' CI checks pass. Q2_K task inference, the full Stage 2 report, Stage 3, operating-point selection and C8 remain pending. The user's revised account stop threshold remains below 2% weekly allowance remaining.
+
+## 2026-11-01 — Q3_K_S task checkpoint complete
+
+- All 900 questions and separate complete-arm validation passed. Correct counts are EN 210, BN 179 and HI 178, versus BF16 230/187/184. Paired changes are -6.67/-2.67/-2.00 pp. English's paired 95% interval [-10.74, -2.67] is below zero; non-English and English-relative intervals include zero. The [complete task report and verified 197-member archive](results/t3-precision-curve/diag-q3ks/README.md) retain the evidence.
+- English fails the frozen 221/300 selection floor but remains above the 185/300 descent stop. The full required curve continues, with no operating point selected. Full Q3_K_S KL is running; Q2_K follows under its committed identity. No C8 comparative outcome, A4 slice or holdout outcome has been collected.
