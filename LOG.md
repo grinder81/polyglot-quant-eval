@@ -112,3 +112,8 @@ Dated entries: what changed, the numbers, open problems.
 
 - Q4 full KL completed and validated all 900 questions and 176,756 content-token distributions. EN/BN/HI mean question KL is 0.035018/0.038329/0.030844 nats per content token. Published its verified 903-member archive and the [combined complete Stage 1 report](results/t3-precision-curve/stage1/README.md), including Q6/Q3 full task/fidelity and the reused T1 BF16/Q4 task identities.
 - Q3's English 221/300 meets the development floor exactly; neither new arm triggers the 185/300 descent stop. Stages 2 and 3 remain required; no operating point or C8 result is selected. Q4 core intervals total 2,048.05 seconds, 34.1 minutes, excluding inter-process startup. Native collection ended and no owned GPU scoring/fidelity process remains. The report is committed before the next stage's builds; Q6's disclosed inventory-attachment timing deviation remains in its interpretation.
+
+## 2026-11-01 — Stage 2 builds and first-arm readiness
+
+- After Stage 1 report commit `2cf0371`, Q3_K_S and Q2_K were built and passed vocabulary checks. Both actual inventories match all 290 prior predicted tensor types/payloads and exact file bytes: 1,660,984,832 and 1,481,973,248. Runtime commit `d737c68` records actual inventories, model hashes, runtime bindings, vocabulary receipts and the preceding-report prerequisite before either model's inference.
+- Q3_K_S subsequently passed direct, client, reversed-order and offline identity gates and began complete-shard task collection. Both repositories' CI checks pass. Q2_K task inference, the full Stage 2 report, Stage 3, operating-point selection and C8 remain pending. The user's revised account stop threshold remains below 2% weekly allowance remaining.
