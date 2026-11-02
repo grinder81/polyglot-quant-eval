@@ -122,3 +122,8 @@ Dated entries: what changed, the numbers, open problems.
 
 - All 900 questions and separate complete-arm validation passed. Correct counts are EN 210, BN 179 and HI 178, versus BF16 230/187/184. Paired changes are -6.67/-2.67/-2.00 pp. English's paired 95% interval [-10.74, -2.67] is below zero; non-English and English-relative intervals include zero. The [complete task report and verified 197-member archive](results/t3-precision-curve/diag-q3ks/README.md) retain the evidence.
 - English fails the frozen 221/300 selection floor but remains above the 185/300 descent stop. The full required curve continues, with no operating point selected. Full Q3_K_S KL is running; Q2_K follows under its committed identity. No C8 comparative outcome, A4 slice or holdout outcome has been collected.
+
+## 2026-11-01 — Q3_K_S fidelity complete
+
+- Completed and validated all 900 KL questions and 176,756 content-token distributions. EN/BN/HI mean question KL is 0.185407/0.207971/0.168973 nats per content token. The [combined checkpoint and verified 903-member archive](results/t3-precision-curve/diag-q3ks/README.md) preserve all identities, question-level summaries and numerical receipts. These are descriptive fidelity values, not causal language or task-benefit findings.
+- Q2_K direct validation began after the Q3_K_S worker finished. Stage 2 and the complete curve remain pending; no operating point is selected. The latest account meter reports 100% weekly allowance remaining; Codex performed no reset action, and the user's below-2% stop threshold remains active.
