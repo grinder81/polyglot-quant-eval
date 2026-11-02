@@ -147,3 +147,8 @@ Dated entries: what changed, the numbers, open problems.
 
 - IQ3_S completed and validated all 900 KL questions and 176,756 content-token distributions. EN/BN/HI mean question KL is 0.276336/0.305826/0.255459 nats per content token. Published the combined task/fidelity report and verified 903-member archive. All five new task arms and all six candidate fidelity endpoints are now complete under their frozen identities.
 - This last-stage report is committed before English-only operating-point selection. No C8 comparative outcome has been collected; the C8 format/pair execution plan will be mechanically derived only after that selection. A4 slices, final holdout, human generation and device measurements remain outside this completed development curve.
+
+## 2026-11-01 — Complete curve decision and C8 execution freeze
+
+- After last-stage commit `29206b0`, the [validated complete curve](results/t3-precision-curve/final/README.md) selected Q3_K_M at 1,799,740,928 bytes and English 221/300 by the frozen English-only minimum-byte rule. This observed floor is not proven noninferiority. Q2's stop and the larger IQ3 point were handled by actual bytes. All required task/fidelity endpoints and their raw archives are complete.
+- Mechanically derived [C8 execution plan](results/article2-pilot/c8-execution-freeze.md) SHA256 `e7ccdb50be254ee8bdde307f73c58bc9a9c9d68882a40aa453b9b516ec8be64f`: Q2_K/Q3_K diagnostics on the eight fixed tensors; all four prespecified restricted pairs are byte-feasible. The full plan and decision are committed before C8 exports or comparative measurements. No language score selected formats or eligibility. Cumulative caps, independent repetition 3, exact-map checks and protected analyses remain unchanged.
