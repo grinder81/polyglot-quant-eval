@@ -132,3 +132,8 @@ Dated entries: what changed, the numbers, open problems.
 
 - All 900 task questions and separate complete validation passed. Correct counts are EN 180, BN 149 and HI 142 versus BF16 230/187/184; paired changes are -16.67/-12.67/-14.00 pp, with all three paired intervals below zero. English-relative BN/HI intervals include zero. The [complete report and verified 197-member archive](results/t3-precision-curve/diag-q2k/README.md) retain raw evidence and identities.
 - English triggers the 185-or-fewer descent stop, prohibiting later smaller artifacts. IQ3_S remains required because its frozen native size prediction is larger than both Stage 2 files; this is the preregistered size-aware rule, not a new exception. Full Q2_K KL is collecting before the complete Stage 2 report. No operating point, C8 comparison, A4 slice or holdout outcome is selected or collected.
+
+## 2026-11-01 — T3 Stage 2 complete
+
+- Q2 completed and validated all 900 full-KL questions; EN/BN/HI mean question KL is 0.441425/0.580459/0.450495 nats per content token. Published its combined task/fidelity report and verified 903-member archive. The [complete Stage 2 report](results/t3-precision-curve/stage2/README.md) revalidates all four new task arms and all five candidate fidelity endpoints against their frozen references.
+- Q2's descent stop excludes later smaller artifacts, while IQ3_S remains required by its larger native predicted bytes. The Stage 2 report is committed before that build. No operating point or C8 outcome has been selected; holdout outcomes and A4 slices remain untouched.
