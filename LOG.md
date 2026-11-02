@@ -107,3 +107,8 @@ Dated entries: what changed, the numbers, open problems.
 ## 2026-11-01 — Account stop threshold revised by the user
 
 - The user explicitly authorized continued execution and replaced the earlier 10% threshold with a stop **below 2% weekly allowance remaining**. The execution plan and resume record now carry that rule. No scientific endpoint, sample, runtime or decision rule changed. Q4 KL collection continues under its existing identity, with complete-question checkpoints and no allowance-reset action.
+
+## 2026-11-01 — T3 Stage 1 complete
+
+- Q4 full KL completed and validated all 900 questions and 176,756 content-token distributions. EN/BN/HI mean question KL is 0.035018/0.038329/0.030844 nats per content token. Published its verified 903-member archive and the [combined complete Stage 1 report](results/t3-precision-curve/stage1/README.md), including Q6/Q3 full task/fidelity and the reused T1 BF16/Q4 task identities.
+- Q3's English 221/300 meets the development floor exactly; neither new arm triggers the 185/300 descent stop. Stages 2 and 3 remain required; no operating point or C8 result is selected. Q4 core intervals total 2,048.05 seconds, 34.1 minutes, excluding inter-process startup. Native collection ended and no owned GPU scoring/fidelity process remains. The report is committed before the next stage's builds; Q6's disclosed inventory-attachment timing deviation remains in its interpretation.
