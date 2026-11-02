@@ -1,6 +1,6 @@
 # Complete IQ3_S task checkpoint
 
-All 900 original-order questions, 180 shards and 3,600 candidate scores passed validation, followed by separate complete-arm validation. Full KL collection is running. The actual GGUF is 1,665,998,336 bytes; its complete inventory, model/runtime identities and vocabulary receipts were committed before inference.
+All 900 original-order questions, 180 shards and 3,600 candidate scores passed validation, followed by separate complete-arm validation. All 900 full-KL questions are complete and validated too. The actual GGUF is 1,665,998,336 bytes; its complete inventory, model/runtime identities and vocabulary receipts were committed before inference.
 
 | Language | BF16 correct | IQ3_S correct | Change pp and paired 95% interval |
 | --- | ---: | ---: | --- |
@@ -13,3 +13,5 @@ All three paired accuracy intervals are below zero. Bangla's change minus Englis
 English 188/300 fails the 221-correct selection floor. This point was required despite Q2's descent stop because its actual bytes exceed both Stage 2 files. It uses no importance matrix, as frozen to avoid confounding the precision curve with calibration. The result describes this imatrix-free export and runtime, not calibrated IQ3_S methods generally.
 
 The [complete task report](complete-accuracy.json.gz) contains normalized scores, identities, paired comparisons against BF16/local Q4, fixed margin bins and prediction checks. The [197-member scoring archive](scoring-evidence/manifest.json) has SHA256 `740eb27d00b5cd9f07b4afc00d94098b3e8a39b58ad1cde5d2fb874746fef11b`. No operating point is selected before the complete required curve and its committed report. No weights or raw vocabulary logits are published; A4-conditioned slices, human generation judgments and holdout outcomes remain untouched.
+
+The [combined task and fidelity report](complete-accuracy-fidelity.json.gz) covers all 176,756 content-token distributions. Mean question-level KL(BF16 || IQ3_S), in nats per content token, is 0.276336 English, 0.305826 Bangla and 0.255459 Hindi. These are descriptive fidelity values. Every question's hash, source/prompt/token identity, KL mean, language aggregate and verified execution receipt passed validation. The [903-member fidelity archive](fidelity-evidence/manifest.json) has SHA256 `48d8cf8f9bbfad2f565949d56ece2d53785442126db9f6e0976b66ebc2607006`. This completes the last required precision stage; the English-only operating-point decision follows this report's commit.

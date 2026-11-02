@@ -142,3 +142,8 @@ Dated entries: what changed, the numbers, open problems.
 
 - After Stage 2 commit `40400be`, IQ3_S built at the predicted 1,665,998,336 bytes and matched all 290 predicted tensor types/payloads. Runtime commit `dfb72ca` recorded its actual inventory, identities and vocabulary checks before inference. All live numerical gates, 900 task questions and separate complete validation passed. Full KL is collecting.
 - Correct counts are EN 188, BN 160 and HI 138 versus BF16 230/187/184; changes are -14.00/-9.00/-15.33 pp with all paired intervals below zero. English-relative BN/HI intervals include zero. English fails the 221-correct floor. The [complete task checkpoint and verified archive](results/t3-precision-curve/diag-iq3s/README.md) describe this imatrix-free export, not calibrated IQ3 methods generally. Final operating-point selection and C8 still follow complete KL and the committed last-stage report.
+
+## 2026-11-01 — Last required precision stage complete
+
+- IQ3_S completed and validated all 900 KL questions and 176,756 content-token distributions. EN/BN/HI mean question KL is 0.276336/0.305826/0.255459 nats per content token. Published the combined task/fidelity report and verified 903-member archive. All five new task arms and all six candidate fidelity endpoints are now complete under their frozen identities.
+- This last-stage report is committed before English-only operating-point selection. No C8 comparative outcome has been collected; the C8 format/pair execution plan will be mechanically derived only after that selection. A4 slices, final holdout, human generation and device measurements remain outside this completed development curve.
