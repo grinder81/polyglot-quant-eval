@@ -127,3 +127,8 @@ Dated entries: what changed, the numbers, open problems.
 
 - Completed and validated all 900 KL questions and 176,756 content-token distributions. EN/BN/HI mean question KL is 0.185407/0.207971/0.168973 nats per content token. The [combined checkpoint and verified 903-member archive](results/t3-precision-curve/diag-q3ks/README.md) preserve all identities, question-level summaries and numerical receipts. These are descriptive fidelity values, not causal language or task-benefit findings.
 - Q2_K direct validation began after the Q3_K_S worker finished. Stage 2 and the complete curve remain pending; no operating point is selected. The latest account meter reports 100% weekly allowance remaining; Codex performed no reset action, and the user's below-2% stop threshold remains active.
+
+## 2026-11-01 — Q2_K task checkpoint and descent stop
+
+- All 900 task questions and separate complete validation passed. Correct counts are EN 180, BN 149 and HI 142 versus BF16 230/187/184; paired changes are -16.67/-12.67/-14.00 pp, with all three paired intervals below zero. English-relative BN/HI intervals include zero. The [complete report and verified 197-member archive](results/t3-precision-curve/diag-q2k/README.md) retain raw evidence and identities.
+- English triggers the 185-or-fewer descent stop, prohibiting later smaller artifacts. IQ3_S remains required because its frozen native size prediction is larger than both Stage 2 files; this is the preregistered size-aware rule, not a new exception. Full Q2_K KL is collecting before the complete Stage 2 report. No operating point, C8 comparison, A4 slice or holdout outcome is selected or collected.
