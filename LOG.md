@@ -93,3 +93,8 @@ Dated entries: what changed, the numbers, open problems.
 
 - Closed the newly scoped protocol #48 and runtime resource task tiny-aya-edge#42 with completion receipts and evidence links. The master #47 and every unfinished legacy scope remain open. Clarified the master's goal as a bounded investment decision rather than a claim of established allocation task benefit.
 - Q3 passed its direct, API-client, reversed-order and offline identity gates. Its first 100 task questions completed and validated in 242.34 seconds. Collection continues in complete batches under the unchanged identity. The [resume guide](docs/article2-pilot-resume.md) records artifact locations, protected analyses and the account-allowance stop procedure.
+
+## 2026-11-01 — Q3_K_M task checkpoint complete
+
+- All 900 Q3 task questions and separate complete validation passed. Correct counts are EN 221, BN 186 and HI 173, versus BF16 230/187/184. Paired changes are -3.00/-0.33/-3.67 pp; all paired accuracy and nontrivial English-relative intervals include zero. The [complete report and verified 197-member archive](results/t3-precision-curve/diag-q3km/README.md) preserve the raw evidence and identities.
+- Q3 meets the English development floor exactly but does not trigger the descent stop. The later stages remain required; no operating point is selected. Collection batches total 2,965.70 seconds, 49.4 minutes, before process/identity startup overhead. These are evaluation costs, not a device throughput result. The owned server stopped and Q3 full KL collection began through the unchanged verified wrapper. Weekly allowance was 13% at the latest check; the user stop guard remains active.
