@@ -1,0 +1,109 @@
+{
+  "pair": null,
+  "signs": null,
+  "candidates": [
+    {
+      "pair": {
+        "first": "blk.0.attn_v.weight",
+        "second": "blk.3.attn_v.weight",
+        "map_a_bytes": 1799224832,
+        "map_b_bytes": 1799224832,
+        "eligible": true
+      },
+      "margins": {
+        "1": {
+          "eng_Latn": 0.0015692791781717593,
+          "ben_Beng": 0.03833889874463457,
+          "hin_Deva": 0.001246455120760404,
+          "pooled": 0.003262265461216934
+        },
+        "2": {
+          "eng_Latn": 0.00375668317484989,
+          "ben_Beng": 0.004680439074796879,
+          "hin_Deva": 0.001989552836781693,
+          "pooled": 0.0070620563083093335
+        }
+      },
+      "nominatable": false
+    },
+    {
+      "pair": {
+        "first": "blk.0.ffn_down.weight",
+        "second": "blk.17.ffn_down.weight",
+        "map_a_bytes": 1788644864,
+        "map_b_bytes": 1788644864,
+        "eligible": true
+      },
+      "margins": {
+        "1": {
+          "eng_Latn": 0.0825936993930528,
+          "ben_Beng": 0.10353472430361169,
+          "hin_Deva": 0.06698366742511945,
+          "pooled": 0.07739073630684921
+        },
+        "2": {
+          "eng_Latn": 0.09240156853382163,
+          "ben_Beng": 0.1236162697182409,
+          "hin_Deva": 0.12251666161327739,
+          "pooled": 0.1252468639439037
+        }
+      },
+      "nominatable": false
+    },
+    {
+      "pair": {
+        "first": "blk.17.ffn_down.weight",
+        "second": "blk.35.ffn_down.weight",
+        "map_a_bytes": 1791462912,
+        "map_b_bytes": 1791462912,
+        "eligible": true
+      },
+      "margins": {
+        "1": {
+          "eng_Latn": -0.033696048276974984,
+          "ben_Beng": -0.0327076747241654,
+          "hin_Deva": -0.023819842682822,
+          "pooled": -0.030487326053392667
+        },
+        "2": {
+          "eng_Latn": -0.03893921518497087,
+          "ben_Beng": -0.0366713633789683,
+          "hin_Deva": -0.02156050795008919,
+          "pooled": -0.029031818297976644
+        }
+      },
+      "nominatable": false
+    },
+    {
+      "pair": {
+        "first": "blk.17.ffn_gate.weight",
+        "second": "blk.17.ffn_up.weight",
+        "map_a_bytes": 1797451264,
+        "map_b_bytes": 1797451264,
+        "eligible": true
+      },
+      "margins": {
+        "1": {
+          "eng_Latn": -0.0015007200429535197,
+          "ben_Beng": -0.0009806578818225753,
+          "hin_Deva": -0.0006831427030306897,
+          "pooled": -0.0010284024386506712
+        },
+        "2": {
+          "eng_Latn": -0.0005807057739641748,
+          "ben_Beng": -0.0010538732051015131,
+          "hin_Deva": -0.0009693978905489426,
+          "pooled": -0.000743262542418973
+        }
+      },
+      "nominatable": false
+    }
+  ],
+  "epsilon_nats": 1e-05,
+  "interpretation": "Discovery screen only; first qualifying feasible pair. No repetition3data used. None means inconclusive, not language equivalence.",
+  "plan_sha256": "e7ccdb50be254ee8bdde307f73c58bc9a9c9d68882a40aa453b9b516ec8be64f",
+  "discovery_report_sha256": "744eb2731086504137bdcc2c9ed02c184b7ceb04918264f02fbe8ef8ac65ca3d",
+  "discovery_report_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/c8/native-12/report.json",
+  "implementation_sha256": "64a10335bb6abf40e1895f8b75f7409649e1948c56df8b8b517c7b7fc99c2046",
+  "schema": "c8-discovery-nomination-v1"
+}

@@ -1,0 +1,2862 @@
+{
+  "identity": {
+    "schema": "c8-proxy-v1",
+    "plan_sha256": "e7ccdb50be254ee8bdde307f73c58bc9a9c9d68882a40aa453b9b516ec8be64f",
+    "pool_sha256": "c17a79fede7ff993f247d4a23cce533ea796887b0ce416c227407bc471997fd3",
+    "implementation_sha256": "a924e2f280c3bccc4c7398a64ba9263ecea5f6cf5b55f111d29f1d52340db4f5",
+    "error_manifest_sha256": "567a1184dd178e45ae513309b236dfbe545f6671f1dd2a2e42bd379912744372",
+    "checkpoint_proof_sha256": "604f12d51fd5a6235eafc6e52d30d0100c7f8c1682f34693e399eb99983aeb93",
+    "repetitions": [
+      1,
+      2
+    ],
+    "nomination_sha256": null,
+    "torch": "2.13.0+cu130",
+    "transformers": "5.20.1",
+    "dtype": "float32",
+    "tf32": false,
+    "objective": "Per-example mean64-token NLL; gradient squared before averaging",
+    "budget_operation_id": "b9ef2ea6cb844b1d9ffa6bb11847ed8b"
+  },
+  "whole_selected_matrices_exact": [
+    "token_embd.weight",
+    "blk.0.attn_v.weight",
+    "blk.3.attn_v.weight",
+    "blk.0.ffn_down.weight",
+    "blk.17.ffn_down.weight",
+    "blk.35.ffn_down.weight",
+    "blk.17.ffn_gate.weight",
+    "blk.17.ffn_up.weight"
+  ],
+  "records": [
+    {
+      "repeat": 1,
+      "index": 0,
+      "source": "TED2020:talk:2659",
+      "language": "eng_Latn",
+      "tokens": 64,
+      "mean_next_token_nll": 3.375779628753662,
+      "forward_backward_seconds": 1.9809637129947077,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.013755817742999327,
+          "activation_score": 73295.54495273702,
+          "activation_components": {
+            "lookup": 0.7332722805596055,
+            "output_head": 73294.81168045646
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0036218119286517544,
+          "activation_score": 19298.904124261982,
+          "activation_components": {
+            "lookup": 0.1940187010976454,
+            "output_head": 19298.710105560884
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 8.616345724111331e-05,
+          "activation_score": 1.834031152935237,
+          "activation_components": {
+            "linear_output": 1.834031152935237
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.1500016714572415e-05,
+          "activation_score": 0.4717403238257232,
+          "activation_components": {
+            "linear_output": 0.4717403238257232
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.4702315750516906e-05,
+          "activation_score": 4.257028266848591,
+          "activation_components": {
+            "linear_output": 4.257028266848591
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 3.993618505511861e-06,
+          "activation_score": 1.068478479109261,
+          "activation_components": {
+            "linear_output": 1.068478479109261
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0032671311405192884,
+          "activation_score": 361.80925232335017,
+          "activation_components": {
+            "linear_output": 361.80925232335017
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0001657891914080373,
+          "activation_score": 14.942966569717113,
+          "activation_components": {
+            "linear_output": 14.942966569717113
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 8.27165192929878e-05,
+          "activation_score": 19.449991763898495,
+          "activation_components": {
+            "linear_output": 19.449991763898495
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.1589206507336574e-05,
+          "activation_score": 5.050023776491393,
+          "activation_components": {
+            "linear_output": 5.050023776491393
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.002114348955949968,
+          "activation_score": 664.3538721280204,
+          "activation_components": {
+            "linear_output": 664.3538721280204
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0005262363445641132,
+          "activation_score": 161.7565607233696,
+          "activation_components": {
+            "linear_output": 161.7565607233696
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.582598018362255e-05,
+          "activation_score": 220.82673226396156,
+          "activation_components": {
+            "linear_output": 220.82673226396156
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.2060334072708885e-05,
+          "activation_score": 57.63130248224091,
+          "activation_components": {
+            "linear_output": 57.63130248224091
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 8.232372916157069e-05,
+          "activation_score": 189.53748012827674,
+          "activation_components": {
+            "linear_output": 189.53748012827674
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.0929812300975896e-05,
+          "activation_score": 48.05611965988023,
+          "activation_components": {
+            "linear_output": 48.05611965988023
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "index": 0,
+      "source": "TED2020:talk:2659",
+      "language": "ben_Beng",
+      "tokens": 64,
+      "mean_next_token_nll": 4.763725280761719,
+      "forward_backward_seconds": 0.11681993899401277,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.010774996607035707,
+          "activation_score": 119602.21543573895,
+          "activation_components": {
+            "lookup": 0.21489458108949444,
+            "output_head": 119602.00054115786
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.002257994109928751,
+          "activation_score": 31414.34133535667,
+          "activation_components": {
+            "lookup": 0.05674941101756273,
+            "output_head": 31414.28458594565
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00045801024560869794,
+          "activation_score": 1.802685519866464,
+          "activation_components": {
+            "linear_output": 1.802685519866464
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00011396098964446051,
+          "activation_score": 0.46416925792744657,
+          "activation_components": {
+            "linear_output": 0.46416925792744657
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00012873068232200328,
+          "activation_score": 4.893872285339843,
+          "activation_components": {
+            "linear_output": 4.893872285339843
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.2146698078871837e-05,
+          "activation_score": 1.245417194753868,
+          "activation_components": {
+            "linear_output": 1.245417194753868
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.004984905800033999,
+          "activation_score": 362.66700529718025,
+          "activation_components": {
+            "linear_output": 362.66700529718025
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00029388114655416357,
+          "activation_score": 15.17139189840678,
+          "activation_components": {
+            "linear_output": 15.17139189840678
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 8.944653340411696e-05,
+          "activation_score": 17.646740713510955,
+          "activation_components": {
+            "linear_output": 17.646740713510955
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.3297720625982387e-05,
+          "activation_score": 4.579335165703617,
+          "activation_components": {
+            "linear_output": 4.579335165703617
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0013840573507936903,
+          "activation_score": 1284.6962800214064,
+          "activation_components": {
+            "linear_output": 1284.6962800214064
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00032143791403014003,
+          "activation_score": 302.21699075405695,
+          "activation_components": {
+            "linear_output": 302.21699075405695
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.893591390984978e-05,
+          "activation_score": 211.17542927865964,
+          "activation_components": {
+            "linear_output": 211.17542927865964
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.5576264076345387e-05,
+          "activation_score": 55.203737510469175,
+          "activation_components": {
+            "linear_output": 55.203737510469175
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 9.58131530660793e-05,
+          "activation_score": 182.26922061535117,
+          "activation_components": {
+            "linear_output": 182.26922061535117
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.4297130096540645e-05,
+          "activation_score": 46.08335124030528,
+          "activation_components": {
+            "linear_output": 46.08335124030528
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "index": 0,
+      "source": "TED2020:talk:2659",
+      "language": "hin_Deva",
+      "tokens": 64,
+      "mean_next_token_nll": 4.436513900756836,
+      "forward_backward_seconds": 0.07845943000575062,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.009976674200044413,
+          "activation_score": 113637.3507893485,
+          "activation_components": {
+            "lookup": 0.22433180682702858,
+            "output_head": 113637.12645754167
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0023487807540869383,
+          "activation_score": 30252.221100632516,
+          "activation_components": {
+            "lookup": 0.057979577352267,
+            "output_head": 30252.163121055164
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0006825857551319712,
+          "activation_score": 1.7658160150087714,
+          "activation_components": {
+            "linear_output": 1.7658160150087714
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00016676230487790226,
+          "activation_score": 0.45690083601130516,
+          "activation_components": {
+            "linear_output": 0.45690083601130516
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00023208580146528583,
+          "activation_score": 4.792547766813641,
+          "activation_components": {
+            "linear_output": 4.792547766813641
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.189178725226305e-05,
+          "activation_score": 1.217914365581685,
+          "activation_components": {
+            "linear_output": 1.217914365581685
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.006633403628354472,
+          "activation_score": 362.989630095029,
+          "activation_components": {
+            "linear_output": 362.989630095029
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0003673254737908518,
+          "activation_score": 15.257229925805497,
+          "activation_components": {
+            "linear_output": 15.257229925805497
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 7.830986382150499e-05,
+          "activation_score": 15.946900500717362,
+          "activation_components": {
+            "linear_output": 15.946900500717362
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.0406986985089856e-05,
+          "activation_score": 4.137978182184876,
+          "activation_components": {
+            "linear_output": 4.137978182184876
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.001557636029577084,
+          "activation_score": 932.284873895541,
+          "activation_components": {
+            "linear_output": 932.284873895541
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00037825260250586414,
+          "activation_score": 226.41787887439702,
+          "activation_components": {
+            "linear_output": 226.41787887439702
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.3951205820583605e-05,
+          "activation_score": 206.43233399447294,
+          "activation_components": {
+            "linear_output": 206.43233399447294
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.1684212512035464e-05,
+          "activation_score": 53.901253069760706,
+          "activation_components": {
+            "linear_output": 53.901253069760706
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 8.065962045319547e-05,
+          "activation_score": 177.540297166732,
+          "activation_components": {
+            "linear_output": 177.540297166732
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.052102355721766e-05,
+          "activation_score": 44.98276833883277,
+          "activation_components": {
+            "linear_output": 44.98276833883277
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "index": 1,
+      "source": "TED2020:talk:1130",
+      "language": "eng_Latn",
+      "tokens": 64,
+      "mean_next_token_nll": 3.6677005290985107,
+      "forward_backward_seconds": 0.09233807200507727,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.01579014682032752,
+          "activation_score": 63122.9654291311,
+          "activation_components": {
+            "lookup": 0.8179401124965957,
+            "output_head": 63122.14748901861
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.004114190772296527,
+          "activation_score": 16662.080436248525,
+          "activation_components": {
+            "lookup": 0.21615014727727339,
+            "output_head": 16661.86428610125
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0002210939780137837,
+          "activation_score": 1.825040445410412,
+          "activation_components": {
+            "linear_output": 1.825040445410412
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 5.4564535746542115e-05,
+          "activation_score": 0.4696142622591592,
+          "activation_components": {
+            "linear_output": 0.4696142622591592
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00010261222340987461,
+          "activation_score": 4.2912586627067775,
+          "activation_components": {
+            "linear_output": 4.2912586627067775
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 8.795054640878015e-06,
+          "activation_score": 1.0759462791338896,
+          "activation_components": {
+            "linear_output": 1.0759462791338896
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.004310242025675569,
+          "activation_score": 361.82565501120376,
+          "activation_components": {
+            "linear_output": 361.82565501120376
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00020255411930330505,
+          "activation_score": 14.94994263695712,
+          "activation_components": {
+            "linear_output": 14.94994263695712
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 7.46672281154974e-05,
+          "activation_score": 17.047223006310166,
+          "activation_components": {
+            "linear_output": 17.047223006310166
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.940501440697308e-05,
+          "activation_score": 4.422205250218318,
+          "activation_components": {
+            "linear_output": 4.422205250218318
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0025737974269729284,
+          "activation_score": 701.3689669991152,
+          "activation_components": {
+            "linear_output": 701.3689669991152
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0006425042313347136,
+          "activation_score": 172.46977743880288,
+          "activation_components": {
+            "linear_output": 172.46977743880288
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.2946000395041616e-05,
+          "activation_score": 211.5791599104619,
+          "activation_components": {
+            "linear_output": 211.5791599104619
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.1346202839303638e-05,
+          "activation_score": 55.15976315500823,
+          "activation_components": {
+            "linear_output": 55.15976315500823
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 7.806009259418805e-05,
+          "activation_score": 181.3756354384758,
+          "activation_components": {
+            "linear_output": 181.3756354384758
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.985803423674089e-05,
+          "activation_score": 45.94364441507647,
+          "activation_components": {
+            "linear_output": 45.94364441507647
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "index": 1,
+      "source": "TED2020:talk:1130",
+      "language": "ben_Beng",
+      "tokens": 64,
+      "mean_next_token_nll": 3.5871527194976807,
+      "forward_backward_seconds": 0.07153995599946938,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.009302831474865143,
+          "activation_score": 126289.4529365516,
+          "activation_components": {
+            "lookup": 0.2543537691386435,
+            "output_head": 126289.19858278247
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0021470538941898323,
+          "activation_score": 33243.640996397706,
+          "activation_components": {
+            "lookup": 0.0664216896242614,
+            "output_head": 33243.57457470808
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0005867456465104425,
+          "activation_score": 1.7876352874961179,
+          "activation_components": {
+            "linear_output": 1.7876352874961179
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0001436328918936737,
+          "activation_score": 0.4604413361723504,
+          "activation_components": {
+            "linear_output": 0.4604413361723504
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00018898303016059677,
+          "activation_score": 5.044149723981441,
+          "activation_components": {
+            "linear_output": 5.044149723981441
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.7890712026770057e-05,
+          "activation_score": 1.2772568196950354,
+          "activation_components": {
+            "linear_output": 1.2772568196950354
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.005564445176257406,
+          "activation_score": 362.7985975225436,
+          "activation_components": {
+            "linear_output": 362.7985975225436
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00034005800567533007,
+          "activation_score": 15.207196799692651,
+          "activation_components": {
+            "linear_output": 15.207196799692651
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 6.074147498670071e-05,
+          "activation_score": 15.197216738966247,
+          "activation_components": {
+            "linear_output": 15.197216738966247
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.5857946137845012e-05,
+          "activation_score": 3.9496956264789933,
+          "activation_components": {
+            "linear_output": 3.9496956264789933
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.001755654117980307,
+          "activation_score": 1542.2753617419696,
+          "activation_components": {
+            "linear_output": 1542.2753617419696
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0004257270983776833,
+          "activation_score": 367.7572527547412,
+          "activation_components": {
+            "linear_output": 367.7572527547412
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.821748456440155e-05,
+          "activation_score": 202.68262840230307,
+          "activation_components": {
+            "linear_output": 202.68262840230307
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.0287940478426495e-05,
+          "activation_score": 52.91973427915392,
+          "activation_components": {
+            "linear_output": 52.91973427915392
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 6.917372649762326e-05,
+          "activation_score": 173.77710476410664,
+          "activation_components": {
+            "linear_output": 173.77710476410664
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.7596643712154647e-05,
+          "activation_score": 44.052786055259006,
+          "activation_components": {
+            "linear_output": 44.052786055259006
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "index": 1,
+      "source": "TED2020:talk:1130",
+      "language": "hin_Deva",
+      "tokens": 64,
+      "mean_next_token_nll": 3.855351448059082,
+      "forward_backward_seconds": 0.07389657200837974,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.008823949811805487,
+          "activation_score": 120626.69713177683,
+          "activation_components": {
+            "lookup": 0.20241287429729438,
+            "output_head": 120626.49471890254
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.002228735113695355,
+          "activation_score": 32236.03693671127,
+          "activation_components": {
+            "lookup": 0.05270067235970978,
+            "output_head": 32235.98423603891
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0006394518522278728,
+          "activation_score": 1.7641392353884957,
+          "activation_components": {
+            "linear_output": 1.7641392353884957
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0001578879917131056,
+          "activation_score": 0.456072588800625,
+          "activation_components": {
+            "linear_output": 0.456072588800625
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0002468302023842522,
+          "activation_score": 5.067833231770912,
+          "activation_components": {
+            "linear_output": 5.067833231770912
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.1705267462974792e-05,
+          "activation_score": 1.2876255928090106,
+          "activation_components": {
+            "linear_output": 1.2876255928090106
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.006238389014768442,
+          "activation_score": 362.9750361217839,
+          "activation_components": {
+            "linear_output": 362.9750361217839
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0003439540769456938,
+          "activation_score": 15.255405172631527,
+          "activation_components": {
+            "linear_output": 15.255405172631527
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.433808603583888e-05,
+          "activation_score": 13.359247628443951,
+          "activation_components": {
+            "linear_output": 13.359247628443951
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.4221922118342605e-05,
+          "activation_score": 3.468410814449381,
+          "activation_components": {
+            "linear_output": 3.468410814449381
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0011601107020964652,
+          "activation_score": 1107.0099530676307,
+          "activation_components": {
+            "linear_output": 1107.0099530676307
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0002872149143991419,
+          "activation_score": 269.81816751720993,
+          "activation_components": {
+            "linear_output": 269.81816751720993
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.217766262998097e-05,
+          "activation_score": 194.60744429901285,
+          "activation_components": {
+            "linear_output": 194.60744429901285
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 8.73283064652999e-06,
+          "activation_score": 50.793017173025305,
+          "activation_components": {
+            "linear_output": 50.793017173025305
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.9950866534214595e-05,
+          "activation_score": 167.28411520932877,
+          "activation_components": {
+            "linear_output": 167.28411520932877
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.5270567563332064e-05,
+          "activation_score": 42.34817201199279,
+          "activation_components": {
+            "linear_output": 42.34817201199279
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "index": 2,
+      "source": "TED2020:talk:494",
+      "language": "eng_Latn",
+      "tokens": 64,
+      "mean_next_token_nll": 3.6099436283111572,
+      "forward_backward_seconds": 0.0933168339979602,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.007638041799210079,
+          "activation_score": 58853.25701384384,
+          "activation_components": {
+            "lookup": 0.7427413482255862,
+            "output_head": 58852.51427249561
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.002030022093744168,
+          "activation_score": 15534.294426419137,
+          "activation_components": {
+            "lookup": 0.19505967255288736,
+            "output_head": 15534.099366746585
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 9.7976097224165e-05,
+          "activation_score": 1.9267184829966015,
+          "activation_components": {
+            "linear_output": 1.9267184829966015
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.3858161308731852e-05,
+          "activation_score": 0.4933687567645104,
+          "activation_components": {
+            "linear_output": 0.4933687567645104
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.4624394547225956e-05,
+          "activation_score": 4.37691718598624,
+          "activation_components": {
+            "linear_output": 4.37691718598624
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 5.022531531321233e-06,
+          "activation_score": 1.103351317506616,
+          "activation_components": {
+            "linear_output": 1.103351317506616
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0020140350087984697,
+          "activation_score": 362.07826896834194,
+          "activation_components": {
+            "linear_output": 362.07826896834194
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 9.04393632859744e-05,
+          "activation_score": 15.01114088223101,
+          "activation_components": {
+            "linear_output": 15.01114088223101
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.9494133525386695e-05,
+          "activation_score": 16.111536955582448,
+          "activation_components": {
+            "linear_output": 16.111536955582448
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.283970467109585e-05,
+          "activation_score": 4.177737218705608,
+          "activation_components": {
+            "linear_output": 4.177737218705608
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0007109113345278501,
+          "activation_score": 615.0177887177349,
+          "activation_components": {
+            "linear_output": 615.0177887177349
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0001766364611158129,
+          "activation_score": 150.70017362276644,
+          "activation_components": {
+            "linear_output": 150.70017362276644
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.0515024543736287e-05,
+          "activation_score": 209.92944852335734,
+          "activation_components": {
+            "linear_output": 209.92944852335734
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 7.986197899875625e-06,
+          "activation_score": 54.68540453513383,
+          "activation_components": {
+            "linear_output": 54.68540453513383
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.494662022508474e-05,
+          "activation_score": 181.30419015752938,
+          "activation_components": {
+            "linear_output": 181.30419015752938
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.389076529520077e-05,
+          "activation_score": 45.721351505769846,
+          "activation_components": {
+            "linear_output": 45.721351505769846
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "index": 2,
+      "source": "TED2020:talk:494",
+      "language": "ben_Beng",
+      "tokens": 64,
+      "mean_next_token_nll": 3.1901516914367676,
+      "forward_backward_seconds": 1.854528070995002,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0034577317738093524,
+          "activation_score": 123832.81303153036,
+          "activation_components": {
+            "lookup": 0.1710947212150558,
+            "output_head": 123832.64193680914
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0008215744863732408,
+          "activation_score": 32378.925822181984,
+          "activation_components": {
+            "lookup": 0.04458540527371957,
+            "output_head": 32378.88123677671
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00016484508372265088,
+          "activation_score": 1.8033045869762139,
+          "activation_components": {
+            "linear_output": 1.8033045869762139
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 4.094037722309369e-05,
+          "activation_score": 0.46466342641688174,
+          "activation_components": {
+            "linear_output": 0.46466342641688174
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 6.429360684945945e-05,
+          "activation_score": 5.0743153418184885,
+          "activation_components": {
+            "linear_output": 5.0743153418184885
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 5.7903900900571806e-06,
+          "activation_score": 1.2907275956828907,
+          "activation_components": {
+            "linear_output": 1.2907275956828907
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0026782688461954775,
+          "activation_score": 363.1461620673493,
+          "activation_components": {
+            "linear_output": 363.1461620673493
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00013848085048635687,
+          "activation_score": 15.29839896346025,
+          "activation_components": {
+            "linear_output": 15.29839896346025
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.299057735081903e-05,
+          "activation_score": 14.23180227907911,
+          "activation_components": {
+            "linear_output": 14.23180227907911
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.1178781226770795e-05,
+          "activation_score": 3.6883214411358933,
+          "activation_components": {
+            "linear_output": 3.6883214411358933
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.000676668205542477,
+          "activation_score": 1203.0745467063398,
+          "activation_components": {
+            "linear_output": 1203.0745467063398
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00015875666473402723,
+          "activation_score": 287.52000320569107,
+          "activation_components": {
+            "linear_output": 287.52000320569107
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 2.686009576676026e-05,
+          "activation_score": 201.78482221324168,
+          "activation_components": {
+            "linear_output": 201.78482221324168
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 7.196853416866894e-06,
+          "activation_score": 52.68446754140357,
+          "activation_components": {
+            "linear_output": 52.68446754140357
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.053770418268309e-05,
+          "activation_score": 174.3728974657085,
+          "activation_components": {
+            "linear_output": 174.3728974657085
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.2664802426313409e-05,
+          "activation_score": 43.98703064050906,
+          "activation_components": {
+            "linear_output": 43.98703064050906
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "index": 2,
+      "source": "TED2020:talk:494",
+      "language": "hin_Deva",
+      "tokens": 64,
+      "mean_next_token_nll": 3.34873628616333,
+      "forward_backward_seconds": 0.07311130300513469,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.005058310379097059,
+          "activation_score": 115844.33895915236,
+          "activation_components": {
+            "lookup": 0.22136701149767835,
+            "output_head": 115844.11759214086
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.001368692928895919,
+          "activation_score": 30868.22458162566,
+          "activation_components": {
+            "lookup": 0.05729247187133314,
+            "output_head": 30868.16728915379
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00022128024221589228,
+          "activation_score": 1.7652129830353083,
+          "activation_components": {
+            "linear_output": 1.7652129830353083
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 5.315385059319826e-05,
+          "activation_score": 0.4568223950205243,
+          "activation_components": {
+            "linear_output": 0.4568223950205243
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00010188713881466386,
+          "activation_score": 4.802872965342106,
+          "activation_components": {
+            "linear_output": 4.802872965342106
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 8.181114527594482e-06,
+          "activation_score": 1.217363934115923,
+          "activation_components": {
+            "linear_output": 1.217363934115923
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0034206444653038263,
+          "activation_score": 363.0602089503808,
+          "activation_components": {
+            "linear_output": 363.0602089503808
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00017356840199493224,
+          "activation_score": 15.276601391050809,
+          "activation_components": {
+            "linear_output": 15.276601391050809
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.6928777410734335e-05,
+          "activation_score": 14.66599765341614,
+          "activation_components": {
+            "linear_output": 14.66599765341614
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 9.60118574688701e-06,
+          "activation_score": 3.8035328845066316,
+          "activation_components": {
+            "linear_output": 3.8035328845066316
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0012275834640517829,
+          "activation_score": 1037.8523847957367,
+          "activation_components": {
+            "linear_output": 1037.8523847957367
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0002895562052828781,
+          "activation_score": 246.99403673826637,
+          "activation_components": {
+            "linear_output": 246.99403673826637
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 2.470784515068758e-05,
+          "activation_score": 201.12735135476962,
+          "activation_components": {
+            "linear_output": 201.12735135476962
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 6.689991909681043e-06,
+          "activation_score": 52.46871475102517,
+          "activation_components": {
+            "linear_output": 52.46871475102517
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.298691990446199e-05,
+          "activation_score": 174.5503244772732,
+          "activation_components": {
+            "linear_output": 174.5503244772732
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.0855433108824438e-05,
+          "activation_score": 43.9438378433932,
+          "activation_components": {
+            "linear_output": 43.9438378433932
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "index": 0,
+      "source": "TED2020:talk:587",
+      "language": "eng_Latn",
+      "tokens": 64,
+      "mean_next_token_nll": 2.930194854736328,
+      "forward_backward_seconds": 0.08554874100082088,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.006622024282500799,
+          "activation_score": 63686.41195798847,
+          "activation_components": {
+            "lookup": 0.7327284308576658,
+            "output_head": 63685.679229557616
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0017684393178944767,
+          "activation_score": 16806.181394166357,
+          "activation_components": {
+            "lookup": 0.19204948553985984,
+            "output_head": 16805.989344680816
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00010693962649058478,
+          "activation_score": 1.902288094034512,
+          "activation_components": {
+            "linear_output": 1.902288094034512
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.653830416834706e-05,
+          "activation_score": 0.4876794909532304,
+          "activation_components": {
+            "linear_output": 0.4876794909532304
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.0306917475690246e-05,
+          "activation_score": 4.261353739957283,
+          "activation_components": {
+            "linear_output": 4.261353739957283
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 3.83148173110646e-06,
+          "activation_score": 1.0728028082420744,
+          "activation_components": {
+            "linear_output": 1.0728028082420744
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0021054871752035995,
+          "activation_score": 362.1365605163624,
+          "activation_components": {
+            "linear_output": 362.1365605163624
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00010276166361051127,
+          "activation_score": 15.023548340833262,
+          "activation_components": {
+            "linear_output": 15.023548340833262
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 6.02531049782409e-05,
+          "activation_score": 16.850938778783803,
+          "activation_components": {
+            "linear_output": 16.850938778783803
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.563318346984177e-05,
+          "activation_score": 4.36621002630488,
+          "activation_components": {
+            "linear_output": 4.36621002630488
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0007023991760539544,
+          "activation_score": 605.3662987502778,
+          "activation_components": {
+            "linear_output": 605.3662987502778
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00017413627286232944,
+          "activation_score": 147.89008384848165,
+          "activation_components": {
+            "linear_output": 147.89008384848165
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.597172097473841e-05,
+          "activation_score": 212.5517978421883,
+          "activation_components": {
+            "linear_output": 212.5517978421883
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 9.315158818751361e-06,
+          "activation_score": 55.37884873394722,
+          "activation_components": {
+            "linear_output": 55.37884873394722
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 6.841144488846818e-05,
+          "activation_score": 183.70716612089265,
+          "activation_components": {
+            "linear_output": 183.70716612089265
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.7232377766307697e-05,
+          "activation_score": 46.306089231215964,
+          "activation_components": {
+            "linear_output": 46.306089231215964
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "index": 0,
+      "source": "TED2020:talk:587",
+      "language": "ben_Beng",
+      "tokens": 64,
+      "mean_next_token_nll": 4.128238201141357,
+      "forward_backward_seconds": 0.07252581400098279,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0052686843310536585,
+          "activation_score": 126289.496088033,
+          "activation_components": {
+            "lookup": 0.17961765792217066,
+            "output_head": 126289.31647037508
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0011952208062953242,
+          "activation_score": 33074.118193305105,
+          "activation_components": {
+            "lookup": 0.047225381581740486,
+            "output_head": 33074.07096792352
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0003497602037111782,
+          "activation_score": 1.812071184032917,
+          "activation_components": {
+            "linear_output": 1.812071184032917
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 8.684316751535187e-05,
+          "activation_score": 0.4664415395881392,
+          "activation_components": {
+            "linear_output": 0.4664415395881392
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 9.438396989865168e-05,
+          "activation_score": 4.775659124201849,
+          "activation_components": {
+            "linear_output": 4.775659124201849
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 8.17384332111017e-06,
+          "activation_score": 1.2149816616786877,
+          "activation_components": {
+            "linear_output": 1.2149816616786877
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.003519997101781246,
+          "activation_score": 362.98390555518534,
+          "activation_components": {
+            "linear_output": 362.98390555518534
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00020004672750825354,
+          "activation_score": 15.253641460473728,
+          "activation_components": {
+            "linear_output": 15.253641460473728
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.454769074632794e-05,
+          "activation_score": 14.449343056844011,
+          "activation_components": {
+            "linear_output": 14.449343056844011
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.4357479123338145e-05,
+          "activation_score": 3.743098412147114,
+          "activation_components": {
+            "linear_output": 3.743098412147114
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0008935022486303677,
+          "activation_score": 1337.4870355428864,
+          "activation_components": {
+            "linear_output": 1337.4870355428864
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00020704546875362643,
+          "activation_score": 318.6919168933967,
+          "activation_components": {
+            "linear_output": 318.6919168933967
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.284090904359557e-05,
+          "activation_score": 200.86948820003698,
+          "activation_components": {
+            "linear_output": 200.86948820003698
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 8.99207591503862e-06,
+          "activation_score": 52.46971401953607,
+          "activation_components": {
+            "linear_output": 52.46971401953607
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.852284262106243e-05,
+          "activation_score": 173.9081175145005,
+          "activation_components": {
+            "linear_output": 173.9081175145005
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.4745348709600675e-05,
+          "activation_score": 43.83860043324859,
+          "activation_components": {
+            "linear_output": 43.83860043324859
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "index": 0,
+      "source": "TED2020:talk:587",
+      "language": "hin_Deva",
+      "tokens": 64,
+      "mean_next_token_nll": 3.9806485176086426,
+      "forward_backward_seconds": 0.06984950898913667,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.003861403968408867,
+          "activation_score": 119928.91867251147,
+          "activation_components": {
+            "lookup": 0.17092167702965377,
+            "output_head": 119928.74775083445
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0010359674780094233,
+          "activation_score": 31936.238051636745,
+          "activation_components": {
+            "lookup": 0.04450196603491264,
+            "output_head": 31936.19354967071
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 8.469007989629031e-05,
+          "activation_score": 1.7737987846914356,
+          "activation_components": {
+            "linear_output": 1.7737987846914356
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 2.0166804277790773e-05,
+          "activation_score": 0.45900736356333793,
+          "activation_components": {
+            "linear_output": 0.45900736356333793
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.6465315552174006e-05,
+          "activation_score": 4.583405944171612,
+          "activation_components": {
+            "linear_output": 4.583405944171612
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 4.993159410797594e-06,
+          "activation_score": 1.1629318091576604,
+          "activation_components": {
+            "linear_output": 1.1629318091576604
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0025172974370890008,
+          "activation_score": 363.1851799338772,
+          "activation_components": {
+            "linear_output": 363.1851799338772
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00011375921802388885,
+          "activation_score": 15.304434841386477,
+          "activation_components": {
+            "linear_output": 15.304434841386477
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.6243770885764766e-05,
+          "activation_score": 14.659296219480838,
+          "activation_components": {
+            "linear_output": 14.659296219480838
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.204102344003557e-05,
+          "activation_score": 3.795525152452617,
+          "activation_components": {
+            "linear_output": 3.795525152452617
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0004951959073443709,
+          "activation_score": 974.297562070549,
+          "activation_components": {
+            "linear_output": 974.297562070549
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00012077656617472923,
+          "activation_score": 237.0460601951328,
+          "activation_components": {
+            "linear_output": 237.0460601951328
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 2.824519247210381e-05,
+          "activation_score": 204.3054289576918,
+          "activation_components": {
+            "linear_output": 204.3054289576918
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 7.605023162255962e-06,
+          "activation_score": 53.312061435775234,
+          "activation_components": {
+            "linear_output": 53.312061435775234
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.125125726612882e-05,
+          "activation_score": 176.65925863478395,
+          "activation_components": {
+            "linear_output": 176.65925863478395
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.30206793081143e-05,
+          "activation_score": 44.58358670107619,
+          "activation_components": {
+            "linear_output": 44.58358670107619
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "index": 1,
+      "source": "TED2020:talk:686",
+      "language": "eng_Latn",
+      "tokens": 64,
+      "mean_next_token_nll": 3.2702102661132812,
+      "forward_backward_seconds": 0.08877495600609109,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.007075831544673085,
+          "activation_score": 73866.0794590185,
+          "activation_components": {
+            "lookup": 0.6891992853552618,
+            "output_head": 73865.39025973315
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00188395533399674,
+          "activation_score": 19485.513778803488,
+          "activation_components": {
+            "lookup": 0.1829388416766614,
+            "output_head": 19485.33083996181
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00012338043532190269,
+          "activation_score": 1.8517568196845384,
+          "activation_components": {
+            "linear_output": 1.8517568196845384
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 3.003020127052103e-05,
+          "activation_score": 0.47576351380029025,
+          "activation_components": {
+            "linear_output": 0.47576351380029025
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 6.619109401603726e-05,
+          "activation_score": 4.3757855992535655,
+          "activation_components": {
+            "linear_output": 4.3757855992535655
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 5.482707566381789e-06,
+          "activation_score": 1.1035563435996891,
+          "activation_components": {
+            "linear_output": 1.1035563435996891
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.002550971264557397,
+          "activation_score": 362.13563419948014,
+          "activation_components": {
+            "linear_output": 362.13563419948014
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00013377576532360347,
+          "activation_score": 15.018174062462185,
+          "activation_components": {
+            "linear_output": 15.018174062462185
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.888036618065335e-05,
+          "activation_score": 17.06948017173839,
+          "activation_components": {
+            "linear_output": 17.06948017173839
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.5259281465133004e-05,
+          "activation_score": 4.421530450968467,
+          "activation_components": {
+            "linear_output": 4.421530450968467
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0009386057904894495,
+          "activation_score": 666.6146904510673,
+          "activation_components": {
+            "linear_output": 666.6146904510673
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0002316620167813668,
+          "activation_score": 161.9648722132846,
+          "activation_components": {
+            "linear_output": 161.9648722132846
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.709645834567547e-05,
+          "activation_score": 216.11000988341783,
+          "activation_components": {
+            "linear_output": 216.11000988341783
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.0341131201991245e-05,
+          "activation_score": 56.2995536364639,
+          "activation_components": {
+            "linear_output": 56.2995536364639
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 6.695517123499577e-05,
+          "activation_score": 186.75274135684032,
+          "activation_components": {
+            "linear_output": 186.75274135684032
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.6589726546686573e-05,
+          "activation_score": 47.08248251534679,
+          "activation_components": {
+            "linear_output": 47.08248251534679
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "index": 1,
+      "source": "TED2020:talk:686",
+      "language": "ben_Beng",
+      "tokens": 64,
+      "mean_next_token_nll": 4.483947277069092,
+      "forward_backward_seconds": 0.0777643449982861,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.004608803830736817,
+          "activation_score": 123286.28828006388,
+          "activation_components": {
+            "lookup": 0.16125304683683145,
+            "output_head": 123286.12702701704
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0011506688976909768,
+          "activation_score": 32365.50677087502,
+          "activation_components": {
+            "lookup": 0.04250516819670419,
+            "output_head": 32365.464265706825
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00037399274695215016,
+          "activation_score": 1.7887079672192625,
+          "activation_components": {
+            "linear_output": 1.7887079672192625
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 9.167438438232799e-05,
+          "activation_score": 0.46061444272091906,
+          "activation_components": {
+            "linear_output": 0.46061444272091906
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00017945295818909917,
+          "activation_score": 4.988776900481632,
+          "activation_components": {
+            "linear_output": 4.988776900481632
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.691953535275997e-05,
+          "activation_score": 1.2726154460232493,
+          "activation_components": {
+            "linear_output": 1.2726154460232493
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.004754555113333815,
+          "activation_score": 362.88521351685097,
+          "activation_components": {
+            "linear_output": 362.88521351685097
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.000266416050246044,
+          "activation_score": 15.228157571643722,
+          "activation_components": {
+            "linear_output": 15.228157571643722
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.54685040342578e-05,
+          "activation_score": 13.932735384533165,
+          "activation_components": {
+            "linear_output": 13.932735384533165
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.4381196634263956e-05,
+          "activation_score": 3.612223564426909,
+          "activation_components": {
+            "linear_output": 3.612223564426909
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0010159518217817596,
+          "activation_score": 1280.5132033918705,
+          "activation_components": {
+            "linear_output": 1280.5132033918705
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00023963637089872747,
+          "activation_score": 300.64084106184686,
+          "activation_components": {
+            "linear_output": 300.64084106184686
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.6030991179342296e-05,
+          "activation_score": 203.01293687655124,
+          "activation_components": {
+            "linear_output": 203.01293687655124
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 9.881332058021815e-06,
+          "activation_score": 53.03982358945461,
+          "activation_components": {
+            "linear_output": 53.03982358945461
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 6.511501251326262e-05,
+          "activation_score": 175.61499762300957,
+          "activation_components": {
+            "linear_output": 175.61499762300957
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.6407168914277287e-05,
+          "activation_score": 44.2940266449486,
+          "activation_components": {
+            "linear_output": 44.2940266449486
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "index": 1,
+      "source": "TED2020:talk:686",
+      "language": "hin_Deva",
+      "tokens": 64,
+      "mean_next_token_nll": 4.297138690948486,
+      "forward_backward_seconds": 0.06986919499468058,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.004867098018728999,
+          "activation_score": 118316.10489125269,
+          "activation_components": {
+            "lookup": 0.1963888420197814,
+            "output_head": 118315.90850241068
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0013732117268890412,
+          "activation_score": 31548.493860654333,
+          "activation_components": {
+            "lookup": 0.0517411310747876,
+            "output_head": 31548.442119523257
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0002320467217960033,
+          "activation_score": 1.772309658910436,
+          "activation_components": {
+            "linear_output": 1.772309658910436
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 5.703145509163125e-05,
+          "activation_score": 0.4582139944750049,
+          "activation_components": {
+            "linear_output": 0.4582139944750049
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00011501360805134868,
+          "activation_score": 4.58788835332741,
+          "activation_components": {
+            "linear_output": 4.58788835332741
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 9.888147834342933e-06,
+          "activation_score": 1.1651275513785153,
+          "activation_components": {
+            "linear_output": 1.1651275513785153
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0028353451215189767,
+          "activation_score": 363.1110077725231,
+          "activation_components": {
+            "linear_output": 363.1110077725231
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00015886183713861363,
+          "activation_score": 15.286823231054672,
+          "activation_components": {
+            "linear_output": 15.286823231054672
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.689963797688379e-05,
+          "activation_score": 14.262310571499269,
+          "activation_components": {
+            "linear_output": 14.262310571499269
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 9.586273196406188e-06,
+          "activation_score": 3.6923304379426694,
+          "activation_components": {
+            "linear_output": 3.6923304379426694
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0007126266531540312,
+          "activation_score": 1009.1712212351337,
+          "activation_components": {
+            "linear_output": 1009.1712212351337
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00016486323716760054,
+          "activation_score": 239.52500470012617,
+          "activation_components": {
+            "linear_output": 239.52500470012617
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 2.3012691120194513e-05,
+          "activation_score": 204.56931504415115,
+          "activation_components": {
+            "linear_output": 204.56931504415115
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 6.207035951738052e-06,
+          "activation_score": 53.34733661288601,
+          "activation_components": {
+            "linear_output": 53.34733661288601
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.3245877038540754e-05,
+          "activation_score": 177.12989022332965,
+          "activation_components": {
+            "linear_output": 177.12989022332965
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.0956752420076402e-05,
+          "activation_score": 44.64456709944849,
+          "activation_components": {
+            "linear_output": 44.64456709944849
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "index": 2,
+      "source": "TED2020:talk:815",
+      "language": "eng_Latn",
+      "tokens": 64,
+      "mean_next_token_nll": 3.0628528594970703,
+      "forward_backward_seconds": 0.07351857599860523,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.006838460052160319,
+          "activation_score": 61092.52750508553,
+          "activation_components": {
+            "lookup": 0.7303273721512831,
+            "output_head": 61091.79717771338
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0018060479913005,
+          "activation_score": 16126.499518267274,
+          "activation_components": {
+            "lookup": 0.19422221346184174,
+            "output_head": 16126.305296053812
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 6.793810971505364e-05,
+          "activation_score": 1.8922383203097297,
+          "activation_components": {
+            "linear_output": 1.8922383203097297
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.7223673479641966e-05,
+          "activation_score": 0.48520542807997336,
+          "activation_components": {
+            "linear_output": 0.48520542807997336
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.58864303452377e-05,
+          "activation_score": 4.345031719791158,
+          "activation_components": {
+            "linear_output": 4.345031719791158
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 3.2877994684930527e-06,
+          "activation_score": 1.0936566284630276,
+          "activation_components": {
+            "linear_output": 1.0936566284630276
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.002225964270669966,
+          "activation_score": 361.93470106405607,
+          "activation_components": {
+            "linear_output": 361.93470106405607
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 9.880887375426701e-05,
+          "activation_score": 14.974217523718105,
+          "activation_components": {
+            "linear_output": 14.974217523718105
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.435403952991594e-05,
+          "activation_score": 16.6419319372421,
+          "activation_components": {
+            "linear_output": 16.6419319372421
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.4083024393873058e-05,
+          "activation_score": 4.308090264492856,
+          "activation_components": {
+            "linear_output": 4.308090264492856
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0008584554296829491,
+          "activation_score": 656.0898834125674,
+          "activation_components": {
+            "linear_output": 656.0898834125674
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00021329101601839882,
+          "activation_score": 160.1274062996059,
+          "activation_components": {
+            "linear_output": 160.1274062996059
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.371830905713615e-05,
+          "activation_score": 215.2827717893037,
+          "activation_components": {
+            "linear_output": 215.2827717893037
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 8.791935028770305e-06,
+          "activation_score": 56.0941966593841,
+          "activation_components": {
+            "linear_output": 56.0941966593841
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 6.19174472633677e-05,
+          "activation_score": 184.98661577831655,
+          "activation_components": {
+            "linear_output": 184.98661577831655
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.5628381055253056e-05,
+          "activation_score": 46.74323740927672,
+          "activation_components": {
+            "linear_output": 46.74323740927672
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "index": 2,
+      "source": "TED2020:talk:815",
+      "language": "ben_Beng",
+      "tokens": 64,
+      "mean_next_token_nll": 3.24387526512146,
+      "forward_backward_seconds": 0.0696400520100724,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.005006550408206292,
+          "activation_score": 121185.81485809754,
+          "activation_components": {
+            "lookup": 0.23275412917064925,
+            "output_head": 121185.58210396837
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.001442520743452339,
+          "activation_score": 31795.158357333872,
+          "activation_components": {
+            "lookup": 0.060375900545505075,
+            "output_head": 31795.097981433326
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00048237768831129835,
+          "activation_score": 1.7916567324155297,
+          "activation_components": {
+            "linear_output": 1.7916567324155297
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00012005008474619031,
+          "activation_score": 0.46179810075598327,
+          "activation_components": {
+            "linear_output": 0.46179810075598327
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00014494707463235876,
+          "activation_score": 5.134887421154104,
+          "activation_components": {
+            "linear_output": 5.134887421154104
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.234745333526824e-05,
+          "activation_score": 1.3081966498112338,
+          "activation_components": {
+            "linear_output": 1.3081966498112338
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0044283200950663145,
+          "activation_score": 362.7191947484144,
+          "activation_components": {
+            "linear_output": 362.7191947484144
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00026296847382215375,
+          "activation_score": 15.186666837730284,
+          "activation_components": {
+            "linear_output": 15.186666837730284
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 5.401263306031669e-05,
+          "activation_score": 14.382728021605464,
+          "activation_components": {
+            "linear_output": 14.382728021605464
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.4111357837126417e-05,
+          "activation_score": 3.7261035631736297,
+          "activation_components": {
+            "linear_output": 3.7261035631736297
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.000838646046135595,
+          "activation_score": 1257.246023014112,
+          "activation_components": {
+            "linear_output": 1257.246023014112
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00019467072888067595,
+          "activation_score": 297.73355073699736,
+          "activation_components": {
+            "linear_output": 297.73355073699736
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 3.462590797087461e-05,
+          "activation_score": 203.6795678477942,
+          "activation_components": {
+            "linear_output": 203.6795678477942
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 9.131344585006765e-06,
+          "activation_score": 53.24886144713332,
+          "activation_components": {
+            "linear_output": 53.24886144713332
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 6.383887516316302e-05,
+          "activation_score": 175.7198586120888,
+          "activation_components": {
+            "linear_output": 175.7198586120888
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.6274029031560962e-05,
+          "activation_score": 44.36902846139565,
+          "activation_components": {
+            "linear_output": 44.36902846139565
+          }
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "index": 2,
+      "source": "TED2020:talk:815",
+      "language": "hin_Deva",
+      "tokens": 64,
+      "mean_next_token_nll": 3.4197065830230713,
+      "forward_backward_seconds": 0.08584210700064432,
+      "scores": [
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.006193230799645576,
+          "activation_score": 121267.23225808963,
+          "activation_components": {
+            "lookup": 0.3001231060159768,
+            "output_head": 121266.93213498361
+          }
+        },
+        {
+          "tensor": "token_embd.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0016414537532491384,
+          "activation_score": 32303.26023934392,
+          "activation_components": {
+            "lookup": 0.0780811306161017,
+            "output_head": 32303.1821582133
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.00015086930125953428,
+          "activation_score": 1.7737344581103343,
+          "activation_components": {
+            "linear_output": 1.7737344581103343
+          }
+        },
+        {
+          "tensor": "blk.0.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 3.6307108276394e-05,
+          "activation_score": 0.45884567371163354,
+          "activation_components": {
+            "linear_output": 0.45884567371163354
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.9789585475028234e-05,
+          "activation_score": 4.786336067219219,
+          "activation_components": {
+            "linear_output": 4.786336067219219
+          }
+        },
+        {
+          "tensor": "blk.3.attn_v.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 4.2115375914164996e-06,
+          "activation_score": 1.2117102167420242,
+          "activation_components": {
+            "linear_output": 1.2117102167420242
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.0022761959705062,
+          "activation_score": 362.93971125678075,
+          "activation_components": {
+            "linear_output": 362.93971125678075
+          }
+        },
+        {
+          "tensor": "blk.0.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.00013372056846647204,
+          "activation_score": 15.243515482980882,
+          "activation_components": {
+            "linear_output": 15.243515482980882
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.350492331460681e-05,
+          "activation_score": 15.481662420750707,
+          "activation_components": {
+            "linear_output": 15.481662420750707
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.1293713504664614e-05,
+          "activation_score": 4.010548299921426,
+          "activation_components": {
+            "linear_output": 4.010548299921426
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 0.001997132882154665,
+          "activation_score": 1074.3895280545723,
+          "activation_components": {
+            "linear_output": 1074.3895280545723
+          }
+        },
+        {
+          "tensor": "blk.35.ffn_down.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 0.0004910226703727944,
+          "activation_score": 261.4052011206153,
+          "activation_components": {
+            "linear_output": 261.4052011206153
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 2.653828658575464e-05,
+          "activation_score": 210.20534644566396,
+          "activation_components": {
+            "linear_output": 210.20534644566396
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_gate.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 6.9860015498644786e-06,
+          "activation_score": 54.84847125984218,
+          "activation_components": {
+            "linear_output": 54.84847125984218
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q2_K",
+          "fisher_score": 4.832670422807278e-05,
+          "activation_score": 180.95401080427393,
+          "activation_components": {
+            "linear_output": 180.95401080427393
+          }
+        },
+        {
+          "tensor": "blk.17.ffn_up.weight",
+          "native_type": "Q3_K",
+          "fisher_score": 1.2336351087290757e-05,
+          "activation_score": 45.724267242048356,
+          "activation_components": {
+            "linear_output": 45.724267242048356
+          }
+        }
+      ]
+    }
+  ],
+  "torch_peak_allocated_bytes": 20529327616,
+  "seconds": 127.01902634798898,
+  "interpretation": "Descriptive sequence-Fisher and activation proxies; no optimizer steps or native-runtime equivalence claim."
+}
