@@ -1,0 +1,134 @@
+{
+  "identity": {
+    "schema": "c8-native-measurement-v1",
+    "mode": "reference",
+    "repetitions": [
+      3
+    ],
+    "plan_sha256": "e7ccdb50be254ee8bdde307f73c58bc9a9c9d68882a40aa453b9b516ec8be64f",
+    "pool_sha256": "c17a79fede7ff993f247d4a23cce533ea796887b0ce416c227407bc471997fd3",
+    "runtime_sha256": "f405c7da19b898e943d0dfba89465d39c9f04b940fca54c1a2ecb211da38429f",
+    "implementation_sha256": "1e39e1aa00a712d8bc91114af87786f84b296a66d7b4822971ff88671b93457a",
+    "math_sha256": "0348ebb38afb6911d2ea8ed3af95fdf84d054d5ab7fccf63485920cdf5f3ca0a",
+    "imported_runtime": {
+      "/home/shohag/tiny-aya-stage1/llama-python-a3-cold-fast/lib/python3.13/site-packages/llama_cpp/llama.py": "114c18646074b3ada403ac2963d12d298bb45b354329cb1d0e95e8bd072fdc8b",
+      "/home/shohag/tiny-aya-stage1/llama-python-a3-cold-fast/lib/python3.13/site-packages/llama_cpp/_internals.py": "1d7c702b0513bb2dcdeabdeb3475924d5ade0cf4029b2b9a65cf7df18f4e78cf",
+      "/home/shohag/tiny-aya-stage1/llama-tokenizer-pinned-fix/build/bin/libllama.so.0.5.0": "82eb4435a7e680be716b44c2964fbf7da3649194dfe8563d2e8701717417535e",
+      "/home/shohag/tiny-aya-stage1/llama-python-a3-cold-fast/lib/python3.13/site-packages/llama_cpp/server/model.py": "b8a420be28a183bb7cdb9f361623747fbc0666b511ddae328b7328784896a848",
+      "/home/shohag/tiny-aya-stage1/llama-python-a3-cold-fast/lib/python3.13/site-packages/llama_cpp/server/settings.py": "8cd8036dea4ce73f16d525ecad2d267ab5786f6f2cd7cf40343f238ec2736b36"
+    },
+    "nomination_sha256": "74797adb60f9196dce1d973c14549321a51db7e084ffbf017d86fac395584eba",
+    "cases": [
+      {
+        "label": "bf16",
+        "path": "/home/shohag/tiny-aya-stage1/models/tiny-aya-global-control-bf16.gguf",
+        "sha256": "0e2f666ac8fb50a7f53d14164147beeca35905b76b93eb90e0e3a963eb203b4b"
+      }
+    ],
+    "budget_operation_id": "ab002bec54264970b5d17157df857b34"
+  },
+  "cases": [
+    {
+      "identity_sha256": "9c51812e52dadb43b28032743ed6a66d295a73dbd0553416066e58e9899982d5",
+      "case": {
+        "label": "bf16",
+        "path": "/home/shohag/tiny-aya-stage1/models/tiny-aya-global-control-bf16.gguf",
+        "sha256": "0e2f666ac8fb50a7f53d14164147beeca35905b76b93eb90e0e3a963eb203b4b"
+      },
+      "records": [
+        {
+          "repeat": 3,
+          "index": 0,
+          "source": "TED2020:talk:605",
+          "language": "eng_Latn",
+          "tokens": 64,
+          "forward_seconds": 0.4114509290084243,
+          "cache_sha256": "b1d2898c0cc670a1e59365744af6a0cf1392ec52585d60eb766558095208b2eb",
+          "cache_bytes": 67108992
+        },
+        {
+          "repeat": 3,
+          "index": 0,
+          "source": "TED2020:talk:605",
+          "language": "ben_Beng",
+          "tokens": 64,
+          "forward_seconds": 0.0398797200032277,
+          "cache_sha256": "44437f5d2c97fb793299f74e176f164d1c21ae21992713792e26c2a69b675ee0",
+          "cache_bytes": 67108992
+        },
+        {
+          "repeat": 3,
+          "index": 0,
+          "source": "TED2020:talk:605",
+          "language": "hin_Deva",
+          "tokens": 64,
+          "forward_seconds": 0.015452924999408424,
+          "cache_sha256": "02fbb698df87e717547ccc139fdf86b18f0b00caf06d2d348a42ef2d91b09db3",
+          "cache_bytes": 67108992
+        },
+        {
+          "repeat": 3,
+          "index": 1,
+          "source": "TED2020:talk:949",
+          "language": "eng_Latn",
+          "tokens": 64,
+          "forward_seconds": 0.01538634799362626,
+          "cache_sha256": "f5d7d270cb48cf4fda0af3013ba72734730a533b83ad9ca530f5364d41ce15b6",
+          "cache_bytes": 67108992
+        },
+        {
+          "repeat": 3,
+          "index": 1,
+          "source": "TED2020:talk:949",
+          "language": "ben_Beng",
+          "tokens": 64,
+          "forward_seconds": 0.015536981998593546,
+          "cache_sha256": "5e0123de9d3d2f78d4c4b1969d057a4379a147bdcae24b88e9689c8133d42afa",
+          "cache_bytes": 67108992
+        },
+        {
+          "repeat": 3,
+          "index": 1,
+          "source": "TED2020:talk:949",
+          "language": "hin_Deva",
+          "tokens": 64,
+          "forward_seconds": 0.015745958997285925,
+          "cache_sha256": "deb8acf527b702c095484a1b98db0f87d438a7471910498c55beac0bbc8187b7",
+          "cache_bytes": 67108992
+        },
+        {
+          "repeat": 3,
+          "index": 2,
+          "source": "TED2020:talk:1397",
+          "language": "eng_Latn",
+          "tokens": 64,
+          "forward_seconds": 0.016784370003733784,
+          "cache_sha256": "129d90293dff9c02c6fe7115767738851576158515b889280ca68884f3d5d35d",
+          "cache_bytes": 67108992
+        },
+        {
+          "repeat": 3,
+          "index": 2,
+          "source": "TED2020:talk:1397",
+          "language": "ben_Beng",
+          "tokens": 64,
+          "forward_seconds": 0.016223602986428887,
+          "cache_sha256": "9bbecea20404f78b107f49ce83d98b6836c4529b913ba1cda9311789d24a9b4b",
+          "cache_bytes": 67108992
+        },
+        {
+          "repeat": 3,
+          "index": 2,
+          "source": "TED2020:talk:1397",
+          "language": "hin_Deva",
+          "tokens": 64,
+          "forward_seconds": 0.01527855999302119,
+          "cache_sha256": "017c8221d7dccaf3c27f8d7cdd1b43063b33559e50e8d43ced29b66f35a40988",
+          "cache_bytes": 67108992
+        }
+      ],
+      "seconds": 1.516556861999561
+    }
+  ],
+  "seconds_this_invocation": 6.131536400003824
+}

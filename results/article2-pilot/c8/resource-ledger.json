@@ -1,0 +1,348 @@
+{
+  "schema": "c8-cumulative-budget-v1",
+  "plan_sha256": "e7ccdb50be254ee8bdde307f73c58bc9a9c9d68882a40aa453b9b516ec8be64f",
+  "operations": [
+    {
+      "id": "a04b11fde1da407fb6756b6c9adb5605",
+      "category": "native",
+      "name": "export-token_embd.weight-Q2_K",
+      "pid": 511,
+      "started_unix": 1793591599.9720995,
+      "seconds": 22.936106740962714,
+      "status": "passed",
+      "ended_unix": 1793591622.9069812,
+      "artifact_bytes": 5813063305,
+      "error": null
+    },
+    {
+      "id": "99dc190e5c654f2f963a5b97cdbc265f",
+      "category": "native",
+      "name": "export-token_embd.weight-Q3_K",
+      "pid": 618,
+      "started_unix": 1793591623.1860394,
+      "seconds": 21.850372429937124,
+      "status": "passed",
+      "ended_unix": 1793591645.0346422,
+      "artifact_bytes": 11680597379,
+      "error": null
+    },
+    {
+      "id": "d4210535a74a4c05baa7cf943b3e0b19",
+      "category": "native",
+      "name": "export-blk.0.attn_v.weight-Q2_K",
+      "pid": 720,
+      "started_unix": 1793591645.1846786,
+      "seconds": 18.670130042126402,
+      "status": "passed",
+      "ended_unix": 1793591663.854807,
+      "artifact_bytes": 18389432548,
+      "error": null
+    },
+    {
+      "id": "5bdaffa998c140af9566c0a68cb90cb8",
+      "category": "native",
+      "name": "export-blk.0.attn_v.weight-Q3_K",
+      "pid": 845,
+      "started_unix": 1793591664.0082211,
+      "seconds": 49.52512409398332,
+      "status": "passed",
+      "ended_unix": 1793591713.5296845,
+      "artifact_bytes": 25098387689,
+      "error": null
+    },
+    {
+      "id": "0aeffbd7b4cf4695a0158ed8cb5163bc",
+      "category": "native",
+      "name": "export-blk.3.attn_v.weight-Q2_K",
+      "pid": 1004,
+      "started_unix": 1793591713.680807,
+      "seconds": 48.069701835978776,
+      "status": "passed",
+      "ended_unix": 1793591761.746957,
+      "artifact_bytes": 31807235189,
+      "error": null
+    },
+    {
+      "id": "89157b4e3e8642a4ad3772d633562ff1",
+      "category": "native",
+      "name": "export-blk.3.attn_v.weight-Q3_K",
+      "pid": 1171,
+      "started_unix": 1793591762.1612232,
+      "seconds": 88.39932443597354,
+      "status": "passed",
+      "ended_unix": 1793591850.5553436,
+      "artifact_bytes": 38516198422,
+      "error": null
+    },
+    {
+      "id": "cbf4e77c85234839b3ab9a17fac4ecf5",
+      "category": "native",
+      "name": "export-blk.0.ffn_down.weight-Q2_K",
+      "pid": 1404,
+      "started_unix": 1793591850.8062978,
+      "seconds": 54.194085970986634,
+      "status": "passed",
+      "ended_unix": 1793591904.9987884,
+      "artifact_bytes": 45189109216,
+      "error": null
+    },
+    {
+      "id": "87d53923427e40b8824e80226a06b7aa",
+      "category": "native",
+      "name": "export-blk.0.ffn_down.weight-Q3_K",
+      "pid": 1554,
+      "started_unix": 1793591905.1550875,
+      "seconds": 56.44457320892252,
+      "status": "passed",
+      "ended_unix": 1793591961.5979083,
+      "artifact_bytes": 51864310693,
+      "error": null
+    },
+    {
+      "id": "e0ea5ffc1e78425dad7c8a3a4b3b46e0",
+      "category": "native",
+      "name": "export-blk.17.ffn_down.weight-Q2_K",
+      "pid": 1756,
+      "started_unix": 1793591961.7472253,
+      "seconds": 54.770505867898464,
+      "status": "passed",
+      "ended_unix": 1793592016.5139995,
+      "artifact_bytes": 58537222639,
+      "error": null
+    },
+    {
+      "id": "495052238ab54d079da3b548613e0055",
+      "category": "native",
+      "name": "export-blk.17.ffn_down.weight-Q3_K",
+      "pid": 1915,
+      "started_unix": 1793592016.6805646,
+      "seconds": 31.383294582366943,
+      "status": "failed",
+      "ended_unix": 1793592048.0638592,
+      "artifact_bytes": 58734424311,
+      "error": "C: exhausted on 2026-11-01; process ended by I/O errors (storage incident)",
+      "recovery_receipt": "recovery/recovery-receipt-2026-11-07.json"
+    },
+    {
+      "id": "51635a556b92481bb06ec9d1357f7c83",
+      "category": "native",
+      "name": "export-blk.17.ffn_down.weight-Q3_K",
+      "pid": 52512,
+      "started_unix": 1794070262.8784237,
+      "seconds": 22.70417862299655,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 403594092544
+      },
+      "ended_unix": 1794070285.581288,
+      "artifact_bytes": 65409605494,
+      "error": null
+    },
+    {
+      "id": "ca7038baa5464fa193111a18bfc24a2a",
+      "category": "native",
+      "name": "export-blk.35.ffn_down.weight-Q2_K",
+      "pid": 58229,
+      "started_unix": 1794070285.7301898,
+      "seconds": 18.458785480994266,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 396821643264
+      },
+      "ended_unix": 1794070304.1875732,
+      "artifact_bytes": 72082494332,
+      "error": null
+    },
+    {
+      "id": "ca2791f15a0547e087fc4c4494b71ce1",
+      "category": "native",
+      "name": "export-blk.35.ffn_down.weight-Q3_K",
+      "pid": 63283,
+      "started_unix": 1794070304.332573,
+      "seconds": 36.5477646280051,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 385679593472
+      },
+      "ended_unix": 1794070340.878756,
+      "artifact_bytes": 78757672835,
+      "error": null
+    },
+    {
+      "id": "cf74516474084d8f99fbec7990d84e73",
+      "category": "native",
+      "name": "export-blk.17.ffn_gate.weight-Q2_K",
+      "pid": 73101,
+      "started_unix": 1794070341.3270974,
+      "seconds": 29.163497087996802,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 380467466240
+      },
+      "ended_unix": 1794070370.4901476,
+      "artifact_bytes": 85430561668,
+      "error": null
+    },
+    {
+      "id": "e636d2cbdc694bd58ff83b9969dca43a",
+      "category": "native",
+      "name": "export-blk.17.ffn_gate.weight-Q3_K",
+      "pid": 80766,
+      "started_unix": 1794070370.7045743,
+      "seconds": 52.6743997779995,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 372344631296
+      },
+      "ended_unix": 1794070423.3765888,
+      "artifact_bytes": 92105740168,
+      "error": null
+    },
+    {
+      "id": "b165215c5e1b400e9aee39e8f9f9e025",
+      "category": "native",
+      "name": "export-blk.17.ffn_up.weight-Q2_K",
+      "pid": 94597,
+      "started_unix": 1794070423.5711982,
+      "seconds": 50.52159031800693,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 365767041024
+      },
+      "ended_unix": 1794070474.089217,
+      "artifact_bytes": 98778628992,
+      "error": null
+    },
+    {
+      "id": "3a7292b75c844d2788415acbc24d2fe6",
+      "category": "native",
+      "name": "export-blk.17.ffn_up.weight-Q3_K",
+      "pid": 112985,
+      "started_unix": 1794070474.2611892,
+      "seconds": 49.81987532399944,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 360201256960
+      },
+      "ended_unix": 1794070524.080919,
+      "artifact_bytes": 105453807479,
+      "error": null
+    },
+    {
+      "id": "2f4c9253e5844ff799781b41a8baba84",
+      "category": "native",
+      "name": "measure-reference-[1, 2]",
+      "pid": 221717,
+      "started_unix": 1794070916.5532777,
+      "seconds": 43.86848893800925,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 360126717952
+      },
+      "ended_unix": 1794070960.4180193,
+      "artifact_bytes": 106661787189,
+      "error": null
+    },
+    {
+      "id": "8d88c9ac592843bd907788346387db34",
+      "category": "native",
+      "name": "measure-diagnostics-[1, 2]",
+      "pid": 233893,
+      "started_unix": 1794070960.9064019,
+      "seconds": 578.9661015489983,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 358353276928
+      },
+      "ended_unix": 1794071539.8375006,
+      "artifact_bytes": 106663195306,
+      "error": null
+    },
+    {
+      "id": "b9ef2ea6cb844b1d9ffa6bb11847ed8b",
+      "category": "proxy",
+      "name": "proxies-[1, 2]",
+      "pid": 389755,
+      "started_unix": 1794071541.8956542,
+      "seconds": 526.9814562469983,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 352739397632
+      },
+      "ended_unix": 1794072068.8493524,
+      "artifact_bytes": 111879401800,
+      "error": null
+    },
+    {
+      "id": "ab002bec54264970b5d17157df857b34",
+      "category": "native",
+      "name": "measure-reference-[3]",
+      "pid": 615999,
+      "started_unix": 1794072289.7548838,
+      "seconds": 13.320563939996646,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 352723456000
+      },
+      "ended_unix": 1794072303.0737634,
+      "artifact_bytes": 112483397161,
+      "error": null
+    },
+    {
+      "id": "d03991288c7b4045983a3e9bd57791f1",
+      "category": "native",
+      "name": "measure-diagnostics-[3]",
+      "pid": 620287,
+      "started_unix": 1794072303.4591618,
+      "seconds": 653.9034354470059,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 351264260096
+      },
+      "ended_unix": 1794072957.3294175,
+      "artifact_bytes": 112484118561,
+      "error": null
+    },
+    {
+      "id": "f502ac426c324fb0b44dceac1d80808b",
+      "category": "proxy",
+      "name": "proxies-[3]",
+      "pid": 816966,
+      "started_unix": 1794072960.7228372,
+      "seconds": 240.04856460299925,
+      "status": "passed",
+      "host_storage": {
+        "path": "/mnt/c",
+        "reserve_bytes": 21474836480,
+        "minimum_observed_free_bytes": 351127666688
+      },
+      "ended_unix": 1794073200.7580862,
+      "artifact_bytes": 112484209367,
+      "error": null
+    }
+  ]
+}
