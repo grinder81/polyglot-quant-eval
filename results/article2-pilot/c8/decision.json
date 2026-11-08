@@ -1,0 +1,1661 @@
+{
+  "schema": "c8-bounded-decision-v1",
+  "status": "inconclusive",
+  "nomination": {
+    "pair": null,
+    "signs": null,
+    "candidates": [
+      {
+        "pair": {
+          "first": "blk.0.attn_v.weight",
+          "second": "blk.3.attn_v.weight",
+          "map_a_bytes": 1799224832,
+          "map_b_bytes": 1799224832,
+          "eligible": true
+        },
+        "margins": {
+          "1": {
+            "eng_Latn": 0.0015692791781717593,
+            "ben_Beng": 0.03833889874463457,
+            "hin_Deva": 0.001246455120760404,
+            "pooled": 0.003262265461216934
+          },
+          "2": {
+            "eng_Latn": 0.00375668317484989,
+            "ben_Beng": 0.004680439074796879,
+            "hin_Deva": 0.001989552836781693,
+            "pooled": 0.0070620563083093335
+          }
+        },
+        "nominatable": false
+      },
+      {
+        "pair": {
+          "first": "blk.0.ffn_down.weight",
+          "second": "blk.17.ffn_down.weight",
+          "map_a_bytes": 1788644864,
+          "map_b_bytes": 1788644864,
+          "eligible": true
+        },
+        "margins": {
+          "1": {
+            "eng_Latn": 0.0825936993930528,
+            "ben_Beng": 0.10353472430361169,
+            "hin_Deva": 0.06698366742511945,
+            "pooled": 0.07739073630684921
+          },
+          "2": {
+            "eng_Latn": 0.09240156853382163,
+            "ben_Beng": 0.1236162697182409,
+            "hin_Deva": 0.12251666161327739,
+            "pooled": 0.1252468639439037
+          }
+        },
+        "nominatable": false
+      },
+      {
+        "pair": {
+          "first": "blk.17.ffn_down.weight",
+          "second": "blk.35.ffn_down.weight",
+          "map_a_bytes": 1791462912,
+          "map_b_bytes": 1791462912,
+          "eligible": true
+        },
+        "margins": {
+          "1": {
+            "eng_Latn": -0.033696048276974984,
+            "ben_Beng": -0.0327076747241654,
+            "hin_Deva": -0.023819842682822,
+            "pooled": -0.030487326053392667
+          },
+          "2": {
+            "eng_Latn": -0.03893921518497087,
+            "ben_Beng": -0.0366713633789683,
+            "hin_Deva": -0.02156050795008919,
+            "pooled": -0.029031818297976644
+          }
+        },
+        "nominatable": false
+      },
+      {
+        "pair": {
+          "first": "blk.17.ffn_gate.weight",
+          "second": "blk.17.ffn_up.weight",
+          "map_a_bytes": 1797451264,
+          "map_b_bytes": 1797451264,
+          "eligible": true
+        },
+        "margins": {
+          "1": {
+            "eng_Latn": -0.0015007200429535197,
+            "ben_Beng": -0.0009806578818225753,
+            "hin_Deva": -0.0006831427030306897,
+            "pooled": -0.0010284024386506712
+          },
+          "2": {
+            "eng_Latn": -0.0005807057739641748,
+            "ben_Beng": -0.0010538732051015131,
+            "hin_Deva": -0.0009693978905489426,
+            "pooled": -0.000743262542418973
+          }
+        },
+        "nominatable": false
+      }
+    ],
+    "epsilon_nats": 1e-05,
+    "interpretation": "Discovery screen only; first qualifying feasible pair. No repetition3data used. None means inconclusive, not language equivalence.",
+    "plan_sha256": "e7ccdb50be254ee8bdde307f73c58bc9a9c9d68882a40aa453b9b516ec8be64f",
+    "discovery_report_sha256": "744eb2731086504137bdcc2c9ed02c184b7ceb04918264f02fbe8ef8ac65ca3d",
+    "discovery_report_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/c8/native-12/report.json",
+    "implementation_sha256": "64a10335bb6abf40e1895f8b75f7409649e1948c56df8b8b517c7b7fc99c2046",
+    "schema": "c8-discovery-nomination-v1"
+  },
+  "confirmation": null,
+  "proxy_rank_agreement": {
+    "eng_Latn": {
+      "all": {
+        "fisher_score": {
+          "n_tensor_formats": 16,
+          "repetitions": [
+            0.9941176470588236,
+            0.9941176470588236,
+            0.9911764705882353
+          ],
+          "observed_repeat_range": [
+            0.9911764705882353,
+            0.9941176470588236
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 16,
+          "repetitions": [
+            0.6617647058823529,
+            0.6882352941176471,
+            0.6852941176470588
+          ],
+          "observed_repeat_range": [
+            0.6617647058823529,
+            0.6882352941176471
+          ]
+        }
+      },
+      "Q2_K": {
+        "fisher_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            1.0,
+            0.9761904761904762,
+            0.9761904761904762
+          ],
+          "observed_repeat_range": [
+            0.9761904761904762,
+            1.0
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.5952380952380952,
+            0.6666666666666666,
+            0.6428571428571429
+          ],
+          "observed_repeat_range": [
+            0.5952380952380952,
+            0.6666666666666666
+          ]
+        }
+      },
+      "Q3_K": {
+        "fisher_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.9523809523809523,
+            0.9761904761904762,
+            1.0
+          ],
+          "observed_repeat_range": [
+            0.9523809523809523,
+            1.0
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.42857142857142855,
+            0.47619047619047616,
+            0.5
+          ],
+          "observed_repeat_range": [
+            0.42857142857142855,
+            0.5
+          ]
+        }
+      }
+    },
+    "ben_Beng": {
+      "all": {
+        "fisher_score": {
+          "n_tensor_formats": 16,
+          "repetitions": [
+            0.9588235294117647,
+            0.9911764705882353,
+            0.9852941176470589
+          ],
+          "observed_repeat_range": [
+            0.9588235294117647,
+            0.9911764705882353
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 16,
+          "repetitions": [
+            0.4764705882352941,
+            0.55,
+            0.55
+          ],
+          "observed_repeat_range": [
+            0.4764705882352941,
+            0.55
+          ]
+        }
+      },
+      "Q2_K": {
+        "fisher_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.9523809523809523,
+            1.0,
+            1.0
+          ],
+          "observed_repeat_range": [
+            0.9523809523809523,
+            1.0
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.35714285714285715,
+            0.5238095238095238,
+            0.5238095238095238
+          ],
+          "observed_repeat_range": [
+            0.35714285714285715,
+            0.5238095238095238
+          ]
+        }
+      },
+      "Q3_K": {
+        "fisher_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.7857142857142857,
+            0.9761904761904762,
+            0.9285714285714286
+          ],
+          "observed_repeat_range": [
+            0.7857142857142857,
+            0.9761904761904762
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.38095238095238093,
+            0.3333333333333333,
+            0.2857142857142857
+          ],
+          "observed_repeat_range": [
+            0.2857142857142857,
+            0.38095238095238093
+          ]
+        }
+      }
+    },
+    "hin_Deva": {
+      "all": {
+        "fisher_score": {
+          "n_tensor_formats": 16,
+          "repetitions": [
+            0.9764705882352941,
+            0.9735294117647059,
+            0.9764705882352941
+          ],
+          "observed_repeat_range": [
+            0.9735294117647059,
+            0.9764705882352941
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 16,
+          "repetitions": [
+            0.6352941176470588,
+            0.5617647058823529,
+            0.6264705882352941
+          ],
+          "observed_repeat_range": [
+            0.5617647058823529,
+            0.6352941176470588
+          ]
+        }
+      },
+      "Q2_K": {
+        "fisher_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "observed_repeat_range": [
+            1.0,
+            1.0
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.5238095238095238,
+            0.5238095238095238,
+            0.5238095238095238
+          ],
+          "observed_repeat_range": [
+            0.5238095238095238,
+            0.5238095238095238
+          ]
+        }
+      },
+      "Q3_K": {
+        "fisher_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.9523809523809523,
+            0.9285714285714286,
+            0.9523809523809523
+          ],
+          "observed_repeat_range": [
+            0.9285714285714286,
+            0.9523809523809523
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.35714285714285715,
+            0.3333333333333333,
+            0.38095238095238093
+          ],
+          "observed_repeat_range": [
+            0.3333333333333333,
+            0.38095238095238093
+          ]
+        }
+      }
+    },
+    "pooled": {
+      "all": {
+        "fisher_score": {
+          "n_tensor_formats": 16,
+          "repetitions": [
+            0.9735294117647059,
+            0.9705882352941176,
+            0.9823529411764705
+          ],
+          "observed_repeat_range": [
+            0.9705882352941176,
+            0.9823529411764705
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 16,
+          "repetitions": [
+            0.6617647058823529,
+            0.5352941176470588,
+            0.5882352941176471
+          ],
+          "observed_repeat_range": [
+            0.5352941176470588,
+            0.6617647058823529
+          ]
+        }
+      },
+      "Q2_K": {
+        "fisher_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.9761904761904762,
+            1.0,
+            1.0
+          ],
+          "observed_repeat_range": [
+            0.9761904761904762,
+            1.0
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.5714285714285714,
+            0.5238095238095238,
+            0.5238095238095238
+          ],
+          "observed_repeat_range": [
+            0.5238095238095238,
+            0.5714285714285714
+          ]
+        }
+      },
+      "Q3_K": {
+        "fisher_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.9523809523809523,
+            0.9523809523809523,
+            0.9523809523809523
+          ],
+          "observed_repeat_range": [
+            0.9523809523809523,
+            0.9523809523809523
+          ]
+        },
+        "activation_score": {
+          "n_tensor_formats": 8,
+          "repetitions": [
+            0.47619047619047616,
+            0.38095238095238093,
+            0.3333333333333333
+          ],
+          "observed_repeat_range": [
+            0.3333333333333333,
+            0.47619047619047616
+          ]
+        }
+      }
+    }
+  },
+  "raw_score_ranges": {
+    "eng_Latn": {
+      "native_kl": [
+        0.0003450766657234381,
+        0.395136802349677
+      ],
+      "fisher_score": [
+        4.200662921993767e-06,
+        0.012394668787512308
+      ],
+      "activation_score": [
+        0.47824111428313093,
+        66717.61745914954
+      ]
+    },
+    "ben_Beng": {
+      "native_kl": [
+        0.0003144121413312759,
+        0.31921782316549485
+      ],
+      "fisher_score": [
+        9.334917519355733e-06,
+        0.007845186618570067
+      ],
+      "activation_score": [
+        0.4629513610216805,
+        123587.19974206481
+      ]
+    },
+    "hin_Deva": {
+      "native_kl": [
+        0.0003223930178955329,
+        0.22988498180967532
+      ],
+      "fisher_score": [
+        6.3642816121856755e-06,
+        0.007952978130315654
+      ],
+      "activation_score": [
+        0.45659860661081814,
+        119837.41860728459
+      ]
+    },
+    "pooled": {
+      "native_kl": [
+        0.0003857669557026782,
+        0.30725862055223196
+      ],
+      "fisher_score": [
+        8.320851558427644e-06,
+        0.009372319865653842
+      ],
+      "activation_score": [
+        0.46300135167286594,
+        105143.11228281366
+      ]
+    }
+  },
+  "native_cost_table": [
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.004491549777390078
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0013903530380517959
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.09663582732186805
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.01185744866622045
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.0030069324846082085
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.0008222532220134077
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.0018702988996531025
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.0005474219860045043
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.0036364741480666624
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.0008128771914645442
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.001876994226889961
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0003450766657234381
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.046304532696155594
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.010423805156585806
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.395136802349677
+    },
+    {
+      "repeat": 1,
+      "language": "eng_Latn",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.11290932979107142
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.07045253139415729
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.002956936411055988
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.12016048533171197
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.014706382854623052
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.0025842538048248312
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.0006648756313475978
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.0017084756953986463
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.0009066820709499247
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.0024675607955330576
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.0006851092892617606
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.030825496796946128
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.001668800558479398
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.04545589280422348
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.010828839906580848
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.24816316680513348
+    },
+    {
+      "repeat": 1,
+      "language": "ben_Beng",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.07492402807075589
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.00624689895540487
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0023790096046911093
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.0812494196716817
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.012392022152913467
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.002471591803820905
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.0005978617101721124
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.0015702768443369246
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.0005097488332897982
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.0024734911370542702
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.0007298204229764542
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.0032206215696349225
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0005991873396815661
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.033671160168695174
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.007977587392224378
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.22861366706181185
+    },
+    {
+      "repeat": 1,
+      "language": "hin_Deva",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.05883788135995216
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.006981944590526615
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0017059860111407305
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.09073926298935826
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.011504350394031089
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.002465831378142463
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.0006216550896645046
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.0014967803504909937
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.0005041925195489875
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.002699164208374291
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.0006781739387816135
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.0024712338844278987
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.00045754076625894794
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.0422084503211783
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.00987694797930767
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.30235296630962094
+    },
+    {
+      "repeat": 1,
+      "language": "pooled",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.07985445712576726
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.006680258371994604
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.001564981489419362
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.10562522389606437
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.011478826182373192
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.0025470984245592725
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.0008022692446897331
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.0018941993574603758
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.0004947534368925445
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.0027850799261165383
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.0008049282315845323
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.001836901807301194
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.00047830809957584165
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.049284238295870045
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.008600193931029638
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.3856317340827757
+    },
+    {
+      "repeat": 2,
+      "language": "eng_Latn",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.10119530377082243
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.013635501383142536
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.005585350024644422
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.13876943284006746
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.013860971381803306
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.0019047024842887145
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.0006125107442654713
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.0013199420650544312
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.00037765480298440076
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.002581126546829327
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.0005849660796577834
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.0038464656438874836
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0004767533601862479
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.04932680172876949
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.011363246609777953
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.25737380509180385
+    },
+    {
+      "repeat": 2,
+      "language": "ben_Beng",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.07402774097941527
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.008736660818304235
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0034536010098730444
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.13767917410867983
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.013849701062888081
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.0018795460620081332
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.0005667346294937598
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.0011756796974411246
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.0003223930178955329
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.0023237014460325703
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.000501016875938036
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.0037903919887847383
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0004968850171352396
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.030958821250421417
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.008085501867817852
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.2234112182707536
+    },
+    {
+      "repeat": 2,
+      "language": "hin_Deva",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.05684506877275279
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.01396940548800199
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.004380223489330735
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.13954674651450166
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.012827140271140482
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.002100229644626578
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.000627487345169079
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.001408351932685042
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.00042375265856880637
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.002407620341307164
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.0006797585247719554
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.003110122270250064
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0005829965798881418
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.03925887430534825
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.008754313707914109
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.29231698798103134
+    },
+    {
+      "repeat": 2,
+      "language": "pooled",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.07088310306727245
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.005736956994198097
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0015832475420295838
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.08393288019987455
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.011210527960746623
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.0034245274748759946
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.0008484164423423905
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.0021105292421794934
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.0004714106189409015
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.003389024170275636
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.0008397064060309626
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.0018783041261042346
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.00036462590397511117
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.04551350222969176
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.011503576567906905
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.38134535870819225
+    },
+    {
+      "repeat": 3,
+      "language": "eng_Latn",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.10102542023474294
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.012938935960480652
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.003303027109224783
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.10144022951711375
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.013718749239267787
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.0017344793486722338
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.0004612823916115213
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.0010074602046308962
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.0003144121413312759
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.0022010836468610655
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.0005020810425934639
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.004324495455109829
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0005885892546477918
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.04684841664261318
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.011367034165084906
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.31921782316549485
+    },
+    {
+      "repeat": 3,
+      "language": "ben_Beng",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.08170668588305989
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.007027426689864389
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0014918464069560503
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.09841400597876224
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.01146929597652781
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.00226893165172746
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.0005529724922878847
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.001333921800990935
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.00036411327675094817
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.00256790381318522
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.0005940440336329796
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.004208327321904449
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0005096807014116865
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.034884498063235604
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.00811622168359343
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.22988498180967532
+    },
+    {
+      "repeat": 3,
+      "language": "hin_Deva",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.07224408669427271
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.0.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.011976801800859565
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.0.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0020691441574201283
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.0.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.09245306913347667
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.0.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.013227032986440805
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.00221064411263989
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.0006383828613762266
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_gate.weight::Q2_K",
+      "mean_kl_nats": 0.0014781889367252946
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_gate.weight::Q3_K",
+      "mean_kl_nats": 0.0003857669557026782
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_up.weight::Q2_K",
+      "mean_kl_nats": 0.002630708566446508
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.17.ffn_up.weight::Q3_K",
+      "mean_kl_nats": 0.0006330416342539831
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.3.attn_v.weight::Q2_K",
+      "mean_kl_nats": 0.003460654498893291
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.3.attn_v.weight::Q3_K",
+      "mean_kl_nats": 0.0005473018394845431
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.35.ffn_down.weight::Q2_K",
+      "mean_kl_nats": 0.03977831054259262
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "blk.35.ffn_down.weight::Q3_K",
+      "mean_kl_nats": 0.010448188758828381
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "token_embd.weight::Q2_K",
+      "mean_kl_nats": 0.30725862055223196
+    },
+    {
+      "repeat": 3,
+      "language": "pooled",
+      "tensor_format": "token_embd.weight::Q3_K",
+      "mean_kl_nats": 0.0811728917305651
+    }
+  ],
+  "inputs": {
+    "plan": "e7ccdb50be254ee8bdde307f73c58bc9a9c9d68882a40aa453b9b516ec8be64f",
+    "discovery": "744eb2731086504137bdcc2c9ed02c184b7ceb04918264f02fbe8ef8ac65ca3d",
+    "nomination": "74797adb60f9196dce1d973c14549321a51db7e084ffbf017d86fac395584eba",
+    "reference_discovery": "b101422073e44ae1335c5c57cc82856f5ced702d62bc214c799f47af1536f393",
+    "reference_confirmation": "2cf79e3b6d629139019150fb24cfbb570b17aa958574206fc4da4bd79fb50ffd",
+    "confirmation_diagnostics": "2c7fd88c93d20cbfcd1d9b3a8105ffcc03a57eace2962a50cf3d48a1e695d97f",
+    "proxy_discovery": "224aea68b3c807e825edc815d95e63a1271f8aaf67d63daa1df0eec2300c8067",
+    "proxy_confirmation": "9aa61b0a2b4b2486a946b47fd488cf45c722805654c00030ea66bdd9d2113b1f"
+  },
+  "budget_ledger_sha256": "8e2fcb8652ac7410f28dac60a2e594902ba8fcff8fa64292292e9634f4126210",
+  "implementation_sha256": "765383d8fa309ba5ebbb0b8d3c5adc04f2b3d7e047444a94285fee1085b5926e",
+  "interpretation": "Investment screen on three short source samples. Repeat ranges are descriptive, not confidence intervals or evidence of generality. Sequence Fisher and activation magnitudes are uncalibrated proxies; no absolute-KL or proxy-substitution claim. Full task/generation and final confirmation remain future work."
+}

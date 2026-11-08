@@ -1,0 +1,145 @@
+"""Report complete new precision arms using verified T1 source-paired statistics."""
+import argparse
+import gzip
+import hashlib
+import json
+import math
+from pathlib import Path
+
+from scripts.run_t3_baselines import identity
+from scripts.t1_baselines import load_shards
+from scripts.summarize_t1_baselines import paired_report,normalize,historical_comparison
+from scripts.plan_pilot_precision import REPORT_SHA
+from scripts.validate_t3_fidelity import validate as validate_fidelity
+
+
+def read(path):
+    return json.loads(Path(path).read_text())
+
+
+def require_final_stages(outcomes):
+    required={'diag-q6k','diag-q3km'}
+    if not required<=outcomes.keys():
+        raise ValueError('Final curve lacks stage1')
+    stop=any(outcomes[name]['vs_bf16']['languages']['eng_Latn']['candidate_correct']<=185 for name in required)
+    later={'diag-q3ks','diag-q2k','diag-iq3s'}
+    if stop and outcomes.keys() & later:
+        raise ValueError('Smaller stages collected after stage1 descent stop')
+    if not stop and not later<=outcomes.keys():
+        # IQ3_S is larger than both stage2 builds, so a stage2 descent stop
+        # does not exclude it under the frozen actual-byte rule.
+        raise ValueError('Final curve lacks required later stages')
+
+
+def margin_bins(reference,candidate,q4):
+    def index(rows):
+        return {(r['language'],r['source'],str(r['question'])):r for r in rows}
+    ref,other,old=index(reference),index(candidate),index(q4)
+    if ref.keys()!=other.keys() or ref.keys()!=old.keys():
+        raise ValueError('Margin-bin membership differs')
+    edges=(0.,.25,.5,1.,2.,math.inf)
+    result={}
+    for language in ('eng_Latn','ben_Beng','hin_Deva'):
+        bins=[dict(lower=edges[i],upper=edges[i+1] if math.isfinite(edges[i+1]) else None,n=0,
+            flips_vs_bf16=0,flips_vs_q4=0) for i in range(5)]
+        for key,row in ref.items():
+            if key[0]!=language:
+                continue
+            scores=sorted(row['scores'],reverse=True)
+            margin=scores[0]-scores[1]
+            chosen=next(i for i in range(5) if edges[i]<=margin<edges[i+1])
+            bins[chosen]['n']+=1
+            bins[chosen]['flips_vs_bf16']+=other[key]['prediction']!=row['prediction']
+            bins[chosen]['flips_vs_q4']+=other[key]['prediction']!=old[key]['prediction']
+        low_n=sum(x['n'] for x in bins[:3]);high_n=sum(x['n'] for x in bins[3:])
+        low_flips=sum(x['flips_vs_bf16'] for x in bins[:3]);high_flips=sum(x['flips_vs_bf16'] for x in bins[3:])
+        result[language]=dict(bins=bins,sub1_n=low_n,atleast1_n=high_n,
+            sub1_flip_rate=low_flips/low_n if low_n else None,
+            atleast1_flip_rate=high_flips/high_n if high_n else None,
+            more_than_half_flips_sub1=low_flips>high_flips)
+    return result
+
+
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--t1-report',type=Path,required=True)
+    p.add_argument('--arm',action='append',nargs=2,metavar=('CONFIG','DIRECTORY'),required=True)
+    p.add_argument('--fidelity',action='append',nargs=2,metavar=('ARM','DIRECTORY'),default=[])
+    p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--final',action='store_true')
+    a=p.parse_args()
+    if a.output.exists():
+        raise FileExistsError(a.output)
+    payload=gzip.decompress(a.t1_report.read_bytes())
+    if hashlib.sha256(payload).hexdigest()!=REPORT_SHA:
+        raise ValueError('Wrong T1 reference report')
+    t1=json.loads(payload)
+    references=t1['fresh_rows']
+    reference=references['bf16-gguf']
+    q4=references['local-q4']
+    evidence={}
+    outcomes={}
+    for config,directory in a.arm:
+        frozen,rows=identity(config)
+        directory=Path(directory)
+        if read(directory/'identity.json')!=frozen:
+            raise ValueError('Saved arm identity differs')
+        records,hashes=load_shards(directory,rows,frozen['arm'],complete=True)
+        candidate=normalize(records)
+        paths=read(config)
+        build=read(paths['build'])
+        name=frozen['arm']
+        if name in evidence:
+            raise ValueError('Duplicate arm')
+        evidence[name]=dict(identity=frozen,config=str(config),directory=str(directory),
+            shard_sha256=hashes,build=build,records=candidate)
+        score_delta=historical_comparison(reference,candidate,replicates=10000)
+        outcomes[name]=dict(vs_bf16=paired_report(reference,candidate,replicates=10000),
+            vs_local_q4=paired_report(q4,candidate,replicates=10000),
+            bf16_margin_bins=margin_bins(reference,candidate,q4),
+            descriptive_score_margin_deltas_vs_bf16=score_delta['descriptive_distributions'])
+    fidelity={}
+    for name,directory in a.fidelity:
+        expected=evidence[name]['build']['output_sha256'] if name in evidence else (
+            '5823bd1e52be1027a7ba6f31b43edfd40ae1766020cddec967f0d76618948290' if name=='local-q4' else None)
+        if expected is None or name in fidelity:
+            raise ValueError('Unknown or duplicate fidelity arm')
+        runtime_sha=evidence[name]['identity']['inputs']['runtime'] if name in evidence else t1['provenance']['fresh']['local-q4']['identity']['runtime_sha256']
+        fidelity[name]=validate_fidelity(directory,rows,expected,frozen['inputs']['lock'],runtime_sha)
+    predictions={}
+    if 'diag-q3km' in outcomes:
+        predictions['P1']={l:outcomes['diag-q3km']['vs_bf16']['languages'][l]['changed_choices']>
+            t1['fresh_paired_GGUF']['languages'][l]['changed_choices'] for l in ('eng_Latn','ben_Beng','hin_Deva')}
+    if 'diag-q6k' in outcomes:
+        predictions['P3']={l:outcomes['diag-q6k']['vs_bf16']['languages'][l]['changed_choices']<
+            t1['fresh_paired_GGUF']['languages'][l]['changed_choices'] for l in ('eng_Latn','ben_Beng','hin_Deva')}
+    smaller={name:data for name,data in outcomes.items() if evidence[name]['build']['output_bytes']<=2143976960}
+    predictions['P2']={name:{lang:data['bf16_margin_bins'][lang]['sub1_flip_rate']>
+        data['bf16_margin_bins'][lang]['atleast1_flip_rate'] for lang in ('eng_Latn','ben_Beng','hin_Deva')} for name,data in smaller.items()}
+    predictions['P4']={name:all(data['vs_bf16']['languages']['eng_Latn']['changed_choices']<=
+        data['vs_bf16']['languages'][lang]['changed_choices'] for lang in ('ben_Beng','hin_Deva')) for name,data in smaller.items()}
+    point=None
+    if a.final:
+        require_final_stages(outcomes)
+        if not all(name in fidelity for name in evidence) or 'local-q4' not in fidelity:
+            raise ValueError('Final operating-point report needs complete fidelity endpoints')
+        options=[dict(arm=name,bytes=evidence[name]['build']['output_bytes'],
+            english_correct=outcomes[name]['vs_bf16']['languages']['eng_Latn']['candidate_correct']) for name in evidence]
+        options.append(dict(arm='local-q4',bytes=2143976960,english_correct=229))
+        eligible=[row for row in options if row['english_correct']>=221 and row['bytes']<=2_200_000_000]
+        point=min(eligible,key=lambda row:(row['bytes'],row['arm']))
+    result=dict(schema='t3-complete-curve-v1',t1_report_sha256=REPORT_SHA,
+        implementation_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        source_clusters=250,questions_per_language=300,bootstrap_replicates=10000,bootstrap_seed=42,
+        evidence=evidence,outcomes=outcomes,fidelity=fidelity,predictions=predictions,
+        final_operating_point=point,
+        interpretation='Development precision curve; no allocation, generation, phone or holdout result. BF16 GGUF is separate from original canonical BF16 vLLM.')
+    a.output.parent.mkdir(parents=True,exist_ok=True)
+    with a.output.open('x',encoding='utf-8') as stream:
+        json.dump(result,stream,indent=2,allow_nan=False)
+        stream.write('\n')
+    print(json.dumps(dict(output=str(a.output),arms=list(evidence),operating_point=point)),flush=True)
+
+
+if __name__=='__main__':
+    main()

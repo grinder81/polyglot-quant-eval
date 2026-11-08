@@ -1,0 +1,1192 @@
+{
+  "schema": "t3-arm-archive-v1",
+  "arm": "diag-q6k",
+  "members": [
+    {
+      "member": "readiness/build.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-builds/diag-q6k/manifest.json",
+      "bytes": 1113,
+      "sha256": "a64d4ee1dd91f0009adbef620196c71589295b59e6071ed52c49b86968c1d30e"
+    },
+    {
+      "member": "readiness/config.json",
+      "source_path": "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/_worktrees/t3-q6k-config.json",
+      "bytes": 1636,
+      "sha256": "2753ccd90695b4304a0b1a3237b5efb1baa7ac3ea11654ede2c3a2bf615de83f"
+    },
+    {
+      "member": "readiness/gate-oracle.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-readiness/diag-q6k-direct.json",
+      "bytes": 782544,
+      "sha256": "2729a41ea6e0d541e17a8ce02bcb2630e4d5dc5d9989ccc860d5c5b51e319aea"
+    },
+    {
+      "member": "readiness/gate-order_validation.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-readiness/diag-q6k-order.json",
+      "bytes": 2683603,
+      "sha256": "1bf668b06fce35b460f783a6a54fa1b57757c7ad4f4dce2fd37ee997b82bcff9"
+    },
+    {
+      "member": "readiness/gate-protocol.md",
+      "source_path": "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/_worktrees/article2-pilot-edge/docs/t1-cold-validation.md",
+      "bytes": 3397,
+      "sha256": "af28d2c034a84409317f4d433680d688cd0e95fe2ca62bdf0c7eaf8e78f74c7b"
+    },
+    {
+      "member": "readiness/gate-validation.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-readiness/diag-q6k-client.json",
+      "bytes": 2683604,
+      "sha256": "ed10e35de300bd22073571b075ea0056ce1bd081cc9ab5318d4a09c4d6a4a556"
+    },
+    {
+      "member": "readiness/gate-validator_script.py",
+      "source_path": "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/_worktrees/article2-pilot-edge/setup/validate_t1_cold.py",
+      "bytes": 13805,
+      "sha256": "3643100897b1552fc827b21dc6e4e8ab5d83aab7ba55128f2d1db9fbe74d90f9"
+    },
+    {
+      "member": "readiness/runtime.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-readiness/diag-q6k-runtime.json",
+      "bytes": 3030,
+      "sha256": "b6701f5393e49e4e94d39a4cc12c35dcb31d192fe272be09e6666393fedcfa9e"
+    },
+    {
+      "member": "readiness/t1_client.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/t1-cold-baselines/collection-2026-10-23/live-validation/bf16-gguf-client.json",
+      "bytes": 2682910,
+      "sha256": "6ff1aefebdb4eae13e048b5df4dcc48a952a4771a5ce3c9b2a2d26aca373a1f6"
+    },
+    {
+      "member": "readiness/t1_identity.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/t1-cold-baselines/collection-2026-10-23/bf16-gguf/identity.json",
+      "bytes": 226486,
+      "sha256": "93c1f16f9253f0fb177c95e8f5312d82db12dd6d874ef78575aba5fccb4f710c"
+    },
+    {
+      "member": "readiness/t1_oracle.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/t1-cold-baselines/collection-2026-10-23/live-validation/bf16-gguf-direct.json",
+      "bytes": 782619,
+      "sha256": "9d8459537441d128e5e485364f69dd2f071cd158497d14a1e925f865cce30f28"
+    },
+    {
+      "member": "readiness/t1_runtime.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/scoring-control/live-validation-v4/bf16-gguf-runtime.json",
+      "bytes": 2626,
+      "sha256": "f405c7da19b898e943d0dfba89465d39c9f04b940fca54c1a2ecb211da38429f"
+    },
+    {
+      "member": "readiness/token_check.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-readiness/diag-q6k-tokens.json",
+      "bytes": 1237,
+      "sha256": "e241afd1fc89500dd17559c98d64fafdff8904c5d86eaabb89c1dd1a0f9db0c1"
+    },
+    {
+      "member": "shards/ben_Beng-000.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-000.json",
+      "bytes": 60429,
+      "sha256": "07bfd96092a8928545b60645e693bfcb6dd88eceaebcd7c19dbc86d25dbb5a4f"
+    },
+    {
+      "member": "shards/ben_Beng-005.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-005.json",
+      "bytes": 48917,
+      "sha256": "13678f9983e8f5a785d1370742b39cbee9315aa8cfca22066a2b32954559e4e1"
+    },
+    {
+      "member": "shards/ben_Beng-010.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-010.json",
+      "bytes": 50441,
+      "sha256": "a181a8392a2e1da69eaf459fd95b6d98955eba898125abce5c0e0cb10e45b320"
+    },
+    {
+      "member": "shards/ben_Beng-015.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-015.json",
+      "bytes": 44824,
+      "sha256": "51acf0bc8aad4ea536240c9640314f540e0e79b2f6a0e8d2313296dbe4d1e78f"
+    },
+    {
+      "member": "shards/ben_Beng-020.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-020.json",
+      "bytes": 53615,
+      "sha256": "d35ad723b435503d9c93978d7d7e04ea07e530ecb10fbe81aee7acdc922f6993"
+    },
+    {
+      "member": "shards/ben_Beng-025.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-025.json",
+      "bytes": 44944,
+      "sha256": "017d76952e7a6b22c0473b80404f34272f331f56ed6125e4c206fc8ff9ee9b27"
+    },
+    {
+      "member": "shards/ben_Beng-030.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-030.json",
+      "bytes": 45432,
+      "sha256": "5636307b323c1be9bc84ac747ca88843ac56987c3be72ed17aa2174a77c18163"
+    },
+    {
+      "member": "shards/ben_Beng-035.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-035.json",
+      "bytes": 47888,
+      "sha256": "1df820821bdb1c346c8bca56358a45bfba249ae8dffa58de3d421be3b6c2c1e1"
+    },
+    {
+      "member": "shards/ben_Beng-040.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-040.json",
+      "bytes": 48834,
+      "sha256": "10ad84fd3c888ac936e0507862f8435ba2eb34527667c9aceedc378e609638d8"
+    },
+    {
+      "member": "shards/ben_Beng-045.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-045.json",
+      "bytes": 40493,
+      "sha256": "c8f1a87fccb964c3bff5462101b329169c564576c5672bcfc8e7d4e5d31273cf"
+    },
+    {
+      "member": "shards/ben_Beng-050.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-050.json",
+      "bytes": 50214,
+      "sha256": "a252990e497c4409305324b8ec5d9e54c1148d919e138917aa84eddbd30b1d07"
+    },
+    {
+      "member": "shards/ben_Beng-055.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-055.json",
+      "bytes": 49609,
+      "sha256": "dcee0a7e2b71799d8681af5fec94b52e0f40871c29e3209e5b1b132d647cf57e"
+    },
+    {
+      "member": "shards/ben_Beng-060.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-060.json",
+      "bytes": 50144,
+      "sha256": "154c06290f3bb97fbbe1a73d5edfbb11dddeedd23bde08c3853e2c815fa4a62f"
+    },
+    {
+      "member": "shards/ben_Beng-065.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-065.json",
+      "bytes": 53353,
+      "sha256": "4b028f8818f3282297c4275786d1528b5ae4b0e1b824e0af70d6ff3b15f3aefe"
+    },
+    {
+      "member": "shards/ben_Beng-070.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-070.json",
+      "bytes": 61088,
+      "sha256": "d87e7167f46f21cb228265c56520f05f1334bccdfc1e37028956bb3b4305ab98"
+    },
+    {
+      "member": "shards/ben_Beng-075.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-075.json",
+      "bytes": 47988,
+      "sha256": "b1cc03f0e96fa5a413734bcfdb2a3620e9ec77a641a99b5ca862bd1ea97af138"
+    },
+    {
+      "member": "shards/ben_Beng-080.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-080.json",
+      "bytes": 46436,
+      "sha256": "41e0cf9215926144f01f868211fb233d1e66132f99f36100cef7ebacd1f81fee"
+    },
+    {
+      "member": "shards/ben_Beng-085.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-085.json",
+      "bytes": 49017,
+      "sha256": "5f0ed558acf14c9e607d6fb60828cd887a0dcd4e0cfb94a5208b7755721daaf0"
+    },
+    {
+      "member": "shards/ben_Beng-090.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-090.json",
+      "bytes": 44224,
+      "sha256": "6f9d20fcf54bbfc5170453a4b32376b1967e02ab2496689597aefadbfe9e7bf9"
+    },
+    {
+      "member": "shards/ben_Beng-095.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-095.json",
+      "bytes": 48931,
+      "sha256": "02819e6621b5828008f9a9df1fc4d34bd631d2e984bfe5c8a351acf3a4797419"
+    },
+    {
+      "member": "shards/ben_Beng-100.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-100.json",
+      "bytes": 49382,
+      "sha256": "33fa8f6e9d679b2d90f01ca26a9b4434490e66adda9c9ba9652c0a1f3eb0c5ac"
+    },
+    {
+      "member": "shards/ben_Beng-105.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-105.json",
+      "bytes": 50296,
+      "sha256": "b00f6db1f68c5e291dc056e2dc333a924601d315da977bbf21da6e59096c0c3d"
+    },
+    {
+      "member": "shards/ben_Beng-110.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-110.json",
+      "bytes": 55479,
+      "sha256": "85ffbf801d895a74c33bbaf5737b5f501cf570981131b20f39c8e197780c0312"
+    },
+    {
+      "member": "shards/ben_Beng-115.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-115.json",
+      "bytes": 58959,
+      "sha256": "7d9ec645dbf59eb9445bb31bce31437a5ddfd1e182d596abd3eaba840aa98c13"
+    },
+    {
+      "member": "shards/ben_Beng-120.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-120.json",
+      "bytes": 49128,
+      "sha256": "65a4448b93a9fbae610d4fbc01229773186e038a7c52d47735ea045f9120968c"
+    },
+    {
+      "member": "shards/ben_Beng-125.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-125.json",
+      "bytes": 54893,
+      "sha256": "640e3aee67d5ad5c4d49a8eb65677d5e925ad7183fa3e63d3f19965435cc4340"
+    },
+    {
+      "member": "shards/ben_Beng-130.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-130.json",
+      "bytes": 63107,
+      "sha256": "645470bde857c4b8eec06922c50225f7971d8306b47a02383569c4a37c240445"
+    },
+    {
+      "member": "shards/ben_Beng-135.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-135.json",
+      "bytes": 48290,
+      "sha256": "4bad2db06cf6821aba2b896d77ce6c68f23745c2c25dca140a11a525d9bbdbe5"
+    },
+    {
+      "member": "shards/ben_Beng-140.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-140.json",
+      "bytes": 46432,
+      "sha256": "1904c84fb697edb946df55973d865a5e093cccdba02cb02db6f6796aed970de0"
+    },
+    {
+      "member": "shards/ben_Beng-145.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-145.json",
+      "bytes": 45422,
+      "sha256": "24f0edd0512c559c98364d0dfde58852619149a8fcfc912dda568ba05b235151"
+    },
+    {
+      "member": "shards/ben_Beng-150.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-150.json",
+      "bytes": 50532,
+      "sha256": "063e8706f34a69e3daaa5bcc58bc18ffd17de1a26b5a4d549f4a2516a93fd1c0"
+    },
+    {
+      "member": "shards/ben_Beng-155.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-155.json",
+      "bytes": 46440,
+      "sha256": "51ee540fc344eb362bf084e0427de03b94a9a9dc045ff57b5e1836fcc4a5cca8"
+    },
+    {
+      "member": "shards/ben_Beng-160.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-160.json",
+      "bytes": 44502,
+      "sha256": "99a493e2ee28b8d588fb745f938caa939a8e33769518631f5f358b6feea28893"
+    },
+    {
+      "member": "shards/ben_Beng-165.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-165.json",
+      "bytes": 47320,
+      "sha256": "596b6dcf192dd669d36ea1fc1ebfce5af5cac510e13f2a03c8a780fe6feb0b84"
+    },
+    {
+      "member": "shards/ben_Beng-170.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-170.json",
+      "bytes": 46249,
+      "sha256": "438667ce7c0bdae140b981dc39f77ea7fabb4151743bc4695e5e5a6269a0119f"
+    },
+    {
+      "member": "shards/ben_Beng-175.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-175.json",
+      "bytes": 39654,
+      "sha256": "eb297ce2db9fdbbfcb29d675fc9e8dd0f4a4c10e1671953c3b5f3b36d065d78b"
+    },
+    {
+      "member": "shards/ben_Beng-180.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-180.json",
+      "bytes": 58133,
+      "sha256": "f0c0bc5f8956c7eaae257bf001fb34d5ade5a3d95541a04ad966b5b95c446c73"
+    },
+    {
+      "member": "shards/ben_Beng-185.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-185.json",
+      "bytes": 59424,
+      "sha256": "94460cd1ab711a8bb24b39ef74bf0ccb981346a0a1128029077bb5a5b232555d"
+    },
+    {
+      "member": "shards/ben_Beng-190.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-190.json",
+      "bytes": 44112,
+      "sha256": "be457516f8035ad0a6c13fd16417abeb5bccf744d6ed8086018943353119d9c6"
+    },
+    {
+      "member": "shards/ben_Beng-195.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-195.json",
+      "bytes": 55066,
+      "sha256": "e85085b0b39ebd67ac4782510c45f238b798d76249085eb734ecf201d4870575"
+    },
+    {
+      "member": "shards/ben_Beng-200.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-200.json",
+      "bytes": 54944,
+      "sha256": "b9a87b3938743df559211e8ab675bcfc94985467a9c5ec15f56bc0fc0f90bccc"
+    },
+    {
+      "member": "shards/ben_Beng-205.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-205.json",
+      "bytes": 55786,
+      "sha256": "0a15a472849a0f0b70a61120858df52bc55e4f104999c4f2949a4a4daed262f7"
+    },
+    {
+      "member": "shards/ben_Beng-210.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-210.json",
+      "bytes": 52653,
+      "sha256": "2f887e55d6306c035bce79d6be03918f7a8e6af35d7a38945d7bf2d9acb04576"
+    },
+    {
+      "member": "shards/ben_Beng-215.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-215.json",
+      "bytes": 51256,
+      "sha256": "e0224fded45cdb4e234e300d4489d07498acc32c5e1ce31eb32ec2d911420f79"
+    },
+    {
+      "member": "shards/ben_Beng-220.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-220.json",
+      "bytes": 53188,
+      "sha256": "13885ac36bc003a13208357f7e2d4adae757c251b52ced2f389ba2357d505b73"
+    },
+    {
+      "member": "shards/ben_Beng-225.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-225.json",
+      "bytes": 48530,
+      "sha256": "1359548f7fa9b9120379c376401a1e77dd30c920bdea710cff6636de82239d9b"
+    },
+    {
+      "member": "shards/ben_Beng-230.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-230.json",
+      "bytes": 53434,
+      "sha256": "c5dd4820de234f0ffe3a1c7cf7a3bdf7438a3cabd8aa84ce9961f75ca3a2be25"
+    },
+    {
+      "member": "shards/ben_Beng-235.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-235.json",
+      "bytes": 57254,
+      "sha256": "72300bd95e9bd282585d5c0c8ffb97a5d6b75c5788471fadfd35c2c0d5283159"
+    },
+    {
+      "member": "shards/ben_Beng-240.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-240.json",
+      "bytes": 54585,
+      "sha256": "ab7e9d7bc7bcbab287d6755a7e8b9e9572ae0f6c91080a2d485a978fd4c9b593"
+    },
+    {
+      "member": "shards/ben_Beng-245.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-245.json",
+      "bytes": 48577,
+      "sha256": "c0994071a3ce89a9d66181603dbebc3bd86c7b2178c337544c24fa9236e1ac0c"
+    },
+    {
+      "member": "shards/ben_Beng-250.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-250.json",
+      "bytes": 53015,
+      "sha256": "7fe975e16e82fb2efb3d061c9ca79b6ad19c06ca59dcc8b744e7dbf39e452536"
+    },
+    {
+      "member": "shards/ben_Beng-255.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-255.json",
+      "bytes": 44288,
+      "sha256": "96c5a798f1705da389082f1fbf16ca33a37b63d03a011a0072ff1963a35c60a3"
+    },
+    {
+      "member": "shards/ben_Beng-260.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-260.json",
+      "bytes": 48037,
+      "sha256": "f968d6fac8bab069e127476f462f811f456e8642df5b92e48caf13fbe305e648"
+    },
+    {
+      "member": "shards/ben_Beng-265.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-265.json",
+      "bytes": 63135,
+      "sha256": "be06d2ec0f605984d335505d771dae700f0cef863c2123231c83e2f02983d586"
+    },
+    {
+      "member": "shards/ben_Beng-270.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-270.json",
+      "bytes": 52143,
+      "sha256": "b9d33e576f4947415cbd61541e766a34d30b89a38e8df685b4b4a83308f68183"
+    },
+    {
+      "member": "shards/ben_Beng-275.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-275.json",
+      "bytes": 53494,
+      "sha256": "887c754af45ba749f026bd3cf83fabaee7e1946179bb3685f0f6c49b28815072"
+    },
+    {
+      "member": "shards/ben_Beng-280.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-280.json",
+      "bytes": 48716,
+      "sha256": "e4aed0e5b52f5045234ef40baa9be7f60ee6306020ce1e1ffbaccad579b219e2"
+    },
+    {
+      "member": "shards/ben_Beng-285.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-285.json",
+      "bytes": 42653,
+      "sha256": "60458ff7d85871ee99bdf04e067f9735f50317180aa3ad540dc0af9513643e2d"
+    },
+    {
+      "member": "shards/ben_Beng-290.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-290.json",
+      "bytes": 57054,
+      "sha256": "e5f2a7535c1e55213611d53924568753b657a2c1ee8ca67e30922d740fd82fd4"
+    },
+    {
+      "member": "shards/ben_Beng-295.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/ben_Beng-295.json",
+      "bytes": 55321,
+      "sha256": "b05f38e675763905e920f62bf4ed188bcf45d8c0d5ec16c1284a8ed8e79248c2"
+    },
+    {
+      "member": "shards/eng_Latn-000.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-000.json",
+      "bytes": 27478,
+      "sha256": "99b6365b0af24639983a07a82d1155be94b17e17d57789a7dc263f01f09d4b3c"
+    },
+    {
+      "member": "shards/eng_Latn-005.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-005.json",
+      "bytes": 24321,
+      "sha256": "e7e05b63fe6c74ffaa8825c3ea8a8a86e1baf7e85a9c7c1386bc31a90df5adb7"
+    },
+    {
+      "member": "shards/eng_Latn-010.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-010.json",
+      "bytes": 23741,
+      "sha256": "789308dec2d3eb0d2f5097750311f944e30f6b55b47a5b75e50db2cb3e9ad436"
+    },
+    {
+      "member": "shards/eng_Latn-015.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-015.json",
+      "bytes": 21801,
+      "sha256": "361df233754b95790f19a0e56785ee256578de2730f9d8abce2ae476dae7372e"
+    },
+    {
+      "member": "shards/eng_Latn-020.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-020.json",
+      "bytes": 25291,
+      "sha256": "0aec353ce512ca1c7e4ce730f395ca48e69632da739047df01505d302d6a0920"
+    },
+    {
+      "member": "shards/eng_Latn-025.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-025.json",
+      "bytes": 22828,
+      "sha256": "2dd82f749b7b7e7ea4a80cab85f1b0e67ff1d460091ea8ec957adbeed185d227"
+    },
+    {
+      "member": "shards/eng_Latn-030.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-030.json",
+      "bytes": 23567,
+      "sha256": "c18d9e4f102653210b483a9814f2d6a611af65ae8c0fc4d4906114a9e3da00ed"
+    },
+    {
+      "member": "shards/eng_Latn-035.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-035.json",
+      "bytes": 24317,
+      "sha256": "7ed56cea8114912ef0a5cecf6384db68221c32253255e774c17da49d28f11948"
+    },
+    {
+      "member": "shards/eng_Latn-040.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-040.json",
+      "bytes": 23233,
+      "sha256": "21f5bedb0c76659bc31ef5d55f8b3761555226cf57da0028c94b6494996176ae"
+    },
+    {
+      "member": "shards/eng_Latn-045.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-045.json",
+      "bytes": 21097,
+      "sha256": "954ef6ec321784c34099067b6b8d2b43c986ea8e38907f479338ca2993feb558"
+    },
+    {
+      "member": "shards/eng_Latn-050.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-050.json",
+      "bytes": 23754,
+      "sha256": "f54a05e2ff5a782cde50637ab8d2bbdb1d8bff46275d7efb7141582b09135d1f"
+    },
+    {
+      "member": "shards/eng_Latn-055.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-055.json",
+      "bytes": 25924,
+      "sha256": "45bef7bef12990066e4c6317c7e70f60ac1bfcacca917ff6fa670efb10d4d91a"
+    },
+    {
+      "member": "shards/eng_Latn-060.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-060.json",
+      "bytes": 25109,
+      "sha256": "b1b84bd4a502ae6bd2b540bb53512bd553711b6e8d22e938243c478efa568e66"
+    },
+    {
+      "member": "shards/eng_Latn-065.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-065.json",
+      "bytes": 25171,
+      "sha256": "315bbb827a02be2ffbd4fee0c6326e7af620437562b72dd2365d5d57c8e50134"
+    },
+    {
+      "member": "shards/eng_Latn-070.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-070.json",
+      "bytes": 29097,
+      "sha256": "8079f2f07cefb9d4b29410db85ca2c594d61550f88bfe11e31757ca15d965931"
+    },
+    {
+      "member": "shards/eng_Latn-075.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-075.json",
+      "bytes": 24419,
+      "sha256": "65c9e1b66479cc24c881bb3ae8c6d010a0ca94b6a5eb0e49e7d61fbd7e4d9252"
+    },
+    {
+      "member": "shards/eng_Latn-080.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-080.json",
+      "bytes": 22993,
+      "sha256": "4da42a1bbfc7af6a9a233e7d9896513f2f8331745777b2b94b7c0deaadbcc8a0"
+    },
+    {
+      "member": "shards/eng_Latn-085.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-085.json",
+      "bytes": 24299,
+      "sha256": "e054f634b08a4198f29f7181c0ba7aeb6c5263d42f312667c0c941451f1dcf26"
+    },
+    {
+      "member": "shards/eng_Latn-090.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-090.json",
+      "bytes": 22214,
+      "sha256": "cae9af1192f30ba70c9cee6a589925cf78c5911f362209ab36f6cbfb515a2882"
+    },
+    {
+      "member": "shards/eng_Latn-095.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-095.json",
+      "bytes": 23975,
+      "sha256": "a56476ea0f71ac98f60d4d852efbd0b98899817b5543cc6527faffff2eab3ea0"
+    },
+    {
+      "member": "shards/eng_Latn-100.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-100.json",
+      "bytes": 23547,
+      "sha256": "741a419a0b8acde757cfc753ab7cd6c122c1d0e204184485507eb420434a06d9"
+    },
+    {
+      "member": "shards/eng_Latn-105.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-105.json",
+      "bytes": 25310,
+      "sha256": "e01ef731838df5ad7350dd3b7bd7887372697eda8ed73f12b8c083d9ceaab4c9"
+    },
+    {
+      "member": "shards/eng_Latn-110.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-110.json",
+      "bytes": 26285,
+      "sha256": "aeb1e9ecf5fccbfc0a9f1529097f58bb296046a570f0618c0a048b69cb6125b9"
+    },
+    {
+      "member": "shards/eng_Latn-115.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-115.json",
+      "bytes": 27006,
+      "sha256": "96c3804b9882189b213c8d7eab7f04563f13cb2346f02c6634e95fb2f1d88eaa"
+    },
+    {
+      "member": "shards/eng_Latn-120.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-120.json",
+      "bytes": 24358,
+      "sha256": "83c3f6015dc7f46c4fcbc88f00e5e082c12aa2c07672b99ee2e48ca2274aab57"
+    },
+    {
+      "member": "shards/eng_Latn-125.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-125.json",
+      "bytes": 26175,
+      "sha256": "d4b994dc1c5c936e6b86d83560cd32ecedf458792131c164d0799846acc87d25"
+    },
+    {
+      "member": "shards/eng_Latn-130.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-130.json",
+      "bytes": 30069,
+      "sha256": "a2d1309f29a04a625f599979cd118da6b0e80d1fb4e207af5d01ee591e25507c"
+    },
+    {
+      "member": "shards/eng_Latn-135.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-135.json",
+      "bytes": 23834,
+      "sha256": "56f1e0d85295bcc24b72c1139715af4d187082e4fbdcc9b61e31cdb8e32bf75c"
+    },
+    {
+      "member": "shards/eng_Latn-140.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-140.json",
+      "bytes": 22977,
+      "sha256": "59b7540cfd7784b74c92c26852a28dccf907af0d771a7100ea0599fa689f2869"
+    },
+    {
+      "member": "shards/eng_Latn-145.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-145.json",
+      "bytes": 22937,
+      "sha256": "cf10f01688ae7a9cb537ac53d989c67296b8ffb684317ef896d1d327fe3c6135"
+    },
+    {
+      "member": "shards/eng_Latn-150.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-150.json",
+      "bytes": 25178,
+      "sha256": "2146b4260abf483f5713f862684dfe96329c5e6fe8aae54ed20bc1674a6b25c3"
+    },
+    {
+      "member": "shards/eng_Latn-155.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-155.json",
+      "bytes": 23996,
+      "sha256": "9c21839d8c70e028c33756b1643f7e471a7c2c5e8acf948488334ac72307bb2f"
+    },
+    {
+      "member": "shards/eng_Latn-160.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-160.json",
+      "bytes": 22518,
+      "sha256": "d203760b8b1dfd4586397d74436558b3801d6843c5b221b56bca87c43a892200"
+    },
+    {
+      "member": "shards/eng_Latn-165.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-165.json",
+      "bytes": 23911,
+      "sha256": "99e5697f3f662ab7ad4deba13ad449ab4481edb1811543152623d19c68eab3c6"
+    },
+    {
+      "member": "shards/eng_Latn-170.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-170.json",
+      "bytes": 22695,
+      "sha256": "5ddbb293ba4c14c90cb193f1f23581d73bbc674bd058cf03278b33b9dbd8ddd1"
+    },
+    {
+      "member": "shards/eng_Latn-175.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-175.json",
+      "bytes": 20443,
+      "sha256": "15fe963d95f4d97be1279bee1a74ab7358104ecc06cffd39bdc4d43e170ef33b"
+    },
+    {
+      "member": "shards/eng_Latn-180.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-180.json",
+      "bytes": 28115,
+      "sha256": "6c1736a535f485ef379c9e3bb30e4ac307e93e1baa875fd01543ed0ffe197cfc"
+    },
+    {
+      "member": "shards/eng_Latn-185.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-185.json",
+      "bytes": 28383,
+      "sha256": "b9a8a05b0120da3310f021a07b509495c640d1df667ca62e9a66eb2be3be1744"
+    },
+    {
+      "member": "shards/eng_Latn-190.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-190.json",
+      "bytes": 22626,
+      "sha256": "27f199d66f3df65de61908b5414314f48fa9a21a7cc4457fcff5912f9dd70afe"
+    },
+    {
+      "member": "shards/eng_Latn-195.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-195.json",
+      "bytes": 26096,
+      "sha256": "0b445bde4fd5ef907db9a78dcdcbd4a2bc9afe6ca52d990c9cb8dc67ffa4fc45"
+    },
+    {
+      "member": "shards/eng_Latn-200.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-200.json",
+      "bytes": 26806,
+      "sha256": "85ef9a7256c4d067927aeeea5e83e7d156a16bde56a15330004f801a3900c0e7"
+    },
+    {
+      "member": "shards/eng_Latn-205.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-205.json",
+      "bytes": 27436,
+      "sha256": "ec534f6bbc05c1e0854529eac4305792c2e77ff540083f0153d8cbbb5d7c6969"
+    },
+    {
+      "member": "shards/eng_Latn-210.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-210.json",
+      "bytes": 24637,
+      "sha256": "e08bfbf48dd71ca5e4cf0c9ce745e50d7630f6405e7839178797f8337610ecd3"
+    },
+    {
+      "member": "shards/eng_Latn-215.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-215.json",
+      "bytes": 25075,
+      "sha256": "3bbf7b6c21fe27a3d46828d5b7ead3c52f4fa1274a3dda426ed7016d1673a321"
+    },
+    {
+      "member": "shards/eng_Latn-220.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-220.json",
+      "bytes": 25208,
+      "sha256": "90f1362cb38c091a7277566945e260e65f26643163776a3cea912d98cc565755"
+    },
+    {
+      "member": "shards/eng_Latn-225.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-225.json",
+      "bytes": 24785,
+      "sha256": "1312fdf229e1279f24ed0feffcc38ec07ea9caa15a7dea86f83e66fd993aaa75"
+    },
+    {
+      "member": "shards/eng_Latn-230.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-230.json",
+      "bytes": 24996,
+      "sha256": "f69e645151e9643bf9009b9d6c66ac73714527c5f14b6331b5dba0f49e6db891"
+    },
+    {
+      "member": "shards/eng_Latn-235.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-235.json",
+      "bytes": 28792,
+      "sha256": "ce2724fd03195b987245d0de5600d6f62ed8bc281be0a5a7d9203952f74c69bb"
+    },
+    {
+      "member": "shards/eng_Latn-240.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-240.json",
+      "bytes": 25652,
+      "sha256": "cd0d31f92c915933ab489060ed12dad58558a4dbdd38f68584896f3cd6926fcf"
+    },
+    {
+      "member": "shards/eng_Latn-245.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-245.json",
+      "bytes": 24304,
+      "sha256": "7c412a29e4a7092dfae237f96cc6d71423c7c57f067bb09dfacb844ce0427cb2"
+    },
+    {
+      "member": "shards/eng_Latn-250.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-250.json",
+      "bytes": 25923,
+      "sha256": "d48288f6cfb8f693e67f9f6f1749bb66a1dc936c84d6e8b299293cdac315bfa4"
+    },
+    {
+      "member": "shards/eng_Latn-255.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-255.json",
+      "bytes": 22383,
+      "sha256": "66d848be83e9f93d7b850e606f26efd9bbdda3aa325261d94f0d585b6058faec"
+    },
+    {
+      "member": "shards/eng_Latn-260.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-260.json",
+      "bytes": 25207,
+      "sha256": "705aa94a0f92aa8b82a78475d5cf67d3a3de656824e42b315e631a09d63b4faa"
+    },
+    {
+      "member": "shards/eng_Latn-265.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-265.json",
+      "bytes": 29575,
+      "sha256": "73d32594fcf5a9042a8f6b42c5fbda3e8f3203d9664f4e169626e683f6aa1ce7"
+    },
+    {
+      "member": "shards/eng_Latn-270.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-270.json",
+      "bytes": 24800,
+      "sha256": "f1fbc9508f97b6adfc2af794cdeba29f38df78da6f91f32d46bcfc5435785772"
+    },
+    {
+      "member": "shards/eng_Latn-275.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-275.json",
+      "bytes": 26416,
+      "sha256": "40ad2455f62e0624b8bc9f69320879e5af340a6a34697a14d778e20ef221ff57"
+    },
+    {
+      "member": "shards/eng_Latn-280.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-280.json",
+      "bytes": 23130,
+      "sha256": "2ac64ae5648e4cf3466cad416ed86b59cd3b4d7e2a35d267896b84ffe63305af"
+    },
+    {
+      "member": "shards/eng_Latn-285.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-285.json",
+      "bytes": 21795,
+      "sha256": "f9d9618aea6c9ff32540e63a036a4ff66aa6c1a16b2b4a0c23ab83316c59d825"
+    },
+    {
+      "member": "shards/eng_Latn-290.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-290.json",
+      "bytes": 27876,
+      "sha256": "e81050b5eb267c904ff52926ed09092091e9bcc728d3c5ddabc4b2437bca169b"
+    },
+    {
+      "member": "shards/eng_Latn-295.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/eng_Latn-295.json",
+      "bytes": 27141,
+      "sha256": "6e8fdc36fd56379ab4fc80defde60200f69849f07dd854fb0f5edf88ffe97df8"
+    },
+    {
+      "member": "shards/hin_Deva-000.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-000.json",
+      "bytes": 57517,
+      "sha256": "f871f279e7b5c0a53862328c30523e2b5d2172aab4a0ff97ccc52a045a0e12da"
+    },
+    {
+      "member": "shards/hin_Deva-005.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-005.json",
+      "bytes": 48491,
+      "sha256": "439c1d07a6a9d37ff9d130863836296643fd977642ea9384b44053e662f482c7"
+    },
+    {
+      "member": "shards/hin_Deva-010.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-010.json",
+      "bytes": 46322,
+      "sha256": "5aa8473699e080c88cf72e8d5f3a4c28a34326b4a3aff3fb83a3bd5e70d8f83f"
+    },
+    {
+      "member": "shards/hin_Deva-015.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-015.json",
+      "bytes": 43025,
+      "sha256": "daf3e1eab3ce8fe858bdb05470b513375b95ff659b1b924d2377312267599217"
+    },
+    {
+      "member": "shards/hin_Deva-020.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-020.json",
+      "bytes": 50134,
+      "sha256": "540b187127fd6d3cf20e9f32f1c13772d1882c958dbbd04c5a90b968c4e82df8"
+    },
+    {
+      "member": "shards/hin_Deva-025.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-025.json",
+      "bytes": 46015,
+      "sha256": "663893f0985cfe28eaa6267b70f2750742f44de77cd350c90a9b2c6955365ded"
+    },
+    {
+      "member": "shards/hin_Deva-030.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-030.json",
+      "bytes": 47186,
+      "sha256": "353acce51994db33223fdcd882cda3d544f2095d2c77e5de1f3bed23bc924feb"
+    },
+    {
+      "member": "shards/hin_Deva-035.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-035.json",
+      "bytes": 45440,
+      "sha256": "2de8a0da5acc1200946dcfcd81def0e0bfa426f30dc4715f4c6c1cf27853b286"
+    },
+    {
+      "member": "shards/hin_Deva-040.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-040.json",
+      "bytes": 45785,
+      "sha256": "3e1db0f0301adc45367e8fd70329e1943e65bed0c9f36178e18acbf320535aa4"
+    },
+    {
+      "member": "shards/hin_Deva-045.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-045.json",
+      "bytes": 38020,
+      "sha256": "af31e44449c6aa80b1d05df80db33360124c85f0c27b40c853479a7007554b64"
+    },
+    {
+      "member": "shards/hin_Deva-050.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-050.json",
+      "bytes": 44742,
+      "sha256": "d9c1deceab4128098720b08a916b24132d352ef45fc9a67fa72ede8fbc6f8080"
+    },
+    {
+      "member": "shards/hin_Deva-055.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-055.json",
+      "bytes": 52425,
+      "sha256": "c2c0949fb7a81fefbc5ccf111c9e274981cc56a140fe38eb4f173c98b2b2eef5"
+    },
+    {
+      "member": "shards/hin_Deva-060.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-060.json",
+      "bytes": 51579,
+      "sha256": "a3146cb8df47c4334f4f7b17961acb5449885559993aa87a98762bd53da40756"
+    },
+    {
+      "member": "shards/hin_Deva-065.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-065.json",
+      "bytes": 53366,
+      "sha256": "b57b796eb254ccfdc0f6dbd25879d0fca548b6c0aab7081521ab46c825ee0f34"
+    },
+    {
+      "member": "shards/hin_Deva-070.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-070.json",
+      "bytes": 59040,
+      "sha256": "12349f5c01580450b991ea6cd01bd8e44ff5b2005e93efdce9016f591951d83e"
+    },
+    {
+      "member": "shards/hin_Deva-075.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-075.json",
+      "bytes": 48196,
+      "sha256": "56cf681f5052a8327a6e560479fa3da57c331d9c3ed0548959d81eaac78c3047"
+    },
+    {
+      "member": "shards/hin_Deva-080.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-080.json",
+      "bytes": 44925,
+      "sha256": "aca76823e2397fd84f1d0bf4e5cc4eaad7cb5fe9df590284b374a646a3e8c88f"
+    },
+    {
+      "member": "shards/hin_Deva-085.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-085.json",
+      "bytes": 48412,
+      "sha256": "dcaa732210de42ec1406fddf6898ed985de0a2df3c878be47c4da71c01d00059"
+    },
+    {
+      "member": "shards/hin_Deva-090.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-090.json",
+      "bytes": 42347,
+      "sha256": "388910317963609dc161e4536ad4bfb17c72f1b46d8db887643a21e8b60cb157"
+    },
+    {
+      "member": "shards/hin_Deva-095.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-095.json",
+      "bytes": 47571,
+      "sha256": "5ac577e1d1d0015b27fbc2ed2d5709bd2d764ae7623021db77de5a2e79f66e12"
+    },
+    {
+      "member": "shards/hin_Deva-100.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-100.json",
+      "bytes": 46832,
+      "sha256": "b7812c67fb608596992af55d7779204fbb14ade54bb920a39babbfe5a4724ef0"
+    },
+    {
+      "member": "shards/hin_Deva-105.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-105.json",
+      "bytes": 48335,
+      "sha256": "c73573796c7d456566a27d61d32061cea94de7d5efc3a7968b4ac6a4e0f54dfb"
+    },
+    {
+      "member": "shards/hin_Deva-110.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-110.json",
+      "bytes": 52302,
+      "sha256": "352988430e307657c1c3f5dbb181b8178ca37043b16a1d7f8917c80a2446e959"
+    },
+    {
+      "member": "shards/hin_Deva-115.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-115.json",
+      "bytes": 55400,
+      "sha256": "010688507ebbf37bbb9d91439a61dc7f7dda0c9e716408d4bfcd2a544a265bad"
+    },
+    {
+      "member": "shards/hin_Deva-120.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-120.json",
+      "bytes": 47727,
+      "sha256": "f0d3484b2cd2173d12a807a286c8ce8030b1efc3e59246a9e387f43e7cdcf0b8"
+    },
+    {
+      "member": "shards/hin_Deva-125.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-125.json",
+      "bytes": 53979,
+      "sha256": "306874913b1676c8f844e1cd698e58467152036a5dd5920f77f24bb530ae2a8a"
+    },
+    {
+      "member": "shards/hin_Deva-130.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-130.json",
+      "bytes": 61370,
+      "sha256": "213355534c457c9bee376587ee98a18d64a79d9ee486fc40ef5108982bcdbc59"
+    },
+    {
+      "member": "shards/hin_Deva-135.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-135.json",
+      "bytes": 48233,
+      "sha256": "200b3d30a6c525fe7341200c8a7ae2339bc287096794654aa77e65e9454d108e"
+    },
+    {
+      "member": "shards/hin_Deva-140.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-140.json",
+      "bytes": 45291,
+      "sha256": "15c70ecda9295599b0f5034089356e523e34eb387eb5add85f84d1ff7c5ba69c"
+    },
+    {
+      "member": "shards/hin_Deva-145.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-145.json",
+      "bytes": 45505,
+      "sha256": "805f5388cbcefd58a38d6e5a2799179a71286bad1794bb77c5f2fbd41ad13559"
+    },
+    {
+      "member": "shards/hin_Deva-150.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-150.json",
+      "bytes": 51944,
+      "sha256": "f19c896d2646bebca2b3a4b09f5e23504bf2f8a27138b8c5e92d9cdc00414f65"
+    },
+    {
+      "member": "shards/hin_Deva-155.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-155.json",
+      "bytes": 46138,
+      "sha256": "a9464dadfd93cd3e1ee5802c69bcf2c9ee04c4338e00a863b77c444a07885795"
+    },
+    {
+      "member": "shards/hin_Deva-160.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-160.json",
+      "bytes": 43867,
+      "sha256": "0b86fd49879bd18bc0acacd1b1b1f872d67c526db7a5ce75a9170ec3b09c31a7"
+    },
+    {
+      "member": "shards/hin_Deva-165.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-165.json",
+      "bytes": 47993,
+      "sha256": "7765332ee8f09e58e42ab5932772fcf599d259951cf4cc2a51aa780b861e33d5"
+    },
+    {
+      "member": "shards/hin_Deva-170.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-170.json",
+      "bytes": 44750,
+      "sha256": "c820e0e25935689e6c339dea409f9bc9a3155bf7fb2f50f012199b0f3e472a18"
+    },
+    {
+      "member": "shards/hin_Deva-175.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-175.json",
+      "bytes": 38896,
+      "sha256": "84fc891604be225ac43e1374a6498a6a5e59569f9e31d49a2dd16b1a573c6054"
+    },
+    {
+      "member": "shards/hin_Deva-180.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-180.json",
+      "bytes": 55482,
+      "sha256": "8375d784da62a918f1df56a411354cce5c9f7bf1c3f89c1b2bac81f67a44c042"
+    },
+    {
+      "member": "shards/hin_Deva-185.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-185.json",
+      "bytes": 57923,
+      "sha256": "cefc0ea0f7ad7fefe9fb1545a616dda9916179b102fd795ce25861fe48f0f8ae"
+    },
+    {
+      "member": "shards/hin_Deva-190.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-190.json",
+      "bytes": 42269,
+      "sha256": "1c8d3f9ba8c28785138ee277a3d0ec7f15f193fa37beecb5740e09362d5270d8"
+    },
+    {
+      "member": "shards/hin_Deva-195.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-195.json",
+      "bytes": 54662,
+      "sha256": "f60101773705d07d1a8dd807d50461a44b8ec17b3fedc5abda52d23330b87661"
+    },
+    {
+      "member": "shards/hin_Deva-200.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-200.json",
+      "bytes": 56659,
+      "sha256": "fdedf7f2436279f8b9d9e2a0fc512e5c69179472843b00ea8e0cd3defe1c96f2"
+    },
+    {
+      "member": "shards/hin_Deva-205.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-205.json",
+      "bytes": 56043,
+      "sha256": "75f2d91932e438a47dbef71167ebd30ef599c9d6d8aaa8ef897ab6207eeda326"
+    },
+    {
+      "member": "shards/hin_Deva-210.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-210.json",
+      "bytes": 49448,
+      "sha256": "c9d8d19a953197d028aa4c538364cf2b0cc99e96d80d5903a861d323e8ced9c8"
+    },
+    {
+      "member": "shards/hin_Deva-215.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-215.json",
+      "bytes": 50042,
+      "sha256": "5d010348e3571758ebc83323b54d301c61b617253ee2633eb81a25544b721fd9"
+    },
+    {
+      "member": "shards/hin_Deva-220.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-220.json",
+      "bytes": 50127,
+      "sha256": "472129a8d36dd0dd2c6beb81aabbc5412b4f429eeb5bfcea0df889cc08014c3b"
+    },
+    {
+      "member": "shards/hin_Deva-225.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-225.json",
+      "bytes": 46970,
+      "sha256": "e073944cf23098c42f05355a04c23b8415f801089be35f821d9c1e3f952cda1e"
+    },
+    {
+      "member": "shards/hin_Deva-230.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-230.json",
+      "bytes": 52504,
+      "sha256": "ea1296e3a3ab45bc4213fc7bd39bbe729bc952af8c12e3e0c7446d2ec06987c4"
+    },
+    {
+      "member": "shards/hin_Deva-235.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-235.json",
+      "bytes": 58607,
+      "sha256": "433bc01191f36b727a71f15b54dea11832c3d071dfe378cc6174e951451587a5"
+    },
+    {
+      "member": "shards/hin_Deva-240.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-240.json",
+      "bytes": 49136,
+      "sha256": "d3378c26a151ca0c3faa1c83a5a2b170bc618f148dbcc7c991e90bc2dfe1eaf3"
+    },
+    {
+      "member": "shards/hin_Deva-245.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-245.json",
+      "bytes": 48381,
+      "sha256": "144b1e063796292cf9434c7589a36bbfbad76b1712fe007c49e9de9036795064"
+    },
+    {
+      "member": "shards/hin_Deva-250.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-250.json",
+      "bytes": 50488,
+      "sha256": "92d62a5e1e1c2b1d813603693d3eec4294a010e2e945a569cd820d35d882f2b3"
+    },
+    {
+      "member": "shards/hin_Deva-255.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-255.json",
+      "bytes": 44123,
+      "sha256": "75b07b30b609f773f085556311e3e0a6fa350c1da7f2e0afa2fe1c776fc60db2"
+    },
+    {
+      "member": "shards/hin_Deva-260.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-260.json",
+      "bytes": 48748,
+      "sha256": "bc9030bb0999bca75a0e424af630f89f9fea4b8fd498431e7a0a6915ecbed9aa"
+    },
+    {
+      "member": "shards/hin_Deva-265.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-265.json",
+      "bytes": 63664,
+      "sha256": "2077c6278c897a97927c6569dcdf94f454567d807f5ed6fbeb64849d0da5ab45"
+    },
+    {
+      "member": "shards/hin_Deva-270.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-270.json",
+      "bytes": 49917,
+      "sha256": "61ec4108ed758a67edcffc446c066d75e59805bf9b1bbe1d4b3fe824ac69d4c7"
+    },
+    {
+      "member": "shards/hin_Deva-275.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-275.json",
+      "bytes": 53240,
+      "sha256": "023fbeae4684c6e65560935e5efc4bc9b692f300688bf51b4e9c9b2771c5e098"
+    },
+    {
+      "member": "shards/hin_Deva-280.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-280.json",
+      "bytes": 46272,
+      "sha256": "6fa73a1946949189b93b882fd06f75ff3eadd1c439b7a4a682e6a72c5281feef"
+    },
+    {
+      "member": "shards/hin_Deva-285.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-285.json",
+      "bytes": 41824,
+      "sha256": "0835ac11639672e6ff78cfe48529aaefcb46333a77b5e9f08bf34ae20bb41813"
+    },
+    {
+      "member": "shards/hin_Deva-290.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-290.json",
+      "bytes": 56038,
+      "sha256": "e7ffa95deacc324f58116d7ac661b44b9e536a35b11bc1d59a3d3dc82d67d87a"
+    },
+    {
+      "member": "shards/hin_Deva-295.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/hin_Deva-295.json",
+      "bytes": 53908,
+      "sha256": "eb7640f8aa2e5d3f10904f36b06afc9871bf7830cbf2461e39a0d0ce34a39350"
+    },
+    {
+      "member": "shards/identity.json",
+      "source_path": "/home/shohag/tiny-aya-stage1/pilot/article2-2026-11-01/t3-collection/diag-q6k/identity.json",
+      "bytes": 3850,
+      "sha256": "96bf552af6f1b5d1680974e12f48ffc6d24709bae95d9ad751a0f2273333855c"
+    },
+    {
+      "member": "source/run_scoring_variants.py",
+      "source_path": "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/_worktrees/article2-pilot-eval/scripts/run_scoring_variants.py",
+      "bytes": 9146,
+      "sha256": "b749965854a23f3105b0dd422b7c7f644ab99ebfc0d2ebb5f759acffcbd0e5f5"
+    },
+    {
+      "member": "source/run_t3_baselines.py",
+      "source_path": "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/_worktrees/article2-pilot-eval/scripts/run_t3_baselines.py",
+      "bytes": 7537,
+      "sha256": "37534d0ff54140c373e7a0a1fba70e169cae0b257bbc3ad0cfef124caa02e2b8"
+    },
+    {
+      "member": "source/t1_baselines.py",
+      "source_path": "/mnt/c/Users/shoha/Documents/ChatGPT/personal-development/_worktrees/article2-pilot-eval/scripts/t1_baselines.py",
+      "bytes": 21580,
+      "sha256": "4559fc5d713de09a6beab7f5103aafceb4db11ad85808fdc59ef5de6fbadcc44"
+    }
+  ],
+  "archive_bytes": 2289017,
+  "archive_sha256": "0c3cacbcabe61450b521ab767d75c0e954d9f3dfc5bd52c76458d05eff540be4",
+  "lock_sha256": "6dfdd304dcba7bd772c37a7634e74c0c16d1e4b70728be6dcb0e218f3847aa19",
+  "scope": "Complete scoring and readiness evidence; no model weights, raw vocabulary logits or final holdout"
+}

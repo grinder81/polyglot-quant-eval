@@ -1,0 +1,95 @@
+{
+  "verified_t1_report_sha256": "c1ffee6b6030b1d5beb6c6afe3d855c1e1703df3e2fd6329270b06d55a1941a1",
+  "implementation_sha256": "10f3b3103d9ce019a47a801db4bce19e33d562dc0ea86da5b73423df6fabc715",
+  "development_questions_per_language": 300,
+  "development_source_clusters": 250,
+  "reserved_holdout_questions_per_language": 424,
+  "reserved_holdout_source_clusters": 238,
+  "languages": {
+    "eng_Latn": {
+      "correctness_discordant": 17,
+      "all_answer_churn": 21,
+      "actual_t1_paired_cluster_95_interval": [
+        -0.030303030303030304,
+        0.02356902356902357
+      ],
+      "illustrative_scenarios": [
+        {
+          "n": 300,
+          "assumed_discordance": 0.056666666666666664,
+          "assumed_true_delta": 0.03,
+          "standard_error": 0.013634107557478374,
+          "approximate_95_half_width": 0.02672235977400297,
+          "approximate_power_positive_or_negative_interval": 0.5950058223050333,
+          "note": "Unclustered normal approximation; not power for the joint point-estimate>=3pp rule, not a forecast for future allocations."
+        },
+        {
+          "n": 424,
+          "assumed_discordance": 0.056666666666666664,
+          "assumed_true_delta": 0.03,
+          "standard_error": 0.011468441796194651,
+          "approximate_95_half_width": 0.02247773287933536,
+          "approximate_power_positive_or_negative_interval": 0.7440613957906161,
+          "note": "Unclustered normal approximation; not power for the joint point-estimate>=3pp rule, not a forecast for future allocations."
+        }
+      ]
+    },
+    "ben_Beng": {
+      "correctness_discordant": 23,
+      "all_answer_churn": 33,
+      "actual_t1_paired_cluster_95_interval": [
+        -0.020134228187919462,
+        0.04153354632587859
+      ],
+      "illustrative_scenarios": [
+        {
+          "n": 300,
+          "assumed_discordance": 0.07666666666666666,
+          "assumed_true_delta": 0.03,
+          "standard_error": 0.015891996588080288,
+          "approximate_95_half_width": 0.03114774095507078,
+          "approximate_power_positive_or_negative_interval": 0.4712725040322376,
+          "note": "Unclustered normal approximation; not power for the joint point-estimate>=3pp rule, not a forecast for future allocations."
+        },
+        {
+          "n": 424,
+          "assumed_discordance": 0.07666666666666666,
+          "assumed_true_delta": 0.03,
+          "standard_error": 0.013367683739281802,
+          "approximate_95_half_width": 0.026200178685714046,
+          "approximate_power_positive_or_negative_interval": 0.6119053409225567,
+          "note": "Unclustered normal approximation; not power for the joint point-estimate>=3pp rule, not a forecast for future allocations."
+        }
+      ]
+    },
+    "hin_Deva": {
+      "correctness_discordant": 26,
+      "all_answer_churn": 34,
+      "actual_t1_paired_cluster_95_interval": [
+        -0.04697986577181208,
+        0.020338983050847456
+      ],
+      "illustrative_scenarios": [
+        {
+          "n": 300,
+          "assumed_discordance": 0.08666666666666667,
+          "assumed_true_delta": 0.03,
+          "standard_error": 0.016908249137296532,
+          "approximate_95_half_width": 0.03313955935073164,
+          "approximate_power_positive_or_negative_interval": 0.4264411690868347,
+          "note": "Unclustered normal approximation; not power for the joint point-estimate>=3pp rule, not a forecast for future allocations."
+        },
+        {
+          "n": 424,
+          "assumed_discordance": 0.08666666666666667,
+          "assumed_true_delta": 0.03,
+          "standard_error": 0.014222512935970088,
+          "approximate_95_half_width": 0.02787561312415639,
+          "approximate_power_positive_or_negative_interval": 0.5593919075056272,
+          "note": "Unclustered normal approximation; not power for the joint point-estimate>=3pp rule, not a forecast for future allocations."
+        }
+      ]
+    }
+  },
+  "interpretation": "Task bootstrap uncertainty is conditional on constructed models; separately repeat construction samples. More bootstrap draws do not add observations. Holdout metadata only; no holdout outcomes read."
+}

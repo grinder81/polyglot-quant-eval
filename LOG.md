@@ -67,3 +67,94 @@ Dated entries: what changed, the numbers, open problems.
 
 - PR46 merged as `2bfea18c282cf2667fa24c8c05a888ce8e50a838` after both GitHub CI checks passed and Astra approved exact head `d3ce91ba0b9f34bb4356f22de88eaf2c9ad89f97` without blockers. Frozen `docs/t3-preregistration.md` Git blob: `700a0f601e6503d95b485ad5d048c20b4ef96910`. Git blob identity refers to repository content, not a platform-dependent checkout newline hash.
 - The freeze precedes Q6_K/Q3_K_M quantization. It does not claim any new T3 build, numerical gate or task result. Per-build readiness review and the separate C8 pilot freeze remain required; holdout outcomes and A4 slices remain sealed.
+
+## 2026-11-01 — First T3 arm readiness and throughput checkpoint
+
+- Q6_K and Q3_K_M builds completed from the pinned BF16 source; manifests and actual bytes are committed in runtime PR43. Q6_K is2,759,532,032bytes; Q3_K_M is1,799,740,928bytes. Both vocabulary-only checks passed900contexts and3,600candidates. These are build/readiness facts, not precision-curve results.
+- Q6_K passed the48candidate direct,48client and48reversed-order numerical gates. The new runner's offline identity/raw-gate verification exited0. Astra reviewed the collection code and found one arm-label provenance blocker; commit ef2582e fixes it with an arm/format map and rejection test. All3 runner tests and both GitHub CI checks passed before collection.
+- The first20five-question shards completed and validated. The raw completion log records throughput and the remaining160shards continue under the same frozen identity. No partial accuracy or language claim is reported; the complete arm and stage report remain pending.
+
+## 2026-11-01 — Q6 accuracy checkpoint and C8 design freeze
+
+- Q6_K completed all 900 original-order development questions and passed separate complete validation. Correct counts are English 233, Bangla 188 and Hindi 185 out of 300; BF16 counts are 230,187,184. All paired accuracy-difference and nontrivial English-relative intervals include zero. [Complete checkpoint and 197-member verified archive](results/t3-precision-curve/diag-q6k/README.md). The owned server was stopped; the BF16 reference-logit cache is now collecting. Stage 1 and the full fidelity endpoint remain incomplete.
+- Astra approved the bounded C8 design at exact content commit6e72eb3. Frozen design Git blob after its status-only update: `cd43458f25672a0522958a4d1de0e1a88c307dc7`. The mechanically derived format pair and exact-byte eligibility record still follow the full T3 curve, before C8 comparative outcomes. This is an investment screen, not an allocation-success claim. No C8 rankings, A4 slices or holdout outcomes were collected.
+
+## 2026-11-01 — Fidelity validation and inventory timing
+
+- Full KL reporting now verifies all 900 per-question hashes, source/prompt/token coverage, token means and language aggregates, and requires the verified native-before-Torch execution receipt. Rejection tests cover changed question evidence, aggregate manipulation and absent execution receipts. No scoring or fidelity collection implementation changed.
+- The first two T3 build records lacked attached actual-file tensor inventories, although the actual model hashes, bytes and native dry-run layouts were pinned. Runtime PR43 now includes supplements that match every predicted type, shape and payload size. The Q6 supplement follows task scoring; the Q3 supplement precedes inference. Original manifests and Q6 run identities remain intact. Remaining builds attach actual inventories before inference.
+
+## 2026-11-01 — Q6 full fidelity complete
+
+- The fresh native-before-Torch run completed 900 questions and 176,756 content-token KL distributions in 1,235.02 seconds. English/Bangla/Hindi mean question KL is 0.004857/0.005127/0.003965 nats per content token. All question hashes, source/prompt/token identities, token means, aggregates and numerical execution receipts passed reporting validation. These are descriptive fidelity endpoints; no language-effect or allocation-success conclusion follows.
+- Published the [combined Q6 checkpoint and 903-member KL archive](results/t3-precision-curve/diag-q6k/README.md), excluding raw logits and the preserved interrupted run. Q3 direct validation has started. T3 Stage 1 remains incomplete, and no operating point or C8 outcome is selected. The user's weekly-allowance stop threshold is recorded in the execution plan.
+
+## 2026-11-01 — Readiness issues reconciled
+
+- Closed the newly scoped protocol #48 and runtime resource task tiny-aya-edge#42 with completion receipts and evidence links. The master #47 and every unfinished legacy scope remain open. Clarified the master's goal as a bounded investment decision rather than a claim of established allocation task benefit.
+- Q3 passed its direct, API-client, reversed-order and offline identity gates. Its first 100 task questions completed and validated in 242.34 seconds. Collection continues in complete batches under the unchanged identity. The [resume guide](docs/article2-pilot-resume.md) records artifact locations, protected analyses and the account-allowance stop procedure.
+
+## 2026-11-01 — Q3_K_M task checkpoint complete
+
+- All 900 Q3 task questions and separate complete validation passed. Correct counts are EN 221, BN 186 and HI 173, versus BF16 230/187/184. Paired changes are -3.00/-0.33/-3.67 pp; all paired accuracy and nontrivial English-relative intervals include zero. The [complete report and verified 197-member archive](results/t3-precision-curve/diag-q3km/README.md) preserve the raw evidence and identities.
+- Q3 meets the English development floor exactly but does not trigger the descent stop. The later stages remain required; no operating point is selected. Collection batches total 2,965.70 seconds, 49.4 minutes, before process/identity startup overhead. These are evaluation costs, not a device throughput result. The owned server stopped and Q3 full KL collection began through the unchanged verified wrapper. Weekly allowance was 13% at the latest check; the user stop guard remains active.
+
+## 2026-11-01 — Q3 full fidelity complete
+
+- Q3 completed and validated all 900 KL questions and 176,756 content-token distributions. English/Bangla/Hindi mean question KL is 0.102541/0.124599/0.095921 nats per content token. The combined report verifies every question's hash, source/prompt/token identity, KL mean, language aggregate and verified execution receipt. These are descriptive fidelity endpoints, not task-benefit or causal language-effect evidence.
+- Published the [combined Q3 checkpoint and 903-member fidelity archive](results/t3-precision-curve/diag-q3km/README.md). Thirty complete-question batches total 1,732.25 seconds, 28.9 minutes, of core intervals excluding process/verification/import startup. Existing Q4 full KL has begun; Stage 1 remains incomplete until that endpoint is validated and its report committed. Weekly allowance was 11% at the latest check; the below-10% stop guard remains active.
+
+## 2026-11-01 — Account stop threshold revised by the user
+
+- The user explicitly authorized continued execution and replaced the earlier 10% threshold with a stop **below 2% weekly allowance remaining**. The execution plan and resume record now carry that rule. No scientific endpoint, sample, runtime or decision rule changed. Q4 KL collection continues under its existing identity, with complete-question checkpoints and no allowance-reset action.
+
+## 2026-11-01 — T3 Stage 1 complete
+
+- Q4 full KL completed and validated all 900 questions and 176,756 content-token distributions. EN/BN/HI mean question KL is 0.035018/0.038329/0.030844 nats per content token. Published its verified 903-member archive and the [combined complete Stage 1 report](results/t3-precision-curve/stage1/README.md), including Q6/Q3 full task/fidelity and the reused T1 BF16/Q4 task identities.
+- Q3's English 221/300 meets the development floor exactly; neither new arm triggers the 185/300 descent stop. Stages 2 and 3 remain required; no operating point or C8 result is selected. Q4 core intervals total 2,048.05 seconds, 34.1 minutes, excluding inter-process startup. Native collection ended and no owned GPU scoring/fidelity process remains. The report is committed before the next stage's builds; Q6's disclosed inventory-attachment timing deviation remains in its interpretation.
+
+## 2026-11-01 — Stage 2 builds and first-arm readiness
+
+- After Stage 1 report commit `2cf0371`, Q3_K_S and Q2_K were built and passed vocabulary checks. Both actual inventories match all 290 prior predicted tensor types/payloads and exact file bytes: 1,660,984,832 and 1,481,973,248. Runtime commit `d737c68` records actual inventories, model hashes, runtime bindings, vocabulary receipts and the preceding-report prerequisite before either model's inference.
+- Q3_K_S subsequently passed direct, client, reversed-order and offline identity gates and began complete-shard task collection. Both repositories' CI checks pass. Q2_K task inference, the full Stage 2 report, Stage 3, operating-point selection and C8 remain pending. The user's revised account stop threshold remains below 2% weekly allowance remaining.
+
+## 2026-11-01 — Q3_K_S task checkpoint complete
+
+- All 900 questions and separate complete-arm validation passed. Correct counts are EN 210, BN 179 and HI 178, versus BF16 230/187/184. Paired changes are -6.67/-2.67/-2.00 pp. English's paired 95% interval [-10.74, -2.67] is below zero; non-English and English-relative intervals include zero. The [complete task report and verified 197-member archive](results/t3-precision-curve/diag-q3ks/README.md) retain the evidence.
+- English fails the frozen 221/300 selection floor but remains above the 185/300 descent stop. The full required curve continues, with no operating point selected. Full Q3_K_S KL is running; Q2_K follows under its committed identity. No C8 comparative outcome, A4 slice or holdout outcome has been collected.
+
+## 2026-11-01 — Q3_K_S fidelity complete
+
+- Completed and validated all 900 KL questions and 176,756 content-token distributions. EN/BN/HI mean question KL is 0.185407/0.207971/0.168973 nats per content token. The [combined checkpoint and verified 903-member archive](results/t3-precision-curve/diag-q3ks/README.md) preserve all identities, question-level summaries and numerical receipts. These are descriptive fidelity values, not causal language or task-benefit findings.
+- Q2_K direct validation began after the Q3_K_S worker finished. Stage 2 and the complete curve remain pending; no operating point is selected. The latest account meter reports 100% weekly allowance remaining; Codex performed no reset action, and the user's below-2% stop threshold remains active.
+
+## 2026-11-01 — Q2_K task checkpoint and descent stop
+
+- All 900 task questions and separate complete validation passed. Correct counts are EN 180, BN 149 and HI 142 versus BF16 230/187/184; paired changes are -16.67/-12.67/-14.00 pp, with all three paired intervals below zero. English-relative BN/HI intervals include zero. The [complete report and verified 197-member archive](results/t3-precision-curve/diag-q2k/README.md) retain raw evidence and identities.
+- English triggers the 185-or-fewer descent stop, prohibiting later smaller artifacts. IQ3_S remains required because its frozen native size prediction is larger than both Stage 2 files; this is the preregistered size-aware rule, not a new exception. Full Q2_K KL is collecting before the complete Stage 2 report. No operating point, C8 comparison, A4 slice or holdout outcome is selected or collected.
+
+## 2026-11-01 — T3 Stage 2 complete
+
+- Q2 completed and validated all 900 full-KL questions; EN/BN/HI mean question KL is 0.441425/0.580459/0.450495 nats per content token. Published its combined task/fidelity report and verified 903-member archive. The [complete Stage 2 report](results/t3-precision-curve/stage2/README.md) revalidates all four new task arms and all five candidate fidelity endpoints against their frozen references.
+- Q2's descent stop excludes later smaller artifacts, while IQ3_S remains required by its larger native predicted bytes. The Stage 2 report is committed before that build. No operating point or C8 outcome has been selected; holdout outcomes and A4 slices remain untouched.
+
+## 2026-11-01 — IQ3_S task checkpoint complete
+
+- After Stage 2 commit `40400be`, IQ3_S built at the predicted 1,665,998,336 bytes and matched all 290 predicted tensor types/payloads. Runtime commit `dfb72ca` recorded its actual inventory, identities and vocabulary checks before inference. All live numerical gates, 900 task questions and separate complete validation passed. Full KL is collecting.
+- Correct counts are EN 188, BN 160 and HI 138 versus BF16 230/187/184; changes are -14.00/-9.00/-15.33 pp with all paired intervals below zero. English-relative BN/HI intervals include zero. English fails the 221-correct floor. The [complete task checkpoint and verified archive](results/t3-precision-curve/diag-iq3s/README.md) describe this imatrix-free export, not calibrated IQ3 methods generally. Final operating-point selection and C8 still follow complete KL and the committed last-stage report.
+
+## 2026-11-01 — Last required precision stage complete
+
+- IQ3_S completed and validated all 900 KL questions and 176,756 content-token distributions. EN/BN/HI mean question KL is 0.276336/0.305826/0.255459 nats per content token. Published the combined task/fidelity report and verified 903-member archive. All five new task arms and all six candidate fidelity endpoints are now complete under their frozen identities.
+- This last-stage report is committed before English-only operating-point selection. No C8 comparative outcome has been collected; the C8 format/pair execution plan will be mechanically derived only after that selection. A4 slices, final holdout, human generation and device measurements remain outside this completed development curve.
+
+## 2026-11-01 — Complete curve decision and C8 execution freeze
+
+- After last-stage commit `29206b0`, the [validated complete curve](results/t3-precision-curve/final/README.md) selected Q3_K_M at 1,799,740,928 bytes and English 221/300 by the frozen English-only minimum-byte rule. This observed floor is not proven noninferiority. Q2's stop and the larger IQ3 point were handled by actual bytes. All required task/fidelity endpoints and their raw archives are complete.
+- Mechanically derived [C8 execution plan](results/article2-pilot/c8-execution-freeze.md) SHA256 `e7ccdb50be254ee8bdde307f73c58bc9a9c9d68882a40aa453b9b516ec8be64f`: Q2_K/Q3_K diagnostics on the eight fixed tensors; all four prespecified restricted pairs are byte-feasible. The full plan and decision are committed before C8 exports or comparative measurements. No language score selected formats or eligibility. Cumulative caps, independent repetition 3, exact-map checks and protected analyses remain unchanged.
+
+## 2026-11-07 — C8 recovered and completed; G4 inconclusive
+
+- The 1 November host-storage interruption was recovered under its gate: the stopped Ubuntu disk was backed up and read back in full with matching SHA-256, a recorded recovery receipt closed the interrupted ledger row with its observed 31.38 s, and the seven remaining exports ran under the new backing-volume guard. Every output was hashed against its manifest, and all 16 diagnostic manifests were committed byte-identical in the runtime repository (`9968032`) before any probe.
+- Discovery repetitions 1–2 ran in 19 minutes. The frozen nomination rule returned **no pair**: all four pairs eligible, every margin stable in sign and above 1e-5 nats, Bangla and English with the same sign in every pair. The nomination was committed at `c713006` before repetition 3, which supplied descriptive tables only. The [decision record](results/article2-pilot/c8/decision.json) and its [G4 reading](results/article2-pilot/c8/README.md) report the condition **inconclusive**; budgets closed at 1,996 s native of 5,400 and 767 s proxy of 1,800, largest artifact footprint 112.5 GB of 400 GB. Sequence-Fisher proxies rank measured KL at Spearman 0.79–1.00 across languages and subsets; activation proxies 0.29–0.69. The investment verdict is the owner's; the holdout and A4 slices remain sealed.
+- The T3 BF16 reference cache (1,802 files, 185,342,703,426 bytes) was copied to the owner's network drive and read back with no mismatch; the 900 local logit arrays were then released under the approved archival, leaving the records, manifest, identity and an `ARCHIVED.json` pointer. Receipts are in the runtime repository's storage-incident record; the [resume guide](docs/article2-pilot-resume.md) now says to restore from the drive before any T3-style fidelity scoring.
